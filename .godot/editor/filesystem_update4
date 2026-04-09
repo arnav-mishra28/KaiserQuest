@@ -1,0 +1,3 @@
+res://scenes/Main.tscn
+res://scripts/TitleScreen.gd
+res://scripts/Overworld.gd
