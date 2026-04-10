@@ -36,14 +36,14 @@ func record_answer(topic:String, correct:bool)->void:
 
 func end_session()->Dictionary:
 	if _session_world=="" or _session_data.is_empty(): return {}
-	var d =_data[_session_world]
+	var d=_data[_session_world]
 	d.sessions+=1
 	var total_ms:=0.0
 	for s in _session_data:
 		total_ms+=s.ms
 		if s.correct: d.total_correct+=1
 		d.total_questions+=1
-		var ta =d.topic_accuracy
+		var ta=d.topic_accuracy
 		if s.topic not in ta: ta[s.topic]=[0,0]
 		ta[s.topic][1]+=1
 		if s.correct: ta[s.topic][0]+=1
@@ -55,7 +55,7 @@ func end_session()->Dictionary:
 	return report
 
 func _build_report()->Dictionary:
-	var d =_data[_session_world]
+	var d=_data[_session_world]
 	var correct:=0; var total:=_session_data.size()
 	for s in _session_data: if s.correct: correct+=1
 	return {
@@ -69,15 +69,15 @@ func _build_report()->Dictionary:
 # ── Weak topic detection ──────────────────────────────────────────────────────
 func get_weak_topics(world:String)->Array:
 	if world not in _data: return []
-	var ta =_data[world].topic_accuracy; var weak:=[]
+	var ta=_data[world].topic_accuracy; var weak:=[]
 	for topic in ta:
-		var acc =float(ta[topic][0])/max(ta[topic][1],1)
+		var acc=float(ta[topic][0])/max(ta[topic][1],1)
 		if acc<0.6: weak.append(topic)
 	return weak
 
 func get_accuracy(world:String)->float:
 	if world not in _data: return 1.0
-	var d =_data[world]
+	var d=_data[world]
 	return float(d.total_correct)/max(d.total_questions,1)
 
 func get_avg_speed(world:String)->float:
@@ -91,7 +91,7 @@ func adaptive_select(questions:Array, world:String, player_level:int, count:int)
 	var weak:=get_weak_topics(world)
 	var prioritized:=[]; var normal:=[]
 	for q in questions:
-		var diff =q.get("difficulty",1)
+		var diff=q.get("difficulty",1)
 		# Skip questions too far above or below player level
 		if diff > (player_level/5)+2: continue
 		if q.get("topic","") in weak: prioritized.append(q)
