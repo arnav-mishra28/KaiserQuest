@@ -15,7 +15,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="KaiserQuest"
-config/description="Learn Through Adventure - Become Kaiser"
+config/description="Learn · Level Up · Become Kaiser"
 run/main_scene="res://scenes/Main.tscn"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
@@ -24,6 +24,8 @@ config/icon="res://icon.svg"
 
 GameManager="*res://scripts/autoload/GameManager.gd"
 AlgebraDB="*res://scripts/data/AlgebraQuestions.gd"
+EnglishDB="*res://scripts/data/EnglishQuestions.gd"
+MusicDB="*res://scripts/data/MusicQuestions.gd"
 
 [display]
 

@@ -1,110 +1,123 @@
-# HUD.gd — Heads-Up Display
+# HUD.gd
 extends CanvasLayer
 
-var _notif_text:  String = ""
-var _notif_timer: float  = 0.0
-const NOTIF_DUR           := 2.2
+const FS := 13
+const NOTIF_DUR := 2.2
 
-var _draw_ctrl: Control
+var _notif_text: String = ""
+var _notif_timer: float = 0.0
+var _draw_node: Control
 
 func _ready() -> void:
 	layer = 9
-	_draw_ctrl = _HUDDraw.new()
-	_draw_ctrl.hud = self
-	add_child(_draw_ctrl)
+
+	_draw_node = _HUDDraw.new()
+	_draw_node.set("hud", self)
+	add_child(_draw_node)
+
+	# ✅ FIXED SIGNALS
 	GameManager.xp_changed.connect(_on_xp_changed)
-	GameManager.level_up_occurred.connect(_on_level_up)
+	GameManager.level_up.connect(_on_level_up)
 	GameManager.badge_earned.connect(_on_badge_earned)
+
 	set_process(true)
 
 func _process(delta: float) -> void:
 	if _notif_timer > 0.0:
 		_notif_timer -= delta
-	_draw_ctrl.queue_redraw()
 
-func _on_xp_changed(_cur: int, _max: int, _lv: int) -> void:
-	_draw_ctrl.queue_redraw()
+	_draw_node.queue_redraw()
 
-func _on_level_up(new_level: int) -> void:
-	_show_notif("LEVEL UP!  Lv." + str(new_level))
+func _on_xp_changed(_c,_m,_l):
+	_draw_node.queue_redraw()
 
-func _on_badge_earned(badge_name: String) -> void:
-	_show_notif("Badge: " + badge_name + "!")
+func _on_level_up(lv):
+	_show_notif("LEVEL UP!  Lv." + str(lv))
 
-func show_xp_gain(amount: int) -> void:
-	_show_notif("+" + str(amount) + " XP")
+func _on_badge_earned(b):
+	_show_notif("Badge earned: " + b + "!")
 
-func _show_notif(text: String) -> void:
-	_notif_text  = text
+func show_xp_gain(a: int):
+	_show_notif("+" + str(a) + " XP")
+
+func _show_notif(t: String):
+	_notif_text = t
 	_notif_timer = NOTIF_DUR
 
-# ── Inner draw class — NO references to outer constants ──────────────────────
+# ─────────────────────────────────────────────────────────────────────────────
+
 class _HUDDraw extends Control:
-	var hud: Node   # typed as Node to avoid inference errors
+	var hud
 
 	func _ready() -> void:
 		set_anchors_preset(Control.PRESET_FULL_RECT)
 		mouse_filter = MOUSE_FILTER_IGNORE
 
 	func _draw() -> void:
-		if hud == null:
+		if not hud:
 			return
 
-		var fnt:    Font   = ThemeDB.fallback_font
-		var fs:     int    = 13
-		var gm             = GameManager
+		var fnt := ThemeDB.fallback_font
+		var fs  = hud.FS
+		var gm  := GameManager
 
-		# ── Top-right panel ──────────────────────────────────────────────────
-		var panel_w: int = 150
-		var panel_h: int = 36
-		var px:      int = 480 - panel_w - 4
-		var py:      int = 4
+		# ✅ USE ACCESSORS
+		var level = gm.get_level()
+		var xp    = gm.get_xp()
+		var xpmax = gm.get_xp_max()
+		var badges = gm.get_badges()
 
-		draw_rect(Rect2(px, py, panel_w, panel_h),
-			Color(0.0, 0.0, 0.0, 0.55))
-		draw_rect(Rect2(px, py, panel_w, panel_h),
-			Color(0.6, 0.6, 1.0, 0.5), false, 1.5)
+		const PW:=154
+		const PH:=38
 
-		# Level + name
-		draw_string(fnt, Vector2(px + 6, py + fs + 2),
-			"Lv." + str(gm.player_level) + "  " + str(gm.player_name),
-			HORIZONTAL_ALIGNMENT_LEFT, -1, fs, Color(1.0, 1.0, 1.0))
+		var px := 480-PW-4
+		var py := 4
 
-		# XP bar
-		var bar_x:   int   = px + 6
-		var bar_y:   int   = py + 24
-		var bar_w:   int   = panel_w - 12
-		var bar_h:   int   = 6
-		var xp_frac: float = float(gm.player_xp) / float(gm.xp_to_next_level)
+		draw_rect(Rect2(px,py,PW,PH),   Color(0,0,0,0.58))
+		draw_rect(Rect2(px,py,PW,PH),   Color(0.5,0.6,1,0.55),false,1.5)
 
-		draw_rect(Rect2(bar_x, bar_y, bar_w, bar_h),
-			Color(0.1, 0.1, 0.2))
-		draw_rect(Rect2(bar_x, bar_y, int(bar_w * xp_frac), bar_h),
-			Color(0.27, 0.67, 1.0))
-		draw_string(fnt, Vector2(bar_x, bar_y + bar_h + 10),
-			str(gm.player_xp) + " / " + str(gm.xp_to_next_level) + " XP",
-			HORIZONTAL_ALIGNMENT_LEFT, -1, 10, Color(0.7, 0.9, 1.0))
+		draw_string(fnt,Vector2(px+6,py+fs+2),
+			"Lv."+str(level)+"  "+gm.player_name,
+			HORIZONTAL_ALIGNMENT_LEFT,-1,fs,Color("#f0f0f0"))
 
-		# ── Badge strip ──────────────────────────────────────────────────────
-		var badges = gm.badges
+		var bw := PW-12
+		var bx2 := px+6
+		var by2 := py+26
+		var bh := 7
+
+		var xf := float(xp)/float(xpmax)
+
+		draw_rect(Rect2(bx2,by2,bw,bh),  Color(0.08,0.08,0.18))
+		draw_rect(Rect2(bx2,by2,int(bw*xf),bh), Color("#44aaff"))
+
+		draw_string(fnt,Vector2(bx2,by2+bh+10),
+			str(xp)+"/"+str(xpmax)+" XP",
+			HORIZONTAL_ALIGNMENT_LEFT,-1,10,Color(0.7,0.9,1))
+
+		# ✅ BADGES
 		if badges.size() > 0:
-			var bx: int = px
-			var by: int = py + panel_h + 4
-			draw_rect(Rect2(bx, by, panel_w, 18), Color(0.0, 0.0, 0.0, 0.50))
-			var txt: String = ""
-			for _i: int in mini(badges.size(), 3):
-				txt += "★ "
-			txt += "Badges: " + str(badges.size())
-			draw_string(fnt, Vector2(bx + 5, by + 13),
-				txt, HORIZONTAL_ALIGNMENT_LEFT, -1, 11, Color(1.0, 0.84, 0.0))
+			var bsx := px
+			var bsy := py+PH+3
 
-		# ── XP / level-up notification ───────────────────────────────────────
-		var timer: float = (hud as Node).get("_notif_timer")
-		if timer > 0.0:
-			var alpha: float = minf(minf(timer / 0.4, 1.0), timer)
-			var notif: String = (hud as Node).get("_notif_text")
-			var ny: float = 60.0 - (1.0 - timer / 2.2) * 15.0
-			draw_rect(Rect2(150, ny - 14, 170, 22), Color(0.0, 0.0, 0.0, 0.6 * alpha))
-			draw_string(fnt, Vector2(158, ny),
-				notif, HORIZONTAL_ALIGNMENT_LEFT, -1, 14,
-				Color(0.4, 1.0, 0.4, alpha))
+			draw_rect(Rect2(bsx,bsy,PW,18),Color(0,0,0,0.52))
+
+			var bs := ""
+			for i in min(badges.size(),5):
+				bs += "★"
+
+			bs += " "+str(badges.size())+" Badge"+("s" if badges.size()>1 else "")
+
+			draw_string(fnt,Vector2(bsx+5,bsy+13),bs,
+				HORIZONTAL_ALIGNMENT_LEFT,-1,11,Color("#ffd700"))
+
+		# ✅ NOTIFICATION
+		if hud._notif_timer > 0.0:
+			var alpha := minf(hud._notif_timer/0.4,1.0)
+			alpha = minf(alpha,hud._notif_timer)
+
+			var ny = 58.0-(1.0-hud._notif_timer/hud.NOTIF_DUR)*14.0
+
+			draw_rect(Rect2(155,ny-15,170,22),Color(0,0,0,0.62*alpha))
+
+			draw_string(fnt,Vector2(162,ny),hud._notif_text,
+				HORIZONTAL_ALIGNMENT_LEFT,-1,14,Color(0.4,1,0.4,alpha))

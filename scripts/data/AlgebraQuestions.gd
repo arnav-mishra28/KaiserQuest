@@ -1,69 +1,64 @@
-# AlgebraQuestions.gd
-# Question bank for Algebra story mode (Autoload)
+# AlgebraQuestions.gd  —  Math World question bank
 extends Node
 
-# ── Gym 1: Variables ──────────────────────────────────────────────────────────
-func get_gym1_questions() -> Array:
+static func get_gym1_questions() -> Array:
 	return [
 		{
-			"q":       "What is a variable in algebra?",
-			"opts":    [
-				"A number that never changes",
-				"A symbol representing an unknown value",
-				"A type of equation",
-				"A mathematical operation"
-			],
+			"q":       "What does a VARIABLE represent\nin algebra?",
+			"opts":    ["A fixed number","A symbol for an unknown value",
+			            "A math operation","A type of equation"],
 			"ans":     1,
-			"explain": "A variable (like x, y, or n) is a symbol\nthat represents an unknown or changing value."
+			"explain": "Variables (x, y, n…) are symbols that\nhold unknown or changing values."
 		},
 		{
 			"q":       "If  x = 5,  what is  x + 3 ?",
-			"opts":    ["5", "3", "8", "15"],
+			"opts":    ["5","3","8","15"],
 			"ans":     2,
-			"explain": "Substitute x = 5:\nx + 3  =  5 + 3  =  8"
+			"explain": "Substitute x = 5:\n  x + 3  =  5 + 3  =  8"
 		},
 		{
-			"q":       "Solve for x:\n   x + 4 = 9",
-			"opts":    ["x = 4", "x = 5", "x = 13", "x = 2"],
+			"q":       "Solve:   x + 4 = 9",
+			"opts":    ["x = 4","x = 5","x = 13","x = 2"],
 			"ans":     1,
-			"explain": "Subtract 4 from both sides:\nx  =  9 - 4  =  5"
+			"explain": "Subtract 4 from both sides:\n  x  =  9 – 4  =  5"
 		},
 		{
-			"q":       "Which of these is a variable?",
-			"opts":    ["7", "3.14", "y", "100"],
+			"q":       "Which of these is a VARIABLE?",
+			"opts":    ["7","3.14","y","100"],
 			"ans":     2,
-			"explain": "Letters like  y, x, z  are variables.\n7, 3.14, and 100 are constants (fixed numbers)."
+			"explain": "Letters like y, x, z are variables.\nNumbers like 7 or 100 are constants."
 		},
 		{
-			"q":       "If  y = 3x  and  x = 4,  what is y ?",
-			"opts":    ["7", "34", "12", "1"],
+			"q":       "If  y = 3x  and  x = 4,  find y.",
+			"opts":    ["7","34","12","1"],
 			"ans":     2,
-			"explain": "Substitute x = 4:\ny  =  3 × 4  =  12"
+			"explain": "Substitute x = 4:\n  y  =  3 × 4  =  12"
 		},
 	]
 
-# ── Gym 1 Leader Data ─────────────────────────────────────────────────────────
-func get_gym1_leader() -> Dictionary:
+static func get_gym1_leader() -> Dictionary:
 	return {
+		"world":      "math",
 		"name":       "Prof. Axiom",
-		"title":      "Guardian of the Variable Keep",
+		"title":      "Guardian of the Variable Citadel",
 		"badge_name": "Variable Badge",
 		"gym_number": 1,
 		"xp_reward":  250,
+		"color":      Color("#44aaff"),
 		"intro": [
-			"Greetings, young scholar!",
-			"I am Professor Axiom,\nGuardian of the Variable Keep!",
-			"Variables are the very foundation\nof all algebra.",
-			"Prove your mastery with 5 questions.\nYou have 3 lives.\n\n  — Press ENTER to begin —"
+			"Welcome, young Arix!",
+			"I am Professor Axiom,\nGuardian of the Variable Citadel!",
+			"Variables are the foundation\nof all algebra.",
+			"Answer 5 questions correctly.\nYou have 3 lives.\n\nPress ENTER to begin!"
 		],
 		"win": [
-			"Magnificent! You truly understand\nthe power of variables!",
-			"The Variable Badge is yours!\nWear it with pride.",
-			"May it guide your path toward\nbecoming Kaiser of Algebra!"
+			"Incredible!  You have proven\nyour mastery of variables!",
+			"The Variable Badge is yours!\nWear it with pride, future Kaiser.",
+			"The path to Silver Mountain\nbegins here!"
 		],
 		"lose": [
-			"A valiant effort...",
-			"But the Variable Keep still holds\nits secrets from you.",
-			"Review your notes, rest, and\nreturn when you are ready!"
+			"A brave effort, young scholar...",
+			"But variables still hold\ntheir secrets from you.",
+			"Review your notes and return\nwhen you are stronger!"
 		]
 	}

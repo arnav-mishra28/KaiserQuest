@@ -1,20 +1,21 @@
-# TitleScreen.gd
-# Pixel-art title screen for KaiserQuest
+# TitleScreen.gd  —  Pixel-art animated title screen
 extends Node2D
 
 signal start_game
 
-var _alpha:       float = 0.0
-var _blink_timer: float = 0.0
-var _show_enter:  bool  = true
-var _ready_flag:  bool  = false
+var _alpha:   float = 0.0
+var _blink_t: float = 0.0
+var _blink:   bool  = true
+var _ready_f: bool  = false
+var _time:    float = 0.0
 
-# Star positions (pre-computed for perf)
 const STARS := [
-	Vector2(40,  18), Vector2(115, 12), Vector2(195, 40), Vector2(340, 16),
-	Vector2(425, 55), Vector2(75,  75), Vector2(395, 85), Vector2(245,  8),
-	Vector2(158, 65), Vector2(455, 35), Vector2(28,  95), Vector2(300, 50),
-	Vector2(500, 70), Vector2(60, 130), Vector2(420,110), Vector2(200, 95),
+	Vector2(18,12),Vector2(55,8),Vector2(95,22),Vector2(148,6),Vector2(190,18),
+	Vector2(235,10),Vector2(280,25),Vector2(330,8),Vector2(375,20),Vector2(415,12),
+	Vector2(458,28),Vector2(32,42),Vector2(78,55),Vector2(128,38),Vector2(200,48),
+	Vector2(260,35),Vector2(315,52),Vector2(362,40),Vector2(430,50),Vector2(470,36),
+	Vector2(10,70),Vector2(60,82),Vector2(110,68),Vector2(175,88),Vector2(240,72),
+	Vector2(300,90),Vector2(355,78),Vector2(410,95),Vector2(455,68),Vector2(8,100),
 ]
 
 func _ready() -> void:
@@ -22,77 +23,117 @@ func _ready() -> void:
 	set_process_input(true)
 
 func _process(delta: float) -> void:
-	if _alpha < 1.0:
-		_alpha = minf(_alpha + delta * 0.7, 1.0)
-		if _alpha >= 1.0:
-			_ready_flag = true
-
-	_blink_timer += delta
-	if _blink_timer >= 0.55:
-		_blink_timer = 0.0
-		_show_enter = not _show_enter
-
+	_time  += delta
+	_alpha  = minf(_alpha + delta * 0.55, 1.0)
+	if _alpha >= 1.0: _ready_f = true
+	_blink_t += delta
+	if _blink_t >= 0.52: _blink_t = 0.0; _blink = not _blink
 	queue_redraw()
 
 func _input(event: InputEvent) -> void:
-	if _ready_flag and event.is_action_pressed("ui_accept"):
+	if _ready_f and event.is_action_pressed("ui_accept"):
 		start_game.emit()
 
 func _draw() -> void:
-	var W := 480.0
-	var H := 320.0
-
-	# ── Background ──────────────────────────────────────────────────────────
-	draw_rect(Rect2(0, 0, W, H), Color("#050510"))
-
-	# ── Stars ───────────────────────────────────────────────────────────────
-	for s in STARS:
-		var sz := 2 if int(s.x + s.y) % 3 == 0 else 1
-		draw_rect(Rect2(s.x, s.y, sz, sz), Color(1, 1, 1, _alpha * 0.8))
-
-	# ── Mountain silhouettes ─────────────────────────────────────────────────
-	var mc := Color(0.08, 0.08, 0.22, _alpha)
-	# Left mountain
-	draw_colored_polygon(
-	PackedVector2Array([Vector2(0,320), Vector2(110,185), Vector2(240,320)]),
-	mc
-	)
-	# Right mountain
-	draw_colored_polygon(
-	PackedVector2Array([Vector2(210,320), Vector2(355,155), Vector2(480,320)]),
-	mc
-	)
-	# Silver peak highlight
-	var pc := Color(0.75, 0.80, 1.0, _alpha)
-	draw_colored_polygon(
-	PackedVector2Array([Vector2(335,170), Vector2(355,155), Vector2(378,170)]),
-	pc
-	)
-
-	# ── Title ────────────────────────────────────────────────────────────────
+	var W := 480.0; var H := 320.0
 	var fnt := ThemeDB.fallback_font
-	var gold  := Color(1.0, 0.84, 0.0, _alpha)
-	var white := Color(1.0, 1.0, 1.0, _alpha)
-	var grey  := Color(0.65, 0.65, 0.65, _alpha * 0.9)
 
-	draw_string(fnt, Vector2(68, 115), "KAISER", HORIZONTAL_ALIGNMENT_LEFT, -1, 54, gold)
-	draw_string(fnt, Vector2(105, 163), "QUEST",  HORIZONTAL_ALIGNMENT_LEFT, -1, 54, white)
+	# ── Sky gradient (layered rects) ─────────────────────────────────────────
+	for i in 8:
+		var t := float(i) / 7.0
+		var c := Color(0.02 + t*0.04, 0.02 + t*0.06, 0.10 + t*0.14, _alpha)
+		draw_rect(Rect2(0, i*40, W, 42), c)
 
-	# Separator line
-	draw_rect(Rect2(64, 170, 350, 2), Color(1.0, 0.84, 0.0, _alpha * 0.6))
+	# ── Stars with twinkle ────────────────────────────────────────────────────
+	for si in STARS.size():
+		var s   = STARS[si]
+		var tw  := 0.55 + 0.45 * sin(_time * 1.8 + si * 0.7)
+		var sz  := 2 if si % 3 == 0 else 1
+		draw_rect(Rect2(s.x, s.y, sz, sz), Color(1,1,1, _alpha * tw))
+
+	# ── Moon ──────────────────────────────────────────────────────────────────
+	draw_rect(Rect2(400, 20, 22, 22), Color(1.0, 0.97, 0.80, _alpha))
+	draw_rect(Rect2(406, 22, 20, 18), Color(0.04, 0.04, 0.14, _alpha))  # crescent
+
+	# ── Distant mountains (dark) ──────────────────────────────────────────────
+	var dm := Color(0.06, 0.07, 0.18, _alpha)
+	draw_colored_polygon(PackedVector2Array([
+	Vector2(0,200),Vector2(60,140),Vector2(130,200)
+]), dm)
+	draw_colored_polygon(PackedVector2Array([
+	Vector2(100,200),Vector2(200,120),Vector2(310,200)
+]), dm)
+	draw_colored_polygon(PackedVector2Array([
+	Vector2(270,200),Vector2(380,110),Vector2(480,200)
+]), dm)
+
+	# Silver Mountain peak highlight
+	var sm := Color(0.78, 0.82, 1.0, _alpha)
+	draw_colored_polygon(PackedVector2Array([
+	Vector2(362,126),Vector2(380,110),Vector2(398,126)
+]), sm)
+
+	# ── Near ground ──────────────────────────────────────────────────────────
+	draw_rect(Rect2(0, 200, W, H-200), Color(0.05, 0.10, 0.05, _alpha))
+	# Grass row detail
+	for gx in range(0, 480, 8):
+		var gh := 3 + (gx % 5)
+		draw_rect(Rect2(gx, 197, 4, gh), Color(0.10, 0.22, 0.08, _alpha * 0.7))
+
+	# ── Title plate ───────────────────────────────────────────────────────────
+	if _alpha > 0.1:
+		# Shadow plate
+		draw_rect(Rect2(60, 65, 362, 112), Color(0,0,0, _alpha * 0.55))
+		# Gold border frame
+		draw_rect(Rect2(58, 63, 364, 114), Color(1.0, 0.84, 0.0, _alpha * 0.9), false, 3.0)
+		draw_rect(Rect2(62, 67, 356, 106), Color(0.6, 0.45, 0.0, _alpha * 0.6), false, 1.5)
+
+		# KAISER
+		var gold  := Color(1.0, 0.88, 0.20, _alpha)
+		var white := Color(1.00, 1.00, 1.00, _alpha)
+		# Shadow offset
+		draw_string(fnt, Vector2(84, 118), "KAISER",
+			HORIZONTAL_ALIGNMENT_LEFT, -1, 52, Color(0,0,0,_alpha*0.6))
+		draw_string(fnt, Vector2(82, 116), "KAISER",
+			HORIZONTAL_ALIGNMENT_LEFT, -1, 52, gold)
+
+		# QUEST
+		draw_string(fnt, Vector2(222, 158), "QUEST",
+			HORIZONTAL_ALIGNMENT_LEFT, -1, 52, Color(0,0,0,_alpha*0.6))
+		draw_string(fnt, Vector2(220, 156), "QUEST",
+			HORIZONTAL_ALIGNMENT_LEFT, -1, 52, white)
+
+		# Divider
+		draw_rect(Rect2(68, 162, 346, 2), Color(1.0, 0.84, 0.0, _alpha * 0.7))
 
 	# Subtitle
-	if _alpha > 0.6:
-		draw_string(fnt, Vector2(75, 195),
-			"Learn · Level Up · Become Kaiser",
-			HORIZONTAL_ALIGNMENT_LEFT, -1, 15, grey)
+	if _alpha > 0.5:
+		draw_string(fnt, Vector2(96, 186),
+			"Learn  ·  Level Up  ·  Become Kaiser",
+			HORIZONTAL_ALIGNMENT_LEFT, -1, 14, Color(0.75, 0.82, 1.0, _alpha))
+
+	# 3 world icons row
+	if _alpha > 0.7:
+		var worlds := [
+			{"icon":"∑", "col": Color("#44aaff"), "lbl":"MATH",     "x": 110.0},
+			{"icon":"A", "col": Color("#ffcc44"), "lbl":"LANGUAGE", "x": 220.0},
+			{"icon":"♪", "col": Color("#cc44ff"), "lbl":"MUSIC",    "x": 326.0},
+		]
+		for wd in worlds:
+			draw_rect(Rect2(wd.x - 2, 198, 76, 38), Color(0,0,0,_alpha*0.45))
+			draw_rect(Rect2(wd.x - 2, 198, 76, 38), wd.col * Color(1,1,1,_alpha*0.45), false, 1.5)
+			draw_string(fnt, Vector2(wd.x + 6, 218),
+				wd.icon, HORIZONTAL_ALIGNMENT_LEFT, -1, 20, wd.col * Color(1,1,1,_alpha))
+			draw_string(fnt, Vector2(wd.x + 28, 218),
+				wd.lbl, HORIZONTAL_ALIGNMENT_LEFT, -1, 11, Color(0.9,0.9,0.9,_alpha))
 
 	# Press ENTER
-	if _show_enter and _ready_flag:
-		draw_string(fnt, Vector2(148, 265),
+	if _ready_f and _blink:
+		draw_rect(Rect2(138, 248, 204, 22), Color(0,0,0,0.55))
+		draw_string(fnt, Vector2(152, 264),
 			"Press  ENTER  to  Start",
-			HORIZONTAL_ALIGNMENT_LEFT, -1, 17, white)
+			HORIZONTAL_ALIGNMENT_LEFT, -1, 16, Color("#ffffff"))
 
-	# Version tag
-	draw_string(fnt, Vector2(398, 312), "v0.1 MVP",
-		HORIZONTAL_ALIGNMENT_LEFT, -1, 11, Color(0.3, 0.3, 0.4, _alpha))
+	# Version
+	draw_string(fnt, Vector2(400, 314), "v0.2",
+		HORIZONTAL_ALIGNMENT_LEFT, -1, 11, Color(0.3,0.3,0.5,_alpha))
