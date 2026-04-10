@@ -537,11 +537,11 @@ func _gym_math(gx:int,gy:int,gw:int,gh:int,p:Dictionary)->void:
 		draw_string(
 	ThemeDB.fallback_font,
 	Vector2(wx2+8, gy+52),
-	"x² ∫ =",
+	"x² =",
 	HORIZONTAL_ALIGNMENT_LEFT,
 	-1,
 	14,
-	p.accent
+	p.gaccent
 )
 	# ── Central entrance arch ─────────────────────────────────────────────────
 	var cx2 := gx + gw/2 - 18

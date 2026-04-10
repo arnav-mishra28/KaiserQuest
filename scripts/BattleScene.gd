@@ -66,8 +66,8 @@ func _input(event: InputEvent) -> void:
 
 func _submit() -> void:
 	_locked = true
-	var q := _questions[_q_idx]
-	var ok := (q.ans == _sel)
+	var q = _questions[_q_idx]
+	var ok = (q.ans == _sel)
 	_explain = q.get("explain", "")
 	if ok:
 		_ans_cols[_sel] = C_ANS_OK
@@ -118,7 +118,7 @@ func _letter(i: int) -> String:
 func _draw() -> void:
 	if _questions.is_empty(): return
 	var fnt := ThemeDB.fallback_font
-	var q   := _questions[_q_idx] if _q_idx < _questions.size() else {}
+	var q   = _questions[_q_idx] if _q_idx < _questions.size() else {}
 
 	# Background
 	draw_rect(Rect2(0,0,W,H), C_BG)
@@ -138,8 +138,8 @@ func _draw() -> void:
 	_draw_leader(_gym_data.get("leader_type","math"), 14, 12)
 
 	# Name & title
-	var lname := _gym_data.get("name","???")
-	var ltitle := _gym_data.get("title","")
+	var lname = _gym_data.get("name","???")
+	var ltitle = _gym_data.get("title","")
 	draw_string(fnt, Vector2(78,M+18), lname,  HORIZONTAL_ALIGNMENT_LEFT,-1,16, C_GOLD)
 	draw_string(fnt, Vector2(78,M+32), ltitle, HORIZONTAL_ALIGNMENT_LEFT,-1,11, Color(0.75,0.85,1))
 
@@ -166,11 +166,11 @@ func _draw() -> void:
 
 	# ── Answer options ────────────────────────────────────────────────────────
 	var ay := qy+66
-	var opts := q.get("opts",[])
+	var opts = q.get("opts",[])
 	for i in opts.size():
-		var ah   := 34; var aoy := ay + i*(ah+4)
-		var sel  := (i==_sel and not _locked)
-		var bc   := _ans_cols[i] if i < _ans_cols.size() else C_ANS_NORM
+		var ah   = 34; var aoy = ay + i*(ah+4)
+		var sel  = (i==_sel and not _locked)
+		var bc   = _ans_cols[i] if i < _ans_cols.size() else C_ANS_NORM
 
 		draw_rect(Rect2(M,aoy,W-M*2,ah), bc)
 		if sel:
