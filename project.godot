@@ -23,6 +23,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 GameManager="*res://scripts/autoload/GameManager.gd"
+AdaptiveAI="*res://scripts/autoload/AdaptiveAI.gd"
+QuestManager="*res://scripts/autoload/QuestManager.gd"
 AlgebraDB="*res://scripts/data/AlgebraQuestions.gd"
 EnglishDB="*res://scripts/data/EnglishQuestions.gd"
 MusicDB="*res://scripts/data/MusicQuestions.gd"

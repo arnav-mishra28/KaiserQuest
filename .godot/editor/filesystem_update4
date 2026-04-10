@@ -1,3 +1,9 @@
 res://scenes/Main.tscn
+res://scripts/autoload/GameManager.gd
+res://scripts/autoload/AdaptiveAI.gd
+res://scripts/Main.gd
+res://scripts/DialogBox.gd
+res://scripts/HUD.gd
+res://scripts/TitleScreen.gd
+res://scripts/WorldMap.gd
 res://scripts/Overworld.gd
-res://scripts/BattleScene.gd
