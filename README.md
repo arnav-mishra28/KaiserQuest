@@ -1,4 +1,4 @@
-# ⚔️ KaiserQuest — MVP v0.1
+# ⚔️ KaiserQuest
 ## Learn Through Adventure · Become Kaiser
 
 ---
