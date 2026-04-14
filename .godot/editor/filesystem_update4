@@ -2,8 +2,9 @@ res://scenes/Main.tscn
 res://scripts/autoload/GameManager.gd
 res://scripts/autoload/AdaptiveAI.gd
 res://scripts/Main.gd
-res://scripts/DialogBox.gd
-res://scripts/HUD.gd
-res://scripts/TitleScreen.gd
-res://scripts/WorldMap.gd
-res://scripts/Overworld.gd
+res://scripts/ui/DialogBox.gd
+res://scripts/ui/HUD.gd
+res://scripts/ui/TitleScreen.gd
+res://scripts/ui/WorldMap.gd
+res://scripts/world/World.gd
+res://scripts/npc/NPC.gd

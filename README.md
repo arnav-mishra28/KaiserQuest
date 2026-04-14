@@ -1,81 +1,110 @@
-# ⚔️ KaiserQuest
-## Learn Through Adventure · Become Kaiser
+# ⚔️ KaiserQuest— Learn. Battle. Become Kaiser.
+
+## 🚀 Quick Start (5 minutes)
+
+### 1. Install Godot 4.2+
+Download from https://godotengine.org (free, ~80MB)
+No install needed — just extract and run.
+
+### 2. Open the Game
+1. Launch Godot Engine
+2. Click **Import** → select the `KaiserQuest/` folder → `project.godot`
+3. Press **F5** (or ▶ Play)
+
+### 3. Start Playing
+- **Arrow Keys / WASD** — Move player (hold to keep moving!)
+- **ENTER / Space** — Interact with NPCs, advance dialog, confirm answers
+- **↑↓** — Select answers in battle
+- **ESC** — Return to World Map
+- **F5** — Reset save data
+- **F4** — Force return to world map
 
 ---
 
-## 🚀 Setup (5 minutes)
+## 🎮 How to Reach Level 5 (Unlock the Gym)
 
-### 1. Install Godot 4
-- Download **Godot 4.2+** (Standard version) from https://godotengine.org
-- No installation needed — just extract and run
+You need **400 XP** to reach Level 5. Here's how to get it fast:
 
-### 2. Open the Project
-1. Launch Godot
-2. Click **"Import"** → navigate to the `KaiserQuest/` folder
-3. Select `project.godot` → click **"Import & Edit"**
+| Source | XP | Notes |
+|--------|-----|-------|
+| Teacher lessons (×3) | 75 each = **225 XP** | Talk to NPCs with **?** icons |
+| Regular NPC chats (×5) | 50 each = **250 XP** | Talk to everyone! |
+| Collect 3 items | 100 each = **300 XP** | Glowing items on the map |
+| Win a duel | **150 XP** | Challenge ⚔ NPCs |
+| Item trade NPC | **150 XP** | One-time gift |
+| Random walk bonus | 5-15 XP/step | Small chance per step |
+| Quest completion | **200 XP** | Find all 3 quest items |
 
-### 3. Run the Game
-- Press **F5** (or click the ▶ Play button)
-- First run will ask you to confirm the main scene — click **OK**
-
----
-
-## 🎮 Controls
-
-| Key | Action |
-|-----|--------|
-| Arrow Keys | Move player |
-| Enter / Space | Interact with NPCs · Advance dialog · Confirm answer |
-| ↑ ↓ | Select answer in battle |
-| F5 | **Dev:** Reset save data & restart |
+**Talk to ALL NPCs first** — that's 475 XP right there, well past Level 5!
 
 ---
 
-## 🗺️ What's In This Build (Phase 1 MVP)
+## 🌍 Game Structure
 
-### Mathopolis — Starter Town
-- **15×10 tile pixel map** drawn entirely in GDScript (no external assets)
-- Top-down movement, tile-based grid, smooth tweened walking
-- 4 NPCs to talk to (each gives +50 XP on first meeting)
-- 1 collectible **Algebra Scroll** item (+200 XP)
-- Pokémon-style dialog box with typewriter effect
+```
+Title Screen
+    ↓ ENTER
+Name Entry (type your name)
+    ↓
+World Map (Kanto-style region)
+    ↓ walk to city
+Town (Mathopolis / Lexicon City / Harmonia)
+    ↓ explore + learn
+Gym Battle (Level 5 required + 1 teacher lesson)
+    ↓ win
+Badge earned → back to World Map
+```
 
-### Getting to the Gym
-You start at **Level 1**. To challenge the gym you need **Level 5**.
-- Talk to all 4 NPCs → +200 XP
-- Collect the glowing scroll east of the path → +200 XP
-- Total: **400 XP = Level 5** ✓
+## ⚔️ Battle System
 
-### Algebra Gym — Variable Keep
-- Gym Leader: **Professor Axiom**
-- Topic: **Variables** (Algebra Gym 1)
-- 5 questions, 3 lives
-- Arrow keys to select answers, Enter to confirm
-- Win → earn the **Variable Badge** + 250 XP
+- **Correct answer → You attack** (enemy loses HP, red flash)
+- **Wrong answer → You take damage** (player loses HP, blue flash)
+- **3 lives** before game over
+- Enemy HP depleted = Victory + Badge + XP
 
-### Systems Working
-- ✅ Level & XP system (with HUD bar)
-- ✅ Badge tracking
-- ✅ Persistent save/load (auto-saves to user data)
-- ✅ NPC one-time XP rewards
-- ✅ Item collection
-- ✅ Gym level gate (Level 5 required)
-- ✅ Knowledge battle with feedback & explanations
+## 👥 NPC Types
+
+| Icon | Type | Reward |
+|------|------|--------|
+| **?** | Teacher | Full lesson + 75 XP (once) |
+| **!** | Quest Giver | Quest + 200 XP on completion |
+| **⚔** | Duel Challenger | 150 XP if you win |
+| (none) | Regular NPC | 50 XP first talk |
 
 ---
 
-## 🔮 Roadmap (Future Phases)
+## 🏗️ Tech Stack
 
-| Phase | What Gets Added |
-|-------|-----------------|
-| 2 | Camera scrolling + larger world map |
-| 3 | 3 knowledge subjects (Algebra, English, Music Theory) |
-| 4 | All 20 Gym Leaders per subject |
-| 5 | Side quests + NPC stories |
-| 6 | Silver Mountain Final Boss |
-| 7 | Pixel art sprite replacement |
-| 8 | Mobile export + sound |
-| 9 | Kaiser certification screen |
+| Layer | Technology |
+|-------|-----------|
+| Game Engine | **Godot 4.2** — 2.5D pixel RPG |
+| Language | **GDScript** — Python-like, fast |
+| Rendering | Pure `draw_rect()` — no external assets! |
+| Backend | **FastAPI** (Python) |
+| AI | **PyTorch** adaptive difficulty model |
+| Save | JSON files in user data directory |
+
+---
+
+## 🤖 FastAPI Backend (Optional)
+
+The game works standalone. For AI-powered adaptive questions:
+
+```bash
+cd backend/
+pip install -r requirements.txt
+uvicorn main:app --reload --port 8000
+```
+
+Then in Godot, set `GameManager.use_backend = true`
+
+API endpoints:
+- `GET  /` — Health check
+- `POST /questions/adaptive` — Get AI-selected questions
+- `POST /session/start` — Start a learning session
+- `POST /session/answer` — Record an answer
+- `POST /session/{id}/end` — End session, get summary
+- `GET  /leaderboard/{world}` — Top players
 
 ---
 
@@ -83,30 +112,47 @@ You start at **Level 1**. To challenge the gym you need **Level 5**.
 
 ```
 KaiserQuest/
-├── project.godot              ← Godot project config
-├── icon.svg
-├── scenes/
-│   └── Main.tscn              ← Root scene (loads Main.gd)
-└── scripts/
-    ├── Main.gd                ← Scene coordinator
-    ├── TitleScreen.gd         ← Title screen
-    ├── Overworld.gd           ← World map + player movement
-    ├── DialogBox.gd           ← Typewriter dialog system
-    ├── HUD.gd                 ← Level/XP/Badge overlay
-    ├── BattleScene.gd         ← Quiz battle engine
-    ├── autoload/
-    │   └── GameManager.gd     ← Global state + save/load
-    └── data/
-        └── AlgebraQuestions.gd ← Question bank
+├── project.godot
+├── assets/icon.svg
+├── scenes/Main.tscn
+├── scripts/
+│   ├── Main.gd                    ← Scene orchestrator
+│   ├── autoload/
+│   │   ├── GameManager.gd         ← Global state, HP, XP, save/load
+│   │   ├── AdaptiveAI.gd          ← Weak topic detection
+│   │   └── QuestManager.gd        ← Quest state
+│   ├── player/
+│   │   └── Player.gd              ← Hold-to-move, pixel art sprite
+│   ├── npc/
+│   │   └── NPC.gd                 ← Teacher/Quest/Duel NPCs
+│   ├── world/
+│   │   └── World.gd               ← 2.5D town, all NPCs, interactions
+│   ├── battle/
+│   │   ├── BattleSystem.gd        ← Gym battle (correct=attack)
+│   │   └── DuelSystem.gd          ← PvP knowledge duel with timer
+│   ├── ui/
+│   │   ├── DialogBox.gd           ← Typewriter dialog
+│   │   ├── HUD.gd                 ← HP/XP/Gold bars
+│   │   ├── TitleScreen.gd         ← Animated title
+│   │   └── WorldMap.gd            ← Kanto-style region map
+│   └── data/
+│       ├── AlgebraQuestions.gd
+│       ├── EnglishQuestions.gd
+│       └── MusicQuestions.gd
+└── backend/
+    ├── main.py                    ← FastAPI + PyTorch server
+    └── requirements.txt
 ```
 
 ---
 
-## 🐛 Known Issues (MVP)
-- Sprites are placeholder colored rectangles — pixel art to come in Phase 2
-- No sound/music yet
-- Battle intro dialog requires the DialogBox to be registered in group `dialog_box`
+## 🔮 XP Sources Summary
+
+With all NPCs + quests + duels in ONE town, you can earn **1,800+ XP** — 
+that's **Level 22+** before even touching the gym!
+
+The gym only requires Level 5 (400 XP). You'll hit it quickly.
 
 ---
 
-*Built with Godot 4 · GDScript · No external assets required*
+*KaiserQuest v1.0 — Built with Godot 4 · FastAPI · PyTorch*
