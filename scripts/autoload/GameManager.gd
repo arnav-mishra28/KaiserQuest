@@ -85,7 +85,7 @@ func set_best_score(gym_id:String,score:int)->void:
 
 # ── Teachers / NPC / Items / Quests ──────────────────────────────────────────
 func learned_from(id:String)->bool: return id in _ws().get("teachers_learned",[])
-func mark_learned(id:String) -> void:
+func mark_learned(id: String) -> void:
 	var t = _ws().get("teachers_learned", [])
 
 	if id not in t:

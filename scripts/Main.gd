@@ -35,9 +35,9 @@ func _show_name_entry()->void:
 	add_child(ne)
 
 func _on_named(n:String)->void:
-	var node = get_node_or_null("NameEntry")
-	if node:
-		node.queue_free()
+	var ne = get_node_or_null("NameEntry")
+	if ne:
+		ne.queue_free()
 	GameManager.player_name = n
 	_show_world_map()
 

@@ -34,8 +34,9 @@ func _physics_process(delta:float)->void:
 	_step_t+=delta
 	if _step_t>=0.10: _step_t=0.0; _do_step(d)
 
-func _input(ev:InputEvent)->void:
-	if _dlg or _mov: return
+func _input(ev: InputEvent) -> void:
+	if _dlg or _mov:
+		return
 	if Input.is_action_just_pressed("ui_accept"):
 		_interact()
 
@@ -75,7 +76,7 @@ func _upd_cam()->void:
 func _tile(p:Vector2i)->int:
 	if p.y<0 or p.y>=ROWS or p.x<0 or p.x>=COLS: return T_OCEAN
 	return WMAP[p.y][p.x]
-func _dvec(d:int) -> Vector2i:
+func _dvec(d: int) -> Vector2i:
 	match d:
 		0:
 			return Vector2i(0, 1)
@@ -85,8 +86,8 @@ func _dvec(d:int) -> Vector2i:
 			return Vector2i(-1, 0)
 		3:
 			return Vector2i(1, 0)
-		_:
-			return Vector2i.ZERO
+
+	return Vector2i.ZERO
 func _process(d:float)->void: _t+=d; _at+=d; if _at>=0.25: _at=0.0; _ft=1-_ft; queue_redraw()
 
 func _draw()->void:
@@ -112,38 +113,28 @@ func _draw()->void:
 	draw_rect(Rect2(2,2,COLS*2+4,ROWS*2+4),DK)
 	for r in ROWS:
 		for c in COLS:
-			var mc: Color
-
+			var mc:Color
 			match WMAP[r][c]:
-				T_OCEAN:
-					mc = Color("#1b3a80")
-
-				T_GRASS, T_FOREST:
-					mc = Color("#4a9829")
-
+				T_GRASS:
+					mc = Color("#5fb850")
+				T_FOREST:
+					mc = Color("#2e7d32")
 				T_MTN:
-					mc = Color("#7080a0")
-
+					mc = Color("#7a5b3a")
 				T_PEAK:
-					mc = Color("#d0d8e0")
-
+					mc = Color("#cfd8dc")
 				T_PATH:
-					mc = Color("#c08a00")
-
-				T_SAND, T_TOWN:
-					mc = Color("#d8c878")
-
+					mc = Color("#d6a86e")
+				T_TOWN:
+					mc = Color("#f4e285")
 				T_GYM:
-					mc = Color("#c24040")
-
+					mc = Color("#b388ff")
 				T_SILVER:
-					mc = Color("#a0a0a0")
-
+					mc = Color("#ff8a65")
 				T_WATER:
-					mc = Color("#2840b0")
-
+					mc = Color("#4aa3ff")
 				_:
-					mc = Color("#444444")
+					mc = Color("#000000")
 			draw_rect(Rect2(4+c*2,4+r*2,2,2),mc)
 	draw_rect(Rect2(4+_p.x*2-1,4+_p.y*2-1,4,4),Color("#ffffff"))
 	# Zone hint
@@ -204,7 +195,7 @@ func _wt_raised(t:int,px:int,py:int)->void:
 		Vector2(px+8, py+0),
 		Vector2(px+16, py+8)
 	]),
-	Color("#8090c8")
+	Color("#8090c8")  # ✅ single color
 )
 			draw_rect(Rect2(px+5,py+2,6,3),Color("#b0c0e8")); draw_rect(Rect2(px+6,py+1,4,2),Color(1,1,1,sg))
 
