@@ -68,7 +68,7 @@ func _start_intro()->void:
 
 func _input(event:InputEvent)->void:
 	if _phase != Phase.QUESTION: return
-	var opts := _qs[_qi].get("opts",[]) if _qi<_qs.size() else []
+	var opts = _qs[_qi].get("opts",[]) if _qi<_qs.size() else []
 	if event.is_action_pressed("ui_up"):
 		_sel=(_sel-1+opts.size())%opts.size(); queue_redraw()
 	elif event.is_action_pressed("ui_down"):
@@ -78,8 +78,8 @@ func _input(event:InputEvent)->void:
 
 func _submit()->void:
 	_phase = Phase.ANIMATING; set_process_input(false)
-	var q  := _qs[_qi]
-	var ok := (q.ans == _sel)
+	var q  = _qs[_qi]
+	var ok = (q.ans == _sel)
 	_explain = q.get("explain","")
 	AdaptiveAI.record_answer(q.get("topic","general"), ok)
 	_acols = [BOX_BG,BOX_BG,BOX_BG,BOX_BG]
@@ -135,8 +135,8 @@ func _draw()->void:
 	if _qs.is_empty(): return
 	const W:=480; const H:=320
 	var fnt := ThemeDB.fallback_font
-	var q   := _qs[_qi] if _qi < _qs.size() else {}
-	var wcol:= _gym.get("color", Color("#2040c0"))
+	var q   = _qs[_qi] if _qi < _qs.size() else {}
+	var wcol= _gym.get("color", Color("#2040c0"))
 
 	# ── Gen 2 battle background ────────────────────────────────────────────
 	for gy in range(0,H/2,4):
@@ -173,12 +173,12 @@ func _draw()->void:
 			HORIZONTAL_ALIGNMENT_LEFT,-1,9,Color(0.4,0.4,0.5))
 
 		# Options 2×2 grid (Gen 2 style)
-		var opts := q.get("opts",[])
+		var opts = q.get("opts",[])
 		var ay   := menu_y + 46
 		for i in opts.size():
 			var col_x := 4         if i%2==0 else W/2+2
 			var row_y := ay        if i<2    else ay+34
-			var sel   := (_phase==Phase.QUESTION and i==_sel)
+			var sel   = (_phase==Phase.QUESTION and i==_sel)
 			draw_rect(Rect2(col_x, row_y, W/2-6, 32), BOX_DK)
 			draw_rect(Rect2(col_x+1,row_y+1,W/2-8,30), _acols[i] if i<_acols.size() else BOX_BG)
 			if sel: draw_rect(Rect2(col_x+1,row_y+1,W/2-8,30), SEL_BG)

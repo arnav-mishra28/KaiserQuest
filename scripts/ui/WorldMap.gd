@@ -34,9 +34,8 @@ func _physics_process(delta:float)->void:
 	_step_t+=delta
 	if _step_t>=0.10: _step_t=0.0; _do_step(d)
 
-func _input(ev: InputEvent) -> void:
-	if _dlg or _mov:
-		return
+func _input(ev:InputEvent)->void:
+	if _dlg or _mov: return
 	if Input.is_action_just_pressed("ui_accept"):
 		_interact()
 
@@ -86,8 +85,8 @@ func _dvec(d: int) -> Vector2i:
 			return Vector2i(-1, 0)
 		3:
 			return Vector2i(1, 0)
-
-	return Vector2i.ZERO
+		_:
+			return Vector2i.ZERO
 func _process(d:float)->void: _t+=d; _at+=d; if _at>=0.25: _at=0.0; _ft=1-_ft; queue_redraw()
 
 func _draw()->void:
@@ -115,26 +114,35 @@ func _draw()->void:
 		for c in COLS:
 			var mc:Color
 			match WMAP[r][c]:
-				T_GRASS:
-					mc = Color("#5fb850")
-				T_FOREST:
-					mc = Color("#2e7d32")
+				T_OCEAN:
+					mc = Color("#1838a0")
+
+				T_GRASS, T_FOREST:
+					mc = Color("#489028")
+
 				T_MTN:
-					mc = Color("#7a5b3a")
+					mc = Color("#706858")
+
 				T_PEAK:
-					mc = Color("#cfd8dc")
+					mc = Color("#d0d8e8")
+
 				T_PATH:
-					mc = Color("#d6a86e")
-				T_TOWN:
-					mc = Color("#f4e285")
+					mc = Color("#d8c060")
+
+				T_SAND, T_TOWN:
+					mc = Color("#e8d878")
+
 				T_GYM:
-					mc = Color("#b388ff")
+					mc = Color("#2040a0")
+
 				T_SILVER:
-					mc = Color("#ff8a65")
+					mc = Color("#8090c8")
+
 				T_WATER:
-					mc = Color("#4aa3ff")
+					mc = Color("#2848b0")
+
 				_:
-					mc = Color("#000000")
+					mc = Color("#409020")
 			draw_rect(Rect2(4+c*2,4+r*2,2,2),mc)
 	draw_rect(Rect2(4+_p.x*2-1,4+_p.y*2-1,4,4),Color("#ffffff"))
 	# Zone hint
@@ -191,11 +199,11 @@ func _wt_raised(t:int,px:int,py:int)->void:
 			draw_rect(Rect2(px+2,py+8,12,8),Color("#6070a8"))
 			draw_colored_polygon(
 	PackedVector2Array([
-		Vector2(px, py+8),
-		Vector2(px+8, py+0),
-		Vector2(px+16, py+8)
+		Vector2(px + 8, py + 0),
+		Vector2(px + 0, py + 8),
+		Vector2(px + 16, py + 8)
 	]),
-	Color("#8090c8")  # ✅ single color
+	Color("#8090c8")
 )
 			draw_rect(Rect2(px+5,py+2,6,3),Color("#b0c0e8")); draw_rect(Rect2(px+6,py+1,4,2),Color(1,1,1,sg))
 

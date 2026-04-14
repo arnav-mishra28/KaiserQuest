@@ -8,3 +8,5 @@ res://scripts/ui/TitleScreen.gd
 res://scripts/ui/WorldMap.gd
 res://scripts/world/World.gd
 res://scripts/npc/NPC.gd
+res://scripts/battle/DuelSystem.gd
+res://scripts/battle/BattleSystem.gd
