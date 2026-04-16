@@ -112,7 +112,8 @@ func _draw()->void:
 	draw_rect(Rect2(2,2,COLS*2+4,ROWS*2+4),DK)
 	for r in ROWS:
 		for c in COLS:
-			var mc:Color
+			var mc: Color
+
 			match WMAP[r][c]:
 				T_OCEAN:
 					mc = Color("#1838a0")
@@ -199,9 +200,9 @@ func _wt_raised(t:int,px:int,py:int)->void:
 			draw_rect(Rect2(px+2,py+8,12,8),Color("#6070a8"))
 			draw_colored_polygon(
 	PackedVector2Array([
-		Vector2(px + 8, py + 0),
-		Vector2(px + 0, py + 8),
-		Vector2(px + 16, py + 8)
+		Vector2(px+0, py+8),
+		Vector2(px+8, py+0),
+		Vector2(px+16, py+8)
 	]),
 	Color("#8090c8")
 )

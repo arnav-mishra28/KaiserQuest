@@ -18,20 +18,16 @@ func _draw()->void:
 		draw_rect(Rect2(s.x,s.y,2 if si%3==0 else 1,2 if si%3==0 else 1),Color(1,1,1,_a*tw))
 	draw_rect(Rect2(400,18,24,24),Color(1.0,0.97,0.80,_a)); draw_rect(Rect2(407,20,22,20),Color(0.04,0.04,0.14,_a))
 	var dm:=Color(0.06,0.07,0.18,_a)
-	
-# FIX 1
 	draw_colored_polygon(
 	PackedVector2Array([Vector2(0,200), Vector2(60,140), Vector2(130,200)]),
 	dm
 )
 
-# FIX 2
 	draw_colored_polygon(
 	PackedVector2Array([Vector2(100,200), Vector2(200,118), Vector2(310,200)]),
 	dm
 )
 
-# FIX 3
 	draw_colored_polygon(
 	PackedVector2Array([Vector2(270,200), Vector2(380,108), Vector2(480,200)]),
 	dm
