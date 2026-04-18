@@ -1,13 +1,3 @@
 res://scenes/Main.tscn
 res://scripts/autoload/GameManager.gd
 res://scripts/autoload/AdaptiveAI.gd
-res://scripts/story/GymStoryline.gd
-res://scripts/Main.gd
-res://scripts/ui/DialogBox.gd
-res://scripts/ui/HUD.gd
-res://scripts/ui/TitleScreen.gd
-res://scripts/ui/WorldMap.gd
-res://scripts/world/World.gd
-res://scripts/player/Player.gd
-res://scripts/npc/NPC.gd
-res://scripts/battle/DuelSystem.gd

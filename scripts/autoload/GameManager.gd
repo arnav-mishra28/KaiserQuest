@@ -157,9 +157,25 @@ func quest_done(id: String) -> bool:
 	return id in _ws().get("quests_done", [])
 func complete_quest(id:String)->void:
 	if id not in _ws().quests_done: _ws().quests_done.append(id); _save()
-func add_duel_win()->void:  _ws().duels_won +=1; _save()
-func add_duel_loss()->void: _ws().duels_lost+=1; _save()
-func get_duel_wins()->int:  return _ws().duels_won
+func add_duel_win() -> void:
+	var ws = _ws()
+	if not ws.has("duels_won"):
+		ws["duels_won"] = 0
+	ws["duels_won"] += 1
+	_save()
+
+func add_duel_loss() -> void:
+	var ws = _ws()
+	if not ws.has("duels_lost"):
+		ws["duels_lost"] = 0
+	ws["duels_lost"] += 1
+	_save()
+
+func get_duel_wins() -> int:
+	var ws = _ws()
+	if not ws.has("duels_won"):
+		ws["duels_won"] = 0
+	return ws["duels_won"]
 
 # ── Silver Mountain ───────────────────────────────────────────────────────────
 func can_challenge_silver()->bool: return get_level()>=100 and get_badges().size()>=20

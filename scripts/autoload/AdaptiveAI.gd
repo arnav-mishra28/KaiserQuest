@@ -142,8 +142,15 @@ func get_avg_speed(world: String) -> float:
 	return _data[world].avg_ms
 
 func get_difficulty_level(world: String) -> int:
-	if world not in _data: return 1
-	return _data[world].difficulty_level
+	if world not in _data:
+		return 1
+	
+	var d = _data[world]
+	
+	if not d.has("difficulty_level"):
+		d["difficulty_level"] = 1
+	
+	return d["difficulty_level"]
 
 func get_xp_multiplier(world: String) -> float:
 	if world not in _data: return 1.0
@@ -209,15 +216,15 @@ func get_summary(world: String) -> Dictionary:
 				"streak": 0, "xp_mult": 1.0, "weak": []}
 	var d = _data[world]
 	return {
-		"accuracy":   float(d.total_correct) / max(float(d.total_q), 1.0),
-		"sessions":   d.sessions,
-		"difficulty": d.difficulty_level,
-		"streak":     d.streak,
-		"best_streak":d.best_streak,
-		"xp_mult":    d.xp_multiplier,
-		"weak":       get_weak_topics(world),
-		"avg_ms":     d.avg_ms,
-	}
+	"accuracy": float(d["total_correct"]) / max(float(d["total_q"]), 1.0),
+	"sessions": d["sessions"],
+	"difficulty": d["difficulty_level"],
+	"streak": d["streak"],
+	"best_streak": d["best_streak"],
+	"xp_mult": d["xp_multiplier"],
+	"weak": get_weak_topics(world),
+	"avg_ms": d["avg_ms"],
+}
 
 # ── Save / Load ────────────────────────────────────────────────────────────────
 func _save() -> void:
