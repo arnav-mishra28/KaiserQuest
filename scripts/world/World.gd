@@ -304,59 +304,59 @@ func _check_quests() -> void:
 				return
 
 func _try_gym() -> void:
-	# Determine which gym number to challenge based on badges earned
-	var db_map := {"math": AlgebraDB, "english": EnglishDB, "music": MusicDB}
-	var db     = db_map.get(_world, AlgebraDB)
-	var badges := GameManager.get_badges()
+	# Find which gym this city has
+	var city_id := _world   # world string IS the city id
+	var city := GymStoryline.get_city_for_gym(0)
+	for city_data in GymStoryline.CITIES:
+		if city_data.get("world","") == _world:
+			city = city_data; break
 	
-	# World-specific badge sequence
+	var gym_num = city.get("gym", 1)
 	var badge_seq := {
-		"math":    ["Variable Badge", "Equation Badge", "Function Badge"],
-		"english": ["Grammar Badge",  "Verb Badge",     "Sentence Badge"],
-		"music":   ["Rhythm Badge",   "Harmony Badge",  "Scale Badge"],
+		"math":    ["Variable Badge","Equation Badge","Function Badge"],
+		"english": ["Grammar Badge","Verb Badge","Sentence Badge"],
+		"music":   ["Rhythm Badge","Harmony Badge","Scale Badge"],
 	}
-	var seq   = badge_seq.get(_world, [])
+	# Check if player has earned the badge for this gym
+	var badge_name := "Gym "+str(gym_num)+" Badge"
+	# Get from storyline leader data
+	var leader := GymStoryline.get_gym_leader_data(gym_num)
+	if not leader.is_empty():
+		badge_name = leader.get("badge","Gym "+str(gym_num)+" Badge")
 	
-	# Find next gym to challenge
-	var gym_num := 1
-	for i in seq.size():
-		if GameManager.has_badge(seq[i]):
-			gym_num = i + 2
-		else:
-			gym_num = i + 1
-			break
-	
-	var badge = seq[min(gym_num - 1, seq.size() - 1)] if seq.size() > 0 else ""
-	
-	# Check if all 3 already earned
-	if gym_num > seq.size():
-		_show_dialog(["You have conquered all 3 gyms\nin this city!", "Continue to the next city\non your journey to Kaiser!"]); return
+	if GameManager.has_badge(badge_name):
+		_show_dialog(["You already hold the "+badge_name+"!","The leader nods respectfully."]); return
 	
 	if not GameManager.can_challenge_gym(gym_num):
-		var need := gym_num * 5
+		var need = gym_num * 5
 		_show_dialog(["The gym entrance is sealed!",
-			"You need Level " + str(need) + " to challenge\nGym " + str(gym_num) + ".",
-			"Your Level: " + str(GameManager.get_level()) + "\n\nTalk to Teachers for XP!"]); return
+			"You need Level "+str(need)+" to challenge\nGym "+str(gym_num)+".",
+			"Your Level: "+str(GameManager.get_level())+"\n\nTalk to Teachers for XP!"]); return
 	
-	# Check if at least 1 lesson has been learned
+	# Check at least one teacher talked to
 	var talked_count := 0
-	for npc in WORLD_NPCS.get(_world, []):
-		if npc.get("type","") == "teacher" and GameManager.has_talked(npc.id):
-			talked_count += 1
-	if talked_count == 0:
-		_show_dialog(["The gym door is locked!",
-			"Talk to a ? Teacher NPC first!\nLearn at least 1 lesson."]); return
+	for npc in WORLD_NPCS.get(_world,[]):
+		if npc.get("type","")=="teacher" and GameManager.has_talked(npc.id): talked_count+=1
+	if talked_count==0:
+		_show_dialog(["The gym door is locked!","Talk to a ? Teacher first!\nLearn at least one lesson."]); return
 	
-	AdaptiveAI.start_session(_world)
-	
-	var gdata: Dictionary
-	match gym_num:
-		1: gdata = db.get_gym1_leader(); gdata["questions"] = db.get_gym1_questions()
-		2: gdata = db.get_gym2_leader(); gdata["questions"] = db.get_gym2_questions()
-		3: gdata = db.get_gym3_leader(); gdata["questions"] = db.get_gym3_questions()
-		_: gdata = db.get_gym1_leader(); gdata["questions"] = db.get_gym1_questions()
-	gdata["world"] = _world
-	change_scene.emit("battle", gdata)
+	# Build gym data from GymStoryline
+	var qs := GymStoryline.get_questions_for_gym(gym_num, 5+min(gym_num,5))
+	if not leader.is_empty():
+		var gdata := leader.duplicate()
+		gdata["questions"] = qs
+		gdata["world"] = _world
+		AdaptiveAI.start_session(_world)
+		change_scene.emit("battle", gdata)
+	else:
+		# Fallback to old system
+		var db_map := {"math":AlgebraDB,"english":EnglishDB,"music":MusicDB}
+		var db = db_map.get(_world,AlgebraDB)
+		var gdata = db.get_gym1_leader()
+		gdata["questions"] = db.get_gym1_questions()
+		gdata["world"] = _world
+		AdaptiveAI.start_session(_world)
+		change_scene.emit("battle", gdata)
 
 func _show_dialog(lines: Array, cb: Callable = Callable()) -> void:
 	if _dialog and _dialog.has_method("show_lines"):
@@ -414,8 +414,8 @@ func _gcol() -> Color:
 			return Color("#c07010")
 		"music":
 			return Color("#8020c0")
-
-	return Color("#2060d0")  # default
+		_:
+			return Color("#2060d0")
 
 # ── Ground tiles ──────────────────────────────────────────────────────────────
 func _draw_ground(t:int, px:int, py:int, c:int, r:int) -> void:

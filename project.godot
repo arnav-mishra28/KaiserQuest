@@ -28,6 +28,7 @@ QuestManager="*res://scripts/autoload/QuestManager.gd"
 AlgebraDB="*res://scripts/data/AlgebraQuestions.gd"
 EnglishDB="*res://scripts/data/EnglishQuestions.gd"
 MusicDB="*res://scripts/data/MusicQuestions.gd"
+GymStoryline="*res://scripts/story/GymStoryline.gd"
 
 [display]
 

@@ -96,6 +96,7 @@ func setup(data: Dictionary, dialog_node: Node) -> void:
 
 func _intro() -> void:
 	if _dialog:
+		if "context" in _dialog: _dialog.context = "battle"
 		_dialog.show_lines(_data.get("intro", ["Oracle Battle begins!"]),
 			func(): _phase = Phase.MENU; set_process_input(true))
 

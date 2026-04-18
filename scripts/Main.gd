@@ -48,7 +48,44 @@ func _on_wm_dialog(lines: Array) -> void: _dialog.show_lines(lines)
 func _on_enter_zone(zone_id: String) -> void:
 	if zone_id == "silver":
 		_start_silver(); return
-	GameManager.active_world = zone_id; _show_world(zone_id)
+	# Handle route duel (format: "duel:{json}")
+	if zone_id.begins_with("duel:"):
+		var json_str := zone_id.substr(5)
+		var opp = JSON.parse_string(json_str)
+		if opp is Dictionary:
+			_start_duel({"world": opp.get("world","math"), "opponent": opp})
+		return
+	# Find the world for this city
+	var world := "math"
+	for city in GymStoryline.CITIES:
+		if city.id == zone_id: world = city.get("world","math"); break
+	GameManager.active_world = world
+	_show_world_with_gym(zone_id, world)
+
+func _show_world_with_gym(city_id: String, world: String) -> void:
+	_free_scene()
+	var world_node := Node2D.new(); world_node.name = "World"
+	world_node.set_script(load("res://scripts/world/World.gd"))
+	add_child(world_node); move_child(world_node, 0); _scene = world_node
+	world_node.add_to_group("active_world")
+	_player = CharacterBody2D.new(); _player.name = "Player"
+	_player.set_script(load("res://scripts/player/Player.gd"))
+	var cs := CollisionShape2D.new()
+	var shape := CapsuleShape2D.new(); shape.radius=10.0; shape.height=20.0
+	cs.shape = shape; _player.add_child(cs); world_node.add_child(_player)
+	world_node.init_world(world, _player, _dialog, _hud)
+	world_node.connect("change_scene", _on_change_scene)
+	# Show act intro if first time in this act
+	var badges := GameManager.get_badges().size()
+	var act := GymStoryline.get_act(badges+1)
+	if act > 1 and not GameManager.has_talked("act_"+str(act)+"_intro"):
+		GameManager.mark_talked("act_"+str(act)+"_intro")
+		if "context" in _dialog: _dialog.context = "world"
+		var intro = GymStoryline.ACT_INTROS.get(act,[])
+		var resolved:Array = []
+		for line in intro:
+			resolved.append(str(line).replace("{name}", GameManager.player_name))
+		_dialog.show_lines(resolved)
 
 # ── Town World ────────────────────────────────────────────────────────────────
 func _show_world(world_id: String) -> void:
@@ -86,22 +123,25 @@ func _start_silver() -> void:
 	sm.set_script(load("res://scripts/silver/SilverMountain.gd"))
 	sm.connect("silver_cleared", _on_silver_cleared)
 	sm.connect("back_to_map", func():
-		var node = get_node_or_null("SilverMountain")
-		if node:
-			node.queue_free()
-		if _scene: _scene.show()
-		_show_world_map())
+		var sm_node = get_node_or_null("SilverMountain")
+		if sm_node:
+			sm_node.queue_free()
+
+		if _scene:
+			_scene.show()
+
+		_show_world_map()
+)
 	add_child(sm)
 	sm.setup(_dialog, _hud)
 
 func _on_silver_cleared() -> void:
-	var node = get_node_or_null("SilverMountain")
-	if node:
-		node.queue_free()
+	var sm = get_node_or_null("SilverMountain")
+	if sm:
+		sm.queue_free()
 
 	if _scene:
 		_scene.show()
-
 	_show_kaiser_screen()
 
 func _show_kaiser_screen() -> void:
@@ -119,24 +159,22 @@ func _start_battle(gym_data: Dictionary) -> void:
 	add_child(b); b.setup(gym_data, _dialog)
 
 func _on_battle_ended(won: bool, badge_name: String, xp: int) -> void:
-	var node = get_node_or_null("Battle")
-	if node:
-		node.queue_free()
-
-	if _scene:
-		_scene.show()
+	var battle = get_node_or_null("Battle")
+	if battle:
+		battle.queue_free()
 	if _scene: _scene.show()
-	var world := GameManager.active_world
-	var db_map := {"math":AlgebraDB,"english":EnglishDB,"music":MusicDB}
-	var db = db_map.get(world, AlgebraDB)
+	if "context" in _dialog: _dialog.context = "world"
 	if won:
 		GameManager.add_xp(xp); GameManager.earn_badge(badge_name); _hud.show_xp_gain(xp)
-		var lines = db.get_gym1_leader().get("win",[]).duplicate()
-		lines.append("★  "+badge_name+"  earned!\n\n+"+str(xp)+" XP!")
+		var badges := GameManager.get_badges().size()
+		var lines := ["★  "+badge_name+"  earned!","Badges: "+str(badges)+"/20","+"+ str(xp)+" XP!"]
+		# Check for act completion
+		if badges == 5:  lines.append("ACT 1 COMPLETE!\nRising challenges await...")
+		elif badges == 12: lines.append("ACT 2 COMPLETE!\nThe final gyms await...")
+		elif badges == 20: lines.append("ALL 20 BADGES!\nSilver Mountain awaits!")
 		_dialog.show_lines(lines)
 	else:
-		var lines = db.get_gym1_leader().get("lose",[]).duplicate()
-		lines.append("Study with the Teachers\nand return stronger!")
+		var lines := ["Defeated...","Study with the Teachers\nand return stronger!"]
 		_dialog.show_lines(lines)
 
 # ── Knowledge Duel ────────────────────────────────────────────────────────────
@@ -148,12 +186,11 @@ func _start_duel(data: Dictionary) -> void:
 	add_child(d); d.setup(data.get("world","math"), data.get("opponent",{}), _dialog)
 
 func _on_duel_ended(won: bool, xp: int) -> void:
-	var node = get_node_or_null("Duel")
-	if node:
-		node.queue_free()
+	var duel = get_node_or_null("Duel")
+	if duel:
+		duel.queue_free()
 
-	if _scene:
-		_scene.show()
+	if _scene: _scene.show()
 	if won:
 		GameManager.add_xp(xp); GameManager.add_duel_win(); _hud.show_xp_gain(xp)
 		_dialog.show_lines(["Duel Victory! 🏆",GameManager.player_name+" wins!",
@@ -176,7 +213,6 @@ func _input(event: InputEvent) -> void:
 			var duel = get_node_or_null("Duel")
 			if duel:
 				duel.queue_free()
-
 			_show_world_map()
 
 # ═══════════════ Name Entry Screen ════════════════════════════════════════════

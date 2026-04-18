@@ -66,10 +66,19 @@ func end_session() -> Dictionary:
 		# Per-topic accuracy
 		var ta = d.topic_accuracy
 		if s.topic not in ta:
-			ta[s.topic] = [0, 0, 5000.0]  # [correct, total, avg_ms]
+			ta[s.topic] = [0, 0, 5000.0]  # ensure 3 elements
+
+# Ensure structure is always valid (VERY IMPORTANT)
+		if ta[s.topic].size() < 3:
+			ta[s.topic].resize(3)
+			ta[s.topic][2] = 5000.0
+
 		ta[s.topic][1] += 1
-		if s.correct: ta[s.topic][0] += 1
-		# Exponential moving average for topic speed
+
+		if s.correct:
+			ta[s.topic][0] += 1
+
+# Now safe
 		ta[s.topic][2] = lerp(ta[s.topic][2], float(s.ms), 0.3)
 
 	if _session_data.size() > 0:

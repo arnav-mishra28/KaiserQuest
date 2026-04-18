@@ -1,6 +1,7 @@
 res://scenes/Main.tscn
 res://scripts/autoload/GameManager.gd
 res://scripts/autoload/AdaptiveAI.gd
+res://scripts/story/GymStoryline.gd
 res://scripts/Main.gd
 res://scripts/ui/DialogBox.gd
 res://scripts/ui/HUD.gd

@@ -117,6 +117,7 @@ func _check_entry() -> void:
 
 func _show_story() -> void:
 	if _dialog:
+		if "context" in _dialog: _dialog.context = "world"
 		_dialog.show_lines(STORY_LINES, func(): _begin_battle())
 
 func _begin_battle() -> void:

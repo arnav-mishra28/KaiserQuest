@@ -39,6 +39,7 @@ func setup(world: String, opponent: Dictionary, dialog_node: Node) -> void:
 
 func _intro() -> void:
 	if _dialog and _dialog.has_method("show_lines"):
+		if "context" in _dialog: _dialog.context = "battle"
 		_dialog.show_lines([
 			_opp.get("name","Rival") + " challenges you\nto a Knowledge Duel!",
 			"7 questions  ·  3 lives each",
@@ -54,8 +55,7 @@ func _input(ev: InputEvent) -> void:
 	elif ev.is_action_pressed("ui_down"):
 		_sel = (_sel + 1) % opts.size(); queue_redraw()
 	elif ev.is_action_pressed("ui_accept"):
-		_submit()
-		get_viewport().set_input_as_handled()
+		_submit(); ev.get_viewport().set_input_as_handled()
 	# ── Click on answer to select + submit instantly ──────────────────────────
 	elif ev is InputEventMouseButton and ev.pressed and ev.button_index == MOUSE_BUTTON_LEFT:
 		var idx := _get_opt_at(ev.position)

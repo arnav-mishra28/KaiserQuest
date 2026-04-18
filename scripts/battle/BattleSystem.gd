@@ -33,6 +33,7 @@ var _explain:   String = ""
 var _acols:     Array  = []
 var _score:     int    = 0
 var _time:      float  = 0.0
+var _avatars:   Node2D = null
 var _hint_used: bool   = false
 var _hint_text: String = ""
 var _show_hint: bool   = false
@@ -60,10 +61,16 @@ func setup(gym_data: Dictionary, dialog_node: Node) -> void:
 	_e_max=18+GameManager.get_level()*2; _e_hp=_e_max; _e_hp_d=float(_e_max)
 	_combo=0; _best_combo=0
 	set_process(true); set_process_input(false)
+	# Create battle avatars
+	_avatars = Node2D.new()
+	_avatars.set_script(load("res://scripts/battle/BattleAvatars.gd"))
+	add_child(_avatars)
+	_avatars.setup(gym_data.get("world","math"), gym_data.get("color",Color("#2060d0")))
 	call_deferred("_start_intro")
 
 func _start_intro() -> void:
 	if _dialog and _dialog.has_method("show_lines"):
+		if "context" in _dialog: _dialog.context = "battle"
 		_dialog.show_lines(_gym.get("intro",["Battle start!"]), func():
 			_phase=Phase.MENU; set_process_input(true))
 
@@ -178,6 +185,9 @@ func _submit() -> void:
 		var combo_str:="" if _combo<2 else " COMBO x"+str(_combo)+"!"
 		_result="It's super effective!"+combo_str
 		_e_hp=max(0,_e_hp-E_DMG*(1+min(_combo-1,2)))  # combo bonus dmg
+		if _avatars: _avatars.player_attack()
+		await get_tree().create_timer(0.15).timeout
+		if _avatars: _avatars.enemy_hurt()
 		_glow_t=0.8; _score=mini(_score+int(100.0/_qs.size()),100)
 		_flash_col=Color(GLOW_C,0.35)
 	else:

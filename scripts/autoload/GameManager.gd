@@ -32,23 +32,52 @@ func _init_world(wid:String)->void:
 			"silver_attempts":0,"silver_cooldown":0
 		}
 
-func _ws()->Dictionary: return world_state[active_world]
+func _ws() -> Dictionary:
+	if not world_state.has(active_world):
+		world_state[active_world] = {
+			"level": 1,
+			"xp": 0,
+			"hp": BASE_HP,
+			"gold": 0,
+			"badges": [],
+			"grid_pos": {"x": 7, "y": 7}
+		}
+	return world_state[active_world]
 
-# ── Stats ────────────────────────────────────────────────────────────────────
-func get_level()->int:    return _ws().level
-func get_xp()->int:       return _ws().xp
-func get_xp_max()->int:   return _ws().level * XP_BASE
-func get_badges()->Array: return _ws().badges
-func get_max_hp()->int:   return BASE_HP + (get_level()-1)*HP_PER_LV
-func get_hp()->int:       return _ws().get("hp", get_max_hp())
-func get_gold()->int:     return _ws().get("gold",0)
-func is_kaiser()->bool:   return _ws().get("kaiser",false)
+# — Stats —
 
-func get_grid_pos()->Vector2i:
-	var g=_ws().grid_pos
-	return Vector2i(clampi(int(g.get("x",7)),0,29), clampi(int(g.get("y",7)),0,19))
+func get_level() -> int:
+	return _ws().get("level", 1)
 
-func set_grid_pos(p:Vector2i)->void: _ws().grid_pos={"x":p.x,"y":p.y}
+func get_xp() -> int:
+	return _ws().get("xp", 0)
+
+func get_xp_max() -> int:
+	return _ws().get("level", 1) * XP_BASE
+
+func get_badges() -> Array:
+	return _ws().get("badges", [])
+
+func get_max_hp() -> int:
+	return BASE_HP + (get_level() - 1) * HP_PER_LV
+
+func get_hp() -> int:
+	return _ws().get("hp", get_max_hp())
+
+func get_gold() -> int:
+	return _ws().get("gold", 0)
+
+func is_kaiser() -> bool:
+	return _ws().get("kaiser", false)
+
+
+func get_grid_pos() -> Vector2i:
+	var gp = _ws().get("grid_pos", {"x": 0, "y": 0})
+	return Vector2i(gp["x"], gp["y"])
+
+
+func set_grid_pos(p: Vector2i) -> void:
+	_ws()["grid_pos"] = {"x": p.x, "y": p.y}
 
 func heal_full()->void:
 	_ws()["hp"]=get_max_hp(); hp_changed.emit(get_hp(),get_max_hp())
@@ -79,21 +108,53 @@ func can_challenge_gym(gym_num:int)->bool: return get_level()>=gym_num*5
 func earn_badge(b:String)->void:
 	var ws:=_ws()
 	if b not in ws.badges: ws.badges.append(b); badge_earned.emit(b); _save()
-func has_badge(b:String)->bool: return b in _ws().badges
-func set_best_score(gym_id:String,score:int)->void:
-	var ws:=_ws(); ws.score_best[gym_id]=max(score,ws.score_best.get(gym_id,0)); _save()
+func has_badge(b: String) -> bool:
+	return b in _ws().get("badges", [])
 
-# ── Teachers / NPC / Items / Quests ──────────────────────────────────────────
-func learned_from(id:String)->bool: return id in _ws().get("teachers_learned",[])
-func mark_learned(id:String)->void:
-	var t=_ws().get("teachers_learned",[]); t.append(id) if id not in t else null; _ws()["teachers_learned"]=t
-func has_talked(id:String)->bool:   return id in _ws().npcs_talked
-func mark_talked(id:String)->void:
-	if id not in _ws().npcs_talked: _ws().npcs_talked.append(id)
-func has_item(id:String)->bool:     return id in _ws().items_collected
-func collect_item(id:String)->void:
-	if id not in _ws().items_collected: _ws().items_collected.append(id)
-func quest_done(id:String)->bool:   return id in _ws().quests_done
+
+func set_best_score(gym_id: String, score: int) -> void:
+	var ws := _ws()
+	var scores = ws.get("score_best", {})
+	scores[gym_id] = max(score, scores.get(gym_id, 0))
+	ws["score_best"] = scores
+	_save()
+
+
+func learned_from(id: String) -> bool:
+	return id in _ws().get("teachers_learned", [])
+
+
+func mark_learned(id: String) -> void:
+	var t = _ws().get("teachers_learned", [])
+	if id not in t:
+		t.append(id)
+		_ws()["teachers_learned"] = t
+
+
+func has_talked(id: String) -> bool:
+	return id in _ws().get("npcs_talked", [])
+
+
+func mark_talked(id: String) -> void:
+	var t = _ws().get("npcs_talked", [])
+	if id not in t:
+		t.append(id)
+		_ws()["npcs_talked"] = t
+
+
+func has_item(id: String) -> bool:
+	return id in _ws().get("items_collected", [])
+
+
+func collect_item(id: String) -> void:
+	var items = _ws().get("items_collected", [])
+	if id not in items:
+		items.append(id)
+		_ws()["items_collected"] = items
+
+
+func quest_done(id: String) -> bool:
+	return id in _ws().get("quests_done", [])
 func complete_quest(id:String)->void:
 	if id not in _ws().quests_done: _ws().quests_done.append(id); _save()
 func add_duel_win()->void:  _ws().duels_won +=1; _save()
