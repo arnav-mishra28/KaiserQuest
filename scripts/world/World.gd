@@ -5,8 +5,8 @@ extends Node2D
 signal change_scene(scene_name: String, data: Dictionary)
 
 const TS   := 32
-const COLS := 20
-const ROWS := 15
+const COLS := 15   # 15×32=480 = viewport width → STATIC SCREEN
+const ROWS := 10   # 10×32=320 = viewport height → STATIC SCREEN
 
 # Tile IDs
 const T_GRASS := 0; const T_TREE := 1; const T_HOUSE := 2
@@ -18,55 +18,40 @@ const WALKABLE := [0, 4, 7, 9, 12]
 
 const MAPS := {
 "math": [
-[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
-[1,0,0,0,8,8,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
-[1,0,2,2,8,8,0,2,2,0,0,0,2,2,0,0,0,0,0,1],
-[1,0,2,2,8,0,0,2,2,0,0,0,2,2,0,11,11,0,0,1],
-[1,0,12,0,0,0,0,12,0,0,0,0,12,0,0,11,0,0,0,1],
-[1,0,0,0,4,4,4,4,4,4,4,4,0,0,0,0,7,0,0,1],
-[1,0,0,4,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0,1],
-[1,0,4,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,1],
-[1,0,4,0,2,2,0,0,0,0,0,2,2,4,0,7,0,0,0,1],
-[1,0,0,4,2,2,0,0,0,0,0,2,2,0,4,0,0,0,0,1],
-[1,0,0,0,12,0,4,4,4,6,4,4,4,0,0,0,0,7,0,1],
-[1,0,0,0,0,4,5,5,5,5,5,5,5,4,0,0,0,0,0,1],
-[1,0,0,0,4,4,4,4,4,4,4,4,4,4,4,0,0,0,0,1],
-[1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
-[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+[1,0,0,0,8,8,0,0,0,0,0,0,0,0,1],
+[1,0,2,2,8,8,0,2,2,0,0,0,0,0,1],
+[1,0,2,2,8,0,0,2,2,0,11,11,0,0,1],
+[1,0,12,0,0,0,0,12,0,0,11,0,0,0,1],
+[1,0,0,0,4,4,4,4,4,4,0,7,0,0,1],
+[1,0,0,4,0,0,0,0,0,0,4,0,0,0,1],
+[1,0,4,5,5,6,5,5,5,5,4,0,0,0,1],
+[1,0,0,4,4,4,4,4,4,4,0,0,0,0,1],
+[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
 ],
 "english": [
-[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
-[1,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,1],
-[1,9,2,2,9,9,9,2,2,9,9,9,2,2,9,9,9,9,9,1],
-[1,9,2,2,9,9,9,2,2,9,9,9,2,2,9,11,11,9,9,1],
-[1,9,12,9,9,9,9,12,9,9,9,9,12,9,9,11,9,9,9,1],
-[1,9,9,9,4,4,4,4,4,4,4,4,9,9,9,9,7,9,9,1],
-[1,9,9,4,9,9,9,9,9,9,9,9,4,9,9,9,9,9,9,1],
-[1,9,4,9,9,9,9,9,9,9,9,9,9,4,9,9,9,9,9,1],
-[1,9,4,9,2,2,9,9,9,9,9,2,2,4,9,7,9,9,9,1],
-[1,9,9,4,2,2,9,9,9,9,9,2,2,9,4,9,9,9,9,1],
-[1,9,9,9,12,9,4,4,4,6,4,4,4,9,9,9,9,7,9,1],
-[1,9,9,9,9,4,5,5,5,5,5,5,5,4,9,9,9,9,9,1],
-[1,9,9,9,4,4,4,4,4,4,4,4,4,4,4,9,9,9,9,1],
-[1,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,1],
-[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+[1,9,9,9,9,9,9,9,9,9,9,9,9,9,1],
+[1,9,2,2,9,9,9,2,2,9,9,9,9,9,1],
+[1,9,2,2,9,9,9,2,2,9,11,11,9,9,1],
+[1,9,12,9,9,9,9,12,9,9,11,9,9,9,1],
+[1,9,9,9,4,4,4,4,4,4,9,7,9,9,1],
+[1,9,9,4,9,9,9,9,9,9,4,9,9,9,1],
+[1,9,4,5,5,6,5,5,5,5,4,9,9,9,1],
+[1,9,9,4,4,4,4,4,4,4,9,9,9,9,1],
+[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
 ],
 "music": [
-[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
-[1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
-[1,0,2,2,0,0,0,2,2,0,0,0,2,2,0,0,0,0,0,1],
-[1,0,2,2,0,0,0,2,2,0,0,0,2,2,0,11,11,0,0,1],
-[1,0,12,0,0,0,0,12,0,0,0,0,12,0,0,11,0,0,0,1],
-[1,0,0,0,4,4,4,4,4,4,4,4,0,0,0,0,7,0,0,1],
-[1,0,0,4,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0,1],
-[1,0,4,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,1],
-[1,0,4,0,2,2,0,0,10,10,0,2,2,4,0,7,0,0,0,1],
-[1,0,0,4,2,2,0,0,10,0,0,2,2,0,4,0,0,0,0,1],
-[1,0,0,0,12,0,4,4,4,6,4,4,4,0,0,0,0,7,0,1],
-[1,0,0,0,0,4,5,5,5,5,5,5,5,4,0,0,0,0,0,1],
-[1,0,0,0,4,4,4,4,4,4,4,4,4,4,4,0,0,0,0,1],
-[1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
-[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+[1,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+[1,0,2,2,0,0,0,2,2,0,0,0,0,0,1],
+[1,0,2,2,0,0,0,2,2,0,10,10,0,0,1],
+[1,0,12,0,0,0,0,12,0,0,10,0,0,0,1],
+[1,0,0,0,4,4,4,4,4,4,0,7,0,0,1],
+[1,0,0,4,0,0,0,0,0,0,4,0,0,0,1],
+[1,0,4,5,5,6,5,5,5,5,4,0,0,0,1],
+[1,0,0,4,4,4,4,4,4,4,0,0,0,0,1],
+[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
 ],
 }
 
@@ -78,20 +63,20 @@ const WORLD_NPCS := {
 	 "lesson":["📖 LESSON: Equations","An EQUATION has an equals sign (=).\nBoth sides must stay balanced.","Example: 2x + 4 = 10\n→ Subtract 4:  2x = 6\n→ Divide by 2: x = 3","Always do the SAME thing\nto BOTH sides!","✓ Lesson learned! +75 XP"]},
 	{"id":"t_fn","pos":Vector2i(11,8),"shirt":Color("#880020"),"type":"teacher","name":"Elder Func","subject":"Functions","xp":75,
 	 "lesson":["📖 LESSON: Functions","A FUNCTION maps every input\nto exactly ONE output.","f(x) = 2x + 1\nIf x = 3:  f(3) = 2(3)+1 = 7","Domain = valid inputs\nRange = all possible outputs","✓ Lesson learned! +75 XP"]},
-	{"id":"npc1","pos":Vector2i(16,2),"shirt":Color("#e8c030"),"xp":50,"lines":["Welcome to Mathopolis!","Talk to the ? Teachers to\nearn 75 XP each!","You need Level 5 for the Gym.\nOnly 400 XP total!"]},
-	{"id":"npc2","pos":Vector2i(15,5),"shirt":Color("#30a030"),"xp":50,"lines":["A variable holds the place\nfor what we don't know yet!","Solve for x and you\nhave your answer."]},
-	{"id":"npc3","pos":Vector2i(17,8),"shirt":Color("#a03030"),"xp":50,"lines":["There are 20 gym badges\nin Math World!","Collect them all and challenge\nSilver Mountain!"]},
-	{"id":"npc4","pos":Vector2i(18,10),"shirt":Color("#9090b0"),"xp":50,"lines":["Algebra: every equation\nholds a hidden truth.","Find x and you find\nthe answer."]},
-	{"id":"npc5","pos":Vector2i(16,13),"shirt":Color("#207060"),"xp":50,"lines":["Duel wins give 150 XP!\nChallenge ⚔ NPCs!","They have red icons\nabove their heads."]},
-	{"id":"quest1","pos":Vector2i(15,3),"shirt":Color("#20c060"),"type":"quest_giver","quest_id":"mq1",
+	{"id":"npc1","pos":Vector2i(13,2),"shirt":Color("#e8c030"),"xp":50,"lines":["Welcome to Mathopolis!","Talk to the ? Teachers to\nearn 75 XP each!","You need Level 5 for the Gym.\nOnly 400 XP total!"]},
+	{"id":"npc2","pos":Vector2i(12,5),"shirt":Color("#30a030"),"xp":50,"lines":["A variable holds the place\nfor what we don't know yet!","Solve for x and you\nhave your answer."]},
+	{"id":"npc3","pos":Vector2i(13,8),"shirt":Color("#a03030"),"xp":50,"lines":["There are 20 gym badges\nin Math World!","Collect them all and challenge\nSilver Mountain!"]},
+	{"id":"npc4","pos":Vector2i(13,6),"shirt":Color("#9090b0"),"xp":50,"lines":["Algebra: every equation\nholds a hidden truth.","Find x and you find\nthe answer."]},
+	{"id":"npc5","pos":Vector2i(12,6),"shirt":Color("#207060"),"xp":50,"lines":["Duel wins give 150 XP!\nChallenge ⚔ NPCs!","They have red icons\nabove their heads."]},
+	{"id":"quest1","pos":Vector2i(12,3),"shirt":Color("#20c060"),"type":"quest_giver","quest_id":"mq1",
 	 "lines":["I lost 3 Formula Stones\nscattered around town!","Find all 3 and bring them\nback for 200 XP + 50 Gold!"]},
-	{"id":"duel1","pos":Vector2i(17,5),"shirt":Color("#e05010"),"type":"duel",
+	{"id":"duel1","pos":Vector2i(13,5),"shirt":Color("#e05010"),"type":"duel",
 	 "opponent":{"name":"Rival Kira","accuracy":0.55,"reward_xp":150},
 	 "lines":["Hey! I challenge you to\na Knowledge Duel!","7 questions. 3 lives each.","Correct = you attack!\nWrong = you take damage!","Confirm to begin the duel!"]},
-	{"id":"duel2","pos":Vector2i(18,13),"shirt":Color("#8010e0"),"type":"duel",
+	{"id":"duel2","pos":Vector2i(13,7),"shirt":Color("#8010e0"),"type":"duel",
 	 "opponent":{"name":"Scholar Zax","accuracy":0.65,"reward_xp":150},
 	 "lines":["I'm Scholar Zax!\nChampion duelist!","7 equations stand between\nyou and 150 XP!","Confirm to begin the duel!"]},
-	{"id":"trade1","pos":Vector2i(19,7),"shirt":Color("#604020"),"type":"item_trade",
+	{"id":"trade1","pos":Vector2i(13,4),"shirt":Color("#604020"),"type":"item_trade",
 	 "lines":["I have a rare Algebra Scroll!","Take it — it holds\n150 XP of wisdom!"]},
 ],
 "english": [
@@ -101,20 +86,20 @@ const WORLD_NPCS := {
 	 "lesson":["📖 LESSON: Verbs","VERBS are action or state words.","Past: walked  Present: walks\nFuture: will walk","Irregular: go→went  see→saw\nrun→ran  be→was","✓ Lesson learned! +75 XP"]},
 	{"id":"et_adj","pos":Vector2i(11,8),"shirt":Color("#602060"),"type":"teacher","name":"Poet Adj","subject":"Adjectives","xp":75,
 	 "lesson":["📖 LESSON: Adjectives","ADJECTIVES describe nouns.\n'The tall ancient tower'","Tall and ancient = adjectives.\nThey modify 'tower'.","Comparison:\nbig → bigger → biggest","✓ Lesson learned! +75 XP"]},
-	{"id":"enpc1","pos":Vector2i(16,2),"shirt":Color("#e8c030"),"xp":50,"lines":["Welcome to Lexicon City!\nWords have power here!","Talk to ? Teachers first!"]},
-	{"id":"enpc2","pos":Vector2i(15,5),"shirt":Color("#30a080"),"xp":50,"lines":["Proper nouns are always\ncapitalized!","London, Arix, Monday\nare all proper nouns."]},
-	{"id":"enpc3","pos":Vector2i(17,8),"shirt":Color("#cc8830"),"xp":50,"lines":["Master nouns, verbs, adjectives\nand become Kaiser of Language!"]},
-	{"id":"enpc4","pos":Vector2i(18,10),"shirt":Color("#b090a0"),"xp":50,"lines":["The pen is mightier\nthan the sword!"]},
-	{"id":"enpc5","pos":Vector2i(16,13),"shirt":Color("#207060"),"xp":50,"lines":["Duel ⚔ nearby for 150 XP!\nChallenge Syl!"]},
-	{"id":"equest1","pos":Vector2i(15,3),"shirt":Color("#20c060"),"type":"quest_giver","quest_id":"eq1",
+	{"id":"enpc1","pos":Vector2i(13,2),"shirt":Color("#e8c030"),"xp":50,"lines":["Welcome to Lexicon City!\nWords have power here!","Talk to ? Teachers first!"]},
+	{"id":"enpc2","pos":Vector2i(12,5),"shirt":Color("#30a080"),"xp":50,"lines":["Proper nouns are always\ncapitalized!","London, Arix, Monday\nare all proper nouns."]},
+	{"id":"enpc3","pos":Vector2i(13,8),"shirt":Color("#cc8830"),"xp":50,"lines":["Master nouns, verbs, adjectives\nand become Kaiser of Language!"]},
+	{"id":"enpc4","pos":Vector2i(13,6),"shirt":Color("#b090a0"),"xp":50,"lines":["The pen is mightier\nthan the sword!"]},
+	{"id":"enpc5","pos":Vector2i(12,6),"shirt":Color("#207060"),"xp":50,"lines":["Duel ⚔ nearby for 150 XP!\nChallenge Syl!"]},
+	{"id":"equest1","pos":Vector2i(12,3),"shirt":Color("#20c060"),"type":"quest_giver","quest_id":"eq1",
 	 "lines":["I need 3 Word Scrolls!\nThey're scattered around town.","Find all 3:\n200 XP + 50 Gold reward!"]},
-	{"id":"eduel1","pos":Vector2i(17,5),"shirt":Color("#e05010"),"type":"duel",
+	{"id":"eduel1","pos":Vector2i(13,5),"shirt":Color("#e05010"),"type":"duel",
 	 "opponent":{"name":"Word Rival Syl","accuracy":0.5,"reward_xp":150},
 	 "lines":["Grammar duel challenge!","Prove your language skills\nagainst mine!","Confirm to begin the duel!"]},
-	{"id":"eduel2","pos":Vector2i(18,13),"shirt":Color("#8010e0"),"type":"duel",
+	{"id":"eduel2","pos":Vector2i(13,7),"shirt":Color("#8010e0"),"type":"duel",
 	 "opponent":{"name":"Lexicon Rex","accuracy":0.6,"reward_xp":150},
 	 "lines":["I am Lexicon Rex!\nGreatest wordsmith duelist!","Can you beat me?\nConfirm to duel!"]},
-	{"id":"etrade","pos":Vector2i(19,7),"shirt":Color("#604020"),"type":"item_trade",
+	{"id":"etrade","pos":Vector2i(13,4),"shirt":Color("#604020"),"type":"item_trade",
 	 "lines":["Take this Ancient Quill!\n+150 XP of linguistic wisdom!"]},
 ],
 "music": [
@@ -124,39 +109,39 @@ const WORLD_NPCS := {
 	 "lesson":["📖 LESSON: Note Values","NOTE VALUES = how long notes are held.","Whole = 4 beats  Half = 2\nQuarter = 1  Eighth = ½","In 4/4 time:\n4 quarter notes fill one measure!","✓ Lesson learned! +75 XP"]},
 	{"id":"mt_scale","pos":Vector2i(11,8),"shirt":Color("#800020"),"type":"teacher","name":"Elder Harmona","subject":"Scales","xp":75,
 	 "lesson":["📖 LESSON: Scales","A SCALE follows a specific\nnote pattern.","Major scale: W-W-H-W-W-W-H\n(W=whole step, H=half step)","C Major: C D E F G A B C\nAll white piano keys!","✓ Lesson learned! +75 XP"]},
-	{"id":"mnpc1","pos":Vector2i(16,2),"shirt":Color("#e8c030"),"xp":50,"lines":["Welcome to Harmonia!\nCity of eternal music!","Talk to ? Teachers to learn\nand gain XP!"]},
-	{"id":"mnpc2","pos":Vector2i(15,5),"shirt":Color("#8030c0"),"xp":50,"lines":["The staff has 5 lines.\nSpaces spell F-A-C-E!"]},
-	{"id":"mnpc3","pos":Vector2i(17,8),"shirt":Color("#c03060"),"xp":50,"lines":["Whole=4 beats. Half=2.\nQuarter=1. That's the rhythm!"]},
-	{"id":"mnpc4","pos":Vector2i(18,10),"shirt":Color("#a0a0c0"),"xp":50,"lines":["Music is mathematics\nyou can hear!"]},
-	{"id":"mnpc5","pos":Vector2i(16,13),"shirt":Color("#207060"),"xp":50,"lines":["Duel wins give great XP!\nChallenge ⚔ Dex nearby!"]},
-	{"id":"mquest1","pos":Vector2i(15,3),"shirt":Color("#20c060"),"type":"quest_giver","quest_id":"muq1",
+	{"id":"mnpc1","pos":Vector2i(13,2),"shirt":Color("#e8c030"),"xp":50,"lines":["Welcome to Harmonia!\nCity of eternal music!","Talk to ? Teachers to learn\nand gain XP!"]},
+	{"id":"mnpc2","pos":Vector2i(12,5),"shirt":Color("#8030c0"),"xp":50,"lines":["The staff has 5 lines.\nSpaces spell F-A-C-E!"]},
+	{"id":"mnpc3","pos":Vector2i(13,8),"shirt":Color("#c03060"),"xp":50,"lines":["Whole=4 beats. Half=2.\nQuarter=1. That's the rhythm!"]},
+	{"id":"mnpc4","pos":Vector2i(13,6),"shirt":Color("#a0a0c0"),"xp":50,"lines":["Music is mathematics\nyou can hear!"]},
+	{"id":"mnpc5","pos":Vector2i(12,6),"shirt":Color("#207060"),"xp":50,"lines":["Duel wins give great XP!\nChallenge ⚔ Dex nearby!"]},
+	{"id":"mquest1","pos":Vector2i(12,3),"shirt":Color("#20c060"),"type":"quest_giver","quest_id":"muq1",
 	 "lines":["3 Musical Notes are lost\naround Harmonia!","Find them all:\n200 XP + 50 Gold!"]},
-	{"id":"mduel1","pos":Vector2i(17,5),"shirt":Color("#e05010"),"type":"duel",
+	{"id":"mduel1","pos":Vector2i(13,5),"shirt":Color("#e05010"),"type":"duel",
 	 "opponent":{"name":"Beat Rival Dex","accuracy":0.45,"reward_xp":150},
 	 "lines":["Music theory duel!","7 questions of rhythm\nand staff knowledge!","Confirm to begin the duel!"]},
-	{"id":"mduel2","pos":Vector2i(18,13),"shirt":Color("#8010e0"),"type":"duel",
+	{"id":"mduel2","pos":Vector2i(13,7),"shirt":Color("#8010e0"),"type":"duel",
 	 "opponent":{"name":"Conductor Forte","accuracy":0.6,"reward_xp":150},
 	 "lines":["I am Conductor Forte!\nMaster of musical duels!","Confirm to begin the duel!"]},
-	{"id":"mtrade","pos":Vector2i(19,7),"shirt":Color("#604020"),"type":"item_trade",
+	{"id":"mtrade","pos":Vector2i(13,4),"shirt":Color("#604020"),"type":"item_trade",
 	 "lines":["Take this Resonant Note!\n+150 XP of musical wisdom!"]},
 ],
 }
 
 const WORLD_ITEMS := {
-"math":    [{"id":"ms1","pos":Vector2i(16,5),"xp":100,"gold":20,"msg":"Found a Formula Stone!\n+100 XP  +20 Gold"},
-			{"id":"ms2","pos":Vector2i(18,8),"xp":100,"gold":20,"msg":"Found a Crystal Equation!\n+100 XP  +20 Gold"},
+"math":    [{"id":"ms1","pos":Vector2i(11,5),"xp":100,"gold":20,"msg":"Found a Formula Stone!\n+100 XP  +20 Gold"},
+			{"id":"ms2","pos":Vector2i(13,8),"xp":100,"gold":20,"msg":"Found a Crystal Equation!\n+100 XP  +20 Gold"},
 			{"id":"ms3","pos":Vector2i(15,12),"xp":100,"gold":20,"msg":"Found an Algebra Scroll!\n+100 XP  +20 Gold"}],
-"english": [{"id":"es1","pos":Vector2i(16,5),"xp":100,"gold":20,"msg":"Found a Word Scroll!\n+100 XP  +20 Gold"},
-			{"id":"es2","pos":Vector2i(18,8),"xp":100,"gold":20,"msg":"Found an Ancient Quill!\n+100 XP  +20 Gold"},
+"english": [{"id":"es1","pos":Vector2i(11,5),"xp":100,"gold":20,"msg":"Found a Word Scroll!\n+100 XP  +20 Gold"},
+			{"id":"es2","pos":Vector2i(13,8),"xp":100,"gold":20,"msg":"Found an Ancient Quill!\n+100 XP  +20 Gold"},
 			{"id":"es3","pos":Vector2i(15,12),"xp":100,"gold":20,"msg":"Found a Grammar Tome!\n+100 XP  +20 Gold"}],
-"music":   [{"id":"mus1","pos":Vector2i(16,5),"xp":100,"gold":20,"msg":"Found a Musical Note!\n+100 XP  +20 Gold"},
-			{"id":"mus2","pos":Vector2i(18,8),"xp":100,"gold":20,"msg":"Found a Resonant Crystal!\n+100 XP  +20 Gold"},
+"music":   [{"id":"mus1","pos":Vector2i(11,5),"xp":100,"gold":20,"msg":"Found a Musical Note!\n+100 XP  +20 Gold"},
+			{"id":"mus2","pos":Vector2i(13,8),"xp":100,"gold":20,"msg":"Found a Resonant Crystal!\n+100 XP  +20 Gold"},
 			{"id":"mus3","pos":Vector2i(15,12),"xp":100,"gold":20,"msg":"Found a Harmony Scroll!\n+100 XP  +20 Gold"}],
 }
 const ITEM_TRADE_ID := {"math":"math_gift","english":"eng_gift","music":"mus_gift"}
 const TOWN_NAMES    := {"math":"Mathopolis","english":"Lexicon City","music":"Harmonia"}
 const BADGE_MAP     := {"math":"Variable Badge","english":"Grammar Badge","music":"Rhythm Badge"}
-const GYM_DOOR_POS  := Vector2i(9, 10)
+const GYM_DOOR_POS  := Vector2i(5, 7)
 
 var _world:        String    = "math"
 var _player:       Node2D    = null
@@ -319,24 +304,58 @@ func _check_quests() -> void:
 				return
 
 func _try_gym() -> void:
-	var badge = BADGE_MAP.get(_world,"")
-	if GameManager.has_badge(badge):
-		_show_dialog(["You already hold the "+badge+"!"]); return
-	if not GameManager.can_challenge_gym(1):
-		var need = max(0, 5*GameManager.XP_BASE - ((GameManager.get_level()-1)*GameManager.XP_BASE+GameManager.get_xp()))
-		_show_dialog(["⚠  GYM SEALED — Need Level 5 ⚠",
-			"Your Level: "+str(GameManager.get_level())+"   XP needed: "+str(need),
-			"Talk to ? Teachers and ⚔ Duel NPCs\nto gain XP quickly!"]); return
-	var learned := 0
-	for t in WORLD_NPCS.get(_world,[]):
-		if t.get("type","")=="teacher" and GameManager.learned_from(t.id): learned+=1
-	if learned == 0:
-		_show_dialog(["The gym door is locked!","Talk to a ? Teacher NPC first!\nLearn at least 1 lesson."]); return
-	var db_map := {"math":AlgebraDB,"english":EnglishDB,"music":MusicDB}
-	var db = db_map.get(_world,AlgebraDB)
-	var gdata = db.get_gym1_leader()
-	gdata["questions"] = db.get_gym1_questions(); gdata["world"] = _world
+	# Determine which gym number to challenge based on badges earned
+	var db_map := {"math": AlgebraDB, "english": EnglishDB, "music": MusicDB}
+	var db     = db_map.get(_world, AlgebraDB)
+	var badges := GameManager.get_badges()
+	
+	# World-specific badge sequence
+	var badge_seq := {
+		"math":    ["Variable Badge", "Equation Badge", "Function Badge"],
+		"english": ["Grammar Badge",  "Verb Badge",     "Sentence Badge"],
+		"music":   ["Rhythm Badge",   "Harmony Badge",  "Scale Badge"],
+	}
+	var seq   = badge_seq.get(_world, [])
+	
+	# Find next gym to challenge
+	var gym_num := 1
+	for i in seq.size():
+		if GameManager.has_badge(seq[i]):
+			gym_num = i + 2
+		else:
+			gym_num = i + 1
+			break
+	
+	var badge = seq[min(gym_num - 1, seq.size() - 1)] if seq.size() > 0 else ""
+	
+	# Check if all 3 already earned
+	if gym_num > seq.size():
+		_show_dialog(["You have conquered all 3 gyms\nin this city!", "Continue to the next city\non your journey to Kaiser!"]); return
+	
+	if not GameManager.can_challenge_gym(gym_num):
+		var need := gym_num * 5
+		_show_dialog(["The gym entrance is sealed!",
+			"You need Level " + str(need) + " to challenge\nGym " + str(gym_num) + ".",
+			"Your Level: " + str(GameManager.get_level()) + "\n\nTalk to Teachers for XP!"]); return
+	
+	# Check if at least 1 lesson has been learned
+	var talked_count := 0
+	for npc in WORLD_NPCS.get(_world, []):
+		if npc.get("type","") == "teacher" and GameManager.has_talked(npc.id):
+			talked_count += 1
+	if talked_count == 0:
+		_show_dialog(["The gym door is locked!",
+			"Talk to a ? Teacher NPC first!\nLearn at least 1 lesson."]); return
+	
 	AdaptiveAI.start_session(_world)
+	
+	var gdata: Dictionary
+	match gym_num:
+		1: gdata = db.get_gym1_leader(); gdata["questions"] = db.get_gym1_questions()
+		2: gdata = db.get_gym2_leader(); gdata["questions"] = db.get_gym2_questions()
+		3: gdata = db.get_gym3_leader(); gdata["questions"] = db.get_gym3_questions()
+		_: gdata = db.get_gym1_leader(); gdata["questions"] = db.get_gym1_questions()
+	gdata["world"] = _world
 	change_scene.emit("battle", gdata)
 
 func _show_dialog(lines: Array, cb: Callable = Callable()) -> void:
@@ -391,10 +410,13 @@ func _gcol() -> Color:
 	match _world:
 		"math":
 			return Color("#2060d0")
+
 		"english":
 			return Color("#c07010")
+
 		"music":
 			return Color("#8020c0")
+
 		_:
 			return Color("#2060d0")
 

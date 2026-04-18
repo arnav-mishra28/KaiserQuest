@@ -49,11 +49,38 @@ func _intro() -> void:
 func _input(ev: InputEvent) -> void:
 	if _over or _locked: return
 	var opts = _qs[_qi].get("opts",[]) if _qi < _qs.size() else []
-	if ev.is_action_pressed("ui_up"):    _sel = (_sel-1+opts.size())%opts.size(); queue_redraw()
-	elif ev.is_action_pressed("ui_down"):_sel = (_sel+1)%opts.size(); queue_redraw()
-	elif Input.is_action_just_pressed("ui_accept"):
+	if ev.is_action_pressed("ui_up"):
+		_sel = (_sel - 1 + opts.size()) % opts.size(); queue_redraw()
+	elif ev.is_action_pressed("ui_down"):
+		_sel = (_sel + 1) % opts.size(); queue_redraw()
+	elif ev.is_action_pressed("ui_accept"):
 		_submit()
 		get_viewport().set_input_as_handled()
+	# ── Click on answer to select + submit instantly ──────────────────────────
+	elif ev is InputEventMouseButton and ev.pressed and ev.button_index == MOUSE_BUTTON_LEFT:
+		var idx := _get_opt_at(ev.position)
+		if idx >= 0:
+			_sel = idx
+			_submit()
+			get_viewport().set_input_as_handled()
+	# ── Hover to highlight ────────────────────────────────────────────────────
+	elif ev is InputEventMouseMotion:
+		var idx := _get_opt_at(ev.position)
+		if idx >= 0 and idx != _sel: _sel = idx; queue_redraw()
+
+# Returns which answer option the mouse is hovering over (0-3), or -1
+func _get_opt_at(pos: Vector2) -> int:
+	# Options: 2×2 grid starting at ay=86, each 32px tall, 34px spacing
+	# Col 0: cx=4, width=234    Col 1: cx=242, width=234
+	# Row 0: ry=86              Row 1: ry=120
+	const AY := 86; const AH := 32; const STEP := 34
+	var cols := [4, 242]; var widths := [234, 234]
+	for i in 4:
+		var col := i % 2; var row := i / 2
+		var cx = cols[col]; var ry := AY + row * STEP
+		if pos.x >= cx and pos.x <= cx + widths[col] and pos.y >= ry and pos.y <= ry + AH:
+			return i
+	return -1
 
 func _submit() -> void:
 	_locked = true; var q = _qs[_qi]; var ok = (q.ans == _sel)

@@ -85,9 +85,9 @@ func _start_battle(gym_data: Dictionary) -> void:
 	add_child(b); b.setup(gym_data, _dialog)
 
 func _on_battle_ended(won: bool, badge_name: String, xp: int) -> void:
-	var battle = get_node_or_null("Battle")
-	if battle:
-		battle.queue_free()
+	var node = get_node_or_null("Battle")
+	if node:
+		node.queue_free()
 	if _scene: _scene.show()
 	var world := GameManager.active_world
 	var db_map := {"math":AlgebraDB,"english":EnglishDB,"music":MusicDB}

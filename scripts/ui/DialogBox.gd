@@ -107,9 +107,13 @@ class _Drawer extends Control:
 		if db._state == db.State.WAITING and db._blink:
 			# Pokémon-style down triangle arrow
 			draw_colored_polygon(
-				PackedVector2Array([Vector2(W-20,by+BH-14),Vector2(W-10,by+BH-14),Vector2(W-15,by+BH-8)]),
-				Color("#181010")
-			)
+	PackedVector2Array([
+		Vector2(W-20, by+BH-14),
+		Vector2(W-10, by+BH-14),
+		Vector2(W-15, by+BH-8)
+	]),
+	Color("#181010")
+)
 
 		# ── Page counter ──────────────────────────────────────────────────
 		if db._lines.size() > 1:

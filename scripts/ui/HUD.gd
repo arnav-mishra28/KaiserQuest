@@ -73,6 +73,41 @@ class _D extends Control:
 			bs+=" "+str(badges.size())+"/20"
 			draw_string(fnt,Vector2(PX+6,PY+PH+12),bs,HORIZONTAL_ALIGNMENT_LEFT,-1,10,Color("#c07000"))
 
+		# ── Adaptive AI performance strip ─────────────────────────────────
+		if gm.active_world != "":
+			var summ := AdaptiveAI.get_summary(gm.active_world)
+			var diff = summ.get("difficulty", 1)
+			var streak = summ.get("streak", 0)
+			var xp_mult = summ.get("xp_mult", 1.0)
+			var weak = summ.get("weak", [])
+			# Only show if we have session data
+			if summ.get("sessions", 0) > 0:
+				var ay := PY + PH + (16 if badges.size() > 0 else 2)
+				draw_rect(Rect2(PX, ay, PW, 13), DK)
+				draw_rect(Rect2(PX+2, ay+2, PW-4, 9), Color(0.1, 0.1, 0.18))
+				# Difficulty dots
+				var diff_str := "Diff: "
+
+				for i in range(diff):
+					diff_str += "●"
+
+				for i in range(4 - diff):
+					diff_str += "○"
+				draw_string(fnt, Vector2(PX+6, ay+10), diff_str,
+					HORIZONTAL_ALIGNMENT_LEFT, -1, 9, wcol.lightened(0.3))
+				# Streak
+				if streak > 1:
+					draw_string(fnt, Vector2(PX + PW - 36, ay+10), "🔥"+str(streak),
+						HORIZONTAL_ALIGNMENT_LEFT, -1, 9, Color("#f8c000"))
+			# Weak topic warning
+			if weak.size() > 0:
+				var wy := PY + PH + (32 if badges.size() > 0 else 18)
+				draw_rect(Rect2(PX, wy, PW, 13), DK)
+				draw_rect(Rect2(PX+2, wy+2, PW-4, 9), Color(0.2, 0.05, 0.05))
+				draw_string(fnt, Vector2(PX+6, wy+10),
+					"Weak: " + str(weak[0]).left(12),
+					HORIZONTAL_ALIGNMENT_LEFT, -1, 9, Color("#e04040"))
+
 		# ── XP gain notification (Gen 1 style text popup) ──────────────────
 		if hud._notif_t>0.0:
 			var a:=minf(hud._notif_t/0.3,1.0)

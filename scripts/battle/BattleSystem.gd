@@ -67,29 +67,80 @@ func _input(ev: InputEvent) -> void:
 		Phase.MENU:    _menu_input(ev)
 		Phase.ANSWERING: _answer_input(ev)
 
+# ── Returns the answer index (0-3) under a screen position, or -1 ─────────────
+func _get_answer_at(pos: Vector2) -> int:
+	# Answer options are only shown when _in_answer is true
+	# Right panel 2×2 grid layout (matches _draw_battle_menu math):
+	const W := 480; const H := 320
+	var my  := H/2 + 6       # = 166
+	var rw  := W/2 - 2       # = 238
+	for i in 4:
+		var row := i / 2; var col := i % 2
+		var ox2 := W/2 + 8 + col * (rw/2 - 4)         # 250 or 365
+		var oy2 := my + 14 + row * ((H - my - 8) / 2)  # 180 or 253
+		var bw  := rw/2 - 8    # ≈ 111
+		var bh  := (H - my - 10) / 2 - 4  # ≈ 68
+		if pos.x >= ox2 and pos.x <= ox2 + bw and pos.y >= oy2 and pos.y <= oy2 + bh:
+			return i
+	return -1
+
+# ── Returns the menu item (0=FIGHT,1=HINT,2=SKIP) under position, or -1 ──────
+func _get_menu_at(pos: Vector2) -> int:
+	const W := 480; const H := 320
+	var my := H/2 + 6
+	for mi in 3:
+		var item_y := my + 8 + mi * 22
+		if pos.x >= W/2 + 8 and pos.x <= W - 8 and pos.y >= item_y and pos.y <= item_y + 22:
+			return mi
+	return -1
+
 func _menu_input(ev: InputEvent) -> void:
 	if not _in_answer:
-		# Navigate FIGHT/HINT/SKIP menu
+		# ── FIGHT/HINT/SKIP menu ──────────────────────────────────────────
 		if ev.is_action_pressed("ui_up") or ev.is_action_pressed("ui_left"):
-			_menu_sel=max(0,_menu_sel-1); queue_redraw()
+			_menu_sel = max(0, _menu_sel-1); queue_redraw()
 		elif ev.is_action_pressed("ui_down") or ev.is_action_pressed("ui_right"):
-			_menu_sel=min(2,_menu_sel+1); queue_redraw()
+			_menu_sel = min(2, _menu_sel+1); queue_redraw()
 		elif ev.is_action_pressed("ui_accept"):
 			match _menu_sel:
-				0: _in_answer=true; _sel=0; queue_redraw()  # FIGHT = show answer options
+				0: _in_answer = true; _sel = 0; queue_redraw()
 				1: _use_hint()
 				2: _skip_question()
 			ev.get_viewport().set_input_as_handled()
+		# Mouse click on menu items
+		elif ev is InputEventMouseButton and ev.pressed and ev.button_index == MOUSE_BUTTON_LEFT:
+			var mi := _get_menu_at(ev.position)
+			if mi >= 0:
+				match mi:
+					0: _in_answer = true; _sel = 0; queue_redraw()
+					1: _use_hint()
+					2: _skip_question()
+				ev.get_viewport().set_input_as_handled()
+		# Mouse hover on menu items
+		elif ev is InputEventMouseMotion:
+			var mi := _get_menu_at(ev.position)
+			if mi >= 0 and mi != _menu_sel: _menu_sel = mi; queue_redraw()
 	else:
-		# Navigate answer options
-		var opts:=_qs[_qi].get("opts",[]) if _qi<_qs.size() else []
-		if ev.is_action_pressed("ui_up"):    _sel=(_sel-1+opts.size())%opts.size(); queue_redraw()
-		elif ev.is_action_pressed("ui_down"):_sel=(_sel+1)%opts.size(); queue_redraw()
+		# ── Answer options ────────────────────────────────────────────────
+		var opts := _qs[_qi].get("opts",[]) if _qi < _qs.size() else []
+		if ev.is_action_pressed("ui_up"):
+			_sel = (_sel - 1 + opts.size()) % opts.size(); queue_redraw()
+		elif ev.is_action_pressed("ui_down"):
+			_sel = (_sel + 1) % opts.size(); queue_redraw()
 		elif ev.is_action_pressed("ui_accept"):
-			_submit()
-			ev.get_viewport().set_input_as_handled()
+			_submit(); ev.get_viewport().set_input_as_handled()
 		elif ev.is_action_pressed("ui_cancel"):
-			_in_answer=false; queue_redraw()  # back to FIGHT/HINT/SKIP
+			_in_answer = false; queue_redraw()
+		# ── CLICK on answer box → instant select + submit ─────────────────
+		elif ev is InputEventMouseButton and ev.pressed and ev.button_index == MOUSE_BUTTON_LEFT:
+			var idx := _get_answer_at(ev.position)
+			if idx >= 0:
+				_sel = idx; _submit()
+				ev.get_viewport().set_input_as_handled()
+		# ── HOVER over answer box → highlight ─────────────────────────────
+		elif ev is InputEventMouseMotion:
+			var idx := _get_answer_at(ev.position)
+			if idx >= 0 and idx != _sel: _sel = idx; queue_redraw()
 
 func _answer_input(_ev: InputEvent) -> void: pass
 

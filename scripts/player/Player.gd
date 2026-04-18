@@ -24,22 +24,15 @@ var _last_dir: Vector2i = Vector2i.ZERO
 var _frame:    int      = 0
 var _anim_t:   float    = 0.0
 var _tween:    Tween    = null
-var _cam:      Camera2D = null
+var _cam:      Camera2D = null  # Kept as placeholder but NOT created (no scrolling in towns)
 
 # Screen shake state
 var _shake_t:     float   = 0.0
 var _shake_mag:   float   = 0.0
-var _shake_orig:  Vector2 = Vector2.ZERO
 
 func _ready() -> void:
-	_cam = Camera2D.new()
-	_cam.enabled                  = true
-	_cam.position_smoothing_enabled = false
-	# ── CRITICAL FIX ───────────────────────────────────────────────────────
-	# zoom 1.0 = shows full 480×320 viewport = 15×10 tiles = Gen 1/2 Pokemon view
-	# zoom 2.0 = was showing only 7×5 tiles = way too zoomed in (THE BUG)
-	_cam.zoom = Vector2(1.0, 1.0)
-	add_child(_cam)
+	# No Camera2D: town maps are exactly 15×10 tiles = 480×320 = viewport size.
+	# Static world, player walks on fixed screen (authentic Gen 1/2 single-screen town).
 	_sync_pos()
 	add_to_group("player")
 
@@ -67,17 +60,12 @@ func _is_walkable(p: Vector2i) -> bool:
 func do_shake(magnitude: float = 6.0, duration: float = 0.4) -> void:
 	_shake_mag  = magnitude
 	_shake_t    = duration
-	_shake_orig = _cam.offset
 
 # ── Hold-to-move ──────────────────────────────────────────────────────────────
 func _physics_process(delta: float) -> void:
-	# Update camera shake
+	# Screen shake: visual effect only (no Camera2D to offset)
 	if _shake_t > 0.0:
-		_shake_t -= delta
-		var shake_x := randf_range(-_shake_mag, _shake_mag)
-		var shake_y := randf_range(-_shake_mag * 0.5, _shake_mag * 0.5)
-		_cam.offset = Vector2(shake_x, shake_y)
-		if _shake_t <= 0.0: _cam.offset = Vector2.ZERO
+		_shake_t = max(0.0, _shake_t - delta)
 	
 	if dialog_open or is_moving:
 		_hold_t = 0.0; _step_t = 0.0; _last_dir = Vector2i.ZERO; return

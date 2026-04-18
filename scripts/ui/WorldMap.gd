@@ -71,7 +71,9 @@ func _enter(loc:Dictionary)->void:
 			show_dialog.emit(["Welcome to "+loc.label+"!","You rest and recover.\nAll HP restored!"])
 
 func _upd_cam()->void:
-	_cam.x=clamp(_px.x-240.0,0,COLS*TS-480); _cam.y=clamp(_px.y-160.0,0,ROWS*TS-320)
+	# Map is 30×16=480 wide and 20×16=320 tall — exactly viewport size.
+	# Camera offset is always (0,0). No scrolling needed or possible.
+	_cam = Vector2.ZERO
 func _tile(p:Vector2i)->int:
 	if p.y<0 or p.y>=ROWS or p.x<0 or p.x>=COLS: return T_OCEAN
 	return WMAP[p.y][p.x]
@@ -200,7 +202,7 @@ func _wt_raised(t:int,px:int,py:int)->void:
 			draw_rect(Rect2(px+2,py+8,12,8),Color("#6070a8"))
 			draw_colored_polygon(
 	PackedVector2Array([
-		Vector2(px+0, py+8),
+		Vector2(px+8, py+8),
 		Vector2(px+8, py+0),
 		Vector2(px+16, py+8)
 	]),
