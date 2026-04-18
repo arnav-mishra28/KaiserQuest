@@ -13,9 +13,13 @@ var _qi:     int        = 0
 var _sel:    int        = 0   # answer option selection
 var _phase:  int        = Phase.INTRO
 
-# HP
-var _p_hp:   int = 0; var _p_max: int = 0
-var _e_hp:   int = 0; var _e_max: int = 0
+# HP (actual values)
+var _p_hp:     int   = 0; var _p_max:   int   = 0
+var _e_hp:     int   = 0; var _e_max:   int   = 0
+# Animated HP display (lerps toward actual)
+var _p_hp_d:   float = 0.0; var _e_hp_d: float = 0.0
+# Combo system
+var _combo:    int   = 0; var _best_combo: int = 0
 const P_DMG := 6; const E_DMG := 5
 
 # Visual effects
@@ -52,7 +56,9 @@ func setup(gym_data: Dictionary, dialog_node: Node) -> void:
 	_hint_used=false; _hint_text=""; _show_hint=false
 	_acols=[BOX_BG,BOX_BG,BOX_BG,BOX_BG]
 	_p_hp=GameManager.get_hp(); _p_max=GameManager.get_max_hp()
-	_e_max=18+GameManager.get_level()*2; _e_hp=_e_max
+	_p_hp_d=float(_p_hp)
+	_e_max=18+GameManager.get_level()*2; _e_hp=_e_max; _e_hp_d=float(_e_max)
+	_combo=0; _best_combo=0
 	set_process(true); set_process_input(false)
 	call_deferred("_start_intro")
 
@@ -167,12 +173,16 @@ func _submit() -> void:
 	AdaptiveAI.record_answer(q.get("topic","general"),ok)
 	_acols=[BOX_BG,BOX_BG,BOX_BG,BOX_BG]
 	if ok:
-		_acols[_sel]=HP_G; _result="It's super effective!"
-		_e_hp=max(0,_e_hp-E_DMG)
+		_acols[_sel]=HP_G
+		_combo+=1; _best_combo=max(_best_combo,_combo)
+		var combo_str:="" if _combo<2 else " COMBO x"+str(_combo)+"!"
+		_result="It's super effective!"+combo_str
+		_e_hp=max(0,_e_hp-E_DMG*(1+min(_combo-1,2)))  # combo bonus dmg
 		_glow_t=0.8; _score=mini(_score+int(100.0/_qs.size()),100)
 		_flash_col=Color(GLOW_C,0.35)
 	else:
 		_acols[_sel]=HP_R; _acols[q.ans]=HP_G
+		_combo=0
 		_result="Not very effective..."
 		_p_hp=max(0,_p_hp-P_DMG)
 		_shake_t=0.5; _shake_mag=7.0
@@ -182,6 +192,9 @@ func _submit() -> void:
 
 func _process(delta: float) -> void:
 	_time+=delta
+	# Animate HP bars
+	_p_hp_d = lerp(_p_hp_d, float(_p_hp), delta*4.0)
+	_e_hp_d = lerp(_e_hp_d, float(_e_hp), delta*4.0)
 	# Glow fades
 	if _glow_t>0.0: _glow_t=max(0.0,_glow_t-delta)
 	# Shake offset
@@ -247,11 +260,11 @@ func _draw() -> void:
 
 	# ── Enemy HP box (top left — Gen 1/2 style) ────────────────────────────
 	_draw_hp_box(6, 6, 230, _gym.get("name","???"),
-		_gym.get("title",""), _e_hp, _e_max, GameManager.get_level()+2, wcol, true, fnt)
+		_gym.get("title",""), int(_e_hp_d), _e_max, GameManager.get_level()+2, wcol, true, fnt)
 
 	# ── Player HP box (bottom right — Gen 1/2 style) ───────────────────────
 	_draw_hp_box(W-240, H/2-62, 234, GameManager.player_name,
-		"", _p_hp, _p_max, GameManager.get_level(), wcol, false, fnt)
+		"", int(_p_hp_d), _p_max, GameManager.get_level(), wcol, false, fnt)
 
 	# ── Bottom menu (Gen 1/2 two-panel layout) ─────────────────────────────
 	var my := H/2+6

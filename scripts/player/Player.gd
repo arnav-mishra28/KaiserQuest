@@ -113,8 +113,8 @@ func _dir_vec(d: int) -> Vector2i:
 			return Vector2i(-1, 0)
 		3:
 			return Vector2i(1, 0)
-		_:
-			return Vector2i.ZERO
+
+	return Vector2i.ZERO
 
 # ── Gen 1/2 Player sprite ─────────────────────────────────────────────────────
 func _draw() -> void:

@@ -46,6 +46,8 @@ func _show_world_map() -> void:
 
 func _on_wm_dialog(lines: Array) -> void: _dialog.show_lines(lines)
 func _on_enter_zone(zone_id: String) -> void:
+	if zone_id == "silver":
+		_start_silver(); return
 	GameManager.active_world = zone_id; _show_world(zone_id)
 
 # ── Town World ────────────────────────────────────────────────────────────────
@@ -75,6 +77,38 @@ func _on_change_scene(scene_name: String, data: Dictionary) -> void:
 		"world_map": _show_world_map()
 		"battle":    _start_battle(data)
 		"duel":      _start_duel(data)
+		"silver":    _start_silver()
+
+# ── Silver Mountain ────────────────────────────────────────────────────────────
+func _start_silver() -> void:
+	if _scene: _scene.hide()
+	var sm := Node2D.new(); sm.name = "SilverMountain"
+	sm.set_script(load("res://scripts/silver/SilverMountain.gd"))
+	sm.connect("silver_cleared", _on_silver_cleared)
+	sm.connect("back_to_map", func():
+		var node = get_node_or_null("SilverMountain")
+		if node:
+			node.queue_free()
+		if _scene: _scene.show()
+		_show_world_map())
+	add_child(sm)
+	sm.setup(_dialog, _hud)
+
+func _on_silver_cleared() -> void:
+	var node = get_node_or_null("SilverMountain")
+	if node:
+		node.queue_free()
+
+	if _scene:
+		_scene.show()
+
+	_show_kaiser_screen()
+
+func _show_kaiser_screen() -> void:
+	_free_scene()
+	var ks := Node2D.new(); ks.name = "KaiserScreen"
+	ks.set_script(load("res://scripts/silver/KaiserScreen.gd"))
+	add_child(ks); move_child(ks, 0); _scene = ks
 
 # ── Gym Battle ────────────────────────────────────────────────────────────────
 func _start_battle(gym_data: Dictionary) -> void:
@@ -88,6 +122,9 @@ func _on_battle_ended(won: bool, badge_name: String, xp: int) -> void:
 	var node = get_node_or_null("Battle")
 	if node:
 		node.queue_free()
+
+	if _scene:
+		_scene.show()
 	if _scene: _scene.show()
 	var world := GameManager.active_world
 	var db_map := {"math":AlgebraDB,"english":EnglishDB,"music":MusicDB}
@@ -111,10 +148,12 @@ func _start_duel(data: Dictionary) -> void:
 	add_child(d); d.setup(data.get("world","math"), data.get("opponent",{}), _dialog)
 
 func _on_duel_ended(won: bool, xp: int) -> void:
-	var duel = get_node_or_null("Duel")
-	if duel:
-		duel.queue_free()
-	if _scene: _scene.show()
+	var node = get_node_or_null("Duel")
+	if node:
+		node.queue_free()
+
+	if _scene:
+		_scene.show()
 	if won:
 		GameManager.add_xp(xp); GameManager.add_duel_win(); _hud.show_xp_gain(xp)
 		_dialog.show_lines(["Duel Victory! 🏆",GameManager.player_name+" wins!",
@@ -137,6 +176,7 @@ func _input(event: InputEvent) -> void:
 			var duel = get_node_or_null("Duel")
 			if duel:
 				duel.queue_free()
+
 			_show_world_map()
 
 # ═══════════════ Name Entry Screen ════════════════════════════════════════════

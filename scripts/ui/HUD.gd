@@ -86,13 +86,8 @@ class _D extends Control:
 				draw_rect(Rect2(PX, ay, PW, 13), DK)
 				draw_rect(Rect2(PX+2, ay+2, PW-4, 9), Color(0.1, 0.1, 0.18))
 				# Difficulty dots
-				var diff_str := "Diff: "
-
-				for i in range(diff):
-					diff_str += "●"
-
-				for i in range(4 - diff):
-					diff_str += "○"
+				var diff_i: int = clamp(int(diff), 0, 4)
+				var diff_str = "Diff: " + "●".repeat(diff_i) + "○".repeat(4 - diff_i)
 				draw_string(fnt, Vector2(PX+6, ay+10), diff_str,
 					HORIZONTAL_ALIGNMENT_LEFT, -1, 9, wcol.lightened(0.3))
 				# Streak

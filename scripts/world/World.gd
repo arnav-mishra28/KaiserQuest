@@ -410,15 +410,12 @@ func _gcol() -> Color:
 	match _world:
 		"math":
 			return Color("#2060d0")
-
 		"english":
 			return Color("#c07010")
-
 		"music":
 			return Color("#8020c0")
 
-		_:
-			return Color("#2060d0")
+	return Color("#2060d0")  # default
 
 # ── Ground tiles ──────────────────────────────────────────────────────────────
 func _draw_ground(t:int, px:int, py:int, c:int, r:int) -> void:

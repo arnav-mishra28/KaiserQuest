@@ -87,8 +87,8 @@ func _dvec(d: int) -> Vector2i:
 			return Vector2i(-1, 0)
 		3:
 			return Vector2i(1, 0)
-		_:
-			return Vector2i.ZERO
+
+	return Vector2i.ZERO
 func _process(d:float)->void: _t+=d; _at+=d; if _at>=0.25: _at=0.0; _ft=1-_ft; queue_redraw()
 
 func _draw()->void:
@@ -114,8 +114,7 @@ func _draw()->void:
 	draw_rect(Rect2(2,2,COLS*2+4,ROWS*2+4),DK)
 	for r in ROWS:
 		for c in COLS:
-			var mc: Color
-
+			var mc:Color
 			match WMAP[r][c]:
 				T_OCEAN:
 					mc = Color("#1838a0")
@@ -202,8 +201,8 @@ func _wt_raised(t:int,px:int,py:int)->void:
 			draw_rect(Rect2(px+2,py+8,12,8),Color("#6070a8"))
 			draw_colored_polygon(
 	PackedVector2Array([
-		Vector2(px+8, py+8),
-		Vector2(px+8, py+0),
+		Vector2(px, py+8),
+		Vector2(px+8, py),
 		Vector2(px+16, py+8)
 	]),
 	Color("#8090c8")

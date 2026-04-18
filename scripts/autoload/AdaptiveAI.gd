@@ -42,13 +42,12 @@ func record_answer(topic: String, correct: bool) -> void:
 	_session_data.append({"topic": topic, "correct": correct, "ms": ms})
 	# Update streak live
 	if _session_world in _data:
-		var d: Dictionary = _data[_session_world]
-
+		var d = _data[_session_world]
 		if correct:
-			d["streak"] = d.get("streak", 0) + 1
-			d["best_streak"] = max(d.get("best_streak", 0), d["streak"])
+			d.streak += 1
+			d.best_streak = max(d.best_streak, d.streak)
 		else:
-			d["streak"] = 0
+			d.streak = 0
 
 func end_session() -> Dictionary:
 	if _session_world == "" or _session_data.is_empty():
@@ -66,16 +65,11 @@ func end_session() -> Dictionary:
 			correct += 1
 		# Per-topic accuracy
 		var ta = d.topic_accuracy
-
-		if s.topic not in ta or ta[s.topic].size() < 3:
-			ta[s.topic] = [0, 0, 5000.0]
-
-# Now safe to use
+		if s.topic not in ta:
+			ta[s.topic] = [0, 0, 5000.0]  # [correct, total, avg_ms]
 		ta[s.topic][1] += 1
-
-		if s.correct:
-			ta[s.topic][0] += 1
-
+		if s.correct: ta[s.topic][0] += 1
+		# Exponential moving average for topic speed
 		ta[s.topic][2] = lerp(ta[s.topic][2], float(s.ms), 0.3)
 
 	if _session_data.size() > 0:
@@ -83,14 +77,10 @@ func end_session() -> Dictionary:
 
 	# ── Difficulty auto-scaling ────────────────────────────────────────────
 	var session_acc := float(correct) / float(_session_data.size())
-	var diff = d.get("difficulty_level", 1)
-
-	if session_acc >= 0.85 and diff < 4:
-		diff += 1
-	elif session_acc < 0.40 and diff > 1:
-		diff -= 1
-
-	d["difficulty_level"] = diff  # demote to easier tier
+	if session_acc >= 0.85 and d.difficulty_level < 4:
+		d.difficulty_level += 1   # promote to harder tier
+	elif session_acc < 0.40 and d.difficulty_level > 1:
+		d.difficulty_level -= 1   # demote to easier tier
 
 	# ── XP multiplier scales with speed + accuracy ─────────────────────────
 	# Base 1.0 → up to 2.5× for fast AND accurate answers
@@ -104,16 +94,16 @@ func end_session() -> Dictionary:
 	weak_topics_updated.emit(_session_world, weak)
 
 	var report := {
-	"correct": correct,
-	"total": _session_data.size(),
-	"accuracy": session_acc,
-	"avg_ms": d.get("avg_ms", 0.0),
-	"difficulty": d.get("difficulty_level", 1),
-	"streak": d.get("streak", 0),
-	"best_streak": d.get("best_streak", 0),
-	"xp_multiplier": d.get("xp_multiplier", 1.0),
-	"weak": weak,
-}
+		"correct":        correct,
+		"total":          _session_data.size(),
+		"accuracy":       session_acc,
+		"avg_ms":         d.avg_ms,
+		"difficulty":     d.difficulty_level,
+		"streak":         d.streak,
+		"best_streak":    d.best_streak,
+		"xp_multiplier":  d.xp_multiplier,
+		"weak":           weak,
+	}
 	performance_report.emit(_session_world, report)
 	return report
 
@@ -143,10 +133,8 @@ func get_avg_speed(world: String) -> float:
 	return _data[world].avg_ms
 
 func get_difficulty_level(world: String) -> int:
-	if world not in _data:
-		return 1
-
-	return _data[world].get("difficulty", 1)
+	if world not in _data: return 1
+	return _data[world].difficulty_level
 
 func get_xp_multiplier(world: String) -> float:
 	if world not in _data: return 1.0
@@ -210,18 +198,17 @@ func get_summary(world: String) -> Dictionary:
 	if world not in _data:
 		return {"accuracy": 0.0, "sessions": 0, "difficulty": 1,
 				"streak": 0, "xp_mult": 1.0, "weak": []}
-	var d: Dictionary = _data.get(world, {})
-
+	var d = _data[world]
 	return {
-	"accuracy": float(d.get("total_correct", 0)) / max(float(d.get("total_q", 1)), 1.0),
-	"sessions": d.get("sessions", 0),
-	"difficulty": d.get("difficulty", 1),  # ✅ safe fallback
-	"streak": d.get("streak", 0),
-	"best_streak": d.get("best_streak", 0),
-	"xp_mult": d.get("xp_multiplier", 1.0),
-	"weak": get_weak_topics(world),
-	"avg_ms": d.get("avg_ms", 0),
-}
+		"accuracy":   float(d.total_correct) / max(float(d.total_q), 1.0),
+		"sessions":   d.sessions,
+		"difficulty": d.difficulty_level,
+		"streak":     d.streak,
+		"best_streak":d.best_streak,
+		"xp_mult":    d.xp_multiplier,
+		"weak":       get_weak_topics(world),
+		"avg_ms":     d.avg_ms,
+	}
 
 # ── Save / Load ────────────────────────────────────────────────────────────────
 func _save() -> void:
@@ -243,3 +230,89 @@ func reset(world: String) -> void:
 		"streak": 0, "best_streak": 0, "xp_multiplier": 1.0,
 	}
 	_save()
+
+# ═══════════════════════════════════════════════════════════════════════════════
+#  TRAINING PIPELINE — Smart Question Generator & Difficulty Predictor
+#  Input: accuracy, response_time, attempts per topic
+#  Output: recommended difficulty, predicted success probability
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# ── Predict success probability for a question at given difficulty ────────────
+# Uses logistic-style function: P(success) = sigmoid(accuracy * speed_factor - diff_bias)
+func predict_success(world: String, topic: String, difficulty: int) -> float:
+	var acc       := get_topic_accuracy(world, topic)
+	if acc < 0:   acc = get_accuracy(world)  # fall back to overall
+	var speed_f   := clampf(1.0 - get_avg_speed(world) / 8000.0, 0.0, 1.0)
+	var combined  := acc * 0.7 + speed_f * 0.3
+	# Difficulty bias: each tier reduces success by ~20%
+	var bias      := float(difficulty - 1) * 0.22
+	# Sigmoid-style: 1/(1+e^(-k*(x-0.5))) mapped to [0,1]
+	var x         := combined - bias
+	return 1.0 / (1.0 + exp(-8.0 * (x - 0.5)))
+
+# ── Recommend next difficulty tier for a world ────────────────────────────────
+func recommend_difficulty(world: String) -> int:
+	var acc   := get_accuracy(world)
+	var speed := get_avg_speed(world)
+	# Target: 70-80% accuracy at recommended difficulty (learning zone)
+	# If above 85% → promote. If below 45% → demote.
+	var curr  := get_difficulty_level(world)
+	if acc >= 0.85 and speed < 4500: return min(4, curr + 1)
+	if acc < 0.45:                   return max(1, curr - 1)
+	return curr
+
+# ── Generate a mini quiz from weak areas (for revision mode) ─────────────────
+func generate_revision_set(all_questions: Array, world: String, count: int) -> Array:
+	var weak     := get_weak_topics(world)
+	var revision := []
+	# Prioritize weakest topic first (lowest accuracy)
+	if world in _data:
+		var ta = _data[world].topic_accuracy
+		var sorted_topics := weak.duplicate()
+		sorted_topics.sort_custom(func(a,b):
+			var acc_a = float(ta.get(a,[0,1])[0])/max(float(ta.get(a,[0,1])[1]),1)
+			var acc_b = float(ta.get(b,[0,1])[0])/max(float(ta.get(b,[0,1])[1]),1)
+			return acc_a < acc_b)
+		for topic in sorted_topics:
+			for q in all_questions:
+				if q.get("topic","") == topic: revision.append(q)
+			if revision.size() >= count: break
+	# Pad with general questions if needed
+	if revision.size() < count:
+		var general := all_questions.duplicate(); general.shuffle()
+		for q in general:
+			if q not in revision: revision.append(q)
+			if revision.size() >= count: break
+	return revision.slice(0, min(count, revision.size()))
+
+# ── Session performance trend (are you improving?) ───────────────────────────
+func get_improvement_trend(world: String) -> String:
+	if world not in _data: return "no_data"
+	var d = _data[world]
+	if d.sessions < 2: return "new"
+	var acc = float(d.total_correct) / max(float(d.total_q), 1.0)
+	var diff = d.difficulty_level
+	# Heuristic: improving = high accuracy + moving up in difficulty
+	if acc >= 0.75 and diff >= 3: return "excellent"
+	if acc >= 0.60 and diff >= 2: return "improving"
+	if acc >= 0.45:               return "steady"
+	return "struggling"
+
+# ── Full performance report for story/narrative context ──────────────────────
+func get_narrative_feedback(world: String) -> String:
+	var trend  := get_improvement_trend(world)
+	var weak   := get_weak_topics(world)
+	var name   := GameManager.player_name
+	match trend:
+		"excellent":
+			return name + " shows mastery in " + world + "!\nChallenging the Oracle will be worthy."
+		"improving":
+			var ws = weak[0] if weak.size() > 0 else "unknown"
+			return name + " is growing fast!\nWatch: " + ws + " still needs work."
+		"steady":
+			return name + " makes steady progress.\nKeep practicing weak topics."
+		"struggling":
+			var ws = weak[0] if weak.size() > 0 else "fundamentals"
+			return name + " struggles with " + ws + ".\nReturn to Teachers for help."
+		_:
+			return "Begin your journey in " + world + ".\nEvery master starts as a student."
