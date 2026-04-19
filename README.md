@@ -1,4 +1,4 @@
-# ⚔️ KaiserQuest v0.5
+# ⚔️ KaiserQuest 1.0
 ## Learn · Battle · Become Kaiser
 
 ---

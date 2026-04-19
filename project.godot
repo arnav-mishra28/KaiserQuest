@@ -24,11 +24,7 @@ config/icon="res://assets/icon.svg"
 
 GameManager="*res://scripts/autoload/GameManager.gd"
 AdaptiveAI="*res://scripts/autoload/AdaptiveAI.gd"
-QuestManager="*res://scripts/autoload/QuestManager.gd"
-AlgebraDB="*res://scripts/data/AlgebraQuestions.gd"
-EnglishDB="*res://scripts/data/EnglishQuestions.gd"
-MusicDB="*res://scripts/data/MusicQuestions.gd"
-GymStoryline="*res://scripts/story/GymStoryline.gd"
+SubjectDB="*res://scripts/autoload/SubjectDB.gd"
 
 [display]
 
@@ -37,14 +33,6 @@ window/size/viewport_height=320
 window/size/window_width_override=960
 window/size/window_height_override=640
 window/stretch/mode="canvas_items"
-
-[input]
-
-ui_interact={
-"deadzone": 0.5,
-"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194309,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
-]
-}
 
 [rendering]
 
