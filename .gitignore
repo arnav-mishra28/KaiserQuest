@@ -1,0 +1,30 @@
+# Unity generated folders
+Library/
+Temp/
+Obj/
+Build/
+Builds/
+Logs/
+UserSettings/
+
+# VS Code / IDE
+.vscode/
+*.csproj
+*.unityproj
+*.sln
+*.user
+*.userprefs
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python (your backend)
+__pycache__/
+*.pyc
+.venv/
+
+# Large files
+*.dylib
+*.so
+*.dll
