@@ -36,7 +36,6 @@ public class HUD : MonoBehaviour
         if (DialogBox.Instance != null && DialogBox.Instance.IsOpen) return;  // Dialog covers HUD
 
         PixelRenderer.BeginFrame();
-        int W=PixelRenderer.W, H=PixelRenderer.H;
         var gm=GameManager.Instance;
         var wcol=SubjectDB.Subjects.TryGetValue(gm.ActiveSubject,out var si)?si.color:new Color(0.38f,0.38f,0.63f);
 

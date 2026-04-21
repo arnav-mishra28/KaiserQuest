@@ -198,7 +198,7 @@ public class BattleManager : MonoBehaviour
         float offX=(Screen.width-480*s)/2f,offY=(Screen.height-320*s)/2f;
         float lx=(mousePos.x-offX)/s,ly=(mousePos.y-offY)/s;
         ly=320f-ly;
-        const int W=480,H=320,MY=166;
+        const int W=480,MY=166;
         for(int mi=0;mi<3;mi++){
             float iy=MY+8+mi*22f;
             if(lx>=W/2+8&&lx<=W-8&&ly>=iy&&ly<=iy+22) return mi;

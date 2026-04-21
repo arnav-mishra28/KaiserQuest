@@ -131,7 +131,7 @@ public class SilverMountainManager : MonoBehaviour
         // Mountain silhouettes
         float my=H-(H-60)*ease;
         Color m1=new Color(.10f,.08f,.20f,ease);
-        DrawTri(0,H,80,my+60,180,H,m1);DrawTri(120,H,240,my-20,380,H,m1.gamma);DrawTri(280,H,400,my+40,480,H,m1);
+        DrawTri(0,H,80,my+60,180,H,m1);DrawTri(120,H,240,my-20,380,H,new Color(m1.r*0.85f,m1.g*0.85f,m1.b*0.85f));DrawTri(280,H,400,my+40,480,H,m1);
         // Silver peak
         DrawTri(200,H,240,my,280,H,new Color(.55f,.6f,.9f,ease));
         DrawTri(228,my+20,240,my,252,my+20,new Color(.92f,.95f,1f,ease));

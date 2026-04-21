@@ -32,13 +32,12 @@ public class DuelManager : MonoBehaviour
         _qi=0;_sel=0;_pLives=3;_aLives=3;_locked=true;_over=false;_flashT=0f;_qTime=Q_LIMIT;
         AdaptiveAI.Instance?.StartSession(world);
         DialogBox.Instance?.ShowLines(new[]{
-            (opp.name??Opponent)+" challenges you\nto a Knowledge Duel!",
+            (opp.name ?? "Opponent") + " challenges you\nto a Knowledge Duel!",
             "7 questions · 3 lives each",
             "Correct = you score · Wrong = they score",
             "Press ENTER to begin!"
         },()=>{_locked=false;}, DialogBox.Context.Battle);
     }
-    string Opponent => "Rival";
 
     void Shuffle<T>(List<T> l){for(int i=l.Count-1;i>0;i--){int j=Random.Range(0,i+1);(l[j],l[i])=(l[i],l[j]);}}
 

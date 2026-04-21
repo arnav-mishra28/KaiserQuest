@@ -7,6 +7,10 @@ public class WorldManager : MonoBehaviour
     public static WorldManager Instance { get; private set; }
     void Awake() { Instance = this; }
 
+    // Events for screen transitions (listened to by WorldController)
+    public event System.Action                       OnGymEntered;
+    public event System.Action<GymLeaderData,float>  OnDuelTriggered;
+
     const int TS=32, COLS=15, ROWS=10;
     readonly int[] WALKABLE={0,4,7,9,12};
 
@@ -139,9 +143,11 @@ public class WorldManager : MonoBehaviour
 
     void TalkDuel(NPCDef npc)
     {
+        var opp = new GymLeaderData { name = npc.label, color = npc.shirt };
+        float acc = npc.duelAccuracy;
         DialogBox.Instance?.ShowLines(npc.lines, ()=>{
             GameScreenManager.Instance?.GoTo(GameScreen.Duel);
-            // WorldController will handle the transition
+            OnDuelTriggered?.Invoke(opp, acc);
         }, DialogBox.Context.World);
     }
 
@@ -168,6 +174,7 @@ public class WorldManager : MonoBehaviour
         }
         DialogBox.Instance?.ShowLines(new[]{"You step up to the gym entrance...","The door opens before you!"},()=>{
             GameScreenManager.Instance?.GoTo(GameScreen.Battle);
+            OnGymEntered?.Invoke();
         },DialogBox.Context.World);
     }
 
@@ -251,8 +258,8 @@ public class WorldManager : MonoBehaviour
         int gym=Mathf.Min(GameManager.Instance.Badges.Count+1,20);
         string txt="★ "+(br?.name??"")+" Gym "+gym+" ★";
         PixelRenderer.DrawRect(128,208,224,18,PixelRenderer.COL_BLACK);
-        PixelRenderer.DrawRect(129,209,222,16,sc.gamma);
-        PixelRenderer.DrawString(136,220,txt,12,sc.gamma.r<0.4f&&sc.gamma.g<0.4f&&sc.gamma.b<0.4f?Color.white:PixelRenderer.COL_BLACK);
+        PixelRenderer.DrawRect(129,209,222,16,new Color(sc.r*0.85f,sc.g*0.85f,sc.b*0.85f));
+        PixelRenderer.DrawString(136,220,txt,12,sc.r*0.85f<0.4f&&sc.g*0.85f<0.4f&&sc.b*0.85f<0.4f?Color.white:PixelRenderer.COL_BLACK);
     }
 
     void DrawUI()

@@ -127,7 +127,7 @@ public class TitleScreen : MonoBehaviour
     void DrawSubjectIcon(float x, string icon, string label, Color col)
     {
         PixelRenderer.DrawRect(x-2,198,82,38,new Color(0,0,0,0.45f));
-        PixelRenderer.DrawBorder(x-2,198,82,38,col*new Color(1,1,1,0.45f),1.5f);
+        PixelRenderer.DrawBorder(x-2,198,82,38,new Color(col.r,col.g,col.b,0.45f),1.5f);
         PixelRenderer.DrawString(x+6,206,icon,20,col,true);
         PixelRenderer.DrawString(x+30,214,label,9,new Color(0.9f,0.9f,0.9f,col.a));
     }

@@ -1,5 +1,6 @@
 // BackendClient.cs — Python Backend Integration (WebSocket PvP + Voice AI + REST)
 using UnityEngine;
+using UnityEngine.Networking;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -39,18 +40,18 @@ public class BackendClient : MonoBehaviour
     // ── REST helpers ──────────────────────────────────────────────────────────
     public IEnumerator CheckHealth(Action<bool> callback)
     {
-        using var req=new UnityEngine.Networking.UnityWebRequest(ServerURL+"/health","GET");
-        req.downloadHandler=new UnityEngine.Networking.DownloadHandlerBuffer();
+        using var req=new UnityWebRequest(ServerURL+"/health","GET");
+        req.downloadHandler=new DownloadHandlerBuffer();
         yield return req.SendWebRequest();
-        bool ok=req.result==UnityEngine.Networking.UnityWebRequest.Result.Success;
+        bool ok=req.result==UnityWebRequest.Result.Success;
         Connected=ok; callback?.Invoke(ok);
     }
 
     public IEnumerator GetLeaderboard(Action<string> callback)
     {
-        using var req=UnityEngine.Networking.UnityWebRequest.Get(ServerURL+"/leaderboard");
+        using var req=UnityWebRequest.Get(ServerURL+"/leaderboard");
         yield return req.SendWebRequest();
-        if(req.result==UnityEngine.Networking.UnityWebRequest.Result.Success)
+        if(req.result==UnityWebRequest.Result.Success)
             callback?.Invoke(req.downloadHandler.text);
     }
 
@@ -58,9 +59,9 @@ public class BackendClient : MonoBehaviour
     {
         string json=$"{{\"name\":\"{playerName}\",\"score\":{score},\"subject\":\"{subject}\",\"branch\":\"{branch}\",\"badges\":{badges}}}";
         var bytes=Encoding.UTF8.GetBytes(json);
-        using var req=new UnityEngine.Networking.UnityWebRequest(ServerURL+"/leaderboard/submit","POST");
-        req.uploadHandler=new UnityEngine.Networking.UploadHandlerRaw(bytes);
-        req.downloadHandler=new UnityEngine.Networking.DownloadHandlerBuffer();
+        using var req=new UnityWebRequest(ServerURL+"/leaderboard/submit","POST");
+        req.uploadHandler=new UploadHandlerRaw(bytes);
+        req.downloadHandler=new DownloadHandlerBuffer();
         req.SetRequestHeader("Content-Type","application/json");
         yield return req.SendWebRequest();
     }
@@ -70,48 +71,76 @@ public class BackendClient : MonoBehaviour
         string weakJson="["+string.Join(",",weakTopics.ConvertAll(t=>"\""+t+"\""))+"]";
         string json=$"{{\"npc_name\":\"{npcName}\",\"npc_role\":\"{role}\",\"message\":\"{message}\",\"player_level\":{level},\"weak_topics\":{weakJson}}}";
         var bytes=Encoding.UTF8.GetBytes(json);
-        using var req=new UnityEngine.Networking.UnityWebRequest(ServerURL+"/npc/respond","POST");
-        req.uploadHandler=new UnityEngine.Networking.UploadHandlerRaw(bytes);
-        req.downloadHandler=new UnityEngine.Networking.DownloadHandlerBuffer();
+        using var req=new UnityWebRequest(ServerURL+"/npc/respond","POST");
+        req.uploadHandler=new UploadHandlerRaw(bytes);
+        req.downloadHandler=new DownloadHandlerBuffer();
         req.SetRequestHeader("Content-Type","application/json");
         yield return req.SendWebRequest();
-        if(req.result==UnityEngine.Networking.UnityWebRequest.Result.Success){
+        if(req.result==UnityWebRequest.Result.Success){
             var resp=JsonUtility.FromJson<NPCResponse>(req.downloadHandler.text);
             callback?.Invoke(resp?.response??"...");
         }
     }
 
-    public IEnumerator TextToSpeech(string text,Action<AudioClip> callback)
+    public IEnumerator TextToSpeech(string text, Action<AudioClip> callback)
+{
+    string json = $"{{\"text\":\"{text}\",\"lang\":\"en\"}}";
+    var bytes = Encoding.UTF8.GetBytes(json);
+
+    using (UnityWebRequest req = UnityWebRequestMultimedia.GetAudioClip(ServerURL + "/voice/speak", AudioType.MPEG))
     {
-        string json=$"{{\"text\":\"{text}\",\"lang\":\"en\"}}";
-        var bytes=Encoding.UTF8.GetBytes(json);
-        using var req=new UnityEngine.Networking.UnityWebRequest(ServerURL+"/voice/speak","POST");
-        req.uploadHandler=new UnityEngine.Networking.UploadHandlerRaw(bytes);
-        req.downloadHandler=new UnityEngine.Networking.DownloadHandlerAudioClip(ServerURL+"/voice/speak",AudioType.MPEG);
-        req.SetRequestHeader("Content-Type","application/json");
+        req.method = UnityWebRequest.kHttpVerbPOST;
+        req.uploadHandler = new UploadHandlerRaw(bytes);
+        req.SetRequestHeader("Content-Type", "application/json");
+
         yield return req.SendWebRequest();
-        if(req.result==UnityEngine.Networking.UnityWebRequest.Result.Success)
-            callback?.Invoke(((UnityEngine.Networking.DownloadHandlerAudioClip)req.downloadHandler).audioClip);
+
+        if (req.result == UnityWebRequest.Result.Success)
+        {
+            AudioClip clip = DownloadHandlerAudioClip.GetContent(req);
+            callback?.Invoke(clip);
+        }
+        else
+        {
+            Debug.LogError("TTS Error: " + req.error);
+        }
     }
+}
 
     public IEnumerator GenerateWorld(int width,int height,int seed,string subject,string branch,Action<string> callback)
     {
         string url=$"{ServerURL}/world/generate?width={width}&height={height}&seed={seed}&subject={subject}&branch={branch}";
-        using var req=UnityEngine.Networking.UnityWebRequest.Get(url);
+        using var req=UnityWebRequest.Get(url);
         yield return req.SendWebRequest();
-        if(req.result==UnityEngine.Networking.UnityWebRequest.Result.Success)
+        if(req.result==UnityWebRequest.Result.Success)
             callback?.Invoke(req.downloadHandler.text);
     }
 
     // ── WebSocket PvP ─────────────────────────────────────────────────────────
     public void ConnectPvP(string playerName, string world)
-    {
+{
 #if !UNITY_WEBGL || UNITY_EDITOR
-        _ = ConnectAsync(playerName, world);
+    StartCoroutine(ConnectPvPCoroutine(playerName, world));
 #else
-        Debug.LogWarning("WebSockets not supported on WebGL.");
+    Debug.LogWarning("WebSockets not supported on WebGL.");
 #endif
+}
+
+    IEnumerator ConnectPvPCoroutine(string playerName, string world)
+{
+#if !UNITY_WEBGL || UNITY_EDITOR
+    var task = ConnectAsync(playerName, world);
+
+    while (!task.IsCompleted)
+        yield return null;
+
+    if (task.Exception != null)
+    {
+        Debug.LogError("Connection failed: " + task.Exception);
+        OnError?.Invoke(task.Exception.Message);
     }
+#endif
+}
 
 #if !UNITY_WEBGL || UNITY_EDITOR
     async Task ConnectAsync(string playerName, string world)

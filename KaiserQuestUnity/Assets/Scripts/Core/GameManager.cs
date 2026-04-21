@@ -104,12 +104,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void SetBestScore(string gymId, int score) {
-        var b = GetBranch();
-        if (!b.BestScores.ContainsKey(gymId) || score > b.BestScores[gymId])
-            b.BestScores[gymId] = score;
-        SaveSystem.Save();
-    }
+    public void SetBestScore(string gymId, int score) { GetBranch().SetScore(gymId,score); SaveSystem.Save(); }
 
     // ── Silver Mountain ───────────────────────────────────────────────────────
     public bool CanChallengeSilver() => Level >= 100 && Badges.Count >= 20;
@@ -169,5 +164,15 @@ public class BranchData
     public List<string>             NPCsTalked     = new();
     public List<string>             ItemsCollected = new();
     public List<string>             QuestsDone     = new();
-    public Dictionary<string, int>  BestScores     = new();
+    public List<string> ScoreKeys   = new();
+    public List<int>    ScoreVals   = new();
+
+    public void SetScore(string id, int score){
+        int idx=ScoreKeys.IndexOf(id);
+        if(idx>=0){if(score>ScoreVals[idx])ScoreVals[idx]=score;}
+        else{ScoreKeys.Add(id);ScoreVals.Add(score);}
+    }
+    public int GetScore(string id){
+        int idx=ScoreKeys.IndexOf(id);return idx>=0?ScoreVals[idx]:0;
+    }
 }

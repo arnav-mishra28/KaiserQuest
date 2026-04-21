@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class Bootstrap : MonoBehaviour
 {
     // ── Scene state ────────────────────────────────────────────────────────────
-    GameScreen _prev = GameScreen.Title;
 
     // ── Screen components ──────────────────────────────────────────────────────
     TitleScreen         _title;
