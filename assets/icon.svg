@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128">
-  <rect width="128" height="128" fill="#0a0a1e"/>
-  <rect x="12" y="12" width="104" height="104" fill="#1a2a4a"/>
-  <text x="64" y="78" font-family="monospace" font-size="52" font-weight="bold" text-anchor="middle" fill="#ffd700">K</text>
-  <rect x="12" y="100" width="104" height="8" fill="#ffd700"/>
-  <rect x="12" y="12" width="104" height="104" fill="none" stroke="#ffd700" stroke-width="4"/>
-</svg>
