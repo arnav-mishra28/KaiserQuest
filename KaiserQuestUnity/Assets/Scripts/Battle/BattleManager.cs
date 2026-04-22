@@ -22,7 +22,6 @@ public class BattleManager : MonoBehaviour
     float _pHPd,_eHPd;
     float _glowT,_shakeT,_flashT;
     Color _flashCol=Color.clear;
-    bool  _pvictory;
 
     // Avatar animation timers
     float _pAttT,_eHurtT,_pHurtT;
@@ -37,7 +36,7 @@ public class BattleManager : MonoBehaviour
         _result=""; _explain=""; _acols=new[]{0,0,0,0};
         _pHP=GameManager.Instance.HP; _pMax=GameManager.Instance.MaxHP;
         _pHPd=_pHP; _eMax=18+GameManager.Instance.Level*2; _eHP=_eMax; _eHPd=_eMax;
-        _glowT=0f; _shakeT=0f; _flashT=0f; _pvictory=false;
+        _glowT=0f; _shakeT=0f; _flashT=0f;
         _phase=Phase.Intro;
 
         AdaptiveAI.Instance?.StartSession(GameManager.Instance.BranchKey);
@@ -144,7 +143,6 @@ public class BattleManager : MonoBehaviour
 
     void EndBattle(bool won){
         _phase=won?Phase.Win:Phase.Lose;
-        if(won)_pvictory=true;
         AdaptiveAI.Instance?.EndSession();
         GameManager.Instance.SetBestScore(_gym?.badgeName??"gym",_score);
         string[] resultLines;

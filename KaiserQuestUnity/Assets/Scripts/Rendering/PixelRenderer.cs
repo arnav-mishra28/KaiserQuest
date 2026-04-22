@@ -23,7 +23,6 @@ public static class PixelRenderer
     }
 
     private static float _sx=1f, _sy=1f, _ox=0f, _oy=0f;
-    private static bool _inFrame=false;
     private static Color _savedColor=Color.white;
 
     public static void BeginFrame()
@@ -32,14 +31,13 @@ public static class PixelRenderer
         _sx=s; _sy=s;
         _ox=(Screen.width-W*s)*0.5f; _oy=(Screen.height-H*s)*0.5f;
         GUI.matrix=Matrix4x4.TRS(new Vector3(_ox,_oy,0),Quaternion.identity,new Vector3(s,s,1));
-        _inFrame=true;
+        
     }
 
     public static void EndFrame()
     {
         GUI.matrix=Matrix4x4.identity;
         GUI.color=Color.white;
-        _inFrame=false;
     }
 
     // ── Core draw ─────────────────────────────────────────────────────────────

@@ -85,19 +85,22 @@ public class BackendClient : MonoBehaviour
     public IEnumerator TextToSpeech(string text, Action<AudioClip> callback)
 {
     string json = $"{{\"text\":\"{text}\",\"lang\":\"en\"}}";
-    var bytes = Encoding.UTF8.GetBytes(json);
+    byte[] bytes = Encoding.UTF8.GetBytes(json);
 
-    using (UnityWebRequest req = UnityWebRequestMultimedia.GetAudioClip(ServerURL + "/voice/speak", AudioType.MPEG))
+    using (UnityWebRequest req = new UnityWebRequest(ServerURL + "/voice/speak", "POST"))
     {
-        req.method = UnityWebRequest.kHttpVerbPOST;
         req.uploadHandler = new UploadHandlerRaw(bytes);
+        req.downloadHandler = new DownloadHandlerBuffer();
         req.SetRequestHeader("Content-Type", "application/json");
 
         yield return req.SendWebRequest();
 
         if (req.result == UnityWebRequest.Result.Success)
         {
-            AudioClip clip = DownloadHandlerAudioClip.GetContent(req);
+            byte[] audioData = req.downloadHandler.data;
+
+            // Convert raw data → AudioClip
+            AudioClip clip = WavUtility.ToAudioClip(audioData, "TTS");
             callback?.Invoke(clip);
         }
         else

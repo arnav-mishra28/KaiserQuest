@@ -110,7 +110,7 @@ public class TitleScreen : MonoBehaviour
         float minY=Mathf.Min(y1,Mathf.Min(y2,y3));
         float maxY=Mathf.Max(y1,Mathf.Max(y2,y3));
         for(float y=minY;y<=maxY;y++) {
-            float lx=W,rx=0;
+            float lx = PixelRenderer.W, rx = 0;
             float[] xs={x1,x2,x3}; float[] ys={y1,y2,y3};
             for(int i=0;i<3;i++){
                 int j=(i+1)%3;

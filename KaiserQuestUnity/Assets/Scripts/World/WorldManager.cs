@@ -58,7 +58,6 @@ public class WorldManager : MonoBehaviour
     int      _playerFacing=0;
     bool     _playerMoving=false;
     int      _playerFrame=0;
-    float    _animT=0f;
 
     // ── Init ──────────────────────────────────────────────────────────────────
     public void InitWorld(string worldKey)
@@ -264,7 +263,6 @@ public class WorldManager : MonoBehaviour
 
     void DrawUI()
     {
-        int W=PixelRenderer.W;
         var br=SubjectDB.Subjects.TryGetValue(GameManager.Instance.ActiveSubject,out var si)&&
                si.branches.TryGetValue(GameManager.Instance.ActiveBranch,out var bi)?bi:null;
         string town=br?.name??"City";
