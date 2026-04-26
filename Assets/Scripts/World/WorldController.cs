@@ -1,4 +1,4 @@
-// WorldController.cs — World Input + Movement Controller
+// WorldController.cs — World Input + Movement Controller (2.5D)
 using UnityEngine;
 
 public class WorldController : MonoBehaviour
@@ -17,23 +17,29 @@ public class WorldController : MonoBehaviour
     const float FIRST_DELAY  = 0.20f;
     const float HOLD_RATE    = 0.09f;
 
+    bool _worldBuilt = false;
+
     bool DialogOpen => DialogBox.Instance != null && DialogBox.Instance.IsOpen;
 
     void OnEnable()
     {
         if (WorldManager.Instance != null)
             WorldManager.Instance.InitWorld(GameManager.Instance.BranchKey);
+
         _gridPos   = GameManager.Instance.GridPos;
         _visualPos = new Vector2(_gridPos.x * TS, _gridPos.y * TS);
         _facing = 0; _moving = false;
 
-        // Subscribe to screen transitions from WorldManager
         if (WorldManager.Instance != null) {
             WorldManager.Instance.OnGymEntered   -= DoStartBattle;
             WorldManager.Instance.OnDuelTriggered -= DoStartDuel;
             WorldManager.Instance.OnGymEntered   += DoStartBattle;
             WorldManager.Instance.OnDuelTriggered += DoStartDuel;
         }
+
+        Build3DWorld();
+        if (World3DRenderer.Instance != null)
+            World3DRenderer.Instance.SetCameraActive(true);
     }
 
     void OnDisable()
@@ -42,6 +48,30 @@ public class WorldController : MonoBehaviour
             WorldManager.Instance.OnGymEntered   -= DoStartBattle;
             WorldManager.Instance.OnDuelTriggered -= DoStartDuel;
         }
+        if (World3DRenderer.Instance != null)
+            World3DRenderer.Instance.SetCameraActive(false);
+        _worldBuilt = false;
+    }
+
+    void Build3DWorld()
+    {
+        if (World3DRenderer.Instance == null) return;
+        var wm = WorldManager.Instance;
+        if (wm == null) return;
+
+        var npcInfos = wm.GetNPCInfosFor3D();
+        var sub = GameManager.Instance.ActiveSubject;
+        Color subCol = SubjectDB.Subjects.TryGetValue(sub, out var si)
+            ? si.color : new Color(0.12f, 0.38f, 0.82f);
+
+        World3DRenderer.Instance.Init(
+            WorldManager.MAP3D,
+            subCol,
+            npcInfos,
+            !GameManager.Instance.HasItem("branch_scroll"),
+            WorldManager.ITEM_POS3D
+        );
+        _worldBuilt = true;
     }
 
     void DoStartBattle()
@@ -73,12 +103,13 @@ public class WorldController : MonoBehaviour
         }
 
         Vector2Int dir = Vector2Int.zero; int face = -1;
-        if      (Input.GetKey(KeyCode.DownArrow) ||Input.GetKey(KeyCode.S))  { dir=new(0, 1);  face=0; }
-        else if (Input.GetKey(KeyCode.UpArrow)   ||Input.GetKey(KeyCode.W))  { dir=new(0,-1);  face=1; }
-        else if (Input.GetKey(KeyCode.LeftArrow) ||Input.GetKey(KeyCode.A))  { dir=new(-1, 0); face=2; }
-        else if (Input.GetKey(KeyCode.RightArrow)||Input.GetKey(KeyCode.D))  { dir=new( 1, 0); face=3; }
+        if      (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))  { dir = new( 0, 1); face = 0; }
+        else if (Input.GetKey(KeyCode.UpArrow)   || Input.GetKey(KeyCode.W))  { dir = new( 0,-1); face = 1; }
+        else if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))  { dir = new(-1, 0); face = 2; }
+        else if (Input.GetKey(KeyCode.RightArrow)|| Input.GetKey(KeyCode.D))  { dir = new( 1, 0); face = 3; }
 
-        if (Input.GetKeyDown(KeyCode.Return)||Input.GetKeyDown(KeyCode.Space)||Input.GetKeyDown(KeyCode.KeypadEnter)) {
+        if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space) ||
+            Input.GetKeyDown(KeyCode.KeypadEnter)) {
             if (!DialogOpen) WorldManager.Instance?.TryInteract(_gridPos, _facing);
             return;
         }
@@ -119,12 +150,24 @@ public class WorldController : MonoBehaviour
         WorldManager.Instance?.SetPlayerState(_visualPos, _facing, _moving, _frame);
     }
 
+    void LateUpdate()
+    {
+        if (!_worldBuilt) return;
+        if (GameScreenManager.Instance?.Current != GameScreen.World) return;
+        WorldManager.Instance?.SetPlayerState(_visualPos, _facing, _moving, _frame);
+        World3DRenderer.Instance?.UpdatePlayer(
+            _visualPos,
+            !GameManager.Instance.HasItem("branch_scroll"),
+            WorldManager.ITEM_POS3D
+        );
+    }
+
+    // OnGUI only draws the 2D HUD overlay (town name, gym banner, hints)
     void OnGUI()
     {
         if (GameScreenManager.Instance?.Current != GameScreen.World) return;
         PixelRenderer.BeginFrame();
-        WorldManager.Instance?.SetPlayerState(_visualPos, _facing, _moving, _frame);
-        WorldManager.Instance?.DrawWorld();
+        WorldManager.Instance?.DrawHUD();
         PixelRenderer.EndFrame();
     }
 }

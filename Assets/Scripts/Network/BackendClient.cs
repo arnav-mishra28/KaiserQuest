@@ -164,7 +164,7 @@ public class BackendClient : MonoBehaviour
             try {
                 var seg=new ArraySegment<byte>(buf);
                 var result=await _ws.ReceiveAsync(seg,_cts.Token);
-                if(result.MessageType==WebSocketMessageType.Close){_ws.CloseAsync(WebSocketCloseStatus.NormalClosure,"",CancellationToken.None);break;}
+                if(result.MessageType==WebSocketMessageType.Close){await _ws.CloseAsync(WebSocketCloseStatus.NormalClosure, "", CancellationToken.None);break;}
                 string msg=Encoding.UTF8.GetString(buf,0,result.Count);
                 lock(_recvQueue) _recvQueue.Enqueue(msg);
             } catch { break; }
