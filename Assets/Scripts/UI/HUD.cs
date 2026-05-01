@@ -1,119 +1,96 @@
-// HUD.cs — Gen 1/2 Stats Overlay (improved text sizing + contrast)
+// HUD.cs  –  Player stats overlay (top-right corner)
 using UnityEngine;
 
 public class HUD : MonoBehaviour
 {
     public static HUD Instance { get; private set; }
     void Awake() {
-        if (Instance!=null&&Instance!=this){Destroy(gameObject);return;}
-        Instance=this; DontDestroyOnLoad(gameObject);
+        if (Instance != null && Instance != this) { Destroy(gameObject); return; }
+        Instance = this; DontDestroyOnLoad(gameObject);
     }
 
     string _notif  = "";
     float  _notifT = 0f;
-    float  _time   = 0f;
-    const float NDUR = 2.8f;
+    const float NOTIF_DUR = 2.8f;
 
     void Start()
     {
         if (GameManager.Instance != null) {
-            GameManager.Instance.OnXPChanged   += (_,_,_) => { };
             GameManager.Instance.OnLevelUp     += lv => ShowNotif("LEVEL UP!  Lv." + lv + "!");
-            GameManager.Instance.OnBadgeEarned += b  => ShowNotif(b + " EARNED!");
-            GameManager.Instance.OnHPChanged   += (_,_) => { };
+            GameManager.Instance.OnBadgeEarned += b  => ShowNotif(b + " BADGE!");
         }
-    }
-
-    void Update() {
-        _time  += Time.deltaTime;
-        if (_notifT > 0f) { _notifT -= Time.deltaTime; if (_notifT < 0f) _notifT = 0f; }
     }
 
     public void ShowXPGain(int amt) => ShowNotif("+" + amt + " EXP!");
-    public void ShowNotif(string t) { _notif = t; _notifT = NDUR; }
+    public void ShowNotif(string t) { _notif = t; _notifT = NOTIF_DUR; }
+
+    void Update()
+    {
+        if (_notifT > 0f) _notifT = Mathf.Max(0f, _notifT - Time.deltaTime);
+    }
 
     void OnGUI()
     {
-        if (GameManager.Instance == null || string.IsNullOrEmpty(GameManager.Instance.ActiveSubject)) return;
-        if (DialogBox.Instance != null && DialogBox.Instance.IsOpen) return;
+        var gm = GameManager.Instance;
+        if (gm == null || string.IsNullOrEmpty(gm.ActiveSubject)) return;
+        if (DialogBox.Instance?.IsOpen == true &&
+            DialogBox.Instance.Ctx == DialogBox.Context.Battle) return;
 
         PixelRenderer.BeginFrame();
-        var gm = GameManager.Instance;
-        Color wcol = SubjectDB.Subjects.TryGetValue(gm.ActiveSubject, out var si)
-            ? si.color : new Color(0.38f,0.38f,0.63f);
+        int W = PixelRenderer.W;
 
-        const int PW=168, PH=76, PX=480-168-4, PY=4;
-        var DK = PixelRenderer.COL_BLACK;
-        var WH = PixelRenderer.COL_WHITE;
+        Color wc = SubjectDB.Subjects.TryGetValue(gm.ActiveSubject, out var si)
+                   ? si.color : new Color(0.38f, 0.38f, 0.63f);
 
-        // Panel shell
-        PixelRenderer.DrawRect(PX,   PY,   PW,   PH,   DK);
-        PixelRenderer.DrawRect(PX+2, PY+2, PW-4, PH-4, WH);
-        PixelRenderer.DrawBorder(PX+2, PY+2, PW-4, PH-4, DK, 1.5f);
-        // Colour accent bar
-        PixelRenderer.DrawRect(PX+2, PY+2, PW-4, 15,
-            new Color(wcol.r*0.22f, wcol.g*0.22f, wcol.b*0.38f));
-        // Corner ornaments
-        float[] cxs={PX, PX+PW-9f}; float[] cys={PY, PY+PH-9f};
-        foreach (float ccx in cxs) foreach (float ccy in cys) {
-            PixelRenderer.DrawRect(ccx,   ccy,   9, 9, DK);
-            PixelRenderer.DrawRect(ccx+2, ccy+2, 5, 5, wcol);
-        }
+        const int PX = 480-164, PY = 3, PW = 161, PH = 72;
 
-        // Name + Level
-        PixelRenderer.DrawString(PX+7, PY+14,
-            gm.PlayerName.ToUpper() + "  Lv." + gm.Level, 12, DK, true);
+        // Panel
+        PixelRenderer.DrawRect(PX,   PY,   PW,   PH,   PixelRenderer.COL_BLACK);
+        PixelRenderer.DrawRect(PX+2, PY+2, PW-4, PH-4, PixelRenderer.COL_WHITE);
+        PixelRenderer.DrawBorder(PX+2, PY+2, PW-4, PH-4, PixelRenderer.COL_BLACK, 1.5f);
+        // Colour bar
+        PixelRenderer.DrawRect(PX+2, PY+2, PW-4, 14,
+            new Color(wc.r*0.22f, wc.g*0.22f, wc.b*0.40f));
 
-        // HP bar + label
-        PixelRenderer.DrawString(PX+6, PY+28, "HP", 10, DK, true);
-        PixelRenderer.DrawHPBar(PX+24, PY+22, PW-30, 9, (float)gm.HP / Mathf.Max(gm.MaxHP, 1));
-        if (gm.HP != gm.MaxHP)
-            PixelRenderer.DrawString(PX+PW-56, PY+38, gm.HP+"/"+gm.MaxHP, 9, DK);
+        PixelRenderer.DrawString(PX+6, PY+13,
+            gm.PlayerName.ToUpper() + "  Lv." + gm.Level, 12, PixelRenderer.COL_BLACK, true);
 
-        // XP bar + label
-        PixelRenderer.DrawString(PX+6, PY+43, "XP", 10, DK, true);
-        PixelRenderer.DrawRect(PX+24, PY+37, PW-30, 7, DK);
-        PixelRenderer.DrawRect(PX+25, PY+38, PW-32, 5, PixelRenderer.COL_HP_BK);
-        float xpFrac = Mathf.Clamp01((float)gm.XP / Mathf.Max(gm.XPMax, 1));
-        PixelRenderer.DrawRect(PX+25, PY+38, (PW-32)*xpFrac, 5,
-            new Color(Mathf.Min(wcol.r*1.3f,1f), Mathf.Min(wcol.g*1.3f,1f), Mathf.Min(wcol.b*1.3f,1f)));
-        PixelRenderer.DrawString(PX+6, PY+56, gm.XP+"/"+gm.XPMax, 9, new Color(0.3f,0.3f,0.4f));
+        // HP
+        PixelRenderer.DrawString(PX+5, PY+28, "HP", 10, PixelRenderer.COL_BLACK, true);
+        PixelRenderer.DrawHPBar(PX+22, PY+22, PW-28, 8, (float)gm.HP / Mathf.Max(gm.MaxHP, 1));
+        PixelRenderer.DrawString(PX+PW-58, PY+37, gm.HP+"/"+gm.MaxHP, 9, PixelRenderer.COL_BLACK);
 
-        // Badges row
+        // XP bar
+        PixelRenderer.DrawString(PX+5, PY+43, "XP", 10, PixelRenderer.COL_BLACK, true);
+        PixelRenderer.DrawRect(PX+22, PY+37, PW-28, 6, PixelRenderer.COL_BLACK);
+        PixelRenderer.DrawRect(PX+23, PY+38, PW-30, 4, PixelRenderer.COL_HP_BK);
+        float xpF = Mathf.Clamp01((float)gm.XP / Mathf.Max(gm.XPMax, 1));
+        PixelRenderer.DrawRect(PX+23, PY+38, (PW-30)*xpF, 4,
+            new Color(Mathf.Min(wc.r*1.3f,1f), Mathf.Min(wc.g*1.3f,1f), Mathf.Min(wc.b*1.3f,1f)));
+        PixelRenderer.DrawString(PX+5, PY+55, gm.XP+"/"+gm.XPMax+" XP", 9,
+            new Color(0.3f,0.3f,0.4f));
+
+        // Badges
         int bdg = gm.Badges.Count;
         if (bdg > 0) {
-            int bay = PY + PH + 2;
-            PixelRenderer.DrawRect(PX,   bay,   PW,   16, DK);
-            PixelRenderer.DrawRect(PX+2, bay+2, PW-4, 12, WH);
-            string bstr = "";
-            for (int i=0; i<Mathf.Min(bdg,8); i++) bstr += "★";
-            bstr += "  " + bdg + "/20";
-            PixelRenderer.DrawString(PX+5, bay+12, bstr, 10, new Color(0.80f,0.50f,0f));
+            int by2 = PY + PH + 1;
+            PixelRenderer.DrawRect(PX,   by2,   PW,   14, PixelRenderer.COL_BLACK);
+            PixelRenderer.DrawRect(PX+2, by2+2, PW-4, 10, PixelRenderer.COL_WHITE);
+            string bs = "";
+            for (int i=0; i<Mathf.Min(bdg,8); i++) bs += "★";
+            bs += "  " + bdg + "/20";
+            PixelRenderer.DrawString(PX+5, by2+11, bs, 10, new Color(0.80f,0.50f,0f));
         }
 
-        // AI difficulty strip
-        string bkey = gm.ActiveSubject + ":" + gm.ActiveBranch;
-        int diff   = AdaptiveAI.Instance?.GetDiffLevel(bkey) ?? 1;
-        int streak = AdaptiveAI.Instance?.GetStreak(bkey)    ?? 0;
-        int ay     = PY + PH + (bdg > 0 ? 18 : 2);
-        PixelRenderer.DrawRect(PX,   ay,   PW,   14, DK);
-        PixelRenderer.DrawRect(PX+2, ay+2, PW-4, 10, new Color(0.06f,0.06f,0.14f));
-        string diffStr = "Diff: ";
-        for (int d=0; d<diff;  d++) diffStr += "●";
-        for (int d=diff; d<4; d++) diffStr += "○";
-        PixelRenderer.DrawString(PX+5, ay+11, diffStr, 10, new Color(wcol.r, wcol.g, wcol.b, 1f));
-        if (streak > 1)
-            PixelRenderer.DrawString(PX+PW-36, ay+11, "x"+streak, 10, PixelRenderer.COL_GOLD);
-
-        // XP gain popup
+        // XP popup
         if (_notifT > 0f) {
-            float alpha = Mathf.Min(_notifT / 0.3f, 1f);
-            float ny = 55f - (1f - _notifT/NDUR) * 14f;
-            float nw = _notif.Length * 7.5f + 24f;
-            PixelRenderer.DrawRect(164f, ny-16f, nw, 22f, new Color(0f,0f,0f,0.72f*alpha));
-            PixelRenderer.DrawBorder(165f, ny-15f, nw-2f, 20f, PixelRenderer.COL_GOLD, 1f);
-            PixelRenderer.DrawString(172f, ny, _notif.ToUpper(), 13,
-                new Color(0.30f, 1f, 0.30f, alpha), true);
+            float alpha = Mathf.Min(_notifT/0.35f, 1f);
+            float ny = 58f - (1f-_notifT/NOTIF_DUR)*12f;
+            float nw = _notif.Length * 7f + 20f;
+            PixelRenderer.DrawRect(PX-nw-8, ny-14, nw+4, 20, new Color(0,0,0,0.7f*alpha));
+            PixelRenderer.DrawBorder(PX-nw-7, ny-13, nw+2, 18, PixelRenderer.COL_GOLD, 1f);
+            PixelRenderer.DrawString(PX-nw-4, ny, _notif, 13,
+                new Color(0.35f, 1f, 0.35f, alpha), true);
         }
 
         PixelRenderer.EndFrame();

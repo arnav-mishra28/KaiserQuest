@@ -1,9 +1,6 @@
-// DialogBox.cs — Context-aware Gen 1/2 Dialog Box
-// World context = bottom bar (86px) | Battle context = top compact (48px)
-// Fixed: larger text, better contrast, proper line spacing.
+// DialogBox.cs  –  Gen1/2 dialog system
 using UnityEngine;
 using System;
-using System.Collections.Generic;
 
 public class DialogBox : MonoBehaviour
 {
@@ -14,64 +11,67 @@ public class DialogBox : MonoBehaviour
     }
 
     public enum Context { World, Battle }
-    public Context CurrentContext { get; set; } = Context.World;
 
     enum State { Closed, Typing, Waiting }
-    State    _state = State.Closed;
+    State    _state  = State.Closed;
     string[] _lines;
     int      _page;
     string   _full, _shown;
     float    _typeT, _blinkT;
     bool     _blink;
-    Action   _callback;
+    Action   _onDone;
+    public Context Ctx { get; private set; } = Context.World;
 
-    const float CPS = 38f;    // characters per second
+    const float CPS = 36f;  // chars per second
 
     public bool IsOpen => _state != State.Closed;
-    public event Action<bool> DialogStateChanged;
 
-    public void ShowLines(string[] lines, Action callback=null, Context ctx=Context.World)
+    public void ShowLines(string[] lines, Action onDone = null, Context ctx = Context.World)
     {
         if (_state != State.Closed) return;
-        if (lines == null || lines.Length == 0) { callback?.Invoke(); return; }
-        CurrentContext = ctx;
-        _lines = lines; _page = 0; _callback = callback;
-        _full = _lines[0]; _shown = ""; _typeT = 0f; _blink = true;
-        _state = State.Typing;
-        DialogStateChanged?.Invoke(true);
+        if (lines == null || lines.Length == 0) { onDone?.Invoke(); return; }
+        Ctx    = ctx;
+        _lines = lines; _page = 0; _onDone = onDone;
+        _full  = _lines[0]; _shown = "";
+        _typeT = 0f; _blink = true; _state = State.Typing;
     }
 
-    public void Close()
+    public void ForceClose()
     {
         if (_state == State.Closed) return;
         _state = State.Closed;
-        DialogStateChanged?.Invoke(false);
-        var cb = _callback; _callback = null; cb?.Invoke();
+        var cb = _onDone; _onDone = null; cb?.Invoke();
     }
 
     void Update()
     {
         if (_state == State.Closed) return;
+
         if (_state == State.Typing) {
             _typeT += Time.deltaTime;
-            int n = (int)(_typeT * CPS);
-            if (n >= _full.Length) { _shown = _full; _state = State.Waiting; }
-            else _shown = _full.Substring(0, n);
-        } else if (_state == State.Waiting) {
+            int n = Mathf.Min((int)(_typeT * CPS), _full.Length);
+            _shown = _full.Substring(0, n);
+            if (n >= _full.Length) _state = State.Waiting;
+        } else {
             _blinkT += Time.deltaTime;
-            if (_blinkT >= 0.5f) { _blinkT = 0f; _blink = !_blink; }
+            if (_blinkT >= 0.48f) { _blinkT = 0f; _blink = !_blink; }
         }
 
-        bool advance = Input.GetKeyDown(KeyCode.Return)
-                    || Input.GetKeyDown(KeyCode.KeypadEnter)
-                    || Input.GetKeyDown(KeyCode.Space)
-                    || Input.GetMouseButtonDown(0);
-        if (advance) {
-            if (_state == State.Typing) { _shown = _full; _state = State.Waiting; }
-            else if (_state == State.Waiting) {
-                _page++;
-                if (_page >= _lines.Length) Close();
-                else { _full=_lines[_page]; _shown=""; _typeT=0f; _state=State.Typing; }
+        bool adv = Input.GetKeyDown(KeyCode.Return)
+                || Input.GetKeyDown(KeyCode.KeypadEnter)
+                || Input.GetKeyDown(KeyCode.Space)
+                || Input.GetMouseButtonDown(0);
+
+        if (!adv) return;
+        if (_state == State.Typing)   { _shown = _full; _state = State.Waiting; return; }
+        if (_state == State.Waiting) {
+            _page++;
+            if (_page >= _lines.Length) {
+                _state = State.Closed;
+                var cb = _onDone; _onDone = null; cb?.Invoke();
+            } else {
+                _full = _lines[_page]; _shown = ""; _typeT = 0f;
+                _state = State.Typing;
             }
         }
     }
@@ -81,78 +81,80 @@ public class DialogBox : MonoBehaviour
         if (_state == State.Closed) return;
         PixelRenderer.BeginFrame();
         int W = PixelRenderer.W, H = PixelRenderer.H;
-        if (CurrentContext == Context.Battle) DrawBattle(W, H);
-        else                                   DrawWorld(W, H);
+
+        if (Ctx == Context.World) DrawWorldBox(W, H);
+        else                       DrawBattleBox(W, H);
+
         PixelRenderer.EndFrame();
     }
 
-    void DrawWorld(int W, int H)
+    void DrawWorldBox(int W, int H)
     {
-        const int BH = 86;
-        int by = H - BH - 2;
+        const int BH = 80, MARGIN = 4;
+        float by = H - BH - MARGIN;
 
-        // Outer shell
-        PixelRenderer.DrawRect(2,    by,    W-4,  BH,    PixelRenderer.COL_BLACK);
-        PixelRenderer.DrawRect(4,    by+2,  W-8,  BH-4,  PixelRenderer.COL_WHITE);
-        PixelRenderer.DrawBorder(4,  by+2,  W-8,  BH-4,  PixelRenderer.COL_BLACK, 2f);
+        // Outer black
+        PixelRenderer.DrawRect(MARGIN, by, W-MARGIN*2, BH, PixelRenderer.COL_BLACK);
+        // Inner white
+        PixelRenderer.DrawRect(MARGIN+2, by+2, W-MARGIN*2-4, BH-4, PixelRenderer.COL_WHITE);
+        PixelRenderer.DrawBorder(MARGIN+2, by+2, W-MARGIN*2-4, BH-4, PixelRenderer.COL_BLACK, 2f);
         // Inner inset
-        PixelRenderer.DrawRect(8,    by+6,  W-16, BH-12, PixelRenderer.COL_WHITE);
-        PixelRenderer.DrawBorder(8,  by+6,  W-16, BH-12, PixelRenderer.COL_BLACK, 1.5f);
-        // Corner ornaments (red gems)
-        float[] cx={2f, W-12f}; float[] cy2={by, (float)(by+BH-12)};
-        foreach (float ccx in cx)
-        foreach (float ccy in cy2) {
-            PixelRenderer.DrawRect(ccx,   ccy,   12, 12, PixelRenderer.COL_BLACK);
-            PixelRenderer.DrawRect(ccx+2, ccy+2,  8,  8, PixelRenderer.COL_HP_R);
-            PixelRenderer.DrawRect(ccx+3, ccy+3,  3,  3, new Color(1f,0.5f,0.5f));
+        PixelRenderer.DrawRect(MARGIN+6, by+6, W-MARGIN*2-12, BH-12, PixelRenderer.COL_WHITE);
+        PixelRenderer.DrawBorder(MARGIN+6, by+6, W-MARGIN*2-12, BH-12, PixelRenderer.COL_BLACK, 1.5f);
+
+        // Corner gems
+        float[] ccx = {MARGIN, W-MARGIN-10f};
+        float[] ccy = {by, by+BH-10f};
+        foreach (float cx in ccx) foreach (float cy in ccy) {
+            PixelRenderer.DrawRect(cx, cy, 10, 10, PixelRenderer.COL_BLACK);
+            PixelRenderer.DrawRect(cx+2, cy+2, 6, 6, PixelRenderer.COL_HP_R);
+            PixelRenderer.DrawRect(cx+3, cy+3, 2, 2, new Color(1f,0.5f,0.5f));
         }
 
-        // Text — draw up to 3 lines
-        var rows = _shown.Split('\n');
+        // Text (wrap at ~450px)
+        float textX = MARGIN + 14f, textY = by + 18f;
+        string[] rows = _shown.Split('\n');
         for (int i = 0; i < rows.Length && i < 3; i++)
-            PixelRenderer.DrawString(18, by + 20 + i*20, rows[i], 13, PixelRenderer.COL_BLACK);
+            PixelRenderer.DrawString(textX, textY + i*19, rows[i], 13, PixelRenderer.COL_BLACK);
 
-        // Continue arrow
+        // Arrow
         if (_state == State.Waiting && _blink)
-            DrawArrow(W-22, by+BH-16, W-10, by+BH-16, W-16, by+BH-8);
+            DrawArrow(W - MARGIN - 18, by + BH - 14);
 
-        // Page indicator
+        // Page counter
         if (_lines.Length > 1) {
-            PixelRenderer.DrawRect(W-54, by+4, 48, 14, new Color(0,0,0,0.5f));
-            PixelRenderer.DrawString(W-52, by+15, (_page+1)+"/"+_lines.Length, 10,
-                new Color(0.8f, 0.8f, 0.8f));
+            string pg = (_page+1)+"/"+_lines.Length;
+            PixelRenderer.DrawRect(W-MARGIN-34, by+4, 30, 12, new Color(0,0,0,0.55f));
+            PixelRenderer.DrawString(W-MARGIN-32, by+13, pg, 10, Color.white);
         }
     }
 
-    void DrawBattle(int W, int H)
+    void DrawBattleBox(int W, int H)
     {
-        const int BH = 50, BY = 2;
-        PixelRenderer.DrawRect(2,    BY,    W-4,  BH,    PixelRenderer.COL_BLACK);
-        PixelRenderer.DrawRect(4,    BY+2,  W-8,  BH-4,  new Color(0.95f,0.95f,0.92f,0.97f));
-        PixelRenderer.DrawBorder(4,  BY+2,  W-8,  BH-4,  PixelRenderer.COL_BLACK, 1.5f);
-        // Accent bar at top
-        PixelRenderer.DrawRect(4, BY+2, W-8, 10, new Color(0.12f,0.31f,0.63f,0.22f));
+        // Compact top bar for battle context
+        const int BH = 52;
+        PixelRenderer.DrawRect(2, 2, W-4, BH, PixelRenderer.COL_BLACK);
+        PixelRenderer.DrawRect(4, 4, W-8, BH-4, new Color(0.96f, 0.96f, 0.93f, 0.97f));
+        PixelRenderer.DrawBorder(4, 4, W-8, BH-4, PixelRenderer.COL_BLACK, 1.5f);
+        PixelRenderer.DrawRect(4, 4, W-8, 10, new Color(0.12f, 0.31f, 0.63f, 0.22f));
 
-        var rows = _shown.Split('\n');
+        string[] rows = _shown.Split('\n');
         for (int i = 0; i < Mathf.Min(rows.Length, 2); i++)
-            PixelRenderer.DrawString(14, BY + 16 + i*18, rows[i], 12, PixelRenderer.COL_BLACK);
+            PixelRenderer.DrawString(12, 20 + i*18, rows[i], 12, PixelRenderer.COL_BLACK);
 
         if (_state == State.Waiting && _blink)
-            PixelRenderer.DrawString(W-24, BY+BH-12, "▶", 13, PixelRenderer.COL_BLACK);
+            PixelRenderer.DrawString(W-22, BH-12, "▶", 12, PixelRenderer.COL_BLACK);
 
         if (_lines.Length > 1) {
-            PixelRenderer.DrawRect(W-50, BY+2, 44, 12, new Color(0,0,0,0.55f));
-            PixelRenderer.DrawString(W-48, BY+12, (_page+1)+"/"+_lines.Length, 10, Color.white);
+            PixelRenderer.DrawRect(W-48, 4, 42, 12, new Color(0,0,0,0.55f));
+            PixelRenderer.DrawString(W-46, 14, (_page+1)+"/"+_lines.Length, 10, Color.white);
         }
     }
 
-    void DrawArrow(float x1,float y1,float x2,float y2,float x3,float y3)
+    void DrawArrow(float x, float y)
     {
-        for (float y = y1; y <= y3; y++) {
-            float t = (y-y1)/(y3-y1);
-            float lx = Mathf.Lerp(x1,x3,t), rx = Mathf.Lerp(x2,x3,t);
-            if (rx < lx) (lx,rx) = (rx,lx);
-            PixelRenderer.DrawRect(lx, y, rx-lx, 1, PixelRenderer.COL_BLACK);
-        }
+        // Simple downward triangle cursor
+        for (int i = 0; i < 6; i++)
+            PixelRenderer.DrawRect(x+i, y+i/2, 6-i*2+2, 2, PixelRenderer.COL_BLACK);
     }
 }
