@@ -1,0 +1,154 @@
+{
+    "questions": [
+        {
+            "subject": "Mathematics",
+            "topic": "Variables",
+            "difficulty": 1,
+            "question": "What is the value of x if x + 3 = 7?",
+            "answers": ["4", "3", "7", "10"],
+            "correctAnswer": "4",
+            "explanation": "Subtract 3 from both sides: x = 7 - 3 = 4",
+            "hint": "Move 3 to the other side"
+        },
+        {
+            "subject": "Mathematics",
+            "topic": "Variables",
+            "difficulty": 1,
+            "question": "If y = 5, what is 2y?",
+            "answers": ["10", "7", "25", "5"],
+            "correctAnswer": "10",
+            "explanation": "2y means 2 × y = 2 × 5 = 10",
+            "hint": "Multiply 2 times the value of y"
+        },
+        {
+            "subject": "Mathematics",
+            "topic": "Variables",
+            "difficulty": 1,
+            "question": "Solve: a - 4 = 6",
+            "answers": ["10", "2", "4", "6"],
+            "correctAnswer": "10",
+            "explanation": "Add 4 to both sides: a = 6 + 4 = 10",
+            "hint": "Add 4 to both sides"
+        },
+        {
+            "subject": "Mathematics",
+            "topic": "Variables",
+            "difficulty": 2,
+            "question": "If x = 3 and y = 4, what is xy?",
+            "answers": ["12", "7", "34", "1"],
+            "correctAnswer": "12",
+            "explanation": "xy means x × y = 3 × 4 = 12",
+            "hint": "Multiply x and y together"
+        },
+        {
+            "subject": "Mathematics",
+            "topic": "Variables",
+            "difficulty": 2,
+            "question": "What is 3x when x = 5?",
+            "answers": ["15", "8", "35", "2"],
+            "correctAnswer": "15",
+            "explanation": "3x = 3 × 5 = 15",
+            "hint": "3x means 3 times x"
+        },
+        {
+            "subject": "Mathematics",
+            "topic": "Variables",
+            "difficulty": 3,
+            "question": "If 2x + 1 = 9, what is x?",
+            "answers": ["4", "5", "3", "8"],
+            "correctAnswer": "4",
+            "explanation": "2x = 9 - 1 = 8, so x = 8/2 = 4",
+            "hint": "First subtract 1, then divide by 2"
+        },
+        {
+            "subject": "Mathematics",
+            "topic": "Linear Equations",
+            "difficulty": 3,
+            "question": "Solve: 2x + 4 = 12",
+            "answers": ["4", "6", "8", "3"],
+            "correctAnswer": "4",
+            "explanation": "2x = 12 - 4 = 8, x = 8/2 = 4",
+            "hint": "Isolate x by moving constants to the right"
+        },
+        {
+            "subject": "Mathematics",
+            "topic": "Linear Equations",
+            "difficulty": 3,
+            "question": "Solve: 3x - 9 = 0",
+            "answers": ["3", "9", "0", "-3"],
+            "correctAnswer": "3",
+            "explanation": "3x = 9, x = 9/3 = 3",
+            "hint": "Add 9 to both sides"
+        },
+        {
+            "subject": "Mathematics",
+            "topic": "Linear Equations",
+            "difficulty": 4,
+            "question": "Solve: 5x + 10 = 35",
+            "answers": ["5", "7", "3", "25"],
+            "correctAnswer": "5",
+            "explanation": "5x = 35 - 10 = 25, x = 25/5 = 5",
+            "hint": "Subtract 10, then divide by 5"
+        },
+        {
+            "subject": "Mathematics",
+            "topic": "Linear Equations",
+            "difficulty": 5,
+            "question": "What is the slope of y = 3x + 2?",
+            "answers": ["3", "2", "5", "1"],
+            "correctAnswer": "3",
+            "explanation": "In y = mx + b form, the slope m = 3",
+            "hint": "The coefficient of x is the slope"
+        },
+        {
+            "subject": "Mathematics",
+            "topic": "Quadratics",
+            "difficulty": 6,
+            "question": "What is x² when x = 4?",
+            "answers": ["16", "8", "12", "64"],
+            "correctAnswer": "16",
+            "explanation": "x² = 4² = 4 × 4 = 16",
+            "hint": "Square means multiply by itself"
+        },
+        {
+            "subject": "Mathematics",
+            "topic": "Quadratics",
+            "difficulty": 7,
+            "question": "Factor: x² - 9",
+            "answers": ["(x+3)(x-3)", "(x+9)(x-1)", "x(x-9)", "(x-3)²"],
+            "correctAnswer": "(x+3)(x-3)",
+            "explanation": "Difference of squares: a² - b² = (a+b)(a-b)",
+            "hint": "This is a difference of squares"
+        },
+        {
+            "subject": "Mathematics",
+            "topic": "Quadratics",
+            "difficulty": 8,
+            "question": "Solve: x² = 25",
+            "answers": ["±5", "5", "25", "12.5"],
+            "correctAnswer": "±5",
+            "explanation": "x = √25 = ±5 (both positive and negative)",
+            "hint": "Don't forget the negative root"
+        },
+        {
+            "subject": "Mathematics",
+            "topic": "Functions",
+            "difficulty": 7,
+            "question": "If f(x) = 2x + 1, what is f(3)?",
+            "answers": ["7", "6", "9", "5"],
+            "correctAnswer": "7",
+            "explanation": "f(3) = 2(3) + 1 = 6 + 1 = 7",
+            "hint": "Replace x with 3"
+        },
+        {
+            "subject": "Mathematics",
+            "topic": "Graphs",
+            "difficulty": 8,
+            "question": "What shape does y = x² make?",
+            "answers": ["Parabola", "Line", "Circle", "Hyperbola"],
+            "correctAnswer": "Parabola",
+            "explanation": "Quadratic functions create U-shaped curves called parabolas",
+            "hint": "It's a U-shaped curve"
+        }
+    ]
+}

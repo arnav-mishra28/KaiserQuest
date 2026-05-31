@@ -1,0 +1,207 @@
+{
+  "subject": "music",
+  "topic": "notes",
+  "description": "Musical notes, staff, clefs, note values, accidentals",
+  "questions": [
+    {
+      "id": "mus_note_001",
+      "question": "How many lines does a musical staff have?",
+      "options": ["3", "4", "5", "6"],
+      "correct_answer": "5",
+      "explanation": "A standard musical staff consists of 5 horizontal lines and 4 spaces.",
+      "difficulty": 1
+    },
+    {
+      "id": "mus_note_002",
+      "question": "What are the note names in order from C?",
+      "options": ["C D E F G A B", "A B C D E F G", "C E G B D F A", "D E F G A B C"],
+      "correct_answer": "C D E F G A B",
+      "explanation": "Starting from C: C, D, E, F, G, A, B (then back to C).",
+      "difficulty": 1
+    },
+    {
+      "id": "mus_note_003",
+      "question": "What clef is also known as the 'G clef'?",
+      "options": ["Bass clef", "Treble clef", "Alto clef", "Tenor clef"],
+      "correct_answer": "Treble clef",
+      "explanation": "The treble clef curls around the G line (second line from bottom).",
+      "difficulty": 1
+    },
+    {
+      "id": "mus_note_004",
+      "question": "What clef is also known as the 'F clef'?",
+      "options": ["Treble clef", "Bass clef", "Alto clef", "Soprano clef"],
+      "correct_answer": "Bass clef",
+      "explanation": "The bass clef's two dots surround the F line (fourth line from bottom).",
+      "difficulty": 1
+    },
+    {
+      "id": "mus_note_005",
+      "question": "How many beats does a whole note get in 4/4 time?",
+      "options": ["1", "2", "3", "4"],
+      "correct_answer": "4",
+      "explanation": "A whole note lasts for 4 beats in common (4/4) time.",
+      "difficulty": 1
+    },
+    {
+      "id": "mus_note_006",
+      "question": "How many beats does a half note get in 4/4 time?",
+      "options": ["1", "2", "3", "4"],
+      "correct_answer": "2",
+      "explanation": "A half note gets 2 beats — half the duration of a whole note.",
+      "difficulty": 1
+    },
+    {
+      "id": "mus_note_007",
+      "question": "What does a sharp (♯) do to a note?",
+      "options": ["Lowers it by a half step", "Raises it by a half step", "Doubles its duration", "Makes it louder"],
+      "correct_answer": "Raises it by a half step",
+      "explanation": "A sharp raises the pitch by one semitone (half step).",
+      "difficulty": 1
+    },
+    {
+      "id": "mus_note_008",
+      "question": "What does a flat (♭) do to a note?",
+      "options": ["Raises it by a half step", "Lowers it by a half step", "Makes it shorter", "Makes it softer"],
+      "correct_answer": "Lowers it by a half step",
+      "explanation": "A flat lowers the pitch by one semitone (half step).",
+      "difficulty": 1
+    },
+    {
+      "id": "mus_note_009",
+      "question": "The spaces on the treble clef spell which word?",
+      "options": ["BEAD", "FACE", "CAGE", "EDGE"],
+      "correct_answer": "FACE",
+      "explanation": "From bottom to top, the spaces of the treble clef are F, A, C, E — spelling FACE.",
+      "difficulty": 1
+    },
+    {
+      "id": "mus_note_010",
+      "question": "The lines of the treble clef from bottom to top are:",
+      "options": ["E G B D F", "F A C E G", "D F A C E", "C E G B D"],
+      "correct_answer": "E G B D F",
+      "explanation": "Every Good Boy Does Fine — E, G, B, D, F.",
+      "difficulty": 2
+    },
+    {
+      "id": "mus_note_011",
+      "question": "How many beats does a quarter note get in 4/4 time?",
+      "options": ["0.5", "1", "2", "4"],
+      "correct_answer": "1",
+      "explanation": "A quarter note gets 1 beat in 4/4 time.",
+      "difficulty": 1
+    },
+    {
+      "id": "mus_note_012",
+      "question": "What does a dot after a note do?",
+      "options": ["Doubles its value", "Adds half its value", "Makes it staccato", "Makes it louder"],
+      "correct_answer": "Adds half its value",
+      "explanation": "A dotted half note = 2 + 1 = 3 beats. The dot adds 50% of the note's value.",
+      "difficulty": 2
+    },
+    {
+      "id": "mus_note_013",
+      "question": "What is a natural sign (♮) used for?",
+      "options": ["To make a note louder", "To cancel a sharp or flat", "To hold a note longer", "To repeat a note"],
+      "correct_answer": "To cancel a sharp or flat",
+      "explanation": "A natural sign cancels any previous sharp or flat on that note.",
+      "difficulty": 2
+    },
+    {
+      "id": "mus_note_014",
+      "question": "How many eighth notes equal one quarter note?",
+      "options": ["1", "2", "4", "8"],
+      "correct_answer": "2",
+      "explanation": "Two eighth notes have the same total duration as one quarter note.",
+      "difficulty": 2
+    },
+    {
+      "id": "mus_note_015",
+      "question": "What is Middle C?",
+      "options": ["The lowest note on a piano", "The note between treble and bass clef staves", "The highest note on a guitar", "A type of scale"],
+      "correct_answer": "The note between treble and bass clef staves",
+      "explanation": "Middle C sits on a ledger line between the treble and bass clef staves.",
+      "difficulty": 2
+    },
+    {
+      "id": "mus_note_016",
+      "question": "What is enharmonic equivalence?",
+      "options": ["Two notes with different names but same pitch", "Two notes an octave apart", "Two notes in harmony", "Two notes played at the same time"],
+      "correct_answer": "Two notes with different names but same pitch",
+      "explanation": "C♯ and D♭ are enharmonic equivalents — different names, same sound.",
+      "difficulty": 3
+    },
+    {
+      "id": "mus_note_017",
+      "question": "How many half steps are in an octave?",
+      "options": ["7", "8", "10", "12"],
+      "correct_answer": "12",
+      "explanation": "There are 12 semitones (half steps) in one octave.",
+      "difficulty": 2
+    },
+    {
+      "id": "mus_note_018",
+      "question": "What is a ledger line?",
+      "options": ["A line added above or below the staff for notes outside its range", "The bar line between measures", "A line indicating tempo", "A line showing dynamics"],
+      "correct_answer": "A line added above or below the staff for notes outside its range",
+      "explanation": "Ledger lines extend the staff to notate pitches above or below the five lines.",
+      "difficulty": 3
+    },
+    {
+      "id": "mus_note_019",
+      "question": "What is a tie in music notation?",
+      "options": ["A curved line connecting two notes of the same pitch", "A line connecting different pitches", "A type of rest", "A dynamic marking"],
+      "correct_answer": "A curved line connecting two notes of the same pitch",
+      "explanation": "A tie connects two notes of the same pitch, combining their durations.",
+      "difficulty": 3
+    },
+    {
+      "id": "mus_note_020",
+      "question": "How many sixteenth notes equal one quarter note?",
+      "options": ["2", "3", "4", "8"],
+      "correct_answer": "4",
+      "explanation": "4 sixteenth notes = 1 quarter note in duration.",
+      "difficulty": 3
+    },
+    {
+      "id": "mus_note_021",
+      "question": "What is a double sharp (𝄪)?",
+      "options": ["Raises a note by two half steps", "Raises a note by one half step", "Lowers a note by two half steps", "Makes a note twice as loud"],
+      "correct_answer": "Raises a note by two half steps",
+      "explanation": "A double sharp raises the note by a whole step (two semitones).",
+      "difficulty": 4
+    },
+    {
+      "id": "mus_note_022",
+      "question": "In concert pitch, what note does a B♭ trumpet play to sound a C?",
+      "options": ["B♭", "C", "D", "E♭"],
+      "correct_answer": "D",
+      "explanation": "A B♭ trumpet must play a D (a whole step up) to produce concert C.",
+      "difficulty": 5
+    },
+    {
+      "id": "mus_note_023",
+      "question": "What is the frequency of concert A (A4)?",
+      "options": ["220 Hz", "330 Hz", "440 Hz", "880 Hz"],
+      "correct_answer": "440 Hz",
+      "explanation": "Concert A (A4) is internationally standardized at 440 Hz.",
+      "difficulty": 4
+    },
+    {
+      "id": "mus_note_024",
+      "question": "What does 'pp' mean in musical dynamics?",
+      "options": ["Very loud", "Very soft", "Moderately loud", "Moderately soft"],
+      "correct_answer": "Very soft",
+      "explanation": "'pp' stands for pianissimo, meaning very soft/quiet.",
+      "difficulty": 3
+    },
+    {
+      "id": "mus_note_025",
+      "question": "What is a tremolo?",
+      "options": ["A gradual slowing of tempo", "A rapid repetition of a note or alternation between two notes", "A type of rest", "Playing very softly"],
+      "correct_answer": "A rapid repetition of a note or alternation between two notes",
+      "explanation": "Tremolo is the rapid reiteration of a single note or alternation between two notes.",
+      "difficulty": 4
+    }
+  ]
+}

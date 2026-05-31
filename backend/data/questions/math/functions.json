@@ -1,0 +1,207 @@
+{
+  "subject": "math",
+  "topic": "functions",
+  "description": "Functions, domain, range, function notation, composition",
+  "questions": [
+    {
+      "id": "math_func_001",
+      "question": "If f(x) = x + 5, what is f(3)?",
+      "options": ["5", "7", "8", "9"],
+      "correct_answer": "8",
+      "explanation": "f(3) = 3 + 5 = 8",
+      "difficulty": 1
+    },
+    {
+      "id": "math_func_002",
+      "question": "If f(x) = 2x, what is f(7)?",
+      "options": ["9", "12", "14", "16"],
+      "correct_answer": "14",
+      "explanation": "f(7) = 2 × 7 = 14",
+      "difficulty": 1
+    },
+    {
+      "id": "math_func_003",
+      "question": "What does f(x) represent?",
+      "options": ["A variable", "The output of function f for input x", "A constant", "An equation"],
+      "correct_answer": "The output of function f for input x",
+      "explanation": "f(x) is function notation meaning 'the value of f at x'.",
+      "difficulty": 1
+    },
+    {
+      "id": "math_func_004",
+      "question": "If f(x) = x² - 1, what is f(4)?",
+      "options": ["7", "9", "15", "17"],
+      "correct_answer": "15",
+      "explanation": "f(4) = 16 - 1 = 15",
+      "difficulty": 2
+    },
+    {
+      "id": "math_func_005",
+      "question": "If g(x) = 3x - 7, find g(5).",
+      "options": ["6", "7", "8", "9"],
+      "correct_answer": "8",
+      "explanation": "g(5) = 3(5) - 7 = 15 - 7 = 8",
+      "difficulty": 2
+    },
+    {
+      "id": "math_func_006",
+      "question": "What is the domain of f(x) = 1/x?",
+      "options": ["All real numbers", "x > 0", "x ≠ 0", "x ≥ 0"],
+      "correct_answer": "x ≠ 0",
+      "explanation": "Division by zero is undefined, so x cannot be 0.",
+      "difficulty": 2
+    },
+    {
+      "id": "math_func_007",
+      "question": "What is the range of f(x) = x²?",
+      "options": ["All real numbers", "y ≥ 0", "y > 0", "y ≤ 0"],
+      "correct_answer": "y ≥ 0",
+      "explanation": "x² is always non-negative, so the range is y ≥ 0.",
+      "difficulty": 2
+    },
+    {
+      "id": "math_func_008",
+      "question": "If f(x) = 2x + 1 and g(x) = x - 3, what is f(g(4))?",
+      "options": ["1", "3", "5", "7"],
+      "correct_answer": "3",
+      "explanation": "g(4) = 1, then f(1) = 2(1) + 1 = 3",
+      "difficulty": 3
+    },
+    {
+      "id": "math_func_009",
+      "question": "Is the relation {(1,2), (3,4), (1,5)} a function?",
+      "options": ["Yes", "No", "Only if x > 0", "Only if y > 0"],
+      "correct_answer": "No",
+      "explanation": "Input 1 maps to both 2 and 5, violating the definition of a function.",
+      "difficulty": 2
+    },
+    {
+      "id": "math_func_010",
+      "question": "If f(x) = |x - 3|, what is f(1)?",
+      "options": ["-2", "1", "2", "4"],
+      "correct_answer": "2",
+      "explanation": "f(1) = |1 - 3| = |-2| = 2",
+      "difficulty": 2
+    },
+    {
+      "id": "math_func_011",
+      "question": "If f(x) = 3x + 2, find f⁻¹(x) (the inverse).",
+      "options": ["(x-2)/3", "(x+2)/3", "3x-2", "x/3 + 2"],
+      "correct_answer": "(x-2)/3",
+      "explanation": "y = 3x + 2 → x = (y-2)/3. So f⁻¹(x) = (x-2)/3",
+      "difficulty": 3
+    },
+    {
+      "id": "math_func_012",
+      "question": "What is the domain of f(x) = √(x - 4)?",
+      "options": ["x ≥ 0", "x ≥ 4", "x > 4", "All real numbers"],
+      "correct_answer": "x ≥ 4",
+      "explanation": "The expression under the square root must be ≥ 0: x - 4 ≥ 0 → x ≥ 4",
+      "difficulty": 3
+    },
+    {
+      "id": "math_func_013",
+      "question": "If f(x) = x² and g(x) = x + 1, what is (f ∘ g)(2)?",
+      "options": ["5", "7", "9", "10"],
+      "correct_answer": "9",
+      "explanation": "g(2) = 3, then f(3) = 9",
+      "difficulty": 3
+    },
+    {
+      "id": "math_func_014",
+      "question": "Which test determines if a graph represents a function?",
+      "options": ["Horizontal line test", "Vertical line test", "Diagonal line test", "Slope test"],
+      "correct_answer": "Vertical line test",
+      "explanation": "If any vertical line crosses the graph more than once, it's not a function.",
+      "difficulty": 1
+    },
+    {
+      "id": "math_func_015",
+      "question": "If f(x) = 2x² - x, what is f(-1)?",
+      "options": ["1", "3", "5", "-1"],
+      "correct_answer": "3",
+      "explanation": "f(-1) = 2(1) - (-1) = 2 + 1 = 3",
+      "difficulty": 3
+    },
+    {
+      "id": "math_func_016",
+      "question": "What is f(x) + g(x) if f(x) = 3x and g(x) = x²?",
+      "options": ["4x", "3x²", "x² + 3x", "3x³"],
+      "correct_answer": "x² + 3x",
+      "explanation": "f(x) + g(x) = 3x + x² = x² + 3x",
+      "difficulty": 3
+    },
+    {
+      "id": "math_func_017",
+      "question": "A linear function has a constant ___.",
+      "options": ["Product", "Rate of change", "Exponent", "Quotient"],
+      "correct_answer": "Rate of change",
+      "explanation": "A linear function has a constant rate of change (slope).",
+      "difficulty": 1
+    },
+    {
+      "id": "math_func_018",
+      "question": "If f(x) = 4x - 3, for what value of x is f(x) = 13?",
+      "options": ["2", "3", "4", "5"],
+      "correct_answer": "4",
+      "explanation": "4x - 3 = 13 → 4x = 16 → x = 4",
+      "difficulty": 2
+    },
+    {
+      "id": "math_func_019",
+      "question": "What is the zero of f(x) = 5x - 20?",
+      "options": ["2", "3", "4", "5"],
+      "correct_answer": "4",
+      "explanation": "5x - 20 = 0 → x = 4",
+      "difficulty": 3
+    },
+    {
+      "id": "math_func_020",
+      "question": "If f(x) = x³, is f an even, odd, or neither function?",
+      "options": ["Even", "Odd", "Neither", "Both"],
+      "correct_answer": "Odd",
+      "explanation": "f(-x) = (-x)³ = -x³ = -f(x), so it's odd.",
+      "difficulty": 4
+    },
+    {
+      "id": "math_func_021",
+      "question": "If f(x) = 1/(x-2), what is the vertical asymptote?",
+      "options": ["x = 0", "x = 1", "x = 2", "x = -2"],
+      "correct_answer": "x = 2",
+      "explanation": "The denominator is zero when x = 2.",
+      "difficulty": 4
+    },
+    {
+      "id": "math_func_022",
+      "question": "If f(x) = eˣ, what is f(0)?",
+      "options": ["0", "1", "e", "∞"],
+      "correct_answer": "1",
+      "explanation": "e⁰ = 1 for any base.",
+      "difficulty": 4
+    },
+    {
+      "id": "math_func_023",
+      "question": "The function f(x) = log₂(x) equals 3 when x = ?",
+      "options": ["3", "6", "8", "9"],
+      "correct_answer": "8",
+      "explanation": "log₂(8) = 3 because 2³ = 8",
+      "difficulty": 5
+    },
+    {
+      "id": "math_func_024",
+      "question": "If f(x) = sin(x), what is the period of f?",
+      "options": ["π", "2π", "π/2", "4π"],
+      "correct_answer": "2π",
+      "explanation": "The sine function repeats every 2π radians.",
+      "difficulty": 5
+    },
+    {
+      "id": "math_func_025",
+      "question": "If f(g(x)) = x and g(f(x)) = x, then f and g are:",
+      "options": ["Equal", "Inverse functions", "Composite functions", "Constant functions"],
+      "correct_answer": "Inverse functions",
+      "explanation": "If f(g(x)) = g(f(x)) = x, then f and g are inverses of each other.",
+      "difficulty": 4
+    }
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "subject": "math",
+  "topic": "polynomials",
+  "description": "Polynomial operations, degree, classification, division",
+  "questions": [
+    {
+      "id": "math_poly_001",
+      "question": "What is the degree of 4x³ + 2x - 7?",
+      "options": ["1", "2", "3", "4"],
+      "correct_answer": "3",
+      "explanation": "The highest power of x is 3.",
+      "difficulty": 1
+    },
+    {
+      "id": "math_poly_002",
+      "question": "What is a polynomial with one term called?",
+      "options": ["Monomial", "Binomial", "Trinomial", "Polynomial"],
+      "correct_answer": "Monomial",
+      "explanation": "A polynomial with one term (e.g., 5x²) is a monomial.",
+      "difficulty": 1
+    },
+    {
+      "id": "math_poly_003",
+      "question": "How many terms are in the polynomial 3x² + 2x - 1?",
+      "options": ["1", "2", "3", "4"],
+      "correct_answer": "3",
+      "explanation": "The three terms are 3x², 2x, and -1.",
+      "difficulty": 1
+    },
+    {
+      "id": "math_poly_004",
+      "question": "Add: (2x² + 3x) + (x² - 5x + 4)",
+      "options": ["3x² - 2x + 4", "3x² + 8x + 4", "x² - 2x + 4", "3x² + 2x - 4"],
+      "correct_answer": "3x² - 2x + 4",
+      "explanation": "(2+1)x² + (3-5)x + 4 = 3x² - 2x + 4",
+      "difficulty": 2
+    },
+    {
+      "id": "math_poly_005",
+      "question": "Subtract: (5x² + 3) - (2x² + x - 1)",
+      "options": ["3x² - x + 4", "3x² + x + 4", "7x² + x + 2", "3x² - x + 2"],
+      "correct_answer": "3x² - x + 4",
+      "explanation": "5x² - 2x² = 3x², 0 - x = -x, 3 - (-1) = 4",
+      "difficulty": 2
+    },
+    {
+      "id": "math_poly_006",
+      "question": "Multiply: 3x(x + 4)",
+      "options": ["3x + 12", "3x² + 12x", "3x² + 4x", "3x² + 12"],
+      "correct_answer": "3x² + 12x",
+      "explanation": "3x · x + 3x · 4 = 3x² + 12x",
+      "difficulty": 2
+    },
+    {
+      "id": "math_poly_007",
+      "question": "What is the leading coefficient of -2x⁴ + 5x² - x?",
+      "options": ["-2", "2", "4", "5"],
+      "correct_answer": "-2",
+      "explanation": "The leading coefficient is the coefficient of the highest-degree term.",
+      "difficulty": 2
+    },
+    {
+      "id": "math_poly_008",
+      "question": "Multiply: (x + 2)(x + 5)",
+      "options": ["x² + 7x + 10", "x² + 7x + 7", "x² + 10x + 7", "x² + 3x + 10"],
+      "correct_answer": "x² + 7x + 10",
+      "explanation": "x² + 5x + 2x + 10 = x² + 7x + 10",
+      "difficulty": 2
+    },
+    {
+      "id": "math_poly_009",
+      "question": "Expand: (x - 3)²",
+      "options": ["x² - 6x + 9", "x² - 3x + 9", "x² + 6x + 9", "x² - 9"],
+      "correct_answer": "x² - 6x + 9",
+      "explanation": "(x-3)² = x² - 2(3)x + 9 = x² - 6x + 9",
+      "difficulty": 3
+    },
+    {
+      "id": "math_poly_010",
+      "question": "What is the constant term of 7x³ - 2x + 11?",
+      "options": ["7", "-2", "3", "11"],
+      "correct_answer": "11",
+      "explanation": "The constant term is the term without a variable: 11.",
+      "difficulty": 1
+    },
+    {
+      "id": "math_poly_011",
+      "question": "Multiply: (2x - 1)(x + 3)",
+      "options": ["2x² + 5x - 3", "2x² + 7x - 3", "2x² - 5x - 3", "2x² + 5x + 3"],
+      "correct_answer": "2x² + 5x - 3",
+      "explanation": "2x² + 6x - x - 3 = 2x² + 5x - 3",
+      "difficulty": 3
+    },
+    {
+      "id": "math_poly_012",
+      "question": "Find the GCF of 6x³ + 9x².",
+      "options": ["3x", "3x²", "6x", "9x²"],
+      "correct_answer": "3x²",
+      "explanation": "GCF of 6 and 9 is 3; GCF of x³ and x² is x². So GCF = 3x²",
+      "difficulty": 3
+    },
+    {
+      "id": "math_poly_013",
+      "question": "Factor: x³ - 8",
+      "options": ["(x-2)(x²+2x+4)", "(x-2)(x²-2x+4)", "(x+2)(x²-2x+4)", "(x-8)(x²+1)"],
+      "correct_answer": "(x-2)(x²+2x+4)",
+      "explanation": "Difference of cubes: a³-b³ = (a-b)(a²+ab+b²) where a=x, b=2",
+      "difficulty": 4
+    },
+    {
+      "id": "math_poly_014",
+      "question": "What is (x+1)³ expanded?",
+      "options": ["x³+1", "x³+3x²+3x+1", "x³+x²+x+1", "x³+2x²+2x+1"],
+      "correct_answer": "x³+3x²+3x+1",
+      "explanation": "Using binomial theorem: x³ + 3x² + 3x + 1",
+      "difficulty": 4
+    },
+    {
+      "id": "math_poly_015",
+      "question": "Divide: (x² + 5x + 6) ÷ (x + 2)",
+      "options": ["x + 2", "x + 3", "x + 4", "x + 6"],
+      "correct_answer": "x + 3",
+      "explanation": "x² + 5x + 6 = (x + 2)(x + 3), so dividing by (x+2) gives (x+3).",
+      "difficulty": 3
+    },
+    {
+      "id": "math_poly_016",
+      "question": "Is 5x⁻² + 3x a polynomial?",
+      "options": ["Yes", "No"],
+      "correct_answer": "No",
+      "explanation": "Polynomials only have non-negative integer exponents. x⁻² is not allowed.",
+      "difficulty": 2
+    },
+    {
+      "id": "math_poly_017",
+      "question": "Evaluate p(x) = x³ - 2x + 1 at x = -1.",
+      "options": ["-2", "0", "2", "4"],
+      "correct_answer": "2",
+      "explanation": "(-1)³ - 2(-1) + 1 = -1 + 2 + 1 = 2",
+      "difficulty": 3
+    },
+    {
+      "id": "math_poly_018",
+      "question": "By the Remainder Theorem, the remainder of p(x) ÷ (x-a) is:",
+      "options": ["p(0)", "p(a)", "p(-a)", "p(1)"],
+      "correct_answer": "p(a)",
+      "explanation": "The Remainder Theorem states the remainder equals p(a).",
+      "difficulty": 4
+    },
+    {
+      "id": "math_poly_019",
+      "question": "If (x - 2) is a factor of x³ - 3x² + ax + 2, find a.",
+      "options": ["-2", "-1", "0", "1"],
+      "correct_answer": "1",
+      "explanation": "p(2) = 0: 8 - 12 + 2a + 2 = 0 → -2 + 2a = 0 → a = 1",
+      "difficulty": 5
+    },
+    {
+      "id": "math_poly_020",
+      "question": "How many roots can a polynomial of degree 4 have at most?",
+      "options": ["2", "3", "4", "5"],
+      "correct_answer": "4",
+      "explanation": "By the Fundamental Theorem of Algebra, a degree-n polynomial has at most n roots.",
+      "difficulty": 2
+    },
+    {
+      "id": "math_poly_021",
+      "question": "Simplify: (x² + 3x) + (2x² - x + 7)",
+      "options": ["3x² + 2x + 7", "3x² + 4x + 7", "3x² + 2x - 7", "x² + 2x + 7"],
+      "correct_answer": "3x² + 2x + 7",
+      "explanation": "(1+2)x² + (3-1)x + 7 = 3x² + 2x + 7",
+      "difficulty": 1
+    },
+    {
+      "id": "math_poly_022",
+      "question": "Multiply: (x + y)(x - y)",
+      "options": ["x² - y²", "x² + y²", "x² - 2xy + y²", "x² + 2xy + y²"],
+      "correct_answer": "x² - y²",
+      "explanation": "This is the difference of squares pattern: (a+b)(a-b) = a²-b²",
+      "difficulty": 2
+    },
+    {
+      "id": "math_poly_023",
+      "question": "What is the end behavior of f(x) = -x³ + 2x as x → ∞?",
+      "options": ["f(x) → ∞", "f(x) → -∞", "f(x) → 0", "f(x) → 2"],
+      "correct_answer": "f(x) → -∞",
+      "explanation": "The leading term -x³ dominates; as x → ∞, -x³ → -∞",
+      "difficulty": 5
+    },
+    {
+      "id": "math_poly_024",
+      "question": "Factor: x² - 16",
+      "options": ["(x-4)(x+4)", "(x-8)(x+2)", "(x-4)²", "(x+4)²"],
+      "correct_answer": "(x-4)(x+4)",
+      "explanation": "Difference of squares: x² - 16 = x² - 4² = (x-4)(x+4)",
+      "difficulty": 2
+    },
+    {
+      "id": "math_poly_025",
+      "question": "What type of polynomial is 4x⁴ + x² - 3?",
+      "options": ["Linear", "Quadratic", "Cubic", "Quartic"],
+      "correct_answer": "Quartic",
+      "explanation": "The highest degree is 4, making it a quartic polynomial.",
+      "difficulty": 3
+    }
+  ]
+}

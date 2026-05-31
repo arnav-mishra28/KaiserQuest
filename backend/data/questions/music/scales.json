@@ -1,0 +1,207 @@
+{
+  "subject": "music",
+  "topic": "scales",
+  "description": "Major scales, minor scales, modes, intervals, key signatures",
+  "questions": [
+    {
+      "id": "mus_scale_001",
+      "question": "What is the pattern of a major scale?",
+      "options": ["W-W-H-W-W-W-H", "W-H-W-W-H-W-W", "H-W-W-W-H-W-W", "W-W-W-H-W-W-H"],
+      "correct_answer": "W-W-H-W-W-W-H",
+      "explanation": "Major scale pattern: Whole, Whole, Half, Whole, Whole, Whole, Half.",
+      "difficulty": 1
+    },
+    {
+      "id": "mus_scale_002",
+      "question": "How many notes are in a major scale?",
+      "options": ["5", "6", "7", "8"],
+      "correct_answer": "7",
+      "explanation": "A major scale has 7 unique notes (the 8th note is the octave of the first).",
+      "difficulty": 1
+    },
+    {
+      "id": "mus_scale_003",
+      "question": "The C major scale has how many sharps or flats?",
+      "options": ["0", "1", "2", "3"],
+      "correct_answer": "0",
+      "explanation": "C major is the only major scale with no sharps or flats — all white keys.",
+      "difficulty": 1
+    },
+    {
+      "id": "mus_scale_004",
+      "question": "What notes make up the C major scale?",
+      "options": ["C D E F G A B", "C D E♭ F G A♭ B♭", "C D♭ E♭ F G♭ A♭ B♭", "C D E F♯ G A B"],
+      "correct_answer": "C D E F G A B",
+      "explanation": "The C major scale: C, D, E, F, G, A, B — no sharps or flats.",
+      "difficulty": 1
+    },
+    {
+      "id": "mus_scale_005",
+      "question": "What is a pentatonic scale?",
+      "options": ["A 7-note scale", "A 5-note scale", "A 12-note scale", "A 3-note scale"],
+      "correct_answer": "A 5-note scale",
+      "explanation": "'Penta' means five. A pentatonic scale contains exactly 5 notes per octave.",
+      "difficulty": 2
+    },
+    {
+      "id": "mus_scale_006",
+      "question": "The G major scale has one sharp. Which note is sharp?",
+      "options": ["C♯", "D♯", "F♯", "G♯"],
+      "correct_answer": "F♯",
+      "explanation": "G major: G, A, B, C, D, E, F♯ — the F is sharped.",
+      "difficulty": 2
+    },
+    {
+      "id": "mus_scale_007",
+      "question": "What is the relative minor of C major?",
+      "options": ["C minor", "A minor", "D minor", "E minor"],
+      "correct_answer": "A minor",
+      "explanation": "The relative minor starts on the 6th degree. In C major, that's A.",
+      "difficulty": 2
+    },
+    {
+      "id": "mus_scale_008",
+      "question": "What is the pattern of a natural minor scale?",
+      "options": ["W-H-W-W-H-W-W", "W-W-H-W-W-W-H", "W-H-W-W-W-H-W", "H-W-W-H-W-W-W"],
+      "correct_answer": "W-H-W-W-H-W-W",
+      "explanation": "Natural minor: Whole, Half, Whole, Whole, Half, Whole, Whole.",
+      "difficulty": 2
+    },
+    {
+      "id": "mus_scale_009",
+      "question": "How many sharps does D major have?",
+      "options": ["0", "1", "2", "3"],
+      "correct_answer": "2",
+      "explanation": "D major has F♯ and C♯ — two sharps.",
+      "difficulty": 2
+    },
+    {
+      "id": "mus_scale_010",
+      "question": "The order of sharps in key signatures is:",
+      "options": ["F C G D A E B", "B E A D G C F", "G D A E B F C", "C G D A E B F"],
+      "correct_answer": "F C G D A E B",
+      "explanation": "FCGDAEB — 'Fat Cats Go Down Alleys Eating Birds'.",
+      "difficulty": 3
+    },
+    {
+      "id": "mus_scale_011",
+      "question": "The order of flats in key signatures is:",
+      "options": ["F C G D A E B", "B E A D G C F", "G D A E B F C", "A D G C F B E"],
+      "correct_answer": "B E A D G C F",
+      "explanation": "BEADGCF — the reverse of the order of sharps.",
+      "difficulty": 3
+    },
+    {
+      "id": "mus_scale_012",
+      "question": "What is a chromatic scale?",
+      "options": ["A scale using only white keys", "A scale using all 12 semitones", "A scale with 5 notes", "A scale with only whole steps"],
+      "correct_answer": "A scale using all 12 semitones",
+      "explanation": "A chromatic scale moves entirely by half steps through all 12 pitches.",
+      "difficulty": 2
+    },
+    {
+      "id": "mus_scale_013",
+      "question": "What is a whole-tone scale?",
+      "options": ["A scale using only whole steps", "A scale using only half steps", "A 5-note scale", "A major scale"],
+      "correct_answer": "A scale using only whole steps",
+      "explanation": "A whole-tone scale uses only whole steps, creating 6 equally-spaced notes.",
+      "difficulty": 3
+    },
+    {
+      "id": "mus_scale_014",
+      "question": "What distinguishes a harmonic minor from a natural minor?",
+      "options": ["Raised 6th degree", "Raised 7th degree", "Lowered 3rd degree", "Raised 2nd degree"],
+      "correct_answer": "Raised 7th degree",
+      "explanation": "The harmonic minor raises the 7th note by a half step, creating a leading tone.",
+      "difficulty": 3
+    },
+    {
+      "id": "mus_scale_015",
+      "question": "What is the melodic minor scale (ascending)?",
+      "options": ["Raises both the 6th and 7th degrees", "Lowers the 3rd and 5th degrees", "Same as natural minor", "Same as major scale"],
+      "correct_answer": "Raises both the 6th and 7th degrees",
+      "explanation": "Ascending melodic minor raises scale degrees 6 and 7; descending reverts to natural minor.",
+      "difficulty": 4
+    },
+    {
+      "id": "mus_scale_016",
+      "question": "How many flats does F major have?",
+      "options": ["0", "1", "2", "3"],
+      "correct_answer": "1",
+      "explanation": "F major has one flat: B♭.",
+      "difficulty": 2
+    },
+    {
+      "id": "mus_scale_017",
+      "question": "What is the Dorian mode?",
+      "options": ["A major scale starting on the 2nd degree", "A major scale starting on the 3rd degree", "A minor scale with a raised 4th", "A scale with no half steps"],
+      "correct_answer": "A major scale starting on the 2nd degree",
+      "explanation": "Dorian is the 2nd mode: D E F G A B C D (using C major notes starting on D).",
+      "difficulty": 4
+    },
+    {
+      "id": "mus_scale_018",
+      "question": "What is the Mixolydian mode?",
+      "options": ["Major scale starting on the 5th degree", "Minor scale starting on the 3rd degree", "A pentatonic variation", "A chromatic mode"],
+      "correct_answer": "Major scale starting on the 5th degree",
+      "explanation": "Mixolydian is the 5th mode: like a major scale with a flattened 7th.",
+      "difficulty": 4
+    },
+    {
+      "id": "mus_scale_019",
+      "question": "What key has 4 sharps?",
+      "options": ["A major", "D major", "E major", "B major"],
+      "correct_answer": "E major",
+      "explanation": "E major: F♯, C♯, G♯, D♯ — four sharps.",
+      "difficulty": 3
+    },
+    {
+      "id": "mus_scale_020",
+      "question": "What key has 3 flats?",
+      "options": ["B♭ major", "E♭ major", "A♭ major", "D♭ major"],
+      "correct_answer": "E♭ major",
+      "explanation": "E♭ major has B♭, E♭, and A♭ — three flats.",
+      "difficulty": 3
+    },
+    {
+      "id": "mus_scale_021",
+      "question": "What is a blues scale?",
+      "options": ["A major scale with a flat 3rd", "A minor pentatonic scale with an added ♭5", "A whole-tone scale", "A chromatic scale"],
+      "correct_answer": "A minor pentatonic scale with an added ♭5",
+      "explanation": "The blues scale adds the 'blue note' (♭5) to the minor pentatonic scale.",
+      "difficulty": 4
+    },
+    {
+      "id": "mus_scale_022",
+      "question": "What interval is from C to G?",
+      "options": ["Perfect 4th", "Perfect 5th", "Major 3rd", "Minor 6th"],
+      "correct_answer": "Perfect 5th",
+      "explanation": "C to G spans 5 letter names (C-D-E-F-G) and 7 semitones = Perfect 5th.",
+      "difficulty": 2
+    },
+    {
+      "id": "mus_scale_023",
+      "question": "What is a tritone?",
+      "options": ["An interval of 3 semitones", "An interval of 6 semitones", "An interval of 7 semitones", "An interval of 12 semitones"],
+      "correct_answer": "An interval of 6 semitones",
+      "explanation": "A tritone spans 6 semitones (3 whole tones), e.g., C to F♯.",
+      "difficulty": 5
+    },
+    {
+      "id": "mus_scale_024",
+      "question": "What is the Locrian mode known for?",
+      "options": ["Its bright sound", "Having a diminished 5th", "Being identical to major", "Having no half steps"],
+      "correct_answer": "Having a diminished 5th",
+      "explanation": "Locrian (7th mode) has a diminished 5th, making it unstable and rarely used as a tonal center.",
+      "difficulty": 5
+    },
+    {
+      "id": "mus_scale_025",
+      "question": "In the circle of fifths, what key is directly opposite C major?",
+      "options": ["F major", "G♭/F♯ major", "D major", "A major"],
+      "correct_answer": "G♭/F♯ major",
+      "explanation": "G♭/F♯ major sits opposite C major on the circle of fifths (6 sharps or 6 flats).",
+      "difficulty": 5
+    }
+  ]
+}

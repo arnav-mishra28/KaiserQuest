@@ -1,0 +1,154 @@
+{
+    "questions": [
+        {
+            "subject": "Languages",
+            "topic": "Grammar",
+            "difficulty": 1,
+            "question": "Which word is a noun?",
+            "answers": ["Cat", "Run", "Quickly", "Beautiful"],
+            "correctAnswer": "Cat",
+            "explanation": "A noun is a person, place, thing, or idea. 'Cat' is a thing.",
+            "hint": "Which word names a thing?"
+        },
+        {
+            "subject": "Languages",
+            "topic": "Grammar",
+            "difficulty": 1,
+            "question": "Which word is a verb?",
+            "answers": ["Jump", "Table", "Red", "Slowly"],
+            "correctAnswer": "Jump",
+            "explanation": "A verb shows action or state of being. 'Jump' is an action.",
+            "hint": "Which word shows an action?"
+        },
+        {
+            "subject": "Languages",
+            "topic": "Grammar",
+            "difficulty": 2,
+            "question": "Identify the adjective: 'The tall tree fell.'",
+            "answers": ["Tall", "Tree", "Fell", "The"],
+            "correctAnswer": "Tall",
+            "explanation": "An adjective describes a noun. 'Tall' describes 'tree'.",
+            "hint": "Which word describes the tree?"
+        },
+        {
+            "subject": "Languages",
+            "topic": "Grammar",
+            "difficulty": 3,
+            "question": "What is the past tense of 'go'?",
+            "answers": ["Went", "Goed", "Gone", "Going"],
+            "correctAnswer": "Went",
+            "explanation": "'Go' is an irregular verb. Its past tense is 'went'.",
+            "hint": "This is an irregular verb"
+        },
+        {
+            "subject": "Languages",
+            "topic": "Grammar",
+            "difficulty": 4,
+            "question": "Which sentence is correct?",
+            "answers": ["She doesn't like it.", "She don't like it.", "She doesn't likes it.", "She don't likes it."],
+            "correctAnswer": "She doesn't like it.",
+            "explanation": "'She' takes 'doesn't' (third person singular), and the main verb stays in base form.",
+            "hint": "Third person singular uses 'doesn't'"
+        },
+        {
+            "subject": "Languages",
+            "topic": "Grammar",
+            "difficulty": 5,
+            "question": "What is a pronoun?",
+            "answers": ["A word that replaces a noun", "A describing word", "An action word", "A linking word"],
+            "correctAnswer": "A word that replaces a noun",
+            "explanation": "Pronouns (he, she, it, they) replace nouns to avoid repetition.",
+            "hint": "Think about 'he', 'she', 'it'"
+        },
+        {
+            "subject": "Languages",
+            "topic": "Grammar",
+            "difficulty": 6,
+            "question": "What type of sentence asks a question?",
+            "answers": ["Interrogative", "Declarative", "Exclamatory", "Imperative"],
+            "correctAnswer": "Interrogative",
+            "explanation": "Interrogative sentences ask questions and end with '?'",
+            "hint": "Inter-roga-tive relates to questioning"
+        },
+        {
+            "subject": "Languages",
+            "topic": "Vocabulary",
+            "difficulty": 1,
+            "question": "What does 'enormous' mean?",
+            "answers": ["Very large", "Very small", "Very fast", "Very old"],
+            "correctAnswer": "Very large",
+            "explanation": "Enormous means extremely large or huge.",
+            "hint": "Think of something really big"
+        },
+        {
+            "subject": "Languages",
+            "topic": "Vocabulary",
+            "difficulty": 2,
+            "question": "What is a synonym for 'happy'?",
+            "answers": ["Joyful", "Sad", "Angry", "Tired"],
+            "correctAnswer": "Joyful",
+            "explanation": "A synonym is a word with similar meaning. Joyful = happy.",
+            "hint": "Which word means the same as happy?"
+        },
+        {
+            "subject": "Languages",
+            "topic": "Vocabulary",
+            "difficulty": 3,
+            "question": "What is the antonym of 'ancient'?",
+            "answers": ["Modern", "Old", "Historic", "Classic"],
+            "correctAnswer": "Modern",
+            "explanation": "An antonym is the opposite. Modern is the opposite of ancient.",
+            "hint": "Which word means the opposite?"
+        },
+        {
+            "subject": "Languages",
+            "topic": "Vocabulary",
+            "difficulty": 4,
+            "question": "What does 'ambiguous' mean?",
+            "answers": ["Having multiple meanings", "Very clear", "Extremely large", "Moving quickly"],
+            "correctAnswer": "Having multiple meanings",
+            "explanation": "Ambiguous means open to more than one interpretation.",
+            "hint": "Not clear, could mean different things"
+        },
+        {
+            "subject": "Languages",
+            "topic": "Writing",
+            "difficulty": 5,
+            "question": "What should start every sentence?",
+            "answers": ["A capital letter", "A number", "A comma", "A small letter"],
+            "correctAnswer": "A capital letter",
+            "explanation": "Every sentence begins with a capital (uppercase) letter.",
+            "hint": "Think about the first letter"
+        },
+        {
+            "subject": "Languages",
+            "topic": "Writing",
+            "difficulty": 6,
+            "question": "What comes at the end of a question?",
+            "answers": ["Question mark (?)", "Period (.)", "Exclamation (!)", "Comma (,)"],
+            "correctAnswer": "Question mark (?)",
+            "explanation": "Questions always end with a question mark.",
+            "hint": "What punctuation mark is this?"
+        },
+        {
+            "subject": "Languages",
+            "topic": "Writing",
+            "difficulty": 7,
+            "question": "What is a thesis statement?",
+            "answers": ["The main argument of an essay", "The title", "A question", "A bibliography"],
+            "correctAnswer": "The main argument of an essay",
+            "explanation": "A thesis statement presents the main argument or point of an essay.",
+            "hint": "It's the central claim of your essay"
+        },
+        {
+            "subject": "Languages",
+            "topic": "Sentence Structure",
+            "difficulty": 8,
+            "question": "What is a compound sentence?",
+            "answers": ["Two independent clauses joined by a conjunction", "A sentence with one clause", "A sentence with no verb", "A question"],
+            "correctAnswer": "Two independent clauses joined by a conjunction",
+            "explanation": "Compound sentences join two independent clauses using conjunctions like 'and', 'but', 'or'.",
+            "hint": "Two complete sentences joined together"
+        }
+    ]
+}

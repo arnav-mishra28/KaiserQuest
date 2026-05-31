@@ -1,0 +1,207 @@
+{
+  "subject": "music",
+  "topic": "chords",
+  "description": "Chord construction, types, inversions, progressions",
+  "questions": [
+    {
+      "id": "mus_chord_001",
+      "question": "A major chord is made up of which intervals?",
+      "options": ["Root, minor 3rd, perfect 5th", "Root, major 3rd, perfect 5th", "Root, major 2nd, perfect 4th", "Root, perfect 4th, perfect 5th"],
+      "correct_answer": "Root, major 3rd, perfect 5th",
+      "explanation": "A major chord = root + major 3rd (4 semitones) + perfect 5th (7 semitones).",
+      "difficulty": 1
+    },
+    {
+      "id": "mus_chord_002",
+      "question": "What notes make up a C major chord?",
+      "options": ["C, D, E", "C, E, G", "C, F, A", "C, E♭, G"],
+      "correct_answer": "C, E, G",
+      "explanation": "C major: C (root), E (major 3rd), G (perfect 5th).",
+      "difficulty": 1
+    },
+    {
+      "id": "mus_chord_003",
+      "question": "How does a minor chord differ from a major chord?",
+      "options": ["The 3rd is lowered by a half step", "The 5th is raised", "The root is different", "It has 4 notes"],
+      "correct_answer": "The 3rd is lowered by a half step",
+      "explanation": "Minor chord = major chord with a flattened 3rd. C minor = C, E♭, G.",
+      "difficulty": 2
+    },
+    {
+      "id": "mus_chord_004",
+      "question": "What notes make up a G major chord?",
+      "options": ["G, A, B", "G, B, D", "G, B♭, D", "G, C, E"],
+      "correct_answer": "G, B, D",
+      "explanation": "G major: G (root), B (major 3rd), D (perfect 5th).",
+      "difficulty": 1
+    },
+    {
+      "id": "mus_chord_005",
+      "question": "What is a triad?",
+      "options": ["A two-note chord", "A three-note chord built in thirds", "A four-note chord", "A scale"],
+      "correct_answer": "A three-note chord built in thirds",
+      "explanation": "A triad consists of three notes stacked in intervals of thirds.",
+      "difficulty": 1
+    },
+    {
+      "id": "mus_chord_006",
+      "question": "What notes make up an A minor chord?",
+      "options": ["A, C, E", "A, C♯, E", "A, B, D", "A, D, F"],
+      "correct_answer": "A, C, E",
+      "explanation": "A minor: A (root), C (minor 3rd), E (perfect 5th).",
+      "difficulty": 2
+    },
+    {
+      "id": "mus_chord_007",
+      "question": "What is a diminished triad?",
+      "options": ["Root, minor 3rd, diminished 5th", "Root, major 3rd, perfect 5th", "Root, minor 3rd, perfect 5th", "Root, major 3rd, augmented 5th"],
+      "correct_answer": "Root, minor 3rd, diminished 5th",
+      "explanation": "Diminished = minor 3rd + diminished 5th (6 semitones from root).",
+      "difficulty": 3
+    },
+    {
+      "id": "mus_chord_008",
+      "question": "What is an augmented triad?",
+      "options": ["Root, major 3rd, augmented 5th", "Root, minor 3rd, perfect 5th", "Root, major 3rd, perfect 5th", "Root, minor 3rd, diminished 5th"],
+      "correct_answer": "Root, major 3rd, augmented 5th",
+      "explanation": "Augmented = major 3rd + augmented 5th (8 semitones from root).",
+      "difficulty": 3
+    },
+    {
+      "id": "mus_chord_009",
+      "question": "What is the I-IV-V-I chord progression in C major?",
+      "options": ["C, D, E, C", "C, F, G, C", "C, E, G, C", "C, A, B, C"],
+      "correct_answer": "C, F, G, C",
+      "explanation": "In C major: I = C, IV = F, V = G. So the progression is C-F-G-C.",
+      "difficulty": 2
+    },
+    {
+      "id": "mus_chord_010",
+      "question": "What does a '7' mean after a chord name (e.g., G7)?",
+      "options": ["Play the chord 7 times", "Add the 7th scale degree to the triad", "Play in 7/4 time", "Transpose up 7 steps"],
+      "correct_answer": "Add the 7th scale degree to the triad",
+      "explanation": "G7 = G, B, D, F — a G major triad with an added minor 7th (F).",
+      "difficulty": 2
+    },
+    {
+      "id": "mus_chord_011",
+      "question": "What is a chord inversion?",
+      "options": ["Playing a chord backwards", "Rearranging which note is in the bass", "Playing a chord softly", "Transposing a chord"],
+      "correct_answer": "Rearranging which note is in the bass",
+      "explanation": "In root position C-E-G, 1st inversion is E-G-C, 2nd inversion is G-C-E.",
+      "difficulty": 3
+    },
+    {
+      "id": "mus_chord_012",
+      "question": "In the key of G major, what is the ii chord?",
+      "options": ["G major", "A minor", "B minor", "C major"],
+      "correct_answer": "A minor",
+      "explanation": "ii in G major is built on the 2nd degree (A) and is minor: A-C-E → A minor.",
+      "difficulty": 3
+    },
+    {
+      "id": "mus_chord_013",
+      "question": "What is a sus4 chord?",
+      "options": ["A chord with the 3rd replaced by the 4th", "A chord with an added 4th", "A chord with a sharp 4th", "A chord with only 4 notes"],
+      "correct_answer": "A chord with the 3rd replaced by the 4th",
+      "explanation": "Csus4 = C, F, G. The 3rd (E) is suspended and replaced by the 4th (F).",
+      "difficulty": 3
+    },
+    {
+      "id": "mus_chord_014",
+      "question": "What is the Nashville Number System's purpose?",
+      "options": ["Counting measures", "Using numbers instead of chord names for easy transposition", "Numbering musicians", "Rating songs"],
+      "correct_answer": "Using numbers instead of chord names for easy transposition",
+      "explanation": "The Nashville Number System assigns numbers to chords based on scale degree, making transposition easy.",
+      "difficulty": 4
+    },
+    {
+      "id": "mus_chord_015",
+      "question": "What makes a major 7th chord different from a dominant 7th?",
+      "options": ["Major 7th has a major 7th interval; dominant 7th has a minor 7th", "They are the same", "Major 7th is minor", "Dominant 7th has no 5th"],
+      "correct_answer": "Major 7th has a major 7th interval; dominant 7th has a minor 7th",
+      "explanation": "Cmaj7 = C E G B (major 7th). C7 = C E G B♭ (minor 7th = dominant).",
+      "difficulty": 4
+    },
+    {
+      "id": "mus_chord_016",
+      "question": "What is the common pop chord progression I-V-vi-IV in C major?",
+      "options": ["C, G, Am, F", "C, F, G, Am", "C, Dm, Em, F", "C, Am, F, G"],
+      "correct_answer": "C, G, Am, F",
+      "explanation": "I=C, V=G, vi=Am, IV=F. This is one of the most common pop progressions.",
+      "difficulty": 3
+    },
+    {
+      "id": "mus_chord_017",
+      "question": "What is a power chord?",
+      "options": ["A chord with root and 5th only (no 3rd)", "A very loud chord", "A chord with all 7 notes", "A chord played with force"],
+      "correct_answer": "A chord with root and 5th only (no 3rd)",
+      "explanation": "Power chords (e.g., C5) contain only the root and 5th. Common in rock music.",
+      "difficulty": 2
+    },
+    {
+      "id": "mus_chord_018",
+      "question": "In standard Roman numeral analysis, lowercase numerals represent:",
+      "options": ["Major chords", "Minor chords", "Diminished chords", "Augmented chords"],
+      "correct_answer": "Minor chords",
+      "explanation": "Uppercase = major (I, IV, V), lowercase = minor (ii, iii, vi). vii° = diminished.",
+      "difficulty": 3
+    },
+    {
+      "id": "mus_chord_019",
+      "question": "What is a secondary dominant?",
+      "options": ["The V chord", "The V/V chord — a dominant of a non-tonic chord", "The IV chord", "A chord borrowed from parallel minor"],
+      "correct_answer": "The V/V chord — a dominant of a non-tonic chord",
+      "explanation": "V/V is the dominant of the dominant. In C major, V/V = D major (dominant of G).",
+      "difficulty": 5
+    },
+    {
+      "id": "mus_chord_020",
+      "question": "What is a Neapolitan chord?",
+      "options": ["A chord from Naples", "A major chord built on the flattened 2nd degree", "A diminished 7th chord", "An augmented 6th chord"],
+      "correct_answer": "A major chord built on the flattened 2nd degree",
+      "explanation": "The Neapolitan chord (♭II) is a major triad on the lowered 2nd scale degree, usually in first inversion.",
+      "difficulty": 5
+    },
+    {
+      "id": "mus_chord_021",
+      "question": "What notes make up an F major chord?",
+      "options": ["F, A, C", "F, A♭, C", "F, G, B♭", "F, B♭, D"],
+      "correct_answer": "F, A, C",
+      "explanation": "F major: F (root), A (major 3rd), C (perfect 5th).",
+      "difficulty": 1
+    },
+    {
+      "id": "mus_chord_022",
+      "question": "What is a cadence?",
+      "options": ["A type of instrument", "A chord progression that creates a sense of resolution", "A rhythm pattern", "A vocal technique"],
+      "correct_answer": "A chord progression that creates a sense of resolution",
+      "explanation": "A cadence is a harmonic goal, typically at the end of a phrase (e.g., V-I = authentic cadence).",
+      "difficulty": 3
+    },
+    {
+      "id": "mus_chord_023",
+      "question": "What is a plagal cadence?",
+      "options": ["V-I", "IV-I", "ii-V", "vi-IV"],
+      "correct_answer": "IV-I",
+      "explanation": "A plagal cadence (IV-I) is also known as the 'Amen cadence' heard in hymns.",
+      "difficulty": 4
+    },
+    {
+      "id": "mus_chord_024",
+      "question": "What is a half-diminished 7th chord?",
+      "options": ["Minor 3rd, diminished 5th, minor 7th", "Major 3rd, perfect 5th, major 7th", "Minor 3rd, diminished 5th, diminished 7th", "Minor 3rd, perfect 5th, minor 7th"],
+      "correct_answer": "Minor 3rd, diminished 5th, minor 7th",
+      "explanation": "Half-diminished (ø7): diminished triad + minor 7th. Also written as m7♭5.",
+      "difficulty": 5
+    },
+    {
+      "id": "mus_chord_025",
+      "question": "What notes make up a D minor chord?",
+      "options": ["D, F, A", "D, F♯, A", "D, E, G", "D, G, B"],
+      "correct_answer": "D, F, A",
+      "explanation": "D minor: D (root), F (minor 3rd), A (perfect 5th).",
+      "difficulty": 2
+    }
+  ]
+}

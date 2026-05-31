@@ -1,0 +1,154 @@
+{
+    "questions": [
+        {
+            "subject": "Music",
+            "topic": "Notes",
+            "difficulty": 1,
+            "question": "How many notes are in a musical octave?",
+            "answers": ["8", "7", "12", "5"],
+            "correctAnswer": "8",
+            "explanation": "An octave spans 8 notes (C, D, E, F, G, A, B, C).",
+            "hint": "'Oct' means 8"
+        },
+        {
+            "subject": "Music",
+            "topic": "Notes",
+            "difficulty": 1,
+            "question": "Which note comes after C?",
+            "answers": ["D", "B", "E", "A"],
+            "correctAnswer": "D",
+            "explanation": "The musical alphabet goes: C, D, E, F, G, A, B",
+            "hint": "Think of the alphabet starting from C"
+        },
+        {
+            "subject": "Music",
+            "topic": "Notes",
+            "difficulty": 2,
+            "question": "What is the symbol for a sharp?",
+            "answers": ["#", "b", "&", "%"],
+            "correctAnswer": "#",
+            "explanation": "A sharp (#) raises a note by one half step.",
+            "hint": "It looks like a hashtag"
+        },
+        {
+            "subject": "Music",
+            "topic": "Notes",
+            "difficulty": 3,
+            "question": "How many half steps are in an octave?",
+            "answers": ["12", "8", "7", "14"],
+            "correctAnswer": "12",
+            "explanation": "An octave contains 12 half steps (semitones).",
+            "hint": "Think of all the keys on a piano in one octave"
+        },
+        {
+            "subject": "Music",
+            "topic": "Notes",
+            "difficulty": 4,
+            "question": "What clef is used for higher-pitched instruments?",
+            "answers": ["Treble clef", "Bass clef", "Alto clef", "Tenor clef"],
+            "correctAnswer": "Treble clef",
+            "explanation": "The treble clef (G clef) is used for higher-pitched instruments and voices.",
+            "hint": "The clef shaped like a fancy G"
+        },
+        {
+            "subject": "Music",
+            "topic": "Scales",
+            "difficulty": 3,
+            "question": "How many notes are in a major scale?",
+            "answers": ["7", "8", "5", "12"],
+            "correctAnswer": "7",
+            "explanation": "A major scale has 7 unique notes before repeating the octave.",
+            "hint": "Do Re Mi Fa Sol La Ti"
+        },
+        {
+            "subject": "Music",
+            "topic": "Scales",
+            "difficulty": 4,
+            "question": "What is the pattern of a major scale?",
+            "answers": ["W-W-H-W-W-W-H", "W-H-W-W-H-W-W", "H-W-W-H-W-W-W", "W-W-W-H-W-W-H"],
+            "correctAnswer": "W-W-H-W-W-W-H",
+            "explanation": "A major scale follows: Whole-Whole-Half-Whole-Whole-Whole-Half",
+            "hint": "W = Whole step, H = Half step"
+        },
+        {
+            "subject": "Music",
+            "topic": "Scales",
+            "difficulty": 5,
+            "question": "What scale has no sharps or flats?",
+            "answers": ["C major", "G major", "D major", "F major"],
+            "correctAnswer": "C major",
+            "explanation": "C major uses only natural notes: C D E F G A B",
+            "hint": "The simplest scale on a piano"
+        },
+        {
+            "subject": "Music",
+            "topic": "Chords",
+            "difficulty": 4,
+            "question": "A major chord consists of:",
+            "answers": ["Root, major 3rd, perfect 5th", "Root, minor 3rd, perfect 5th", "Root, perfect 4th, perfect 5th", "Root, major 2nd, perfect 5th"],
+            "correctAnswer": "Root, major 3rd, perfect 5th",
+            "explanation": "A major chord = root note + note 4 half steps up + note 7 half steps up",
+            "hint": "Major chords sound happy and bright"
+        },
+        {
+            "subject": "Music",
+            "topic": "Chords",
+            "difficulty": 5,
+            "question": "How many notes in a triad?",
+            "answers": ["3", "2", "4", "5"],
+            "correctAnswer": "3",
+            "explanation": "A triad is a chord made of exactly 3 notes.",
+            "hint": "'Tri' means 3"
+        },
+        {
+            "subject": "Music",
+            "topic": "Chords",
+            "difficulty": 6,
+            "question": "What makes a chord 'minor'?",
+            "answers": ["A flatted 3rd", "A sharped 5th", "A flatted 7th", "A sharped root"],
+            "correctAnswer": "A flatted 3rd",
+            "explanation": "A minor chord lowers the 3rd by a half step compared to major.",
+            "hint": "Minor chords sound sad or moody"
+        },
+        {
+            "subject": "Music",
+            "topic": "Rhythm",
+            "difficulty": 2,
+            "question": "How many beats does a whole note get?",
+            "answers": ["4", "2", "1", "8"],
+            "correctAnswer": "4",
+            "explanation": "In 4/4 time, a whole note lasts for the entire measure (4 beats).",
+            "hint": "It fills a whole measure"
+        },
+        {
+            "subject": "Music",
+            "topic": "Rhythm",
+            "difficulty": 3,
+            "question": "What does 4/4 time mean?",
+            "answers": ["4 beats per measure", "4 measures per song", "4 notes per beat", "4 rests per measure"],
+            "correctAnswer": "4 beats per measure",
+            "explanation": "4/4 means 4 quarter-note beats per measure. Most common time signature.",
+            "hint": "Top number = beats per measure"
+        },
+        {
+            "subject": "Music",
+            "topic": "Rhythm",
+            "difficulty": 4,
+            "question": "How many beats does a half note get?",
+            "answers": ["2", "1", "4", "0.5"],
+            "correctAnswer": "2",
+            "explanation": "A half note gets 2 beats — half of a whole note.",
+            "hint": "Half of 4 is..."
+        },
+        {
+            "subject": "Music",
+            "topic": "Rhythm",
+            "difficulty": 5,
+            "question": "What is syncopation?",
+            "answers": ["Accenting off-beats", "Playing very fast", "Playing very slow", "Repeating a note"],
+            "correctAnswer": "Accenting off-beats",
+            "explanation": "Syncopation emphasizes weak beats or off-beats, creating rhythmic tension.",
+            "hint": "Stressing the unexpected beats"
+        }
+    ]
+}

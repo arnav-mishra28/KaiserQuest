@@ -1,0 +1,207 @@
+{
+  "subject": "music",
+  "topic": "rhythm",
+  "description": "Note durations, rests, subdivisions, syncopation, tempo markings",
+  "questions": [
+    {
+      "id": "mus_rhy_001",
+      "question": "What is rhythm in music?",
+      "options": ["The melody of a song", "The pattern of sounds and silences in time", "The volume of music", "The harmony of chords"],
+      "correct_answer": "The pattern of sounds and silences in time",
+      "explanation": "Rhythm is the arrangement of sounds and silences over time.",
+      "difficulty": 1
+    },
+    {
+      "id": "mus_rhy_002",
+      "question": "What is a rest in music?",
+      "options": ["A loud note", "A period of silence", "A repeated section", "A fast tempo"],
+      "correct_answer": "A period of silence",
+      "explanation": "A rest indicates a measured period of silence in music.",
+      "difficulty": 1
+    },
+    {
+      "id": "mus_rhy_003",
+      "question": "How many beats does a whole rest get in 4/4 time?",
+      "options": ["1", "2", "3", "4"],
+      "correct_answer": "4",
+      "explanation": "A whole rest = 4 beats of silence in 4/4 time.",
+      "difficulty": 1
+    },
+    {
+      "id": "mus_rhy_004",
+      "question": "What does 'tempo' mean?",
+      "options": ["Volume", "Pitch", "Speed of the music", "Key signature"],
+      "correct_answer": "Speed of the music",
+      "explanation": "Tempo is the speed at which music is performed, measured in BPM.",
+      "difficulty": 1
+    },
+    {
+      "id": "mus_rhy_005",
+      "question": "What does BPM stand for?",
+      "options": ["Bass Per Measure", "Beats Per Minute", "Bars Per Movement", "Bass Per Minute"],
+      "correct_answer": "Beats Per Minute",
+      "explanation": "BPM = Beats Per Minute, the standard measure of tempo.",
+      "difficulty": 1
+    },
+    {
+      "id": "mus_rhy_006",
+      "question": "What tempo marking means 'slow'?",
+      "options": ["Allegro", "Adagio", "Presto", "Vivace"],
+      "correct_answer": "Adagio",
+      "explanation": "Adagio means slowly (66-76 BPM). Allegro = fast, Presto = very fast.",
+      "difficulty": 2
+    },
+    {
+      "id": "mus_rhy_007",
+      "question": "What tempo marking means 'fast'?",
+      "options": ["Largo", "Andante", "Adagio", "Allegro"],
+      "correct_answer": "Allegro",
+      "explanation": "Allegro means fast and lively (120-156 BPM).",
+      "difficulty": 2
+    },
+    {
+      "id": "mus_rhy_008",
+      "question": "What is syncopation?",
+      "options": ["Playing in time", "Emphasizing off-beats or unexpected beats", "Playing very softly", "A gradual tempo change"],
+      "correct_answer": "Emphasizing off-beats or unexpected beats",
+      "explanation": "Syncopation places emphasis on normally weak beats, creating rhythmic tension.",
+      "difficulty": 3
+    },
+    {
+      "id": "mus_rhy_009",
+      "question": "A triplet divides a beat into how many equal parts?",
+      "options": ["2", "3", "4", "6"],
+      "correct_answer": "3",
+      "explanation": "A triplet divides a note value into three equal parts instead of the usual two.",
+      "difficulty": 2
+    },
+    {
+      "id": "mus_rhy_010",
+      "question": "What is a pickup (anacrusis)?",
+      "options": ["The last note of a piece", "Notes before the first full measure", "A guitar technique", "A type of rest"],
+      "correct_answer": "Notes before the first full measure",
+      "explanation": "An anacrusis (pickup) consists of notes that precede the first complete measure.",
+      "difficulty": 3
+    },
+    {
+      "id": "mus_rhy_011",
+      "question": "What does 'ritardando' (rit.) mean?",
+      "options": ["Speed up", "Gradually slow down", "Stay the same tempo", "Get louder"],
+      "correct_answer": "Gradually slow down",
+      "explanation": "Ritardando means to gradually decrease the tempo.",
+      "difficulty": 2
+    },
+    {
+      "id": "mus_rhy_012",
+      "question": "What does 'accelerando' mean?",
+      "options": ["Slow down", "Gradually speed up", "Stay steady", "Get softer"],
+      "correct_answer": "Gradually speed up",
+      "explanation": "Accelerando means to gradually increase the tempo.",
+      "difficulty": 2
+    },
+    {
+      "id": "mus_rhy_013",
+      "question": "What is a fermata?",
+      "options": ["A rest symbol", "A symbol indicating to hold a note longer than its value", "A repeat sign", "A dynamic marking"],
+      "correct_answer": "A symbol indicating to hold a note longer than its value",
+      "explanation": "A fermata (bird's eye symbol) tells the performer to sustain the note beyond its normal duration.",
+      "difficulty": 2
+    },
+    {
+      "id": "mus_rhy_014",
+      "question": "In 'swing' rhythm, pairs of eighth notes are played:",
+      "options": ["Evenly", "As a long-short pattern", "As a short-long pattern", "Staccato"],
+      "correct_answer": "As a long-short pattern",
+      "explanation": "Swing feel makes eighth notes unequal: the first is longer, the second shorter (triplet feel).",
+      "difficulty": 3
+    },
+    {
+      "id": "mus_rhy_015",
+      "question": "What does 'rubato' mean?",
+      "options": ["Strict tempo", "Flexible tempo for expressive purposes", "Very fast tempo", "Moderate tempo"],
+      "correct_answer": "Flexible tempo for expressive purposes",
+      "explanation": "Rubato (Italian: 'robbed') means taking liberties with tempo for musical expression.",
+      "difficulty": 4
+    },
+    {
+      "id": "mus_rhy_016",
+      "question": "What is a hemiola?",
+      "options": ["A type of chord", "A rhythmic pattern where two groups of three are felt as three groups of two", "A rest lasting half a beat", "A type of scale"],
+      "correct_answer": "A rhythmic pattern where two groups of three are felt as three groups of two",
+      "explanation": "Hemiola creates a 3-against-2 feel, common in Baroque and Latin music.",
+      "difficulty": 5
+    },
+    {
+      "id": "mus_rhy_017",
+      "question": "What is a dotted quarter note equivalent to?",
+      "options": ["1 beat", "1.5 beats", "2 beats", "3 beats"],
+      "correct_answer": "1.5 beats",
+      "explanation": "Quarter note (1 beat) + dot (half its value, 0.5) = 1.5 beats.",
+      "difficulty": 2
+    },
+    {
+      "id": "mus_rhy_018",
+      "question": "What does 'a tempo' mean?",
+      "options": ["Speed up", "Slow down", "Return to the original tempo", "Play freely"],
+      "correct_answer": "Return to the original tempo",
+      "explanation": "'A tempo' instructs the performer to return to the previous established tempo.",
+      "difficulty": 3
+    },
+    {
+      "id": "mus_rhy_019",
+      "question": "What is polyrhythm?",
+      "options": ["One rhythm pattern", "Two or more conflicting rhythms played simultaneously", "A single repeated beat", "A type of chord progression"],
+      "correct_answer": "Two or more conflicting rhythms played simultaneously",
+      "explanation": "Polyrhythm involves layering different rhythmic patterns, e.g., 3 against 4.",
+      "difficulty": 4
+    },
+    {
+      "id": "mus_rhy_020",
+      "question": "What is 'Andante' tempo approximately?",
+      "options": ["40-60 BPM", "76-108 BPM", "120-156 BPM", "168-200 BPM"],
+      "correct_answer": "76-108 BPM",
+      "explanation": "Andante means 'at a walking pace,' approximately 76-108 BPM.",
+      "difficulty": 3
+    },
+    {
+      "id": "mus_rhy_021",
+      "question": "What is a measure (bar) in music?",
+      "options": ["A single note", "A segment of time defined by the time signature", "A type of instrument", "A dynamic level"],
+      "correct_answer": "A segment of time defined by the time signature",
+      "explanation": "A measure is a unit of time containing a specific number of beats as defined by the time signature.",
+      "difficulty": 1
+    },
+    {
+      "id": "mus_rhy_022",
+      "question": "What is 'staccato'?",
+      "options": ["Smooth and connected", "Short and detached", "Gradually getting louder", "Very slow"],
+      "correct_answer": "Short and detached",
+      "explanation": "Staccato means playing notes short and separated, indicated by a dot above/below the note.",
+      "difficulty": 2
+    },
+    {
+      "id": "mus_rhy_023",
+      "question": "What is 'legato'?",
+      "options": ["Short and detached", "Smooth and connected", "Very loud", "Gradually slowing"],
+      "correct_answer": "Smooth and connected",
+      "explanation": "Legato means playing smoothly, with notes flowing into each other without gaps.",
+      "difficulty": 2
+    },
+    {
+      "id": "mus_rhy_024",
+      "question": "What is a cross-rhythm?",
+      "options": ["A rhythm that follows the beat", "A rhythm that contradicts the prevailing meter", "A very fast rhythm", "A slow rhythm"],
+      "correct_answer": "A rhythm that contradicts the prevailing meter",
+      "explanation": "Cross-rhythm is a specific type of polyrhythm that conflicts with the underlying pulse.",
+      "difficulty": 5
+    },
+    {
+      "id": "mus_rhy_025",
+      "question": "What is the fastest standard tempo marking?",
+      "options": ["Allegro", "Vivace", "Presto", "Prestissimo"],
+      "correct_answer": "Prestissimo",
+      "explanation": "Prestissimo (200+ BPM) is the fastest standard tempo, faster than Presto (168-200 BPM).",
+      "difficulty": 4
+    }
+  ]
+}

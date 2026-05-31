@@ -1,336 +1,576 @@
 """
-KaiserQuest Backend v1.0
-Multiplayer PvP WebSockets + Voice AI (Whisper STT + gTTS TTS) + Procedural Generation
-Run: uvicorn main:app --host 0.0.0.0 --port 8000
+KaiserQuest Backend - FastAPI Server
+A Pokemon-style educational RPG backend with adaptive difficulty,
+PvE/PvP battles, and voice AI integration.
+
+Run with: uvicorn main:app --reload --host 0.0.0.0 --port 8000
 """
-import asyncio, json, random, uuid, time, os
-from typing import Dict, List, Optional
-from fastapi import FastAPI, WebSocket, WebSocketDisconnect, UploadFile, File
+
+from __future__ import annotations
+
+import logging
+import time
+import uuid
+from contextlib import asynccontextmanager
+from typing import Any, Dict, List, Optional
+
+from fastapi import FastAPI, HTTPException, Query, WebSocket, WebSocketDisconnect
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import FileResponse, JSONResponse
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
-app = FastAPI(title="KaiserQuest API v1.0")
-app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"])
+# ---------------------------------------------------------------------------
+# Configure logging
+# ---------------------------------------------------------------------------
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s | %(name)-30s | %(levelname)-7s | %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S",
+)
+logger = logging.getLogger("kaiserquest.main")
 
-# ── In-memory state ────────────────────────────────────────────────────────────
-active_rooms: Dict[str, dict] = {}
-waiting_queue: List[dict] = []   # [{name, ws, world}]
+# ---------------------------------------------------------------------------
+# Local imports (models & services)
+# ---------------------------------------------------------------------------
+from models.player_model import (
+    PlayerModel,
+    get_or_create_player,
+    get_player,
+    list_players,
+)
+from models.question_generator import (
+    get_questions,
+    get_single_question,
+    check_answer,
+    get_available_subjects,
+    reload_banks,
+)
+from models.difficulty_adapter import difficulty_adapter
+from services.battle_service import (
+    start_battle,
+    process_battle_answer,
+    get_battle,
+    cleanup_old_battles,
+)
+from services.pvp_service import pvp_manager
+from services.voice_service import speech_to_text, text_to_speech, voice_answer
 
-# ── Built-in question bank ─────────────────────────────────────────────────────
-QUESTION_BANK = {
-    "math:algebra": [
-        {"q":"Solve: x+4=9","opts":["x=4","x=5","x=13","x=2"],"ans":1,"topic":"linear"},
-        {"q":"If x=3, what is 2x+1?","opts":["5","6","7","8"],"ans":2,"topic":"linear"},
-        {"q":"Solve: 3x=15","opts":["x=3","x=5","x=12","x=45"],"ans":1,"topic":"linear"},
-        {"q":"Which is a variable?","opts":["7","3.14","y","100"],"ans":2,"topic":"variables"},
-        {"q":"If y=2x and x=4, find y","opts":["6","8","10","2"],"ans":1,"topic":"variables"},
-        {"q":"Solve: 2x-4=10","opts":["x=3","x=5","x=7","x=14"],"ans":2,"topic":"linear"},
-        {"q":"f(x)=x²; f(3)=?","opts":["6","9","12","27"],"ans":1,"topic":"functions"},
-        {"q":"Slope of y=3x+2?","opts":["2","3","x","0"],"ans":1,"topic":"linear"},
-    ],
-    "languages:english": [
-        {"q":"What is a NOUN?","opts":["Action","Describing","Person/place/thing","Connecting"],"ans":2,"topic":"nouns"},
-        {"q":"Past tense of 'run'?","opts":["runned","ran","runs","running"],"ans":1,"topic":"verbs"},
-        {"q":"Comparative of 'big'?","opts":["most big","bigger","biggest","very big"],"ans":1,"topic":"adj"},
-        {"q":"'London' is a...?","opts":["Common noun","Proper noun","Abstract","Verb"],"ans":1,"topic":"nouns"},
-        {"q":"A VERB is...?","opts":["Describing","Naming","Action/state","Connecting"],"ans":2,"topic":"verbs"},
-        {"q":"How many nouns: 'The cat ran'?","opts":["0","1","2","3"],"ans":1,"topic":"nouns"},
-        {"q":"Future tense of 'eat'?","opts":["ate","eats","will eat","eating"],"ans":2,"topic":"verbs"},
-        {"q":"Superlative of 'fast'?","opts":["faster","fastest","most fast","very fast"],"ans":1,"topic":"adj"},
-    ],
-    "music:theory": [
-        {"q":"Lines on a staff?","opts":["3","4","5","6"],"ans":2,"topic":"staff"},
-        {"q":"Whole note beats?","opts":["1","2","3","4"],"ans":3,"topic":"notes"},
-        {"q":"Spaces on treble clef spell?","opts":["EGBDF","FACE","ACEG","BDFA"],"ans":1,"topic":"staff"},
-        {"q":"Quarter note beats?","opts":["1","2","3","4"],"ans":0,"topic":"notes"},
-        {"q":"Major chord sounds?","opts":["Sad","Bright/happy","Tense","Silent"],"ans":1,"topic":"chords"},
-        {"q":"4/4 time: beats/measure?","opts":["2","3","4","8"],"ans":2,"topic":"time"},
-        {"q":"C-E-G forms a...?","opts":["C minor","G major","C major","A minor"],"ans":2,"topic":"chords"},
-        {"q":"Half note beats?","opts":["1","2","3","4"],"ans":1,"topic":"notes"},
-    ],
-}
 
-def get_questions(world: str, count: int = 7) -> List[dict]:
-    pool = QUESTION_BANK.get(world, QUESTION_BANK["math:algebra"]).copy()
-    random.shuffle(pool)
-    return pool[:min(count, len(pool))]
+# ---------------------------------------------------------------------------
+# Application lifespan
+# ---------------------------------------------------------------------------
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    logger.info("=" * 60)
+    logger.info("  KaiserQuest Backend starting up")
+    logger.info("=" * 60)
+    # Pre-load question banks
+    subjects = get_available_subjects()
+    total_topics = sum(len(v) for v in subjects.values())
+    logger.info("Loaded %d subjects with %d topics", len(subjects), total_topics)
+    for subj, topics in subjects.items():
+        logger.info("  %s: %s", subj, ", ".join(topics))
+    logger.info("Difficulty adapter backend: %s", difficulty_adapter.backend_name)
+    yield
+    logger.info("KaiserQuest Backend shutting down")
+    cleanup_old_battles()
 
-# ══════════════════════════════════════════════════════════════════════════════
-#  PvP MULTIPLAYER WebSocket
-# ══════════════════════════════════════════════════════════════════════════════
-@app.websocket("/pvp/{player_name}")
-async def pvp_websocket(websocket: WebSocket, player_name: str, world: str = "math:algebra"):
-    await websocket.accept()
-    room_id = None
-    try:
-        # Try to match with a waiting player
-        matched_entry = None
-        for entry in list(waiting_queue):
-            if entry["world"] == world and entry["name"] != player_name:
-                matched_entry = entry; waiting_queue.remove(entry); break
 
-        if matched_entry:
-            # Create room
-            room_id = str(uuid.uuid4())[:8]
-            p1_name, p1_ws = matched_entry["name"], matched_entry["ws"]
-            p2_name, p2_ws = player_name, websocket
-            questions = get_questions(world)
-            room = {
-                "id": room_id, "world": world,
-                "players": {p1_name: p1_ws, p2_name: p2_ws},
-                "scores": {p1_name: 0, p2_name: 0},
-                "hp": {p1_name: 30, p2_name: 30},
-                "answered": {p1_name: False, p2_name: False},
-                "questions": questions, "q_idx": 0,
-                "q_start": time.time(), "combos": {p1_name: 0, p2_name: 0},
+# ---------------------------------------------------------------------------
+# FastAPI app
+# ---------------------------------------------------------------------------
+app = FastAPI(
+    title="KaiserQuest API",
+    description=(
+        "Backend for KaiserQuest — a Pokemon-style educational RPG. "
+        "Covers Math (Algebra), English, and Music Theory with adaptive "
+        "difficulty, PvE battles, PvP WebSocket battles, and voice AI."
+    ),
+    version="1.0.0",
+    lifespan=lifespan,
+)
+
+# CORS — allow Unity WebGL and localhost dev
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+
+# ═══════════════════════════════════════════════════════════════════════════
+# Pydantic request / response models
+# ═══════════════════════════════════════════════════════════════════════════
+class AnswerRequest(BaseModel):
+    question_id: str = Field(..., description="The ID of the question being answered")
+    player_id: str = Field(..., description="The player's unique ID")
+    subject: str = Field(..., description="Subject: math, english, or music")
+    topic: str = Field(..., description="Topic within the subject")
+    answer: str = Field(..., description="The player's answer")
+    response_time_ms: float = Field(0, description="Time taken to answer in milliseconds")
+    difficulty: int = Field(2, ge=1, le=5, description="Difficulty level of the question")
+
+
+class BattleStartRequest(BaseModel):
+    player_id: str
+    subject: str = "math"
+    topic: str = "variables"
+    difficulty: Optional[int] = Field(None, ge=1, le=5, description="Override difficulty (None = adaptive)")
+
+
+class BattleAnswerRequest(BaseModel):
+    battle_id: str
+    player_answer: str
+
+
+class PlayerUpdateRequest(BaseModel):
+    username: Optional[str] = None
+    xp_add: Optional[int] = None
+
+
+class PlayerCreateRequest(BaseModel):
+    player_id: Optional[str] = None
+    username: str = ""
+
+
+class VoiceSTTRequest(BaseModel):
+    audio_base64: str = Field(..., description="Base64-encoded audio data")
+    language: str = "en"
+
+
+class VoiceTTSRequest(BaseModel):
+    text: str = Field(..., description="Text to convert to speech")
+    language: str = "en"
+
+
+# ═══════════════════════════════════════════════════════════════════════════
+# Health / Info
+# ═══════════════════════════════════════════════════════════════════════════
+@app.get("/", tags=["Health"])
+async def root():
+    """Health check and API info."""
+    return {
+        "name": "KaiserQuest API",
+        "version": "1.0.0",
+        "status": "running",
+        "endpoints": {
+            "questions": "/questions/{subject}/{topic}",
+            "answer": "/answer",
+            "battle_start": "/battle/start",
+            "battle_answer": "/battle/answer",
+            "pvp": "ws://host/pvp/battle",
+            "player_stats": "/player/{id}/stats",
+            "adaptive": "/adaptive/difficulty/{player_id}",
+            "subjects": "/subjects",
+        },
+    }
+
+
+@app.get("/subjects", tags=["Questions"])
+async def list_subjects():
+    """List all available subjects and their topics."""
+    return get_available_subjects()
+
+
+# ═══════════════════════════════════════════════════════════════════════════
+# Questions
+# ═══════════════════════════════════════════════════════════════════════════
+@app.get("/questions/{subject}/{topic}", tags=["Questions"])
+async def get_questions_endpoint(
+    subject: str,
+    topic: str,
+    difficulty: Optional[int] = Query(None, ge=1, le=5, description="Difficulty 1-5"),
+    count: int = Query(5, ge=1, le=20, description="Number of questions"),
+    player_id: Optional[str] = Query(None, description="Player ID for adaptive difficulty"),
+):
+    """
+    Retrieve questions for a given subject and topic.
+    If player_id is provided and difficulty is not, uses adaptive difficulty.
+    """
+    # Use adaptive difficulty if player_id given and no explicit difficulty
+    if player_id and difficulty is None:
+        player = get_player(player_id)
+        if player:
+            difficulty = difficulty_adapter.recommend_for_player(player, subject, topic)
+            logger.info("Adaptive difficulty for %s on %s/%s: %d", player_id, subject, topic, difficulty)
+
+    questions = get_questions(subject, topic, difficulty=difficulty, count=count)
+    if not questions:
+        raise HTTPException(
+            status_code=404,
+            detail=f"No questions found for {subject}/{topic} at difficulty {difficulty}",
+        )
+
+    # Strip correct answers from response (don't reveal to client)
+    safe_questions = []
+    for q in questions:
+        safe_q = {
+            "id": q["id"],
+            "question": q["question"],
+            "options": q.get("options", []),
+            "difficulty": q.get("difficulty"),
+            "topic": q.get("topic", topic),
+            "subject": q.get("subject", subject),
+        }
+        safe_questions.append(safe_q)
+
+    return {
+        "subject": subject,
+        "topic": topic,
+        "difficulty": difficulty,
+        "count": len(safe_questions),
+        "questions": safe_questions,
+    }
+
+
+# ═══════════════════════════════════════════════════════════════════════════
+# Answer Submission
+# ═══════════════════════════════════════════════════════════════════════════
+@app.post("/answer", tags=["Questions"])
+async def submit_answer(req: AnswerRequest):
+    """
+    Submit an answer to a question and get immediate feedback.
+    Updates player stats and returns correctness, explanation, and XP.
+    """
+    # Look up the question from the bank to verify the correct answer
+    questions = get_questions(req.subject, req.topic, count=50)
+    question = next((q for q in questions if q["id"] == req.question_id), None)
+
+    if not question:
+        raise HTTPException(status_code=404, detail=f"Question {req.question_id} not found")
+
+    is_correct = check_answer(question, req.answer)
+
+    # Update player model
+    player = get_or_create_player(req.player_id)
+    player.record_answer(
+        subject=req.subject,
+        topic=req.topic,
+        correct=is_correct,
+        response_time_ms=req.response_time_ms,
+        difficulty=req.difficulty,
+    )
+
+    # Award XP
+    xp = 0
+    leveled_up = False
+    if is_correct:
+        xp = 5 + req.difficulty * 3
+        topic_stats = player.get_subject(req.subject).get_topic(req.topic)
+        if topic_stats.current_streak >= 3:
+            xp += topic_stats.current_streak * 2  # Streak bonus
+        leveled_up = player.add_xp(xp)
+
+    # Feed back to adaptive model
+    topic_stats = player.get_subject(req.subject).get_topic(req.topic)
+    difficulty_adapter.record_outcome(
+        accuracy=topic_stats.accuracy,
+        avg_response_time_ms=topic_stats.avg_response_time_ms,
+        current_streak=topic_stats.current_streak,
+        topic_mastery=topic_stats.mastery_score,
+        player_level=player.level,
+        was_correct=is_correct,
+        question_difficulty=req.difficulty,
+    )
+
+    return {
+        "correct": is_correct,
+        "correct_answer": question.get("correct_answer"),
+        "explanation": question.get("explanation", ""),
+        "xp_earned": xp,
+        "leveled_up": leveled_up,
+        "new_level": player.level if leveled_up else None,
+        "streak": topic_stats.current_streak,
+        "topic_accuracy": round(topic_stats.accuracy, 4),
+        "topic_mastery": round(topic_stats.mastery_score, 2),
+    }
+
+
+# ═══════════════════════════════════════════════════════════════════════════
+# Player Management
+# ═══════════════════════════════════════════════════════════════════════════
+@app.post("/player/create", tags=["Player"])
+async def create_player(req: PlayerCreateRequest):
+    """Create a new player or return existing."""
+    pid = req.player_id or str(uuid.uuid4())
+    player = get_or_create_player(pid, req.username)
+    if req.username:
+        player.username = req.username
+    return {"player_id": player.player_id, "username": player.username, "level": player.level}
+
+
+@app.get("/player/{player_id}/stats", tags=["Player"])
+async def get_player_stats(player_id: str):
+    """Get comprehensive player statistics."""
+    player = get_player(player_id)
+    if not player:
+        raise HTTPException(status_code=404, detail=f"Player {player_id} not found")
+    return player.to_dict()
+
+
+@app.post("/player/{player_id}/update", tags=["Player"])
+async def update_player(player_id: str, req: PlayerUpdateRequest):
+    """Update player profile (username, add XP, etc.)."""
+    player = get_player(player_id)
+    if not player:
+        raise HTTPException(status_code=404, detail=f"Player {player_id} not found")
+
+    if req.username:
+        player.username = req.username
+    leveled_up = False
+    if req.xp_add and req.xp_add > 0:
+        leveled_up = player.add_xp(req.xp_add)
+
+    return {
+        "player_id": player.player_id,
+        "username": player.username,
+        "level": player.level,
+        "xp": player.xp,
+        "leveled_up": leveled_up,
+    }
+
+
+@app.get("/players", tags=["Player"])
+async def get_all_players():
+    """List all players (for leaderboard / debug)."""
+    players = list_players()
+    return {
+        "count": len(players),
+        "players": [
+            {
+                "player_id": p.player_id,
+                "username": p.username,
+                "level": p.level,
+                "pvp_rating": p.pvp_rating,
+                "overall_accuracy": round(p.overall_accuracy, 4),
             }
-            active_rooms[room_id] = room
-            # Notify both players
-            start_msg = json.dumps({"type":"match_found","room":room_id,
-                "players":[p1_name,p2_name],"world":world,"total_questions":len(questions)})
-            for ws in [p1_ws, p2_ws]:
-                try: await ws.send_text(start_msg)
-                except: pass
-            await asyncio.sleep(0.8)
-            await _send_question(room)
-        else:
-            # Wait for opponent
-            waiting_queue.append({"name": player_name, "ws": websocket, "world": world})
-            await websocket.send_text(json.dumps({"type":"waiting","msg":"Searching for opponent...","world":world}))
+            for p in sorted(players, key=lambda x: x.pvp_rating, reverse=True)
+        ],
+    }
 
-        # Message loop
+
+# ═══════════════════════════════════════════════════════════════════════════
+# Adaptive Difficulty
+# ═══════════════════════════════════════════════════════════════════════════
+@app.get("/adaptive/difficulty/{player_id}", tags=["Adaptive"])
+async def get_adaptive_difficulty(
+    player_id: str,
+    subject: str = Query("math", description="Subject"),
+    topic: str = Query("variables", description="Topic"),
+):
+    """Get the ML-recommended difficulty level for a player on a specific topic."""
+    player = get_player(player_id)
+    if not player:
+        raise HTTPException(status_code=404, detail=f"Player {player_id} not found")
+
+    recommended = difficulty_adapter.recommend_for_player(player, subject, topic)
+    topic_stats = player.get_subject(subject).get_topic(topic)
+
+    return {
+        "player_id": player_id,
+        "subject": subject,
+        "topic": topic,
+        "recommended_difficulty": recommended,
+        "model_backend": difficulty_adapter.backend_name,
+        "player_stats": {
+            "accuracy": round(topic_stats.accuracy, 4),
+            "avg_response_time_ms": round(topic_stats.avg_response_time_ms, 1),
+            "current_streak": topic_stats.current_streak,
+            "mastery_score": round(topic_stats.mastery_score, 2),
+            "total_attempts": topic_stats.total_attempts,
+        },
+    }
+
+
+# ═══════════════════════════════════════════════════════════════════════════
+# PvE Battle
+# ═══════════════════════════════════════════════════════════════════════════
+@app.post("/battle/start", tags=["Battle"])
+async def battle_start(req: BattleStartRequest):
+    """Start a new PvE battle against an NPC enemy."""
+    # Validate subject/topic
+    subjects = get_available_subjects()
+    if req.subject not in subjects:
+        raise HTTPException(status_code=400, detail=f"Unknown subject: {req.subject}")
+    if req.topic not in subjects.get(req.subject, []):
+        raise HTTPException(
+            status_code=400,
+            detail=f"Unknown topic '{req.topic}' for subject '{req.subject}'. Available: {subjects.get(req.subject, [])}",
+        )
+
+    battle = start_battle(
+        player_id=req.player_id,
+        subject=req.subject,
+        topic=req.topic,
+        difficulty=req.difficulty,
+    )
+    return battle.to_dict()
+
+
+@app.post("/battle/answer", tags=["Battle"])
+async def battle_answer(req: BattleAnswerRequest):
+    """Submit an answer during a PvE battle."""
+    battle = get_battle(req.battle_id)
+    if not battle:
+        raise HTTPException(status_code=404, detail=f"Battle {req.battle_id} not found")
+
+    result = process_battle_answer(req.battle_id, req.player_answer)
+    if "error" in result:
+        raise HTTPException(status_code=400, detail=result["error"])
+
+    return result
+
+
+@app.get("/battle/{battle_id}", tags=["Battle"])
+async def battle_status(battle_id: str):
+    """Get the current state of a battle."""
+    battle = get_battle(battle_id)
+    if not battle:
+        raise HTTPException(status_code=404, detail=f"Battle {battle_id} not found")
+    return battle.to_dict()
+
+
+# ═══════════════════════════════════════════════════════════════════════════
+# PvP WebSocket Battle
+# ═══════════════════════════════════════════════════════════════════════════
+@app.websocket("/pvp/battle")
+async def pvp_battle_ws(websocket: WebSocket):
+    """
+    WebSocket endpoint for PvP battles.
+
+    Protocol:
+    1. Client connects and sends: {"type": "join", "player_id": "...", "subject": "...", "topic": "..."}
+    2. Server queues player for matchmaking or starts a battle if opponent found.
+    3. Both players receive questions simultaneously.
+    4. Client sends answers: {"type": "answer", "battle_id": "...", "answer": "..."}
+    5. Server resolves and sends results to both players.
+    """
+    await websocket.accept()
+    player_id = None
+
+    try:
         while True:
-            data = await websocket.receive_text()
-            msg  = json.loads(data)
-            if msg.get("type") == "answer" and room_id and room_id in active_rooms:
-                await _handle_answer(active_rooms[room_id], player_name, int(msg.get("idx",0)))
-            elif msg.get("type") == "ping":
-                await websocket.send_text(json.dumps({"type":"pong"}))
+            data = await websocket.receive_json()
+            msg_type = data.get("type", "")
+
+            if msg_type == "join":
+                player_id = data.get("player_id", str(uuid.uuid4()))
+                subject = data.get("subject", "math")
+                topic = data.get("topic", "variables")
+                await pvp_manager.join_queue(player_id, websocket, subject, topic)
+
+            elif msg_type == "answer":
+                battle_id = data.get("battle_id", "")
+                answer = data.get("answer", "")
+                if battle_id and answer:
+                    await pvp_manager.handle_answer(battle_id, player_id or "", answer)
+
+            elif msg_type == "leave":
+                if player_id:
+                    pvp_manager.leave_queue(player_id)
+                await websocket.send_json({"type": "left_queue"})
+
+            elif msg_type == "ping":
+                await websocket.send_json({"type": "pong"})
 
     except WebSocketDisconnect:
-        for entry in list(waiting_queue):
-            if entry["name"] == player_name: waiting_queue.remove(entry)
-        if room_id and room_id in active_rooms:
-            room = active_rooms[room_id]
-            for pname, pws in room["players"].items():
-                if pname != player_name:
-                    try: await pws.send_text(json.dumps({"type":"opponent_left","player":player_name}))
-                    except: pass
-            del active_rooms[room_id]
+        logger.info("WebSocket disconnected: %s", player_id)
+        if player_id:
+            await pvp_manager.handle_disconnect(player_id)
     except Exception as e:
-        print(f"PvP WS error [{player_name}]: {e}")
+        logger.exception("WebSocket error for %s: %s", player_id, e)
+        if player_id:
+            await pvp_manager.handle_disconnect(player_id)
 
-async def _send_question(room: dict):
-    idx = room["q_idx"]
-    if idx >= len(room["questions"]):
-        winner = max(room["scores"], key=room["scores"].get)
-        msg = json.dumps({"type":"game_over","winner":winner,"scores":room["scores"],"hp":room["hp"]})
-        for ws in room["players"].values():
-            try: await ws.send_text(msg)
-            except: pass
-        return
-    q = room["questions"][idx]
-    room["answered"] = {p: False for p in room["players"]}
-    room["q_start"] = time.time()
-    msg = json.dumps({"type":"question","idx":idx,"total":len(room["questions"]),
-        "q":q["q"],"opts":q["opts"],"topic":q.get("topic","")})
-    for ws in room["players"].values():
-        try: await ws.send_text(msg)
-        except: pass
 
-async def _handle_answer(room: dict, player: str, ans_idx: int):
-    if room["answered"].get(player): return
-    room["answered"][player] = True
-    q = room["questions"][room["q_idx"]]
-    elapsed = time.time() - room["q_start"]
-    correct = (ans_idx == q["ans"])
-    if correct:
-        room["combos"][player] = room["combos"].get(player,0) + 1
-        speed_mult = max(0.5, 1.5 - elapsed / 10.0)
-        combo = min(room["combos"][player], 4)
-        damage = int((6 + combo*2) * speed_mult)
-        room["scores"][player] = room["scores"].get(player,0) + 100 + int(50*speed_mult)
-        opponent = [p for p in room["players"] if p != player]
-        if opponent: room["hp"][opponent[0]] = max(0, room["hp"].get(opponent[0],30) - damage)
-    else:
-        room["combos"][player] = 0
-        damage = 0
-    result_msg = json.dumps({"type":"answer_result","player":player,"correct":correct,
-        "damage":damage,"scores":room["scores"],"hp":room["hp"],"combo":room["combos"][player]})
-    for ws in room["players"].values():
-        try: await ws.send_text(result_msg)
-        except: pass
-    # Check HP
-    for p,h in room["hp"].items():
-        if h <= 0:
-            loser = p; winner = [x for x in room["players"] if x!=p][0] if len(room["players"])>1 else p
-            end_msg = json.dumps({"type":"game_over","winner":winner,"loser":loser,"scores":room["scores"],"hp":room["hp"]})
-            for ws in room["players"].values():
-                try: await ws.send_text(end_msg)
-                except: pass
-            if room["id"] in active_rooms: del active_rooms[room["id"]]
-            return
-    if all(room["answered"].values()):
-        await asyncio.sleep(1.5)
-        room["q_idx"] += 1
-        await _send_question(room)
+@app.get("/pvp/queue", tags=["PvP"])
+async def pvp_queue_status():
+    """Get the current PvP matchmaking queue size."""
+    return {"queue_size": pvp_manager.get_queue_size()}
 
-@app.get("/pvp/rooms")
-async def list_rooms():
-    return {"active_rooms": len(active_rooms), "waiting": len(waiting_queue)}
 
-# ══════════════════════════════════════════════════════════════════════════════
-#  VOICE AI — Whisper STT + gTTS TTS
-# ══════════════════════════════════════════════════════════════════════════════
-@app.post("/voice/transcribe")
-async def transcribe(audio: UploadFile = File(...)):
-    """Speech-to-Text using OpenAI Whisper"""
+# ═══════════════════════════════════════════════════════════════════════════
+# Voice AI (STT + TTS stubs)
+# ═══════════════════════════════════════════════════════════════════════════
+@app.post("/voice/stt", tags=["Voice"])
+async def voice_stt(req: VoiceSTTRequest):
+    """
+    Speech-to-Text: Convert audio to text.
+    Accepts base64-encoded audio. Returns transcribed text.
+    """
+    import base64
     try:
-        import whisper
-        data = await audio.read()
-        tmp = f"/tmp/kq_audio_{uuid.uuid4().hex}.wav"
-        with open(tmp,"wb") as f: f.write(data)
-        model = whisper.load_model("base")   # 'tiny' for faster, 'base' for better accuracy
-        result = model.transcribe(tmp)
-        os.remove(tmp)
-        return {"text": result["text"].strip(), "success": True}
-    except ImportError:
-        return JSONResponse({"success":False,"error":"Run: pip install openai-whisper"}, status_code=500)
-    except Exception as e:
-        return JSONResponse({"success":False,"error":str(e)}, status_code=500)
+        audio_bytes = base64.b64decode(req.audio_base64)
+    except Exception:
+        raise HTTPException(status_code=400, detail="Invalid base64 audio data")
 
-class TTSRequest(BaseModel):
-    text: str
-    lang: str = "en"
+    result = await speech_to_text(audio_bytes, req.language)
+    return result
 
-@app.post("/voice/speak")
-async def text_to_speech(req: TTSRequest):
-    """Text-to-Speech using gTTS"""
-    try:
-        from gtts import gTTS
-        out = f"/tmp/kq_tts_{uuid.uuid4().hex}.mp3"
-        gTTS(text=req.text, lang=req.lang, slow=False).save(out)
-        return FileResponse(out, media_type="audio/mpeg")
-    except ImportError:
-        return JSONResponse({"error":"Run: pip install gtts"}, status_code=500)
-    except Exception as e:
-        return JSONResponse({"error":str(e)}, status_code=500)
 
-class NPCMsg(BaseModel):
-    npc_name: str; npc_role: str; message: str; player_level: int; weak_topics: List[str] = []
+@app.post("/voice/tts", tags=["Voice"])
+async def voice_tts(req: VoiceTTSRequest):
+    """
+    Text-to-Speech: Convert text to audio.
+    Returns base64-encoded MP3 audio.
+    """
+    if not req.text.strip():
+        raise HTTPException(status_code=400, detail="Text cannot be empty")
 
-@app.post("/npc/respond")
-async def npc_respond(req: NPCMsg):
-    """Rule-based NPC AI (extend with OpenAI/LLM API for smarter responses)"""
-    weak_str = ", ".join(req.weak_topics[:2]) if req.weak_topics else "the fundamentals"
-    if "teacher" in req.npc_role.lower():
-        replies = [
-            f"Great question! Focus on {weak_str} to improve faster.",
-            f"At Level {req.player_level}, you should be mastering {weak_str}.",
-            "Every correct answer pushes the Fog back a little more.",
-            f"Your message: '{req.message}' — excellent curiosity! That's how Kaisers are made.",
-        ]
-    elif "rival" in req.npc_role.lower():
-        replies = [
-            f"Level {req.player_level}? I'm already ahead. Meet me at the next gym!",
-            "Don't think knowledge alone makes you strong. Speed matters too!",
-            "I respect your persistence. But I will reach Silver Mountain first.",
-        ]
-    else:
-        replies = [
-            "The Fog retreats when knowledge shines!",
-            f"Have you mastered {weak_str} yet? The gym awaits!",
-            "Silver Mountain looms to the north. Only the worthy may enter.",
-        ]
-    return {"response": random.choice(replies), "npc": req.npc_name}
+    result = await text_to_speech(req.text, req.language)
+    return result
 
-# ══════════════════════════════════════════════════════════════════════════════
-#  PROCEDURAL WORLD GENERATION — Perlin Noise
-# ══════════════════════════════════════════════════════════════════════════════
-def _fade(t): return t*t*t*(t*(t*6-15)+10)
-def _lerp(a,b,t): return a+t*(b-a)
-def _perlin(width, height, scale=8.0, seed=42):
-    import math
-    random.seed(seed)
-    perm = list(range(256)); random.shuffle(perm); perm = perm*2
-    def grad(h,x,y):
-        h&=3
-        if h==0: return x+y
-        if h==1: return -x+y
-        if h==2: return x-y
-        return -x-y
-    grid=[]
-    for j in range(height):
-        row=[]
-        for i in range(width):
-            x=i/scale; y=j/scale
-            xi=int(x)&255; yi=int(y)&255; xf=x-int(x); yf=y-int(y)
-            u=_fade(xf); v=_fade(yf)
-            aa=perm[perm[xi]+yi]; ab=perm[perm[xi]+yi+1]
-            ba=perm[perm[xi+1]+yi]; bb=perm[perm[xi+1]+yi+1]
-            val=_lerp(_lerp(grad(aa,xf,yf),grad(ba,xf-1,yf),u),
-                      _lerp(grad(ab,xf,yf-1),grad(bb,xf-1,yf-1),u),v)
-            row.append((val+1)/2)
-        grid.append(row)
-    return grid
 
-@app.get("/world/generate")
-async def gen_world(width:int=30, height:int=20, seed:int=42, subject:str="math", branch:str="algebra"):
-    """Generate procedural tile map using Perlin noise"""
-    noise = _perlin(width, height, scale=8.0, seed=seed)
-    # Tile thresholds: 0=ocean, 5=path, 1=grass, 2=forest, 3=mountain
-    grid=[]
-    for j in range(height):
-        row=[]
-        for i in range(width):
-            n=noise[j][i]
-            if n<0.22:    row.append(0)   # ocean
-            elif n<0.32:  row.append(5)   # beach/path
-            elif n<0.60:  row.append(1)   # grass
-            elif n<0.76:  row.append(2)   # forest
-            else:         row.append(3)   # mountain
-        grid.append(row)
-    # Topic clustering: place towns in grass regions, gyms nearby
-    towns=[]; random.seed(seed+1)
-    for _ in range(200):
-        tx=random.randint(3,width-4); ty=random.randint(3,height-4)
-        if grid[ty][tx]==1 and len(towns)<5:
-            far_enough=all(abs(tx-t[0])>5 or abs(ty-t[1])>5 for t in towns)
-            if far_enough:
-                grid[ty][tx]=7; towns.append((tx,ty))
-                if ty>1: grid[ty-1][tx]=8  # gym above town
-                if ty>2: grid[ty-2][tx]=5  # path above gym
-    # Connect towns with paths
-    random.seed(seed+2)
-    for j in range(1,height-1):
-        for i in range(1,width-1):
-            if grid[j][i]==1 and random.random()<0.12:
-                grid[j][i]=5
-    # Solid borders
-    for i in range(width): grid[0][i]=0; grid[height-1][i]=0
-    for j in range(height): grid[j][0]=0; grid[j][width-1]=0
-    return {"grid":grid,"width":width,"height":height,"subject":subject,"branch":branch,"seed":seed,
-            "towns":towns,"tiles":{"0":"ocean","1":"grass","2":"forest","3":"mountain","5":"path","7":"town","8":"gym"}}
+# ═══════════════════════════════════════════════════════════════════════════
+# Admin / Debug
+# ═══════════════════════════════════════════════════════════════════════════
+@app.post("/admin/reload-questions", tags=["Admin"])
+async def admin_reload_questions():
+    """Force reload of all question banks from disk."""
+    reload_banks()
+    subjects = get_available_subjects()
+    return {"message": "Question banks reloaded", "subjects": subjects}
 
-# ══════════════════════════════════════════════════════════════════════════════
-#  LEADERBOARD
-# ══════════════════════════════════════════════════════════════════════════════
-_leaderboard: List[dict] = []
 
-@app.post("/leaderboard/submit")
-async def submit(data: dict):
-    entry={"name":data.get("name","?"),"score":data.get("score",0),
-           "subject":data.get("subject",""),"branch":data.get("branch",""),
-           "badges":data.get("badges",0),"time":int(time.time())}
-    _leaderboard.append(entry)
-    _leaderboard.sort(key=lambda x:x["score"],reverse=True)
-    return {"rank":_leaderboard.index(entry)+1,"total":len(_leaderboard)}
+@app.get("/admin/difficulty-test", tags=["Admin"])
+async def admin_difficulty_test(
+    accuracy: float = Query(0.7, ge=0, le=1),
+    avg_response_time_ms: float = Query(5000, ge=0),
+    current_streak: int = Query(3, ge=0),
+    topic_mastery: float = Query(50, ge=0, le=100),
+    player_level: int = Query(5, ge=1),
+):
+    """Test the difficulty adapter with custom parameters."""
+    recommended = difficulty_adapter.predict_difficulty(
+        accuracy=accuracy,
+        avg_response_time_ms=avg_response_time_ms,
+        current_streak=current_streak,
+        topic_mastery=topic_mastery,
+        player_level=player_level,
+    )
+    return {
+        "input": {
+            "accuracy": accuracy,
+            "avg_response_time_ms": avg_response_time_ms,
+            "current_streak": current_streak,
+            "topic_mastery": topic_mastery,
+            "player_level": player_level,
+        },
+        "recommended_difficulty": recommended,
+        "backend": difficulty_adapter.backend_name,
+    }
 
-@app.get("/leaderboard")
-async def get_lb(limit:int=10):
-    return {"entries":_leaderboard[:limit]}
 
-@app.get("/health")
-async def health():
-    return {"status":"ok","version":"1.0","rooms":len(active_rooms),"waiting":len(waiting_queue)}
+# ═══════════════════════════════════════════════════════════════════════════
+# Run directly
+# ═══════════════════════════════════════════════════════════════════════════
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(
+        "main:app",
+        host="0.0.0.0",
+        port=8000,
+        reload=True,
+        log_level="info",
+    )
