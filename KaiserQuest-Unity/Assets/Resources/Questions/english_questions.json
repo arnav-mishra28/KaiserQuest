@@ -1,154 +1,534 @@
 {
     "questions": [
         {
-            "subject": "Languages",
+            "subject": "English",
             "topic": "Grammar",
             "difficulty": 1,
-            "question": "Which word is a noun?",
-            "answers": ["Cat", "Run", "Quickly", "Beautiful"],
-            "correctAnswer": "Cat",
-            "explanation": "A noun is a person, place, thing, or idea. 'Cat' is a thing.",
-            "hint": "Which word names a thing?"
+            "question": "Which word is a noun in the sentence: 'The cat sat on the mat'?",
+            "answers": ["cat", "sat", "on", "the"],
+            "correctAnswer": "cat",
+            "explanation": "A noun is a word that names a person, place, thing, or animal. 'Cat' is a thing/animal.",
+            "hint": "Look for a word that names a person, place, or thing."
         },
         {
-            "subject": "Languages",
+            "subject": "English",
             "topic": "Grammar",
             "difficulty": 1,
-            "question": "Which word is a verb?",
-            "answers": ["Jump", "Table", "Red", "Slowly"],
-            "correctAnswer": "Jump",
-            "explanation": "A verb shows action or state of being. 'Jump' is an action.",
-            "hint": "Which word shows an action?"
+            "question": "Which sentence uses the correct form of 'to be'?",
+            "answers": ["She is happy.", "She am happy.", "She are happy.", "She be happy."],
+            "correctAnswer": "She is happy.",
+            "explanation": "'Is' is the correct form of 'to be' for third-person singular subjects like 'she'.",
+            "hint": "Match the verb to the subject: I am, you are, she ___."
         },
         {
-            "subject": "Languages",
+            "subject": "English",
+            "topic": "Grammar",
+            "difficulty": 1,
+            "question": "What type of word is 'quickly'?",
+            "answers": ["Adverb", "Adjective", "Noun", "Verb"],
+            "correctAnswer": "Adverb",
+            "explanation": "Adverbs modify verbs, adjectives, or other adverbs. 'Quickly' describes how something is done.",
+            "hint": "Words ending in '-ly' often modify verbs."
+        },
+        {
+            "subject": "English",
             "topic": "Grammar",
             "difficulty": 2,
-            "question": "Identify the adjective: 'The tall tree fell.'",
-            "answers": ["Tall", "Tree", "Fell", "The"],
-            "correctAnswer": "Tall",
-            "explanation": "An adjective describes a noun. 'Tall' describes 'tree'.",
-            "hint": "Which word describes the tree?"
+            "question": "Choose the correct pronoun: '___ went to the store.'",
+            "answers": ["She", "Her", "Hers", "Herself"],
+            "correctAnswer": "She",
+            "explanation": "'She' is a subject pronoun and is correct as the subject of the sentence.",
+            "hint": "You need a subject pronoun, not an object pronoun."
         },
         {
-            "subject": "Languages",
+            "subject": "English",
+            "topic": "Grammar",
+            "difficulty": 2,
+            "question": "Which sentence is punctuated correctly?",
+            "answers": ["Where are you going?", "Where are you going.", "Where are you going!", "where are you going?"],
+            "correctAnswer": "Where are you going?",
+            "explanation": "Questions end with a question mark, and sentences begin with a capital letter.",
+            "hint": "This is a question — what punctuation mark ends a question?"
+        },
+        {
+            "subject": "English",
             "topic": "Grammar",
             "difficulty": 3,
-            "question": "What is the past tense of 'go'?",
-            "answers": ["Went", "Goed", "Gone", "Going"],
-            "correctAnswer": "Went",
-            "explanation": "'Go' is an irregular verb. Its past tense is 'went'.",
-            "hint": "This is an irregular verb"
+            "question": "Identify the verb in: 'The dog barked loudly at the stranger.'",
+            "answers": ["barked", "dog", "loudly", "stranger"],
+            "correctAnswer": "barked",
+            "explanation": "'Barked' is the action word (verb) — it tells what the dog did.",
+            "hint": "Look for the word that describes an action."
         },
         {
-            "subject": "Languages",
+            "subject": "English",
+            "topic": "Grammar",
+            "difficulty": 3,
+            "question": "Which is the correct plural form of 'child'?",
+            "answers": ["children", "childs", "childes", "childern"],
+            "correctAnswer": "children",
+            "explanation": "'Child' has an irregular plural form: 'children'.",
+            "hint": "This is an irregular plural — it doesn't just add 's'."
+        },
+        {
+            "subject": "English",
             "topic": "Grammar",
             "difficulty": 4,
-            "question": "Which sentence is correct?",
-            "answers": ["She doesn't like it.", "She don't like it.", "She doesn't likes it.", "She don't likes it."],
-            "correctAnswer": "She doesn't like it.",
-            "explanation": "'She' takes 'doesn't' (third person singular), and the main verb stays in base form.",
-            "hint": "Third person singular uses 'doesn't'"
+            "question": "What is the past participle of 'write'?",
+            "answers": ["written", "wrote", "writed", "writing"],
+            "correctAnswer": "written",
+            "explanation": "'Write' is irregular: write → wrote (past) → written (past participle).",
+            "hint": "I have ___ a letter. Fill in the blank."
         },
         {
-            "subject": "Languages",
+            "subject": "English",
+            "topic": "Grammar",
+            "difficulty": 4,
+            "question": "Choose the sentence with correct subject-verb agreement.",
+            "answers": ["The players are ready.", "The players is ready.", "The players am ready.", "The players was ready."],
+            "correctAnswer": "The players are ready.",
+            "explanation": "'Players' is plural, so it requires the plural verb 'are'.",
+            "hint": "Plural subjects need plural verbs."
+        },
+        {
+            "subject": "English",
             "topic": "Grammar",
             "difficulty": 5,
-            "question": "What is a pronoun?",
-            "answers": ["A word that replaces a noun", "A describing word", "An action word", "A linking word"],
-            "correctAnswer": "A word that replaces a noun",
-            "explanation": "Pronouns (he, she, it, they) replace nouns to avoid repetition.",
-            "hint": "Think about 'he', 'she', 'it'"
+            "question": "Which sentence correctly uses the semicolon?",
+            "answers": ["I love reading; it expands my mind.", "I love reading; and it expands my mind.", "I love; reading it expands my mind.", "I love reading, it; expands my mind."],
+            "correctAnswer": "I love reading; it expands my mind.",
+            "explanation": "A semicolon joins two independent clauses that are closely related.",
+            "hint": "Both parts around the semicolon should be complete sentences."
         },
         {
-            "subject": "Languages",
-            "topic": "Grammar",
-            "difficulty": 6,
-            "question": "What type of sentence asks a question?",
-            "answers": ["Interrogative", "Declarative", "Exclamatory", "Imperative"],
-            "correctAnswer": "Interrogative",
-            "explanation": "Interrogative sentences ask questions and end with '?'",
-            "hint": "Inter-roga-tive relates to questioning"
-        },
-        {
-            "subject": "Languages",
-            "topic": "Vocabulary",
-            "difficulty": 1,
-            "question": "What does 'enormous' mean?",
-            "answers": ["Very large", "Very small", "Very fast", "Very old"],
-            "correctAnswer": "Very large",
-            "explanation": "Enormous means extremely large or huge.",
-            "hint": "Think of something really big"
-        },
-        {
-            "subject": "Languages",
+            "subject": "English",
             "topic": "Vocabulary",
             "difficulty": 2,
-            "question": "What is a synonym for 'happy'?",
-            "answers": ["Joyful", "Sad", "Angry", "Tired"],
-            "correctAnswer": "Joyful",
-            "explanation": "A synonym is a word with similar meaning. Joyful = happy.",
-            "hint": "Which word means the same as happy?"
+            "question": "What does 'benevolent' mean?",
+            "answers": ["Kind and generous", "Angry and hostile", "Quiet and shy", "Brave and bold"],
+            "correctAnswer": "Kind and generous",
+            "explanation": "'Benevolent' comes from Latin 'bene' (well) + 'volent' (wishing), meaning well-wishing or kind.",
+            "hint": "The prefix 'bene-' means 'good' or 'well'."
         },
         {
-            "subject": "Languages",
+            "subject": "English",
+            "topic": "Vocabulary",
+            "difficulty": 2,
+            "question": "Which word is a synonym for 'happy'?",
+            "answers": ["Joyful", "Sorrowful", "Angry", "Nervous"],
+            "correctAnswer": "Joyful",
+            "explanation": "A synonym has a similar meaning. 'Joyful' means full of joy, similar to happy.",
+            "hint": "Look for a word with a similar meaning."
+        },
+        {
+            "subject": "English",
             "topic": "Vocabulary",
             "difficulty": 3,
-            "question": "What is the antonym of 'ancient'?",
-            "answers": ["Modern", "Old", "Historic", "Classic"],
-            "correctAnswer": "Modern",
-            "explanation": "An antonym is the opposite. Modern is the opposite of ancient.",
-            "hint": "Which word means the opposite?"
+            "question": "What is an antonym of 'courageous'?",
+            "answers": ["Cowardly", "Brave", "Bold", "Fearless"],
+            "correctAnswer": "Cowardly",
+            "explanation": "An antonym is a word with the opposite meaning. 'Cowardly' is the opposite of 'courageous'.",
+            "hint": "An antonym means the opposite."
         },
         {
-            "subject": "Languages",
+            "subject": "English",
+            "topic": "Vocabulary",
+            "difficulty": 3,
+            "question": "What does the prefix 'un-' mean in 'unhappy'?",
+            "answers": ["Not", "Very", "Again", "Before"],
+            "correctAnswer": "Not",
+            "explanation": "The prefix 'un-' negates the word, so 'unhappy' means 'not happy'.",
+            "hint": "Think about how the meaning changes when you add 'un-'."
+        },
+        {
+            "subject": "English",
             "topic": "Vocabulary",
             "difficulty": 4,
             "question": "What does 'ambiguous' mean?",
-            "answers": ["Having multiple meanings", "Very clear", "Extremely large", "Moving quickly"],
-            "correctAnswer": "Having multiple meanings",
-            "explanation": "Ambiguous means open to more than one interpretation.",
-            "hint": "Not clear, could mean different things"
+            "answers": ["Having more than one meaning", "Very clear", "Extremely loud", "Physically strong"],
+            "correctAnswer": "Having more than one meaning",
+            "explanation": "'Ambiguous' means open to more than one interpretation; unclear or inexact.",
+            "hint": "Think of something that could be understood in multiple ways."
         },
         {
-            "subject": "Languages",
+            "subject": "English",
+            "topic": "Vocabulary",
+            "difficulty": 4,
+            "question": "Which word means 'to make something less severe'?",
+            "answers": ["Mitigate", "Aggravate", "Complicate", "Amplify"],
+            "correctAnswer": "Mitigate",
+            "explanation": "'Mitigate' means to make less severe, serious, or painful.",
+            "hint": "It starts with 'mit-' and relates to reducing intensity."
+        },
+        {
+            "subject": "English",
+            "topic": "Vocabulary",
+            "difficulty": 5,
+            "question": "What does 'ephemeral' mean?",
+            "answers": ["Lasting a very short time", "Eternal and everlasting", "Extremely heavy", "Highly valuable"],
+            "correctAnswer": "Lasting a very short time",
+            "explanation": "'Ephemeral' describes something that is short-lived or transitory.",
+            "hint": "Think of a butterfly's life or a morning dew drop."
+        },
+        {
+            "subject": "English",
+            "topic": "Vocabulary",
+            "difficulty": 5,
+            "question": "What is the meaning of 'ubiquitous'?",
+            "answers": ["Found everywhere", "Extremely rare", "Very expensive", "Completely silent"],
+            "correctAnswer": "Found everywhere",
+            "explanation": "'Ubiquitous' means existing or being everywhere at the same time.",
+            "hint": "Think of something so common it seems to be everywhere."
+        },
+        {
+            "subject": "English",
+            "topic": "Vocabulary",
+            "difficulty": 6,
+            "question": "What does 'juxtapose' mean?",
+            "answers": ["Place side by side for comparison", "Remove completely", "Stack on top of", "Hide from view"],
+            "correctAnswer": "Place side by side for comparison",
+            "explanation": "'Juxtapose' means to place close together for contrasting effect.",
+            "hint": "'Juxta' is Latin for 'near' or 'beside'."
+        },
+        {
+            "subject": "English",
+            "topic": "Writing",
+            "difficulty": 4,
+            "question": "What is the purpose of a topic sentence?",
+            "answers": ["To introduce the main idea of a paragraph", "To end a paragraph", "To provide evidence", "To transition between essays"],
+            "correctAnswer": "To introduce the main idea of a paragraph",
+            "explanation": "A topic sentence states the main idea and sets the direction for the paragraph.",
+            "hint": "It usually comes first in a paragraph and tells what the paragraph is about."
+        },
+        {
+            "subject": "English",
+            "topic": "Writing",
+            "difficulty": 4,
+            "question": "Which transition word shows contrast?",
+            "answers": ["However", "Furthermore", "Similarly", "Therefore"],
+            "correctAnswer": "However",
+            "explanation": "'However' introduces an opposing or contrasting idea.",
+            "hint": "This word signals that the next idea will be different from or opposite to the previous one."
+        },
+        {
+            "subject": "English",
             "topic": "Writing",
             "difficulty": 5,
-            "question": "What should start every sentence?",
-            "answers": ["A capital letter", "A number", "A comma", "A small letter"],
-            "correctAnswer": "A capital letter",
-            "explanation": "Every sentence begins with a capital (uppercase) letter.",
-            "hint": "Think about the first letter"
+            "question": "What is a thesis statement?",
+            "answers": ["The central argument of an essay", "The first sentence of any paragraph", "A list of evidence", "The bibliography"],
+            "correctAnswer": "The central argument of an essay",
+            "explanation": "A thesis statement presents the main argument or claim that the essay will support.",
+            "hint": "It's the one sentence that summarizes the entire essay's argument."
         },
         {
-            "subject": "Languages",
+            "subject": "English",
+            "topic": "Writing",
+            "difficulty": 5,
+            "question": "Which type of essay aims to convince the reader?",
+            "answers": ["Persuasive", "Narrative", "Descriptive", "Expository"],
+            "correctAnswer": "Persuasive",
+            "explanation": "A persuasive essay uses arguments and evidence to convince the reader of a particular viewpoint.",
+            "hint": "Think about the type of writing that tries to change your mind."
+        },
+        {
+            "subject": "English",
             "topic": "Writing",
             "difficulty": 6,
-            "question": "What comes at the end of a question?",
-            "answers": ["Question mark (?)", "Period (.)", "Exclamation (!)", "Comma (,)"],
-            "correctAnswer": "Question mark (?)",
-            "explanation": "Questions always end with a question mark.",
-            "hint": "What punctuation mark is this?"
+            "question": "What is the correct order for a standard essay?",
+            "answers": ["Introduction, body paragraphs, conclusion", "Conclusion, body, introduction", "Body, introduction, conclusion", "Introduction, conclusion, body"],
+            "correctAnswer": "Introduction, body paragraphs, conclusion",
+            "explanation": "Standard essay structure begins with an introduction, develops ideas in body paragraphs, and ends with a conclusion.",
+            "hint": "Start by introducing the topic and end by wrapping it up."
         },
         {
-            "subject": "Languages",
+            "subject": "English",
+            "topic": "Writing",
+            "difficulty": 6,
+            "question": "Which sentence demonstrates active voice?",
+            "answers": ["The chef prepared the meal.", "The meal was prepared by the chef.", "The meal was being prepared.", "It was prepared."],
+            "correctAnswer": "The chef prepared the meal.",
+            "explanation": "In active voice, the subject performs the action. 'The chef' (subject) 'prepared' (verb) 'the meal' (object).",
+            "hint": "Who is doing the action? If the doer comes first, it's active voice."
+        },
+        {
+            "subject": "English",
             "topic": "Writing",
             "difficulty": 7,
-            "question": "What is a thesis statement?",
-            "answers": ["The main argument of an essay", "The title", "A question", "A bibliography"],
-            "correctAnswer": "The main argument of an essay",
-            "explanation": "A thesis statement presents the main argument or point of an essay.",
-            "hint": "It's the central claim of your essay"
+            "question": "What is 'parallel structure' in writing?",
+            "answers": ["Using the same grammatical pattern in a series", "Writing two paragraphs with the same idea", "Repeating the same word multiple times", "Using two different fonts"],
+            "correctAnswer": "Using the same grammatical pattern in a series",
+            "explanation": "Parallel structure means using consistent grammatical forms in a list or series (e.g., 'running, jumping, and swimming').",
+            "hint": "Think about keeping a consistent pattern in lists."
         },
         {
-            "subject": "Languages",
+            "subject": "English",
+            "topic": "Writing",
+            "difficulty": 7,
+            "question": "Which is an example of a rhetorical question?",
+            "answers": ["Isn't it obvious that we need change?", "What time is it?", "Where do you live?", "Can I have water?"],
+            "correctAnswer": "Isn't it obvious that we need change?",
+            "explanation": "A rhetorical question is asked for effect, not to get an answer. It makes the reader think.",
+            "hint": "This type of question doesn't expect a real answer."
+        },
+        {
+            "subject": "English",
+            "topic": "Writing",
+            "difficulty": 8,
+            "question": "What literary device is used in: 'The wind whispered through the trees'?",
+            "answers": ["Personification", "Simile", "Alliteration", "Hyperbole"],
+            "correctAnswer": "Personification",
+            "explanation": "Personification gives human qualities to non-human things. Wind cannot literally 'whisper'.",
+            "hint": "A non-human thing is doing something only humans can do."
+        },
+        {
+            "subject": "English",
+            "topic": "Sentence Structure",
+            "difficulty": 5,
+            "question": "What is a compound sentence?",
+            "answers": ["Two independent clauses joined by a conjunction", "A sentence with one clause", "A sentence with a dependent clause", "A very long sentence"],
+            "correctAnswer": "Two independent clauses joined by a conjunction",
+            "explanation": "A compound sentence combines two independent clauses, often with 'and', 'but', 'or', etc.",
+            "hint": "Think 'compound' = two independent parts combined."
+        },
+        {
+            "subject": "English",
+            "topic": "Sentence Structure",
+            "difficulty": 5,
+            "question": "Which is a complex sentence?",
+            "answers": ["Although it rained, we went outside.", "It rained and we stayed inside.", "It rained.", "It rained. We stayed inside."],
+            "correctAnswer": "Although it rained, we went outside.",
+            "explanation": "A complex sentence has one independent clause and at least one dependent clause ('Although it rained').",
+            "hint": "Look for a sentence that has a dependent (subordinate) clause."
+        },
+        {
+            "subject": "English",
+            "topic": "Sentence Structure",
+            "difficulty": 6,
+            "question": "What is a dangling modifier?",
+            "answers": ["A modifier that doesn't clearly refer to what it modifies", "An extra adjective", "A missing verb", "An unnecessary adverb"],
+            "correctAnswer": "A modifier that doesn't clearly refer to what it modifies",
+            "explanation": "A dangling modifier is a word or phrase that doesn't clearly connect to the word it's supposed to modify.",
+            "hint": "It 'dangles' because it has no clear word to attach to."
+        },
+        {
+            "subject": "English",
+            "topic": "Sentence Structure",
+            "difficulty": 6,
+            "question": "Identify the subordinate clause: 'When the bell rang, students left the room.'",
+            "answers": ["When the bell rang", "students left the room", "left the room", "the bell rang"],
+            "correctAnswer": "When the bell rang",
+            "explanation": "'When the bell rang' is a dependent (subordinate) clause — it cannot stand alone as a sentence.",
+            "hint": "Which part cannot stand alone as a complete sentence?"
+        },
+        {
+            "subject": "English",
+            "topic": "Sentence Structure",
+            "difficulty": 7,
+            "question": "What is a run-on sentence?",
+            "answers": ["Two independent clauses joined without proper punctuation", "A very long sentence", "A sentence fragment", "A sentence with too many adjectives"],
+            "correctAnswer": "Two independent clauses joined without proper punctuation",
+            "explanation": "Run-on sentences fuse two or more independent clauses without a conjunction or proper punctuation.",
+            "hint": "It 'runs on' because two sentences are improperly combined."
+        },
+        {
+            "subject": "English",
+            "topic": "Sentence Structure",
+            "difficulty": 7,
+            "question": "Which sentence contains an appositive?",
+            "answers": ["My brother, a talented musician, plays guitar.", "My brother plays guitar well.", "My talented brother plays guitar.", "My brother and I play guitar."],
+            "correctAnswer": "My brother, a talented musician, plays guitar.",
+            "explanation": "An appositive ('a talented musician') renames or describes the noun next to it ('my brother').",
+            "hint": "Look for a phrase set off by commas that renames a nearby noun."
+        },
+        {
+            "subject": "English",
             "topic": "Sentence Structure",
             "difficulty": 8,
-            "question": "What is a compound sentence?",
-            "answers": ["Two independent clauses joined by a conjunction", "A sentence with one clause", "A sentence with no verb", "A question"],
-            "correctAnswer": "Two independent clauses joined by a conjunction",
-            "explanation": "Compound sentences join two independent clauses using conjunctions like 'and', 'but', 'or'.",
-            "hint": "Two complete sentences joined together"
+            "question": "What type of sentence is: 'Please close the door'?",
+            "answers": ["Imperative", "Declarative", "Interrogative", "Exclamatory"],
+            "correctAnswer": "Imperative",
+            "explanation": "An imperative sentence gives a command or makes a request.",
+            "hint": "This sentence is telling someone to do something."
+        },
+        {
+            "subject": "English",
+            "topic": "Sentence Structure",
+            "difficulty": 8,
+            "question": "Which is a periodic sentence?",
+            "answers": ["Despite the rain, the cold, and the traffic, she arrived on time.", "She arrived on time despite the rain.", "She arrived. The rain had stopped.", "She was on time, and the rain had stopped."],
+            "correctAnswer": "Despite the rain, the cold, and the traffic, she arrived on time.",
+            "explanation": "A periodic sentence delays the main clause until the end, building suspense.",
+            "hint": "The main point comes at the very end of the sentence."
+        },
+        {
+            "subject": "English",
+            "topic": "Sentence Structure",
+            "difficulty": 9,
+            "question": "What is an absolute phrase?",
+            "answers": ["A noun phrase that modifies the whole sentence", "A verb phrase at the start of a sentence", "A prepositional phrase", "An adverb clause"],
+            "correctAnswer": "A noun phrase that modifies the whole sentence",
+            "explanation": "An absolute phrase (e.g., 'Her voice trembling, she began to speak') modifies the entire sentence rather than a single word.",
+            "hint": "It's a noun + participle phrase that adds detail to the whole sentence."
+        },
+        {
+            "subject": "English",
+            "topic": "Word Forms",
+            "difficulty": 6,
+            "question": "What is the adjective form of 'beauty'?",
+            "answers": ["beautiful", "beautify", "beautifully", "beauteous"],
+            "correctAnswer": "beautiful",
+            "explanation": "Adding '-ful' to 'beauty' (with spelling change) creates the adjective 'beautiful'.",
+            "hint": "Which form describes a noun? E.g., 'a ___ day'."
+        },
+        {
+            "subject": "English",
+            "topic": "Word Forms",
+            "difficulty": 6,
+            "question": "What is the noun form of 'decide'?",
+            "answers": ["decision", "decisive", "decidedly", "deciding"],
+            "correctAnswer": "decision",
+            "explanation": "'Decision' is the noun form of the verb 'decide', naming the act of deciding.",
+            "hint": "She made a ___. Fill in with a noun."
+        },
+        {
+            "subject": "English",
+            "topic": "Word Forms",
+            "difficulty": 7,
+            "question": "What is the adverb form of 'careful'?",
+            "answers": ["carefully", "carefulness", "careless", "caring"],
+            "correctAnswer": "carefully",
+            "explanation": "Adding '-ly' to the adjective 'careful' creates the adverb 'carefully'.",
+            "hint": "Adverbs often end in '-ly'."
+        },
+        {
+            "subject": "English",
+            "topic": "Word Forms",
+            "difficulty": 7,
+            "question": "Which suffix creates a noun meaning 'the state of'?",
+            "answers": ["-ness", "-ful", "-ly", "-able"],
+            "correctAnswer": "-ness",
+            "explanation": "The suffix '-ness' turns adjectives into nouns indicating a state or quality (e.g., 'sadness', 'happiness').",
+            "hint": "Think: happy → happi___."
+        },
+        {
+            "subject": "English",
+            "topic": "Word Forms",
+            "difficulty": 8,
+            "question": "What is the verb form of 'analysis'?",
+            "answers": ["analyze", "analytical", "analyst", "analytically"],
+            "correctAnswer": "analyze",
+            "explanation": "'Analyze' is the verb form meaning to examine in detail.",
+            "hint": "She will ___ the data. Fill in with a verb."
+        },
+        {
+            "subject": "English",
+            "topic": "Word Forms",
+            "difficulty": 8,
+            "question": "What does the prefix 'anti-' mean?",
+            "answers": ["Against", "Before", "After", "With"],
+            "correctAnswer": "Against",
+            "explanation": "'Anti-' means against or opposed to, as in 'antibacterial' (against bacteria).",
+            "hint": "Think of 'antiwar' or 'antibiotic'."
+        },
+        {
+            "subject": "English",
+            "topic": "Word Forms",
+            "difficulty": 9,
+            "question": "Which word uses the Greek root 'graph' meaning 'to write'?",
+            "answers": ["Biography", "Biology", "Bicycle", "Benefit"],
+            "correctAnswer": "Biography",
+            "explanation": "'Biography' = 'bio' (life) + 'graph' (write) — a written account of someone's life.",
+            "hint": "'Graph' appears in many words related to writing or recording."
+        },
+        {
+            "subject": "English",
+            "topic": "Word Forms",
+            "difficulty": 9,
+            "question": "What is the nominalization of 'to destroy'?",
+            "answers": ["destruction", "destructive", "destructively", "destroyer"],
+            "correctAnswer": "destruction",
+            "explanation": "'Destruction' is the abstract noun (nominalization) formed from the verb 'destroy'.",
+            "hint": "Nominalization converts a verb into a noun naming the process or result."
+        },
+        {
+            "subject": "English",
+            "topic": "Word Forms",
+            "difficulty": 10,
+            "question": "Which word contains the Latin root 'cred' meaning 'to believe'?",
+            "answers": ["Incredible", "Increase", "Create", "Criminal"],
+            "correctAnswer": "Incredible",
+            "explanation": "'Incredible' = 'in-' (not) + 'cred' (believe) + '-ible' (able) — not able to be believed.",
+            "hint": "Think about a word related to believing or trust."
+        },
+        {
+            "subject": "English",
+            "topic": "Grammar",
+            "difficulty": 5,
+            "question": "Which sentence correctly uses 'who' vs 'whom'?",
+            "answers": ["To whom did you give the book?", "To who did you give the book?", "Whom is coming to dinner?", "Who's book is this?"],
+            "correctAnswer": "To whom did you give the book?",
+            "explanation": "'Whom' is used as an object (after prepositions like 'to'). 'Who' is used as a subject.",
+            "hint": "'Whom' follows prepositions; 'who' is the subject form."
+        },
+        {
+            "subject": "English",
+            "topic": "Vocabulary",
+            "difficulty": 6,
+            "question": "What does 'pragmatic' mean?",
+            "answers": ["Dealing with things practically", "Being overly emotional", "Extremely artistic", "Deeply philosophical"],
+            "correctAnswer": "Dealing with things practically",
+            "explanation": "'Pragmatic' means dealing with things sensibly and realistically, focused on practical results.",
+            "hint": "Think practical and realistic rather than idealistic."
+        },
+        {
+            "subject": "English",
+            "topic": "Writing",
+            "difficulty": 8,
+            "question": "What is an unreliable narrator?",
+            "answers": ["A narrator whose account cannot be fully trusted", "A narrator who forgets the story", "A narrator in third person", "A narrator who speaks in present tense"],
+            "correctAnswer": "A narrator whose account cannot be fully trusted",
+            "explanation": "An unreliable narrator's credibility is compromised, causing readers to question their version of events.",
+            "hint": "Think about a storyteller who might be biased, lying, or mistaken."
+        },
+        {
+            "subject": "English",
+            "topic": "Sentence Structure",
+            "difficulty": 9,
+            "question": "What is a compound-complex sentence?",
+            "answers": ["A sentence with at least two independent clauses and one dependent clause", "A sentence with one independent clause", "A sentence with only dependent clauses", "A very long simple sentence"],
+            "correctAnswer": "A sentence with at least two independent clauses and one dependent clause",
+            "explanation": "A compound-complex sentence combines compound (multiple independent clauses) and complex (dependent clause) structures.",
+            "hint": "It's a combination of compound AND complex sentence types."
+        },
+        {
+            "subject": "English",
+            "topic": "Word Forms",
+            "difficulty": 10,
+            "question": "What is the difference between 'affect' and 'effect'?",
+            "answers": ["'Affect' is usually a verb; 'effect' is usually a noun", "'Effect' is usually a verb; 'affect' is usually a noun", "They mean the same thing", "'Affect' is formal; 'effect' is informal"],
+            "correctAnswer": "'Affect' is usually a verb; 'effect' is usually a noun",
+            "explanation": "'Affect' (verb) means to influence. 'Effect' (noun) means the result. E.g., 'The drug affected her. The effect was immediate.'",
+            "hint": "A for Action (verb), E for End result (noun)."
+        },
+        {
+            "subject": "English",
+            "topic": "Grammar",
+            "difficulty": 3,
+            "question": "Which sentence uses the correct form of 'there/their/they're'?",
+            "answers": ["They're going to the park.", "Their going to the park.", "There going to the park.", "Thier going to the park."],
+            "correctAnswer": "They're going to the park.",
+            "explanation": "'They're' is the contraction of 'they are'. 'Their' shows possession. 'There' refers to a place.",
+            "hint": "Try expanding the contraction: 'they are going to the park'."
+        },
+        {
+            "subject": "English",
+            "topic": "Grammar",
+            "difficulty": 2,
+            "question": "What is the plural of 'mouse'?",
+            "answers": ["mice", "mouses", "mouse's", "mices"],
+            "correctAnswer": "mice",
+            "explanation": "'Mouse' has an irregular plural form: 'mice'.",
+            "hint": "This is an irregular plural, like 'goose' → 'geese'."
         }
     ]
 }

@@ -7,148 +7,538 @@
             "question": "How many notes are in a musical octave?",
             "answers": ["8", "7", "12", "5"],
             "correctAnswer": "8",
-            "explanation": "An octave spans 8 notes (C, D, E, F, G, A, B, C).",
-            "hint": "'Oct' means 8"
+            "explanation": "An octave spans 8 notes (e.g., C to the next C), though there are 12 semitones within it.",
+            "hint": "The prefix 'oct-' means eight."
         },
         {
             "subject": "Music",
             "topic": "Notes",
             "difficulty": 1,
-            "question": "Which note comes after C?",
-            "answers": ["D", "B", "E", "A"],
-            "correctAnswer": "D",
-            "explanation": "The musical alphabet goes: C, D, E, F, G, A, B",
-            "hint": "Think of the alphabet starting from C"
+            "question": "What are the letter names of the musical notes?",
+            "answers": ["A, B, C, D, E, F, G", "A, B, C, D, E, F, G, H", "Do, Re, Mi, Fa", "1, 2, 3, 4, 5, 6, 7"],
+            "correctAnswer": "A, B, C, D, E, F, G",
+            "explanation": "Western music uses seven letter names: A through G, which then repeat.",
+            "hint": "They use the first seven letters of the alphabet."
+        },
+        {
+            "subject": "Music",
+            "topic": "Notes",
+            "difficulty": 1,
+            "question": "What does a sharp (♯) do to a note?",
+            "answers": ["Raises it by a half step", "Lowers it by a half step", "Makes it louder", "Makes it longer"],
+            "correctAnswer": "Raises it by a half step",
+            "explanation": "A sharp raises a note by one semitone (half step).",
+            "hint": "Think of 'sharp' as moving the pitch upward."
         },
         {
             "subject": "Music",
             "topic": "Notes",
             "difficulty": 2,
-            "question": "What is the symbol for a sharp?",
-            "answers": ["#", "b", "&", "%"],
-            "correctAnswer": "#",
-            "explanation": "A sharp (#) raises a note by one half step.",
-            "hint": "It looks like a hashtag"
+            "question": "What does a flat (♭) do to a note?",
+            "answers": ["Lowers it by a half step", "Raises it by a half step", "Makes it quieter", "Makes it shorter"],
+            "correctAnswer": "Lowers it by a half step",
+            "explanation": "A flat lowers a note by one semitone (half step).",
+            "hint": "A flat is the opposite of a sharp."
         },
         {
             "subject": "Music",
             "topic": "Notes",
-            "difficulty": 3,
-            "question": "How many half steps are in an octave?",
-            "answers": ["12", "8", "7", "14"],
-            "correctAnswer": "12",
-            "explanation": "An octave contains 12 half steps (semitones).",
-            "hint": "Think of all the keys on a piano in one octave"
+            "difficulty": 2,
+            "question": "Which note is enharmonically equivalent to C♯?",
+            "answers": ["D♭", "B♯", "C♭", "D♯"],
+            "correctAnswer": "D♭",
+            "explanation": "C♯ and D♭ are the same pitch, just spelled differently. This is called enharmonic equivalence.",
+            "hint": "What note is one half step below D?"
         },
         {
             "subject": "Music",
             "topic": "Notes",
-            "difficulty": 4,
-            "question": "What clef is used for higher-pitched instruments?",
+            "difficulty": 2,
+            "question": "What clef is commonly used for higher-pitched instruments like violin?",
             "answers": ["Treble clef", "Bass clef", "Alto clef", "Tenor clef"],
             "correctAnswer": "Treble clef",
             "explanation": "The treble clef (G clef) is used for higher-pitched instruments and voices.",
-            "hint": "The clef shaped like a fancy G"
+            "hint": "It's also called the G clef because it wraps around the G line."
+        },
+        {
+            "subject": "Music",
+            "topic": "Notes",
+            "difficulty": 3,
+            "question": "What note sits on the middle line of the treble clef staff?",
+            "answers": ["B", "D", "F", "A"],
+            "correctAnswer": "B",
+            "explanation": "The lines of the treble clef from bottom to top are E, G, B, D, F. The middle (third) line is B.",
+            "hint": "Remember 'Every Good Boy Does Fine' — what's the middle word?"
+        },
+        {
+            "subject": "Music",
+            "topic": "Notes",
+            "difficulty": 3,
+            "question": "How many half steps are between C and E?",
+            "answers": ["4", "2", "3", "5"],
+            "correctAnswer": "4",
+            "explanation": "C→C♯(1)→D(2)→D♯(3)→E(4). There are 4 half steps, which is a major third.",
+            "hint": "Count each semitone: C to C♯ is one, C♯ to D is two, and so on."
+        },
+        {
+            "subject": "Music",
+            "topic": "Rhythm",
+            "difficulty": 2,
+            "question": "How many beats does a whole note get in 4/4 time?",
+            "answers": ["4", "2", "1", "8"],
+            "correctAnswer": "4",
+            "explanation": "A whole note lasts for 4 beats in 4/4 time, filling an entire measure.",
+            "hint": "It fills a 'whole' measure of 4/4 time."
+        },
+        {
+            "subject": "Music",
+            "topic": "Rhythm",
+            "difficulty": 2,
+            "question": "How many beats does a half note get in 4/4 time?",
+            "answers": ["2", "4", "1", "3"],
+            "correctAnswer": "2",
+            "explanation": "A half note gets 2 beats — it is half the duration of a whole note.",
+            "hint": "It's half of a whole note's duration."
+        },
+        {
+            "subject": "Music",
+            "topic": "Rhythm",
+            "difficulty": 3,
+            "question": "How many eighth notes equal one quarter note?",
+            "answers": ["2", "4", "8", "1"],
+            "correctAnswer": "2",
+            "explanation": "Two eighth notes have the same total duration as one quarter note.",
+            "hint": "An eighth note is half the value of a quarter note."
+        },
+        {
+            "subject": "Music",
+            "topic": "Rhythm",
+            "difficulty": 3,
+            "question": "What does a dot after a note do?",
+            "answers": ["Adds half the note's value", "Doubles the note's value", "Makes it staccato", "Makes it silent"],
+            "correctAnswer": "Adds half the note's value",
+            "explanation": "A dotted note is 1.5 times its original value. For example, a dotted half note = 3 beats.",
+            "hint": "A dotted half note lasts 3 beats instead of 2."
+        },
+        {
+            "subject": "Music",
+            "topic": "Rhythm",
+            "difficulty": 4,
+            "question": "What is a triplet?",
+            "answers": ["Three notes played in the time of two", "Three notes in a row", "A group of three chords", "Three measures together"],
+            "correctAnswer": "Three notes played in the time of two",
+            "explanation": "A triplet divides a beat (or note value) into three equal parts instead of two.",
+            "hint": "It's a way of fitting three evenly into the space normally occupied by two."
+        },
+        {
+            "subject": "Music",
+            "topic": "Rhythm",
+            "difficulty": 4,
+            "question": "What is syncopation?",
+            "answers": ["Emphasis on normally weak beats", "Playing very fast", "Playing very slowly", "Repeating the same rhythm"],
+            "correctAnswer": "Emphasis on normally weak beats",
+            "explanation": "Syncopation places accents on beats that are normally unaccented, creating rhythmic interest.",
+            "hint": "Think of stressing the 'off-beats' or unexpected moments."
+        },
+        {
+            "subject": "Music",
+            "topic": "Rhythm",
+            "difficulty": 5,
+            "question": "What is the value of a dotted quarter note in 4/4 time?",
+            "answers": ["1.5 beats", "1 beat", "2 beats", "0.75 beats"],
+            "correctAnswer": "1.5 beats",
+            "explanation": "A quarter note = 1 beat. The dot adds half: 1 + 0.5 = 1.5 beats.",
+            "hint": "Add half the original value to the note."
         },
         {
             "subject": "Music",
             "topic": "Scales",
             "difficulty": 3,
-            "question": "How many notes are in a major scale?",
-            "answers": ["7", "8", "5", "12"],
-            "correctAnswer": "7",
-            "explanation": "A major scale has 7 unique notes before repeating the octave.",
-            "hint": "Do Re Mi Fa Sol La Ti"
-        },
-        {
-            "subject": "Music",
-            "topic": "Scales",
-            "difficulty": 4,
-            "question": "What is the pattern of a major scale?",
+            "question": "What is the pattern of whole and half steps in a major scale?",
             "answers": ["W-W-H-W-W-W-H", "W-H-W-W-H-W-W", "H-W-W-H-W-W-W", "W-W-W-H-W-W-H"],
             "correctAnswer": "W-W-H-W-W-W-H",
-            "explanation": "A major scale follows: Whole-Whole-Half-Whole-Whole-Whole-Half",
-            "hint": "W = Whole step, H = Half step"
+            "explanation": "A major scale follows: Whole-Whole-Half-Whole-Whole-Whole-Half.",
+            "hint": "Think of C major on a piano — where are the half steps?"
+        },
+        {
+            "subject": "Music",
+            "topic": "Scales",
+            "difficulty": 3,
+            "question": "How many sharps are in the key of G major?",
+            "answers": ["1", "0", "2", "3"],
+            "correctAnswer": "1",
+            "explanation": "G major has one sharp: F♯.",
+            "hint": "It's the first key in the order of sharps."
+        },
+        {
+            "subject": "Music",
+            "topic": "Scales",
+            "difficulty": 4,
+            "question": "What is the relative minor of C major?",
+            "answers": ["A minor", "C minor", "D minor", "E minor"],
+            "correctAnswer": "A minor",
+            "explanation": "The relative minor is found by going to the 6th degree of the major scale. The 6th note of C major is A.",
+            "hint": "Count up 6 notes from C, or down 3 half steps."
+        },
+        {
+            "subject": "Music",
+            "topic": "Scales",
+            "difficulty": 4,
+            "question": "What type of scale has the pattern W-H-W-W-H-W-W?",
+            "answers": ["Natural minor", "Major", "Harmonic minor", "Chromatic"],
+            "correctAnswer": "Natural minor",
+            "explanation": "The natural minor scale follows: Whole-Half-Whole-Whole-Half-Whole-Whole.",
+            "hint": "Compare this to the major scale pattern — it starts differently."
+        },
+        {
+            "subject": "Music",
+            "topic": "Scales",
+            "difficulty": 4,
+            "question": "How many flats are in the key of F major?",
+            "answers": ["1", "0", "2", "3"],
+            "correctAnswer": "1",
+            "explanation": "F major has one flat: B♭.",
+            "hint": "It's the first key in the order of flats."
         },
         {
             "subject": "Music",
             "topic": "Scales",
             "difficulty": 5,
-            "question": "What scale has no sharps or flats?",
-            "answers": ["C major", "G major", "D major", "F major"],
-            "correctAnswer": "C major",
-            "explanation": "C major uses only natural notes: C D E F G A B",
-            "hint": "The simplest scale on a piano"
+            "question": "What scale uses only the black keys on a piano starting from G♭?",
+            "answers": ["G♭ major pentatonic", "G♭ chromatic", "G♭ blues", "G♭ whole tone"],
+            "correctAnswer": "G♭ major pentatonic",
+            "explanation": "The five black keys form a pentatonic scale. Starting from G♭, this is the G♭ major pentatonic scale.",
+            "hint": "A pentatonic scale has 5 notes — count the black keys."
+        },
+        {
+            "subject": "Music",
+            "topic": "Scales",
+            "difficulty": 5,
+            "question": "What note is raised in a harmonic minor scale compared to natural minor?",
+            "answers": ["The 7th degree", "The 3rd degree", "The 5th degree", "The 2nd degree"],
+            "correctAnswer": "The 7th degree",
+            "explanation": "The harmonic minor raises the 7th degree by a half step to create a leading tone.",
+            "hint": "This raised note creates a stronger pull toward the tonic."
         },
         {
             "subject": "Music",
             "topic": "Chords",
             "difficulty": 4,
-            "question": "A major chord consists of:",
-            "answers": ["Root, major 3rd, perfect 5th", "Root, minor 3rd, perfect 5th", "Root, perfect 4th, perfect 5th", "Root, major 2nd, perfect 5th"],
-            "correctAnswer": "Root, major 3rd, perfect 5th",
-            "explanation": "A major chord = root note + note 4 half steps up + note 7 half steps up",
-            "hint": "Major chords sound happy and bright"
+            "question": "What notes make up a C major chord?",
+            "answers": ["C, E, G", "C, D, E", "C, E♭, G", "C, F, A"],
+            "correctAnswer": "C, E, G",
+            "explanation": "A major chord is built with root, major third, and perfect fifth: C-E-G.",
+            "hint": "Stack thirds from C: skip one note each time in the C major scale."
+        },
+        {
+            "subject": "Music",
+            "topic": "Chords",
+            "difficulty": 4,
+            "question": "What is the difference between a major and minor chord?",
+            "answers": ["The third is lowered by a half step in minor", "The fifth is lowered in minor", "The root is different", "Minor chords have four notes"],
+            "correctAnswer": "The third is lowered by a half step in minor",
+            "explanation": "A minor chord has a flatted (lowered) third compared to its major counterpart. C major = C-E-G, C minor = C-E♭-G.",
+            "hint": "Only one note changes — and it's the middle note of the triad."
         },
         {
             "subject": "Music",
             "topic": "Chords",
             "difficulty": 5,
-            "question": "How many notes in a triad?",
-            "answers": ["3", "2", "4", "5"],
-            "correctAnswer": "3",
-            "explanation": "A triad is a chord made of exactly 3 notes.",
-            "hint": "'Tri' means 3"
+            "question": "What is a diminished triad?",
+            "answers": ["Root, minor third, diminished fifth", "Root, major third, perfect fifth", "Root, minor third, perfect fifth", "Root, major third, augmented fifth"],
+            "correctAnswer": "Root, minor third, diminished fifth",
+            "explanation": "A diminished triad has a minor third and a diminished (lowered) fifth.",
+            "hint": "Both intervals are 'shrunk' compared to a major triad."
+        },
+        {
+            "subject": "Music",
+            "topic": "Chords",
+            "difficulty": 5,
+            "question": "What Roman numeral represents the dominant chord in a major key?",
+            "answers": ["V", "I", "IV", "ii"],
+            "correctAnswer": "V",
+            "explanation": "The dominant chord is built on the 5th scale degree and is labeled V (major) in Roman numeral analysis.",
+            "hint": "The 'dominant' is the 5th degree of the scale."
         },
         {
             "subject": "Music",
             "topic": "Chords",
             "difficulty": 6,
-            "question": "What makes a chord 'minor'?",
-            "answers": ["A flatted 3rd", "A sharped 5th", "A flatted 7th", "A sharped root"],
-            "correctAnswer": "A flatted 3rd",
-            "explanation": "A minor chord lowers the 3rd by a half step compared to major.",
-            "hint": "Minor chords sound sad or moody"
+            "question": "What notes make up a G7 chord?",
+            "answers": ["G, B, D, F", "G, B, D, F♯", "G, B♭, D, F", "G, B, D"],
+            "correctAnswer": "G, B, D, F",
+            "explanation": "A dominant 7th chord adds a minor 7th interval to a major triad: G-B-D plus F (minor 7th above G).",
+            "hint": "Start with G major triad and add the flatted 7th."
         },
         {
             "subject": "Music",
-            "topic": "Rhythm",
-            "difficulty": 2,
-            "question": "How many beats does a whole note get?",
-            "answers": ["4", "2", "1", "8"],
-            "correctAnswer": "4",
-            "explanation": "In 4/4 time, a whole note lasts for the entire measure (4 beats).",
-            "hint": "It fills a whole measure"
+            "topic": "Chords",
+            "difficulty": 6,
+            "question": "What is a chord inversion?",
+            "answers": ["When a note other than the root is the lowest note", "When you play the chord backwards", "When you add a 7th", "When you remove the fifth"],
+            "correctAnswer": "When a note other than the root is the lowest note",
+            "explanation": "In a chord inversion, a chord tone other than the root is placed in the bass (lowest position).",
+            "hint": "Think about rearranging which note is on the bottom."
         },
         {
             "subject": "Music",
-            "topic": "Rhythm",
-            "difficulty": 3,
-            "question": "What does 4/4 time mean?",
-            "answers": ["4 beats per measure", "4 measures per song", "4 notes per beat", "4 rests per measure"],
-            "correctAnswer": "4 beats per measure",
-            "explanation": "4/4 means 4 quarter-note beats per measure. Most common time signature.",
-            "hint": "Top number = beats per measure"
+            "topic": "Chords",
+            "difficulty": 7,
+            "question": "What is a sus4 chord?",
+            "answers": ["A chord where the third is replaced by the fourth", "A chord with an added fourth", "A chord missing the root", "A chord with a sharp fifth"],
+            "correctAnswer": "A chord where the third is replaced by the fourth",
+            "explanation": "In a sus4 (suspended 4th) chord, the third is replaced by the perfect fourth, creating tension that wants to resolve.",
+            "hint": "'Suspended' means the third is held up (replaced) — by which note?"
         },
         {
             "subject": "Music",
-            "topic": "Rhythm",
+            "topic": "Time Signatures",
             "difficulty": 4,
-            "question": "How many beats does a half note get?",
-            "answers": ["2", "1", "4", "0.5"],
-            "correctAnswer": "2",
-            "explanation": "A half note gets 2 beats — half of a whole note.",
-            "hint": "Half of 4 is..."
+            "question": "What does the top number in a time signature represent?",
+            "answers": ["The number of beats per measure", "The tempo", "The note that gets one beat", "The number of measures"],
+            "correctAnswer": "The number of beats per measure",
+            "explanation": "The top number tells how many beats are in each measure.",
+            "hint": "Think about 'how many' beats you count in each measure."
+        },
+        {
+            "subject": "Music",
+            "topic": "Time Signatures",
+            "difficulty": 4,
+            "question": "What does the bottom number in a time signature represent?",
+            "answers": ["The note value that gets one beat", "The tempo", "The number of measures", "The volume"],
+            "correctAnswer": "The note value that gets one beat",
+            "explanation": "The bottom number indicates which note value receives one beat (4 = quarter note, 8 = eighth note, etc.).",
+            "hint": "In 4/4, the bottom 4 means a quarter note gets one beat."
+        },
+        {
+            "subject": "Music",
+            "topic": "Time Signatures",
+            "difficulty": 5,
+            "question": "How many beats are in a measure of 3/4 time?",
+            "answers": ["3", "4", "6", "2"],
+            "correctAnswer": "3",
+            "explanation": "The top number (3) tells us there are 3 beats per measure, and the quarter note gets one beat.",
+            "hint": "The top number tells you the beat count. Think of a waltz."
+        },
+        {
+            "subject": "Music",
+            "topic": "Time Signatures",
+            "difficulty": 5,
+            "question": "Which time signature is commonly called 'waltz time'?",
+            "answers": ["3/4", "4/4", "6/8", "2/4"],
+            "correctAnswer": "3/4",
+            "explanation": "3/4 time has three beats per measure with the strong-weak-weak pattern characteristic of waltzes.",
+            "hint": "A waltz has a ONE-two-three, ONE-two-three rhythm."
+        },
+        {
+            "subject": "Music",
+            "topic": "Time Signatures",
+            "difficulty": 6,
+            "question": "What is 6/8 time classified as?",
+            "answers": ["Compound duple", "Simple triple", "Simple duple", "Compound triple"],
+            "correctAnswer": "Compound duple",
+            "explanation": "6/8 has two main beats (duple) each divided into three (compound): ONE-two-three FOUR-five-six.",
+            "hint": "6 eighth notes divide into 2 groups of 3 — that's duple with compound subdivision."
+        },
+        {
+            "subject": "Music",
+            "topic": "Time Signatures",
+            "difficulty": 6,
+            "question": "What does 'alla breve' or cut time (₵) mean?",
+            "answers": ["2/2 time", "4/4 time", "3/4 time", "6/8 time"],
+            "correctAnswer": "2/2 time",
+            "explanation": "Cut time (₵) is equivalent to 2/2: two beats per measure with the half note getting one beat.",
+            "hint": "It looks like a C (common time) with a vertical line through it."
+        },
+        {
+            "subject": "Music",
+            "topic": "Time Signatures",
+            "difficulty": 7,
+            "question": "What time signature is used in Dave Brubeck's 'Take Five'?",
+            "answers": ["5/4", "4/4", "3/4", "7/8"],
+            "correctAnswer": "5/4",
+            "explanation": "'Take Five' is famous for its use of 5/4 time, which is an unusual (odd) meter.",
+            "hint": "The title gives a numerical hint about the time signature."
+        },
+        {
+            "subject": "Music",
+            "topic": "Time Signatures",
+            "difficulty": 8,
+            "question": "What is a polyrhythm?",
+            "answers": ["Two or more conflicting rhythms played simultaneously", "A rhythm that speeds up", "A rhythm in 4/4 time", "A repeated rhythmic pattern"],
+            "correctAnswer": "Two or more conflicting rhythms played simultaneously",
+            "explanation": "A polyrhythm involves two or more contrasting rhythmic patterns performed at the same time (e.g., 3 against 2).",
+            "hint": "Think of one hand playing groups of 3 while the other plays groups of 2."
+        },
+        {
+            "subject": "Music",
+            "topic": "Composition",
+            "difficulty": 7,
+            "question": "What is a motif in music?",
+            "answers": ["A short recurring musical idea", "A complete melody", "A type of chord", "A tempo marking"],
+            "correctAnswer": "A short recurring musical idea",
+            "explanation": "A motif is a brief musical idea — a fragment of melody or rhythm that recurs and is developed throughout a piece.",
+            "hint": "Think of Beethoven's famous 'da-da-da-DUM' — it's a short idea that keeps coming back."
+        },
+        {
+            "subject": "Music",
+            "topic": "Composition",
+            "difficulty": 7,
+            "question": "What is 'AABA' form?",
+            "answers": ["A 32-bar song form common in jazz and pop", "A type of scale", "A chord progression", "A rhythm pattern"],
+            "correctAnswer": "A 32-bar song form common in jazz and pop",
+            "explanation": "AABA form has two identical A sections, a contrasting B section (bridge), and a return to A. Each section is typically 8 bars.",
+            "hint": "The letters represent sections of a song, with the same melody repeating."
+        },
+        {
+            "subject": "Music",
+            "topic": "Composition",
+            "difficulty": 8,
+            "question": "What is counterpoint?",
+            "answers": ["The combination of two or more independent melodic lines", "Playing chords in sequence", "A type of drum pattern", "A way of tuning instruments"],
+            "correctAnswer": "The combination of two or more independent melodic lines",
+            "explanation": "Counterpoint is the art of combining multiple independent melodies that sound harmonious together.",
+            "hint": "Think of Bach's fugues where different voices weave together."
+        },
+        {
+            "subject": "Music",
+            "topic": "Composition",
+            "difficulty": 8,
+            "question": "What is modulation in music?",
+            "answers": ["Changing from one key to another", "Changing the tempo", "Changing the volume", "Changing the time signature"],
+            "correctAnswer": "Changing from one key to another",
+            "explanation": "Modulation is the process of transitioning from one key to another within a piece of music.",
+            "hint": "It involves shifting the tonal center of the music."
+        },
+        {
+            "subject": "Music",
+            "topic": "Composition",
+            "difficulty": 8,
+            "question": "What is a cadence?",
+            "answers": ["A harmonic progression that ends a phrase", "The opening of a piece", "A type of scale", "A rhythmic pattern"],
+            "correctAnswer": "A harmonic progression that ends a phrase",
+            "explanation": "A cadence is a sequence of chords that brings a musical phrase to a point of rest or resolution.",
+            "hint": "Think of it as musical punctuation — like a period at the end of a sentence."
+        },
+        {
+            "subject": "Music",
+            "topic": "Composition",
+            "difficulty": 9,
+            "question": "What is a fugue?",
+            "answers": ["A composition where a theme is introduced and developed through imitative counterpoint", "A type of dance", "A single melody line", "A chord progression"],
+            "correctAnswer": "A composition where a theme is introduced and developed through imitative counterpoint",
+            "explanation": "A fugue introduces a subject (theme) in one voice, then other voices enter imitating it, creating complex polyphony.",
+            "hint": "Bach was the master of this form — voices 'chase' each other with the same melody."
+        },
+        {
+            "subject": "Music",
+            "topic": "Composition",
+            "difficulty": 9,
+            "question": "What is the circle of fifths?",
+            "answers": ["A diagram showing relationships between all 12 major and minor keys", "A sequence of five chords", "A type of scale", "A rhythm exercise"],
+            "correctAnswer": "A diagram showing relationships between all 12 major and minor keys",
+            "explanation": "The circle of fifths arranges all 12 keys in a circle, each a perfect fifth apart, showing their relationships and shared notes.",
+            "hint": "Moving clockwise adds one sharp; counterclockwise adds one flat."
+        },
+        {
+            "subject": "Music",
+            "topic": "Composition",
+            "difficulty": 10,
+            "question": "What is a Neapolitan sixth chord?",
+            "answers": ["A major chord built on the flattened second degree in first inversion", "A minor chord built on the sixth degree", "A diminished chord on the seventh degree", "An augmented chord on the third degree"],
+            "correctAnswer": "A major chord built on the flattened second degree in first inversion",
+            "explanation": "The Neapolitan sixth (♭II⁶) is a major triad on the lowered 2nd scale degree, typically in first inversion, often used before V or V7.",
+            "hint": "It's named after the city of Naples and uses ♭II in first inversion."
+        },
+        {
+            "subject": "Music",
+            "topic": "Composition",
+            "difficulty": 10,
+            "question": "What is a deceptive cadence?",
+            "answers": ["V resolving to vi instead of I", "I resolving to V", "IV resolving to I", "ii resolving to V"],
+            "correctAnswer": "V resolving to vi instead of I",
+            "explanation": "A deceptive cadence surprises the listener by resolving the dominant (V) to the submediant (vi) instead of the expected tonic (I).",
+            "hint": "It 'deceives' because you expect to hear the tonic but get something else."
+        },
+        {
+            "subject": "Music",
+            "topic": "Chords",
+            "difficulty": 7,
+            "question": "What is an augmented triad?",
+            "answers": ["Root, major third, augmented fifth", "Root, minor third, perfect fifth", "Root, major third, perfect fifth", "Root, minor third, diminished fifth"],
+            "correctAnswer": "Root, major third, augmented fifth",
+            "explanation": "An augmented triad has a major third and a raised (augmented) fifth, creating a wider sound.",
+            "hint": "'Augmented' means enlarged — the fifth is raised by a half step."
+        },
+        {
+            "subject": "Music",
+            "topic": "Scales",
+            "difficulty": 5,
+            "question": "How many notes are in a pentatonic scale?",
+            "answers": ["5", "7", "8", "12"],
+            "correctAnswer": "5",
+            "explanation": "The prefix 'penta' means five. A pentatonic scale has five notes per octave.",
+            "hint": "The prefix 'penta-' gives you the answer."
         },
         {
             "subject": "Music",
             "topic": "Rhythm",
             "difficulty": 5,
-            "question": "What is syncopation?",
-            "answers": ["Accenting off-beats", "Playing very fast", "Playing very slow", "Repeating a note"],
-            "correctAnswer": "Accenting off-beats",
-            "explanation": "Syncopation emphasizes weak beats or off-beats, creating rhythmic tension.",
-            "hint": "Stressing the unexpected beats"
+            "question": "What is a rest in music?",
+            "answers": ["A period of silence", "A loud note", "A fast passage", "A type of chord"],
+            "correctAnswer": "A period of silence",
+            "explanation": "A rest indicates silence for a specific duration, corresponding to note values (whole rest, half rest, etc.).",
+            "hint": "When you see this symbol, you don't play — you wait."
+        },
+        {
+            "subject": "Music",
+            "topic": "Notes",
+            "difficulty": 3,
+            "question": "What is Middle C?",
+            "answers": ["The C located near the center of the piano keyboard", "The highest C on the piano", "The lowest C on the piano", "Any C note"],
+            "correctAnswer": "The C located near the center of the piano keyboard",
+            "explanation": "Middle C (C4) is the C nearest to the center of a standard 88-key piano, often used as a reference point.",
+            "hint": "It's the C that sits between the treble and bass clef staves."
+        },
+        {
+            "subject": "Music",
+            "topic": "Scales",
+            "difficulty": 3,
+            "question": "Which major scale has no sharps or flats?",
+            "answers": ["C major", "G major", "D major", "F major"],
+            "correctAnswer": "C major",
+            "explanation": "C major consists of all natural notes: C, D, E, F, G, A, B — no sharps or flats.",
+            "hint": "On a piano, this scale uses only the white keys."
+        },
+        {
+            "subject": "Music",
+            "topic": "Time Signatures",
+            "difficulty": 7,
+            "question": "What is an irregular or asymmetric time signature?",
+            "answers": ["A time signature where the top number is not divisible by 2 or 3, like 5/4 or 7/8", "Any time signature in 4/4", "A time signature that changes speed", "A time signature with flats"],
+            "correctAnswer": "A time signature where the top number is not divisible by 2 or 3, like 5/4 or 7/8",
+            "explanation": "Irregular (asymmetric) meters like 5/4, 7/8, or 11/8 cannot be evenly divided into groups of 2 or 3 beats.",
+            "hint": "These time signatures feel 'uneven' because they don't split into equal groups."
+        },
+        {
+            "subject": "Music",
+            "topic": "Composition",
+            "difficulty": 9,
+            "question": "What is a pedal point (or pedal tone)?",
+            "answers": ["A sustained or repeated note held while harmonies change above it", "A note played with a foot pedal", "The loudest note in a phrase", "A type of ornament"],
+            "correctAnswer": "A sustained or repeated note held while harmonies change above it",
+            "explanation": "A pedal point is a sustained note (usually in the bass) that persists while the harmony above it changes.",
+            "hint": "Think of an organ sustaining a low note while the upper voices move freely."
+        },
+        {
+            "subject": "Music",
+            "topic": "Composition",
+            "difficulty": 10,
+            "question": "What is a leitmotif?",
+            "answers": ["A recurring musical theme associated with a character, place, or idea", "A type of scale", "A drum pattern", "A tempo indication"],
+            "correctAnswer": "A recurring musical theme associated with a character, place, or idea",
+            "explanation": "A leitmotif is a short musical phrase linked to a specific character, object, or concept, popularized by Wagner in opera and used extensively in film scores.",
+            "hint": "Think of Darth Vader's theme in Star Wars — it plays whenever he appears."
         }
     ]
 }

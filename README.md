@@ -1,203 +1,229 @@
-# 🎮 KaiserQuest
+# 🏰 KaiserQuest
 
-> **"Knowledge is fading from the world. You are the last learner who can restore it."**
+**A Pokemon-style educational RPG where knowledge is power.**
 
-A Pokemon Gen1/Gen2-style 2.5D pixel art educational RPG built in **Unity** with a **Python AI backend**. Learn Math, English, and Music Theory by exploring a pixel world, battling knowledge duels, conquering 20 gyms, and becoming a **Kaiser** — master of knowledge.
-
----
-
-## 🚀 Quick Start Guide
-
-### Prerequisites
-- **Unity 2022.3.20f1** (LTS) — already installed at `D:\Unity\Editors\2022.3.20f1`
-- **Python 3.9+** — for the AI backend
-- **pip** — Python package manager
-
-### Step 1: Open Unity Project
-
-1. Open **Unity Hub**
-2. Click **"Add"** → Browse to `D:\MY WORK\KaiserQuest\KaiserQuest-Unity`
-3. Select Unity **2022.3.20f1** as the editor version
-4. Click **Open** — Unity will import all packages (may take a few minutes)
-
-### Step 2: Setup Scenes
-
-Once Unity opens:
-
-1. Go to menu: **KaiserQuest > Create Overworld Scene**
-2. Go to menu: **KaiserQuest > Create Main Menu Scene**
-3. Go to **File > Build Settings**
-4. Add both scenes:
-   - `Assets/Scenes/MainMenu.unity` (index 0)
-   - `Assets/Scenes/Overworld.unity` (index 1)
-
-### Step 3: Run the Game
-
-1. Open `Assets/Scenes/Overworld.unity`
-2. Press **Play** ▶️
-3. Use **WASD** or **Arrow keys** to move
-4. Press **Z/Enter/Space** to interact with NPCs
-5. Press **ESC** to open pause menu
-6. Press **M** to open world map
-
-### Step 4: Start Python Backend (Optional)
-
-```bash
-cd "D:\MY WORK\KaiserQuest\Backend"
-pip install -r requirements.txt
-python main.py
-```
-
-The backend runs on `http://localhost:8000`. The game works offline too with built-in questions.
+Learn Mathematics, English, and Music Theory by exploring the Kaiserland region, battling trainers with knowledge questions, defeating 20 Gym Leaders, and conquering Silver Mountain to become a **Kaiser** — a true master of knowledge.
 
 ---
 
-## 🎯 How to Play
+## 🎮 Game Overview
 
-### Controls
-| Key | Action |
-|-----|--------|
-| WASD / Arrow Keys | Move (4-directional grid) |
-| Z / Enter / Space | Interact / Advance dialog |
-| ESC / X | Pause menu |
-| M | World map |
-| Mouse click | Select answers in battles |
+You play as **Arix**, a young scholar in the Kaiserland region. Knowledge is fading from the world, and only by mastering subjects across Mathematics, Languages, and Music can you restore it. Travel through 22 cities, challenge 20 Gym Leaders, and prove your mastery at Silver Mountain.
 
-### Gameplay Loop
-1. **Explore** the pixel world
-2. **Talk** to NPCs — they teach you subjects
-3. **Battle** trainers in Knowledge Duels (click the correct answer!)
-4. **Challenge Gyms** when you reach the required level
-5. **Earn Badges** by defeating Gym Leaders
-6. **Reach Silver Mountain** with Level 100 + 20 Badges
-7. **Defeat the Guardian** to become a **Kaiser!**
+### Core Mechanics
+- **Pokemon-style exploration** — Grid-based top-down movement through a procedurally generated world
+- **Knowledge battles** — Answer questions to deal damage to opponents; wrong answers hurt you
+- **20 Gyms** — Each gym tests a specific topic (level-gated at multiples of 5)
+- **Silver Mountain** — Final boss requires Level 100 + all 20 badges (3 attempts, 24hr cooldown)
+- **Adaptive AI** — ML-powered difficulty scaling based on your performance
+- **PvP Duels** — Challenge other players via WebSocket multiplayer
 
-### Level System
-- Gym 1 requires Level **5**
-- Gym 2 requires Level **10**
-- ...
-- Gym 20 requires Level **100**
-- Silver Mountain requires Level **100** + all **20 badges**
-
-### Silver Mountain Rules
-- 3 attempts to beat the Guardian
-- Failure = 24-hour cooldown
-- Must review material before retrying
+### Subjects & Topics
+| Mathematics | Languages | Music |
+|------------|-----------|-------|
+| Variables | Grammar | Notes |
+| Linear Equations | Vocabulary | Scales |
+| Quadratics | Writing | Chords |
+| Functions | Sentence Structure | Rhythm |
+| Graphs | Word Forms | Time Signatures |
+| Polynomials | Advanced English | Composition |
 
 ---
 
-## 🌍 World Map — Kaiserland Region
-
-| # | City | Gym Topic | Subject |
-|---|------|-----------|---------|
-| — | Origin Village | Starter Town | — |
-| 1 | Numeria | Variables | Math |
-| 2 | Equaton | Linear Equations | Math |
-| 3 | Lexicon | Grammar | English |
-| 4 | Harmonia | Notes | Music |
-| 5 | Quadralis | Quadratics | Math |
-| 6 | Verbum | Vocabulary | English |
-| 7 | Rhythmia | Rhythm | Music |
-| 8 | Polynova | Polynomials | Math |
-| 9 | Syntaxia | Writing | English |
-| 10 | Scalara | Scales | Music |
-| 11 | Graphton | Graphs | Math |
-| 12 | Prosdia | Sentence Structure | English |
-| 13 | Chordwell | Chords | Music |
-| 14 | Functionburg | Functions | Math |
-| 15 | Morphia | Word Forms | English |
-| 16 | Composia | Composition | Music |
-| 17 | Integra | Advanced Algebra | Math |
-| 18 | Eloqua | Advanced English | English |
-| 19 | Fortissimo | Advanced Music | Music |
-| 20 | Omnium | Mixed Mastery | All |
-| ⛰️ | Silver Mountain | Final Boss | All |
-
----
-
-## 🏗️ Project Structure
+## 📁 Project Structure
 
 ```
 KaiserQuest/
-├── KaiserQuest-Unity/          # Unity Project
+├── KaiserQuest-Unity/          # Unity 2022.3.20f1 Game
 │   ├── Assets/
+│   │   ├── Scenes/             # 3 scenes: MainMenu, SubjectSelect, Overworld
 │   │   ├── Scripts/
-│   │   │   ├── Core/           # GameManager, SceneLoader, Bootstrap, SpriteGen
-│   │   │   ├── Player/         # PlayerController (grid movement)
-│   │   │   ├── Camera/         # CameraFollow (pixel-perfect)
-│   │   │   ├── NPC/            # NPCController, DialogSystem
-│   │   │   ├── Battle/         # BattleManager, QuestionBank
-│   │   │   ├── Gym/            # GymSystem, GymData
-│   │   │   ├── UI/             # MainMenu, SubjectSelect, HUD, PauseMenu
-│   │   │   ├── World/          # WorldManager, ProceduralWorldGen
-│   │   │   ├── Quests/         # SideQuestManager
-│   │   │   ├── AI/             # AIClient (backend communication)
-│   │   │   └── Multiplayer/    # PvPManager
-│   │   ├── Sprites/            # Pixel art assets
-│   │   ├── Scenes/             # Unity scenes
-│   │   ├── Data/               # Question bank JSON files
-│   │   └── Resources/          # Runtime-loadable assets
-│   └── ProjectSettings/
-├── Backend/                    # Python AI Backend
-│   ├── main.py                 # FastAPI server
-│   ├── models/                 # ML models
-│   ├── data/                   # Question databases
-│   ├── services/               # Game services
-│   └── requirements.txt
+│   │   │   ├── AI/             # AIClient.cs — Backend communication
+│   │   │   ├── Battle/         # BattleManager.cs, QuestionBank.cs
+│   │   │   ├── Camera/         # CameraFollow.cs — Pixel-perfect follow
+│   │   │   ├── Core/           # GameManager, GameBootstrap, SceneLoader,
+│   │   │   │   │               # PixelSpriteGenerator, SoundManager
+│   │   │   │   └── Editor/     # TilesetGenerator, AudioGenerator, KaiserQuestSetup
+│   │   │   ├── Gym/            # GymSystem.cs — 20-gym framework
+│   │   │   ├── Multiplayer/    # PvPManager.cs — Knowledge duels
+│   │   │   ├── NPC/            # DialogSystem.cs, NPCController.cs (8 NPC types)
+│   │   │   ├── Player/         # PlayerController.cs — Grid movement
+│   │   │   ├── Quests/         # SideQuestManager.cs — 7 side quests
+│   │   │   ├── UI/             # UIManager.cs — MainMenu, HUD
+│   │   │   └── World/          # ProceduralWorldGenerator, WorldManager
+│   │   └── Resources/
+│   │       └── Questions/      # 3 JSON question banks (~50+ questions each)
+│   ├── Packages/               # Unity package manifest
+│   └── ProjectSettings/        # 13 Unity settings files
+│
+├── Backend/                    # Python FastAPI Server
+│   ├── main.py                 # 18+ API endpoints
+│   ├── requirements.txt        # Dependencies
+│   ├── models/                 # Player model, difficulty adapter (ML), question generator
+│   ├── services/               # Battle service, PvP WebSocket, voice AI stubs
+│   └── data/questions/         # 375 educational questions (15 topics × 25 each)
+│       ├── math/               # 6 topic files
+│       ├── english/            # 4 topic files
+│       └── music/              # 5 topic files
+│
 └── README.md
 ```
 
 ---
 
-## 🧠 AI Features
+## 🚀 Quick Start
 
-### Adaptive Difficulty
-The system tracks your:
-- **Accuracy** — how many answers you get right
-- **Speed** — how fast you answer
-- **Weak Topics** — where you struggle most
-- **Streak** — consecutive correct answers
+### Prerequisites
+- **Unity 2022.3.20f1** (LTS) — [Download](https://unity.com/releases/editor/whats-new/2022.3.20)
+- **Python 3.9+** (for backend, optional)
 
-### Dynamic Questions
-Questions are never the same twice (when using the backend). The AI generates questions based on your level and weak areas.
+### Step 1: Open Unity Project
 
-### Smart NPCs
-NPCs explain concepts differently based on your knowledge level. Beginners get simpler explanations; advanced players get deeper insights.
+1. Open **Unity Hub**
+2. Click **"Add"** → Browse to `KaiserQuest-Unity/`
+3. Select Unity **2022.3.20f1** as editor version
+4. Click **Open** (first import takes ~3-5 minutes)
+
+### Step 2: Generate Assets (First Time Only)
+
+In Unity's menu bar:
+1. **KaiserQuest > Generate All Assets** — Creates pixel art tilesets, characters, UI sprites
+2. **KaiserQuest > Generate Audio** — Creates retro 8-bit sound effects and music
+
+Or use the setup wizard:
+- **KaiserQuest > Setup Project** — Guided setup window
+
+### Step 3: Play!
+
+1. Open `Assets/Scenes/Overworld.unity`
+2. Press **Play ▶️**
+3. Controls:
+   - **WASD / Arrow Keys** — Move
+   - **Z / Enter / Space** — Interact / Advance dialog
+   - **M** — Toggle world map
+   - **Esc** — Pause
+
+### Step 4: Start Backend (Optional)
+
+The backend provides adaptive AI difficulty and multiplayer:
+
+```bash
+cd Backend
+pip install -r requirements.txt
+python main.py
+```
+
+- Server: `http://localhost:8000`
+- API Docs: `http://localhost:8000/docs`
 
 ---
 
-## 🔧 Tech Stack
+## 🏗️ Architecture
+
+### Unity Game (Frontend)
+```
+GameBootstrap → Creates all singletons → Generates world → Spawns player
+     ↓
+GameManager (global state) ←→ QuestionBank (loads JSON questions)
+     ↓
+ProceduralWorldGenerator → Perlin noise terrain + 22 cities + paths
+     ↓
+PlayerController ←→ NPCController → DialogSystem → BattleManager
+     ↓                                                    ↓
+CameraFollow (pixel-perfect)                    GymSystem (20 gyms)
+     ↓                                                    ↓
+SoundManager (SFX + Music)              SilverMountain (final boss)
+```
+
+### Python Backend
+```
+FastAPI Server
+├── /questions/{subject}/{topic}  → Adaptive question selection
+├── /answer                       → Answer validation + XP
+├── /battle/start + /battle/answer → PvE battle logic
+├── /pvp/battle (WebSocket)       → Real-time PvP duels
+├── /adaptive/difficulty          → ML difficulty recommendation
+└── /player/*                     → Player stats + leaderboard
+```
+
+### Adaptive AI (ML)
+- **GradientBoostingRegressor** trained on player performance data
+- Features: accuracy, speed, streak, topic mastery
+- Auto-retrains every 50 gameplay observations
+- Graceful fallback to rule-based system if sklearn unavailable
+
+---
+
+## 🎨 Asset Generation
+
+All visual and audio assets are **procedurally generated** at runtime or via editor tools:
+
+| System | What it generates |
+|--------|------------------|
+| **TilesetGenerator** | Grass, path, water tiles; trees, flowers, rocks, fences; houses, shops, gym buildings; player & NPC sprite sheets; UI elements; battle backgrounds |
+| **AudioGenerator** | 15 SFX (menu clicks, correct/wrong, hit, level up, badge, victory/defeat, footsteps) + 4 music themes (overworld, battle, gym, menu) |
+| **PixelSpriteGenerator** | Runtime fallback sprites for player, NPCs, gym leaders, tiles |
+
+---
+
+## 🌍 World Map — Kaiserland Region
+
+```
+                    ⛰️ Silver Mountain (Final Boss)
+                          |
+                    [Omnium] — Gym 20 (Mixed)
+                   /       \
+          [Fortissimo]    [Eloqua]
+             |               |
+       [Composia]      [Integra]
+          |               |
+     [Morphia]      [Functionburg]
+        |               |
+    [Chordwell]    [Prosdia]
+       |               |
+   [Graphton]     [Scalara]
+      |               |
+  [Syntaxia]    [Polynova]
+     |               |
+  [Rhythmia]    [Quadralis]
+     |               |
+   [Verbum]     [Harmonia]
+     |               |
+   [Lexicon]    [Equaton]
+          \       /
+        [Numeria] — Gym 1
+            |
+     🏡 Origin Village
+```
+
+---
+
+## 📊 Question Banks
+
+### Unity (Client-side)
+- `math_questions.json` — 50+ questions (Variables → Graphs)
+- `english_questions.json` — 50+ questions (Grammar → Writing)
+- `music_questions.json` — 50+ questions (Notes → Composition)
+
+### Backend (Server-side)
+- **375 hand-crafted questions** across 15 topics
+- Difficulty levels 1-5 per topic
+- Full explanations for every answer
+- Procedural math question generation for infinite variety
+
+---
+
+## 🛠️ Tech Stack
 
 | Component | Technology |
 |-----------|-----------|
 | Game Engine | Unity 2022.3.20f1 (C#) |
-| Rendering | 2D Tilemap + Sprite Renderer |
-| AI Backend | Python FastAPI |
-| ML Models | scikit-learn |
-| PvP | WebSocket (simulated offline) |
-| Data | JSON + SQLite |
-| Sprites | Procedural pixel art generation |
-
----
-
-## 📝 Development Roadmap
-
-- [x] Core game engine (player movement, camera, tilemaps)
-- [x] NPC dialog system (typewriter effect, choices)
-- [x] Battle system (click-to-answer, HP bars, XP)
-- [x] Gym system (20 gyms, badge collection)
-- [x] Silver Mountain final boss
-- [x] Question bank (50+ questions across 3 subjects)
-- [x] Side quests for leveling
-- [x] PvP knowledge duels (simulated)
-- [x] Procedural world generation
-- [x] Python AI backend
-- [x] Adaptive difficulty model
-- [ ] External pixel art tilesets (Kenney.nl, OpenGameArt)
-- [ ] Sound effects and music
-- [ ] Voice AI tutor (Whisper + TTS)
-- [ ] Mobile export (Android)
-- [ ] Real multiplayer server
+| Rendering | 2D Tilemap + Pixel Perfect |
+| Backend | Python FastAPI |
+| ML/AI | scikit-learn (GradientBoosting) |
+| Multiplayer | WebSocket (uvicorn) |
+| Audio | Procedural WAV generation |
+| Art | Procedural pixel art (Kenney.nl style) |
 
 ---
 
@@ -207,4 +233,4 @@ This project is for educational purposes.
 
 ---
 
-*Built with ❤️ by the KaiserQuest Team*
+*Built with ❤️ for learners everywhere.*

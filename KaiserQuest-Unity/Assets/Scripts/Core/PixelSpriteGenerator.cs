@@ -420,6 +420,50 @@ public class PixelSpriteGenerator : MonoBehaviour
         return Sprite.Create(tex, new Rect(0, 0, 32, 32), new Vector2(0.5f, 0.25f), pixelsPerUnit);
     }
 
+    /// <summary>
+    /// Generate a tree tile (16x16, for tilemap decoration layer).
+    /// </summary>
+    public Sprite GenerateTreeTile()
+    {
+        Texture2D tex = new Texture2D(16, 16, TextureFormat.RGBA32, false);
+        tex.filterMode = filterMode;
+
+        Color trunk = new Color(0.45f, 0.3f, 0.18f);
+        Color leaves = new Color(0.2f, 0.55f, 0.2f);
+        Color leavesLight = new Color(0.3f, 0.65f, 0.25f);
+        Color leavesDark = new Color(0.15f, 0.42f, 0.15f);
+
+        FillTexture(tex, Color.clear);
+
+        // Trunk
+        DrawRect(tex, 6, 0, 4, 6, trunk);
+        DrawRect(tex, 7, 0, 2, 6, new Color(0.5f, 0.35f, 0.2f));
+
+        // Canopy
+        DrawRect(tex, 3, 6, 10, 8, leaves);
+        DrawRect(tex, 2, 8, 12, 5, leaves);
+        DrawRect(tex, 4, 12, 8, 4, leavesLight);
+        DrawRect(tex, 3, 7, 4, 3, leavesDark);
+
+        tex.Apply();
+        return Sprite.Create(tex, new Rect(0, 0, 16, 16), new Vector2(0.5f, 0.5f), pixelsPerUnit);
+    }
+
+    /// <summary>
+    /// Generate a wall/collision tile (invisible but solid).
+    /// </summary>
+    public Sprite GenerateWallTile()
+    {
+        Texture2D tex = new Texture2D(16, 16, TextureFormat.RGBA32, false);
+        tex.filterMode = filterMode;
+
+        // Transparent collision tile
+        FillTexture(tex, new Color(1f, 0f, 0f, 0.1f)); // barely visible red for debug
+
+        tex.Apply();
+        return Sprite.Create(tex, new Rect(0, 0, 16, 16), new Vector2(0.5f, 0.5f), pixelsPerUnit);
+    }
+
     // ============================================================
     // UTILITY
     // ============================================================

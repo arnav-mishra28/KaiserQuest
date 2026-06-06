@@ -9,12 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 
   - enabled: 1
-    path: Assets/Scenes/Overworld.unity
-    guid: 
-  - enabled: 1
     path: Assets/Scenes/SubjectSelect.unity
     guid: 
   - enabled: 1
-    path: Assets/Scenes/Battle.unity
+    path: Assets/Scenes/Overworld.unity
     guid: 
   m_configObjects: {}
