@@ -1,0 +1,207 @@
+{
+  "subject": "english",
+  "topic": "grammar",
+  "description": "Parts of speech, tenses, subject-verb agreement, punctuation",
+  "questions": [
+    {
+      "id": "eng_gram_001",
+      "question": "What part of speech is the word 'quickly' in: 'She ran quickly.'?",
+      "options": ["Noun", "Verb", "Adjective", "Adverb"],
+      "correct_answer": "Adverb",
+      "explanation": "'Quickly' modifies the verb 'ran', describing how she ran. Adverbs modify verbs.",
+      "difficulty": 1
+    },
+    {
+      "id": "eng_gram_002",
+      "question": "Identify the noun in: 'The cat sat on the mat.'",
+      "options": ["sat", "on", "cat", "the"],
+      "correct_answer": "cat",
+      "explanation": "'Cat' is a noun — a word that names a person, place, thing, or animal.",
+      "difficulty": 1
+    },
+    {
+      "id": "eng_gram_003",
+      "question": "Which sentence is in the past tense?",
+      "options": ["I will eat lunch.", "I eat lunch.", "I ate lunch.", "I am eating lunch."],
+      "correct_answer": "I ate lunch.",
+      "explanation": "'Ate' is the past tense of 'eat'.",
+      "difficulty": 1
+    },
+    {
+      "id": "eng_gram_004",
+      "question": "What is the plural of 'child'?",
+      "options": ["Childs", "Childes", "Children", "Childrens"],
+      "correct_answer": "Children",
+      "explanation": "'Child' is an irregular noun; its plural form is 'children'.",
+      "difficulty": 1
+    },
+    {
+      "id": "eng_gram_005",
+      "question": "Which word is a conjunction? 'I like tea and coffee.'",
+      "options": ["I", "like", "and", "coffee"],
+      "correct_answer": "and",
+      "explanation": "'And' is a coordinating conjunction connecting two nouns.",
+      "difficulty": 1
+    },
+    {
+      "id": "eng_gram_006",
+      "question": "Choose the correct form: 'She ___ to school every day.'",
+      "options": ["go", "goes", "going", "gone"],
+      "correct_answer": "goes",
+      "explanation": "Third-person singular present tense requires 'goes'.",
+      "difficulty": 1
+    },
+    {
+      "id": "eng_gram_007",
+      "question": "What type of sentence is: 'Close the door!'?",
+      "options": ["Declarative", "Interrogative", "Imperative", "Exclamatory"],
+      "correct_answer": "Imperative",
+      "explanation": "An imperative sentence gives a command or makes a request.",
+      "difficulty": 2
+    },
+    {
+      "id": "eng_gram_008",
+      "question": "Which sentence uses the correct possessive form?",
+      "options": ["The dog's bone is here.", "The dogs' bone is here.", "The dog bone's is here.", "The dogs bone is here."],
+      "correct_answer": "The dog's bone is here.",
+      "explanation": "For a singular noun, add 's to show possession.",
+      "difficulty": 2
+    },
+    {
+      "id": "eng_gram_009",
+      "question": "Identify the preposition: 'The book is on the table.'",
+      "options": ["book", "is", "on", "table"],
+      "correct_answer": "on",
+      "explanation": "'On' is a preposition showing the relationship between the book and the table.",
+      "difficulty": 1
+    },
+    {
+      "id": "eng_gram_010",
+      "question": "'She has been studying for three hours.' What tense is this?",
+      "options": ["Present simple", "Past simple", "Present perfect continuous", "Future perfect"],
+      "correct_answer": "Present perfect continuous",
+      "explanation": "'Has been studying' = has + been + verb-ing = present perfect continuous.",
+      "difficulty": 3
+    },
+    {
+      "id": "eng_gram_011",
+      "question": "Which sentence has a subject-verb agreement error?",
+      "options": ["The dogs run fast.", "The cat sits quietly.", "The children plays outside.", "She reads every night."],
+      "correct_answer": "The children plays outside.",
+      "explanation": "'Children' is plural, so the verb should be 'play' (not 'plays').",
+      "difficulty": 2
+    },
+    {
+      "id": "eng_gram_012",
+      "question": "What is the comparative form of 'good'?",
+      "options": ["Gooder", "More good", "Better", "Best"],
+      "correct_answer": "Better",
+      "explanation": "'Good' is irregular: good → better → best.",
+      "difficulty": 2
+    },
+    {
+      "id": "eng_gram_013",
+      "question": "Which sentence uses a semicolon correctly?",
+      "options": ["I like pizza; it's my favorite food.", "I like; pizza it's my favorite.", "I like pizza it's; my favorite food.", "I; like pizza it's my favorite food."],
+      "correct_answer": "I like pizza; it's my favorite food.",
+      "explanation": "A semicolon connects two closely related independent clauses.",
+      "difficulty": 3
+    },
+    {
+      "id": "eng_gram_014",
+      "question": "What is a pronoun?",
+      "options": ["A word that describes a noun", "A word that replaces a noun", "A word that modifies a verb", "A word that connects clauses"],
+      "correct_answer": "A word that replaces a noun",
+      "explanation": "Pronouns (he, she, it, they) take the place of nouns.",
+      "difficulty": 1
+    },
+    {
+      "id": "eng_gram_015",
+      "question": "'If I were rich, I would travel.' This is an example of:",
+      "options": ["Past tense", "Future tense", "Subjunctive mood", "Indicative mood"],
+      "correct_answer": "Subjunctive mood",
+      "explanation": "'If I were' uses the subjunctive mood for hypothetical situations.",
+      "difficulty": 4
+    },
+    {
+      "id": "eng_gram_016",
+      "question": "Which sentence contains a dangling modifier?",
+      "options": ["Running quickly, she caught the bus.", "Running quickly, the bus was caught.", "She ran quickly to catch the bus.", "The bus left before she arrived."],
+      "correct_answer": "Running quickly, the bus was caught.",
+      "explanation": "The modifier 'running quickly' doesn't logically modify 'the bus'.",
+      "difficulty": 4
+    },
+    {
+      "id": "eng_gram_017",
+      "question": "What is the passive voice of: 'The chef cooked the meal'?",
+      "options": ["The meal was cooked by the chef.", "The meal cooked the chef.", "The chef was cooking the meal.", "Cooking was done by the chef."],
+      "correct_answer": "The meal was cooked by the chef.",
+      "explanation": "In passive voice, the object becomes the subject: The meal was cooked by the chef.",
+      "difficulty": 3
+    },
+    {
+      "id": "eng_gram_018",
+      "question": "Choose the correct word: 'Their / There / They're going to the park.'",
+      "options": ["Their", "There", "They're", "Theyre"],
+      "correct_answer": "They're",
+      "explanation": "'They're' = 'They are'. 'Their' shows possession. 'There' indicates place.",
+      "difficulty": 2
+    },
+    {
+      "id": "eng_gram_019",
+      "question": "What type of clause is 'because she was tired' in: 'She left because she was tired'?",
+      "options": ["Independent clause", "Dependent clause", "Relative clause", "Noun clause"],
+      "correct_answer": "Dependent clause",
+      "explanation": "'Because she was tired' cannot stand alone; it depends on the main clause.",
+      "difficulty": 3
+    },
+    {
+      "id": "eng_gram_020",
+      "question": "Which word is an interjection?",
+      "options": ["However", "Wow", "Although", "Because"],
+      "correct_answer": "Wow",
+      "explanation": "An interjection expresses emotion and can stand alone. 'Wow!' is an interjection.",
+      "difficulty": 2
+    },
+    {
+      "id": "eng_gram_021",
+      "question": "Identify the correct sentence:",
+      "options": ["Me and him went to the store.", "Him and I went to the store.", "He and I went to the store.", "I and he went to the store."],
+      "correct_answer": "He and I went to the store.",
+      "explanation": "Use subject pronouns (He, I) as subjects of the sentence.",
+      "difficulty": 2
+    },
+    {
+      "id": "eng_gram_022",
+      "question": "What is an infinitive?",
+      "options": ["A verb ending in -ing", "A verb with 'to' (e.g., to run)", "A past participle", "A helping verb"],
+      "correct_answer": "A verb with 'to' (e.g., to run)",
+      "explanation": "An infinitive is the base form of a verb preceded by 'to': to eat, to run, to sleep.",
+      "difficulty": 3
+    },
+    {
+      "id": "eng_gram_023",
+      "question": "Which sentence uses 'affect' correctly?",
+      "options": ["The medicine had a good affect.", "The weather will affect our plans.", "She affect the outcome.", "The affect was immediate."],
+      "correct_answer": "The weather will affect our plans.",
+      "explanation": "'Affect' is typically a verb meaning to influence. 'Effect' is typically a noun.",
+      "difficulty": 3
+    },
+    {
+      "id": "eng_gram_024",
+      "question": "'Neither the teacher nor the students ___ ready.' Fill in the blank.",
+      "options": ["is", "are", "was", "has been"],
+      "correct_answer": "are",
+      "explanation": "With 'neither...nor', the verb agrees with the nearer subject ('students' = plural).",
+      "difficulty": 4
+    },
+    {
+      "id": "eng_gram_025",
+      "question": "Which sentence demonstrates correct use of the Oxford comma?",
+      "options": ["I bought apples oranges and bananas.", "I bought apples, oranges, and bananas.", "I bought apples, oranges and bananas.", "I bought, apples oranges and bananas."],
+      "correct_answer": "I bought apples, oranges, and bananas.",
+      "explanation": "The Oxford comma is placed before 'and' in a list of three or more items.",
+      "difficulty": 3
+    }
+  ]
+}

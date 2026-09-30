@@ -1,0 +1,207 @@
+{
+  "subject": "math",
+  "topic": "graphs",
+  "description": "Graphing on coordinate plane, slope, intercepts, transformations",
+  "questions": [
+    {
+      "id": "math_graph_001",
+      "question": "What are the coordinates of the origin?",
+      "options": ["(1, 1)", "(0, 0)", "(0, 1)", "(1, 0)"],
+      "correct_answer": "(0, 0)",
+      "explanation": "The origin is the point where the x-axis and y-axis intersect: (0, 0).",
+      "difficulty": 1
+    },
+    {
+      "id": "math_graph_002",
+      "question": "In which quadrant is the point (3, -2)?",
+      "options": ["I", "II", "III", "IV"],
+      "correct_answer": "IV",
+      "explanation": "Positive x, negative y → Quadrant IV",
+      "difficulty": 1
+    },
+    {
+      "id": "math_graph_003",
+      "question": "What is the y-intercept of y = 4x - 3?",
+      "options": ["4", "-3", "3", "-4"],
+      "correct_answer": "-3",
+      "explanation": "In y = mx + b, the y-intercept is b = -3.",
+      "difficulty": 1
+    },
+    {
+      "id": "math_graph_004",
+      "question": "What is the slope of a horizontal line?",
+      "options": ["0", "1", "Undefined", "Infinity"],
+      "correct_answer": "0",
+      "explanation": "A horizontal line has no rise, so slope = rise/run = 0.",
+      "difficulty": 1
+    },
+    {
+      "id": "math_graph_005",
+      "question": "What is the slope of a vertical line?",
+      "options": ["0", "1", "Undefined", "-1"],
+      "correct_answer": "Undefined",
+      "explanation": "A vertical line has no run, making the slope undefined (division by zero).",
+      "difficulty": 1
+    },
+    {
+      "id": "math_graph_006",
+      "question": "Find the slope of the line through (1, 2) and (4, 8).",
+      "options": ["1", "2", "3", "6"],
+      "correct_answer": "2",
+      "explanation": "slope = (8-2)/(4-1) = 6/3 = 2",
+      "difficulty": 2
+    },
+    {
+      "id": "math_graph_007",
+      "question": "What is the x-intercept of y = 2x - 6?",
+      "options": ["(2, 0)", "(3, 0)", "(6, 0)", "(-3, 0)"],
+      "correct_answer": "(3, 0)",
+      "explanation": "Set y = 0: 0 = 2x - 6 → x = 3",
+      "difficulty": 2
+    },
+    {
+      "id": "math_graph_008",
+      "question": "Two lines are parallel if they have the same:",
+      "options": ["y-intercept", "x-intercept", "Slope", "Length"],
+      "correct_answer": "Slope",
+      "explanation": "Parallel lines have identical slopes but different y-intercepts.",
+      "difficulty": 2
+    },
+    {
+      "id": "math_graph_009",
+      "question": "The lines y = 2x + 1 and y = -½x + 3 are:",
+      "options": ["Parallel", "Perpendicular", "The same line", "Coincident"],
+      "correct_answer": "Perpendicular",
+      "explanation": "Slopes 2 and -1/2 multiply to -1, so the lines are perpendicular.",
+      "difficulty": 3
+    },
+    {
+      "id": "math_graph_010",
+      "question": "What is the distance between (0, 0) and (3, 4)?",
+      "options": ["3", "4", "5", "7"],
+      "correct_answer": "5",
+      "explanation": "d = √(3² + 4²) = √(9 + 16) = √25 = 5",
+      "difficulty": 2
+    },
+    {
+      "id": "math_graph_011",
+      "question": "What is the midpoint of (2, 4) and (6, 8)?",
+      "options": ["(3, 5)", "(4, 6)", "(5, 7)", "(8, 12)"],
+      "correct_answer": "(4, 6)",
+      "explanation": "Midpoint = ((2+6)/2, (4+8)/2) = (4, 6)",
+      "difficulty": 2
+    },
+    {
+      "id": "math_graph_012",
+      "question": "If f(x) is shifted up by 3 units, the new function is:",
+      "options": ["f(x + 3)", "f(x - 3)", "f(x) + 3", "f(x) - 3"],
+      "correct_answer": "f(x) + 3",
+      "explanation": "Adding a constant outside the function shifts the graph vertically up.",
+      "difficulty": 3
+    },
+    {
+      "id": "math_graph_013",
+      "question": "The graph of y = (x - 2)² is the graph of y = x² shifted:",
+      "options": ["Left 2", "Right 2", "Up 2", "Down 2"],
+      "correct_answer": "Right 2",
+      "explanation": "y = (x - h)² shifts the parabola right by h units.",
+      "difficulty": 3
+    },
+    {
+      "id": "math_graph_014",
+      "question": "What is the equation of a line with slope 3 through point (1, 5)?",
+      "options": ["y = 3x + 2", "y = 3x + 5", "y = 3x - 2", "y = 3x + 1"],
+      "correct_answer": "y = 3x + 2",
+      "explanation": "y - 5 = 3(x - 1) → y = 3x - 3 + 5 = 3x + 2",
+      "difficulty": 3
+    },
+    {
+      "id": "math_graph_015",
+      "question": "Reflecting y = f(x) over the x-axis gives:",
+      "options": ["y = f(-x)", "y = -f(x)", "y = f(x) + 1", "y = |f(x)|"],
+      "correct_answer": "y = -f(x)",
+      "explanation": "Negating the output reflects the graph over the x-axis.",
+      "difficulty": 3
+    },
+    {
+      "id": "math_graph_016",
+      "question": "Which point lies on the line y = -x + 7?",
+      "options": ["(1, 5)", "(2, 5)", "(3, 5)", "(4, 5)"],
+      "correct_answer": "(2, 5)",
+      "explanation": "y = -2 + 7 = 5. So (2, 5) is on the line.",
+      "difficulty": 2
+    },
+    {
+      "id": "math_graph_017",
+      "question": "The graph of y = |x| is shaped like:",
+      "options": ["U-shape", "V-shape", "S-shape", "Straight line"],
+      "correct_answer": "V-shape",
+      "explanation": "The absolute value function creates a V-shape with vertex at the origin.",
+      "difficulty": 2
+    },
+    {
+      "id": "math_graph_018",
+      "question": "What happens to y = x² when multiplied by 2 (y = 2x²)?",
+      "options": ["Wider parabola", "Narrower parabola", "Shifts up", "Shifts right"],
+      "correct_answer": "Narrower parabola",
+      "explanation": "Multiplying by a > 1 makes the parabola narrower (steeper).",
+      "difficulty": 3
+    },
+    {
+      "id": "math_graph_019",
+      "question": "The slope-intercept form of a line is:",
+      "options": ["ax + by = c", "y = mx + b", "y - y₁ = m(x - x₁)", "x/a + y/b = 1"],
+      "correct_answer": "y = mx + b",
+      "explanation": "y = mx + b where m is slope and b is y-intercept.",
+      "difficulty": 1
+    },
+    {
+      "id": "math_graph_020",
+      "question": "What is the slope of the line 3x + 4y = 12?",
+      "options": ["3/4", "-3/4", "4/3", "-4/3"],
+      "correct_answer": "-3/4",
+      "explanation": "4y = -3x + 12 → y = -3/4 x + 3. Slope = -3/4",
+      "difficulty": 3
+    },
+    {
+      "id": "math_graph_021",
+      "question": "In which quadrant is the point (-5, 3)?",
+      "options": ["I", "II", "III", "IV"],
+      "correct_answer": "II",
+      "explanation": "Negative x, positive y → Quadrant II",
+      "difficulty": 1
+    },
+    {
+      "id": "math_graph_022",
+      "question": "The graph of y = eˣ has a horizontal asymptote at:",
+      "options": ["y = 0", "y = 1", "x = 0", "y = e"],
+      "correct_answer": "y = 0",
+      "explanation": "As x → -∞, eˣ → 0. So y = 0 is the horizontal asymptote.",
+      "difficulty": 4
+    },
+    {
+      "id": "math_graph_023",
+      "question": "What is the period of y = sin(2x)?",
+      "options": ["π", "2π", "π/2", "4π"],
+      "correct_answer": "π",
+      "explanation": "Period = 2π/|b| = 2π/2 = π",
+      "difficulty": 5
+    },
+    {
+      "id": "math_graph_024",
+      "question": "The graph of y = log(x) passes through which point?",
+      "options": ["(0, 1)", "(1, 0)", "(e, 0)", "(0, 0)"],
+      "correct_answer": "(1, 0)",
+      "explanation": "log(1) = 0, so the graph passes through (1, 0).",
+      "difficulty": 4
+    },
+    {
+      "id": "math_graph_025",
+      "question": "What transformation maps y = f(x) to y = f(2x)?",
+      "options": ["Horizontal stretch by 2", "Horizontal compression by 2", "Vertical stretch by 2", "Vertical compression by 2"],
+      "correct_answer": "Horizontal compression by 2",
+      "explanation": "Multiplying x by b > 1 inside the function compresses horizontally.",
+      "difficulty": 5
+    }
+  ]
+}

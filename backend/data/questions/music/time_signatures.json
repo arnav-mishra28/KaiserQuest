@@ -1,0 +1,207 @@
+{
+  "subject": "music",
+  "topic": "time_signatures",
+  "description": "Time signatures, meter, simple vs compound time, irregular meters",
+  "questions": [
+    {
+      "id": "mus_time_001",
+      "question": "What does the top number in a time signature indicate?",
+      "options": ["The note that gets one beat", "The number of beats per measure", "The tempo", "The key"],
+      "correct_answer": "The number of beats per measure",
+      "explanation": "The top number tells how many beats are in each measure.",
+      "difficulty": 1
+    },
+    {
+      "id": "mus_time_002",
+      "question": "What does the bottom number in a time signature indicate?",
+      "options": ["Number of measures", "The note value that gets one beat", "The number of beats", "The tempo"],
+      "correct_answer": "The note value that gets one beat",
+      "explanation": "Bottom number 4 = quarter note gets one beat; 8 = eighth note gets one beat.",
+      "difficulty": 1
+    },
+    {
+      "id": "mus_time_003",
+      "question": "What is 4/4 time also known as?",
+      "options": ["Waltz time", "Common time", "Cut time", "March time"],
+      "correct_answer": "Common time",
+      "explanation": "4/4 is called 'common time' because it's the most frequently used time signature.",
+      "difficulty": 1
+    },
+    {
+      "id": "mus_time_004",
+      "question": "How many beats per measure does 3/4 time have?",
+      "options": ["2", "3", "4", "6"],
+      "correct_answer": "3",
+      "explanation": "3/4 time has 3 quarter-note beats per measure. It's often used for waltzes.",
+      "difficulty": 1
+    },
+    {
+      "id": "mus_time_005",
+      "question": "What is 'cut time' (alla breve)?",
+      "options": ["4/4 time", "2/2 time", "6/8 time", "3/4 time"],
+      "correct_answer": "2/2 time",
+      "explanation": "Cut time (₵) = 2/2, meaning 2 half-note beats per measure. Feels faster than 4/4.",
+      "difficulty": 2
+    },
+    {
+      "id": "mus_time_006",
+      "question": "3/4 time is commonly used for which dance?",
+      "options": ["Tango", "Waltz", "Polka", "March"],
+      "correct_answer": "Waltz",
+      "explanation": "The waltz is characterized by its 3/4 time: ONE-two-three, ONE-two-three.",
+      "difficulty": 1
+    },
+    {
+      "id": "mus_time_007",
+      "question": "What is the difference between simple and compound time?",
+      "options": ["Simple is faster", "In simple time beats divide into 2; in compound, into 3", "Compound has more measures", "There is no difference"],
+      "correct_answer": "In simple time beats divide into 2; in compound, into 3",
+      "explanation": "Simple time: beats subdivide in 2. Compound time: beats subdivide in 3.",
+      "difficulty": 3
+    },
+    {
+      "id": "mus_time_008",
+      "question": "6/8 time is an example of:",
+      "options": ["Simple duple", "Simple triple", "Compound duple", "Compound triple"],
+      "correct_answer": "Compound duple",
+      "explanation": "6/8 = 2 groups of 3 eighth notes = compound duple (2 dotted-quarter beats).",
+      "difficulty": 3
+    },
+    {
+      "id": "mus_time_009",
+      "question": "How many dotted-quarter-note beats are in 6/8 time?",
+      "options": ["2", "3", "4", "6"],
+      "correct_answer": "2",
+      "explanation": "6/8 has 2 main beats, each a dotted quarter note (3 eighth notes each).",
+      "difficulty": 2
+    },
+    {
+      "id": "mus_time_010",
+      "question": "What is 2/4 time typically used for?",
+      "options": ["Waltzes", "Marches and polkas", "Lullabies", "Jazz ballads"],
+      "correct_answer": "Marches and polkas",
+      "explanation": "2/4 time (two quarter-note beats) creates the strong LEFT-right marching feel.",
+      "difficulty": 2
+    },
+    {
+      "id": "mus_time_011",
+      "question": "9/8 time is an example of:",
+      "options": ["Simple triple", "Compound triple", "Simple quadruple", "Compound duple"],
+      "correct_answer": "Compound triple",
+      "explanation": "9/8 = 3 groups of 3 eighth notes = compound triple meter.",
+      "difficulty": 3
+    },
+    {
+      "id": "mus_time_012",
+      "question": "What is a downbeat?",
+      "options": ["The last beat of a measure", "The first beat of a measure", "A soft beat", "An off-beat"],
+      "correct_answer": "The first beat of a measure",
+      "explanation": "The downbeat is beat 1, the strongest beat in a measure.",
+      "difficulty": 1
+    },
+    {
+      "id": "mus_time_013",
+      "question": "In 4/4 time, which beats are strong?",
+      "options": ["1 and 2", "1 and 3", "2 and 4", "All beats equally"],
+      "correct_answer": "1 and 3",
+      "explanation": "In 4/4: beat 1 is strongest, beat 3 is secondary strong. Beats 2 and 4 are weak.",
+      "difficulty": 2
+    },
+    {
+      "id": "mus_time_014",
+      "question": "What is an irregular (asymmetric) time signature?",
+      "options": ["4/4 time", "A time signature that can't be divided into equal groups of 2 or 3", "3/4 time", "6/8 time"],
+      "correct_answer": "A time signature that can't be divided into equal groups of 2 or 3",
+      "explanation": "Examples: 5/4 (3+2 or 2+3), 7/8 (2+2+3). These create uneven groupings.",
+      "difficulty": 4
+    },
+    {
+      "id": "mus_time_015",
+      "question": "The song 'Take Five' by Dave Brubeck is in what time signature?",
+      "options": ["4/4", "3/4", "5/4", "7/8"],
+      "correct_answer": "5/4",
+      "explanation": "'Take Five' is one of the most famous pieces in 5/4 time.",
+      "difficulty": 3
+    },
+    {
+      "id": "mus_time_016",
+      "question": "What does 12/8 time feel like?",
+      "options": ["4 beats, each subdivided into 3", "12 even beats", "6 beats subdivided into 2", "3 beats subdivided into 4"],
+      "correct_answer": "4 beats, each subdivided into 3",
+      "explanation": "12/8 = compound quadruple: 4 dotted-quarter beats, each with 3 eighth-note subdivisions.",
+      "difficulty": 3
+    },
+    {
+      "id": "mus_time_017",
+      "question": "What is a time signature change (meter change)?",
+      "options": ["Changing the key", "Switching to a different time signature mid-piece", "Changing the tempo", "Changing the dynamics"],
+      "correct_answer": "Switching to a different time signature mid-piece",
+      "explanation": "A meter change occurs when the time signature shifts during a composition.",
+      "difficulty": 3
+    },
+    {
+      "id": "mus_time_018",
+      "question": "In 7/8 time, a common grouping is:",
+      "options": ["3+4 or 2+2+3", "7 equal beats", "4+3 only", "3+3+1"],
+      "correct_answer": "3+4 or 2+2+3",
+      "explanation": "7/8 is typically grouped as 2+2+3, 3+2+2, or 3+4, depending on the composer's intent.",
+      "difficulty": 4
+    },
+    {
+      "id": "mus_time_019",
+      "question": "What is a polymetric composition?",
+      "options": ["Music using one time signature", "Music with multiple simultaneous time signatures", "Music without any meter", "Music that gradually changes tempo"],
+      "correct_answer": "Music with multiple simultaneous time signatures",
+      "explanation": "Polymetric music layers different time signatures simultaneously (e.g., 3/4 against 4/4).",
+      "difficulty": 5
+    },
+    {
+      "id": "mus_time_020",
+      "question": "What is 'free time' (senza misura) in music?",
+      "options": ["Playing in 4/4", "Playing without a strict beat or meter", "Playing very fast", "Playing in compound time"],
+      "correct_answer": "Playing without a strict beat or meter",
+      "explanation": "Senza misura means 'without measure' — the performer plays freely without strict tempo.",
+      "difficulty": 4
+    },
+    {
+      "id": "mus_time_021",
+      "question": "What is a bar line?",
+      "options": ["A line above the staff", "A vertical line separating measures", "A line connecting notes", "A dynamic marking"],
+      "correct_answer": "A vertical line separating measures",
+      "explanation": "Bar lines are vertical lines on the staff that divide music into measures.",
+      "difficulty": 1
+    },
+    {
+      "id": "mus_time_022",
+      "question": "What does a double bar line at the end of a piece indicate?",
+      "options": ["Repeat the piece", "The end of the composition", "Change time signature", "Play louder"],
+      "correct_answer": "The end of the composition",
+      "explanation": "A final double bar line (one thin, one thick) marks the end of a piece.",
+      "difficulty": 1
+    },
+    {
+      "id": "mus_time_023",
+      "question": "What is mixed meter?",
+      "options": ["Using only one time signature", "Alternating between different time signatures", "Mixing major and minor", "Playing in unison"],
+      "correct_answer": "Alternating between different time signatures",
+      "explanation": "Mixed meter alternates time signatures, e.g., one bar of 5/8 then one of 7/8.",
+      "difficulty": 4
+    },
+    {
+      "id": "mus_time_024",
+      "question": "What is additive meter?",
+      "options": ["Adding more instruments", "Grouping beats in irregular combinations within a measure", "Playing louder over time", "Increasing the tempo"],
+      "correct_answer": "Grouping beats in irregular combinations within a measure",
+      "explanation": "Additive meter combines groups of 2s and 3s: e.g., 3+3+2 in 8/8 time.",
+      "difficulty": 5
+    },
+    {
+      "id": "mus_time_025",
+      "question": "The 'Mission: Impossible' theme uses which unusual time signature?",
+      "options": ["4/4", "3/4", "5/4", "6/8"],
+      "correct_answer": "5/4",
+      "explanation": "The iconic Mission: Impossible theme by Lalo Schifrin is in 5/4 time.",
+      "difficulty": 3
+    }
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "subject": "english",
+  "topic": "writing",
+  "description": "Essay structure, thesis statements, paragraph development, rhetorical devices",
+  "questions": [
+    {
+      "id": "eng_writ_001",
+      "question": "What is a thesis statement?",
+      "options": ["The last sentence of an essay", "A sentence stating the main argument of an essay", "A question at the beginning", "A summary of sources"],
+      "correct_answer": "A sentence stating the main argument of an essay",
+      "explanation": "A thesis statement presents the central claim that the essay will support.",
+      "difficulty": 1
+    },
+    {
+      "id": "eng_writ_002",
+      "question": "Where is the thesis statement usually found?",
+      "options": ["In the conclusion", "At the end of the introduction", "In the body paragraphs", "In the title"],
+      "correct_answer": "At the end of the introduction",
+      "explanation": "The thesis typically appears at the end of the introductory paragraph.",
+      "difficulty": 1
+    },
+    {
+      "id": "eng_writ_003",
+      "question": "What are the three main parts of an essay?",
+      "options": ["Title, body, references", "Introduction, body, conclusion", "Hook, evidence, summary", "Thesis, arguments, bibliography"],
+      "correct_answer": "Introduction, body, conclusion",
+      "explanation": "A standard essay has an introduction, body paragraphs, and a conclusion.",
+      "difficulty": 1
+    },
+    {
+      "id": "eng_writ_004",
+      "question": "What is a 'hook' in writing?",
+      "options": ["A punctuation mark", "An opening sentence that grabs the reader's attention", "A type of citation", "The last sentence"],
+      "correct_answer": "An opening sentence that grabs the reader's attention",
+      "explanation": "A hook engages the reader from the very first line — it can be a quote, question, or surprising fact.",
+      "difficulty": 1
+    },
+    {
+      "id": "eng_writ_005",
+      "question": "What is a topic sentence in a body paragraph?",
+      "options": ["The last sentence", "A sentence introducing the paragraph's main point", "A quote from a source", "A rhetorical question"],
+      "correct_answer": "A sentence introducing the paragraph's main point",
+      "explanation": "Each body paragraph should start with a topic sentence that states its key idea.",
+      "difficulty": 2
+    },
+    {
+      "id": "eng_writ_006",
+      "question": "What does 'show, don't tell' mean in creative writing?",
+      "options": ["Use pictures instead of words", "Use descriptive details rather than stating facts directly", "Write shorter sentences", "Avoid adjectives"],
+      "correct_answer": "Use descriptive details rather than stating facts directly",
+      "explanation": "Instead of 'She was sad,' show it: 'Tears rolled down her cheeks as she stared at the empty chair.'",
+      "difficulty": 2
+    },
+    {
+      "id": "eng_writ_007",
+      "question": "What is a simile?",
+      "options": ["A comparison using 'like' or 'as'", "An exaggeration", "A word that sounds like its meaning", "A repeated consonant sound"],
+      "correct_answer": "A comparison using 'like' or 'as'",
+      "explanation": "'Her smile was like sunshine' is a simile — it uses 'like' to compare.",
+      "difficulty": 2
+    },
+    {
+      "id": "eng_writ_008",
+      "question": "What is a metaphor?",
+      "options": ["A comparison using 'like'", "A direct comparison without 'like' or 'as'", "An overstatement", "A sound word"],
+      "correct_answer": "A direct comparison without 'like' or 'as'",
+      "explanation": "'Life is a journey' directly equates two things without using 'like' or 'as'.",
+      "difficulty": 2
+    },
+    {
+      "id": "eng_writ_009",
+      "question": "What is alliteration?",
+      "options": ["Repetition of vowel sounds", "Repetition of consonant sounds at the start of words", "Repetition of a phrase", "A type of rhyme"],
+      "correct_answer": "Repetition of consonant sounds at the start of words",
+      "explanation": "'Peter Piper picked a peck of pickled peppers' — the 'p' sound repeats.",
+      "difficulty": 2
+    },
+    {
+      "id": "eng_writ_010",
+      "question": "What is the purpose of a conclusion paragraph?",
+      "options": ["Introduce new arguments", "Summarize key points and restate the thesis", "Provide detailed evidence", "Ask the reader a question"],
+      "correct_answer": "Summarize key points and restate the thesis",
+      "explanation": "The conclusion wraps up the essay by restating the thesis and summarizing arguments.",
+      "difficulty": 2
+    },
+    {
+      "id": "eng_writ_011",
+      "question": "What is personification?",
+      "options": ["Giving human qualities to non-human things", "Speaking directly to someone", "Using exaggeration for effect", "Comparing two unlike things"],
+      "correct_answer": "Giving human qualities to non-human things",
+      "explanation": "'The wind whispered through the trees' gives the wind a human ability.",
+      "difficulty": 2
+    },
+    {
+      "id": "eng_writ_012",
+      "question": "What is an anecdote in essay writing?",
+      "options": ["A statistic", "A short personal story used to illustrate a point", "A direct quote", "A definition"],
+      "correct_answer": "A short personal story used to illustrate a point",
+      "explanation": "Anecdotes are brief narratives that make abstract points more concrete and relatable.",
+      "difficulty": 3
+    },
+    {
+      "id": "eng_writ_013",
+      "question": "What are the three rhetorical appeals?",
+      "options": ["Ethos, Pathos, Logos", "Intro, Body, Conclusion", "Simile, Metaphor, Hyperbole", "Subject, Verb, Object"],
+      "correct_answer": "Ethos, Pathos, Logos",
+      "explanation": "Ethos = credibility, Pathos = emotion, Logos = logic/reasoning.",
+      "difficulty": 3
+    },
+    {
+      "id": "eng_writ_014",
+      "question": "What does 'Logos' appeal to?",
+      "options": ["Emotions", "Ethics", "Logic and reason", "Authority"],
+      "correct_answer": "Logic and reason",
+      "explanation": "Logos uses facts, statistics, and logical reasoning to persuade.",
+      "difficulty": 3
+    },
+    {
+      "id": "eng_writ_015",
+      "question": "What is a counterargument in persuasive writing?",
+      "options": ["Your main argument", "An opposing viewpoint that you address", "A supporting detail", "Your conclusion"],
+      "correct_answer": "An opposing viewpoint that you address",
+      "explanation": "Acknowledging and refuting counterarguments strengthens your position.",
+      "difficulty": 3
+    },
+    {
+      "id": "eng_writ_016",
+      "question": "What is hyperbole?",
+      "options": ["An understatement", "An extreme exaggeration for effect", "A comparison using 'like'", "A repeated word pattern"],
+      "correct_answer": "An extreme exaggeration for effect",
+      "explanation": "'I've told you a million times' is hyperbole — intentional extreme exaggeration.",
+      "difficulty": 2
+    },
+    {
+      "id": "eng_writ_017",
+      "question": "What is the difference between 'voice' and 'tone' in writing?",
+      "options": ["They are the same thing", "Voice is the author's style; tone is the attitude toward the subject", "Voice is loud; tone is quiet", "Tone is the style; voice is the attitude"],
+      "correct_answer": "Voice is the author's style; tone is the attitude toward the subject",
+      "explanation": "Voice is the writer's unique personality. Tone reflects feeling about the topic.",
+      "difficulty": 4
+    },
+    {
+      "id": "eng_writ_018",
+      "question": "What is an unreliable narrator?",
+      "options": ["A narrator who tells the truth", "A narrator whose credibility is compromised", "A third-person narrator", "An omniscient narrator"],
+      "correct_answer": "A narrator whose credibility is compromised",
+      "explanation": "An unreliable narrator's account may be biased, deceptive, or mistaken.",
+      "difficulty": 4
+    },
+    {
+      "id": "eng_writ_019",
+      "question": "What is irony?",
+      "options": ["Saying exactly what you mean", "A situation where reality differs from expectations", "A type of metaphor", "A grammatical error"],
+      "correct_answer": "A situation where reality differs from expectations",
+      "explanation": "Irony involves a contrast between what is expected and what actually occurs.",
+      "difficulty": 3
+    },
+    {
+      "id": "eng_writ_020",
+      "question": "What is a literary foil?",
+      "options": ["A type of sword", "A character who contrasts with another to highlight traits", "A plot twist", "A type of foreshadowing"],
+      "correct_answer": "A character who contrasts with another to highlight traits",
+      "explanation": "A foil character highlights another character's qualities through contrast.",
+      "difficulty": 4
+    },
+    {
+      "id": "eng_writ_021",
+      "question": "Which point of view uses 'I' and 'we'?",
+      "options": ["First person", "Second person", "Third person limited", "Third person omniscient"],
+      "correct_answer": "First person",
+      "explanation": "First person uses 'I/we': the narrator is a character in the story.",
+      "difficulty": 1
+    },
+    {
+      "id": "eng_writ_022",
+      "question": "What is foreshadowing?",
+      "options": ["A flashback", "Hints about future events in a story", "The climax of a story", "The resolution"],
+      "correct_answer": "Hints about future events in a story",
+      "explanation": "Foreshadowing gives clues about what will happen later in the narrative.",
+      "difficulty": 3
+    },
+    {
+      "id": "eng_writ_023",
+      "question": "What is a bildungsroman?",
+      "options": ["A horror novel", "A coming-of-age story", "A mystery novel", "A historical novel"],
+      "correct_answer": "A coming-of-age story",
+      "explanation": "A bildungsroman follows the protagonist's growth from youth to adulthood.",
+      "difficulty": 5
+    },
+    {
+      "id": "eng_writ_024",
+      "question": "What is the difference between denotation and connotation?",
+      "options": ["They mean the same", "Denotation is dictionary meaning; connotation is emotional association", "Denotation is emotional; connotation is literal", "Both are types of definitions"],
+      "correct_answer": "Denotation is dictionary meaning; connotation is emotional association",
+      "explanation": "'Home' denotes a dwelling but connotes warmth, safety, and comfort.",
+      "difficulty": 4
+    },
+    {
+      "id": "eng_writ_025",
+      "question": "What is a chiasmus?",
+      "options": ["A type of rhyme", "A reversal of grammatical structure in successive phrases", "A figure of speech using 'like'", "A type of alliteration"],
+      "correct_answer": "A reversal of grammatical structure in successive phrases",
+      "explanation": "Example: 'Ask not what your country can do for you; ask what you can do for your country.'",
+      "difficulty": 5
+    }
+  ]
+}

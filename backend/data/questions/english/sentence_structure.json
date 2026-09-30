@@ -1,0 +1,207 @@
+{
+  "subject": "english",
+  "topic": "sentence_structure",
+  "description": "Sentence types, clauses, phrases, sentence combining, parallelism",
+  "questions": [
+    {
+      "id": "eng_sent_001",
+      "question": "What is a simple sentence?",
+      "options": ["A sentence with two clauses", "A sentence with one independent clause", "A sentence with a dependent clause", "A very short sentence"],
+      "correct_answer": "A sentence with one independent clause",
+      "explanation": "A simple sentence contains exactly one independent clause and no dependent clauses.",
+      "difficulty": 1
+    },
+    {
+      "id": "eng_sent_002",
+      "question": "Which is a compound sentence?",
+      "options": ["I like dogs.", "I like dogs, and she likes cats.", "Although I like dogs, she likes cats.", "Dogs are loyal pets."],
+      "correct_answer": "I like dogs, and she likes cats.",
+      "explanation": "A compound sentence has two independent clauses joined by a conjunction.",
+      "difficulty": 2
+    },
+    {
+      "id": "eng_sent_003",
+      "question": "What is the subject of: 'The tall boy ran home'?",
+      "options": ["tall", "boy", "ran", "home"],
+      "correct_answer": "boy",
+      "explanation": "The subject is 'boy' — the person performing the action. 'Tall' is a modifier.",
+      "difficulty": 1
+    },
+    {
+      "id": "eng_sent_004",
+      "question": "Identify the predicate in: 'My cat sleeps all day.'",
+      "options": ["My cat", "sleeps all day", "My", "all day"],
+      "correct_answer": "sleeps all day",
+      "explanation": "The predicate includes the verb and everything that follows: 'sleeps all day'.",
+      "difficulty": 1
+    },
+    {
+      "id": "eng_sent_005",
+      "question": "Which sentence is a complex sentence?",
+      "options": ["I ate lunch.", "I ate lunch and went home.", "Because I was hungry, I ate lunch.", "Lunch was delicious."],
+      "correct_answer": "Because I was hungry, I ate lunch.",
+      "explanation": "A complex sentence has one independent clause and one or more dependent clauses.",
+      "difficulty": 2
+    },
+    {
+      "id": "eng_sent_006",
+      "question": "What is a sentence fragment?",
+      "options": ["A complete thought", "A group of words missing a subject or verb", "A very long sentence", "A question"],
+      "correct_answer": "A group of words missing a subject or verb",
+      "explanation": "A fragment is an incomplete sentence that lacks a subject, verb, or complete thought.",
+      "difficulty": 1
+    },
+    {
+      "id": "eng_sent_007",
+      "question": "Which is a run-on sentence?",
+      "options": ["I like pizza. She likes pasta.", "I like pizza, she likes pasta.", "I like pizza, and she likes pasta.", "I like pizza; she likes pasta."],
+      "correct_answer": "I like pizza, she likes pasta.",
+      "explanation": "A run-on uses only a comma to connect independent clauses (comma splice).",
+      "difficulty": 2
+    },
+    {
+      "id": "eng_sent_008",
+      "question": "What is the direct object in: 'She kicked the ball'?",
+      "options": ["She", "kicked", "the", "ball"],
+      "correct_answer": "ball",
+      "explanation": "The direct object receives the action of the verb: She kicked what? The ball.",
+      "difficulty": 2
+    },
+    {
+      "id": "eng_sent_009",
+      "question": "Which word is the indirect object in: 'She gave him the book'?",
+      "options": ["She", "gave", "him", "book"],
+      "correct_answer": "him",
+      "explanation": "The indirect object tells us to whom the action is done: She gave the book to him.",
+      "difficulty": 3
+    },
+    {
+      "id": "eng_sent_010",
+      "question": "What is parallelism in writing?",
+      "options": ["Using parallel lines", "Using the same grammatical structure for similar ideas", "Writing in two columns", "Repeating the same word"],
+      "correct_answer": "Using the same grammatical structure for similar ideas",
+      "explanation": "Parallelism means using consistent grammatical patterns: 'running, jumping, and swimming'.",
+      "difficulty": 3
+    },
+    {
+      "id": "eng_sent_011",
+      "question": "Which shows correct parallelism?",
+      "options": ["She likes to swim, running, and to hike.", "She likes swimming, running, and hiking.", "She likes to swim, to be running, and hike.", "She likes swim, running, and to hike."],
+      "correct_answer": "She likes swimming, running, and hiking.",
+      "explanation": "All items use the same form (-ing gerunds) for proper parallelism.",
+      "difficulty": 3
+    },
+    {
+      "id": "eng_sent_012",
+      "question": "What type of phrase is 'under the bridge'?",
+      "options": ["Noun phrase", "Verb phrase", "Prepositional phrase", "Adjective phrase"],
+      "correct_answer": "Prepositional phrase",
+      "explanation": "It begins with the preposition 'under' and includes its object 'bridge'.",
+      "difficulty": 2
+    },
+    {
+      "id": "eng_sent_013",
+      "question": "A compound-complex sentence has:",
+      "options": ["One independent clause only", "Two independent clauses and at least one dependent clause", "Only dependent clauses", "Exactly three clauses"],
+      "correct_answer": "Two independent clauses and at least one dependent clause",
+      "explanation": "Compound-complex = compound (2+ independent) + complex (1+ dependent).",
+      "difficulty": 4
+    },
+    {
+      "id": "eng_sent_014",
+      "question": "What is an appositive?",
+      "options": ["A verb form", "A noun or phrase that renames another noun", "A type of conjunction", "An exclamation"],
+      "correct_answer": "A noun or phrase that renames another noun",
+      "explanation": "Example: 'My dog, a golden retriever, loves to swim.' 'A golden retriever' renames 'my dog'.",
+      "difficulty": 3
+    },
+    {
+      "id": "eng_sent_015",
+      "question": "In 'Although it rained, we went outside,' which is the dependent clause?",
+      "options": ["we went outside", "Although it rained", "it rained", "we went"],
+      "correct_answer": "Although it rained",
+      "explanation": "'Although it rained' cannot stand alone; it depends on the main clause.",
+      "difficulty": 2
+    },
+    {
+      "id": "eng_sent_016",
+      "question": "What is the purpose of a topic sentence?",
+      "options": ["To end a paragraph", "To introduce the main idea of a paragraph", "To provide evidence", "To ask a question"],
+      "correct_answer": "To introduce the main idea of a paragraph",
+      "explanation": "The topic sentence states the central point that the paragraph will develop.",
+      "difficulty": 2
+    },
+    {
+      "id": "eng_sent_017",
+      "question": "Which transition word shows contrast?",
+      "options": ["Furthermore", "However", "Additionally", "Therefore"],
+      "correct_answer": "However",
+      "explanation": "'However' signals a contrast or contradiction with the previous idea.",
+      "difficulty": 2
+    },
+    {
+      "id": "eng_sent_018",
+      "question": "What is a gerund?",
+      "options": ["A verb acting as an adjective", "A verb form ending in -ing used as a noun", "A helping verb", "A past tense verb"],
+      "correct_answer": "A verb form ending in -ing used as a noun",
+      "explanation": "A gerund is an -ing verb form used as a noun: 'Swimming is fun.'",
+      "difficulty": 3
+    },
+    {
+      "id": "eng_sent_019",
+      "question": "Identify the independent clause: 'When the bell rang, students left the room.'",
+      "options": ["When the bell rang", "students left the room", "the bell rang", "left the room"],
+      "correct_answer": "students left the room",
+      "explanation": "'Students left the room' can stand alone as a complete sentence.",
+      "difficulty": 2
+    },
+    {
+      "id": "eng_sent_020",
+      "question": "What is a relative clause?",
+      "options": ["A clause about family", "A clause introduced by who, which, or that", "A main clause", "A clause with no verb"],
+      "correct_answer": "A clause introduced by who, which, or that",
+      "explanation": "Relative clauses modify nouns: 'The man who called is my uncle.'",
+      "difficulty": 3
+    },
+    {
+      "id": "eng_sent_021",
+      "question": "Which is a correctly punctuated introductory phrase?",
+      "options": ["After the movie we went home.", "After the movie, we went home.", "After, the movie we went home.", "After the, movie we went home."],
+      "correct_answer": "After the movie, we went home.",
+      "explanation": "Use a comma after an introductory phrase before the main clause.",
+      "difficulty": 2
+    },
+    {
+      "id": "eng_sent_022",
+      "question": "What is a participial phrase?",
+      "options": ["A phrase beginning with a participle", "A phrase with a preposition", "A phrase with a conjunction", "A phrase with a pronoun"],
+      "correct_answer": "A phrase beginning with a participle",
+      "explanation": "Example: 'Running down the street, he tripped.' 'Running down the street' is participial.",
+      "difficulty": 4
+    },
+    {
+      "id": "eng_sent_023",
+      "question": "What is an elliptical sentence?",
+      "options": ["A sentence shaped like an ellipse", "A sentence with intentionally omitted words", "A very long sentence", "A sentence with no punctuation"],
+      "correct_answer": "A sentence with intentionally omitted words",
+      "explanation": "Elliptical sentences omit words understood from context: 'She likes tea; he, coffee.'",
+      "difficulty": 5
+    },
+    {
+      "id": "eng_sent_024",
+      "question": "What is the difference between 'restrictive' and 'nonrestrictive' clauses?",
+      "options": ["Restrictive uses 'that'; nonrestrictive uses 'which' with commas", "There is no difference", "Restrictive is longer", "Nonrestrictive is more formal"],
+      "correct_answer": "Restrictive uses 'that'; nonrestrictive uses 'which' with commas",
+      "explanation": "Restrictive: essential info (no commas). Nonrestrictive: extra info (commas).",
+      "difficulty": 5
+    },
+    {
+      "id": "eng_sent_025",
+      "question": "What is an absolute phrase?",
+      "options": ["A phrase that modifies the entire sentence", "A phrase with an absolute value", "A phrase that is always true", "A phrase at the end of a sentence"],
+      "correct_answer": "A phrase that modifies the entire sentence",
+      "explanation": "Example: 'The sun having set, we went inside.' The absolute phrase modifies the whole sentence.",
+      "difficulty": 5
+    }
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "subject": "english",
+  "topic": "vocabulary",
+  "description": "Word meanings, synonyms, antonyms, context clues, word roots",
+  "questions": [
+    {
+      "id": "eng_vocab_001",
+      "question": "What does 'benevolent' mean?",
+      "options": ["Cruel", "Kind and generous", "Angry", "Sad"],
+      "correct_answer": "Kind and generous",
+      "explanation": "'Benevolent' means well-meaning, kind, and generous. From Latin 'bene' (well) + 'volent' (wishing).",
+      "difficulty": 2
+    },
+    {
+      "id": "eng_vocab_002",
+      "question": "What is a synonym for 'happy'?",
+      "options": ["Sad", "Joyful", "Angry", "Tired"],
+      "correct_answer": "Joyful",
+      "explanation": "'Joyful' means full of joy, which is a synonym for happy.",
+      "difficulty": 1
+    },
+    {
+      "id": "eng_vocab_003",
+      "question": "What is the antonym of 'ancient'?",
+      "options": ["Old", "Historic", "Modern", "Antique"],
+      "correct_answer": "Modern",
+      "explanation": "'Ancient' means very old; its opposite is 'modern' (new, recent).",
+      "difficulty": 1
+    },
+    {
+      "id": "eng_vocab_004",
+      "question": "What does the prefix 'un-' mean?",
+      "options": ["Again", "Not", "Before", "After"],
+      "correct_answer": "Not",
+      "explanation": "The prefix 'un-' means 'not': unhappy = not happy, unlikely = not likely.",
+      "difficulty": 1
+    },
+    {
+      "id": "eng_vocab_005",
+      "question": "What does 'eloquent' mean?",
+      "options": ["Fluent and persuasive in speech", "Quiet and shy", "Rude and aggressive", "Slow and careful"],
+      "correct_answer": "Fluent and persuasive in speech",
+      "explanation": "'Eloquent' describes someone who speaks in a fluent and persuasive manner.",
+      "difficulty": 3
+    },
+    {
+      "id": "eng_vocab_006",
+      "question": "'The teacher was very *stern* with the students.' What does 'stern' mean?",
+      "options": ["Funny", "Strict and serious", "Friendly", "Confused"],
+      "correct_answer": "Strict and serious",
+      "explanation": "'Stern' means serious and unrelenting, especially in discipline.",
+      "difficulty": 2
+    },
+    {
+      "id": "eng_vocab_007",
+      "question": "What does 'ubiquitous' mean?",
+      "options": ["Rare", "Present everywhere", "Invisible", "Expensive"],
+      "correct_answer": "Present everywhere",
+      "explanation": "'Ubiquitous' means appearing or found everywhere. Smartphones are ubiquitous.",
+      "difficulty": 4
+    },
+    {
+      "id": "eng_vocab_008",
+      "question": "What is the root word in 'unbelievable'?",
+      "options": ["un", "believe", "able", "unbelieve"],
+      "correct_answer": "believe",
+      "explanation": "'Believe' is the root; 'un-' is a prefix and '-able' is a suffix.",
+      "difficulty": 2
+    },
+    {
+      "id": "eng_vocab_009",
+      "question": "What does 'ambiguous' mean?",
+      "options": ["Clear and obvious", "Open to multiple interpretations", "Frightening", "Beautiful"],
+      "correct_answer": "Open to multiple interpretations",
+      "explanation": "'Ambiguous' means having more than one possible meaning; unclear.",
+      "difficulty": 3
+    },
+    {
+      "id": "eng_vocab_010",
+      "question": "Choose the word that means 'a strong dislike':",
+      "options": ["Apathy", "Aversion", "Affection", "Admiration"],
+      "correct_answer": "Aversion",
+      "explanation": "'Aversion' means a strong feeling of dislike or reluctance.",
+      "difficulty": 3
+    },
+    {
+      "id": "eng_vocab_011",
+      "question": "What does the suffix '-ology' mean?",
+      "options": ["Fear of", "Study of", "Full of", "Without"],
+      "correct_answer": "Study of",
+      "explanation": "'-ology' means the study of: biology, psychology, geology.",
+      "difficulty": 2
+    },
+    {
+      "id": "eng_vocab_012",
+      "question": "What does 'ephemeral' mean?",
+      "options": ["Lasting forever", "Very short-lived", "Extremely large", "Deeply meaningful"],
+      "correct_answer": "Very short-lived",
+      "explanation": "'Ephemeral' means lasting for a very short time, like a butterfly's life.",
+      "difficulty": 4
+    },
+    {
+      "id": "eng_vocab_013",
+      "question": "What is the meaning of 'pragmatic'?",
+      "options": ["Idealistic", "Practical and realistic", "Dramatic", "Romantic"],
+      "correct_answer": "Practical and realistic",
+      "explanation": "'Pragmatic' means dealing with things sensibly and realistically.",
+      "difficulty": 3
+    },
+    {
+      "id": "eng_vocab_014",
+      "question": "What does 'meticulous' mean?",
+      "options": ["Careless", "Showing great attention to detail", "Extremely fast", "Very angry"],
+      "correct_answer": "Showing great attention to detail",
+      "explanation": "'Meticulous' means very careful and precise about details.",
+      "difficulty": 3
+    },
+    {
+      "id": "eng_vocab_015",
+      "question": "A word that sounds the same as another but has different meaning is called a:",
+      "options": ["Synonym", "Antonym", "Homophone", "Palindrome"],
+      "correct_answer": "Homophone",
+      "explanation": "Homophones sound alike but differ in meaning: 'their/there/they're'.",
+      "difficulty": 2
+    },
+    {
+      "id": "eng_vocab_016",
+      "question": "What does 'cacophony' mean?",
+      "options": ["Beautiful music", "A harsh mixture of sounds", "Complete silence", "A musical instrument"],
+      "correct_answer": "A harsh mixture of sounds",
+      "explanation": "'Cacophony' means a harsh, discordant mixture of sounds. From Greek 'kakos' (bad) + 'phone' (sound).",
+      "difficulty": 4
+    },
+    {
+      "id": "eng_vocab_017",
+      "question": "What is the meaning of 'resilient'?",
+      "options": ["Fragile", "Able to recover quickly from difficulties", "Transparent", "Rebellious"],
+      "correct_answer": "Able to recover quickly from difficulties",
+      "explanation": "'Resilient' means able to withstand or recover quickly from tough conditions.",
+      "difficulty": 3
+    },
+    {
+      "id": "eng_vocab_018",
+      "question": "What does the Latin root 'dict' mean?",
+      "options": ["Write", "Say or speak", "Lead", "See"],
+      "correct_answer": "Say or speak",
+      "explanation": "'Dict' means to say: dictionary, dictate, predict, verdict.",
+      "difficulty": 3
+    },
+    {
+      "id": "eng_vocab_019",
+      "question": "What does 'sycophant' mean?",
+      "options": ["A type of tree", "A person who flatters to gain advantage", "A musical instrument", "A type of illness"],
+      "correct_answer": "A person who flatters to gain advantage",
+      "explanation": "A sycophant uses excessive flattery to win favor from influential people.",
+      "difficulty": 5
+    },
+    {
+      "id": "eng_vocab_020",
+      "question": "What does 'juxtapose' mean?",
+      "options": ["To separate", "To place side by side for comparison", "To destroy", "To build"],
+      "correct_answer": "To place side by side for comparison",
+      "explanation": "'Juxtapose' means to place things close together for contrasting effect.",
+      "difficulty": 4
+    },
+    {
+      "id": "eng_vocab_021",
+      "question": "What is a synonym for 'difficult'?",
+      "options": ["Easy", "Simple", "Arduous", "Pleasant"],
+      "correct_answer": "Arduous",
+      "explanation": "'Arduous' means involving a lot of effort and difficulty.",
+      "difficulty": 2
+    },
+    {
+      "id": "eng_vocab_022",
+      "question": "What does 'lethargic' mean?",
+      "options": ["Energetic", "Sluggish and lacking energy", "Intelligent", "Musical"],
+      "correct_answer": "Sluggish and lacking energy",
+      "explanation": "'Lethargic' means lacking energy, sluggish, drowsy.",
+      "difficulty": 3
+    },
+    {
+      "id": "eng_vocab_023",
+      "question": "What does 'gregarious' mean?",
+      "options": ["Shy and withdrawn", "Fond of company; sociable", "Angry and hostile", "Extremely intelligent"],
+      "correct_answer": "Fond of company; sociable",
+      "explanation": "'Gregarious' describes someone who enjoys being with other people.",
+      "difficulty": 5
+    },
+    {
+      "id": "eng_vocab_024",
+      "question": "The word 'telephone' contains Greek roots meaning:",
+      "options": ["Far + sound", "Near + light", "Small + write", "Big + move"],
+      "correct_answer": "Far + sound",
+      "explanation": "'Tele' = far, 'phone' = sound/voice. Telephone = far sound.",
+      "difficulty": 2
+    },
+    {
+      "id": "eng_vocab_025",
+      "question": "What does 'pernicious' mean?",
+      "options": ["Helpful", "Having a harmful effect, especially gradually", "Very loud", "Extremely beautiful"],
+      "correct_answer": "Having a harmful effect, especially gradually",
+      "explanation": "'Pernicious' means having a harmful effect, especially in a gradual or subtle way.",
+      "difficulty": 5
+    }
+  ]
+}
