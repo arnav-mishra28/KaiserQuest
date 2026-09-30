@@ -1,0 +1,1474 @@
+{
+  "subject": "math",
+  "topic": "word_problems",
+  "generated_by": "kaiserquest-content-pipeline",
+  "version": 1,
+  "concepts": [
+    "word.consecutive",
+    "word.mixture",
+    "word.rates",
+    "word.translate"
+  ],
+  "counts": {
+    "total": 60,
+    "curated": 0,
+    "generated": 60
+  },
+  "questions": [
+    {
+      "id": "gen_word_consecutive_001",
+      "subject": "math",
+      "topic": "word_problems",
+      "concept": "word.consecutive",
+      "question": "The sum of three consecutive whole numbers is 33. What is the smallest of the three numbers?",
+      "options": [
+        "11",
+        "9",
+        "10"
+      ],
+      "correct_answer": "10",
+      "explanation": "Call the smallest n. Then the others are n + 1 and n + 2, so 3n + 3 = 33, giving 3n = 30 and n = 10. The three numbers are 10, 11, 12.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": {
+        "kind": "numeric",
+        "expression": "(33 - 3)/3"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6426.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_word_consecutive_002",
+      "subject": "math",
+      "topic": "word_problems",
+      "concept": "word.consecutive",
+      "question": "The sum of three consecutive whole numbers is 9. What is the smallest of the three numbers?",
+      "options": [
+        "3",
+        "2",
+        "1"
+      ],
+      "correct_answer": "2",
+      "explanation": "Call the smallest n. Then the others are n + 1 and n + 2, so 3n + 3 = 9, giving 3n = 6 and n = 2. The three numbers are 2, 3, 4.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": {
+        "kind": "numeric",
+        "expression": "(9 - 3)/3"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6398.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_word_consecutive_003",
+      "subject": "math",
+      "topic": "word_problems",
+      "concept": "word.consecutive",
+      "question": "The sum of three consecutive whole numbers is 54. What is the smallest of the three numbers?",
+      "options": [
+        "17",
+        "18",
+        "16"
+      ],
+      "correct_answer": "17",
+      "explanation": "Call the smallest n. Then the others are n + 1 and n + 2, so 3n + 3 = 54, giving 3n = 51 and n = 17. The three numbers are 17, 18, 19.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": {
+        "kind": "numeric",
+        "expression": "(54 - 3)/3"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6426.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_word_consecutive_004",
+      "subject": "math",
+      "topic": "word_problems",
+      "concept": "word.consecutive",
+      "question": "The sum of three consecutive whole numbers is 27. What is the smallest of the three numbers?",
+      "options": [
+        "7",
+        "9",
+        "8"
+      ],
+      "correct_answer": "8",
+      "explanation": "Call the smallest n. Then the others are n + 1 and n + 2, so 3n + 3 = 27, giving 3n = 24 and n = 8. The three numbers are 8, 9, 10.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": {
+        "kind": "numeric",
+        "expression": "(27 - 3)/3"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6426.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_word_consecutive_005",
+      "subject": "math",
+      "topic": "word_problems",
+      "concept": "word.consecutive",
+      "question": "The sum of three consecutive whole numbers is 60. What is the smallest of the three numbers?",
+      "options": [
+        "18",
+        "20",
+        "19"
+      ],
+      "correct_answer": "19",
+      "explanation": "Call the smallest n. Then the others are n + 1 and n + 2, so 3n + 3 = 60, giving 3n = 57 and n = 19. The three numbers are 19, 20, 21.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": {
+        "kind": "numeric",
+        "expression": "(60 - 3)/3"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6426.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_word_consecutive_006",
+      "subject": "math",
+      "topic": "word_problems",
+      "concept": "word.consecutive",
+      "question": "The sum of three consecutive whole numbers is 30. What is the smallest of the three numbers?",
+      "options": [
+        "9",
+        "10",
+        "8"
+      ],
+      "correct_answer": "9",
+      "explanation": "Call the smallest n. Then the others are n + 1 and n + 2, so 3n + 3 = 30, giving 3n = 27 and n = 9. The three numbers are 9, 10, 11.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": {
+        "kind": "numeric",
+        "expression": "(30 - 3)/3"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6426.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_word_consecutive_007",
+      "subject": "math",
+      "topic": "word_problems",
+      "concept": "word.consecutive",
+      "question": "The sum of three consecutive whole numbers is 63. What is the smallest of the three numbers?",
+      "options": [
+        "21",
+        "20",
+        "19"
+      ],
+      "correct_answer": "20",
+      "explanation": "Call the smallest n. Then the others are n + 1 and n + 2, so 3n + 3 = 63, giving 3n = 60 and n = 20. The three numbers are 20, 21, 22.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": {
+        "kind": "numeric",
+        "expression": "(63 - 3)/3"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6426.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_word_consecutive_008",
+      "subject": "math",
+      "topic": "word_problems",
+      "concept": "word.consecutive",
+      "question": "The sum of three consecutive whole numbers is 39. What is the smallest of the three numbers?",
+      "options": [
+        "13",
+        "11",
+        "12"
+      ],
+      "correct_answer": "12",
+      "explanation": "Call the smallest n. Then the others are n + 1 and n + 2, so 3n + 3 = 39, giving 3n = 36 and n = 12. The three numbers are 12, 13, 14.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": {
+        "kind": "numeric",
+        "expression": "(39 - 3)/3"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6426.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_word_consecutive_009",
+      "subject": "math",
+      "topic": "word_problems",
+      "concept": "word.consecutive",
+      "question": "The sum of three consecutive whole numbers is 51. What is the smallest of the three numbers?",
+      "options": [
+        "15",
+        "17",
+        "16"
+      ],
+      "correct_answer": "16",
+      "explanation": "Call the smallest n. Then the others are n + 1 and n + 2, so 3n + 3 = 51, giving 3n = 48 and n = 16. The three numbers are 16, 17, 18.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": {
+        "kind": "numeric",
+        "expression": "(51 - 3)/3"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6426.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_word_consecutive_010",
+      "subject": "math",
+      "topic": "word_problems",
+      "concept": "word.consecutive",
+      "question": "The sum of three consecutive whole numbers is 12. What is the smallest of the three numbers?",
+      "options": [
+        "4",
+        "3",
+        "2"
+      ],
+      "correct_answer": "3",
+      "explanation": "Call the smallest n. Then the others are n + 1 and n + 2, so 3n + 3 = 12, giving 3n = 9 and n = 3. The three numbers are 3, 4, 5.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": {
+        "kind": "numeric",
+        "expression": "(12 - 3)/3"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6426.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_word_consecutive_011",
+      "subject": "math",
+      "topic": "word_problems",
+      "concept": "word.consecutive",
+      "question": "The sum of three consecutive whole numbers is 36. What is the smallest of the three numbers?",
+      "options": [
+        "12",
+        "10",
+        "11"
+      ],
+      "correct_answer": "11",
+      "explanation": "Call the smallest n. Then the others are n + 1 and n + 2, so 3n + 3 = 36, giving 3n = 33 and n = 11. The three numbers are 11, 12, 13.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": {
+        "kind": "numeric",
+        "expression": "(36 - 3)/3"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6426.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_word_consecutive_012",
+      "subject": "math",
+      "topic": "word_problems",
+      "concept": "word.consecutive",
+      "question": "The sum of three consecutive whole numbers is 18. What is the smallest of the three numbers?",
+      "options": [
+        "5",
+        "6",
+        "4"
+      ],
+      "correct_answer": "5",
+      "explanation": "Call the smallest n. Then the others are n + 1 and n + 2, so 3n + 3 = 18, giving 3n = 15 and n = 5. The three numbers are 5, 6, 7.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": {
+        "kind": "numeric",
+        "expression": "(18 - 3)/3"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6426.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_word_consecutive_013",
+      "subject": "math",
+      "topic": "word_problems",
+      "concept": "word.consecutive",
+      "question": "The sum of three consecutive whole numbers is 24. What is the smallest of the three numbers?",
+      "options": [
+        "6",
+        "7",
+        "8"
+      ],
+      "correct_answer": "7",
+      "explanation": "Call the smallest n. Then the others are n + 1 and n + 2, so 3n + 3 = 24, giving 3n = 21 and n = 7. The three numbers are 7, 8, 9.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": {
+        "kind": "numeric",
+        "expression": "(24 - 3)/3"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6426.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_word_consecutive_014",
+      "subject": "math",
+      "topic": "word_problems",
+      "concept": "word.consecutive",
+      "question": "The sum of three consecutive whole numbers is 42. What is the smallest of the three numbers?",
+      "options": [
+        "13",
+        "14",
+        "12"
+      ],
+      "correct_answer": "13",
+      "explanation": "Call the smallest n. Then the others are n + 1 and n + 2, so 3n + 3 = 42, giving 3n = 39 and n = 13. The three numbers are 13, 14, 15.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": {
+        "kind": "numeric",
+        "expression": "(42 - 3)/3"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6426.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_word_consecutive_015",
+      "subject": "math",
+      "topic": "word_problems",
+      "concept": "word.consecutive",
+      "question": "The sum of three consecutive whole numbers is 48. What is the smallest of the three numbers?",
+      "options": [
+        "16",
+        "14",
+        "15"
+      ],
+      "correct_answer": "15",
+      "explanation": "Call the smallest n. Then the others are n + 1 and n + 2, so 3n + 3 = 48, giving 3n = 45 and n = 15. The three numbers are 15, 16, 17.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": {
+        "kind": "numeric",
+        "expression": "(48 - 3)/3"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6426.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_word_mixture_001",
+      "subject": "math",
+      "topic": "word_problems",
+      "concept": "word.mixture",
+      "question": "A chemist has 5 litres of a 28% solution and a stock of 35% solution. How many litres of the 35% solution must be added to make the mixture 30%?",
+      "options": [
+        "4",
+        "5",
+        "7",
+        "2"
+      ],
+      "correct_answer": "2",
+      "explanation": "The amount of dissolved substance is conserved. Adding x litres of 35% to 5 litres of 28% must give 7 litres at 30%: 35x + 28·5 = 30(x + 5), so x = 2 litres.",
+      "difficulty": 5,
+      "misconceptions": {},
+      "verify": {
+        "kind": "numeric",
+        "expression": "(5*(30 - 28))/(35 - 30)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 8332.0,
+      "estimated_difficulty": 5
+    },
+    {
+      "id": "gen_word_mixture_002",
+      "subject": "math",
+      "topic": "word_problems",
+      "concept": "word.mixture",
+      "question": "A chemist has 18 litres of a 27% solution and a stock of 33% solution. How many litres of the 33% solution must be added to make the mixture 30%?",
+      "options": [
+        "18",
+        "19",
+        "21",
+        "36"
+      ],
+      "correct_answer": "18",
+      "explanation": "The amount of dissolved substance is conserved. Adding x litres of 33% to 18 litres of 27% must give 36 litres at 30%: 33x + 27·18 = 30(x + 18), so x = 18 litres.",
+      "difficulty": 5,
+      "misconceptions": {},
+      "verify": {
+        "kind": "numeric",
+        "expression": "(18*(30 - 27))/(33 - 30)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 8360.0,
+      "estimated_difficulty": 5
+    },
+    {
+      "id": "gen_word_mixture_003",
+      "subject": "math",
+      "topic": "word_problems",
+      "concept": "word.mixture",
+      "question": "A chemist has 25 litres of a 27% solution and a stock of 35% solution. How many litres of the 35% solution must be added to make the mixture 30%?",
+      "options": [
+        "15",
+        "20",
+        "25",
+        "40"
+      ],
+      "correct_answer": "15",
+      "explanation": "The amount of dissolved substance is conserved. Adding x litres of 35% to 25 litres of 27% must give 40 litres at 30%: 35x + 27·25 = 30(x + 25), so x = 15 litres.",
+      "difficulty": 5,
+      "misconceptions": {},
+      "verify": {
+        "kind": "numeric",
+        "expression": "(25*(30 - 27))/(35 - 30)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 8360.0,
+      "estimated_difficulty": 5
+    },
+    {
+      "id": "gen_word_mixture_004",
+      "subject": "math",
+      "topic": "word_problems",
+      "concept": "word.mixture",
+      "question": "A chemist has 10 litres of a 29% solution and a stock of 32% solution. How many litres of the 32% solution must be added to make the mixture 30%?",
+      "options": [
+        "5",
+        "15",
+        "10",
+        "7"
+      ],
+      "correct_answer": "5",
+      "explanation": "The amount of dissolved substance is conserved. Adding x litres of 32% to 10 litres of 29% must give 15 litres at 30%: 32x + 29·10 = 30(x + 10), so x = 5 litres.",
+      "difficulty": 5,
+      "misconceptions": {},
+      "verify": {
+        "kind": "numeric",
+        "expression": "(10*(30 - 29))/(32 - 30)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 8360.0,
+      "estimated_difficulty": 5
+    },
+    {
+      "id": "gen_word_mixture_005",
+      "subject": "math",
+      "topic": "word_problems",
+      "concept": "word.mixture",
+      "question": "A chemist has 25 litres of a 28% solution and a stock of 35% solution. How many litres of the 35% solution must be added to make the mixture 30%?",
+      "options": [
+        "25",
+        "35",
+        "15",
+        "10"
+      ],
+      "correct_answer": "10",
+      "explanation": "The amount of dissolved substance is conserved. Adding x litres of 35% to 25 litres of 28% must give 35 litres at 30%: 35x + 28·25 = 30(x + 25), so x = 10 litres.",
+      "difficulty": 5,
+      "misconceptions": {},
+      "verify": {
+        "kind": "numeric",
+        "expression": "(25*(30 - 28))/(35 - 30)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 8360.0,
+      "estimated_difficulty": 5
+    },
+    {
+      "id": "gen_word_mixture_006",
+      "subject": "math",
+      "topic": "word_problems",
+      "concept": "word.mixture",
+      "question": "A chemist has 6 litres of a 26% solution and a stock of 32% solution. How many litres of the 32% solution must be added to make the mixture 30%?",
+      "options": [
+        "12",
+        "14",
+        "18",
+        "6"
+      ],
+      "correct_answer": "12",
+      "explanation": "The amount of dissolved substance is conserved. Adding x litres of 32% to 6 litres of 26% must give 18 litres at 30%: 32x + 26·6 = 30(x + 6), so x = 12 litres.",
+      "difficulty": 5,
+      "misconceptions": {},
+      "verify": {
+        "kind": "numeric",
+        "expression": "(6*(30 - 26))/(32 - 30)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 8332.0,
+      "estimated_difficulty": 5
+    },
+    {
+      "id": "gen_word_mixture_007",
+      "subject": "math",
+      "topic": "word_problems",
+      "concept": "word.mixture",
+      "question": "A chemist has 2 litres of a 26% solution and a stock of 32% solution. How many litres of the 32% solution must be added to make the mixture 30%?",
+      "options": [
+        "8",
+        "2",
+        "6",
+        "4"
+      ],
+      "correct_answer": "4",
+      "explanation": "The amount of dissolved substance is conserved. Adding x litres of 32% to 2 litres of 26% must give 6 litres at 30%: 32x + 26·2 = 30(x + 2), so x = 4 litres.",
+      "difficulty": 5,
+      "misconceptions": {},
+      "verify": {
+        "kind": "numeric",
+        "expression": "(2*(30 - 26))/(32 - 30)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 8332.0,
+      "estimated_difficulty": 5
+    },
+    {
+      "id": "gen_word_mixture_008",
+      "subject": "math",
+      "topic": "word_problems",
+      "concept": "word.mixture",
+      "question": "A chemist has 4 litres of a 26% solution and a stock of 34% solution. How many litres of the 34% solution must be added to make the mixture 30%?",
+      "options": [
+        "8",
+        "5",
+        "4"
+      ],
+      "correct_answer": "4",
+      "explanation": "The amount of dissolved substance is conserved. Adding x litres of 34% to 4 litres of 26% must give 8 litres at 30%: 34x + 26·4 = 30(x + 4), so x = 4 litres.",
+      "difficulty": 5,
+      "misconceptions": {},
+      "verify": {
+        "kind": "numeric",
+        "expression": "(4*(30 - 26))/(34 - 30)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 7882.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_word_mixture_009",
+      "subject": "math",
+      "topic": "word_problems",
+      "concept": "word.mixture",
+      "question": "A chemist has 20 litres of a 29% solution and a stock of 34% solution. How many litres of the 34% solution must be added to make the mixture 30%?",
+      "options": [
+        "9",
+        "5",
+        "20",
+        "25"
+      ],
+      "correct_answer": "5",
+      "explanation": "The amount of dissolved substance is conserved. Adding x litres of 34% to 20 litres of 29% must give 25 litres at 30%: 34x + 29·20 = 30(x + 20), so x = 5 litres.",
+      "difficulty": 5,
+      "misconceptions": {},
+      "verify": {
+        "kind": "numeric",
+        "expression": "(20*(30 - 29))/(34 - 30)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 8360.0,
+      "estimated_difficulty": 5
+    },
+    {
+      "id": "gen_word_mixture_010",
+      "subject": "math",
+      "topic": "word_problems",
+      "concept": "word.mixture",
+      "question": "A chemist has 24 litres of a 26% solution and a stock of 34% solution. How many litres of the 34% solution must be added to make the mixture 30%?",
+      "options": [
+        "48",
+        "25",
+        "24",
+        "28"
+      ],
+      "correct_answer": "24",
+      "explanation": "The amount of dissolved substance is conserved. Adding x litres of 34% to 24 litres of 26% must give 48 litres at 30%: 34x + 26·24 = 30(x + 24), so x = 24 litres.",
+      "difficulty": 5,
+      "misconceptions": {},
+      "verify": {
+        "kind": "numeric",
+        "expression": "(24*(30 - 26))/(34 - 30)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 8360.0,
+      "estimated_difficulty": 5
+    },
+    {
+      "id": "gen_word_mixture_011",
+      "subject": "math",
+      "topic": "word_problems",
+      "concept": "word.mixture",
+      "question": "A chemist has 16 litres of a 26% solution and a stock of 34% solution. How many litres of the 34% solution must be added to make the mixture 30%?",
+      "options": [
+        "20",
+        "16",
+        "17",
+        "32"
+      ],
+      "correct_answer": "16",
+      "explanation": "The amount of dissolved substance is conserved. Adding x litres of 34% to 16 litres of 26% must give 32 litres at 30%: 34x + 26·16 = 30(x + 16), so x = 16 litres.",
+      "difficulty": 5,
+      "misconceptions": {},
+      "verify": {
+        "kind": "numeric",
+        "expression": "(16*(30 - 26))/(34 - 30)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 8360.0,
+      "estimated_difficulty": 5
+    },
+    {
+      "id": "gen_word_mixture_012",
+      "subject": "math",
+      "topic": "word_problems",
+      "concept": "word.mixture",
+      "question": "A chemist has 24 litres of a 27% solution and a stock of 34% solution. How many litres of the 34% solution must be added to make the mixture 30%?",
+      "options": [
+        "42",
+        "24",
+        "22",
+        "18"
+      ],
+      "correct_answer": "18",
+      "explanation": "The amount of dissolved substance is conserved. Adding x litres of 34% to 24 litres of 27% must give 42 litres at 30%: 34x + 27·24 = 30(x + 24), so x = 18 litres.",
+      "difficulty": 5,
+      "misconceptions": {},
+      "verify": {
+        "kind": "numeric",
+        "expression": "(24*(30 - 27))/(34 - 30)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 8360.0,
+      "estimated_difficulty": 5
+    },
+    {
+      "id": "gen_word_mixture_013",
+      "subject": "math",
+      "topic": "word_problems",
+      "concept": "word.mixture",
+      "question": "A chemist has 2 litres of a 27% solution and a stock of 32% solution. How many litres of the 32% solution must be added to make the mixture 30%?",
+      "options": [
+        "5",
+        "3",
+        "6",
+        "2"
+      ],
+      "correct_answer": "3",
+      "explanation": "The amount of dissolved substance is conserved. Adding x litres of 32% to 2 litres of 27% must give 5 litres at 30%: 32x + 27·2 = 30(x + 2), so x = 3 litres.",
+      "difficulty": 5,
+      "misconceptions": {},
+      "verify": {
+        "kind": "numeric",
+        "expression": "(2*(30 - 27))/(32 - 30)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 8332.0,
+      "estimated_difficulty": 5
+    },
+    {
+      "id": "gen_word_mixture_014",
+      "subject": "math",
+      "topic": "word_problems",
+      "concept": "word.mixture",
+      "question": "A chemist has 9 litres of a 26% solution and a stock of 33% solution. How many litres of the 33% solution must be added to make the mixture 30%?",
+      "options": [
+        "12",
+        "15",
+        "9",
+        "21"
+      ],
+      "correct_answer": "12",
+      "explanation": "The amount of dissolved substance is conserved. Adding x litres of 33% to 9 litres of 26% must give 21 litres at 30%: 33x + 26·9 = 30(x + 9), so x = 12 litres.",
+      "difficulty": 5,
+      "misconceptions": {},
+      "verify": {
+        "kind": "numeric",
+        "expression": "(9*(30 - 26))/(33 - 30)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 8332.0,
+      "estimated_difficulty": 5
+    },
+    {
+      "id": "gen_word_mixture_015",
+      "subject": "math",
+      "topic": "word_problems",
+      "concept": "word.mixture",
+      "question": "A chemist has 15 litres of a 28% solution and a stock of 33% solution. How many litres of the 33% solution must be added to make the mixture 30%?",
+      "options": [
+        "25",
+        "15",
+        "10",
+        "13"
+      ],
+      "correct_answer": "10",
+      "explanation": "The amount of dissolved substance is conserved. Adding x litres of 33% to 15 litres of 28% must give 25 litres at 30%: 33x + 28·15 = 30(x + 15), so x = 10 litres.",
+      "difficulty": 5,
+      "misconceptions": {},
+      "verify": {
+        "kind": "numeric",
+        "expression": "(15*(30 - 28))/(33 - 30)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 8360.0,
+      "estimated_difficulty": 5
+    },
+    {
+      "id": "gen_word_rates_001",
+      "subject": "math",
+      "topic": "word_problems",
+      "concept": "word.rates",
+      "question": "A train travels 240 km in 3 hours at a constant speed. What is its average speed in km/h?",
+      "options": [
+        "80",
+        "237",
+        "3",
+        "720"
+      ],
+      "correct_answer": "80",
+      "explanation": "Average speed is distance divided by time: 240 km / 3 h = 80 km/h. Dividing the other way round (3/240) is a common slip.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": {
+        "kind": "numeric",
+        "expression": "240/3"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6792.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_word_rates_002",
+      "subject": "math",
+      "topic": "word_problems",
+      "concept": "word.rates",
+      "question": "A train travels 60 km in 3 hours at a constant speed. What is its average speed in km/h?",
+      "options": [
+        "180",
+        "57",
+        "3",
+        "20"
+      ],
+      "correct_answer": "20",
+      "explanation": "Average speed is distance divided by time: 60 km / 3 h = 20 km/h. Dividing the other way round (3/60) is a common slip.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": {
+        "kind": "numeric",
+        "expression": "60/3"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6764.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_word_rates_003",
+      "subject": "math",
+      "topic": "word_problems",
+      "concept": "word.rates",
+      "question": "A train travels 510 km in 6 hours at a constant speed. What is its average speed in km/h?",
+      "options": [
+        "85",
+        "6",
+        "3060",
+        "504"
+      ],
+      "correct_answer": "85",
+      "explanation": "Average speed is distance divided by time: 510 km / 6 h = 85 km/h. Dividing the other way round (6/510) is a common slip.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": {
+        "kind": "numeric",
+        "expression": "510/6"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6792.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_word_rates_004",
+      "subject": "math",
+      "topic": "word_problems",
+      "concept": "word.rates",
+      "question": "A train travels 200 km in 2 hours at a constant speed. What is its average speed in km/h?",
+      "options": [
+        "100",
+        "198",
+        "2",
+        "400"
+      ],
+      "correct_answer": "100",
+      "explanation": "Average speed is distance divided by time: 200 km / 2 h = 100 km/h. Dividing the other way round (2/200) is a common slip.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": {
+        "kind": "numeric",
+        "expression": "200/2"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6792.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_word_rates_005",
+      "subject": "math",
+      "topic": "word_problems",
+      "concept": "word.rates",
+      "question": "A train travels 390 km in 6 hours at a constant speed. What is its average speed in km/h?",
+      "options": [
+        "384",
+        "65",
+        "6",
+        "2340"
+      ],
+      "correct_answer": "65",
+      "explanation": "Average speed is distance divided by time: 390 km / 6 h = 65 km/h. Dividing the other way round (6/390) is a common slip.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": {
+        "kind": "numeric",
+        "expression": "390/6"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6792.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_word_rates_006",
+      "subject": "math",
+      "topic": "word_problems",
+      "concept": "word.rates",
+      "question": "A train travels 270 km in 3 hours at a constant speed. What is its average speed in km/h?",
+      "options": [
+        "90",
+        "810",
+        "267",
+        "3"
+      ],
+      "correct_answer": "90",
+      "explanation": "Average speed is distance divided by time: 270 km / 3 h = 90 km/h. Dividing the other way round (3/270) is a common slip.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": {
+        "kind": "numeric",
+        "expression": "270/3"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6792.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_word_rates_007",
+      "subject": "math",
+      "topic": "word_problems",
+      "concept": "word.rates",
+      "question": "A train travels 540 km in 6 hours at a constant speed. What is its average speed in km/h?",
+      "options": [
+        "534",
+        "90",
+        "6",
+        "3240"
+      ],
+      "correct_answer": "90",
+      "explanation": "Average speed is distance divided by time: 540 km / 6 h = 90 km/h. Dividing the other way round (6/540) is a common slip.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": {
+        "kind": "numeric",
+        "expression": "540/6"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6792.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_word_rates_008",
+      "subject": "math",
+      "topic": "word_problems",
+      "concept": "word.rates",
+      "question": "A train travels 380 km in 4 hours at a constant speed. What is its average speed in km/h?",
+      "options": [
+        "1520",
+        "4",
+        "95",
+        "376"
+      ],
+      "correct_answer": "95",
+      "explanation": "Average speed is distance divided by time: 380 km / 4 h = 95 km/h. Dividing the other way round (4/380) is a common slip.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": {
+        "kind": "numeric",
+        "expression": "380/4"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6792.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_word_rates_009",
+      "subject": "math",
+      "topic": "word_problems",
+      "concept": "word.rates",
+      "question": "A train travels 275 km in 5 hours at a constant speed. What is its average speed in km/h?",
+      "options": [
+        "5",
+        "55",
+        "270",
+        "1375"
+      ],
+      "correct_answer": "55",
+      "explanation": "Average speed is distance divided by time: 275 km / 5 h = 55 km/h. Dividing the other way round (5/275) is a common slip.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": {
+        "kind": "numeric",
+        "expression": "275/5"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6792.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_word_rates_010",
+      "subject": "math",
+      "topic": "word_problems",
+      "concept": "word.rates",
+      "question": "A train travels 70 km in 2 hours at a constant speed. What is its average speed in km/h?",
+      "options": [
+        "2",
+        "140",
+        "35",
+        "68"
+      ],
+      "correct_answer": "35",
+      "explanation": "Average speed is distance divided by time: 70 km / 2 h = 35 km/h. Dividing the other way round (2/70) is a common slip.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": {
+        "kind": "numeric",
+        "expression": "70/2"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6764.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_word_rates_011",
+      "subject": "math",
+      "topic": "word_problems",
+      "concept": "word.rates",
+      "question": "A train travels 450 km in 6 hours at a constant speed. What is its average speed in km/h?",
+      "options": [
+        "444",
+        "75",
+        "2700",
+        "6"
+      ],
+      "correct_answer": "75",
+      "explanation": "Average speed is distance divided by time: 450 km / 6 h = 75 km/h. Dividing the other way round (6/450) is a common slip.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": {
+        "kind": "numeric",
+        "expression": "450/6"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6792.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_word_rates_012",
+      "subject": "math",
+      "topic": "word_problems",
+      "concept": "word.rates",
+      "question": "A train travels 175 km in 5 hours at a constant speed. What is its average speed in km/h?",
+      "options": [
+        "5",
+        "875",
+        "35",
+        "170"
+      ],
+      "correct_answer": "35",
+      "explanation": "Average speed is distance divided by time: 175 km / 5 h = 35 km/h. Dividing the other way round (5/175) is a common slip.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": {
+        "kind": "numeric",
+        "expression": "175/5"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6792.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_word_rates_013",
+      "subject": "math",
+      "topic": "word_problems",
+      "concept": "word.rates",
+      "question": "A train travels 600 km in 6 hours at a constant speed. What is its average speed in km/h?",
+      "options": [
+        "100",
+        "594",
+        "3600",
+        "6"
+      ],
+      "correct_answer": "100",
+      "explanation": "Average speed is distance divided by time: 600 km / 6 h = 100 km/h. Dividing the other way round (6/600) is a common slip.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": {
+        "kind": "numeric",
+        "expression": "600/6"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6792.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_word_rates_014",
+      "subject": "math",
+      "topic": "word_problems",
+      "concept": "word.rates",
+      "question": "A train travels 160 km in 2 hours at a constant speed. What is its average speed in km/h?",
+      "options": [
+        "80",
+        "158",
+        "320",
+        "2"
+      ],
+      "correct_answer": "80",
+      "explanation": "Average speed is distance divided by time: 160 km / 2 h = 80 km/h. Dividing the other way round (2/160) is a common slip.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": {
+        "kind": "numeric",
+        "expression": "160/2"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6792.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_word_rates_015",
+      "subject": "math",
+      "topic": "word_problems",
+      "concept": "word.rates",
+      "question": "A train travels 110 km in 2 hours at a constant speed. What is its average speed in km/h?",
+      "options": [
+        "55",
+        "108",
+        "220",
+        "2"
+      ],
+      "correct_answer": "55",
+      "explanation": "Average speed is distance divided by time: 110 km / 2 h = 55 km/h. Dividing the other way round (2/110) is a common slip.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": {
+        "kind": "numeric",
+        "expression": "110/2"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6792.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_word_translate_001",
+      "subject": "math",
+      "topic": "word_problems",
+      "concept": "word.translate",
+      "question": "Write 'a number x multiplied by 12' as an expression.",
+      "options": [
+        "12x",
+        "x + 12",
+        "12 + x",
+        "x - 12"
+      ],
+      "correct_answer": "12x",
+      "explanation": "'a number x multiplied by 12' describes the amount 12x. Name the unknown first, then walk through the sentence in order of meaning rather than word order.",
+      "difficulty": 3,
+      "misconceptions": {},
+      "verify": null,
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5784.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_word_translate_002",
+      "subject": "math",
+      "topic": "word_problems",
+      "concept": "word.translate",
+      "question": "Write '16 subtracted from a number x' as an expression.",
+      "options": [
+        "x + 16",
+        "x - 16",
+        "16 - x",
+        "16x"
+      ],
+      "correct_answer": "x - 16",
+      "explanation": "'16 subtracted from a number x' describes the amount x - 16. Name the unknown first, then walk through the sentence in order of meaning rather than word order.",
+      "difficulty": 3,
+      "misconceptions": {
+        "16 - x": "alg.word_variable_confusion"
+      },
+      "verify": null,
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5840.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_word_translate_003",
+      "subject": "math",
+      "topic": "word_problems",
+      "concept": "word.translate",
+      "question": "Write '4 less than a number x' as an expression.",
+      "options": [
+        "x + 4",
+        "x - 4",
+        "4 - x",
+        "4x"
+      ],
+      "correct_answer": "x - 4",
+      "explanation": "'4 less than a number x' describes the amount x - 4. Name the unknown first, then walk through the sentence in order of meaning rather than word order.",
+      "difficulty": 3,
+      "misconceptions": {
+        "4 - x": "alg.word_variable_confusion"
+      },
+      "verify": null,
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5644.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_word_translate_004",
+      "subject": "math",
+      "topic": "word_problems",
+      "concept": "word.translate",
+      "question": "Write 'the sum of a number x and 17' as an expression.",
+      "options": [
+        "x + 17",
+        "17 - x",
+        "17x",
+        "x - 17"
+      ],
+      "correct_answer": "x + 17",
+      "explanation": "'the sum of a number x and 17' describes the amount x + 17. Name the unknown first, then walk through the sentence in order of meaning rather than word order.",
+      "difficulty": 3,
+      "misconceptions": {},
+      "verify": null,
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5812.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_word_translate_005",
+      "subject": "math",
+      "topic": "word_problems",
+      "concept": "word.translate",
+      "question": "Write '9 subtracted from a number x' as an expression.",
+      "options": [
+        "9 - x",
+        "x - 9",
+        "x + 9",
+        "9x"
+      ],
+      "correct_answer": "x - 9",
+      "explanation": "'9 subtracted from a number x' describes the amount x - 9. Name the unknown first, then walk through the sentence in order of meaning rather than word order.",
+      "difficulty": 3,
+      "misconceptions": {
+        "9 - x": "alg.word_variable_confusion"
+      },
+      "verify": null,
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5812.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_word_translate_006",
+      "subject": "math",
+      "topic": "word_problems",
+      "concept": "word.translate",
+      "question": "Write 'the sum of a number x and 16' as an expression.",
+      "options": [
+        "x - 16",
+        "16 - x",
+        "x + 16",
+        "16x"
+      ],
+      "correct_answer": "x + 16",
+      "explanation": "'the sum of a number x and 16' describes the amount x + 16. Name the unknown first, then walk through the sentence in order of meaning rather than word order.",
+      "difficulty": 3,
+      "misconceptions": {},
+      "verify": null,
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5812.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_word_translate_007",
+      "subject": "math",
+      "topic": "word_problems",
+      "concept": "word.translate",
+      "question": "Write '17 subtracted from a number x' as an expression.",
+      "options": [
+        "x - 17",
+        "17x",
+        "x + 17",
+        "17 - x"
+      ],
+      "correct_answer": "x - 17",
+      "explanation": "'17 subtracted from a number x' describes the amount x - 17. Name the unknown first, then walk through the sentence in order of meaning rather than word order.",
+      "difficulty": 3,
+      "misconceptions": {
+        "17 - x": "alg.word_variable_confusion"
+      },
+      "verify": null,
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5840.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_word_translate_008",
+      "subject": "math",
+      "topic": "word_problems",
+      "concept": "word.translate",
+      "question": "Write '5 less than a number x' as an expression.",
+      "options": [
+        "x + 5",
+        "x - 5",
+        "5x",
+        "5 - x"
+      ],
+      "correct_answer": "x - 5",
+      "explanation": "'5 less than a number x' describes the amount x - 5. Name the unknown first, then walk through the sentence in order of meaning rather than word order.",
+      "difficulty": 3,
+      "misconceptions": {
+        "5 - x": "alg.word_variable_confusion"
+      },
+      "verify": null,
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5644.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_word_translate_009",
+      "subject": "math",
+      "topic": "word_problems",
+      "concept": "word.translate",
+      "question": "Write 'a number x multiplied by 13' as an expression.",
+      "options": [
+        "13 + x",
+        "x - 13",
+        "x + 13",
+        "13x"
+      ],
+      "correct_answer": "13x",
+      "explanation": "'a number x multiplied by 13' describes the amount 13x. Name the unknown first, then walk through the sentence in order of meaning rather than word order.",
+      "difficulty": 3,
+      "misconceptions": {},
+      "verify": null,
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5784.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_word_translate_010",
+      "subject": "math",
+      "topic": "word_problems",
+      "concept": "word.translate",
+      "question": "Write '11 subtracted from a number x' as an expression.",
+      "options": [
+        "x - 11",
+        "11 - x",
+        "x + 11",
+        "11x"
+      ],
+      "correct_answer": "x - 11",
+      "explanation": "'11 subtracted from a number x' describes the amount x - 11. Name the unknown first, then walk through the sentence in order of meaning rather than word order.",
+      "difficulty": 3,
+      "misconceptions": {
+        "11 - x": "alg.word_variable_confusion"
+      },
+      "verify": null,
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5840.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_word_translate_011",
+      "subject": "math",
+      "topic": "word_problems",
+      "concept": "word.translate",
+      "question": "Write 'a number x multiplied by 18' as an expression.",
+      "options": [
+        "18 + x",
+        "x - 18",
+        "18x",
+        "x + 18"
+      ],
+      "correct_answer": "18x",
+      "explanation": "'a number x multiplied by 18' describes the amount 18x. Name the unknown first, then walk through the sentence in order of meaning rather than word order.",
+      "difficulty": 3,
+      "misconceptions": {},
+      "verify": null,
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5784.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_word_translate_012",
+      "subject": "math",
+      "topic": "word_problems",
+      "concept": "word.translate",
+      "question": "Write 'a number x multiplied by 15' as an expression.",
+      "options": [
+        "x + 15",
+        "15x",
+        "x - 15",
+        "15 + x"
+      ],
+      "correct_answer": "15x",
+      "explanation": "'a number x multiplied by 15' describes the amount 15x. Name the unknown first, then walk through the sentence in order of meaning rather than word order.",
+      "difficulty": 3,
+      "misconceptions": {},
+      "verify": null,
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5784.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_word_translate_013",
+      "subject": "math",
+      "topic": "word_problems",
+      "concept": "word.translate",
+      "question": "Write '20 subtracted from a number x' as an expression.",
+      "options": [
+        "20x",
+        "x + 20",
+        "20 - x",
+        "x - 20"
+      ],
+      "correct_answer": "x - 20",
+      "explanation": "'20 subtracted from a number x' describes the amount x - 20. Name the unknown first, then walk through the sentence in order of meaning rather than word order.",
+      "difficulty": 3,
+      "misconceptions": {
+        "20 - x": "alg.word_variable_confusion"
+      },
+      "verify": null,
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5840.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_word_translate_014",
+      "subject": "math",
+      "topic": "word_problems",
+      "concept": "word.translate",
+      "question": "Write '12 subtracted from a number x' as an expression.",
+      "options": [
+        "12x",
+        "x - 12",
+        "x + 12",
+        "12 - x"
+      ],
+      "correct_answer": "x - 12",
+      "explanation": "'12 subtracted from a number x' describes the amount x - 12. Name the unknown first, then walk through the sentence in order of meaning rather than word order.",
+      "difficulty": 3,
+      "misconceptions": {
+        "12 - x": "alg.word_variable_confusion"
+      },
+      "verify": null,
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5840.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_word_translate_015",
+      "subject": "math",
+      "topic": "word_problems",
+      "concept": "word.translate",
+      "question": "Write 'the sum of a number x and 9' as an expression.",
+      "options": [
+        "9 - x",
+        "x - 9",
+        "9x",
+        "x + 9"
+      ],
+      "correct_answer": "x + 9",
+      "explanation": "'the sum of a number x and 9' describes the amount x + 9. Name the unknown first, then walk through the sentence in order of meaning rather than word order.",
+      "difficulty": 3,
+      "misconceptions": {},
+      "verify": null,
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5784.0,
+      "estimated_difficulty": 3
+    }
+  ]
+}

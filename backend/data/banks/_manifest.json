@@ -1,0 +1,457 @@
+{
+  "generated_at": "2026-09-30T06:07:40+00:00",
+  "curated_in": 375,
+  "curated_accepted": 375,
+  "generated": 581,
+  "generated_accepted": 581,
+  "quarantined": 0,
+  "concepts_covered": 88,
+  "unity_export": [],
+  "concept_coverage": {
+    "chords.inversions": 4,
+    "chords.progression": 5,
+    "chords.quality": 10,
+    "chords.triads": 6,
+    "comp.form": 6,
+    "comp.harmony": 6,
+    "comp.melody": 6,
+    "comp.texture": 6,
+    "expressions.distribute": 15,
+    "expressions.factor_common": 15,
+    "expressions.like_terms": 15,
+    "expressions.negatives": 15,
+    "forms.change": 8,
+    "forms.comparatives": 8,
+    "forms.derivation": 8,
+    "forms.irregular": 8,
+    "functions.composition": 15,
+    "functions.definition": 7,
+    "functions.domain_range": 15,
+    "functions.inverse": 15,
+    "functions.notation": 33,
+    "grammar.agreement": 3,
+    "grammar.parts_of_speech": 12,
+    "grammar.pronouns": 3,
+    "grammar.punctuation": 4,
+    "grammar.tense": 3,
+    "graphs.intercepts": 22,
+    "graphs.line_equations": 17,
+    "graphs.plane": 7,
+    "graphs.reading": 2,
+    "graphs.slope": 22,
+    "infer.evidence": 6,
+    "infer.implied": 6,
+    "infer.main_idea": 6,
+    "infer.purpose": 6,
+    "linear.both_sides": 20,
+    "linear.one_step": 26,
+    "linear.parentheses": 18,
+    "linear.proportion": 17,
+    "linear.two_step": 19,
+    "notes.accidentals": 4,
+    "notes.intervals": 7,
+    "notes.semitones": 3,
+    "notes.staff": 11,
+    "polynomials.degree": 36,
+    "polynomials.divide": 16,
+    "polynomials.multiply": 17,
+    "polynomials.remainder": 16,
+    "quadratics.discriminant": 18,
+    "quadratics.factor": 18,
+    "quadratics.formula": 17,
+    "quadratics.standard_form": 28,
+    "quadratics.zero_product": 19,
+    "rhythm.dotted": 5,
+    "rhythm.note_values": 5,
+    "rhythm.rests": 11,
+    "rhythm.syncopation": 4,
+    "scales.degrees": 6,
+    "scales.key_signature": 5,
+    "scales.major": 9,
+    "scales.minor": 5,
+    "structure.clauses": 16,
+    "structure.coordination": 3,
+    "structure.fragments": 4,
+    "structure.parallelism": 2,
+    "time.accent_pattern": 2,
+    "time.anacrusis": 7,
+    "time.beats_per_measure": 16,
+    "time.simple_compound": 6,
+    "variables.constants": 18,
+    "variables.evaluate": 29,
+    "variables.expressions": 18,
+    "variables.meaning": 3,
+    "variables.substitution": 17,
+    "vocab.affixes": 6,
+    "vocab.connotation": 6,
+    "vocab.context": 4,
+    "vocab.idioms": 5,
+    "vocab.synonyms": 4,
+    "word.consecutive": 15,
+    "word.mixture": 15,
+    "word.rates": 15,
+    "word.translate": 15,
+    "writing.concision": 3,
+    "writing.order": 7,
+    "writing.tone": 3,
+    "writing.topic_sentence": 6,
+    "writing.transitions": 6
+  },
+  "coverage_gaps": [
+    {
+      "concept": "graphs.reading",
+      "name": "Interpreting a graph in context",
+      "realm": "algebra",
+      "domain": "graphs",
+      "questions": 2,
+      "generatable": false
+    },
+    {
+      "concept": "structure.parallelism",
+      "name": "Parallel structure",
+      "realm": "english",
+      "domain": "sentence_structure",
+      "questions": 2,
+      "generatable": false
+    },
+    {
+      "concept": "time.accent_pattern",
+      "name": "Accents and grouping",
+      "realm": "music",
+      "domain": "time_signatures",
+      "questions": 2,
+      "generatable": false
+    },
+    {
+      "concept": "grammar.agreement",
+      "name": "Subject-verb agreement",
+      "realm": "english",
+      "domain": "grammar",
+      "questions": 3,
+      "generatable": false
+    },
+    {
+      "concept": "grammar.pronouns",
+      "name": "Pronoun case and reference",
+      "realm": "english",
+      "domain": "grammar",
+      "questions": 3,
+      "generatable": false
+    },
+    {
+      "concept": "grammar.tense",
+      "name": "Tense and aspect",
+      "realm": "english",
+      "domain": "grammar",
+      "questions": 3,
+      "generatable": false
+    },
+    {
+      "concept": "notes.semitones",
+      "name": "Semitones and whole tones",
+      "realm": "music",
+      "domain": "notes",
+      "questions": 3,
+      "generatable": false
+    },
+    {
+      "concept": "structure.coordination",
+      "name": "Coordination and subordination",
+      "realm": "english",
+      "domain": "sentence_structure",
+      "questions": 3,
+      "generatable": false
+    },
+    {
+      "concept": "variables.meaning",
+      "name": "A letter can stand for a number",
+      "realm": "algebra",
+      "domain": "variables",
+      "questions": 3,
+      "generatable": false
+    },
+    {
+      "concept": "writing.concision",
+      "name": "Clarity and concision",
+      "realm": "english",
+      "domain": "writing",
+      "questions": 3,
+      "generatable": false
+    },
+    {
+      "concept": "writing.tone",
+      "name": "Register and tone",
+      "realm": "english",
+      "domain": "writing",
+      "questions": 3,
+      "generatable": false
+    },
+    {
+      "concept": "chords.inversions",
+      "name": "Inversions and voicing",
+      "realm": "music",
+      "domain": "chords",
+      "questions": 4,
+      "generatable": false
+    },
+    {
+      "concept": "grammar.punctuation",
+      "name": "Punctuation that changes meaning",
+      "realm": "english",
+      "domain": "grammar",
+      "questions": 4,
+      "generatable": false
+    },
+    {
+      "concept": "notes.accidentals",
+      "name": "Sharps, flats and naturals",
+      "realm": "music",
+      "domain": "notes",
+      "questions": 4,
+      "generatable": false
+    },
+    {
+      "concept": "rhythm.syncopation",
+      "name": "Syncopation and off-beats",
+      "realm": "music",
+      "domain": "rhythm",
+      "questions": 4,
+      "generatable": false
+    },
+    {
+      "concept": "structure.fragments",
+      "name": "Fragments and run-ons",
+      "realm": "english",
+      "domain": "sentence_structure",
+      "questions": 4,
+      "generatable": false
+    },
+    {
+      "concept": "vocab.context",
+      "name": "Meaning from context",
+      "realm": "english",
+      "domain": "vocabulary",
+      "questions": 4,
+      "generatable": false
+    },
+    {
+      "concept": "vocab.synonyms",
+      "name": "Synonyms and antonyms",
+      "realm": "english",
+      "domain": "vocabulary",
+      "questions": 4,
+      "generatable": false
+    },
+    {
+      "concept": "chords.progression",
+      "name": "Chord progressions and cadences",
+      "realm": "music",
+      "domain": "chords",
+      "questions": 5,
+      "generatable": false
+    },
+    {
+      "concept": "rhythm.dotted",
+      "name": "Dotted and tied notes",
+      "realm": "music",
+      "domain": "rhythm",
+      "questions": 5,
+      "generatable": false
+    },
+    {
+      "concept": "rhythm.note_values",
+      "name": "Note values",
+      "realm": "music",
+      "domain": "rhythm",
+      "questions": 5,
+      "generatable": false
+    },
+    {
+      "concept": "scales.key_signature",
+      "name": "Key signatures",
+      "realm": "music",
+      "domain": "scales",
+      "questions": 5,
+      "generatable": false
+    },
+    {
+      "concept": "scales.minor",
+      "name": "Minor scales",
+      "realm": "music",
+      "domain": "scales",
+      "questions": 5,
+      "generatable": false
+    },
+    {
+      "concept": "vocab.idioms",
+      "name": "Idioms and fixed phrases",
+      "realm": "english",
+      "domain": "vocabulary",
+      "questions": 5,
+      "generatable": false
+    }
+  ],
+  "estimator": {
+    "samples": 375,
+    "backend": "Ridge",
+    "mae": 0.7407,
+    "coefficients": {
+      "length_chars": 0.003,
+      "option_count": 0.3309,
+      "operator_count": -0.124,
+      "max_number_log": -0.0615,
+      "has_fraction": -0.0669,
+      "has_variable": 0.3136,
+      "has_negative": 0.0223,
+      "is_word_problem": 0.0,
+      "reasoning_cue": -0.4042,
+      "concept_level": 0.7655
+    }
+  },
+  "difficulty_distribution": {
+    "curated_human_labels": {
+      "1": 83,
+      "2": 110,
+      "3": 100,
+      "4": 51,
+      "5": 31
+    },
+    "curated_estimated": {
+      "1": 34,
+      "2": 118,
+      "3": 173,
+      "4": 50,
+      "5": 0
+    },
+    "generated_estimated": {
+      "1": 16,
+      "2": 102,
+      "3": 288,
+      "4": 161,
+      "5": 14
+    }
+  },
+  "label_disagreements": [
+    {
+      "question": "What is an absolute phrase?",
+      "human_difficulty": 5,
+      "estimated_difficulty": 1.99,
+      "delta": -3.01
+    },
+    {
+      "question": "What is a polymetric composition?",
+      "human_difficulty": 5,
+      "estimated_difficulty": 2.0,
+      "delta": -3.0
+    },
+    {
+      "question": "What is the difference between 'restrictive' and 'nonrestrictive' clauses?",
+      "human_difficulty": 5,
+      "estimated_difficulty": 2.13,
+      "delta": -2.87
+    },
+    {
+      "question": "'Neither the teacher nor the students ___ ready.' Fill in the blank.",
+      "human_difficulty": 4,
+      "estimated_difficulty": 1.34,
+      "delta": -2.66
+    },
+    {
+      "question": "If f(x) = x³ - 1, what is f(2)?",
+      "human_difficulty": 5,
+      "estimated_difficulty": 2.59,
+      "delta": -2.41
+    },
+    {
+      "question": "What is the I-IV-V-I chord progression in C major?",
+      "human_difficulty": 2,
+      "estimated_difficulty": 4.29,
+      "delta": 2.29
+    },
+    {
+      "question": "What is an elliptical sentence?",
+      "human_difficulty": 5,
+      "estimated_difficulty": 2.76,
+      "delta": -2.24
+    },
+    {
+      "question": "If f(x) = sin(x), what is the period of f?",
+      "human_difficulty": 5,
+      "estimated_difficulty": 2.8,
+      "delta": -2.2
+    },
+    {
+      "question": "Solve: (x - 1)(x + 4) = 0. What are the values of x?",
+      "human_difficulty": 5,
+      "estimated_difficulty": 2.82,
+      "delta": -2.18
+    },
+    {
+      "question": "What is the end behavior of f(x) = -x³ + 2x as x → ∞?",
+      "human_difficulty": 5,
+      "estimated_difficulty": 2.83,
+      "delta": -2.17
+    },
+    {
+      "question": "What is a half-diminished 7th chord?",
+      "human_difficulty": 5,
+      "estimated_difficulty": 2.84,
+      "delta": -2.16
+    },
+    {
+      "question": "In concert pitch, what note does a B♭ trumpet play to sound a C?",
+      "human_difficulty": 5,
+      "estimated_difficulty": 2.86,
+      "delta": -2.14
+    },
+    {
+      "question": "What is mixed meter?",
+      "human_difficulty": 4,
+      "estimated_difficulty": 1.96,
+      "delta": -2.04
+    },
+    {
+      "question": "What is a participial phrase?",
+      "human_difficulty": 4,
+      "estimated_difficulty": 1.99,
+      "delta": -2.01
+    },
+    {
+      "question": "What is a double sharp (𝄪)?",
+      "human_difficulty": 4,
+      "estimated_difficulty": 1.99,
+      "delta": -2.01
+    },
+    {
+      "question": "What is the Mixolydian mode?",
+      "human_difficulty": 4,
+      "estimated_difficulty": 1.99,
+      "delta": -2.01
+    }
+  ],
+  "warning_counts": {},
+  "quarantine_reasons": {},
+  "topics_written": [
+    "english/grammar",
+    "english/sentence_structure",
+    "english/vocabulary",
+    "english/writing",
+    "math/composition",
+    "math/expressions",
+    "math/functions",
+    "math/graphs",
+    "math/inference",
+    "math/linear_equations",
+    "math/polynomials",
+    "math/quadratics",
+    "math/time_signatures",
+    "math/variables",
+    "math/word_forms",
+    "math/word_problems",
+    "music/chords",
+    "music/notes",
+    "music/rhythm",
+    "music/scales",
+    "music/time_signatures"
+  ]
+}

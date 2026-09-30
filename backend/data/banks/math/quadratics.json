@@ -1,0 +1,2524 @@
+{
+  "subject": "math",
+  "topic": "quadratics",
+  "generated_by": "kaiserquest-content-pipeline",
+  "version": 1,
+  "concepts": [
+    "quadratics.discriminant",
+    "quadratics.factor",
+    "quadratics.formula",
+    "quadratics.standard_form",
+    "quadratics.zero_product"
+  ],
+  "counts": {
+    "total": 100,
+    "curated": 25,
+    "generated": 75
+  },
+  "questions": [
+    {
+      "id": "math_quad_008",
+      "question": "What is the discriminant of 2x² + 3x - 2 = 0?",
+      "options": [
+        "17",
+        "25",
+        "9",
+        "1"
+      ],
+      "correct_answer": "25",
+      "explanation": "Discriminant = b² - 4ac = 9 - 4(2)(-2) = 9 + 16 = 25",
+      "difficulty": 3,
+      "subject": "math",
+      "topic": "quadratics",
+      "source": "curated",
+      "review_status": "human_authored",
+      "concept": "quadratics.discriminant",
+      "expected_time_ms": 5560.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "math_quad_020",
+      "question": "Solve: x⁴ - 5x² + 4 = 0",
+      "options": [
+        "x = ±1, ±2",
+        "x = ±1, ±4",
+        "x = ±2, ±4",
+        "x = 1, 2, 3, 4"
+      ],
+      "correct_answer": "x = ±1, ±2",
+      "explanation": "Let u = x²: u² - 5u + 4 = 0 → (u-1)(u-4) = 0 → x² = 1 or x² = 4",
+      "difficulty": 5,
+      "subject": "math",
+      "topic": "quadratics",
+      "source": "curated",
+      "review_status": "human_authored",
+      "concept": "quadratics.discriminant",
+      "expected_time_ms": 4944.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "math_quad_024",
+      "question": "How many times does y = x² - 2x + 5 cross the x-axis?",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "correct_answer": "0",
+      "explanation": "Discriminant = 4 - 20 = -16 < 0, so no real x-intercepts.",
+      "difficulty": 4,
+      "subject": "math",
+      "topic": "quadratics",
+      "source": "curated",
+      "review_status": "human_authored",
+      "concept": "quadratics.discriminant",
+      "expected_time_ms": 5784.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "math_quad_003",
+      "question": "Factor: x² + 5x + 6",
+      "options": [
+        "(x+1)(x+6)",
+        "(x+2)(x+3)",
+        "(x+3)(x+3)",
+        "(x+1)(x+5)"
+      ],
+      "correct_answer": "(x+2)(x+3)",
+      "explanation": "Find two numbers that multiply to 6 and add to 5: 2 and 3",
+      "difficulty": 2,
+      "subject": "math",
+      "topic": "quadratics",
+      "source": "curated",
+      "review_status": "human_authored",
+      "concept": "quadratics.factor",
+      "expected_time_ms": 4832.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "math_quad_005",
+      "question": "Factor: x² - 7x + 12",
+      "options": [
+        "(x-3)(x-4)",
+        "(x-2)(x-6)",
+        "(x-1)(x-12)",
+        "(x+3)(x+4)"
+      ],
+      "correct_answer": "(x-3)(x-4)",
+      "explanation": "Find two numbers that multiply to 12 and add to -7: -3 and -4",
+      "difficulty": 2,
+      "subject": "math",
+      "topic": "quadratics",
+      "source": "curated",
+      "review_status": "human_authored",
+      "concept": "quadratics.factor",
+      "expected_time_ms": 4860.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "math_quad_022",
+      "question": "If one root of x² - 8x + k = 0 is 2, find k.",
+      "options": [
+        "10",
+        "12",
+        "14",
+        "16"
+      ],
+      "correct_answer": "12",
+      "explanation": "Substitute x=2: 4 - 16 + k = 0 → k = 12",
+      "difficulty": 4,
+      "subject": "math",
+      "topic": "quadratics",
+      "source": "curated",
+      "review_status": "human_authored",
+      "concept": "quadratics.factor",
+      "expected_time_ms": 5532.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "math_quad_010",
+      "question": "Solve using the quadratic formula: x² - 6x + 5 = 0",
+      "options": [
+        "x = 1, x = 5",
+        "x = 2, x = 3",
+        "x = -1, x = -5",
+        "x = 6, x = 5"
+      ],
+      "correct_answer": "x = 1, x = 5",
+      "explanation": "x = (6 ± √(36-20))/2 = (6 ± 4)/2 → x = 5 or x = 1",
+      "difficulty": 3,
+      "subject": "math",
+      "topic": "quadratics",
+      "source": "curated",
+      "review_status": "human_authored",
+      "concept": "quadratics.formula",
+      "expected_time_ms": 5700.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "math_quad_023",
+      "question": "What is the minimum value of y = x² - 6x + 13?",
+      "options": [
+        "1",
+        "2",
+        "4",
+        "13"
+      ],
+      "correct_answer": "4",
+      "explanation": "y = (x-3)² + 4. Minimum value is 4 when x = 3.",
+      "difficulty": 5,
+      "subject": "math",
+      "topic": "quadratics",
+      "source": "curated",
+      "review_status": "human_authored",
+      "concept": "quadratics.formula",
+      "expected_time_ms": 5588.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "math_quad_001",
+      "question": "What is the standard form of a quadratic equation?",
+      "options": [
+        "ax + b = 0",
+        "ax² + bx + c = 0",
+        "ax³ + bx² = 0",
+        "a/x + b = 0"
+      ],
+      "correct_answer": "ax² + bx + c = 0",
+      "explanation": "The standard form of a quadratic equation is ax² + bx + c = 0 where a ≠ 0.",
+      "difficulty": 1,
+      "subject": "math",
+      "topic": "quadratics",
+      "source": "curated",
+      "review_status": "human_authored",
+      "concept": "quadratics.standard_form",
+      "expected_time_ms": 5700.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "math_quad_002",
+      "question": "Solve: x² = 25",
+      "options": [
+        "5 only",
+        "-5 only",
+        "5 and -5",
+        "25"
+      ],
+      "correct_answer": "5 and -5",
+      "explanation": "x² = 25 → x = ±5",
+      "difficulty": 1,
+      "subject": "math",
+      "topic": "quadratics",
+      "source": "curated",
+      "review_status": "human_authored",
+      "concept": "quadratics.standard_form",
+      "expected_time_ms": 4692.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "math_quad_004",
+      "question": "Solve: x² - 4 = 0",
+      "options": [
+        "2 and -2",
+        "4 and -4",
+        "2 only",
+        "4 only"
+      ],
+      "correct_answer": "2 and -2",
+      "explanation": "(x-2)(x+2) = 0 → x = 2 or x = -2",
+      "difficulty": 2,
+      "subject": "math",
+      "topic": "quadratics",
+      "source": "curated",
+      "review_status": "human_authored",
+      "concept": "quadratics.standard_form",
+      "expected_time_ms": 4776.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "math_quad_006",
+      "question": "What is the vertex of y = x² - 4x + 3?",
+      "options": [
+        "(2, -1)",
+        "(1, 0)",
+        "(3, 0)",
+        "(-2, -1)"
+      ],
+      "correct_answer": "(2, -1)",
+      "explanation": "x = -b/2a = 4/2 = 2; y = 4 - 8 + 3 = -1",
+      "difficulty": 3,
+      "subject": "math",
+      "topic": "quadratics",
+      "source": "curated",
+      "review_status": "human_authored",
+      "concept": "quadratics.standard_form",
+      "expected_time_ms": 5364.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "math_quad_007",
+      "question": "Solve x² + 2x - 15 = 0 by factoring.",
+      "options": [
+        "x = 3, x = -5",
+        "x = -3, x = 5",
+        "x = 3, x = 5",
+        "x = -3, x = -5"
+      ],
+      "correct_answer": "x = 3, x = -5",
+      "explanation": "(x+5)(x-3) = 0 → x = -5 or x = 3",
+      "difficulty": 2,
+      "subject": "math",
+      "topic": "quadratics",
+      "source": "curated",
+      "review_status": "human_authored",
+      "concept": "quadratics.standard_form",
+      "expected_time_ms": 5308.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "math_quad_009",
+      "question": "If the discriminant is negative, the quadratic equation has:",
+      "options": [
+        "Two real roots",
+        "One real root",
+        "No real roots",
+        "Infinite roots"
+      ],
+      "correct_answer": "No real roots",
+      "explanation": "A negative discriminant means the roots are complex (not real).",
+      "difficulty": 2,
+      "subject": "math",
+      "topic": "quadratics",
+      "source": "curated",
+      "review_status": "human_authored",
+      "concept": "quadratics.standard_form",
+      "expected_time_ms": 5980.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "math_quad_011",
+      "question": "What shape does the graph of a quadratic function make?",
+      "options": [
+        "Line",
+        "Circle",
+        "Parabola",
+        "Hyperbola"
+      ],
+      "correct_answer": "Parabola",
+      "explanation": "The graph of y = ax² + bx + c is always a parabola.",
+      "difficulty": 1,
+      "subject": "math",
+      "topic": "quadratics",
+      "source": "curated",
+      "review_status": "human_authored",
+      "concept": "quadratics.standard_form",
+      "expected_time_ms": 5840.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "math_quad_012",
+      "question": "Factor: x² - 9x + 20",
+      "options": [
+        "(x-4)(x-5)",
+        "(x-2)(x-10)",
+        "(x+4)(x+5)",
+        "(x-1)(x-20)"
+      ],
+      "correct_answer": "(x-4)(x-5)",
+      "explanation": "-4 × -5 = 20 and -4 + -5 = -9",
+      "difficulty": 2,
+      "subject": "math",
+      "topic": "quadratics",
+      "source": "curated",
+      "review_status": "human_authored",
+      "concept": "quadratics.standard_form",
+      "expected_time_ms": 4860.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "math_quad_013",
+      "question": "Complete the square: x² + 6x + ___ = (x + 3)²",
+      "options": [
+        "3",
+        "6",
+        "9",
+        "12"
+      ],
+      "correct_answer": "9",
+      "explanation": "(x + 3)² = x² + 6x + 9, so the blank is 9",
+      "difficulty": 3,
+      "subject": "math",
+      "topic": "quadratics",
+      "source": "curated",
+      "review_status": "human_authored",
+      "concept": "quadratics.standard_form",
+      "expected_time_ms": 5560.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "math_quad_014",
+      "question": "For y = -x² + 4, does the parabola open up or down?",
+      "options": [
+        "Up",
+        "Down",
+        "Left",
+        "Right"
+      ],
+      "correct_answer": "Down",
+      "explanation": "When a < 0 (here a = -1), the parabola opens downward.",
+      "difficulty": 2,
+      "subject": "math",
+      "topic": "quadratics",
+      "source": "curated",
+      "review_status": "human_authored",
+      "concept": "quadratics.standard_form",
+      "expected_time_ms": 5728.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "math_quad_017",
+      "question": "What is the axis of symmetry for y = 2x² - 8x + 1?",
+      "options": [
+        "x = 1",
+        "x = 2",
+        "x = 3",
+        "x = 4"
+      ],
+      "correct_answer": "x = 2",
+      "explanation": "Axis of symmetry x = -b/(2a) = 8/4 = 2",
+      "difficulty": 3,
+      "subject": "math",
+      "topic": "quadratics",
+      "source": "curated",
+      "review_status": "human_authored",
+      "concept": "quadratics.standard_form",
+      "expected_time_ms": 5700.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "math_quad_021",
+      "question": "Solve: x² + 4x + 4 = 0",
+      "options": [
+        "x = 2",
+        "x = -2",
+        "x = 2 and -2",
+        "x = 4"
+      ],
+      "correct_answer": "x = -2",
+      "explanation": "(x + 2)² = 0 → x = -2 (repeated root)",
+      "difficulty": 2,
+      "subject": "math",
+      "topic": "quadratics",
+      "source": "curated",
+      "review_status": "human_authored",
+      "concept": "quadratics.standard_form",
+      "expected_time_ms": 4916.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "math_quad_025",
+      "question": "Factor completely: 2x² - 8",
+      "options": [
+        "2(x²-4)",
+        "2(x-2)(x+2)",
+        "(2x-4)(x+2)",
+        "2x(x-4)"
+      ],
+      "correct_answer": "2(x-2)(x+2)",
+      "explanation": "2x² - 8 = 2(x² - 4) = 2(x-2)(x+2)",
+      "difficulty": 3,
+      "subject": "math",
+      "topic": "quadratics",
+      "source": "curated",
+      "review_status": "human_authored",
+      "concept": "quadratics.standard_form",
+      "expected_time_ms": 5028.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "math_quad_015",
+      "question": "Find the roots of 3x² - 12x = 0",
+      "options": [
+        "x = 0, x = 4",
+        "x = 0, x = -4",
+        "x = 3, x = 4",
+        "x = 12"
+      ],
+      "correct_answer": "x = 0, x = 4",
+      "explanation": "3x(x - 4) = 0 → x = 0 or x = 4",
+      "difficulty": 3,
+      "subject": "math",
+      "topic": "quadratics",
+      "source": "curated",
+      "review_status": "human_authored",
+      "concept": "quadratics.zero_product",
+      "expected_time_ms": 5168.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "math_quad_016",
+      "question": "Solve: 2x² + 7x + 3 = 0",
+      "options": [
+        "x = -3, x = -1/2",
+        "x = 3, x = 1/2",
+        "x = -3, x = 1/2",
+        "x = 3, x = -1/2"
+      ],
+      "correct_answer": "x = -3, x = -1/2",
+      "explanation": "(2x + 1)(x + 3) = 0 → x = -1/2 or x = -3",
+      "difficulty": 4,
+      "subject": "math",
+      "topic": "quadratics",
+      "source": "curated",
+      "review_status": "human_authored",
+      "concept": "quadratics.zero_product",
+      "expected_time_ms": 4944.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "math_quad_018",
+      "question": "The sum of the roots of x² - 7x + 10 = 0 is:",
+      "options": [
+        "5",
+        "7",
+        "10",
+        "12"
+      ],
+      "correct_answer": "7",
+      "explanation": "By Vieta's formulas, sum of roots = -b/a = 7",
+      "difficulty": 4,
+      "subject": "math",
+      "topic": "quadratics",
+      "source": "curated",
+      "review_status": "human_authored",
+      "concept": "quadratics.zero_product",
+      "expected_time_ms": 5532.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "math_quad_019",
+      "question": "The product of the roots of x² - 7x + 10 = 0 is:",
+      "options": [
+        "5",
+        "7",
+        "10",
+        "12"
+      ],
+      "correct_answer": "10",
+      "explanation": "By Vieta's formulas, product of roots = c/a = 10",
+      "difficulty": 4,
+      "subject": "math",
+      "topic": "quadratics",
+      "source": "curated",
+      "review_status": "human_authored",
+      "concept": "quadratics.zero_product",
+      "expected_time_ms": 5644.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_quadratics_discriminant_001",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.discriminant",
+      "question": "How many real solutions does x² + (-8)x + (16) = 0 have?",
+      "options": [
+        "No real solutions",
+        "Two real solutions",
+        "One real solution"
+      ],
+      "correct_answer": "One real solution",
+      "explanation": "The discriminant b² - 4ac = (-8)² - 4(1)(16) = 0. A zero discriminant means exactly one real solution (a repeated root).",
+      "difficulty": 5,
+      "misconceptions": {},
+      "verify": {
+        "kind": "root_count",
+        "expression": "x**2 + (-8)*x + (16)",
+        "expected_count": 1
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5418.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_quadratics_discriminant_002",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.discriminant",
+      "question": "How many real solutions does x² + (-6)x + (5) = 0 have?",
+      "options": [
+        "One real solution",
+        "No real solutions",
+        "Two real solutions"
+      ],
+      "correct_answer": "Two real solutions",
+      "explanation": "The discriminant b² - 4ac = (-6)² - 4(1)(5) = 16. A positive discriminant means two real solutions.",
+      "difficulty": 5,
+      "misconceptions": {},
+      "verify": {
+        "kind": "root_count",
+        "expression": "x**2 + (-6)*x + (5)",
+        "expected_count": 2
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5390.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_quadratics_discriminant_003",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.discriminant",
+      "question": "How many real solutions does x² + (0)x + (6) = 0 have?",
+      "options": [
+        "Two real solutions",
+        "One real solution",
+        "No real solutions"
+      ],
+      "correct_answer": "No real solutions",
+      "explanation": "The discriminant b² - 4ac = (0)² - 4(1)(6) = -24. A negative discriminant means no real solutions.",
+      "difficulty": 5,
+      "misconceptions": {},
+      "verify": {
+        "kind": "root_count",
+        "expression": "x**2 + (0)*x + (6)",
+        "expected_count": 0
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5362.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_quadratics_discriminant_004",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.discriminant",
+      "question": "How many real solutions does x² + (-11)x + (30) = 0 have?",
+      "options": [
+        "Two real solutions",
+        "No real solutions",
+        "One real solution"
+      ],
+      "correct_answer": "Two real solutions",
+      "explanation": "The discriminant b² - 4ac = (-11)² - 4(1)(30) = 1. A positive discriminant means two real solutions.",
+      "difficulty": 5,
+      "misconceptions": {},
+      "verify": {
+        "kind": "root_count",
+        "expression": "x**2 + (-11)*x + (30)",
+        "expected_count": 2
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5446.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_quadratics_discriminant_005",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.discriminant",
+      "question": "How many real solutions does x² + (6)x + (9) = 0 have?",
+      "options": [
+        "Two real solutions",
+        "No real solutions",
+        "One real solution"
+      ],
+      "correct_answer": "One real solution",
+      "explanation": "The discriminant b² - 4ac = (6)² - 4(1)(9) = 0. A zero discriminant means exactly one real solution (a repeated root).",
+      "difficulty": 5,
+      "misconceptions": {},
+      "verify": {
+        "kind": "root_count",
+        "expression": "x**2 + (6)*x + (9)",
+        "expected_count": 1
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5362.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_quadratics_discriminant_006",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.discriminant",
+      "question": "How many real solutions does x² + (-6)x + (9) = 0 have?",
+      "options": [
+        "Two real solutions",
+        "No real solutions",
+        "One real solution"
+      ],
+      "correct_answer": "One real solution",
+      "explanation": "The discriminant b² - 4ac = (-6)² - 4(1)(9) = 0. A zero discriminant means exactly one real solution (a repeated root).",
+      "difficulty": 5,
+      "misconceptions": {},
+      "verify": {
+        "kind": "root_count",
+        "expression": "x**2 + (-6)*x + (9)",
+        "expected_count": 1
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5390.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_quadratics_discriminant_007",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.discriminant",
+      "question": "How many real solutions does x² + (8)x + (16) = 0 have?",
+      "options": [
+        "One real solution",
+        "Two real solutions",
+        "No real solutions"
+      ],
+      "correct_answer": "One real solution",
+      "explanation": "The discriminant b² - 4ac = (8)² - 4(1)(16) = 0. A zero discriminant means exactly one real solution (a repeated root).",
+      "difficulty": 5,
+      "misconceptions": {},
+      "verify": {
+        "kind": "root_count",
+        "expression": "x**2 + (8)*x + (16)",
+        "expected_count": 1
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5390.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_quadratics_discriminant_008",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.discriminant",
+      "question": "How many real solutions does x² + (-4)x + (4) = 0 have?",
+      "options": [
+        "No real solutions",
+        "One real solution",
+        "Two real solutions"
+      ],
+      "correct_answer": "One real solution",
+      "explanation": "The discriminant b² - 4ac = (-4)² - 4(1)(4) = 0. A zero discriminant means exactly one real solution (a repeated root).",
+      "difficulty": 5,
+      "misconceptions": {},
+      "verify": {
+        "kind": "root_count",
+        "expression": "x**2 + (-4)*x + (4)",
+        "expected_count": 1
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5390.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_quadratics_discriminant_009",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.discriminant",
+      "question": "How many real solutions does x² + (4)x + (4) = 0 have?",
+      "options": [
+        "No real solutions",
+        "One real solution",
+        "Two real solutions"
+      ],
+      "correct_answer": "One real solution",
+      "explanation": "The discriminant b² - 4ac = (4)² - 4(1)(4) = 0. A zero discriminant means exactly one real solution (a repeated root).",
+      "difficulty": 5,
+      "misconceptions": {},
+      "verify": {
+        "kind": "root_count",
+        "expression": "x**2 + (4)*x + (4)",
+        "expected_count": 1
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5362.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_quadratics_discriminant_010",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.discriminant",
+      "question": "How many real solutions does x² + (0)x + (0) = 0 have?",
+      "options": [
+        "One real solution",
+        "Two real solutions",
+        "No real solutions"
+      ],
+      "correct_answer": "One real solution",
+      "explanation": "The discriminant b² - 4ac = (0)² - 4(1)(0) = 0. A zero discriminant means exactly one real solution (a repeated root).",
+      "difficulty": 5,
+      "misconceptions": {},
+      "verify": {
+        "kind": "root_count",
+        "expression": "x**2 + (0)*x + (0)",
+        "expected_count": 1
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5362.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_quadratics_discriminant_011",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.discriminant",
+      "question": "How many real solutions does x² + (1)x + (-6) = 0 have?",
+      "options": [
+        "Two real solutions",
+        "One real solution",
+        "No real solutions"
+      ],
+      "correct_answer": "Two real solutions",
+      "explanation": "The discriminant b² - 4ac = (1)² - 4(1)(-6) = 25. A positive discriminant means two real solutions.",
+      "difficulty": 5,
+      "misconceptions": {},
+      "verify": {
+        "kind": "root_count",
+        "expression": "x**2 + (1)*x + (-6)",
+        "expected_count": 2
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5390.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_quadratics_discriminant_012",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.discriminant",
+      "question": "How many real solutions does x² + (0)x + (-1) = 0 have?",
+      "options": [
+        "No real solutions",
+        "Two real solutions",
+        "One real solution"
+      ],
+      "correct_answer": "Two real solutions",
+      "explanation": "The discriminant b² - 4ac = (0)² - 4(1)(-1) = 4. A positive discriminant means two real solutions.",
+      "difficulty": 5,
+      "misconceptions": {},
+      "verify": {
+        "kind": "root_count",
+        "expression": "x**2 + (0)*x + (-1)",
+        "expected_count": 2
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5390.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_quadratics_discriminant_013",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.discriminant",
+      "question": "How many real solutions does x² + (-3)x + (8) = 0 have?",
+      "options": [
+        "Two real solutions",
+        "No real solutions",
+        "One real solution"
+      ],
+      "correct_answer": "No real solutions",
+      "explanation": "The discriminant b² - 4ac = (-3)² - 4(1)(8) = -23. A negative discriminant means no real solutions.",
+      "difficulty": 5,
+      "misconceptions": {},
+      "verify": {
+        "kind": "root_count",
+        "expression": "x**2 + (-3)*x + (8)",
+        "expected_count": 0
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5390.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_quadratics_discriminant_014",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.discriminant",
+      "question": "How many real solutions does x² + (-2)x + (6) = 0 have?",
+      "options": [
+        "Two real solutions",
+        "One real solution",
+        "No real solutions"
+      ],
+      "correct_answer": "No real solutions",
+      "explanation": "The discriminant b² - 4ac = (-2)² - 4(1)(6) = -20. A negative discriminant means no real solutions.",
+      "difficulty": 5,
+      "misconceptions": {},
+      "verify": {
+        "kind": "root_count",
+        "expression": "x**2 + (-2)*x + (6)",
+        "expected_count": 0
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5390.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_quadratics_discriminant_015",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.discriminant",
+      "question": "How many real solutions does x² + (-4)x + (3) = 0 have?",
+      "options": [
+        "One real solution",
+        "Two real solutions",
+        "No real solutions"
+      ],
+      "correct_answer": "Two real solutions",
+      "explanation": "The discriminant b² - 4ac = (-4)² - 4(1)(3) = 4. A positive discriminant means two real solutions.",
+      "difficulty": 5,
+      "misconceptions": {},
+      "verify": {
+        "kind": "root_count",
+        "expression": "x**2 + (-4)*x + (3)",
+        "expected_count": 2
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5390.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_quadratics_factor_001",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.factor",
+      "question": "Factorise x² + 4x + 4.",
+      "options": [
+        "(x + 2)(x - 2)",
+        "(x + 4)(x + 4)",
+        "(x - 2)(x - 2)",
+        "(x + 2)(x + 2)"
+      ],
+      "correct_answer": "(x + 2)(x + 2)",
+      "explanation": "Find two numbers that multiply to 4 and add to 4: 2 and 2. So x² + 4x + 4 = (x + 2)(x + 2). Check by expanding: 2·2 = 4 and 2 + 2 = 4.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": {
+        "kind": "factorisation",
+        "expression": "x**2 + 4*x + 4",
+        "factors": [
+          "(x + 2)",
+          "(x + 2)"
+        ],
+        "answer_form": "(x + 2)(x + 2)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4916.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_quadratics_factor_002",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.factor",
+      "question": "Factorise x² + 11x + 30.",
+      "options": [
+        "(x + 6)(x - 5)",
+        "(x + 6)(x + 5)",
+        "(x - 6)(x - 5)",
+        "(x + 11)(x + 30)"
+      ],
+      "correct_answer": "(x + 6)(x + 5)",
+      "explanation": "Find two numbers that multiply to 30 and add to 11: 6 and 5. So x² + 11x + 30 = (x + 6)(x + 5). Check by expanding: 6·5 = 30 and 6 + 5 = 11.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": {
+        "kind": "factorisation",
+        "expression": "x**2 + 11*x + 30",
+        "factors": [
+          "(x + 6)",
+          "(x + 5)"
+        ],
+        "answer_form": "(x + 6)(x + 5)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4972.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_quadratics_factor_003",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.factor",
+      "question": "Factorise x² + 6x + 8.",
+      "options": [
+        "(x + 4)(x + 2)",
+        "(x - 4)(x - 2)",
+        "(x + 4)(x - 2)",
+        "(x + 6)(x + 8)"
+      ],
+      "correct_answer": "(x + 4)(x + 2)",
+      "explanation": "Find two numbers that multiply to 8 and add to 6: 4 and 2. So x² + 6x + 8 = (x + 4)(x + 2). Check by expanding: 4·2 = 8 and 4 + 2 = 6.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": {
+        "kind": "factorisation",
+        "expression": "x**2 + 6*x + 8",
+        "factors": [
+          "(x + 4)",
+          "(x + 2)"
+        ],
+        "answer_form": "(x + 4)(x + 2)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4916.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_quadratics_factor_004",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.factor",
+      "question": "Factorise x² + 10x + 24.",
+      "options": [
+        "(x - 4)(x - 6)",
+        "(x + 4)(x - 6)",
+        "(x + 10)(x + 24)",
+        "(x + 4)(x + 6)"
+      ],
+      "correct_answer": "(x + 4)(x + 6)",
+      "explanation": "Find two numbers that multiply to 24 and add to 10: 4 and 6. So x² + 10x + 24 = (x + 4)(x + 6). Check by expanding: 4·6 = 24 and 4 + 6 = 10.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": {
+        "kind": "factorisation",
+        "expression": "x**2 + 10*x + 24",
+        "factors": [
+          "(x + 4)",
+          "(x + 6)"
+        ],
+        "answer_form": "(x + 4)(x + 6)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4972.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_quadratics_factor_005",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.factor",
+      "question": "Factorise x² + 9x + 20.",
+      "options": [
+        "(x + 4)(x - 5)",
+        "(x - 4)(x - 5)",
+        "(x + 4)(x + 5)",
+        "(x + 9)(x + 20)"
+      ],
+      "correct_answer": "(x + 4)(x + 5)",
+      "explanation": "Find two numbers that multiply to 20 and add to 9: 4 and 5. So x² + 9x + 20 = (x + 4)(x + 5). Check by expanding: 4·5 = 20 and 4 + 5 = 9.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": {
+        "kind": "factorisation",
+        "expression": "x**2 + 9*x + 20",
+        "factors": [
+          "(x + 4)",
+          "(x + 5)"
+        ],
+        "answer_form": "(x + 4)(x + 5)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4944.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_quadratics_factor_006",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.factor",
+      "question": "Factorise x² + 10x + 21.",
+      "options": [
+        "(x - 7)(x - 3)",
+        "(x + 7)(x - 3)",
+        "(x + 10)(x + 21)",
+        "(x + 7)(x + 3)"
+      ],
+      "correct_answer": "(x + 7)(x + 3)",
+      "explanation": "Find two numbers that multiply to 21 and add to 10: 7 and 3. So x² + 10x + 21 = (x + 7)(x + 3). Check by expanding: 7·3 = 21 and 7 + 3 = 10.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": {
+        "kind": "factorisation",
+        "expression": "x**2 + 10*x + 21",
+        "factors": [
+          "(x + 7)",
+          "(x + 3)"
+        ],
+        "answer_form": "(x + 7)(x + 3)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4972.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_quadratics_factor_007",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.factor",
+      "question": "Factorise x² + 8x + 7.",
+      "options": [
+        "(x + 8)(x + 7)",
+        "(x + 1)(x + 7)",
+        "(x + 1)(x - 7)",
+        "(x - 1)(x - 7)"
+      ],
+      "correct_answer": "(x + 1)(x + 7)",
+      "explanation": "Find two numbers that multiply to 7 and add to 8: 1 and 7. So x² + 8x + 7 = (x + 1)(x + 7). Check by expanding: 1·7 = 7 and 1 + 7 = 8.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": {
+        "kind": "factorisation",
+        "expression": "x**2 + 8*x + 7",
+        "factors": [
+          "(x + 1)",
+          "(x + 7)"
+        ],
+        "answer_form": "(x + 1)(x + 7)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4916.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_quadratics_factor_008",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.factor",
+      "question": "Factorise x² + 6x + 9.",
+      "options": [
+        "(x - 3)(x - 3)",
+        "(x + 6)(x + 9)",
+        "(x + 3)(x + 3)",
+        "(x + 3)(x - 3)"
+      ],
+      "correct_answer": "(x + 3)(x + 3)",
+      "explanation": "Find two numbers that multiply to 9 and add to 6: 3 and 3. So x² + 6x + 9 = (x + 3)(x + 3). Check by expanding: 3·3 = 9 and 3 + 3 = 6.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": {
+        "kind": "factorisation",
+        "expression": "x**2 + 6*x + 9",
+        "factors": [
+          "(x + 3)",
+          "(x + 3)"
+        ],
+        "answer_form": "(x + 3)(x + 3)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4916.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_quadratics_factor_009",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.factor",
+      "question": "Factorise x² + 4x + 3.",
+      "options": [
+        "(x + 3)(x - 1)",
+        "(x - 3)(x - 1)",
+        "(x + 4)(x + 3)",
+        "(x + 3)(x + 1)"
+      ],
+      "correct_answer": "(x + 3)(x + 1)",
+      "explanation": "Find two numbers that multiply to 3 and add to 4: 3 and 1. So x² + 4x + 3 = (x + 3)(x + 1). Check by expanding: 3·1 = 3 and 3 + 1 = 4.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": {
+        "kind": "factorisation",
+        "expression": "x**2 + 4*x + 3",
+        "factors": [
+          "(x + 3)",
+          "(x + 1)"
+        ],
+        "answer_form": "(x + 3)(x + 1)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4916.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_quadratics_factor_010",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.factor",
+      "question": "Factorise x² + 13x + 42.",
+      "options": [
+        "(x + 7)(x + 6)",
+        "(x + 7)(x - 6)",
+        "(x - 7)(x - 6)",
+        "(x + 13)(x + 42)"
+      ],
+      "correct_answer": "(x + 7)(x + 6)",
+      "explanation": "Find two numbers that multiply to 42 and add to 13: 7 and 6. So x² + 13x + 42 = (x + 7)(x + 6). Check by expanding: 7·6 = 42 and 7 + 6 = 13.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": {
+        "kind": "factorisation",
+        "expression": "x**2 + 13*x + 42",
+        "factors": [
+          "(x + 7)",
+          "(x + 6)"
+        ],
+        "answer_form": "(x + 7)(x + 6)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4972.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_quadratics_factor_011",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.factor",
+      "question": "Factorise x² + 8x + 12.",
+      "options": [
+        "(x + 2)(x - 6)",
+        "(x + 8)(x + 12)",
+        "(x + 2)(x + 6)",
+        "(x - 2)(x - 6)"
+      ],
+      "correct_answer": "(x + 2)(x + 6)",
+      "explanation": "Find two numbers that multiply to 12 and add to 8: 2 and 6. So x² + 8x + 12 = (x + 2)(x + 6). Check by expanding: 2·6 = 12 and 2 + 6 = 8.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": {
+        "kind": "factorisation",
+        "expression": "x**2 + 8*x + 12",
+        "factors": [
+          "(x + 2)",
+          "(x + 6)"
+        ],
+        "answer_form": "(x + 2)(x + 6)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4944.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_quadratics_factor_012",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.factor",
+      "question": "Factorise x² + 8x + 15.",
+      "options": [
+        "(x + 5)(x + 3)",
+        "(x + 8)(x + 15)",
+        "(x - 5)(x - 3)",
+        "(x + 5)(x - 3)"
+      ],
+      "correct_answer": "(x + 5)(x + 3)",
+      "explanation": "Find two numbers that multiply to 15 and add to 8: 5 and 3. So x² + 8x + 15 = (x + 5)(x + 3). Check by expanding: 5·3 = 15 and 5 + 3 = 8.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": {
+        "kind": "factorisation",
+        "expression": "x**2 + 8*x + 15",
+        "factors": [
+          "(x + 5)",
+          "(x + 3)"
+        ],
+        "answer_form": "(x + 5)(x + 3)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4944.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_quadratics_factor_013",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.factor",
+      "question": "Factorise x² + 3x + 2.",
+      "options": [
+        "(x + 2)(x + 1)",
+        "(x - 2)(x - 1)",
+        "(x + 3)(x + 2)",
+        "(x + 2)(x - 1)"
+      ],
+      "correct_answer": "(x + 2)(x + 1)",
+      "explanation": "Find two numbers that multiply to 2 and add to 3: 2 and 1. So x² + 3x + 2 = (x + 2)(x + 1). Check by expanding: 2·1 = 2 and 2 + 1 = 3.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": {
+        "kind": "factorisation",
+        "expression": "x**2 + 3*x + 2",
+        "factors": [
+          "(x + 2)",
+          "(x + 1)"
+        ],
+        "answer_form": "(x + 2)(x + 1)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4916.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_quadratics_factor_014",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.factor",
+      "question": "Factorise x² + 10x + 25.",
+      "options": [
+        "(x - 5)(x - 5)",
+        "(x + 5)(x + 5)",
+        "(x + 5)(x - 5)",
+        "(x + 10)(x + 25)"
+      ],
+      "correct_answer": "(x + 5)(x + 5)",
+      "explanation": "Find two numbers that multiply to 25 and add to 10: 5 and 5. So x² + 10x + 25 = (x + 5)(x + 5). Check by expanding: 5·5 = 25 and 5 + 5 = 10.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": {
+        "kind": "factorisation",
+        "expression": "x**2 + 10*x + 25",
+        "factors": [
+          "(x + 5)",
+          "(x + 5)"
+        ],
+        "answer_form": "(x + 5)(x + 5)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4972.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_quadratics_factor_015",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.factor",
+      "question": "Factorise x² + 9x + 18.",
+      "options": [
+        "(x + 6)(x - 3)",
+        "(x + 6)(x + 3)",
+        "(x - 6)(x - 3)",
+        "(x + 9)(x + 18)"
+      ],
+      "correct_answer": "(x + 6)(x + 3)",
+      "explanation": "Find two numbers that multiply to 18 and add to 9: 6 and 3. So x² + 9x + 18 = (x + 6)(x + 3). Check by expanding: 6·3 = 18 and 6 + 3 = 9.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": {
+        "kind": "factorisation",
+        "expression": "x**2 + 9*x + 18",
+        "factors": [
+          "(x + 6)",
+          "(x + 3)"
+        ],
+        "answer_form": "(x + 6)(x + 3)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4944.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_quadratics_formula_001",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.formula",
+      "question": "Use the quadratic formula to solve x² - 10x + 16 = 0 (the roots are whole numbers).",
+      "options": [
+        "x = 2",
+        "x = -2 or x = -8",
+        "x = 2 or x = 8",
+        "x = 10"
+      ],
+      "correct_answer": "x = 2 or x = 8",
+      "explanation": "With a = 1, b = -10, c = 16: the discriminant is b² - 4ac = 36. Then x = ( -(-10) ± 36 ) / 2, giving x = 2 and x = 8. The ± produces both roots.",
+      "difficulty": 5,
+      "misconceptions": {
+        "x = 2": "alg.quadratic_formula_sign"
+      },
+      "verify": {
+        "kind": "factor_roots",
+        "expression": "x**2 + (-10)*x + (16)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6624.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_quadratics_formula_002",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.formula",
+      "question": "Use the quadratic formula to solve x² + 5x + 0 = 0 (the roots are whole numbers).",
+      "options": [
+        "x = -5 or x = 0",
+        "x = 5 or x = 0",
+        "x = -5"
+      ],
+      "correct_answer": "x = -5 or x = 0",
+      "explanation": "With a = 1, b = 5, c = 0: the discriminant is b² - 4ac = 25. Then x = ( -(5) ± 25 ) / 2, giving x = -5 and x = 0. The ± produces both roots.",
+      "difficulty": 5,
+      "misconceptions": {
+        "x = -5": "alg.quadratic_formula_sign"
+      },
+      "verify": {
+        "kind": "factor_roots",
+        "expression": "x**2 + (5)*x + (0)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6118.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_quadratics_formula_003",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.formula",
+      "question": "Use the quadratic formula to solve x² - 3x + 2 = 0 (the roots are whole numbers).",
+      "options": [
+        "x = 1 or x = 2",
+        "x = -1 or x = -2",
+        "x = 1",
+        "x = 3"
+      ],
+      "correct_answer": "x = 1 or x = 2",
+      "explanation": "With a = 1, b = -3, c = 2: the discriminant is b² - 4ac = 1. Then x = ( -(-3) ± 1 ) / 2, giving x = 1 and x = 2. The ± produces both roots.",
+      "difficulty": 5,
+      "misconceptions": {
+        "x = 1": "alg.quadratic_formula_sign"
+      },
+      "verify": {
+        "kind": "factor_roots",
+        "expression": "x**2 + (-3)*x + (2)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6568.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_quadratics_formula_004",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.formula",
+      "question": "Use the quadratic formula to solve x² - 16x + 55 = 0 (the roots are whole numbers).",
+      "options": [
+        "x = 5 or x = 11",
+        "x = 16",
+        "x = -5 or x = -11",
+        "x = 5"
+      ],
+      "correct_answer": "x = 5 or x = 11",
+      "explanation": "With a = 1, b = -16, c = 55: the discriminant is b² - 4ac = 36. Then x = ( -(-16) ± 36 ) / 2, giving x = 5 and x = 11. The ± produces both roots.",
+      "difficulty": 5,
+      "misconceptions": {
+        "x = 5": "alg.quadratic_formula_sign"
+      },
+      "verify": {
+        "kind": "factor_roots",
+        "expression": "x**2 + (-16)*x + (55)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6624.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_quadratics_formula_005",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.formula",
+      "question": "Use the quadratic formula to solve x² + 8x + 12 = 0 (the roots are whole numbers).",
+      "options": [
+        "x = 6 or x = 2",
+        "x = -6",
+        "x = -8",
+        "x = -6 or x = -2"
+      ],
+      "correct_answer": "x = -6 or x = -2",
+      "explanation": "With a = 1, b = 8, c = 12: the discriminant is b² - 4ac = 16. Then x = ( -(8) ± 16 ) / 2, giving x = -6 and x = -2. The ± produces both roots.",
+      "difficulty": 5,
+      "misconceptions": {
+        "x = -6": "alg.quadratic_formula_sign"
+      },
+      "verify": {
+        "kind": "factor_roots",
+        "expression": "x**2 + (8)*x + (12)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6596.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_quadratics_formula_006",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.formula",
+      "question": "Use the quadratic formula to solve x² + 2x - 8 = 0 (the roots are whole numbers).",
+      "options": [
+        "x = -4 or x = 2",
+        "x = -4",
+        "x = -2",
+        "x = 4 or x = -2"
+      ],
+      "correct_answer": "x = -4 or x = 2",
+      "explanation": "With a = 1, b = 2, c = -8: the discriminant is b² - 4ac = 36. Then x = ( -(2) ± 36 ) / 2, giving x = -4 and x = 2. The ± produces both roots.",
+      "difficulty": 5,
+      "misconceptions": {
+        "x = -4": "alg.quadratic_formula_sign"
+      },
+      "verify": {
+        "kind": "factor_roots",
+        "expression": "x**2 + (2)*x + (-8)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6568.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_quadratics_formula_007",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.formula",
+      "question": "Use the quadratic formula to solve x² - 4x - 5 = 0 (the roots are whole numbers).",
+      "options": [
+        "x = -1 or x = 5",
+        "x = 4",
+        "x = -1",
+        "x = 1 or x = -5"
+      ],
+      "correct_answer": "x = -1 or x = 5",
+      "explanation": "With a = 1, b = -4, c = -5: the discriminant is b² - 4ac = 36. Then x = ( -(-4) ± 36 ) / 2, giving x = -1 and x = 5. The ± produces both roots.",
+      "difficulty": 5,
+      "misconceptions": {
+        "x = -1": "alg.quadratic_formula_sign"
+      },
+      "verify": {
+        "kind": "factor_roots",
+        "expression": "x**2 + (-4)*x + (-5)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6568.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_quadratics_formula_008",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.formula",
+      "question": "Use the quadratic formula to solve x² - 1x - 2 = 0 (the roots are whole numbers).",
+      "options": [
+        "x = -1 or x = 2",
+        "x = -1",
+        "x = 1 or x = -2",
+        "x = 1"
+      ],
+      "correct_answer": "x = -1 or x = 2",
+      "explanation": "With a = 1, b = -1, c = -2: the discriminant is b² - 4ac = 9. Then x = ( -(-1) ± 9 ) / 2, giving x = -1 and x = 2. The ± produces both roots.",
+      "difficulty": 5,
+      "misconceptions": {
+        "x = -1": "alg.quadratic_formula_sign"
+      },
+      "verify": {
+        "kind": "factor_roots",
+        "expression": "x**2 + (-1)*x + (-2)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6568.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_quadratics_formula_009",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.formula",
+      "question": "Use the quadratic formula to solve x² - 12x + 27 = 0 (the roots are whole numbers).",
+      "options": [
+        "x = 3 or x = 9",
+        "x = 12",
+        "x = -3 or x = -9",
+        "x = 3"
+      ],
+      "correct_answer": "x = 3 or x = 9",
+      "explanation": "With a = 1, b = -12, c = 27: the discriminant is b² - 4ac = 36. Then x = ( -(-12) ± 36 ) / 2, giving x = 3 and x = 9. The ± produces both roots.",
+      "difficulty": 5,
+      "misconceptions": {
+        "x = 3": "alg.quadratic_formula_sign"
+      },
+      "verify": {
+        "kind": "factor_roots",
+        "expression": "x**2 + (-12)*x + (27)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6624.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_quadratics_formula_010",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.formula",
+      "question": "Use the quadratic formula to solve x² - 1x + 0 = 0 (the roots are whole numbers).",
+      "options": [
+        "x = 0",
+        "x = 0 or x = 1",
+        "x = 0 or x = -1",
+        "x = 1"
+      ],
+      "correct_answer": "x = 0 or x = 1",
+      "explanation": "With a = 1, b = -1, c = 0: the discriminant is b² - 4ac = 1. Then x = ( -(-1) ± 1 ) / 2, giving x = 0 and x = 1. The ± produces both roots.",
+      "difficulty": 5,
+      "misconceptions": {
+        "x = 0": "alg.quadratic_formula_sign"
+      },
+      "verify": {
+        "kind": "factor_roots",
+        "expression": "x**2 + (-1)*x + (0)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6568.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_quadratics_formula_011",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.formula",
+      "question": "Use the quadratic formula to solve x² + 4x - 5 = 0 (the roots are whole numbers).",
+      "options": [
+        "x = 5 or x = -1",
+        "x = -4",
+        "x = -5",
+        "x = -5 or x = 1"
+      ],
+      "correct_answer": "x = -5 or x = 1",
+      "explanation": "With a = 1, b = 4, c = -5: the discriminant is b² - 4ac = 36. Then x = ( -(4) ± 36 ) / 2, giving x = -5 and x = 1. The ± produces both roots.",
+      "difficulty": 5,
+      "misconceptions": {
+        "x = -5": "alg.quadratic_formula_sign"
+      },
+      "verify": {
+        "kind": "factor_roots",
+        "expression": "x**2 + (4)*x + (-5)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6568.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_quadratics_formula_012",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.formula",
+      "question": "Use the quadratic formula to solve x² - 9x + 20 = 0 (the roots are whole numbers).",
+      "options": [
+        "x = 4 or x = 5",
+        "x = 9",
+        "x = -4 or x = -5",
+        "x = 4"
+      ],
+      "correct_answer": "x = 4 or x = 5",
+      "explanation": "With a = 1, b = -9, c = 20: the discriminant is b² - 4ac = 1. Then x = ( -(-9) ± 1 ) / 2, giving x = 4 and x = 5. The ± produces both roots.",
+      "difficulty": 5,
+      "misconceptions": {
+        "x = 4": "alg.quadratic_formula_sign"
+      },
+      "verify": {
+        "kind": "factor_roots",
+        "expression": "x**2 + (-9)*x + (20)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6596.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_quadratics_formula_013",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.formula",
+      "question": "Use the quadratic formula to solve x² + 5x + 6 = 0 (the roots are whole numbers).",
+      "options": [
+        "x = -3 or x = -2",
+        "x = -3",
+        "x = -5",
+        "x = 3 or x = 2"
+      ],
+      "correct_answer": "x = -3 or x = -2",
+      "explanation": "With a = 1, b = 5, c = 6: the discriminant is b² - 4ac = 1. Then x = ( -(5) ± 1 ) / 2, giving x = -3 and x = -2. The ± produces both roots.",
+      "difficulty": 5,
+      "misconceptions": {
+        "x = -3": "alg.quadratic_formula_sign"
+      },
+      "verify": {
+        "kind": "factor_roots",
+        "expression": "x**2 + (5)*x + (6)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6568.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_quadratics_formula_014",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.formula",
+      "question": "Use the quadratic formula to solve x² - 13x + 42 = 0 (the roots are whole numbers).",
+      "options": [
+        "x = -6 or x = -7",
+        "x = 6 or x = 7",
+        "x = 6",
+        "x = 13"
+      ],
+      "correct_answer": "x = 6 or x = 7",
+      "explanation": "With a = 1, b = -13, c = 42: the discriminant is b² - 4ac = 1. Then x = ( -(-13) ± 1 ) / 2, giving x = 6 and x = 7. The ± produces both roots.",
+      "difficulty": 5,
+      "misconceptions": {
+        "x = 6": "alg.quadratic_formula_sign"
+      },
+      "verify": {
+        "kind": "factor_roots",
+        "expression": "x**2 + (-13)*x + (42)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6624.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_quadratics_formula_015",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.formula",
+      "question": "Use the quadratic formula to solve x² - 9x + 18 = 0 (the roots are whole numbers).",
+      "options": [
+        "x = 3 or x = 6",
+        "x = 3",
+        "x = -3 or x = -6",
+        "x = 9"
+      ],
+      "correct_answer": "x = 3 or x = 6",
+      "explanation": "With a = 1, b = -9, c = 18: the discriminant is b² - 4ac = 9. Then x = ( -(-9) ± 9 ) / 2, giving x = 3 and x = 6. The ± produces both roots.",
+      "difficulty": 5,
+      "misconceptions": {
+        "x = 3": "alg.quadratic_formula_sign"
+      },
+      "verify": {
+        "kind": "factor_roots",
+        "expression": "x**2 + (-9)*x + (18)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6596.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_quadratics_standard_form_001",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.standard_form",
+      "question": "The equation 5x² - 6x + 3 = 0 is written in standard form. What is the value of c in ax² + bx + c = 0?",
+      "options": [
+        "3",
+        "-6",
+        "5",
+        "0"
+      ],
+      "correct_answer": "3",
+      "explanation": "In ax² + bx + c = 0 the constant term c is what is left when x = 0. Here that is 3. Note b = -6, including its sign.",
+      "difficulty": 3,
+      "misconceptions": {},
+      "verify": null,
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 7156.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_quadratics_standard_form_002",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.standard_form",
+      "question": "The equation 2x² - 9x + 9 = 0 is written in standard form. What is the value of c in ax² + bx + c = 0?",
+      "options": [
+        "-9",
+        "0",
+        "9",
+        "2"
+      ],
+      "correct_answer": "9",
+      "explanation": "In ax² + bx + c = 0 the constant term c is what is left when x = 0. Here that is 9. Note b = -9, including its sign.",
+      "difficulty": 3,
+      "misconceptions": {},
+      "verify": null,
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 7156.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_quadratics_standard_form_003",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.standard_form",
+      "question": "The equation 5x² - 7x + 8 = 0 is written in standard form. What is the value of c in ax² + bx + c = 0?",
+      "options": [
+        "8",
+        "5",
+        "-7",
+        "0"
+      ],
+      "correct_answer": "8",
+      "explanation": "In ax² + bx + c = 0 the constant term c is what is left when x = 0. Here that is 8. Note b = -7, including its sign.",
+      "difficulty": 3,
+      "misconceptions": {},
+      "verify": null,
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 7156.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_quadratics_standard_form_004",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.standard_form",
+      "question": "The equation 3x² - 7x + 3 = 0 is written in standard form. What is the value of c in ax² + bx + c = 0?",
+      "options": [
+        "3",
+        "-7",
+        "0"
+      ],
+      "correct_answer": "3",
+      "explanation": "In ax² + bx + c = 0 the constant term c is what is left when x = 0. Here that is 3. Note b = -7, including its sign.",
+      "difficulty": 3,
+      "misconceptions": {},
+      "verify": null,
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6706.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_quadratics_standard_form_005",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.standard_form",
+      "question": "The equation 4x² - 4x + 2 = 0 is written in standard form. What is the value of c in ax² + bx + c = 0?",
+      "options": [
+        "0",
+        "-4",
+        "4",
+        "2"
+      ],
+      "correct_answer": "2",
+      "explanation": "In ax² + bx + c = 0 the constant term c is what is left when x = 0. Here that is 2. Note b = -4, including its sign.",
+      "difficulty": 3,
+      "misconceptions": {},
+      "verify": null,
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 7156.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_quadratics_standard_form_006",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.standard_form",
+      "question": "The equation 6x² - 3x + 5 = 0 is written in standard form. What is the value of c in ax² + bx + c = 0?",
+      "options": [
+        "0",
+        "6",
+        "5",
+        "-3"
+      ],
+      "correct_answer": "5",
+      "explanation": "In ax² + bx + c = 0 the constant term c is what is left when x = 0. Here that is 5. Note b = -3, including its sign.",
+      "difficulty": 3,
+      "misconceptions": {},
+      "verify": null,
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 7156.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_quadratics_standard_form_007",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.standard_form",
+      "question": "The equation 6x² - 3x + 2 = 0 is written in standard form. What is the value of c in ax² + bx + c = 0?",
+      "options": [
+        "0",
+        "6",
+        "-3",
+        "2"
+      ],
+      "correct_answer": "2",
+      "explanation": "In ax² + bx + c = 0 the constant term c is what is left when x = 0. Here that is 2. Note b = -3, including its sign.",
+      "difficulty": 3,
+      "misconceptions": {},
+      "verify": null,
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 7156.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_quadratics_standard_form_008",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.standard_form",
+      "question": "The equation 6x² - 8x + 1 = 0 is written in standard form. What is the value of c in ax² + bx + c = 0?",
+      "options": [
+        "6",
+        "1",
+        "-8",
+        "0"
+      ],
+      "correct_answer": "1",
+      "explanation": "In ax² + bx + c = 0 the constant term c is what is left when x = 0. Here that is 1. Note b = -8, including its sign.",
+      "difficulty": 3,
+      "misconceptions": {},
+      "verify": null,
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 7156.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_quadratics_standard_form_009",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.standard_form",
+      "question": "The equation 5x² - 3x + 12 = 0 is written in standard form. What is the value of c in ax² + bx + c = 0?",
+      "options": [
+        "0",
+        "-3",
+        "12",
+        "5"
+      ],
+      "correct_answer": "12",
+      "explanation": "In ax² + bx + c = 0 the constant term c is what is left when x = 0. Here that is 12. Note b = -3, including its sign.",
+      "difficulty": 3,
+      "misconceptions": {},
+      "verify": null,
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 7184.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_quadratics_standard_form_010",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.standard_form",
+      "question": "The equation 3x² - 9x + 9 = 0 is written in standard form. What is the value of c in ax² + bx + c = 0?",
+      "options": [
+        "3",
+        "0",
+        "-9",
+        "9"
+      ],
+      "correct_answer": "9",
+      "explanation": "In ax² + bx + c = 0 the constant term c is what is left when x = 0. Here that is 9. Note b = -9, including its sign.",
+      "difficulty": 3,
+      "misconceptions": {},
+      "verify": null,
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 7156.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_quadratics_standard_form_011",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.standard_form",
+      "question": "The equation 6x² - 5x + 2 = 0 is written in standard form. What is the value of c in ax² + bx + c = 0?",
+      "options": [
+        "6",
+        "2",
+        "-5",
+        "0"
+      ],
+      "correct_answer": "2",
+      "explanation": "In ax² + bx + c = 0 the constant term c is what is left when x = 0. Here that is 2. Note b = -5, including its sign.",
+      "difficulty": 3,
+      "misconceptions": {},
+      "verify": null,
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 7156.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_quadratics_standard_form_012",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.standard_form",
+      "question": "The equation 3x² - 6x + 6 = 0 is written in standard form. What is the value of c in ax² + bx + c = 0?",
+      "options": [
+        "3",
+        "-6",
+        "0",
+        "6"
+      ],
+      "correct_answer": "6",
+      "explanation": "In ax² + bx + c = 0 the constant term c is what is left when x = 0. Here that is 6. Note b = -6, including its sign.",
+      "difficulty": 3,
+      "misconceptions": {},
+      "verify": null,
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 7156.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_quadratics_standard_form_013",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.standard_form",
+      "question": "The equation 6x² - 9x + 10 = 0 is written in standard form. What is the value of c in ax² + bx + c = 0?",
+      "options": [
+        "6",
+        "-9",
+        "0",
+        "10"
+      ],
+      "correct_answer": "10",
+      "explanation": "In ax² + bx + c = 0 the constant term c is what is left when x = 0. Here that is 10. Note b = -9, including its sign.",
+      "difficulty": 3,
+      "misconceptions": {},
+      "verify": null,
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 7184.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_quadratics_standard_form_014",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.standard_form",
+      "question": "The equation 2x² - 7x + 3 = 0 is written in standard form. What is the value of c in ax² + bx + c = 0?",
+      "options": [
+        "-7",
+        "3",
+        "0",
+        "2"
+      ],
+      "correct_answer": "3",
+      "explanation": "In ax² + bx + c = 0 the constant term c is what is left when x = 0. Here that is 3. Note b = -7, including its sign.",
+      "difficulty": 3,
+      "misconceptions": {},
+      "verify": null,
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 7156.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_quadratics_standard_form_015",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.standard_form",
+      "question": "The equation 3x² - 2x + 2 = 0 is written in standard form. What is the value of c in ax² + bx + c = 0?",
+      "options": [
+        "0",
+        "-2",
+        "2",
+        "3"
+      ],
+      "correct_answer": "2",
+      "explanation": "In ax² + bx + c = 0 the constant term c is what is left when x = 0. Here that is 2. Note b = -2, including its sign.",
+      "difficulty": 3,
+      "misconceptions": {},
+      "verify": null,
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 7156.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_quadratics_zero_product_001",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.zero_product",
+      "question": "Solve (x - 8)(x + 4) = 0.",
+      "options": [
+        "x = 8",
+        "x = 12",
+        "x = 8 or x = -4",
+        "x = -8 or x = 4"
+      ],
+      "correct_answer": "x = 8 or x = -4",
+      "explanation": "If a product is zero, at least one factor is zero. So x - 8 = 0 gives x = 8, and x + 4 = 0 gives x = -4. Both are solutions — a quadratic normally has two.",
+      "difficulty": 4,
+      "misconceptions": {
+        "x = 8": "alg.zero_product_ignored"
+      },
+      "verify": {
+        "kind": "factor_roots",
+        "factors": [
+          "(x - 8)",
+          "(x + 4)"
+        ]
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5000.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_quadratics_zero_product_002",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.zero_product",
+      "question": "Solve (x - 6)(x + 6) = 0.",
+      "options": [
+        "x = 12",
+        "x = 6",
+        "x = 6 or x = -6"
+      ],
+      "correct_answer": "x = 6 or x = -6",
+      "explanation": "If a product is zero, at least one factor is zero. So x - 6 = 0 gives x = 6, and x + 6 = 0 gives x = -6. Both are solutions — a quadratic normally has two.",
+      "difficulty": 4,
+      "misconceptions": {
+        "x = 6": "alg.zero_product_ignored"
+      },
+      "verify": {
+        "kind": "factor_roots",
+        "factors": [
+          "(x - 6)",
+          "(x + 6)"
+        ]
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4550.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_quadratics_zero_product_003",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.zero_product",
+      "question": "Solve (x - 3)(x + 2) = 0.",
+      "options": [
+        "x = -3 or x = 2",
+        "x = 5",
+        "x = 3 or x = -2",
+        "x = 3"
+      ],
+      "correct_answer": "x = 3 or x = -2",
+      "explanation": "If a product is zero, at least one factor is zero. So x - 3 = 0 gives x = 3, and x + 2 = 0 gives x = -2. Both are solutions — a quadratic normally has two.",
+      "difficulty": 4,
+      "misconceptions": {
+        "x = 3": "alg.zero_product_ignored"
+      },
+      "verify": {
+        "kind": "factor_roots",
+        "factors": [
+          "(x - 3)",
+          "(x + 2)"
+        ]
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5000.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_quadratics_zero_product_004",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.zero_product",
+      "question": "Solve (x - 4)(x + 8) = 0.",
+      "options": [
+        "x = 4 or x = -8",
+        "x = 4",
+        "x = -4 or x = 8",
+        "x = 12"
+      ],
+      "correct_answer": "x = 4 or x = -8",
+      "explanation": "If a product is zero, at least one factor is zero. So x - 4 = 0 gives x = 4, and x + 8 = 0 gives x = -8. Both are solutions — a quadratic normally has two.",
+      "difficulty": 4,
+      "misconceptions": {
+        "x = 4": "alg.zero_product_ignored"
+      },
+      "verify": {
+        "kind": "factor_roots",
+        "factors": [
+          "(x - 4)",
+          "(x + 8)"
+        ]
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5000.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_quadratics_zero_product_005",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.zero_product",
+      "question": "Solve (x - 7)(x + 7) = 0.",
+      "options": [
+        "x = 7",
+        "x = 14",
+        "x = 7 or x = -7"
+      ],
+      "correct_answer": "x = 7 or x = -7",
+      "explanation": "If a product is zero, at least one factor is zero. So x - 7 = 0 gives x = 7, and x + 7 = 0 gives x = -7. Both are solutions — a quadratic normally has two.",
+      "difficulty": 4,
+      "misconceptions": {
+        "x = 7": "alg.zero_product_ignored"
+      },
+      "verify": {
+        "kind": "factor_roots",
+        "factors": [
+          "(x - 7)",
+          "(x + 7)"
+        ]
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4550.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_quadratics_zero_product_006",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.zero_product",
+      "question": "Solve (x - 2)(x + 3) = 0.",
+      "options": [
+        "x = 5",
+        "x = -2 or x = 3",
+        "x = 2",
+        "x = 2 or x = -3"
+      ],
+      "correct_answer": "x = 2 or x = -3",
+      "explanation": "If a product is zero, at least one factor is zero. So x - 2 = 0 gives x = 2, and x + 3 = 0 gives x = -3. Both are solutions — a quadratic normally has two.",
+      "difficulty": 4,
+      "misconceptions": {
+        "x = 2": "alg.zero_product_ignored"
+      },
+      "verify": {
+        "kind": "factor_roots",
+        "factors": [
+          "(x - 2)",
+          "(x + 3)"
+        ]
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5000.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_quadratics_zero_product_007",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.zero_product",
+      "question": "Solve (x - 3)(x + 7) = 0.",
+      "options": [
+        "x = 3 or x = -7",
+        "x = -3 or x = 7",
+        "x = 10",
+        "x = 3"
+      ],
+      "correct_answer": "x = 3 or x = -7",
+      "explanation": "If a product is zero, at least one factor is zero. So x - 3 = 0 gives x = 3, and x + 7 = 0 gives x = -7. Both are solutions — a quadratic normally has two.",
+      "difficulty": 4,
+      "misconceptions": {
+        "x = 3": "alg.zero_product_ignored"
+      },
+      "verify": {
+        "kind": "factor_roots",
+        "factors": [
+          "(x - 3)",
+          "(x + 7)"
+        ]
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5000.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_quadratics_zero_product_008",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.zero_product",
+      "question": "Solve (x - 4)(x + 5) = 0.",
+      "options": [
+        "x = 9",
+        "x = 4",
+        "x = 4 or x = -5",
+        "x = -4 or x = 5"
+      ],
+      "correct_answer": "x = 4 or x = -5",
+      "explanation": "If a product is zero, at least one factor is zero. So x - 4 = 0 gives x = 4, and x + 5 = 0 gives x = -5. Both are solutions — a quadratic normally has two.",
+      "difficulty": 4,
+      "misconceptions": {
+        "x = 4": "alg.zero_product_ignored"
+      },
+      "verify": {
+        "kind": "factor_roots",
+        "factors": [
+          "(x - 4)",
+          "(x + 5)"
+        ]
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5000.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_quadratics_zero_product_009",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.zero_product",
+      "question": "Solve (x - 2)(x + 2) = 0.",
+      "options": [
+        "x = 2",
+        "x = 2 or x = -2",
+        "x = 4"
+      ],
+      "correct_answer": "x = 2 or x = -2",
+      "explanation": "If a product is zero, at least one factor is zero. So x - 2 = 0 gives x = 2, and x + 2 = 0 gives x = -2. Both are solutions — a quadratic normally has two.",
+      "difficulty": 4,
+      "misconceptions": {
+        "x = 2": "alg.zero_product_ignored"
+      },
+      "verify": {
+        "kind": "factor_roots",
+        "factors": [
+          "(x - 2)",
+          "(x + 2)"
+        ]
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4550.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_quadratics_zero_product_010",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.zero_product",
+      "question": "Solve (x - 3)(x + 3) = 0.",
+      "options": [
+        "x = 6",
+        "x = 3 or x = -3",
+        "x = 3"
+      ],
+      "correct_answer": "x = 3 or x = -3",
+      "explanation": "If a product is zero, at least one factor is zero. So x - 3 = 0 gives x = 3, and x + 3 = 0 gives x = -3. Both are solutions — a quadratic normally has two.",
+      "difficulty": 4,
+      "misconceptions": {
+        "x = 3": "alg.zero_product_ignored"
+      },
+      "verify": {
+        "kind": "factor_roots",
+        "factors": [
+          "(x - 3)",
+          "(x + 3)"
+        ]
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4550.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_quadratics_zero_product_011",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.zero_product",
+      "question": "Solve (x - 5)(x + 3) = 0.",
+      "options": [
+        "x = 5 or x = -3",
+        "x = 5",
+        "x = -5 or x = 3",
+        "x = 8"
+      ],
+      "correct_answer": "x = 5 or x = -3",
+      "explanation": "If a product is zero, at least one factor is zero. So x - 5 = 0 gives x = 5, and x + 3 = 0 gives x = -3. Both are solutions — a quadratic normally has two.",
+      "difficulty": 4,
+      "misconceptions": {
+        "x = 5": "alg.zero_product_ignored"
+      },
+      "verify": {
+        "kind": "factor_roots",
+        "factors": [
+          "(x - 5)",
+          "(x + 3)"
+        ]
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5000.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_quadratics_zero_product_012",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.zero_product",
+      "question": "Solve (x - 1)(x + 8) = 0.",
+      "options": [
+        "x = 9",
+        "x = 1",
+        "x = -1 or x = 8",
+        "x = 1 or x = -8"
+      ],
+      "correct_answer": "x = 1 or x = -8",
+      "explanation": "If a product is zero, at least one factor is zero. So x - 1 = 0 gives x = 1, and x + 8 = 0 gives x = -8. Both are solutions — a quadratic normally has two.",
+      "difficulty": 4,
+      "misconceptions": {
+        "x = 1": "alg.zero_product_ignored"
+      },
+      "verify": {
+        "kind": "factor_roots",
+        "factors": [
+          "(x - 1)",
+          "(x + 8)"
+        ]
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5000.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_quadratics_zero_product_013",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.zero_product",
+      "question": "Solve (x - 6)(x + 5) = 0.",
+      "options": [
+        "x = -6 or x = 5",
+        "x = 6 or x = -5",
+        "x = 11",
+        "x = 6"
+      ],
+      "correct_answer": "x = 6 or x = -5",
+      "explanation": "If a product is zero, at least one factor is zero. So x - 6 = 0 gives x = 6, and x + 5 = 0 gives x = -5. Both are solutions — a quadratic normally has two.",
+      "difficulty": 4,
+      "misconceptions": {
+        "x = 6": "alg.zero_product_ignored"
+      },
+      "verify": {
+        "kind": "factor_roots",
+        "factors": [
+          "(x - 6)",
+          "(x + 5)"
+        ]
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5000.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_quadratics_zero_product_014",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.zero_product",
+      "question": "Solve (x - 6)(x + 8) = 0.",
+      "options": [
+        "x = 14",
+        "x = -6 or x = 8",
+        "x = 6",
+        "x = 6 or x = -8"
+      ],
+      "correct_answer": "x = 6 or x = -8",
+      "explanation": "If a product is zero, at least one factor is zero. So x - 6 = 0 gives x = 6, and x + 8 = 0 gives x = -8. Both are solutions — a quadratic normally has two.",
+      "difficulty": 4,
+      "misconceptions": {
+        "x = 6": "alg.zero_product_ignored"
+      },
+      "verify": {
+        "kind": "factor_roots",
+        "factors": [
+          "(x - 6)",
+          "(x + 8)"
+        ]
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5000.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_quadratics_zero_product_015",
+      "subject": "math",
+      "topic": "quadratics",
+      "concept": "quadratics.zero_product",
+      "question": "Solve (x - 2)(x + 6) = 0.",
+      "options": [
+        "x = 2",
+        "x = 8",
+        "x = 2 or x = -6",
+        "x = -2 or x = 6"
+      ],
+      "correct_answer": "x = 2 or x = -6",
+      "explanation": "If a product is zero, at least one factor is zero. So x - 2 = 0 gives x = 2, and x + 6 = 0 gives x = -6. Both are solutions — a quadratic normally has two.",
+      "difficulty": 4,
+      "misconceptions": {
+        "x = 2": "alg.zero_product_ignored"
+      },
+      "verify": {
+        "kind": "factor_roots",
+        "factors": [
+          "(x - 2)",
+          "(x + 6)"
+        ]
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5000.0,
+      "estimated_difficulty": 3
+    }
+  ]
+}

@@ -1,0 +1,2022 @@
+{
+  "subject": "math",
+  "topic": "polynomials",
+  "generated_by": "kaiserquest-content-pipeline",
+  "version": 1,
+  "concepts": [
+    "polynomials.degree",
+    "polynomials.divide",
+    "polynomials.multiply",
+    "polynomials.remainder"
+  ],
+  "counts": {
+    "total": 85,
+    "curated": 25,
+    "generated": 60
+  },
+  "questions": [
+    {
+      "id": "math_poly_001",
+      "question": "What is the degree of 4x³ + 2x - 7?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct_answer": "3",
+      "explanation": "The highest power of x is 3.",
+      "difficulty": 1,
+      "subject": "math",
+      "topic": "polynomials",
+      "source": "curated",
+      "review_status": "human_authored",
+      "concept": "polynomials.degree",
+      "expected_time_ms": 5280.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "math_poly_002",
+      "question": "What is a polynomial with one term called?",
+      "options": [
+        "Monomial",
+        "Binomial",
+        "Trinomial",
+        "Polynomial"
+      ],
+      "correct_answer": "Monomial",
+      "explanation": "A polynomial with one term (e.g., 5x²) is a monomial.",
+      "difficulty": 1,
+      "subject": "math",
+      "topic": "polynomials",
+      "source": "curated",
+      "review_status": "human_authored",
+      "concept": "polynomials.degree",
+      "expected_time_ms": 5476.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "math_poly_003",
+      "question": "How many terms are in the polynomial 3x² + 2x - 1?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct_answer": "3",
+      "explanation": "The three terms are 3x², 2x, and -1.",
+      "difficulty": 1,
+      "subject": "math",
+      "topic": "polynomials",
+      "source": "curated",
+      "review_status": "human_authored",
+      "concept": "polynomials.degree",
+      "expected_time_ms": 5700.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "math_poly_004",
+      "question": "Add: (2x² + 3x) + (x² - 5x + 4)",
+      "options": [
+        "3x² - 2x + 4",
+        "3x² + 8x + 4",
+        "x² - 2x + 4",
+        "3x² + 2x - 4"
+      ],
+      "correct_answer": "3x² - 2x + 4",
+      "explanation": "(2+1)x² + (3-5)x + 4 = 3x² - 2x + 4",
+      "difficulty": 2,
+      "subject": "math",
+      "topic": "polynomials",
+      "source": "curated",
+      "review_status": "human_authored",
+      "concept": "polynomials.degree",
+      "expected_time_ms": 5168.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "math_poly_005",
+      "question": "Subtract: (5x² + 3) - (2x² + x - 1)",
+      "options": [
+        "3x² - x + 4",
+        "3x² + x + 4",
+        "7x² + x + 2",
+        "3x² - x + 2"
+      ],
+      "correct_answer": "3x² - x + 4",
+      "explanation": "5x² - 2x² = 3x², 0 - x = -x, 3 - (-1) = 4",
+      "difficulty": 2,
+      "subject": "math",
+      "topic": "polynomials",
+      "source": "curated",
+      "review_status": "human_authored",
+      "concept": "polynomials.degree",
+      "expected_time_ms": 5280.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "math_poly_006",
+      "question": "Multiply: 3x(x + 4)",
+      "options": [
+        "3x + 12",
+        "3x² + 12x",
+        "3x² + 4x",
+        "3x² + 12"
+      ],
+      "correct_answer": "3x² + 12x",
+      "explanation": "3x · x + 3x · 4 = 3x² + 12x",
+      "difficulty": 2,
+      "subject": "math",
+      "topic": "polynomials",
+      "source": "curated",
+      "review_status": "human_authored",
+      "concept": "polynomials.degree",
+      "expected_time_ms": 4832.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "math_poly_007",
+      "question": "What is the leading coefficient of -2x⁴ + 5x² - x?",
+      "options": [
+        "-2",
+        "2",
+        "4",
+        "5"
+      ],
+      "correct_answer": "-2",
+      "explanation": "The leading coefficient is the coefficient of the highest-degree term.",
+      "difficulty": 2,
+      "subject": "math",
+      "topic": "polynomials",
+      "source": "curated",
+      "review_status": "human_authored",
+      "concept": "polynomials.degree",
+      "expected_time_ms": 5700.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "math_poly_008",
+      "question": "Multiply: (x + 2)(x + 5)",
+      "options": [
+        "x² + 7x + 10",
+        "x² + 7x + 7",
+        "x² + 10x + 7",
+        "x² + 3x + 10"
+      ],
+      "correct_answer": "x² + 7x + 10",
+      "explanation": "x² + 5x + 2x + 10 = x² + 7x + 10",
+      "difficulty": 2,
+      "subject": "math",
+      "topic": "polynomials",
+      "source": "curated",
+      "review_status": "human_authored",
+      "concept": "polynomials.degree",
+      "expected_time_ms": 4972.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "math_poly_009",
+      "question": "Expand: (x - 3)²",
+      "options": [
+        "x² - 6x + 9",
+        "x² - 3x + 9",
+        "x² + 6x + 9",
+        "x² - 9"
+      ],
+      "correct_answer": "x² - 6x + 9",
+      "explanation": "(x-3)² = x² - 2(3)x + 9 = x² - 6x + 9",
+      "difficulty": 3,
+      "subject": "math",
+      "topic": "polynomials",
+      "source": "curated",
+      "review_status": "human_authored",
+      "concept": "polynomials.degree",
+      "expected_time_ms": 4748.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "math_poly_010",
+      "question": "What is the constant term of 7x³ - 2x + 11?",
+      "options": [
+        "7",
+        "-2",
+        "3",
+        "11"
+      ],
+      "correct_answer": "11",
+      "explanation": "The constant term is the term without a variable: 11.",
+      "difficulty": 1,
+      "subject": "math",
+      "topic": "polynomials",
+      "source": "curated",
+      "review_status": "human_authored",
+      "concept": "polynomials.degree",
+      "expected_time_ms": 5504.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "math_poly_011",
+      "question": "Multiply: (2x - 1)(x + 3)",
+      "options": [
+        "2x² + 5x - 3",
+        "2x² + 7x - 3",
+        "2x² - 5x - 3",
+        "2x² + 5x + 3"
+      ],
+      "correct_answer": "2x² + 5x - 3",
+      "explanation": "2x² + 6x - x - 3 = 2x² + 5x - 3",
+      "difficulty": 3,
+      "subject": "math",
+      "topic": "polynomials",
+      "source": "curated",
+      "review_status": "human_authored",
+      "concept": "polynomials.degree",
+      "expected_time_ms": 5000.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "math_poly_012",
+      "question": "Find the GCF of 6x³ + 9x².",
+      "options": [
+        "3x",
+        "3x²",
+        "6x",
+        "9x²"
+      ],
+      "correct_answer": "3x²",
+      "explanation": "GCF of 6 and 9 is 3; GCF of x³ and x² is x². So GCF = 3x²",
+      "difficulty": 3,
+      "subject": "math",
+      "topic": "polynomials",
+      "source": "curated",
+      "review_status": "human_authored",
+      "concept": "polynomials.degree",
+      "expected_time_ms": 5028.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "math_poly_015",
+      "question": "Divide: (x² + 5x + 6) ÷ (x + 2)",
+      "options": [
+        "x + 2",
+        "x + 3",
+        "x + 4",
+        "x + 6"
+      ],
+      "correct_answer": "x + 3",
+      "explanation": "x² + 5x + 6 = (x + 2)(x + 3), so dividing by (x+2) gives (x+3).",
+      "difficulty": 3,
+      "subject": "math",
+      "topic": "polynomials",
+      "source": "curated",
+      "review_status": "human_authored",
+      "concept": "polynomials.degree",
+      "expected_time_ms": 5168.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "math_poly_016",
+      "question": "Is 5x⁻² + 3x a polynomial?",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "correct_answer": "No",
+      "explanation": "Polynomials only have non-negative integer exponents. x⁻² is not allowed.",
+      "difficulty": 2,
+      "subject": "math",
+      "topic": "polynomials",
+      "source": "curated",
+      "review_status": "human_authored",
+      "concept": "polynomials.degree",
+      "expected_time_ms": 4128.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "math_poly_017",
+      "question": "Evaluate p(x) = x³ - 2x + 1 at x = -1.",
+      "options": [
+        "-2",
+        "0",
+        "2",
+        "4"
+      ],
+      "correct_answer": "2",
+      "explanation": "(-1)³ - 2(-1) + 1 = -1 + 2 + 1 = 2",
+      "difficulty": 3,
+      "subject": "math",
+      "topic": "polynomials",
+      "source": "curated",
+      "review_status": "human_authored",
+      "concept": "polynomials.degree",
+      "expected_time_ms": 5364.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "math_poly_020",
+      "question": "How many roots can a polynomial of degree 4 have at most?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correct_answer": "4",
+      "explanation": "By the Fundamental Theorem of Algebra, a degree-n polynomial has at most n roots.",
+      "difficulty": 2,
+      "subject": "math",
+      "topic": "polynomials",
+      "source": "curated",
+      "review_status": "human_authored",
+      "concept": "polynomials.degree",
+      "expected_time_ms": 5896.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "math_poly_021",
+      "question": "Simplify: (x² + 3x) + (2x² - x + 7)",
+      "options": [
+        "3x² + 2x + 7",
+        "3x² + 4x + 7",
+        "3x² + 2x - 7",
+        "x² + 2x + 7"
+      ],
+      "correct_answer": "3x² + 2x + 7",
+      "explanation": "(1+2)x² + (3-1)x + 7 = 3x² + 2x + 7",
+      "difficulty": 1,
+      "subject": "math",
+      "topic": "polynomials",
+      "source": "curated",
+      "review_status": "human_authored",
+      "concept": "polynomials.degree",
+      "expected_time_ms": 5280.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "math_poly_022",
+      "question": "Multiply: (x + y)(x - y)",
+      "options": [
+        "x² - y²",
+        "x² + y²",
+        "x² - 2xy + y²",
+        "x² + 2xy + y²"
+      ],
+      "correct_answer": "x² - y²",
+      "explanation": "This is the difference of squares pattern: (a+b)(a-b) = a²-b²",
+      "difficulty": 2,
+      "subject": "math",
+      "topic": "polynomials",
+      "source": "curated",
+      "review_status": "human_authored",
+      "concept": "polynomials.degree",
+      "expected_time_ms": 4972.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "math_poly_023",
+      "question": "What is the end behavior of f(x) = -x³ + 2x as x → ∞?",
+      "options": [
+        "f(x) → ∞",
+        "f(x) → -∞",
+        "f(x) → 0",
+        "f(x) → 2"
+      ],
+      "correct_answer": "f(x) → -∞",
+      "explanation": "The leading term -x³ dominates; as x → ∞, -x³ → -∞",
+      "difficulty": 5,
+      "subject": "math",
+      "topic": "polynomials",
+      "source": "curated",
+      "review_status": "human_authored",
+      "concept": "polynomials.degree",
+      "expected_time_ms": 5784.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "math_poly_024",
+      "question": "Factor: x² - 16",
+      "options": [
+        "(x-4)(x+4)",
+        "(x-8)(x+2)",
+        "(x-4)²",
+        "(x+4)²"
+      ],
+      "correct_answer": "(x-4)(x+4)",
+      "explanation": "Difference of squares: x² - 16 = x² - 4² = (x-4)(x+4)",
+      "difficulty": 2,
+      "subject": "math",
+      "topic": "polynomials",
+      "source": "curated",
+      "review_status": "human_authored",
+      "concept": "polynomials.degree",
+      "expected_time_ms": 4720.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "math_poly_025",
+      "question": "What type of polynomial is 4x⁴ + x² - 3?",
+      "options": [
+        "Linear",
+        "Quadratic",
+        "Cubic",
+        "Quartic"
+      ],
+      "correct_answer": "Quartic",
+      "explanation": "The highest degree is 4, making it a quartic polynomial.",
+      "difficulty": 3,
+      "subject": "math",
+      "topic": "polynomials",
+      "source": "curated",
+      "review_status": "human_authored",
+      "concept": "polynomials.degree",
+      "expected_time_ms": 5420.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "math_poly_019",
+      "question": "If (x - 2) is a factor of x³ - 3x² + ax + 2, find a.",
+      "options": [
+        "-2",
+        "-1",
+        "0",
+        "1"
+      ],
+      "correct_answer": "1",
+      "explanation": "p(2) = 0: 8 - 12 + 2a + 2 = 0 → -2 + 2a = 0 → a = 1",
+      "difficulty": 5,
+      "subject": "math",
+      "topic": "polynomials",
+      "source": "curated",
+      "review_status": "human_authored",
+      "concept": "polynomials.divide",
+      "expected_time_ms": 5756.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "math_poly_013",
+      "question": "Factor: x³ - 8",
+      "options": [
+        "(x-2)(x²+2x+4)",
+        "(x-2)(x²-2x+4)",
+        "(x+2)(x²-2x+4)",
+        "(x-8)(x²+1)"
+      ],
+      "correct_answer": "(x-2)(x²+2x+4)",
+      "explanation": "Difference of cubes: a³-b³ = (a-b)(a²+ab+b²) where a=x, b=2",
+      "difficulty": 4,
+      "subject": "math",
+      "topic": "polynomials",
+      "source": "curated",
+      "review_status": "human_authored",
+      "concept": "polynomials.multiply",
+      "expected_time_ms": 4692.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "math_poly_014",
+      "question": "What is (x+1)³ expanded?",
+      "options": [
+        "x³+1",
+        "x³+3x²+3x+1",
+        "x³+x²+x+1",
+        "x³+2x²+2x+1"
+      ],
+      "correct_answer": "x³+3x²+3x+1",
+      "explanation": "Using binomial theorem: x³ + 3x² + 3x + 1",
+      "difficulty": 4,
+      "subject": "math",
+      "topic": "polynomials",
+      "source": "curated",
+      "review_status": "human_authored",
+      "concept": "polynomials.multiply",
+      "expected_time_ms": 4972.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "math_poly_018",
+      "question": "By the Remainder Theorem, the remainder of p(x) ÷ (x-a) is:",
+      "options": [
+        "p(0)",
+        "p(a)",
+        "p(-a)",
+        "p(1)"
+      ],
+      "correct_answer": "p(a)",
+      "explanation": "The Remainder Theorem states the remainder equals p(a).",
+      "difficulty": 4,
+      "subject": "math",
+      "topic": "polynomials",
+      "source": "curated",
+      "review_status": "human_authored",
+      "concept": "polynomials.remainder",
+      "expected_time_ms": 5952.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_polynomials_degree_001",
+      "subject": "math",
+      "topic": "polynomials",
+      "concept": "polynomials.degree",
+      "question": "What is the degree of the polynomial x² + 3?",
+      "options": [
+        "2",
+        "3",
+        "1"
+      ],
+      "correct_answer": "2",
+      "explanation": "The degree is the highest power of x present, which is 2. The leading coefficient 1 is separate from the degree.",
+      "difficulty": 3,
+      "misconceptions": {},
+      "verify": null,
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5082.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_polynomials_degree_002",
+      "subject": "math",
+      "topic": "polynomials",
+      "concept": "polynomials.degree",
+      "question": "What is the degree of the polynomial 5x⁴ + x³ + 3x + 3?",
+      "options": [
+        "3",
+        "5",
+        "4"
+      ],
+      "correct_answer": "4",
+      "explanation": "The degree is the highest power of x present, which is 4. The leading coefficient 5 is separate from the degree.",
+      "difficulty": 3,
+      "misconceptions": {},
+      "verify": null,
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5390.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_polynomials_degree_003",
+      "subject": "math",
+      "topic": "polynomials",
+      "concept": "polynomials.degree",
+      "question": "What is the degree of the polynomial 5x³ + 3?",
+      "options": [
+        "3",
+        "5",
+        "2",
+        "4"
+      ],
+      "correct_answer": "3",
+      "explanation": "The degree is the highest power of x present, which is 3. The leading coefficient 5 is separate from the degree.",
+      "difficulty": 3,
+      "misconceptions": {},
+      "verify": null,
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5560.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_polynomials_degree_004",
+      "subject": "math",
+      "topic": "polynomials",
+      "concept": "polynomials.degree",
+      "question": "What is the degree of the polynomial 3x³ + 2x² + 3x?",
+      "options": [
+        "3",
+        "2",
+        "4"
+      ],
+      "correct_answer": "3",
+      "explanation": "The degree is the highest power of x present, which is 3. The leading coefficient 3 is separate from the degree.",
+      "difficulty": 3,
+      "misconceptions": {},
+      "verify": null,
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5306.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_polynomials_degree_005",
+      "subject": "math",
+      "topic": "polynomials",
+      "concept": "polynomials.degree",
+      "question": "What is the degree of the polynomial 3x³ + x² + 4x?",
+      "options": [
+        "2",
+        "4",
+        "3"
+      ],
+      "correct_answer": "3",
+      "explanation": "The degree is the highest power of x present, which is 3. The leading coefficient 3 is separate from the degree.",
+      "difficulty": 3,
+      "misconceptions": {},
+      "verify": null,
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5278.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_polynomials_degree_006",
+      "subject": "math",
+      "topic": "polynomials",
+      "concept": "polynomials.degree",
+      "question": "What is the degree of the polynomial x³ + 3x² + 3x + 1?",
+      "options": [
+        "2",
+        "1",
+        "3",
+        "4"
+      ],
+      "correct_answer": "3",
+      "explanation": "The degree is the highest power of x present, which is 3. The leading coefficient 1 is separate from the degree.",
+      "difficulty": 3,
+      "misconceptions": {},
+      "verify": null,
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5840.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_polynomials_degree_007",
+      "subject": "math",
+      "topic": "polynomials",
+      "concept": "polynomials.degree",
+      "question": "What is the degree of the polynomial 3x³ + x² + 2x + 2?",
+      "options": [
+        "3",
+        "2",
+        "4"
+      ],
+      "correct_answer": "3",
+      "explanation": "The degree is the highest power of x present, which is 3. The leading coefficient 3 is separate from the degree.",
+      "difficulty": 3,
+      "misconceptions": {},
+      "verify": null,
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5390.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_polynomials_degree_008",
+      "subject": "math",
+      "topic": "polynomials",
+      "concept": "polynomials.degree",
+      "question": "What is the degree of the polynomial 2x³ + x + 2?",
+      "options": [
+        "4",
+        "2",
+        "3"
+      ],
+      "correct_answer": "3",
+      "explanation": "The degree is the highest power of x present, which is 3. The leading coefficient 2 is separate from the degree.",
+      "difficulty": 3,
+      "misconceptions": {},
+      "verify": null,
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5222.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_polynomials_degree_009",
+      "subject": "math",
+      "topic": "polynomials",
+      "concept": "polynomials.degree",
+      "question": "What is the degree of the polynomial 4x³ + 3x + 3?",
+      "options": [
+        "3",
+        "4",
+        "2"
+      ],
+      "correct_answer": "3",
+      "explanation": "The degree is the highest power of x present, which is 3. The leading coefficient 4 is separate from the degree.",
+      "difficulty": 3,
+      "misconceptions": {},
+      "verify": null,
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5250.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_polynomials_degree_010",
+      "subject": "math",
+      "topic": "polynomials",
+      "concept": "polynomials.degree",
+      "question": "What is the degree of the polynomial 3x³ + 2x² + x + 1?",
+      "options": [
+        "3",
+        "4",
+        "2"
+      ],
+      "correct_answer": "3",
+      "explanation": "The degree is the highest power of x present, which is 3. The leading coefficient 3 is separate from the degree.",
+      "difficulty": 3,
+      "misconceptions": {},
+      "verify": null,
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5390.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_polynomials_degree_011",
+      "subject": "math",
+      "topic": "polynomials",
+      "concept": "polynomials.degree",
+      "question": "What is the degree of the polynomial 3x⁵ + 4x⁴ + 2x³ + 3x² + 4x + 2?",
+      "options": [
+        "6",
+        "4",
+        "3",
+        "5"
+      ],
+      "correct_answer": "5",
+      "explanation": "The degree is the highest power of x present, which is 5. The leading coefficient 3 is separate from the degree.",
+      "difficulty": 3,
+      "misconceptions": {},
+      "verify": null,
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6204.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_polynomials_degree_012",
+      "subject": "math",
+      "topic": "polynomials",
+      "concept": "polynomials.degree",
+      "question": "What is the degree of the polynomial x⁴ + 3x² + 2x + 4?",
+      "options": [
+        "3",
+        "4",
+        "1",
+        "5"
+      ],
+      "correct_answer": "4",
+      "explanation": "The degree is the highest power of x present, which is 4. The leading coefficient 1 is separate from the degree.",
+      "difficulty": 3,
+      "misconceptions": {},
+      "verify": null,
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5840.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_polynomials_degree_013",
+      "subject": "math",
+      "topic": "polynomials",
+      "concept": "polynomials.degree",
+      "question": "What is the degree of the polynomial 5x⁵ + 4x⁴ + x³ + 2x² + 4?",
+      "options": [
+        "5",
+        "6",
+        "4"
+      ],
+      "correct_answer": "5",
+      "explanation": "The degree is the highest power of x present, which is 5. The leading coefficient 5 is separate from the degree.",
+      "difficulty": 3,
+      "misconceptions": {},
+      "verify": null,
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5586.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_polynomials_degree_014",
+      "subject": "math",
+      "topic": "polynomials",
+      "concept": "polynomials.degree",
+      "question": "What is the degree of the polynomial x² + 2?",
+      "options": [
+        "1",
+        "3",
+        "2"
+      ],
+      "correct_answer": "2",
+      "explanation": "The degree is the highest power of x present, which is 2. The leading coefficient 1 is separate from the degree.",
+      "difficulty": 3,
+      "misconceptions": {},
+      "verify": null,
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5082.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_polynomials_degree_015",
+      "subject": "math",
+      "topic": "polynomials",
+      "concept": "polynomials.degree",
+      "question": "What is the degree of the polynomial x³ + 2x² + 3x + 1?",
+      "options": [
+        "2",
+        "4",
+        "1",
+        "3"
+      ],
+      "correct_answer": "3",
+      "explanation": "The degree is the highest power of x present, which is 3. The leading coefficient 1 is separate from the degree.",
+      "difficulty": 3,
+      "misconceptions": {},
+      "verify": null,
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5840.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_polynomials_divide_001",
+      "subject": "math",
+      "topic": "polynomials",
+      "concept": "polynomials.divide",
+      "question": "Divide 4x³ + 16x² + 4x by 4x.",
+      "options": [
+        "1x² + 4x² + 1",
+        "1x² + 4x + 1",
+        "6x²",
+        "1x³ + 4x² + 1x"
+      ],
+      "correct_answer": "1x² + 4x + 1",
+      "explanation": "Divide each term separately and subtract the powers: 4x³ ÷ 4x = 1x², 16x² ÷ 4x = 4x, and 4x ÷ 4x = 1. The answer is 1x² + 4x + 1. Every term needs dividing, not just the first.",
+      "difficulty": 5,
+      "misconceptions": {
+        "1x³ + 4x² + 1x": "alg.distribution_partial"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "(4x³ + 16x² + 4x)/(4x)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5112.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_polynomials_divide_002",
+      "subject": "math",
+      "topic": "polynomials",
+      "concept": "polynomials.divide",
+      "question": "Divide 15x³ + 10x² + 10x by 5x.",
+      "options": [
+        "7x²",
+        "3x³ + 2x² + 2x",
+        "3x² + 2x + 2",
+        "3x² + 2x² + 2"
+      ],
+      "correct_answer": "3x² + 2x + 2",
+      "explanation": "Divide each term separately and subtract the powers: 15x³ ÷ 5x = 3x², 10x² ÷ 5x = 2x, and 10x ÷ 5x = 2. The answer is 3x² + 2x + 2. Every term needs dividing, not just the first.",
+      "difficulty": 5,
+      "misconceptions": {
+        "3x³ + 2x² + 2x": "alg.distribution_partial"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "(15x³ + 10x² + 10x)/(5x)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5168.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_polynomials_divide_003",
+      "subject": "math",
+      "topic": "polynomials",
+      "concept": "polynomials.divide",
+      "question": "Divide 18x³ + 24x² + 6x by 6x.",
+      "options": [
+        "3x² + 4x² + 1",
+        "8x²",
+        "3x² + 4x + 1",
+        "3x³ + 4x² + 1x"
+      ],
+      "correct_answer": "3x² + 4x + 1",
+      "explanation": "Divide each term separately and subtract the powers: 18x³ ÷ 6x = 3x², 24x² ÷ 6x = 4x, and 6x ÷ 6x = 1. The answer is 3x² + 4x + 1. Every term needs dividing, not just the first.",
+      "difficulty": 5,
+      "misconceptions": {
+        "3x³ + 4x² + 1x": "alg.distribution_partial"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "(18x³ + 24x² + 6x)/(6x)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5140.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_polynomials_divide_004",
+      "subject": "math",
+      "topic": "polynomials",
+      "concept": "polynomials.divide",
+      "question": "Divide 25x³ + 15x² + 10x by 5x.",
+      "options": [
+        "5x³ + 3x² + 2x",
+        "10x²",
+        "5x² + 3x² + 2",
+        "5x² + 3x + 2"
+      ],
+      "correct_answer": "5x² + 3x + 2",
+      "explanation": "Divide each term separately and subtract the powers: 25x³ ÷ 5x = 5x², 15x² ÷ 5x = 3x, and 10x ÷ 5x = 2. The answer is 5x² + 3x + 2. Every term needs dividing, not just the first.",
+      "difficulty": 5,
+      "misconceptions": {
+        "5x³ + 3x² + 2x": "alg.distribution_partial"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "(25x³ + 15x² + 10x)/(5x)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5168.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_polynomials_divide_005",
+      "subject": "math",
+      "topic": "polynomials",
+      "concept": "polynomials.divide",
+      "question": "Divide 6x³ + 30x² + 12x by 6x.",
+      "options": [
+        "8x²",
+        "1x² + 5x² + 2",
+        "1x³ + 5x² + 2x",
+        "1x² + 5x + 2"
+      ],
+      "correct_answer": "1x² + 5x + 2",
+      "explanation": "Divide each term separately and subtract the powers: 6x³ ÷ 6x = 1x², 30x² ÷ 6x = 5x, and 12x ÷ 6x = 2. The answer is 1x² + 5x + 2. Every term needs dividing, not just the first.",
+      "difficulty": 5,
+      "misconceptions": {
+        "1x³ + 5x² + 2x": "alg.distribution_partial"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "(6x³ + 30x² + 12x)/(6x)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5140.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_polynomials_divide_006",
+      "subject": "math",
+      "topic": "polynomials",
+      "concept": "polynomials.divide",
+      "question": "Divide 16x³ + 8x² + 20x by 4x.",
+      "options": [
+        "4x² + 2x + 5",
+        "4x² + 2x² + 5",
+        "11x²",
+        "4x³ + 2x² + 5x"
+      ],
+      "correct_answer": "4x² + 2x + 5",
+      "explanation": "Divide each term separately and subtract the powers: 16x³ ÷ 4x = 4x², 8x² ÷ 4x = 2x, and 20x ÷ 4x = 5. The answer is 4x² + 2x + 5. Every term needs dividing, not just the first.",
+      "difficulty": 5,
+      "misconceptions": {
+        "4x³ + 2x² + 5x": "alg.distribution_partial"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "(16x³ + 8x² + 20x)/(4x)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5140.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_polynomials_divide_007",
+      "subject": "math",
+      "topic": "polynomials",
+      "concept": "polynomials.divide",
+      "question": "Divide 16x³ + 20x² + 8x by 4x.",
+      "options": [
+        "4x² + 5x + 2",
+        "4x² + 5x² + 2",
+        "4x³ + 5x² + 2x",
+        "11x²"
+      ],
+      "correct_answer": "4x² + 5x + 2",
+      "explanation": "Divide each term separately and subtract the powers: 16x³ ÷ 4x = 4x², 20x² ÷ 4x = 5x, and 8x ÷ 4x = 2. The answer is 4x² + 5x + 2. Every term needs dividing, not just the first.",
+      "difficulty": 5,
+      "misconceptions": {
+        "4x³ + 5x² + 2x": "alg.distribution_partial"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "(16x³ + 20x² + 8x)/(4x)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5140.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_polynomials_divide_008",
+      "subject": "math",
+      "topic": "polynomials",
+      "concept": "polynomials.divide",
+      "question": "Divide 12x³ + 12x² + 12x by 4x.",
+      "options": [
+        "3x² + 3x + 3",
+        "3x² + 3x² + 3",
+        "3x³ + 3x² + 3x",
+        "9x²"
+      ],
+      "correct_answer": "3x² + 3x + 3",
+      "explanation": "Divide each term separately and subtract the powers: 12x³ ÷ 4x = 3x², 12x² ÷ 4x = 3x, and 12x ÷ 4x = 3. The answer is 3x² + 3x + 3. Every term needs dividing, not just the first.",
+      "difficulty": 5,
+      "misconceptions": {
+        "3x³ + 3x² + 3x": "alg.distribution_partial"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "(12x³ + 12x² + 12x)/(4x)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5168.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_polynomials_divide_009",
+      "subject": "math",
+      "topic": "polynomials",
+      "concept": "polynomials.divide",
+      "question": "Divide 16x³ + 4x² + 16x by 4x.",
+      "options": [
+        "9x²",
+        "4x² + 1x² + 4",
+        "4x² + 1x + 4",
+        "4x³ + 1x² + 4x"
+      ],
+      "correct_answer": "4x² + 1x + 4",
+      "explanation": "Divide each term separately and subtract the powers: 16x³ ÷ 4x = 4x², 4x² ÷ 4x = 1x, and 16x ÷ 4x = 4. The answer is 4x² + 1x + 4. Every term needs dividing, not just the first.",
+      "difficulty": 5,
+      "misconceptions": {
+        "4x³ + 1x² + 4x": "alg.distribution_partial"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "(16x³ + 4x² + 16x)/(4x)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5140.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_polynomials_divide_010",
+      "subject": "math",
+      "topic": "polynomials",
+      "concept": "polynomials.divide",
+      "question": "Divide 12x³ + 6x² + 9x by 3x.",
+      "options": [
+        "4x² + 2x + 3",
+        "9x²",
+        "4x³ + 2x² + 3x",
+        "4x² + 2x² + 3"
+      ],
+      "correct_answer": "4x² + 2x + 3",
+      "explanation": "Divide each term separately and subtract the powers: 12x³ ÷ 3x = 4x², 6x² ÷ 3x = 2x, and 9x ÷ 3x = 3. The answer is 4x² + 2x + 3. Every term needs dividing, not just the first.",
+      "difficulty": 5,
+      "misconceptions": {
+        "4x³ + 2x² + 3x": "alg.distribution_partial"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "(12x³ + 6x² + 9x)/(3x)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5112.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_polynomials_divide_011",
+      "subject": "math",
+      "topic": "polynomials",
+      "concept": "polynomials.divide",
+      "question": "Divide 24x³ + 30x² + 30x by 6x.",
+      "options": [
+        "14x²",
+        "4x² + 5x² + 5",
+        "4x² + 5x + 5",
+        "4x³ + 5x² + 5x"
+      ],
+      "correct_answer": "4x² + 5x + 5",
+      "explanation": "Divide each term separately and subtract the powers: 24x³ ÷ 6x = 4x², 30x² ÷ 6x = 5x, and 30x ÷ 6x = 5. The answer is 4x² + 5x + 5. Every term needs dividing, not just the first.",
+      "difficulty": 5,
+      "misconceptions": {
+        "4x³ + 5x² + 5x": "alg.distribution_partial"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "(24x³ + 30x² + 30x)/(6x)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5168.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_polynomials_divide_012",
+      "subject": "math",
+      "topic": "polynomials",
+      "concept": "polynomials.divide",
+      "question": "Divide 12x³ + 18x² + 12x by 6x.",
+      "options": [
+        "2x² + 3x + 2",
+        "7x²",
+        "2x² + 3x² + 2",
+        "2x³ + 3x² + 2x"
+      ],
+      "correct_answer": "2x² + 3x + 2",
+      "explanation": "Divide each term separately and subtract the powers: 12x³ ÷ 6x = 2x², 18x² ÷ 6x = 3x, and 12x ÷ 6x = 2. The answer is 2x² + 3x + 2. Every term needs dividing, not just the first.",
+      "difficulty": 5,
+      "misconceptions": {
+        "2x³ + 3x² + 2x": "alg.distribution_partial"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "(12x³ + 18x² + 12x)/(6x)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5168.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_polynomials_divide_013",
+      "subject": "math",
+      "topic": "polynomials",
+      "concept": "polynomials.divide",
+      "question": "Divide 6x³ + 8x² + 8x by 2x.",
+      "options": [
+        "3x² + 4x + 4",
+        "3x² + 4x² + 4",
+        "3x³ + 4x² + 4x",
+        "11x²"
+      ],
+      "correct_answer": "3x² + 4x + 4",
+      "explanation": "Divide each term separately and subtract the powers: 6x³ ÷ 2x = 3x², 8x² ÷ 2x = 4x, and 8x ÷ 2x = 4. The answer is 3x² + 4x + 4. Every term needs dividing, not just the first.",
+      "difficulty": 5,
+      "misconceptions": {
+        "3x³ + 4x² + 4x": "alg.distribution_partial"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "(6x³ + 8x² + 8x)/(2x)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5084.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_polynomials_divide_014",
+      "subject": "math",
+      "topic": "polynomials",
+      "concept": "polynomials.divide",
+      "question": "Divide 15x³ + 25x² + 5x by 5x.",
+      "options": [
+        "3x² + 5x + 1",
+        "3x³ + 5x² + 1x",
+        "3x² + 5x² + 1",
+        "9x²"
+      ],
+      "correct_answer": "3x² + 5x + 1",
+      "explanation": "Divide each term separately and subtract the powers: 15x³ ÷ 5x = 3x², 25x² ÷ 5x = 5x, and 5x ÷ 5x = 1. The answer is 3x² + 5x + 1. Every term needs dividing, not just the first.",
+      "difficulty": 5,
+      "misconceptions": {
+        "3x³ + 5x² + 1x": "alg.distribution_partial"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "(15x³ + 25x² + 5x)/(5x)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5140.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_polynomials_divide_015",
+      "subject": "math",
+      "topic": "polynomials",
+      "concept": "polynomials.divide",
+      "question": "Divide 24x³ + 6x² + 30x by 6x.",
+      "options": [
+        "4x² + 1x² + 5",
+        "4x² + 1x + 5",
+        "10x²",
+        "4x³ + 1x² + 5x"
+      ],
+      "correct_answer": "4x² + 1x + 5",
+      "explanation": "Divide each term separately and subtract the powers: 24x³ ÷ 6x = 4x², 6x² ÷ 6x = 1x, and 30x ÷ 6x = 5. The answer is 4x² + 1x + 5. Every term needs dividing, not just the first.",
+      "difficulty": 5,
+      "misconceptions": {
+        "4x³ + 1x² + 5x": "alg.distribution_partial"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "(24x³ + 6x² + 30x)/(6x)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5140.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_polynomials_multiply_001",
+      "subject": "math",
+      "topic": "polynomials",
+      "concept": "polynomials.multiply",
+      "question": "Expand (x + 6)(x + 2).",
+      "options": [
+        "x² + 12x + 8",
+        "x² + 12",
+        "x² + 8x + 8",
+        "x² + 8x + 12"
+      ],
+      "correct_answer": "x² + 8x + 12",
+      "explanation": "Multiply every term in the first bracket by every term in the second: x·x + x·2 + 6·x + 6·2 = x² + 8x + 12.",
+      "difficulty": 4,
+      "misconceptions": {
+        "x² + 12": "alg.distribution_partial"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "(x + 6)(x + 2)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4916.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_polynomials_multiply_002",
+      "subject": "math",
+      "topic": "polynomials",
+      "concept": "polynomials.multiply",
+      "question": "Expand (x + 1)(x + 7).",
+      "options": [
+        "x² + 7",
+        "x² + 8x + 7",
+        "x² + 7x + 8",
+        "x² + 8x + 8"
+      ],
+      "correct_answer": "x² + 8x + 7",
+      "explanation": "Multiply every term in the first bracket by every term in the second: x·x + x·7 + 1·x + 1·7 = x² + 8x + 7.",
+      "difficulty": 4,
+      "misconceptions": {
+        "x² + 7": "alg.distribution_partial"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "(x + 1)(x + 7)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4916.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_polynomials_multiply_003",
+      "subject": "math",
+      "topic": "polynomials",
+      "concept": "polynomials.multiply",
+      "question": "Expand (x + 5)(x + 1).",
+      "options": [
+        "x² + 6x + 5",
+        "x² + 5x + 6",
+        "x² + 5",
+        "x² + 6x + 6"
+      ],
+      "correct_answer": "x² + 6x + 5",
+      "explanation": "Multiply every term in the first bracket by every term in the second: x·x + x·1 + 5·x + 5·1 = x² + 6x + 5.",
+      "difficulty": 4,
+      "misconceptions": {
+        "x² + 5": "alg.distribution_partial"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "(x + 5)(x + 1)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4916.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_polynomials_multiply_004",
+      "subject": "math",
+      "topic": "polynomials",
+      "concept": "polynomials.multiply",
+      "question": "Expand (x + 6)(x + 3).",
+      "options": [
+        "x² + 9x + 9",
+        "x² + 18",
+        "x² + 18x + 9",
+        "x² + 9x + 18"
+      ],
+      "correct_answer": "x² + 9x + 18",
+      "explanation": "Multiply every term in the first bracket by every term in the second: x·x + x·3 + 6·x + 6·3 = x² + 9x + 18.",
+      "difficulty": 4,
+      "misconceptions": {
+        "x² + 18": "alg.distribution_partial"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "(x + 6)(x + 3)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4916.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_polynomials_multiply_005",
+      "subject": "math",
+      "topic": "polynomials",
+      "concept": "polynomials.multiply",
+      "question": "Expand (x + 3)(x + 2).",
+      "options": [
+        "x² + 5x + 6",
+        "x² + 6x + 5",
+        "x² + 5x + 5",
+        "x² + 6"
+      ],
+      "correct_answer": "x² + 5x + 6",
+      "explanation": "Multiply every term in the first bracket by every term in the second: x·x + x·2 + 3·x + 3·2 = x² + 5x + 6.",
+      "difficulty": 4,
+      "misconceptions": {
+        "x² + 6": "alg.distribution_partial"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "(x + 3)(x + 2)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4916.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_polynomials_multiply_006",
+      "subject": "math",
+      "topic": "polynomials",
+      "concept": "polynomials.multiply",
+      "question": "Expand (x + 6)(x + 7).",
+      "options": [
+        "x² + 13x + 13",
+        "x² + 13x + 42",
+        "x² + 42",
+        "x² + 42x + 13"
+      ],
+      "correct_answer": "x² + 13x + 42",
+      "explanation": "Multiply every term in the first bracket by every term in the second: x·x + x·7 + 6·x + 6·7 = x² + 13x + 42.",
+      "difficulty": 4,
+      "misconceptions": {
+        "x² + 42": "alg.distribution_partial"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "(x + 6)(x + 7)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4916.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_polynomials_multiply_007",
+      "subject": "math",
+      "topic": "polynomials",
+      "concept": "polynomials.multiply",
+      "question": "Expand (x + 6)(x + 5).",
+      "options": [
+        "x² + 11x + 11",
+        "x² + 11x + 30",
+        "x² + 30",
+        "x² + 30x + 11"
+      ],
+      "correct_answer": "x² + 11x + 30",
+      "explanation": "Multiply every term in the first bracket by every term in the second: x·x + x·5 + 6·x + 6·5 = x² + 11x + 30.",
+      "difficulty": 4,
+      "misconceptions": {
+        "x² + 30": "alg.distribution_partial"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "(x + 6)(x + 5)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4916.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_polynomials_multiply_008",
+      "subject": "math",
+      "topic": "polynomials",
+      "concept": "polynomials.multiply",
+      "question": "Expand (x + 2)(x + 1).",
+      "options": [
+        "x² + 3x + 3",
+        "x² + 2x + 3",
+        "x² + 2",
+        "x² + 3x + 2"
+      ],
+      "correct_answer": "x² + 3x + 2",
+      "explanation": "Multiply every term in the first bracket by every term in the second: x·x + x·1 + 2·x + 2·1 = x² + 3x + 2.",
+      "difficulty": 4,
+      "misconceptions": {
+        "x² + 2": "alg.distribution_partial"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "(x + 2)(x + 1)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4916.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_polynomials_multiply_009",
+      "subject": "math",
+      "topic": "polynomials",
+      "concept": "polynomials.multiply",
+      "question": "Expand (x + 3)(x + 3).",
+      "options": [
+        "x² + 6x + 6",
+        "x² + 9x + 6",
+        "x² + 6x + 9",
+        "x² + 9"
+      ],
+      "correct_answer": "x² + 6x + 9",
+      "explanation": "Multiply every term in the first bracket by every term in the second: x·x + x·3 + 3·x + 3·3 = x² + 6x + 9.",
+      "difficulty": 4,
+      "misconceptions": {
+        "x² + 9": "alg.distribution_partial"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "(x + 3)(x + 3)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4916.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_polynomials_multiply_010",
+      "subject": "math",
+      "topic": "polynomials",
+      "concept": "polynomials.multiply",
+      "question": "Expand (x + 4)(x + 5).",
+      "options": [
+        "x² + 20x + 9",
+        "x² + 9x + 9",
+        "x² + 20",
+        "x² + 9x + 20"
+      ],
+      "correct_answer": "x² + 9x + 20",
+      "explanation": "Multiply every term in the first bracket by every term in the second: x·x + x·5 + 4·x + 4·5 = x² + 9x + 20.",
+      "difficulty": 4,
+      "misconceptions": {
+        "x² + 20": "alg.distribution_partial"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "(x + 4)(x + 5)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4916.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_polynomials_multiply_011",
+      "subject": "math",
+      "topic": "polynomials",
+      "concept": "polynomials.multiply",
+      "question": "Expand (x + 5)(x + 7).",
+      "options": [
+        "x² + 35x + 12",
+        "x² + 12x + 35",
+        "x² + 35",
+        "x² + 12x + 12"
+      ],
+      "correct_answer": "x² + 12x + 35",
+      "explanation": "Multiply every term in the first bracket by every term in the second: x·x + x·7 + 5·x + 5·7 = x² + 12x + 35.",
+      "difficulty": 4,
+      "misconceptions": {
+        "x² + 35": "alg.distribution_partial"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "(x + 5)(x + 7)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4916.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_polynomials_multiply_012",
+      "subject": "math",
+      "topic": "polynomials",
+      "concept": "polynomials.multiply",
+      "question": "Expand (x + 1)(x + 4).",
+      "options": [
+        "x² + 5x + 4",
+        "x² + 4x + 5",
+        "x² + 5x + 5",
+        "x² + 4"
+      ],
+      "correct_answer": "x² + 5x + 4",
+      "explanation": "Multiply every term in the first bracket by every term in the second: x·x + x·4 + 1·x + 1·4 = x² + 5x + 4.",
+      "difficulty": 4,
+      "misconceptions": {
+        "x² + 4": "alg.distribution_partial"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "(x + 1)(x + 4)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4916.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_polynomials_multiply_013",
+      "subject": "math",
+      "topic": "polynomials",
+      "concept": "polynomials.multiply",
+      "question": "Expand (x + 5)(x + 4).",
+      "options": [
+        "x² + 9x + 9",
+        "x² + 9x + 20",
+        "x² + 20",
+        "x² + 20x + 9"
+      ],
+      "correct_answer": "x² + 9x + 20",
+      "explanation": "Multiply every term in the first bracket by every term in the second: x·x + x·4 + 5·x + 5·4 = x² + 9x + 20.",
+      "difficulty": 4,
+      "misconceptions": {
+        "x² + 20": "alg.distribution_partial"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "(x + 5)(x + 4)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4916.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_polynomials_multiply_014",
+      "subject": "math",
+      "topic": "polynomials",
+      "concept": "polynomials.multiply",
+      "question": "Expand (x + 6)(x + 4).",
+      "options": [
+        "x² + 10x + 10",
+        "x² + 24x + 10",
+        "x² + 10x + 24",
+        "x² + 24"
+      ],
+      "correct_answer": "x² + 10x + 24",
+      "explanation": "Multiply every term in the first bracket by every term in the second: x·x + x·4 + 6·x + 6·4 = x² + 10x + 24.",
+      "difficulty": 4,
+      "misconceptions": {
+        "x² + 24": "alg.distribution_partial"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "(x + 6)(x + 4)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4916.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_polynomials_multiply_015",
+      "subject": "math",
+      "topic": "polynomials",
+      "concept": "polynomials.multiply",
+      "question": "Expand (x + 4)(x + 2).",
+      "options": [
+        "x² + 6x + 8",
+        "x² + 8x + 6",
+        "x² + 6x + 6",
+        "x² + 8"
+      ],
+      "correct_answer": "x² + 6x + 8",
+      "explanation": "Multiply every term in the first bracket by every term in the second: x·x + x·2 + 4·x + 4·2 = x² + 6x + 8.",
+      "difficulty": 4,
+      "misconceptions": {
+        "x² + 8": "alg.distribution_partial"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "(x + 4)(x + 2)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4916.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_polynomials_remainder_001",
+      "subject": "math",
+      "topic": "polynomials",
+      "concept": "polynomials.remainder",
+      "question": "What is the remainder when x² + 9x + 3 is divided by (x - 5)?",
+      "options": [
+        "78",
+        "12",
+        "5",
+        "73"
+      ],
+      "correct_answer": "73",
+      "explanation": "The remainder theorem says the remainder of dividing P(x) by (x - 5) is P(5). So P(5) = 5² + 9(5) + 3 = 25 + 45 + 3 = 73. No long division is needed.",
+      "difficulty": 5,
+      "misconceptions": {},
+      "verify": {
+        "kind": "numeric",
+        "expression": "(5)**2 + 9*(5) + 3"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6008.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_polynomials_remainder_002",
+      "subject": "math",
+      "topic": "polynomials",
+      "concept": "polynomials.remainder",
+      "question": "What is the remainder when x² + 4x + 4 is divided by (x - 3)?",
+      "options": [
+        "3",
+        "28",
+        "25",
+        "8"
+      ],
+      "correct_answer": "25",
+      "explanation": "The remainder theorem says the remainder of dividing P(x) by (x - 3) is P(3). So P(3) = 3² + 4(3) + 4 = 9 + 12 + 4 = 25. No long division is needed.",
+      "difficulty": 5,
+      "misconceptions": {},
+      "verify": {
+        "kind": "numeric",
+        "expression": "(3)**2 + 4*(3) + 4"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6008.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_polynomials_remainder_003",
+      "subject": "math",
+      "topic": "polynomials",
+      "concept": "polynomials.remainder",
+      "question": "What is the remainder when x² + 1x + 11 is divided by (x - 2)?",
+      "options": [
+        "12",
+        "19",
+        "17",
+        "2"
+      ],
+      "correct_answer": "17",
+      "explanation": "The remainder theorem says the remainder of dividing P(x) by (x - 2) is P(2). So P(2) = 2² + 1(2) + 11 = 4 + 2 + 11 = 17. No long division is needed.",
+      "difficulty": 5,
+      "misconceptions": {},
+      "verify": {
+        "kind": "numeric",
+        "expression": "(2)**2 + 1*(2) + 11"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6036.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_polynomials_remainder_004",
+      "subject": "math",
+      "topic": "polynomials",
+      "concept": "polynomials.remainder",
+      "question": "What is the remainder when x² + 5x + 2 is divided by (x - 4)?",
+      "options": [
+        "4",
+        "38",
+        "42",
+        "7"
+      ],
+      "correct_answer": "38",
+      "explanation": "The remainder theorem says the remainder of dividing P(x) by (x - 4) is P(4). So P(4) = 4² + 5(4) + 2 = 16 + 20 + 2 = 38. No long division is needed.",
+      "difficulty": 5,
+      "misconceptions": {},
+      "verify": {
+        "kind": "numeric",
+        "expression": "(4)**2 + 5*(4) + 2"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6008.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_polynomials_remainder_005",
+      "subject": "math",
+      "topic": "polynomials",
+      "concept": "polynomials.remainder",
+      "question": "What is the remainder when x² + 2x + 5 is divided by (x - 3)?",
+      "options": [
+        "20",
+        "23",
+        "3",
+        "7"
+      ],
+      "correct_answer": "20",
+      "explanation": "The remainder theorem says the remainder of dividing P(x) by (x - 3) is P(3). So P(3) = 3² + 2(3) + 5 = 9 + 6 + 5 = 20. No long division is needed.",
+      "difficulty": 5,
+      "misconceptions": {},
+      "verify": {
+        "kind": "numeric",
+        "expression": "(3)**2 + 2*(3) + 5"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6008.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_polynomials_remainder_006",
+      "subject": "math",
+      "topic": "polynomials",
+      "concept": "polynomials.remainder",
+      "question": "What is the remainder when x² + 6x + 12 is divided by (x - 2)?",
+      "options": [
+        "28",
+        "2",
+        "30",
+        "18"
+      ],
+      "correct_answer": "28",
+      "explanation": "The remainder theorem says the remainder of dividing P(x) by (x - 2) is P(2). So P(2) = 2² + 6(2) + 12 = 4 + 12 + 12 = 28. No long division is needed.",
+      "difficulty": 5,
+      "misconceptions": {},
+      "verify": {
+        "kind": "numeric",
+        "expression": "(2)**2 + 6*(2) + 12"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6036.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_polynomials_remainder_007",
+      "subject": "math",
+      "topic": "polynomials",
+      "concept": "polynomials.remainder",
+      "question": "What is the remainder when x² + 2x + 7 is divided by (x - 2)?",
+      "options": [
+        "15",
+        "17",
+        "9",
+        "2"
+      ],
+      "correct_answer": "15",
+      "explanation": "The remainder theorem says the remainder of dividing P(x) by (x - 2) is P(2). So P(2) = 2² + 2(2) + 7 = 4 + 4 + 7 = 15. No long division is needed.",
+      "difficulty": 5,
+      "misconceptions": {},
+      "verify": {
+        "kind": "numeric",
+        "expression": "(2)**2 + 2*(2) + 7"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6008.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_polynomials_remainder_008",
+      "subject": "math",
+      "topic": "polynomials",
+      "concept": "polynomials.remainder",
+      "question": "What is the remainder when x² + 8x + 10 is divided by (x - 2)?",
+      "options": [
+        "30",
+        "32",
+        "18",
+        "2"
+      ],
+      "correct_answer": "30",
+      "explanation": "The remainder theorem says the remainder of dividing P(x) by (x - 2) is P(2). So P(2) = 2² + 8(2) + 10 = 4 + 16 + 10 = 30. No long division is needed.",
+      "difficulty": 5,
+      "misconceptions": {},
+      "verify": {
+        "kind": "numeric",
+        "expression": "(2)**2 + 8*(2) + 10"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6036.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_polynomials_remainder_009",
+      "subject": "math",
+      "topic": "polynomials",
+      "concept": "polynomials.remainder",
+      "question": "What is the remainder when x² + 8x + 2 is divided by (x - 5)?",
+      "options": [
+        "72",
+        "67",
+        "10",
+        "5"
+      ],
+      "correct_answer": "67",
+      "explanation": "The remainder theorem says the remainder of dividing P(x) by (x - 5) is P(5). So P(5) = 5² + 8(5) + 2 = 25 + 40 + 2 = 67. No long division is needed.",
+      "difficulty": 5,
+      "misconceptions": {},
+      "verify": {
+        "kind": "numeric",
+        "expression": "(5)**2 + 8*(5) + 2"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6008.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_polynomials_remainder_010",
+      "subject": "math",
+      "topic": "polynomials",
+      "concept": "polynomials.remainder",
+      "question": "What is the remainder when x² + 5x + 6 is divided by (x - 4)?",
+      "options": [
+        "4",
+        "11",
+        "46",
+        "42"
+      ],
+      "correct_answer": "42",
+      "explanation": "The remainder theorem says the remainder of dividing P(x) by (x - 4) is P(4). So P(4) = 4² + 5(4) + 6 = 16 + 20 + 6 = 42. No long division is needed.",
+      "difficulty": 5,
+      "misconceptions": {},
+      "verify": {
+        "kind": "numeric",
+        "expression": "(4)**2 + 5*(4) + 6"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6008.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_polynomials_remainder_011",
+      "subject": "math",
+      "topic": "polynomials",
+      "concept": "polynomials.remainder",
+      "question": "What is the remainder when x² + 3x + 10 is divided by (x - 2)?",
+      "options": [
+        "2",
+        "13",
+        "20",
+        "22"
+      ],
+      "correct_answer": "20",
+      "explanation": "The remainder theorem says the remainder of dividing P(x) by (x - 2) is P(2). So P(2) = 2² + 3(2) + 10 = 4 + 6 + 10 = 20. No long division is needed.",
+      "difficulty": 5,
+      "misconceptions": {},
+      "verify": {
+        "kind": "numeric",
+        "expression": "(2)**2 + 3*(2) + 10"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6036.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_polynomials_remainder_012",
+      "subject": "math",
+      "topic": "polynomials",
+      "concept": "polynomials.remainder",
+      "question": "What is the remainder when x² + 7x + 4 is divided by (x - 5)?",
+      "options": [
+        "64",
+        "69",
+        "11",
+        "5"
+      ],
+      "correct_answer": "64",
+      "explanation": "The remainder theorem says the remainder of dividing P(x) by (x - 5) is P(5). So P(5) = 5² + 7(5) + 4 = 25 + 35 + 4 = 64. No long division is needed.",
+      "difficulty": 5,
+      "misconceptions": {},
+      "verify": {
+        "kind": "numeric",
+        "expression": "(5)**2 + 7*(5) + 4"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6008.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_polynomials_remainder_013",
+      "subject": "math",
+      "topic": "polynomials",
+      "concept": "polynomials.remainder",
+      "question": "What is the remainder when x² + 2x + 8 is divided by (x - 5)?",
+      "options": [
+        "5",
+        "43",
+        "10",
+        "48"
+      ],
+      "correct_answer": "43",
+      "explanation": "The remainder theorem says the remainder of dividing P(x) by (x - 5) is P(5). So P(5) = 5² + 2(5) + 8 = 25 + 10 + 8 = 43. No long division is needed.",
+      "difficulty": 5,
+      "misconceptions": {},
+      "verify": {
+        "kind": "numeric",
+        "expression": "(5)**2 + 2*(5) + 8"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6008.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_polynomials_remainder_014",
+      "subject": "math",
+      "topic": "polynomials",
+      "concept": "polynomials.remainder",
+      "question": "What is the remainder when x² + 9x + 10 is divided by (x - 5)?",
+      "options": [
+        "5",
+        "80",
+        "85",
+        "19"
+      ],
+      "correct_answer": "80",
+      "explanation": "The remainder theorem says the remainder of dividing P(x) by (x - 5) is P(5). So P(5) = 5² + 9(5) + 10 = 25 + 45 + 10 = 80. No long division is needed.",
+      "difficulty": 5,
+      "misconceptions": {},
+      "verify": {
+        "kind": "numeric",
+        "expression": "(5)**2 + 9*(5) + 10"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6036.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_polynomials_remainder_015",
+      "subject": "math",
+      "topic": "polynomials",
+      "concept": "polynomials.remainder",
+      "question": "What is the remainder when x² + 2x + 3 is divided by (x - 2)?",
+      "options": [
+        "13",
+        "2",
+        "5",
+        "11"
+      ],
+      "correct_answer": "11",
+      "explanation": "The remainder theorem says the remainder of dividing P(x) by (x - 2) is P(2). So P(2) = 2² + 2(2) + 3 = 4 + 4 + 3 = 11. No long division is needed.",
+      "difficulty": 5,
+      "misconceptions": {},
+      "verify": {
+        "kind": "numeric",
+        "expression": "(2)**2 + 2*(2) + 3"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6008.0,
+      "estimated_difficulty": 4
+    }
+  ]
+}

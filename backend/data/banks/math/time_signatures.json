@@ -1,0 +1,148 @@
+{
+  "subject": "math",
+  "topic": "time_signatures",
+  "generated_by": "kaiserquest-content-pipeline",
+  "version": 1,
+  "concepts": [
+    "time.anacrusis"
+  ],
+  "counts": {
+    "total": 6,
+    "curated": 0,
+    "generated": 6
+  },
+  "questions": [
+    {
+      "id": "gen_time_anacrusis_001",
+      "subject": "math",
+      "topic": "time_signatures",
+      "concept": "time.anacrusis",
+      "question": "In 4/4 time a melody begins with one quarter note before the first full bar. How many beats does that opening bar contain?",
+      "options": [
+        "Four beats",
+        "No beats",
+        "Two beats",
+        "One beat"
+      ],
+      "correct_answer": "One beat",
+      "explanation": "The first bar holds only what is played before the first full measure: one beat.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": null,
+      "source": "template",
+      "review_status": "authored",
+      "expected_time_ms": 7716.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_time_anacrusis_002",
+      "subject": "math",
+      "topic": "time_signatures",
+      "concept": "time.anacrusis",
+      "question": "Where is the missing count of a pickup bar usually found?",
+      "options": [
+        "In the key signature",
+        "It is never played",
+        "In the second bar",
+        "In the last bar of the piece"
+      ],
+      "correct_answer": "In the last bar of the piece",
+      "explanation": "The opening and closing bars together make one complete measure.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": null,
+      "source": "template",
+      "review_status": "authored",
+      "expected_time_ms": 5896.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_time_anacrusis_003",
+      "subject": "math",
+      "topic": "time_signatures",
+      "concept": "time.anacrusis",
+      "question": "A piece begins with an incomplete measure before the first full bar. What is this called?",
+      "options": [
+        "A fermata",
+        "A coda",
+        "An anacrusis (a pickup)",
+        "A double bar"
+      ],
+      "correct_answer": "An anacrusis (a pickup)",
+      "explanation": "An incomplete opening measure is an anacrusis, also called a pickup bar.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": null,
+      "source": "template",
+      "review_status": "authored",
+      "expected_time_ms": 6792.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_time_anacrusis_004",
+      "subject": "math",
+      "topic": "time_signatures",
+      "concept": "time.anacrusis",
+      "question": "Another name for an anacrusis is ___.",
+      "options": [
+        "a rest",
+        "a repeat",
+        "a pickup",
+        "a tie"
+      ],
+      "correct_answer": "a pickup",
+      "explanation": "'Pickup' and 'anacrusis' mean the same thing.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": null,
+      "source": "template",
+      "review_status": "authored",
+      "expected_time_ms": 5336.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_time_anacrusis_005",
+      "subject": "math",
+      "topic": "time_signatures",
+      "concept": "time.anacrusis",
+      "question": "Why do pickups matter when counting a piece?",
+      "options": [
+        "Because they add an extra beat to every bar.",
+        "Because the first bar is shorter, so the strong beats fall differently than you would expect.",
+        "Because they are always played slowly.",
+        "Because they change the key signature."
+      ],
+      "correct_answer": "Because the first bar is shorter, so the strong beats fall differently than you would expect.",
+      "explanation": "Counting that ignores a pickup puts every accent in the wrong place.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": null,
+      "source": "template",
+      "review_status": "authored",
+      "expected_time_ms": 5532.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_time_anacrusis_006",
+      "subject": "math",
+      "topic": "time_signatures",
+      "concept": "time.anacrusis",
+      "question": "In 3/4 time a melody starts on beat three. How many beats are missing from that first bar?",
+      "options": [
+        "Three",
+        "Two",
+        "One",
+        "None"
+      ],
+      "correct_answer": "Two",
+      "explanation": "The bar has three beats and only the third is played, so two are missing.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": null,
+      "source": "template",
+      "review_status": "authored",
+      "expected_time_ms": 6820.0,
+      "estimated_difficulty": 4
+    }
+  ]
+}

@@ -1,0 +1,1608 @@
+{
+  "subject": "math",
+  "topic": "expressions",
+  "generated_by": "kaiserquest-content-pipeline",
+  "version": 1,
+  "concepts": [
+    "expressions.distribute",
+    "expressions.factor_common",
+    "expressions.like_terms",
+    "expressions.negatives"
+  ],
+  "counts": {
+    "total": 60,
+    "curated": 0,
+    "generated": 60
+  },
+  "questions": [
+    {
+      "id": "gen_expressions_distribute_001",
+      "subject": "math",
+      "topic": "expressions",
+      "concept": "expressions.distribute",
+      "question": "Expand 7(x + 2).",
+      "options": [
+        "7x + 2",
+        "7x - 14",
+        "14x + 14",
+        "7x + 14"
+      ],
+      "correct_answer": "7x + 14",
+      "explanation": "The 7 outside the bracket multiplies every term inside: 7·x + 7·2 = 7x + 14.",
+      "difficulty": 3,
+      "misconceptions": {
+        "7x + 2": "alg.distribution_partial"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "7(x + 2)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4748.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_expressions_distribute_002",
+      "subject": "math",
+      "topic": "expressions",
+      "concept": "expressions.distribute",
+      "question": "Expand 3(x + 8).",
+      "options": [
+        "3x + 8",
+        "24x + 24",
+        "3x - 24",
+        "3x + 24"
+      ],
+      "correct_answer": "3x + 24",
+      "explanation": "The 3 outside the bracket multiplies every term inside: 3·x + 3·8 = 3x + 24.",
+      "difficulty": 3,
+      "misconceptions": {
+        "3x + 8": "alg.distribution_partial"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "3(x + 8)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4748.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_expressions_distribute_003",
+      "subject": "math",
+      "topic": "expressions",
+      "concept": "expressions.distribute",
+      "question": "Expand 6(x + 2).",
+      "options": [
+        "6x - 12",
+        "12x + 12",
+        "6x + 12",
+        "6x + 2"
+      ],
+      "correct_answer": "6x + 12",
+      "explanation": "The 6 outside the bracket multiplies every term inside: 6·x + 6·2 = 6x + 12.",
+      "difficulty": 3,
+      "misconceptions": {
+        "6x + 2": "alg.distribution_partial"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "6(x + 2)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4748.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_expressions_distribute_004",
+      "subject": "math",
+      "topic": "expressions",
+      "concept": "expressions.distribute",
+      "question": "Expand 4(x + 5).",
+      "options": [
+        "20x + 20",
+        "4x + 5",
+        "4x + 20",
+        "4x - 20"
+      ],
+      "correct_answer": "4x + 20",
+      "explanation": "The 4 outside the bracket multiplies every term inside: 4·x + 4·5 = 4x + 20.",
+      "difficulty": 3,
+      "misconceptions": {
+        "4x + 5": "alg.distribution_partial"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "4(x + 5)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4748.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_expressions_distribute_005",
+      "subject": "math",
+      "topic": "expressions",
+      "concept": "expressions.distribute",
+      "question": "Expand 5(x + 4).",
+      "options": [
+        "5x + 20",
+        "5x + 4",
+        "5x - 20",
+        "20x + 20"
+      ],
+      "correct_answer": "5x + 20",
+      "explanation": "The 5 outside the bracket multiplies every term inside: 5·x + 5·4 = 5x + 20.",
+      "difficulty": 3,
+      "misconceptions": {
+        "5x + 4": "alg.distribution_partial"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "5(x + 4)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4748.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_expressions_distribute_006",
+      "subject": "math",
+      "topic": "expressions",
+      "concept": "expressions.distribute",
+      "question": "Expand 5(x + 3).",
+      "options": [
+        "5x + 15",
+        "15x + 15",
+        "5x - 15",
+        "5x + 3"
+      ],
+      "correct_answer": "5x + 15",
+      "explanation": "The 5 outside the bracket multiplies every term inside: 5·x + 5·3 = 5x + 15.",
+      "difficulty": 3,
+      "misconceptions": {
+        "5x + 3": "alg.distribution_partial"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "5(x + 3)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4748.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_expressions_distribute_007",
+      "subject": "math",
+      "topic": "expressions",
+      "concept": "expressions.distribute",
+      "question": "Expand 2(x + 6).",
+      "options": [
+        "12x + 12",
+        "2x + 6",
+        "2x + 12",
+        "2x - 12"
+      ],
+      "correct_answer": "2x + 12",
+      "explanation": "The 2 outside the bracket multiplies every term inside: 2·x + 2·6 = 2x + 12.",
+      "difficulty": 3,
+      "misconceptions": {
+        "2x + 6": "alg.distribution_partial"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "2(x + 6)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4748.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_expressions_distribute_008",
+      "subject": "math",
+      "topic": "expressions",
+      "concept": "expressions.distribute",
+      "question": "Expand 6(x + 6).",
+      "options": [
+        "6x - 36",
+        "6x + 6",
+        "6x + 36",
+        "36x + 36"
+      ],
+      "correct_answer": "6x + 36",
+      "explanation": "The 6 outside the bracket multiplies every term inside: 6·x + 6·6 = 6x + 36.",
+      "difficulty": 3,
+      "misconceptions": {
+        "6x + 6": "alg.distribution_partial"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "6(x + 6)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4748.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_expressions_distribute_009",
+      "subject": "math",
+      "topic": "expressions",
+      "concept": "expressions.distribute",
+      "question": "Expand 4(x + 4).",
+      "options": [
+        "16x + 16",
+        "4x + 4",
+        "4x - 16",
+        "4x + 16"
+      ],
+      "correct_answer": "4x + 16",
+      "explanation": "The 4 outside the bracket multiplies every term inside: 4·x + 4·4 = 4x + 16.",
+      "difficulty": 3,
+      "misconceptions": {
+        "4x + 4": "alg.distribution_partial"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "4(x + 4)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4748.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_expressions_distribute_010",
+      "subject": "math",
+      "topic": "expressions",
+      "concept": "expressions.distribute",
+      "question": "Expand 2(x + 8).",
+      "options": [
+        "2x + 8",
+        "2x + 16",
+        "2x - 16",
+        "16x + 16"
+      ],
+      "correct_answer": "2x + 16",
+      "explanation": "The 2 outside the bracket multiplies every term inside: 2·x + 2·8 = 2x + 16.",
+      "difficulty": 3,
+      "misconceptions": {
+        "2x + 8": "alg.distribution_partial"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "2(x + 8)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4748.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_expressions_distribute_011",
+      "subject": "math",
+      "topic": "expressions",
+      "concept": "expressions.distribute",
+      "question": "Expand 5(x + 2).",
+      "options": [
+        "5x + 2",
+        "5x - 10",
+        "5x + 10",
+        "10x + 10"
+      ],
+      "correct_answer": "5x + 10",
+      "explanation": "The 5 outside the bracket multiplies every term inside: 5·x + 5·2 = 5x + 10.",
+      "difficulty": 3,
+      "misconceptions": {
+        "5x + 2": "alg.distribution_partial"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "5(x + 2)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4748.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_expressions_distribute_012",
+      "subject": "math",
+      "topic": "expressions",
+      "concept": "expressions.distribute",
+      "question": "Expand 3(x + 9).",
+      "options": [
+        "27x + 27",
+        "3x + 9",
+        "3x - 27",
+        "3x + 27"
+      ],
+      "correct_answer": "3x + 27",
+      "explanation": "The 3 outside the bracket multiplies every term inside: 3·x + 3·9 = 3x + 27.",
+      "difficulty": 3,
+      "misconceptions": {
+        "3x + 9": "alg.distribution_partial"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "3(x + 9)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4748.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_expressions_distribute_013",
+      "subject": "math",
+      "topic": "expressions",
+      "concept": "expressions.distribute",
+      "question": "Expand 4(x + 6).",
+      "options": [
+        "24x + 24",
+        "4x - 24",
+        "4x + 24",
+        "4x + 6"
+      ],
+      "correct_answer": "4x + 24",
+      "explanation": "The 4 outside the bracket multiplies every term inside: 4·x + 4·6 = 4x + 24.",
+      "difficulty": 3,
+      "misconceptions": {
+        "4x + 6": "alg.distribution_partial"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "4(x + 6)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4748.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_expressions_distribute_014",
+      "subject": "math",
+      "topic": "expressions",
+      "concept": "expressions.distribute",
+      "question": "Expand 6(x + 3).",
+      "options": [
+        "6x + 3",
+        "6x + 18",
+        "6x - 18",
+        "18x + 18"
+      ],
+      "correct_answer": "6x + 18",
+      "explanation": "The 6 outside the bracket multiplies every term inside: 6·x + 6·3 = 6x + 18.",
+      "difficulty": 3,
+      "misconceptions": {
+        "6x + 3": "alg.distribution_partial"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "6(x + 3)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4748.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_expressions_distribute_015",
+      "subject": "math",
+      "topic": "expressions",
+      "concept": "expressions.distribute",
+      "question": "Expand 4(x + 7).",
+      "options": [
+        "28x + 28",
+        "4x + 28",
+        "4x - 28",
+        "4x + 7"
+      ],
+      "correct_answer": "4x + 28",
+      "explanation": "The 4 outside the bracket multiplies every term inside: 4·x + 4·7 = 4x + 28.",
+      "difficulty": 3,
+      "misconceptions": {
+        "4x + 7": "alg.distribution_partial"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "4(x + 7)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4748.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_expressions_factor_common_001",
+      "subject": "math",
+      "topic": "expressions",
+      "concept": "expressions.factor_common",
+      "question": "Factorise 7x + 35.",
+      "options": [
+        "35(x + 1)",
+        "7x + 5",
+        "7(x - 5)",
+        "7(x + 5)"
+      ],
+      "correct_answer": "7(x + 5)",
+      "explanation": "Both terms share a factor of 7: 7x + 35 = 7·x + 7·5 = 7(x + 5).",
+      "difficulty": 3,
+      "misconceptions": {},
+      "verify": {
+        "kind": "equivalent",
+        "expression": "7*x + 35"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4804.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_expressions_factor_common_002",
+      "subject": "math",
+      "topic": "expressions",
+      "concept": "expressions.factor_common",
+      "question": "Factorise 9x + 81.",
+      "options": [
+        "81(x + 1)",
+        "9(x - 9)",
+        "9x + 9",
+        "9(x + 9)"
+      ],
+      "correct_answer": "9(x + 9)",
+      "explanation": "Both terms share a factor of 9: 9x + 81 = 9·x + 9·9 = 9(x + 9).",
+      "difficulty": 3,
+      "misconceptions": {},
+      "verify": {
+        "kind": "equivalent",
+        "expression": "9*x + 81"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4804.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_expressions_factor_common_003",
+      "subject": "math",
+      "topic": "expressions",
+      "concept": "expressions.factor_common",
+      "question": "Factorise 4x + 36.",
+      "options": [
+        "4x + 9",
+        "36(x + 1)",
+        "4(x + 9)",
+        "4(x - 9)"
+      ],
+      "correct_answer": "4(x + 9)",
+      "explanation": "Both terms share a factor of 4: 4x + 36 = 4·x + 4·9 = 4(x + 9).",
+      "difficulty": 3,
+      "misconceptions": {},
+      "verify": {
+        "kind": "equivalent",
+        "expression": "4*x + 36"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4804.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_expressions_factor_common_004",
+      "subject": "math",
+      "topic": "expressions",
+      "concept": "expressions.factor_common",
+      "question": "Factorise 4x + 12.",
+      "options": [
+        "4(x - 3)",
+        "4x + 3",
+        "4(x + 3)",
+        "12(x + 1)"
+      ],
+      "correct_answer": "4(x + 3)",
+      "explanation": "Both terms share a factor of 4: 4x + 12 = 4·x + 4·3 = 4(x + 3).",
+      "difficulty": 3,
+      "misconceptions": {},
+      "verify": {
+        "kind": "equivalent",
+        "expression": "4*x + 12"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4804.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_expressions_factor_common_005",
+      "subject": "math",
+      "topic": "expressions",
+      "concept": "expressions.factor_common",
+      "question": "Factorise 5x + 15.",
+      "options": [
+        "5x + 3",
+        "15(x + 1)",
+        "5(x + 3)",
+        "5(x - 3)"
+      ],
+      "correct_answer": "5(x + 3)",
+      "explanation": "Both terms share a factor of 5: 5x + 15 = 5·x + 5·3 = 5(x + 3).",
+      "difficulty": 3,
+      "misconceptions": {},
+      "verify": {
+        "kind": "equivalent",
+        "expression": "5*x + 15"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4804.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_expressions_factor_common_006",
+      "subject": "math",
+      "topic": "expressions",
+      "concept": "expressions.factor_common",
+      "question": "Factorise 6x + 36.",
+      "options": [
+        "36(x + 1)",
+        "6(x + 6)",
+        "6x + 6",
+        "6(x - 6)"
+      ],
+      "correct_answer": "6(x + 6)",
+      "explanation": "Both terms share a factor of 6: 6x + 36 = 6·x + 6·6 = 6(x + 6).",
+      "difficulty": 3,
+      "misconceptions": {},
+      "verify": {
+        "kind": "equivalent",
+        "expression": "6*x + 36"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4804.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_expressions_factor_common_007",
+      "subject": "math",
+      "topic": "expressions",
+      "concept": "expressions.factor_common",
+      "question": "Factorise 3x + 9.",
+      "options": [
+        "3(x - 3)",
+        "3(x + 3)",
+        "3x + 3",
+        "9(x + 1)"
+      ],
+      "correct_answer": "3(x + 3)",
+      "explanation": "Both terms share a factor of 3: 3x + 9 = 3·x + 3·3 = 3(x + 3).",
+      "difficulty": 3,
+      "misconceptions": {},
+      "verify": {
+        "kind": "equivalent",
+        "expression": "3*x + 9"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4776.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_expressions_factor_common_008",
+      "subject": "math",
+      "topic": "expressions",
+      "concept": "expressions.factor_common",
+      "question": "Factorise 6x + 42.",
+      "options": [
+        "42(x + 1)",
+        "6(x - 7)",
+        "6x + 7",
+        "6(x + 7)"
+      ],
+      "correct_answer": "6(x + 7)",
+      "explanation": "Both terms share a factor of 6: 6x + 42 = 6·x + 6·7 = 6(x + 7).",
+      "difficulty": 3,
+      "misconceptions": {},
+      "verify": {
+        "kind": "equivalent",
+        "expression": "6*x + 42"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4804.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_expressions_factor_common_009",
+      "subject": "math",
+      "topic": "expressions",
+      "concept": "expressions.factor_common",
+      "question": "Factorise 7x + 49.",
+      "options": [
+        "7(x - 7)",
+        "7(x + 7)",
+        "49(x + 1)",
+        "7x + 7"
+      ],
+      "correct_answer": "7(x + 7)",
+      "explanation": "Both terms share a factor of 7: 7x + 49 = 7·x + 7·7 = 7(x + 7).",
+      "difficulty": 3,
+      "misconceptions": {},
+      "verify": {
+        "kind": "equivalent",
+        "expression": "7*x + 49"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4804.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_expressions_factor_common_010",
+      "subject": "math",
+      "topic": "expressions",
+      "concept": "expressions.factor_common",
+      "question": "Factorise 7x + 21.",
+      "options": [
+        "7x + 3",
+        "7(x - 3)",
+        "7(x + 3)",
+        "21(x + 1)"
+      ],
+      "correct_answer": "7(x + 3)",
+      "explanation": "Both terms share a factor of 7: 7x + 21 = 7·x + 7·3 = 7(x + 3).",
+      "difficulty": 3,
+      "misconceptions": {},
+      "verify": {
+        "kind": "equivalent",
+        "expression": "7*x + 21"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4804.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_expressions_factor_common_011",
+      "subject": "math",
+      "topic": "expressions",
+      "concept": "expressions.factor_common",
+      "question": "Factorise 8x + 32.",
+      "options": [
+        "32(x + 1)",
+        "8(x + 4)",
+        "8(x - 4)",
+        "8x + 4"
+      ],
+      "correct_answer": "8(x + 4)",
+      "explanation": "Both terms share a factor of 8: 8x + 32 = 8·x + 8·4 = 8(x + 4).",
+      "difficulty": 3,
+      "misconceptions": {},
+      "verify": {
+        "kind": "equivalent",
+        "expression": "8*x + 32"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4804.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_expressions_factor_common_012",
+      "subject": "math",
+      "topic": "expressions",
+      "concept": "expressions.factor_common",
+      "question": "Factorise 2x + 10.",
+      "options": [
+        "2(x + 5)",
+        "2x + 5",
+        "2(x - 5)",
+        "10(x + 1)"
+      ],
+      "correct_answer": "2(x + 5)",
+      "explanation": "Both terms share a factor of 2: 2x + 10 = 2·x + 2·5 = 2(x + 5).",
+      "difficulty": 3,
+      "misconceptions": {},
+      "verify": {
+        "kind": "equivalent",
+        "expression": "2*x + 10"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4804.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_expressions_factor_common_013",
+      "subject": "math",
+      "topic": "expressions",
+      "concept": "expressions.factor_common",
+      "question": "Factorise 2x + 8.",
+      "options": [
+        "8(x + 1)",
+        "2x + 4",
+        "2(x - 4)",
+        "2(x + 4)"
+      ],
+      "correct_answer": "2(x + 4)",
+      "explanation": "Both terms share a factor of 2: 2x + 8 = 2·x + 2·4 = 2(x + 4).",
+      "difficulty": 3,
+      "misconceptions": {},
+      "verify": {
+        "kind": "equivalent",
+        "expression": "2*x + 8"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4776.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_expressions_factor_common_014",
+      "subject": "math",
+      "topic": "expressions",
+      "concept": "expressions.factor_common",
+      "question": "Factorise 7x + 14.",
+      "options": [
+        "14(x + 1)",
+        "7x + 2",
+        "7(x + 2)",
+        "7(x - 2)"
+      ],
+      "correct_answer": "7(x + 2)",
+      "explanation": "Both terms share a factor of 7: 7x + 14 = 7·x + 7·2 = 7(x + 2).",
+      "difficulty": 3,
+      "misconceptions": {},
+      "verify": {
+        "kind": "equivalent",
+        "expression": "7*x + 14"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4804.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_expressions_factor_common_015",
+      "subject": "math",
+      "topic": "expressions",
+      "concept": "expressions.factor_common",
+      "question": "Factorise 3x + 18.",
+      "options": [
+        "18(x + 1)",
+        "3(x + 6)",
+        "3(x - 6)",
+        "3x + 6"
+      ],
+      "correct_answer": "3(x + 6)",
+      "explanation": "Both terms share a factor of 3: 3x + 18 = 3·x + 3·6 = 3(x + 6).",
+      "difficulty": 3,
+      "misconceptions": {},
+      "verify": {
+        "kind": "equivalent",
+        "expression": "3*x + 18"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4804.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_expressions_like_terms_001",
+      "subject": "math",
+      "topic": "expressions",
+      "concept": "expressions.like_terms",
+      "question": "Simplify 2x + 2x + 7.",
+      "options": [
+        "11x",
+        "4x + 7",
+        "4x - 7"
+      ],
+      "correct_answer": "4x + 7",
+      "explanation": "x-terms collect together: 2 + 2 = 4, giving 4x. The constant 7 is a different kind of term, so it stays separate: 4x + 7.",
+      "difficulty": 2,
+      "misconceptions": {
+        "11x": "alg.like_terms_over_combined"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "2*x + 2*x + 7"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4438.0,
+      "estimated_difficulty": 1
+    },
+    {
+      "id": "gen_expressions_like_terms_002",
+      "subject": "math",
+      "topic": "expressions",
+      "concept": "expressions.like_terms",
+      "question": "Simplify 7x + 2x + 5.",
+      "options": [
+        "14x + 5",
+        "9x + 5",
+        "14x",
+        "9x - 5"
+      ],
+      "correct_answer": "9x + 5",
+      "explanation": "x-terms collect together: 7 + 2 = 9, giving 9x. The constant 5 is a different kind of term, so it stays separate: 9x + 5.",
+      "difficulty": 2,
+      "misconceptions": {
+        "14x": "alg.like_terms_over_combined"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "7*x + 2*x + 5"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4888.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_expressions_like_terms_003",
+      "subject": "math",
+      "topic": "expressions",
+      "concept": "expressions.like_terms",
+      "question": "Simplify 7x + 7x + 5.",
+      "options": [
+        "14x - 5",
+        "14x + 5",
+        "19x",
+        "49x + 5"
+      ],
+      "correct_answer": "14x + 5",
+      "explanation": "x-terms collect together: 7 + 7 = 14, giving 14x. The constant 5 is a different kind of term, so it stays separate: 14x + 5.",
+      "difficulty": 2,
+      "misconceptions": {
+        "19x": "alg.like_terms_over_combined"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "7*x + 7*x + 5"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4888.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_expressions_like_terms_004",
+      "subject": "math",
+      "topic": "expressions",
+      "concept": "expressions.like_terms",
+      "question": "Simplify 6x + 4x + 7.",
+      "options": [
+        "10x - 7",
+        "24x + 7",
+        "10x + 7",
+        "17x"
+      ],
+      "correct_answer": "10x + 7",
+      "explanation": "x-terms collect together: 6 + 4 = 10, giving 10x. The constant 7 is a different kind of term, so it stays separate: 10x + 7.",
+      "difficulty": 2,
+      "misconceptions": {
+        "17x": "alg.like_terms_over_combined"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "6*x + 4*x + 7"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4888.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_expressions_like_terms_005",
+      "subject": "math",
+      "topic": "expressions",
+      "concept": "expressions.like_terms",
+      "question": "Simplify 4x + 3x + 1.",
+      "options": [
+        "12x + 1",
+        "7x + 1",
+        "7x - 1",
+        "8x"
+      ],
+      "correct_answer": "7x + 1",
+      "explanation": "x-terms collect together: 4 + 3 = 7, giving 7x. The constant 1 is a different kind of term, so it stays separate: 7x + 1.",
+      "difficulty": 2,
+      "misconceptions": {
+        "8x": "alg.like_terms_over_combined"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "4*x + 3*x + 1"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4888.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_expressions_like_terms_006",
+      "subject": "math",
+      "topic": "expressions",
+      "concept": "expressions.like_terms",
+      "question": "Simplify 3x + 7x + 2.",
+      "options": [
+        "21x + 2",
+        "10x - 2",
+        "12x",
+        "10x + 2"
+      ],
+      "correct_answer": "10x + 2",
+      "explanation": "x-terms collect together: 3 + 7 = 10, giving 10x. The constant 2 is a different kind of term, so it stays separate: 10x + 2.",
+      "difficulty": 2,
+      "misconceptions": {
+        "12x": "alg.like_terms_over_combined"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "3*x + 7*x + 2"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4888.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_expressions_like_terms_007",
+      "subject": "math",
+      "topic": "expressions",
+      "concept": "expressions.like_terms",
+      "question": "Simplify 3x + 4x + 2.",
+      "options": [
+        "7x + 2",
+        "9x",
+        "7x - 2",
+        "12x + 2"
+      ],
+      "correct_answer": "7x + 2",
+      "explanation": "x-terms collect together: 3 + 4 = 7, giving 7x. The constant 2 is a different kind of term, so it stays separate: 7x + 2.",
+      "difficulty": 2,
+      "misconceptions": {
+        "9x": "alg.like_terms_over_combined"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "3*x + 4*x + 2"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4888.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_expressions_like_terms_008",
+      "subject": "math",
+      "topic": "expressions",
+      "concept": "expressions.like_terms",
+      "question": "Simplify 3x + 6x + 10.",
+      "options": [
+        "9x + 10",
+        "18x + 10",
+        "9x - 10",
+        "19x"
+      ],
+      "correct_answer": "9x + 10",
+      "explanation": "x-terms collect together: 3 + 6 = 9, giving 9x. The constant 10 is a different kind of term, so it stays separate: 9x + 10.",
+      "difficulty": 2,
+      "misconceptions": {
+        "19x": "alg.like_terms_over_combined"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "3*x + 6*x + 10"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4916.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_expressions_like_terms_009",
+      "subject": "math",
+      "topic": "expressions",
+      "concept": "expressions.like_terms",
+      "question": "Simplify 2x + 8x + 7.",
+      "options": [
+        "10x + 7",
+        "10x - 7",
+        "17x",
+        "16x + 7"
+      ],
+      "correct_answer": "10x + 7",
+      "explanation": "x-terms collect together: 2 + 8 = 10, giving 10x. The constant 7 is a different kind of term, so it stays separate: 10x + 7.",
+      "difficulty": 2,
+      "misconceptions": {
+        "17x": "alg.like_terms_over_combined"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "2*x + 8*x + 7"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4888.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_expressions_like_terms_010",
+      "subject": "math",
+      "topic": "expressions",
+      "concept": "expressions.like_terms",
+      "question": "Simplify 4x + 3x + 7.",
+      "options": [
+        "7x - 7",
+        "14x",
+        "12x + 7",
+        "7x + 7"
+      ],
+      "correct_answer": "7x + 7",
+      "explanation": "x-terms collect together: 4 + 3 = 7, giving 7x. The constant 7 is a different kind of term, so it stays separate: 7x + 7.",
+      "difficulty": 2,
+      "misconceptions": {
+        "14x": "alg.like_terms_over_combined"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "4*x + 3*x + 7"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4888.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_expressions_like_terms_011",
+      "subject": "math",
+      "topic": "expressions",
+      "concept": "expressions.like_terms",
+      "question": "Simplify 4x + 9x + 10.",
+      "options": [
+        "13x - 10",
+        "23x",
+        "36x + 10",
+        "13x + 10"
+      ],
+      "correct_answer": "13x + 10",
+      "explanation": "x-terms collect together: 4 + 9 = 13, giving 13x. The constant 10 is a different kind of term, so it stays separate: 13x + 10.",
+      "difficulty": 2,
+      "misconceptions": {
+        "23x": "alg.like_terms_over_combined"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "4*x + 9*x + 10"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4916.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_expressions_like_terms_012",
+      "subject": "math",
+      "topic": "expressions",
+      "concept": "expressions.like_terms",
+      "question": "Simplify 6x + 6x + 5.",
+      "options": [
+        "12x - 5",
+        "17x",
+        "36x + 5",
+        "12x + 5"
+      ],
+      "correct_answer": "12x + 5",
+      "explanation": "x-terms collect together: 6 + 6 = 12, giving 12x. The constant 5 is a different kind of term, so it stays separate: 12x + 5.",
+      "difficulty": 2,
+      "misconceptions": {
+        "17x": "alg.like_terms_over_combined"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "6*x + 6*x + 5"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4888.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_expressions_like_terms_013",
+      "subject": "math",
+      "topic": "expressions",
+      "concept": "expressions.like_terms",
+      "question": "Simplify 4x + 6x + 8.",
+      "options": [
+        "24x + 8",
+        "18x",
+        "10x + 8",
+        "10x - 8"
+      ],
+      "correct_answer": "10x + 8",
+      "explanation": "x-terms collect together: 4 + 6 = 10, giving 10x. The constant 8 is a different kind of term, so it stays separate: 10x + 8.",
+      "difficulty": 2,
+      "misconceptions": {
+        "18x": "alg.like_terms_over_combined"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "4*x + 6*x + 8"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4888.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_expressions_like_terms_014",
+      "subject": "math",
+      "topic": "expressions",
+      "concept": "expressions.like_terms",
+      "question": "Simplify 7x + 8x + 11.",
+      "options": [
+        "15x + 11",
+        "26x",
+        "56x + 11",
+        "15x - 11"
+      ],
+      "correct_answer": "15x + 11",
+      "explanation": "x-terms collect together: 7 + 8 = 15, giving 15x. The constant 11 is a different kind of term, so it stays separate: 15x + 11.",
+      "difficulty": 2,
+      "misconceptions": {
+        "26x": "alg.like_terms_over_combined"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "7*x + 8*x + 11"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4916.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_expressions_like_terms_015",
+      "subject": "math",
+      "topic": "expressions",
+      "concept": "expressions.like_terms",
+      "question": "Simplify 9x + 7x + 5.",
+      "options": [
+        "63x + 5",
+        "21x",
+        "16x - 5",
+        "16x + 5"
+      ],
+      "correct_answer": "16x + 5",
+      "explanation": "x-terms collect together: 9 + 7 = 16, giving 16x. The constant 5 is a different kind of term, so it stays separate: 16x + 5.",
+      "difficulty": 2,
+      "misconceptions": {
+        "21x": "alg.like_terms_over_combined"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "9*x + 7*x + 5"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4888.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_expressions_negatives_001",
+      "subject": "math",
+      "topic": "expressions",
+      "concept": "expressions.negatives",
+      "question": "Expand -7(x - 9).",
+      "options": [
+        "7x - 63",
+        "-7x + 63",
+        "-7x - 9",
+        "-7x - 63"
+      ],
+      "correct_answer": "-7x + 63",
+      "explanation": "Distribute the -7 over both terms: -7·x + (-7)(-9) = -7x + 63. The two negatives in the second term make a positive.",
+      "difficulty": 3,
+      "misconceptions": {
+        "-7x - 9": "alg.distribution_partial"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "-7(x - 9)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4776.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_expressions_negatives_002",
+      "subject": "math",
+      "topic": "expressions",
+      "concept": "expressions.negatives",
+      "question": "Expand -5(x - 7).",
+      "options": [
+        "-5x - 7",
+        "-5x + 35",
+        "-5x - 35",
+        "5x - 35"
+      ],
+      "correct_answer": "-5x + 35",
+      "explanation": "Distribute the -5 over both terms: -5·x + (-5)(-7) = -5x + 35. The two negatives in the second term make a positive.",
+      "difficulty": 3,
+      "misconceptions": {
+        "-5x - 7": "alg.distribution_partial"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "-5(x - 7)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4776.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_expressions_negatives_003",
+      "subject": "math",
+      "topic": "expressions",
+      "concept": "expressions.negatives",
+      "question": "Expand -6(x - 3).",
+      "options": [
+        "-6x - 3",
+        "-6x - 18",
+        "-6x + 18",
+        "6x - 18"
+      ],
+      "correct_answer": "-6x + 18",
+      "explanation": "Distribute the -6 over both terms: -6·x + (-6)(-3) = -6x + 18. The two negatives in the second term make a positive.",
+      "difficulty": 3,
+      "misconceptions": {
+        "-6x - 3": "alg.distribution_partial"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "-6(x - 3)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4776.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_expressions_negatives_004",
+      "subject": "math",
+      "topic": "expressions",
+      "concept": "expressions.negatives",
+      "question": "Expand -2(x - 6).",
+      "options": [
+        "2x - 12",
+        "-2x + 12",
+        "-2x - 6",
+        "-2x - 12"
+      ],
+      "correct_answer": "-2x + 12",
+      "explanation": "Distribute the -2 over both terms: -2·x + (-2)(-6) = -2x + 12. The two negatives in the second term make a positive.",
+      "difficulty": 3,
+      "misconceptions": {
+        "-2x - 6": "alg.distribution_partial"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "-2(x - 6)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4776.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_expressions_negatives_005",
+      "subject": "math",
+      "topic": "expressions",
+      "concept": "expressions.negatives",
+      "question": "Expand -4(x - 5).",
+      "options": [
+        "4x - 20",
+        "-4x - 5",
+        "-4x + 20",
+        "-4x - 20"
+      ],
+      "correct_answer": "-4x + 20",
+      "explanation": "Distribute the -4 over both terms: -4·x + (-4)(-5) = -4x + 20. The two negatives in the second term make a positive.",
+      "difficulty": 3,
+      "misconceptions": {
+        "-4x - 5": "alg.distribution_partial"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "-4(x - 5)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4776.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_expressions_negatives_006",
+      "subject": "math",
+      "topic": "expressions",
+      "concept": "expressions.negatives",
+      "question": "Expand -2(x - 7).",
+      "options": [
+        "-2x - 14",
+        "2x - 14",
+        "-2x + 14",
+        "-2x - 7"
+      ],
+      "correct_answer": "-2x + 14",
+      "explanation": "Distribute the -2 over both terms: -2·x + (-2)(-7) = -2x + 14. The two negatives in the second term make a positive.",
+      "difficulty": 3,
+      "misconceptions": {
+        "-2x - 7": "alg.distribution_partial"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "-2(x - 7)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4776.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_expressions_negatives_007",
+      "subject": "math",
+      "topic": "expressions",
+      "concept": "expressions.negatives",
+      "question": "Expand -7(x - 6).",
+      "options": [
+        "-7x + 42",
+        "-7x - 6",
+        "7x - 42",
+        "-7x - 42"
+      ],
+      "correct_answer": "-7x + 42",
+      "explanation": "Distribute the -7 over both terms: -7·x + (-7)(-6) = -7x + 42. The two negatives in the second term make a positive.",
+      "difficulty": 3,
+      "misconceptions": {
+        "-7x - 6": "alg.distribution_partial"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "-7(x - 6)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4776.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_expressions_negatives_008",
+      "subject": "math",
+      "topic": "expressions",
+      "concept": "expressions.negatives",
+      "question": "Expand -5(x - 3).",
+      "options": [
+        "-5x + 15",
+        "-5x - 15",
+        "5x - 15",
+        "-5x - 3"
+      ],
+      "correct_answer": "-5x + 15",
+      "explanation": "Distribute the -5 over both terms: -5·x + (-5)(-3) = -5x + 15. The two negatives in the second term make a positive.",
+      "difficulty": 3,
+      "misconceptions": {
+        "-5x - 3": "alg.distribution_partial"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "-5(x - 3)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4776.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_expressions_negatives_009",
+      "subject": "math",
+      "topic": "expressions",
+      "concept": "expressions.negatives",
+      "question": "Expand -8(x - 5).",
+      "options": [
+        "-8x - 40",
+        "8x - 40",
+        "-8x - 5",
+        "-8x + 40"
+      ],
+      "correct_answer": "-8x + 40",
+      "explanation": "Distribute the -8 over both terms: -8·x + (-8)(-5) = -8x + 40. The two negatives in the second term make a positive.",
+      "difficulty": 3,
+      "misconceptions": {
+        "-8x - 5": "alg.distribution_partial"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "-8(x - 5)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4776.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_expressions_negatives_010",
+      "subject": "math",
+      "topic": "expressions",
+      "concept": "expressions.negatives",
+      "question": "Expand -3(x - 8).",
+      "options": [
+        "-3x - 8",
+        "-3x - 24",
+        "-3x + 24",
+        "3x - 24"
+      ],
+      "correct_answer": "-3x + 24",
+      "explanation": "Distribute the -3 over both terms: -3·x + (-3)(-8) = -3x + 24. The two negatives in the second term make a positive.",
+      "difficulty": 3,
+      "misconceptions": {
+        "-3x - 8": "alg.distribution_partial"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "-3(x - 8)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4776.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_expressions_negatives_011",
+      "subject": "math",
+      "topic": "expressions",
+      "concept": "expressions.negatives",
+      "question": "Expand -2(x - 9).",
+      "options": [
+        "-2x + 18",
+        "-2x - 9",
+        "2x - 18",
+        "-2x - 18"
+      ],
+      "correct_answer": "-2x + 18",
+      "explanation": "Distribute the -2 over both terms: -2·x + (-2)(-9) = -2x + 18. The two negatives in the second term make a positive.",
+      "difficulty": 3,
+      "misconceptions": {
+        "-2x - 9": "alg.distribution_partial"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "-2(x - 9)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4776.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_expressions_negatives_012",
+      "subject": "math",
+      "topic": "expressions",
+      "concept": "expressions.negatives",
+      "question": "Expand -4(x - 2).",
+      "options": [
+        "-4x - 2",
+        "-4x - 8",
+        "4x - 8",
+        "-4x + 8"
+      ],
+      "correct_answer": "-4x + 8",
+      "explanation": "Distribute the -4 over both terms: -4·x + (-4)(-2) = -4x + 8. The two negatives in the second term make a positive.",
+      "difficulty": 3,
+      "misconceptions": {
+        "-4x - 2": "alg.distribution_partial"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "-4(x - 2)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4776.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_expressions_negatives_013",
+      "subject": "math",
+      "topic": "expressions",
+      "concept": "expressions.negatives",
+      "question": "Expand -7(x - 3).",
+      "options": [
+        "-7x + 21",
+        "7x - 21",
+        "-7x - 3",
+        "-7x - 21"
+      ],
+      "correct_answer": "-7x + 21",
+      "explanation": "Distribute the -7 over both terms: -7·x + (-7)(-3) = -7x + 21. The two negatives in the second term make a positive.",
+      "difficulty": 3,
+      "misconceptions": {
+        "-7x - 3": "alg.distribution_partial"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "-7(x - 3)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4776.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_expressions_negatives_014",
+      "subject": "math",
+      "topic": "expressions",
+      "concept": "expressions.negatives",
+      "question": "Expand -6(x - 6).",
+      "options": [
+        "6x - 36",
+        "-6x - 6",
+        "-6x - 36",
+        "-6x + 36"
+      ],
+      "correct_answer": "-6x + 36",
+      "explanation": "Distribute the -6 over both terms: -6·x + (-6)(-6) = -6x + 36. The two negatives in the second term make a positive.",
+      "difficulty": 3,
+      "misconceptions": {
+        "-6x - 6": "alg.distribution_partial"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "-6(x - 6)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4776.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_expressions_negatives_015",
+      "subject": "math",
+      "topic": "expressions",
+      "concept": "expressions.negatives",
+      "question": "Expand -2(x - 2).",
+      "options": [
+        "-2x - 4",
+        "-2x + 4",
+        "2x - 4",
+        "-2x - 2"
+      ],
+      "correct_answer": "-2x + 4",
+      "explanation": "Distribute the -2 over both terms: -2·x + (-2)(-2) = -2x + 4. The two negatives in the second term make a positive.",
+      "difficulty": 3,
+      "misconceptions": {
+        "-2x - 2": "alg.distribution_partial"
+      },
+      "verify": {
+        "kind": "equivalent",
+        "expression": "-2(x - 2)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4776.0,
+      "estimated_difficulty": 3
+    }
+  ]
+}
