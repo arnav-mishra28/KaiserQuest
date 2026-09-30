@@ -1,0 +1,2256 @@
+{
+  "subject": "music",
+  "count": 125,
+  "questions": [
+    {
+      "id": "mus_chord_001",
+      "subject": "music",
+      "topic": "chords",
+      "concept": "chords.quality",
+      "question": "A major chord is made up of which intervals?",
+      "options": [
+        "Root, minor 3rd, perfect 5th",
+        "Root, major 3rd, perfect 5th",
+        "Root, major 2nd, perfect 4th",
+        "Root, perfect 4th, perfect 5th"
+      ],
+      "correctAnswer": "Root, major 3rd, perfect 5th",
+      "explanation": "A major chord = root + major 3rd (4 semitones) + perfect 5th (7 semitones).",
+      "difficulty": 1,
+      "expectedTimeMs": 5532.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_chord_002",
+      "subject": "music",
+      "topic": "chords",
+      "concept": "chords.quality",
+      "question": "What notes make up a C major chord?",
+      "options": [
+        "C, D, E",
+        "C, E, G",
+        "C, F, A",
+        "C, E♭, G"
+      ],
+      "correctAnswer": "C, E, G",
+      "explanation": "C major: C (root), E (major 3rd), G (perfect 5th).",
+      "difficulty": 1,
+      "expectedTimeMs": 5280.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_chord_003",
+      "subject": "music",
+      "topic": "chords",
+      "concept": "chords.quality",
+      "question": "How does a minor chord differ from a major chord?",
+      "options": [
+        "The 3rd is lowered by a half step",
+        "The 5th is raised",
+        "The root is different",
+        "It has 4 notes"
+      ],
+      "correctAnswer": "The 3rd is lowered by a half step",
+      "explanation": "Minor chord = major chord with a flattened 3rd. C minor = C, E♭, G.",
+      "difficulty": 2,
+      "expectedTimeMs": 5672.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_chord_004",
+      "subject": "music",
+      "topic": "chords",
+      "concept": "chords.quality",
+      "question": "What notes make up a G major chord?",
+      "options": [
+        "G, A, B",
+        "G, B, D",
+        "G, B♭, D",
+        "G, C, E"
+      ],
+      "correctAnswer": "G, B, D",
+      "explanation": "G major: G (root), B (major 3rd), D (perfect 5th).",
+      "difficulty": 1,
+      "expectedTimeMs": 5280.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_chord_005",
+      "subject": "music",
+      "topic": "chords",
+      "concept": "chords.triads",
+      "question": "What is a triad?",
+      "options": [
+        "A two-note chord",
+        "A three-note chord built in thirds",
+        "A four-note chord",
+        "A scale"
+      ],
+      "correctAnswer": "A three-note chord built in thirds",
+      "explanation": "A triad consists of three notes stacked in intervals of thirds.",
+      "difficulty": 1,
+      "expectedTimeMs": 4748.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_chord_006",
+      "subject": "music",
+      "topic": "chords",
+      "concept": "chords.quality",
+      "question": "What notes make up an A minor chord?",
+      "options": [
+        "A, C, E",
+        "A, C♯, E",
+        "A, B, D",
+        "A, D, F"
+      ],
+      "correctAnswer": "A, C, E",
+      "explanation": "A minor: A (root), C (minor 3rd), E (perfect 5th).",
+      "difficulty": 2,
+      "expectedTimeMs": 5308.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_chord_007",
+      "subject": "music",
+      "topic": "chords",
+      "concept": "chords.quality",
+      "question": "What is a diminished triad?",
+      "options": [
+        "Root, minor 3rd, diminished 5th",
+        "Root, major 3rd, perfect 5th",
+        "Root, minor 3rd, perfect 5th",
+        "Root, major 3rd, augmented 5th"
+      ],
+      "correctAnswer": "Root, minor 3rd, diminished 5th",
+      "explanation": "Diminished = minor 3rd + diminished 5th (6 semitones from root).",
+      "difficulty": 3,
+      "expectedTimeMs": 5056.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_chord_008",
+      "subject": "music",
+      "topic": "chords",
+      "concept": "chords.triads",
+      "question": "What is an augmented triad?",
+      "options": [
+        "Root, major 3rd, augmented 5th",
+        "Root, minor 3rd, perfect 5th",
+        "Root, major 3rd, perfect 5th",
+        "Root, minor 3rd, diminished 5th"
+      ],
+      "correctAnswer": "Root, major 3rd, augmented 5th",
+      "explanation": "Augmented = major 3rd + augmented 5th (8 semitones from root).",
+      "difficulty": 3,
+      "expectedTimeMs": 5056.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_chord_009",
+      "subject": "music",
+      "topic": "chords",
+      "concept": "chords.progression",
+      "question": "What is the I-IV-V-I chord progression in C major?",
+      "options": [
+        "C, D, E, C",
+        "C, F, G, C",
+        "C, E, G, C",
+        "C, A, B, C"
+      ],
+      "correctAnswer": "C, F, G, C",
+      "explanation": "In C major: I = C, IV = F, V = G. So the progression is C-F-G-C.",
+      "difficulty": 2,
+      "expectedTimeMs": 5700.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_chord_010",
+      "subject": "music",
+      "topic": "chords",
+      "concept": "chords.triads",
+      "question": "What does a '7' mean after a chord name (e.g., G7)?",
+      "options": [
+        "Play the chord 7 times",
+        "Add the 7th scale degree to the triad",
+        "Play in 7/4 time",
+        "Transpose up 7 steps"
+      ],
+      "correctAnswer": "Add the 7th scale degree to the triad",
+      "explanation": "G7 = G, B, D, F — a G major triad with an added minor 7th (F).",
+      "difficulty": 2,
+      "expectedTimeMs": 5728.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_chord_011",
+      "subject": "music",
+      "topic": "chords",
+      "concept": "chords.inversions",
+      "question": "What is a chord inversion?",
+      "options": [
+        "Playing a chord backwards",
+        "Rearranging which note is in the bass",
+        "Playing a chord softly",
+        "Transposing a chord"
+      ],
+      "correctAnswer": "Rearranging which note is in the bass",
+      "explanation": "In root position C-E-G, 1st inversion is E-G-C, 2nd inversion is G-C-E.",
+      "difficulty": 3,
+      "expectedTimeMs": 5028.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_chord_012",
+      "subject": "music",
+      "topic": "chords",
+      "concept": "chords.triads",
+      "question": "In the key of G major, what is the ii chord?",
+      "options": [
+        "G major",
+        "A minor",
+        "B minor",
+        "C major"
+      ],
+      "correctAnswer": "A minor",
+      "explanation": "ii in G major is built on the 2nd degree (A) and is minor: A-C-E → A minor.",
+      "difficulty": 3,
+      "expectedTimeMs": 5532.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_chord_013",
+      "subject": "music",
+      "topic": "chords",
+      "concept": "chords.triads",
+      "question": "What is a sus4 chord?",
+      "options": [
+        "A chord with the 3rd replaced by the 4th",
+        "A chord with an added 4th",
+        "A chord with a sharp 4th",
+        "A chord with only 4 notes"
+      ],
+      "correctAnswer": "A chord with the 3rd replaced by the 4th",
+      "explanation": "Csus4 = C, F, G. The 3rd (E) is suspended and replaced by the 4th (F).",
+      "difficulty": 3,
+      "expectedTimeMs": 4888.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_chord_014",
+      "subject": "music",
+      "topic": "chords",
+      "concept": "chords.inversions",
+      "question": "What is the Nashville Number System's purpose?",
+      "options": [
+        "Counting measures",
+        "Using numbers instead of chord names for easy transposition",
+        "Numbering musicians",
+        "Rating songs"
+      ],
+      "correctAnswer": "Using numbers instead of chord names for easy transposition",
+      "explanation": "The Nashville Number System assigns numbers to chords based on scale degree, making transposition easy.",
+      "difficulty": 4,
+      "expectedTimeMs": 5588.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_chord_015",
+      "subject": "music",
+      "topic": "chords",
+      "concept": "chords.inversions",
+      "question": "What makes a major 7th chord different from a dominant 7th?",
+      "options": [
+        "Major 7th has a major 7th interval; dominant 7th has a minor 7th",
+        "They are the same",
+        "Major 7th is minor",
+        "Dominant 7th has no 5th"
+      ],
+      "correctAnswer": "Major 7th has a major 7th interval; dominant 7th has a minor 7th",
+      "explanation": "Cmaj7 = C E G B (major 7th). C7 = C E G B♭ (minor 7th = dominant).",
+      "difficulty": 4,
+      "expectedTimeMs": 5952.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_chord_016",
+      "subject": "music",
+      "topic": "chords",
+      "concept": "chords.progression",
+      "question": "What is the common pop chord progression I-V-vi-IV in C major?",
+      "options": [
+        "C, G, Am, F",
+        "C, F, G, Am",
+        "C, Dm, Em, F",
+        "C, Am, F, G"
+      ],
+      "correctAnswer": "C, G, Am, F",
+      "explanation": "I=C, V=G, vi=Am, IV=F. This is one of the most common pop progressions.",
+      "difficulty": 3,
+      "expectedTimeMs": 6036.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_chord_017",
+      "subject": "music",
+      "topic": "chords",
+      "concept": "chords.triads",
+      "question": "What is a power chord?",
+      "options": [
+        "A chord with root and 5th only (no 3rd)",
+        "A very loud chord",
+        "A chord with all 7 notes",
+        "A chord played with force"
+      ],
+      "correctAnswer": "A chord with root and 5th only (no 3rd)",
+      "explanation": "Power chords (e.g., C5) contain only the root and 5th. Common in rock music.",
+      "difficulty": 2,
+      "expectedTimeMs": 4916.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_chord_018",
+      "subject": "music",
+      "topic": "chords",
+      "concept": "chords.quality",
+      "question": "In standard Roman numeral analysis, lowercase numerals represent:",
+      "options": [
+        "Major chords",
+        "Minor chords",
+        "Diminished chords",
+        "Augmented chords"
+      ],
+      "correctAnswer": "Minor chords",
+      "explanation": "Uppercase = major (I, IV, V), lowercase = minor (ii, iii, vi). vii° = diminished.",
+      "difficulty": 3,
+      "expectedTimeMs": 6120.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_chord_019",
+      "subject": "music",
+      "topic": "chords",
+      "concept": "chords.progression",
+      "question": "What is a secondary dominant?",
+      "options": [
+        "The V chord",
+        "The V/V chord — a dominant of a non-tonic chord",
+        "The IV chord",
+        "A chord borrowed from parallel minor"
+      ],
+      "correctAnswer": "The V/V chord — a dominant of a non-tonic chord",
+      "explanation": "V/V is the dominant of the dominant. In C major, V/V = D major (dominant of G).",
+      "difficulty": 5,
+      "expectedTimeMs": 5112.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_chord_020",
+      "subject": "music",
+      "topic": "chords",
+      "concept": "chords.inversions",
+      "question": "What is a Neapolitan chord?",
+      "options": [
+        "A chord from Naples",
+        "A major chord built on the flattened 2nd degree",
+        "A diminished 7th chord",
+        "An augmented 6th chord"
+      ],
+      "correctAnswer": "A major chord built on the flattened 2nd degree",
+      "explanation": "The Neapolitan chord (♭II) is a major triad on the lowered 2nd scale degree, usually in first inversion.",
+      "difficulty": 5,
+      "expectedTimeMs": 5056.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_chord_021",
+      "subject": "music",
+      "topic": "chords",
+      "concept": "chords.quality",
+      "question": "What notes make up an F major chord?",
+      "options": [
+        "F, A, C",
+        "F, A♭, C",
+        "F, G, B♭",
+        "F, B♭, D"
+      ],
+      "correctAnswer": "F, A, C",
+      "explanation": "F major: F (root), A (major 3rd), C (perfect 5th).",
+      "difficulty": 1,
+      "expectedTimeMs": 5308.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_chord_022",
+      "subject": "music",
+      "topic": "chords",
+      "concept": "chords.progression",
+      "question": "What is a cadence?",
+      "options": [
+        "A type of instrument",
+        "A chord progression that creates a sense of resolution",
+        "A rhythm pattern",
+        "A vocal technique"
+      ],
+      "correctAnswer": "A chord progression that creates a sense of resolution",
+      "explanation": "A cadence is a harmonic goal, typically at the end of a phrase (e.g., V-I = authentic cadence).",
+      "difficulty": 3,
+      "expectedTimeMs": 4804.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_chord_023",
+      "subject": "music",
+      "topic": "chords",
+      "concept": "chords.progression",
+      "question": "What is a plagal cadence?",
+      "options": [
+        "V-I",
+        "IV-I",
+        "ii-V",
+        "vi-IV"
+      ],
+      "correctAnswer": "IV-I",
+      "explanation": "A plagal cadence (IV-I) is also known as the 'Amen cadence' heard in hymns.",
+      "difficulty": 4,
+      "expectedTimeMs": 5000.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_chord_024",
+      "subject": "music",
+      "topic": "chords",
+      "concept": "chords.quality",
+      "question": "What is a half-diminished 7th chord?",
+      "options": [
+        "Minor 3rd, diminished 5th, minor 7th",
+        "Major 3rd, perfect 5th, major 7th",
+        "Minor 3rd, diminished 5th, diminished 7th",
+        "Minor 3rd, perfect 5th, minor 7th"
+      ],
+      "correctAnswer": "Minor 3rd, diminished 5th, minor 7th",
+      "explanation": "Half-diminished (ø7): diminished triad + minor 7th. Also written as m7♭5.",
+      "difficulty": 5,
+      "expectedTimeMs": 5308.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_chord_025",
+      "subject": "music",
+      "topic": "chords",
+      "concept": "chords.quality",
+      "question": "What notes make up a D minor chord?",
+      "options": [
+        "D, F, A",
+        "D, F♯, A",
+        "D, E, G",
+        "D, G, B"
+      ],
+      "correctAnswer": "D, F, A",
+      "explanation": "D minor: D (root), F (minor 3rd), A (perfect 5th).",
+      "difficulty": 2,
+      "expectedTimeMs": 5280.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_note_001",
+      "subject": "music",
+      "topic": "notes",
+      "concept": "notes.staff",
+      "question": "How many lines does a musical staff have?",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correctAnswer": "5",
+      "explanation": "A standard musical staff consists of 5 horizontal lines and 4 spaces.",
+      "difficulty": 1,
+      "expectedTimeMs": 5448.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_note_002",
+      "subject": "music",
+      "topic": "notes",
+      "concept": "notes.staff",
+      "question": "What are the note names in order from C?",
+      "options": [
+        "C D E F G A B",
+        "A B C D E F G",
+        "C E G B D F A",
+        "D E F G A B C"
+      ],
+      "correctAnswer": "C D E F G A B",
+      "explanation": "Starting from C: C, D, E, F, G, A, B (then back to C).",
+      "difficulty": 1,
+      "expectedTimeMs": 5420.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_note_003",
+      "subject": "music",
+      "topic": "notes",
+      "concept": "notes.staff",
+      "question": "What clef is also known as the 'G clef'?",
+      "options": [
+        "Bass clef",
+        "Treble clef",
+        "Alto clef",
+        "Tenor clef"
+      ],
+      "correctAnswer": "Treble clef",
+      "explanation": "The treble clef curls around the G line (second line from bottom).",
+      "difficulty": 1,
+      "expectedTimeMs": 5420.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_note_004",
+      "subject": "music",
+      "topic": "notes",
+      "concept": "notes.staff",
+      "question": "What clef is also known as the 'F clef'?",
+      "options": [
+        "Treble clef",
+        "Bass clef",
+        "Alto clef",
+        "Soprano clef"
+      ],
+      "correctAnswer": "Bass clef",
+      "explanation": "The bass clef's two dots surround the F line (fourth line from bottom).",
+      "difficulty": 1,
+      "expectedTimeMs": 5420.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_note_005",
+      "subject": "music",
+      "topic": "notes",
+      "concept": "notes.staff",
+      "question": "How many beats does a whole note get in 4/4 time?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctAnswer": "4",
+      "explanation": "A whole note lasts for 4 beats in common (4/4) time.",
+      "difficulty": 1,
+      "expectedTimeMs": 5672.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_note_006",
+      "subject": "music",
+      "topic": "notes",
+      "concept": "notes.staff",
+      "question": "How many beats does a half note get in 4/4 time?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctAnswer": "2",
+      "explanation": "A half note gets 2 beats — half the duration of a whole note.",
+      "difficulty": 1,
+      "expectedTimeMs": 5644.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_note_007",
+      "subject": "music",
+      "topic": "notes",
+      "concept": "notes.semitones",
+      "question": "What does a sharp (♯) do to a note?",
+      "options": [
+        "Lowers it by a half step",
+        "Raises it by a half step",
+        "Doubles its duration",
+        "Makes it louder"
+      ],
+      "correctAnswer": "Raises it by a half step",
+      "explanation": "A sharp raises the pitch by one semitone (half step).",
+      "difficulty": 1,
+      "expectedTimeMs": 5280.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_note_008",
+      "subject": "music",
+      "topic": "notes",
+      "concept": "notes.semitones",
+      "question": "What does a flat (♭) do to a note?",
+      "options": [
+        "Raises it by a half step",
+        "Lowers it by a half step",
+        "Makes it shorter",
+        "Makes it softer"
+      ],
+      "correctAnswer": "Lowers it by a half step",
+      "explanation": "A flat lowers the pitch by one semitone (half step).",
+      "difficulty": 1,
+      "expectedTimeMs": 5252.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_note_009",
+      "subject": "music",
+      "topic": "notes",
+      "concept": "notes.staff",
+      "question": "The spaces on the treble clef spell which word?",
+      "options": [
+        "BEAD",
+        "FACE",
+        "CAGE",
+        "EDGE"
+      ],
+      "correctAnswer": "FACE",
+      "explanation": "From bottom to top, the spaces of the treble clef are F, A, C, E — spelling FACE.",
+      "difficulty": 1,
+      "expectedTimeMs": 5616.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_note_010",
+      "subject": "music",
+      "topic": "notes",
+      "concept": "notes.staff",
+      "question": "The lines of the treble clef from bottom to top are:",
+      "options": [
+        "E G B D F",
+        "F A C E G",
+        "D F A C E",
+        "C E G B D"
+      ],
+      "correctAnswer": "E G B D F",
+      "explanation": "Every Good Boy Does Fine — E, G, B, D, F.",
+      "difficulty": 2,
+      "expectedTimeMs": 5756.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_note_011",
+      "subject": "music",
+      "topic": "notes",
+      "concept": "notes.staff",
+      "question": "How many beats does a quarter note get in 4/4 time?",
+      "options": [
+        "0.5",
+        "1",
+        "2",
+        "4"
+      ],
+      "correctAnswer": "1",
+      "explanation": "A quarter note gets 1 beat in 4/4 time.",
+      "difficulty": 1,
+      "expectedTimeMs": 5728.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_note_012",
+      "subject": "music",
+      "topic": "notes",
+      "concept": "notes.accidentals",
+      "question": "What does a dot after a note do?",
+      "options": [
+        "Doubles its value",
+        "Adds half its value",
+        "Makes it staccato",
+        "Makes it louder"
+      ],
+      "correctAnswer": "Adds half its value",
+      "explanation": "A dotted half note = 2 + 1 = 3 beats. The dot adds 50% of the note's value.",
+      "difficulty": 2,
+      "expectedTimeMs": 5196.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_note_013",
+      "subject": "music",
+      "topic": "notes",
+      "concept": "notes.accidentals",
+      "question": "What is a natural sign (♮) used for?",
+      "options": [
+        "To make a note louder",
+        "To cancel a sharp or flat",
+        "To hold a note longer",
+        "To repeat a note"
+      ],
+      "correctAnswer": "To cancel a sharp or flat",
+      "explanation": "A natural sign cancels any previous sharp or flat on that note.",
+      "difficulty": 2,
+      "expectedTimeMs": 5308.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_note_014",
+      "subject": "music",
+      "topic": "notes",
+      "concept": "notes.accidentals",
+      "question": "How many eighth notes equal one quarter note?",
+      "options": [
+        "1",
+        "2",
+        "4",
+        "8"
+      ],
+      "correctAnswer": "2",
+      "explanation": "Two eighth notes have the same total duration as one quarter note.",
+      "difficulty": 2,
+      "expectedTimeMs": 5560.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_note_015",
+      "subject": "music",
+      "topic": "notes",
+      "concept": "notes.staff",
+      "question": "What is Middle C?",
+      "options": [
+        "The lowest note on a piano",
+        "The note between treble and bass clef staves",
+        "The highest note on a guitar",
+        "A type of scale"
+      ],
+      "correctAnswer": "The note between treble and bass clef staves",
+      "explanation": "Middle C sits on a ledger line between the treble and bass clef staves.",
+      "difficulty": 2,
+      "expectedTimeMs": 4776.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_note_016",
+      "subject": "music",
+      "topic": "notes",
+      "concept": "notes.intervals",
+      "question": "What is enharmonic equivalence?",
+      "options": [
+        "Two notes with different names but same pitch",
+        "Two notes an octave apart",
+        "Two notes in harmony",
+        "Two notes played at the same time"
+      ],
+      "correctAnswer": "Two notes with different names but same pitch",
+      "explanation": "C♯ and D♭ are enharmonic equivalents — different names, same sound.",
+      "difficulty": 3,
+      "expectedTimeMs": 5168.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_note_017",
+      "subject": "music",
+      "topic": "notes",
+      "concept": "notes.semitones",
+      "question": "How many half steps are in an octave?",
+      "options": [
+        "7",
+        "8",
+        "10",
+        "12"
+      ],
+      "correctAnswer": "12",
+      "explanation": "There are 12 semitones (half steps) in one octave.",
+      "difficulty": 2,
+      "expectedTimeMs": 5336.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_note_018",
+      "subject": "music",
+      "topic": "notes",
+      "concept": "notes.staff",
+      "question": "What is a ledger line?",
+      "options": [
+        "A line added above or below the staff for notes outside its range",
+        "The bar line between measures",
+        "A line indicating tempo",
+        "A line showing dynamics"
+      ],
+      "correctAnswer": "A line added above or below the staff for notes outside its range",
+      "explanation": "Ledger lines extend the staff to notate pitches above or below the five lines.",
+      "difficulty": 3,
+      "expectedTimeMs": 4916.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_note_019",
+      "subject": "music",
+      "topic": "notes",
+      "concept": "notes.intervals",
+      "question": "What is a tie in music notation?",
+      "options": [
+        "A curved line connecting two notes of the same pitch",
+        "A line connecting different pitches",
+        "A type of rest",
+        "A dynamic marking"
+      ],
+      "correctAnswer": "A curved line connecting two notes of the same pitch",
+      "explanation": "A tie connects two notes of the same pitch, combining their durations.",
+      "difficulty": 3,
+      "expectedTimeMs": 5196.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_note_020",
+      "subject": "music",
+      "topic": "notes",
+      "concept": "notes.intervals",
+      "question": "How many sixteenth notes equal one quarter note?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "8"
+      ],
+      "correctAnswer": "4",
+      "explanation": "4 sixteenth notes = 1 quarter note in duration.",
+      "difficulty": 3,
+      "expectedTimeMs": 5644.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_note_021",
+      "subject": "music",
+      "topic": "notes",
+      "concept": "notes.accidentals",
+      "question": "What is a double sharp (𝄪)?",
+      "options": [
+        "Raises a note by two half steps",
+        "Raises a note by one half step",
+        "Lowers a note by two half steps",
+        "Makes a note twice as loud"
+      ],
+      "correctAnswer": "Raises a note by two half steps",
+      "explanation": "A double sharp raises the note by a whole step (two semitones).",
+      "difficulty": 4,
+      "expectedTimeMs": 5056.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_note_022",
+      "subject": "music",
+      "topic": "notes",
+      "concept": "notes.intervals",
+      "question": "In concert pitch, what note does a B♭ trumpet play to sound a C?",
+      "options": [
+        "B♭",
+        "C",
+        "D",
+        "E♭"
+      ],
+      "correctAnswer": "D",
+      "explanation": "A B♭ trumpet must play a D (a whole step up) to produce concert C.",
+      "difficulty": 5,
+      "expectedTimeMs": 6092.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_note_023",
+      "subject": "music",
+      "topic": "notes",
+      "concept": "notes.intervals",
+      "question": "What is the frequency of concert A (A4)?",
+      "options": [
+        "220 Hz",
+        "330 Hz",
+        "440 Hz",
+        "880 Hz"
+      ],
+      "correctAnswer": "440 Hz",
+      "explanation": "Concert A (A4) is internationally standardized at 440 Hz.",
+      "difficulty": 4,
+      "expectedTimeMs": 5420.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_note_024",
+      "subject": "music",
+      "topic": "notes",
+      "concept": "notes.intervals",
+      "question": "What does 'pp' mean in musical dynamics?",
+      "options": [
+        "Very loud",
+        "Very soft",
+        "Moderately loud",
+        "Moderately soft"
+      ],
+      "correctAnswer": "Very soft",
+      "explanation": "'pp' stands for pianissimo, meaning very soft/quiet.",
+      "difficulty": 3,
+      "expectedTimeMs": 5420.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_note_025",
+      "subject": "music",
+      "topic": "notes",
+      "concept": "notes.intervals",
+      "question": "What is a tremolo?",
+      "options": [
+        "A gradual slowing of tempo",
+        "A rapid repetition of a note or alternation between two notes",
+        "A type of rest",
+        "Playing very softly"
+      ],
+      "correctAnswer": "A rapid repetition of a note or alternation between two notes",
+      "explanation": "Tremolo is the rapid reiteration of a single note or alternation between two notes.",
+      "difficulty": 4,
+      "expectedTimeMs": 4804.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_rhy_001",
+      "subject": "music",
+      "topic": "rhythm",
+      "concept": "rhythm.rests",
+      "question": "What is rhythm in music?",
+      "options": [
+        "The melody of a song",
+        "The pattern of sounds and silences in time",
+        "The volume of music",
+        "The harmony of chords"
+      ],
+      "correctAnswer": "The pattern of sounds and silences in time",
+      "explanation": "Rhythm is the arrangement of sounds and silences over time.",
+      "difficulty": 1,
+      "expectedTimeMs": 4972.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_rhy_002",
+      "subject": "music",
+      "topic": "rhythm",
+      "concept": "rhythm.rests",
+      "question": "What is a rest in music?",
+      "options": [
+        "A loud note",
+        "A period of silence",
+        "A repeated section",
+        "A fast tempo"
+      ],
+      "correctAnswer": "A period of silence",
+      "explanation": "A rest indicates a measured period of silence in music.",
+      "difficulty": 1,
+      "expectedTimeMs": 4972.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_rhy_003",
+      "subject": "music",
+      "topic": "rhythm",
+      "concept": "rhythm.rests",
+      "question": "How many beats does a whole rest get in 4/4 time?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctAnswer": "4",
+      "explanation": "A whole rest = 4 beats of silence in 4/4 time.",
+      "difficulty": 1,
+      "expectedTimeMs": 5672.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_rhy_004",
+      "subject": "music",
+      "topic": "rhythm",
+      "concept": "rhythm.note_values",
+      "question": "What does 'tempo' mean?",
+      "options": [
+        "Volume",
+        "Pitch",
+        "Speed of the music",
+        "Key signature"
+      ],
+      "correctAnswer": "Speed of the music",
+      "explanation": "Tempo is the speed at which music is performed, measured in BPM.",
+      "difficulty": 1,
+      "expectedTimeMs": 4944.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_rhy_005",
+      "subject": "music",
+      "topic": "rhythm",
+      "concept": "rhythm.note_values",
+      "question": "What does BPM stand for?",
+      "options": [
+        "Bass Per Measure",
+        "Beats Per Minute",
+        "Bars Per Movement",
+        "Bass Per Minute"
+      ],
+      "correctAnswer": "Beats Per Minute",
+      "explanation": "BPM = Beats Per Minute, the standard measure of tempo.",
+      "difficulty": 1,
+      "expectedTimeMs": 4972.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_rhy_006",
+      "subject": "music",
+      "topic": "rhythm",
+      "concept": "rhythm.rests",
+      "question": "What tempo marking means 'slow'?",
+      "options": [
+        "Allegro",
+        "Adagio",
+        "Presto",
+        "Vivace"
+      ],
+      "correctAnswer": "Adagio",
+      "explanation": "Adagio means slowly (66-76 BPM). Allegro = fast, Presto = very fast.",
+      "difficulty": 2,
+      "expectedTimeMs": 5196.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_rhy_007",
+      "subject": "music",
+      "topic": "rhythm",
+      "concept": "rhythm.rests",
+      "question": "What tempo marking means 'fast'?",
+      "options": [
+        "Largo",
+        "Andante",
+        "Adagio",
+        "Allegro"
+      ],
+      "correctAnswer": "Allegro",
+      "explanation": "Allegro means fast and lively (120-156 BPM).",
+      "difficulty": 2,
+      "expectedTimeMs": 5196.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_rhy_008",
+      "subject": "music",
+      "topic": "rhythm",
+      "concept": "rhythm.syncopation",
+      "question": "What is syncopation?",
+      "options": [
+        "Playing in time",
+        "Emphasizing off-beats or unexpected beats",
+        "Playing very softly",
+        "A gradual tempo change"
+      ],
+      "correctAnswer": "Emphasizing off-beats or unexpected beats",
+      "explanation": "Syncopation places emphasis on normally weak beats, creating rhythmic tension.",
+      "difficulty": 3,
+      "expectedTimeMs": 4860.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_rhy_009",
+      "subject": "music",
+      "topic": "rhythm",
+      "concept": "rhythm.note_values",
+      "question": "A triplet divides a beat into how many equal parts?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "6"
+      ],
+      "correctAnswer": "3",
+      "explanation": "A triplet divides a note value into three equal parts instead of the usual two.",
+      "difficulty": 2,
+      "expectedTimeMs": 5728.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_rhy_010",
+      "subject": "music",
+      "topic": "rhythm",
+      "concept": "rhythm.dotted",
+      "question": "What is a pickup (anacrusis)?",
+      "options": [
+        "The last note of a piece",
+        "Notes before the first full measure",
+        "A guitar technique",
+        "A type of rest"
+      ],
+      "correctAnswer": "Notes before the first full measure",
+      "explanation": "An anacrusis (pickup) consists of notes that precede the first complete measure.",
+      "difficulty": 3,
+      "expectedTimeMs": 5112.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_rhy_011",
+      "subject": "music",
+      "topic": "rhythm",
+      "concept": "rhythm.rests",
+      "question": "What does 'ritardando' (rit.) mean?",
+      "options": [
+        "Speed up",
+        "Gradually slow down",
+        "Stay the same tempo",
+        "Get louder"
+      ],
+      "correctAnswer": "Gradually slow down",
+      "explanation": "Ritardando means to gradually decrease the tempo.",
+      "difficulty": 2,
+      "expectedTimeMs": 5280.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_rhy_012",
+      "subject": "music",
+      "topic": "rhythm",
+      "concept": "rhythm.rests",
+      "question": "What does 'accelerando' mean?",
+      "options": [
+        "Slow down",
+        "Gradually speed up",
+        "Stay steady",
+        "Get softer"
+      ],
+      "correctAnswer": "Gradually speed up",
+      "explanation": "Accelerando means to gradually increase the tempo.",
+      "difficulty": 2,
+      "expectedTimeMs": 5112.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_rhy_013",
+      "subject": "music",
+      "topic": "rhythm",
+      "concept": "rhythm.rests",
+      "question": "What is a fermata?",
+      "options": [
+        "A rest symbol",
+        "A symbol indicating to hold a note longer than its value",
+        "A repeat sign",
+        "A dynamic marking"
+      ],
+      "correctAnswer": "A symbol indicating to hold a note longer than its value",
+      "explanation": "A fermata (bird's eye symbol) tells the performer to sustain the note beyond its normal duration.",
+      "difficulty": 2,
+      "expectedTimeMs": 4804.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_rhy_014",
+      "subject": "music",
+      "topic": "rhythm",
+      "concept": "rhythm.dotted",
+      "question": "In 'swing' rhythm, pairs of eighth notes are played:",
+      "options": [
+        "Evenly",
+        "As a long-short pattern",
+        "As a short-long pattern",
+        "Staccato"
+      ],
+      "correctAnswer": "As a long-short pattern",
+      "explanation": "Swing feel makes eighth notes unequal: the first is longer, the second shorter (triplet feel).",
+      "difficulty": 3,
+      "expectedTimeMs": 5756.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_rhy_015",
+      "subject": "music",
+      "topic": "rhythm",
+      "concept": "rhythm.dotted",
+      "question": "What does 'rubato' mean?",
+      "options": [
+        "Strict tempo",
+        "Flexible tempo for expressive purposes",
+        "Very fast tempo",
+        "Moderate tempo"
+      ],
+      "correctAnswer": "Flexible tempo for expressive purposes",
+      "explanation": "Rubato (Italian: 'robbed') means taking liberties with tempo for musical expression.",
+      "difficulty": 4,
+      "expectedTimeMs": 4972.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_rhy_016",
+      "subject": "music",
+      "topic": "rhythm",
+      "concept": "rhythm.syncopation",
+      "question": "What is a hemiola?",
+      "options": [
+        "A type of chord",
+        "A rhythmic pattern where two groups of three are felt as three groups of two",
+        "A rest lasting half a beat",
+        "A type of scale"
+      ],
+      "correctAnswer": "A rhythmic pattern where two groups of three are felt as three groups of two",
+      "explanation": "Hemiola creates a 3-against-2 feel, common in Baroque and Latin music.",
+      "difficulty": 5,
+      "expectedTimeMs": 4804.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_rhy_017",
+      "subject": "music",
+      "topic": "rhythm",
+      "concept": "rhythm.note_values",
+      "question": "What is a dotted quarter note equivalent to?",
+      "options": [
+        "1 beat",
+        "1.5 beats",
+        "2 beats",
+        "3 beats"
+      ],
+      "correctAnswer": "1.5 beats",
+      "explanation": "Quarter note (1 beat) + dot (half its value, 0.5) = 1.5 beats.",
+      "difficulty": 2,
+      "expectedTimeMs": 5532.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_rhy_018",
+      "subject": "music",
+      "topic": "rhythm",
+      "concept": "rhythm.dotted",
+      "question": "What does 'a tempo' mean?",
+      "options": [
+        "Speed up",
+        "Slow down",
+        "Return to the original tempo",
+        "Play freely"
+      ],
+      "correctAnswer": "Return to the original tempo",
+      "explanation": "'A tempo' instructs the performer to return to the previous established tempo.",
+      "difficulty": 3,
+      "expectedTimeMs": 5000.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_rhy_019",
+      "subject": "music",
+      "topic": "rhythm",
+      "concept": "rhythm.syncopation",
+      "question": "What is polyrhythm?",
+      "options": [
+        "One rhythm pattern",
+        "Two or more conflicting rhythms played simultaneously",
+        "A single repeated beat",
+        "A type of chord progression"
+      ],
+      "correctAnswer": "Two or more conflicting rhythms played simultaneously",
+      "explanation": "Polyrhythm involves layering different rhythmic patterns, e.g., 3 against 4.",
+      "difficulty": 4,
+      "expectedTimeMs": 4832.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_rhy_020",
+      "subject": "music",
+      "topic": "rhythm",
+      "concept": "rhythm.dotted",
+      "question": "What is 'Andante' tempo approximately?",
+      "options": [
+        "40-60 BPM",
+        "76-108 BPM",
+        "120-156 BPM",
+        "168-200 BPM"
+      ],
+      "correctAnswer": "76-108 BPM",
+      "explanation": "Andante means 'at a walking pace,' approximately 76-108 BPM.",
+      "difficulty": 3,
+      "expectedTimeMs": 5364.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_rhy_021",
+      "subject": "music",
+      "topic": "rhythm",
+      "concept": "rhythm.note_values",
+      "question": "What is a measure (bar) in music?",
+      "options": [
+        "A single note",
+        "A segment of time defined by the time signature",
+        "A type of instrument",
+        "A dynamic level"
+      ],
+      "correctAnswer": "A segment of time defined by the time signature",
+      "explanation": "A measure is a unit of time containing a specific number of beats as defined by the time signature.",
+      "difficulty": 1,
+      "expectedTimeMs": 5224.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_rhy_022",
+      "subject": "music",
+      "topic": "rhythm",
+      "concept": "rhythm.rests",
+      "question": "What is 'staccato'?",
+      "options": [
+        "Smooth and connected",
+        "Short and detached",
+        "Gradually getting louder",
+        "Very slow"
+      ],
+      "correctAnswer": "Short and detached",
+      "explanation": "Staccato means playing notes short and separated, indicated by a dot above/below the note.",
+      "difficulty": 2,
+      "expectedTimeMs": 4832.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_rhy_023",
+      "subject": "music",
+      "topic": "rhythm",
+      "concept": "rhythm.rests",
+      "question": "What is 'legato'?",
+      "options": [
+        "Short and detached",
+        "Smooth and connected",
+        "Very loud",
+        "Gradually slowing"
+      ],
+      "correctAnswer": "Smooth and connected",
+      "explanation": "Legato means playing smoothly, with notes flowing into each other without gaps.",
+      "difficulty": 2,
+      "expectedTimeMs": 4776.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_rhy_024",
+      "subject": "music",
+      "topic": "rhythm",
+      "concept": "rhythm.syncopation",
+      "question": "What is a cross-rhythm?",
+      "options": [
+        "A rhythm that follows the beat",
+        "A rhythm that contradicts the prevailing meter",
+        "A very fast rhythm",
+        "A slow rhythm"
+      ],
+      "correctAnswer": "A rhythm that contradicts the prevailing meter",
+      "explanation": "Cross-rhythm is a specific type of polyrhythm that conflicts with the underlying pulse.",
+      "difficulty": 5,
+      "expectedTimeMs": 4944.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_rhy_025",
+      "subject": "music",
+      "topic": "rhythm",
+      "concept": "rhythm.rests",
+      "question": "What is the fastest standard tempo marking?",
+      "options": [
+        "Allegro",
+        "Vivace",
+        "Presto",
+        "Prestissimo"
+      ],
+      "correctAnswer": "Prestissimo",
+      "explanation": "Prestissimo (200+ BPM) is the fastest standard tempo, faster than Presto (168-200 BPM).",
+      "difficulty": 4,
+      "expectedTimeMs": 5504.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_scale_001",
+      "subject": "music",
+      "topic": "scales",
+      "concept": "scales.major",
+      "question": "What is the pattern of a major scale?",
+      "options": [
+        "W-W-H-W-W-W-H",
+        "W-H-W-W-H-W-W",
+        "H-W-W-W-H-W-W",
+        "W-W-W-H-W-W-H"
+      ],
+      "correctAnswer": "W-W-H-W-W-W-H",
+      "explanation": "Major scale pattern: Whole, Whole, Half, Whole, Whole, Whole, Half.",
+      "difficulty": 1,
+      "expectedTimeMs": 5336.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_scale_002",
+      "subject": "music",
+      "topic": "scales",
+      "concept": "scales.major",
+      "question": "How many notes are in a major scale?",
+      "options": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "correctAnswer": "7",
+      "explanation": "A major scale has 7 unique notes (the 8th note is the octave of the first).",
+      "difficulty": 1,
+      "expectedTimeMs": 5308.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_scale_003",
+      "subject": "music",
+      "topic": "scales",
+      "concept": "scales.key_signature",
+      "question": "The C major scale has how many sharps or flats?",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "correctAnswer": "0",
+      "explanation": "C major is the only major scale with no sharps or flats — all white keys.",
+      "difficulty": 1,
+      "expectedTimeMs": 5616.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_scale_004",
+      "subject": "music",
+      "topic": "scales",
+      "concept": "scales.major",
+      "question": "What notes make up the C major scale?",
+      "options": [
+        "C D E F G A B",
+        "C D E♭ F G A♭ B♭",
+        "C D♭ E♭ F G♭ A♭ B♭",
+        "C D E F♯ G A B"
+      ],
+      "correctAnswer": "C D E F G A B",
+      "explanation": "The C major scale: C, D, E, F, G, A, B — no sharps or flats.",
+      "difficulty": 1,
+      "expectedTimeMs": 5336.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_scale_005",
+      "subject": "music",
+      "topic": "scales",
+      "concept": "scales.degrees",
+      "question": "What is a pentatonic scale?",
+      "options": [
+        "A 7-note scale",
+        "A 5-note scale",
+        "A 12-note scale",
+        "A 3-note scale"
+      ],
+      "correctAnswer": "A 5-note scale",
+      "explanation": "'Penta' means five. A pentatonic scale contains exactly 5 notes per octave.",
+      "difficulty": 2,
+      "expectedTimeMs": 5056.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_scale_006",
+      "subject": "music",
+      "topic": "scales",
+      "concept": "scales.major",
+      "question": "The G major scale has one sharp. Which note is sharp?",
+      "options": [
+        "C♯",
+        "D♯",
+        "F♯",
+        "G♯"
+      ],
+      "correctAnswer": "F♯",
+      "explanation": "G major: G, A, B, C, D, E, F♯ — the F is sharped.",
+      "difficulty": 2,
+      "expectedTimeMs": 5784.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_scale_007",
+      "subject": "music",
+      "topic": "scales",
+      "concept": "scales.major",
+      "question": "What is the relative minor of C major?",
+      "options": [
+        "C minor",
+        "A minor",
+        "D minor",
+        "E minor"
+      ],
+      "correctAnswer": "A minor",
+      "explanation": "The relative minor starts on the 6th degree. In C major, that's A.",
+      "difficulty": 2,
+      "expectedTimeMs": 5364.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_scale_008",
+      "subject": "music",
+      "topic": "scales",
+      "concept": "scales.minor",
+      "question": "What is the pattern of a natural minor scale?",
+      "options": [
+        "W-H-W-W-H-W-W",
+        "W-W-H-W-W-W-H",
+        "W-H-W-W-W-H-W",
+        "H-W-W-H-W-W-W"
+      ],
+      "correctAnswer": "W-H-W-W-H-W-W",
+      "explanation": "Natural minor: Whole, Half, Whole, Whole, Half, Whole, Whole.",
+      "difficulty": 2,
+      "expectedTimeMs": 5560.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_scale_009",
+      "subject": "music",
+      "topic": "scales",
+      "concept": "scales.key_signature",
+      "question": "How many sharps does D major have?",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "correctAnswer": "2",
+      "explanation": "D major has F♯ and C♯ — two sharps.",
+      "difficulty": 2,
+      "expectedTimeMs": 5252.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_scale_010",
+      "subject": "music",
+      "topic": "scales",
+      "concept": "scales.key_signature",
+      "question": "The order of sharps in key signatures is:",
+      "options": [
+        "F C G D A E B",
+        "B E A D G C F",
+        "G D A E B F C",
+        "C G D A E B F"
+      ],
+      "correctAnswer": "F C G D A E B",
+      "explanation": "FCGDAEB — 'Fat Cats Go Down Alleys Eating Birds'.",
+      "difficulty": 3,
+      "expectedTimeMs": 5448.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_scale_011",
+      "subject": "music",
+      "topic": "scales",
+      "concept": "scales.key_signature",
+      "question": "The order of flats in key signatures is:",
+      "options": [
+        "F C G D A E B",
+        "B E A D G C F",
+        "G D A E B F C",
+        "A D G C F B E"
+      ],
+      "correctAnswer": "B E A D G C F",
+      "explanation": "BEADGCF — the reverse of the order of sharps.",
+      "difficulty": 3,
+      "expectedTimeMs": 5420.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_scale_012",
+      "subject": "music",
+      "topic": "scales",
+      "concept": "scales.major",
+      "question": "What is a chromatic scale?",
+      "options": [
+        "A scale using only white keys",
+        "A scale using all 12 semitones",
+        "A scale with 5 notes",
+        "A scale with only whole steps"
+      ],
+      "correctAnswer": "A scale using all 12 semitones",
+      "explanation": "A chromatic scale moves entirely by half steps through all 12 pitches.",
+      "difficulty": 2,
+      "expectedTimeMs": 5028.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_scale_013",
+      "subject": "music",
+      "topic": "scales",
+      "concept": "scales.minor",
+      "question": "What is a whole-tone scale?",
+      "options": [
+        "A scale using only whole steps",
+        "A scale using only half steps",
+        "A 5-note scale",
+        "A major scale"
+      ],
+      "correctAnswer": "A scale using only whole steps",
+      "explanation": "A whole-tone scale uses only whole steps, creating 6 equally-spaced notes.",
+      "difficulty": 3,
+      "expectedTimeMs": 5056.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_scale_014",
+      "subject": "music",
+      "topic": "scales",
+      "concept": "scales.minor",
+      "question": "What distinguishes a harmonic minor from a natural minor?",
+      "options": [
+        "Raised 6th degree",
+        "Raised 7th degree",
+        "Lowered 3rd degree",
+        "Raised 2nd degree"
+      ],
+      "correctAnswer": "Raised 7th degree",
+      "explanation": "The harmonic minor raises the 7th note by a half step, creating a leading tone.",
+      "difficulty": 3,
+      "expectedTimeMs": 5896.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_scale_015",
+      "subject": "music",
+      "topic": "scales",
+      "concept": "scales.minor",
+      "question": "What is the melodic minor scale (ascending)?",
+      "options": [
+        "Raises both the 6th and 7th degrees",
+        "Lowers the 3rd and 5th degrees",
+        "Same as natural minor",
+        "Same as major scale"
+      ],
+      "correctAnswer": "Raises both the 6th and 7th degrees",
+      "explanation": "Ascending melodic minor raises scale degrees 6 and 7; descending reverts to natural minor.",
+      "difficulty": 4,
+      "expectedTimeMs": 5532.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_scale_016",
+      "subject": "music",
+      "topic": "scales",
+      "concept": "scales.major",
+      "question": "How many flats does F major have?",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "correctAnswer": "1",
+      "explanation": "F major has one flat: B♭.",
+      "difficulty": 2,
+      "expectedTimeMs": 5224.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_scale_017",
+      "subject": "music",
+      "topic": "scales",
+      "concept": "scales.degrees",
+      "question": "What is the Dorian mode?",
+      "options": [
+        "A major scale starting on the 2nd degree",
+        "A major scale starting on the 3rd degree",
+        "A minor scale with a raised 4th",
+        "A scale with no half steps"
+      ],
+      "correctAnswer": "A major scale starting on the 2nd degree",
+      "explanation": "Dorian is the 2nd mode: D E F G A B C D (using C major notes starting on D).",
+      "difficulty": 4,
+      "expectedTimeMs": 4972.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_scale_018",
+      "subject": "music",
+      "topic": "scales",
+      "concept": "scales.major",
+      "question": "What is the Mixolydian mode?",
+      "options": [
+        "Major scale starting on the 5th degree",
+        "Minor scale starting on the 3rd degree",
+        "A pentatonic variation",
+        "A chromatic mode"
+      ],
+      "correctAnswer": "Major scale starting on the 5th degree",
+      "explanation": "Mixolydian is the 5th mode: like a major scale with a flattened 7th.",
+      "difficulty": 4,
+      "expectedTimeMs": 5084.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_scale_019",
+      "subject": "music",
+      "topic": "scales",
+      "concept": "scales.key_signature",
+      "question": "What key has 4 sharps?",
+      "options": [
+        "A major",
+        "D major",
+        "E major",
+        "B major"
+      ],
+      "correctAnswer": "E major",
+      "explanation": "E major: F♯, C♯, G♯, D♯ — four sharps.",
+      "difficulty": 3,
+      "expectedTimeMs": 4916.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_scale_020",
+      "subject": "music",
+      "topic": "scales",
+      "concept": "scales.minor",
+      "question": "What key has 3 flats?",
+      "options": [
+        "B♭ major",
+        "E♭ major",
+        "A♭ major",
+        "D♭ major"
+      ],
+      "correctAnswer": "E♭ major",
+      "explanation": "E♭ major has B♭, E♭, and A♭ — three flats.",
+      "difficulty": 3,
+      "expectedTimeMs": 4888.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_scale_021",
+      "subject": "music",
+      "topic": "scales",
+      "concept": "scales.degrees",
+      "question": "What is a blues scale?",
+      "options": [
+        "A major scale with a flat 3rd",
+        "A minor pentatonic scale with an added ♭5",
+        "A whole-tone scale",
+        "A chromatic scale"
+      ],
+      "correctAnswer": "A minor pentatonic scale with an added ♭5",
+      "explanation": "The blues scale adds the 'blue note' (♭5) to the minor pentatonic scale.",
+      "difficulty": 4,
+      "expectedTimeMs": 4916.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_scale_022",
+      "subject": "music",
+      "topic": "scales",
+      "concept": "scales.major",
+      "question": "What interval is from C to G?",
+      "options": [
+        "Perfect 4th",
+        "Perfect 5th",
+        "Major 3rd",
+        "Minor 6th"
+      ],
+      "correctAnswer": "Perfect 5th",
+      "explanation": "C to G spans 5 letter names (C-D-E-F-G) and 7 semitones = Perfect 5th.",
+      "difficulty": 2,
+      "expectedTimeMs": 5112.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_scale_023",
+      "subject": "music",
+      "topic": "scales",
+      "concept": "scales.degrees",
+      "question": "What is a tritone?",
+      "options": [
+        "An interval of 3 semitones",
+        "An interval of 6 semitones",
+        "An interval of 7 semitones",
+        "An interval of 12 semitones"
+      ],
+      "correctAnswer": "An interval of 6 semitones",
+      "explanation": "A tritone spans 6 semitones (3 whole tones), e.g., C to F♯.",
+      "difficulty": 5,
+      "expectedTimeMs": 4804.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_scale_024",
+      "subject": "music",
+      "topic": "scales",
+      "concept": "scales.degrees",
+      "question": "What is the Locrian mode known for?",
+      "options": [
+        "Its bright sound",
+        "Having a diminished 5th",
+        "Being identical to major",
+        "Having no half steps"
+      ],
+      "correctAnswer": "Having a diminished 5th",
+      "explanation": "Locrian (7th mode) has a diminished 5th, making it unstable and rarely used as a tonal center.",
+      "difficulty": 5,
+      "expectedTimeMs": 5280.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_scale_025",
+      "subject": "music",
+      "topic": "scales",
+      "concept": "scales.degrees",
+      "question": "In the circle of fifths, what key is directly opposite C major?",
+      "options": [
+        "F major",
+        "G♭/F♯ major",
+        "D major",
+        "A major"
+      ],
+      "correctAnswer": "G♭/F♯ major",
+      "explanation": "G♭/F♯ major sits opposite C major on the circle of fifths (6 sharps or 6 flats).",
+      "difficulty": 5,
+      "expectedTimeMs": 6064.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_time_001",
+      "subject": "music",
+      "topic": "time_signatures",
+      "concept": "time.beats_per_measure",
+      "question": "What does the top number in a time signature indicate?",
+      "options": [
+        "The note that gets one beat",
+        "The number of beats per measure",
+        "The tempo",
+        "The key"
+      ],
+      "correctAnswer": "The number of beats per measure",
+      "explanation": "The top number tells how many beats are in each measure.",
+      "difficulty": 1,
+      "expectedTimeMs": 5812.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_time_002",
+      "subject": "music",
+      "topic": "time_signatures",
+      "concept": "time.beats_per_measure",
+      "question": "What does the bottom number in a time signature indicate?",
+      "options": [
+        "Number of measures",
+        "The note value that gets one beat",
+        "The number of beats",
+        "The tempo"
+      ],
+      "correctAnswer": "The note value that gets one beat",
+      "explanation": "Bottom number 4 = quarter note gets one beat; 8 = eighth note gets one beat.",
+      "difficulty": 1,
+      "expectedTimeMs": 5896.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_time_003",
+      "subject": "music",
+      "topic": "time_signatures",
+      "concept": "time.beats_per_measure",
+      "question": "What is 4/4 time also known as?",
+      "options": [
+        "Waltz time",
+        "Common time",
+        "Cut time",
+        "March time"
+      ],
+      "correctAnswer": "Common time",
+      "explanation": "4/4 is called 'common time' because it's the most frequently used time signature.",
+      "difficulty": 1,
+      "expectedTimeMs": 5168.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_time_004",
+      "subject": "music",
+      "topic": "time_signatures",
+      "concept": "time.beats_per_measure",
+      "question": "How many beats per measure does 3/4 time have?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "6"
+      ],
+      "correctAnswer": "3",
+      "explanation": "3/4 time has 3 quarter-note beats per measure. It's often used for waltzes.",
+      "difficulty": 1,
+      "expectedTimeMs": 5588.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_time_005",
+      "subject": "music",
+      "topic": "time_signatures",
+      "concept": "time.beats_per_measure",
+      "question": "What is 'cut time' (alla breve)?",
+      "options": [
+        "4/4 time",
+        "2/2 time",
+        "6/8 time",
+        "3/4 time"
+      ],
+      "correctAnswer": "2/2 time",
+      "explanation": "Cut time (₵) = 2/2, meaning 2 half-note beats per measure. Feels faster than 4/4.",
+      "difficulty": 2,
+      "expectedTimeMs": 5196.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_time_006",
+      "subject": "music",
+      "topic": "time_signatures",
+      "concept": "time.simple_compound",
+      "question": "3/4 time is commonly used for which dance?",
+      "options": [
+        "Tango",
+        "Waltz",
+        "Polka",
+        "March"
+      ],
+      "correctAnswer": "Waltz",
+      "explanation": "The waltz is characterized by its 3/4 time: ONE-two-three, ONE-two-three.",
+      "difficulty": 1,
+      "expectedTimeMs": 5476.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_time_007",
+      "subject": "music",
+      "topic": "time_signatures",
+      "concept": "time.simple_compound",
+      "question": "What is the difference between simple and compound time?",
+      "options": [
+        "Simple is faster",
+        "In simple time beats divide into 2; in compound, into 3",
+        "Compound has more measures",
+        "There is no difference"
+      ],
+      "correctAnswer": "In simple time beats divide into 2; in compound, into 3",
+      "explanation": "Simple time: beats subdivide in 2. Compound time: beats subdivide in 3.",
+      "difficulty": 3,
+      "expectedTimeMs": 5868.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_time_008",
+      "subject": "music",
+      "topic": "time_signatures",
+      "concept": "time.simple_compound",
+      "question": "6/8 time is an example of:",
+      "options": [
+        "Simple duple",
+        "Simple triple",
+        "Compound duple",
+        "Compound triple"
+      ],
+      "correctAnswer": "Compound duple",
+      "explanation": "6/8 = 2 groups of 3 eighth notes = compound duple (2 dotted-quarter beats).",
+      "difficulty": 3,
+      "expectedTimeMs": 5028.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_time_009",
+      "subject": "music",
+      "topic": "time_signatures",
+      "concept": "time.simple_compound",
+      "question": "How many dotted-quarter-note beats are in 6/8 time?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "6"
+      ],
+      "correctAnswer": "2",
+      "explanation": "6/8 has 2 main beats, each a dotted quarter note (3 eighth notes each).",
+      "difficulty": 2,
+      "expectedTimeMs": 5728.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_time_010",
+      "subject": "music",
+      "topic": "time_signatures",
+      "concept": "time.beats_per_measure",
+      "question": "What is 2/4 time typically used for?",
+      "options": [
+        "Waltzes",
+        "Marches and polkas",
+        "Lullabies",
+        "Jazz ballads"
+      ],
+      "correctAnswer": "Marches and polkas",
+      "explanation": "2/4 time (two quarter-note beats) creates the strong LEFT-right marching feel.",
+      "difficulty": 2,
+      "expectedTimeMs": 5308.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_time_011",
+      "subject": "music",
+      "topic": "time_signatures",
+      "concept": "time.simple_compound",
+      "question": "9/8 time is an example of:",
+      "options": [
+        "Simple triple",
+        "Compound triple",
+        "Simple quadruple",
+        "Compound duple"
+      ],
+      "correctAnswer": "Compound triple",
+      "explanation": "9/8 = 3 groups of 3 eighth notes = compound triple meter.",
+      "difficulty": 3,
+      "expectedTimeMs": 5028.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_time_012",
+      "subject": "music",
+      "topic": "time_signatures",
+      "concept": "time.beats_per_measure",
+      "question": "What is a downbeat?",
+      "options": [
+        "The last beat of a measure",
+        "The first beat of a measure",
+        "A soft beat",
+        "An off-beat"
+      ],
+      "correctAnswer": "The first beat of a measure",
+      "explanation": "The downbeat is beat 1, the strongest beat in a measure.",
+      "difficulty": 1,
+      "expectedTimeMs": 4832.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_time_013",
+      "subject": "music",
+      "topic": "time_signatures",
+      "concept": "time.beats_per_measure",
+      "question": "In 4/4 time, which beats are strong?",
+      "options": [
+        "1 and 2",
+        "1 and 3",
+        "2 and 4",
+        "All beats equally"
+      ],
+      "correctAnswer": "1 and 3",
+      "explanation": "In 4/4: beat 1 is strongest, beat 3 is secondary strong. Beats 2 and 4 are weak.",
+      "difficulty": 2,
+      "expectedTimeMs": 5308.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_time_014",
+      "subject": "music",
+      "topic": "time_signatures",
+      "concept": "time.beats_per_measure",
+      "question": "What is an irregular (asymmetric) time signature?",
+      "options": [
+        "4/4 time",
+        "A time signature that can't be divided into equal groups of 2 or 3",
+        "3/4 time",
+        "6/8 time"
+      ],
+      "correctAnswer": "A time signature that can't be divided into equal groups of 2 or 3",
+      "explanation": "Examples: 5/4 (3+2 or 2+3), 7/8 (2+2+3). These create uneven groupings.",
+      "difficulty": 4,
+      "expectedTimeMs": 5672.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_time_015",
+      "subject": "music",
+      "topic": "time_signatures",
+      "concept": "time.beats_per_measure",
+      "question": "The song 'Take Five' by Dave Brubeck is in what time signature?",
+      "options": [
+        "4/4",
+        "3/4",
+        "5/4",
+        "7/8"
+      ],
+      "correctAnswer": "5/4",
+      "explanation": "'Take Five' is one of the most famous pieces in 5/4 time.",
+      "difficulty": 3,
+      "expectedTimeMs": 6064.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_time_016",
+      "subject": "music",
+      "topic": "time_signatures",
+      "concept": "time.simple_compound",
+      "question": "What does 12/8 time feel like?",
+      "options": [
+        "4 beats, each subdivided into 3",
+        "12 even beats",
+        "6 beats subdivided into 2",
+        "3 beats subdivided into 4"
+      ],
+      "correctAnswer": "4 beats, each subdivided into 3",
+      "explanation": "12/8 = compound quadruple: 4 dotted-quarter beats, each with 3 eighth-note subdivisions.",
+      "difficulty": 3,
+      "expectedTimeMs": 5140.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_time_017",
+      "subject": "music",
+      "topic": "time_signatures",
+      "concept": "time.beats_per_measure",
+      "question": "What is a time signature change (meter change)?",
+      "options": [
+        "Changing the key",
+        "Switching to a different time signature mid-piece",
+        "Changing the tempo",
+        "Changing the dynamics"
+      ],
+      "correctAnswer": "Switching to a different time signature mid-piece",
+      "explanation": "A meter change occurs when the time signature shifts during a composition.",
+      "difficulty": 3,
+      "expectedTimeMs": 5616.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_time_018",
+      "subject": "music",
+      "topic": "time_signatures",
+      "concept": "time.accent_pattern",
+      "question": "In 7/8 time, a common grouping is:",
+      "options": [
+        "3+4 or 2+2+3",
+        "7 equal beats",
+        "4+3 only",
+        "3+3+1"
+      ],
+      "correctAnswer": "3+4 or 2+2+3",
+      "explanation": "7/8 is typically grouped as 2+2+3, 3+2+2, or 3+4, depending on the composer's intent.",
+      "difficulty": 4,
+      "expectedTimeMs": 5252.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_time_019",
+      "subject": "music",
+      "topic": "time_signatures",
+      "concept": "time.beats_per_measure",
+      "question": "What is a polymetric composition?",
+      "options": [
+        "Music using one time signature",
+        "Music with multiple simultaneous time signatures",
+        "Music without any meter",
+        "Music that gradually changes tempo"
+      ],
+      "correctAnswer": "Music with multiple simultaneous time signatures",
+      "explanation": "Polymetric music layers different time signatures simultaneously (e.g., 3/4 against 4/4).",
+      "difficulty": 5,
+      "expectedTimeMs": 5224.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_time_020",
+      "subject": "music",
+      "topic": "time_signatures",
+      "concept": "time.anacrusis",
+      "question": "What is 'free time' (senza misura) in music?",
+      "options": [
+        "Playing in 4/4",
+        "Playing without a strict beat or meter",
+        "Playing very fast",
+        "Playing in compound time"
+      ],
+      "correctAnswer": "Playing without a strict beat or meter",
+      "explanation": "Senza misura means 'without measure' — the performer plays freely without strict tempo.",
+      "difficulty": 4,
+      "expectedTimeMs": 5532.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_time_021",
+      "subject": "music",
+      "topic": "time_signatures",
+      "concept": "time.beats_per_measure",
+      "question": "What is a bar line?",
+      "options": [
+        "A line above the staff",
+        "A vertical line separating measures",
+        "A line connecting notes",
+        "A dynamic marking"
+      ],
+      "correctAnswer": "A vertical line separating measures",
+      "explanation": "Bar lines are vertical lines on the staff that divide music into measures.",
+      "difficulty": 1,
+      "expectedTimeMs": 4832.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_time_022",
+      "subject": "music",
+      "topic": "time_signatures",
+      "concept": "time.beats_per_measure",
+      "question": "What does a double bar line at the end of a piece indicate?",
+      "options": [
+        "Repeat the piece",
+        "The end of the composition",
+        "Change time signature",
+        "Play louder"
+      ],
+      "correctAnswer": "The end of the composition",
+      "explanation": "A final double bar line (one thin, one thick) marks the end of a piece.",
+      "difficulty": 1,
+      "expectedTimeMs": 5952.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_time_023",
+      "subject": "music",
+      "topic": "time_signatures",
+      "concept": "time.beats_per_measure",
+      "question": "What is mixed meter?",
+      "options": [
+        "Using only one time signature",
+        "Alternating between different time signatures",
+        "Mixing major and minor",
+        "Playing in unison"
+      ],
+      "correctAnswer": "Alternating between different time signatures",
+      "explanation": "Mixed meter alternates time signatures, e.g., one bar of 5/8 then one of 7/8.",
+      "difficulty": 4,
+      "expectedTimeMs": 4860.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_time_024",
+      "subject": "music",
+      "topic": "time_signatures",
+      "concept": "time.accent_pattern",
+      "question": "What is additive meter?",
+      "options": [
+        "Adding more instruments",
+        "Grouping beats in irregular combinations within a measure",
+        "Playing louder over time",
+        "Increasing the tempo"
+      ],
+      "correctAnswer": "Grouping beats in irregular combinations within a measure",
+      "explanation": "Additive meter combines groups of 2s and 3s: e.g., 3+3+2 in 8/8 time.",
+      "difficulty": 5,
+      "expectedTimeMs": 4944.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "mus_time_025",
+      "subject": "music",
+      "topic": "time_signatures",
+      "concept": "time.beats_per_measure",
+      "question": "The 'Mission: Impossible' theme uses which unusual time signature?",
+      "options": [
+        "4/4",
+        "3/4",
+        "5/4",
+        "6/8"
+      ],
+      "correctAnswer": "5/4",
+      "explanation": "The iconic Mission: Impossible theme by Lalo Schifrin is in 5/4 time.",
+      "difficulty": 3,
+      "expectedTimeMs": 6148.0,
+      "misconceptionTags": []
+    }
+  ]
+}
