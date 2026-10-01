@@ -22,6 +22,9 @@ ExportedObj/
 *.sln
 *.slnx
 *.suo
+
+# Compile-harness build output
+Tools/out/
 *.tmp
 *.user
 *.userprefs
