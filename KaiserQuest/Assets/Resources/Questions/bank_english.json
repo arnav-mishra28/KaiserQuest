@@ -1,0 +1,1806 @@
+{
+  "subject": "english",
+  "count": 100,
+  "questions": [
+    {
+      "id": "eng_gram_001",
+      "subject": "english",
+      "topic": "grammar",
+      "concept": "grammar.parts_of_speech",
+      "question": "What part of speech is the word 'quickly' in: 'She ran quickly.'?",
+      "options": [
+        "Noun",
+        "Verb",
+        "Adjective",
+        "Adverb"
+      ],
+      "correctAnswer": "Adverb",
+      "explanation": "'Quickly' modifies the verb 'ran', describing how she ran. Adverbs modify verbs.",
+      "difficulty": 1,
+      "expectedTimeMs": 6120.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_gram_002",
+      "subject": "english",
+      "topic": "grammar",
+      "concept": "grammar.parts_of_speech",
+      "question": "Identify the noun in: 'The cat sat on the mat.'",
+      "options": [
+        "sat",
+        "on",
+        "cat",
+        "the"
+      ],
+      "correctAnswer": "cat",
+      "explanation": "'Cat' is a noun — a word that names a person, place, thing, or animal.",
+      "difficulty": 1,
+      "expectedTimeMs": 5616.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_gram_003",
+      "subject": "english",
+      "topic": "grammar",
+      "concept": "grammar.tense",
+      "question": "Which sentence is in the past tense?",
+      "options": [
+        "I will eat lunch.",
+        "I eat lunch.",
+        "I ate lunch.",
+        "I am eating lunch."
+      ],
+      "correctAnswer": "I ate lunch.",
+      "explanation": "'Ate' is the past tense of 'eat'.",
+      "difficulty": 1,
+      "expectedTimeMs": 5308.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_gram_004",
+      "subject": "english",
+      "topic": "grammar",
+      "concept": "grammar.parts_of_speech",
+      "question": "What is the plural of 'child'?",
+      "options": [
+        "Childs",
+        "Childes",
+        "Children",
+        "Childrens"
+      ],
+      "correctAnswer": "Children",
+      "explanation": "'Child' is an irregular noun; its plural form is 'children'.",
+      "difficulty": 1,
+      "expectedTimeMs": 5140.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_gram_005",
+      "subject": "english",
+      "topic": "grammar",
+      "concept": "grammar.parts_of_speech",
+      "question": "Which word is a conjunction? 'I like tea and coffee.'",
+      "options": [
+        "I",
+        "like",
+        "and",
+        "coffee"
+      ],
+      "correctAnswer": "and",
+      "explanation": "'And' is a coordinating conjunction connecting two nouns.",
+      "difficulty": 1,
+      "expectedTimeMs": 5784.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_gram_006",
+      "subject": "english",
+      "topic": "grammar",
+      "concept": "grammar.tense",
+      "question": "Choose the correct form: 'She ___ to school every day.'",
+      "options": [
+        "go",
+        "goes",
+        "going",
+        "gone"
+      ],
+      "correctAnswer": "goes",
+      "explanation": "Third-person singular present tense requires 'goes'.",
+      "difficulty": 1,
+      "expectedTimeMs": 5840.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_gram_007",
+      "subject": "english",
+      "topic": "grammar",
+      "concept": "grammar.punctuation",
+      "question": "What type of sentence is: 'Close the door!'?",
+      "options": [
+        "Declarative",
+        "Interrogative",
+        "Imperative",
+        "Exclamatory"
+      ],
+      "correctAnswer": "Imperative",
+      "explanation": "An imperative sentence gives a command or makes a request.",
+      "difficulty": 2,
+      "expectedTimeMs": 5532.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_gram_008",
+      "subject": "english",
+      "topic": "grammar",
+      "concept": "grammar.parts_of_speech",
+      "question": "Which sentence uses the correct possessive form?",
+      "options": [
+        "The dog's bone is here.",
+        "The dogs' bone is here.",
+        "The dog bone's is here.",
+        "The dogs bone is here."
+      ],
+      "correctAnswer": "The dog's bone is here.",
+      "explanation": "For a singular noun, add 's to show possession.",
+      "difficulty": 2,
+      "expectedTimeMs": 5644.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_gram_009",
+      "subject": "english",
+      "topic": "grammar",
+      "concept": "grammar.parts_of_speech",
+      "question": "Identify the preposition: 'The book is on the table.'",
+      "options": [
+        "book",
+        "is",
+        "on",
+        "table"
+      ],
+      "correctAnswer": "on",
+      "explanation": "'On' is a preposition showing the relationship between the book and the table.",
+      "difficulty": 1,
+      "expectedTimeMs": 5784.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_gram_010",
+      "subject": "english",
+      "topic": "grammar",
+      "concept": "grammar.tense",
+      "question": "'She has been studying for three hours.' What tense is this?",
+      "options": [
+        "Present simple",
+        "Past simple",
+        "Present perfect continuous",
+        "Future perfect"
+      ],
+      "correctAnswer": "Present perfect continuous",
+      "explanation": "'Has been studying' = has + been + verb-ing = present perfect continuous.",
+      "difficulty": 3,
+      "expectedTimeMs": 5980.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_gram_011",
+      "subject": "english",
+      "topic": "grammar",
+      "concept": "grammar.parts_of_speech",
+      "question": "Which sentence has a subject-verb agreement error?",
+      "options": [
+        "The dogs run fast.",
+        "The cat sits quietly.",
+        "The children plays outside.",
+        "She reads every night."
+      ],
+      "correctAnswer": "The children plays outside.",
+      "explanation": "'Children' is plural, so the verb should be 'play' (not 'plays').",
+      "difficulty": 2,
+      "expectedTimeMs": 5700.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_gram_012",
+      "subject": "english",
+      "topic": "grammar",
+      "concept": "grammar.agreement",
+      "question": "What is the comparative form of 'good'?",
+      "options": [
+        "Gooder",
+        "More good",
+        "Better",
+        "Best"
+      ],
+      "correctAnswer": "Better",
+      "explanation": "'Good' is irregular: good → better → best.",
+      "difficulty": 2,
+      "expectedTimeMs": 5392.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_gram_013",
+      "subject": "english",
+      "topic": "grammar",
+      "concept": "grammar.punctuation",
+      "question": "Which sentence uses a semicolon correctly?",
+      "options": [
+        "I like pizza; it's my favorite food.",
+        "I like; pizza it's my favorite.",
+        "I like pizza it's; my favorite food.",
+        "I; like pizza it's my favorite food."
+      ],
+      "correctAnswer": "I like pizza; it's my favorite food.",
+      "explanation": "A semicolon connects two closely related independent clauses.",
+      "difficulty": 3,
+      "expectedTimeMs": 5476.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_gram_014",
+      "subject": "english",
+      "topic": "grammar",
+      "concept": "grammar.parts_of_speech",
+      "question": "What is a pronoun?",
+      "options": [
+        "A word that describes a noun",
+        "A word that replaces a noun",
+        "A word that modifies a verb",
+        "A word that connects clauses"
+      ],
+      "correctAnswer": "A word that replaces a noun",
+      "explanation": "Pronouns (he, she, it, they) take the place of nouns.",
+      "difficulty": 1,
+      "expectedTimeMs": 4804.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_gram_015",
+      "subject": "english",
+      "topic": "grammar",
+      "concept": "grammar.pronouns",
+      "question": "'If I were rich, I would travel.' This is an example of:",
+      "options": [
+        "Past tense",
+        "Future tense",
+        "Subjunctive mood",
+        "Indicative mood"
+      ],
+      "correctAnswer": "Subjunctive mood",
+      "explanation": "'If I were' uses the subjunctive mood for hypothetical situations.",
+      "difficulty": 4,
+      "expectedTimeMs": 5868.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_gram_016",
+      "subject": "english",
+      "topic": "grammar",
+      "concept": "grammar.pronouns",
+      "question": "Which sentence contains a dangling modifier?",
+      "options": [
+        "Running quickly, she caught the bus.",
+        "Running quickly, the bus was caught.",
+        "She ran quickly to catch the bus.",
+        "The bus left before she arrived."
+      ],
+      "correctAnswer": "Running quickly, the bus was caught.",
+      "explanation": "The modifier 'running quickly' doesn't logically modify 'the bus'.",
+      "difficulty": 4,
+      "expectedTimeMs": 5532.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_gram_017",
+      "subject": "english",
+      "topic": "grammar",
+      "concept": "grammar.pronouns",
+      "question": "What is the passive voice of: 'The chef cooked the meal'?",
+      "options": [
+        "The meal was cooked by the chef.",
+        "The meal cooked the chef.",
+        "The chef was cooking the meal.",
+        "Cooking was done by the chef."
+      ],
+      "correctAnswer": "The meal was cooked by the chef.",
+      "explanation": "In passive voice, the object becomes the subject: The meal was cooked by the chef.",
+      "difficulty": 3,
+      "expectedTimeMs": 5896.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_gram_018",
+      "subject": "english",
+      "topic": "grammar",
+      "concept": "grammar.agreement",
+      "question": "Choose the correct word: 'Their / There / They're going to the park.'",
+      "options": [
+        "Their",
+        "There",
+        "They're",
+        "Theyre"
+      ],
+      "correctAnswer": "They're",
+      "explanation": "'They're' = 'They are'. 'Their' shows possession. 'There' indicates place.",
+      "difficulty": 2,
+      "expectedTimeMs": 6232.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_gram_019",
+      "subject": "english",
+      "topic": "grammar",
+      "concept": "grammar.punctuation",
+      "question": "What type of clause is 'because she was tired' in: 'She left because she was tired'?",
+      "options": [
+        "Independent clause",
+        "Dependent clause",
+        "Relative clause",
+        "Noun clause"
+      ],
+      "correctAnswer": "Dependent clause",
+      "explanation": "'Because she was tired' cannot stand alone; it depends on the main clause.",
+      "difficulty": 3,
+      "expectedTimeMs": 6652.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_gram_020",
+      "subject": "english",
+      "topic": "grammar",
+      "concept": "grammar.agreement",
+      "question": "Which word is an interjection?",
+      "options": [
+        "However",
+        "Wow",
+        "Although",
+        "Because"
+      ],
+      "correctAnswer": "Wow",
+      "explanation": "An interjection expresses emotion and can stand alone. 'Wow!' is an interjection.",
+      "difficulty": 2,
+      "expectedTimeMs": 5140.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_gram_021",
+      "subject": "english",
+      "topic": "grammar",
+      "concept": "grammar.parts_of_speech",
+      "question": "Identify the correct sentence:",
+      "options": [
+        "Me and him went to the store.",
+        "Him and I went to the store.",
+        "He and I went to the store.",
+        "I and he went to the store."
+      ],
+      "correctAnswer": "He and I went to the store.",
+      "explanation": "Use subject pronouns (He, I) as subjects of the sentence.",
+      "difficulty": 2,
+      "expectedTimeMs": 5140.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_gram_022",
+      "subject": "english",
+      "topic": "grammar",
+      "concept": "grammar.parts_of_speech",
+      "question": "What is an infinitive?",
+      "options": [
+        "A verb ending in -ing",
+        "A verb with 'to' (e.g., to run)",
+        "A past participle",
+        "A helping verb"
+      ],
+      "correctAnswer": "A verb with 'to' (e.g., to run)",
+      "explanation": "An infinitive is the base form of a verb preceded by 'to': to eat, to run, to sleep.",
+      "difficulty": 3,
+      "expectedTimeMs": 4916.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_gram_023",
+      "subject": "english",
+      "topic": "grammar",
+      "concept": "grammar.parts_of_speech",
+      "question": "Which sentence uses 'affect' correctly?",
+      "options": [
+        "The medicine had a good affect.",
+        "The weather will affect our plans.",
+        "She affect the outcome.",
+        "The affect was immediate."
+      ],
+      "correctAnswer": "The weather will affect our plans.",
+      "explanation": "'Affect' is typically a verb meaning to influence. 'Effect' is typically a noun.",
+      "difficulty": 3,
+      "expectedTimeMs": 5392.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_gram_024",
+      "subject": "english",
+      "topic": "grammar",
+      "concept": "grammar.parts_of_speech",
+      "question": "'Neither the teacher nor the students ___ ready.' Fill in the blank.",
+      "options": [
+        "is",
+        "are",
+        "was",
+        "has been"
+      ],
+      "correctAnswer": "are",
+      "explanation": "With 'neither...nor', the verb agrees with the nearer subject ('students' = plural).",
+      "difficulty": 4,
+      "expectedTimeMs": 6204.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_gram_025",
+      "subject": "english",
+      "topic": "grammar",
+      "concept": "grammar.punctuation",
+      "question": "Which sentence demonstrates correct use of the Oxford comma?",
+      "options": [
+        "I bought apples oranges and bananas.",
+        "I bought apples, oranges, and bananas.",
+        "I bought apples, oranges and bananas.",
+        "I bought, apples oranges and bananas."
+      ],
+      "correctAnswer": "I bought apples, oranges, and bananas.",
+      "explanation": "The Oxford comma is placed before 'and' in a list of three or more items.",
+      "difficulty": 3,
+      "expectedTimeMs": 5980.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_sent_001",
+      "subject": "english",
+      "topic": "sentence_structure",
+      "concept": "structure.clauses",
+      "question": "What is a simple sentence?",
+      "options": [
+        "A sentence with two clauses",
+        "A sentence with one independent clause",
+        "A sentence with a dependent clause",
+        "A very short sentence"
+      ],
+      "correctAnswer": "A sentence with one independent clause",
+      "explanation": "A simple sentence contains exactly one independent clause and no dependent clauses.",
+      "difficulty": 1,
+      "expectedTimeMs": 5028.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_sent_002",
+      "subject": "english",
+      "topic": "sentence_structure",
+      "concept": "structure.clauses",
+      "question": "Which is a compound sentence?",
+      "options": [
+        "I like dogs.",
+        "I like dogs, and she likes cats.",
+        "Although I like dogs, she likes cats.",
+        "Dogs are loyal pets."
+      ],
+      "correctAnswer": "I like dogs, and she likes cats.",
+      "explanation": "A compound sentence has two independent clauses joined by a conjunction.",
+      "difficulty": 2,
+      "expectedTimeMs": 5112.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_sent_003",
+      "subject": "english",
+      "topic": "sentence_structure",
+      "concept": "structure.clauses",
+      "question": "What is the subject of: 'The tall boy ran home'?",
+      "options": [
+        "tall",
+        "boy",
+        "ran",
+        "home"
+      ],
+      "correctAnswer": "boy",
+      "explanation": "The subject is 'boy' — the person performing the action. 'Tall' is a modifier.",
+      "difficulty": 1,
+      "expectedTimeMs": 5644.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_sent_004",
+      "subject": "english",
+      "topic": "sentence_structure",
+      "concept": "structure.clauses",
+      "question": "Identify the predicate in: 'My cat sleeps all day.'",
+      "options": [
+        "My cat",
+        "sleeps all day",
+        "My",
+        "all day"
+      ],
+      "correctAnswer": "sleeps all day",
+      "explanation": "The predicate includes the verb and everything that follows: 'sleeps all day'.",
+      "difficulty": 1,
+      "expectedTimeMs": 5728.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_sent_005",
+      "subject": "english",
+      "topic": "sentence_structure",
+      "concept": "structure.clauses",
+      "question": "Which sentence is a complex sentence?",
+      "options": [
+        "I ate lunch.",
+        "I ate lunch and went home.",
+        "Because I was hungry, I ate lunch.",
+        "Lunch was delicious."
+      ],
+      "correctAnswer": "Because I was hungry, I ate lunch.",
+      "explanation": "A complex sentence has one independent clause and one or more dependent clauses.",
+      "difficulty": 2,
+      "expectedTimeMs": 5336.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_sent_006",
+      "subject": "english",
+      "topic": "sentence_structure",
+      "concept": "structure.fragments",
+      "question": "What is a sentence fragment?",
+      "options": [
+        "A complete thought",
+        "A group of words missing a subject or verb",
+        "A very long sentence",
+        "A question"
+      ],
+      "correctAnswer": "A group of words missing a subject or verb",
+      "explanation": "A fragment is an incomplete sentence that lacks a subject, verb, or complete thought.",
+      "difficulty": 1,
+      "expectedTimeMs": 5084.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_sent_007",
+      "subject": "english",
+      "topic": "sentence_structure",
+      "concept": "structure.fragments",
+      "question": "Which is a run-on sentence?",
+      "options": [
+        "I like pizza. She likes pasta.",
+        "I like pizza, she likes pasta.",
+        "I like pizza, and she likes pasta.",
+        "I like pizza; she likes pasta."
+      ],
+      "correctAnswer": "I like pizza, she likes pasta.",
+      "explanation": "A run-on uses only a comma to connect independent clauses (comma splice).",
+      "difficulty": 2,
+      "expectedTimeMs": 5056.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_sent_008",
+      "subject": "english",
+      "topic": "sentence_structure",
+      "concept": "structure.clauses",
+      "question": "What is the direct object in: 'She kicked the ball'?",
+      "options": [
+        "She",
+        "kicked",
+        "the",
+        "ball"
+      ],
+      "correctAnswer": "ball",
+      "explanation": "The direct object receives the action of the verb: She kicked what? The ball.",
+      "difficulty": 2,
+      "expectedTimeMs": 5756.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_sent_009",
+      "subject": "english",
+      "topic": "sentence_structure",
+      "concept": "structure.coordination",
+      "question": "Which word is the indirect object in: 'She gave him the book'?",
+      "options": [
+        "She",
+        "gave",
+        "him",
+        "book"
+      ],
+      "correctAnswer": "him",
+      "explanation": "The indirect object tells us to whom the action is done: She gave the book to him.",
+      "difficulty": 3,
+      "expectedTimeMs": 6036.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_sent_010",
+      "subject": "english",
+      "topic": "sentence_structure",
+      "concept": "structure.parallelism",
+      "question": "What is parallelism in writing?",
+      "options": [
+        "Using parallel lines",
+        "Using the same grammatical structure for similar ideas",
+        "Writing in two columns",
+        "Repeating the same word"
+      ],
+      "correctAnswer": "Using the same grammatical structure for similar ideas",
+      "explanation": "Parallelism means using consistent grammatical patterns: 'running, jumping, and swimming'.",
+      "difficulty": 3,
+      "expectedTimeMs": 5168.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_sent_011",
+      "subject": "english",
+      "topic": "sentence_structure",
+      "concept": "structure.parallelism",
+      "question": "Which shows correct parallelism?",
+      "options": [
+        "She likes to swim, running, and to hike.",
+        "She likes swimming, running, and hiking.",
+        "She likes to swim, to be running, and hike.",
+        "She likes swim, running, and to hike."
+      ],
+      "correctAnswer": "She likes swimming, running, and hiking.",
+      "explanation": "All items use the same form (-ing gerunds) for proper parallelism.",
+      "difficulty": 3,
+      "expectedTimeMs": 5196.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_sent_012",
+      "subject": "english",
+      "topic": "sentence_structure",
+      "concept": "structure.clauses",
+      "question": "What type of phrase is 'under the bridge'?",
+      "options": [
+        "Noun phrase",
+        "Verb phrase",
+        "Prepositional phrase",
+        "Adjective phrase"
+      ],
+      "correctAnswer": "Prepositional phrase",
+      "explanation": "It begins with the preposition 'under' and includes its object 'bridge'.",
+      "difficulty": 2,
+      "expectedTimeMs": 5476.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_sent_013",
+      "subject": "english",
+      "topic": "sentence_structure",
+      "concept": "structure.clauses",
+      "question": "A compound-complex sentence has:",
+      "options": [
+        "One independent clause only",
+        "Two independent clauses and at least one dependent clause",
+        "Only dependent clauses",
+        "Exactly three clauses"
+      ],
+      "correctAnswer": "Two independent clauses and at least one dependent clause",
+      "explanation": "Compound-complex = compound (2+ independent) + complex (1+ dependent).",
+      "difficulty": 4,
+      "expectedTimeMs": 5196.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_sent_014",
+      "subject": "english",
+      "topic": "sentence_structure",
+      "concept": "structure.coordination",
+      "question": "What is an appositive?",
+      "options": [
+        "A verb form",
+        "A noun or phrase that renames another noun",
+        "A type of conjunction",
+        "An exclamation"
+      ],
+      "correctAnswer": "A noun or phrase that renames another noun",
+      "explanation": "Example: 'My dog, a golden retriever, loves to swim.' 'A golden retriever' renames 'my dog'.",
+      "difficulty": 3,
+      "expectedTimeMs": 4916.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_sent_015",
+      "subject": "english",
+      "topic": "sentence_structure",
+      "concept": "structure.clauses",
+      "question": "In 'Although it rained, we went outside,' which is the dependent clause?",
+      "options": [
+        "we went outside",
+        "Although it rained",
+        "it rained",
+        "we went"
+      ],
+      "correctAnswer": "Although it rained",
+      "explanation": "'Although it rained' cannot stand alone; it depends on the main clause.",
+      "difficulty": 2,
+      "expectedTimeMs": 6316.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_sent_016",
+      "subject": "english",
+      "topic": "sentence_structure",
+      "concept": "structure.fragments",
+      "question": "What is the purpose of a topic sentence?",
+      "options": [
+        "To end a paragraph",
+        "To introduce the main idea of a paragraph",
+        "To provide evidence",
+        "To ask a question"
+      ],
+      "correctAnswer": "To introduce the main idea of a paragraph",
+      "explanation": "The topic sentence states the central point that the paragraph will develop.",
+      "difficulty": 2,
+      "expectedTimeMs": 5420.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_sent_017",
+      "subject": "english",
+      "topic": "sentence_structure",
+      "concept": "structure.clauses",
+      "question": "Which transition word shows contrast?",
+      "options": [
+        "Furthermore",
+        "However",
+        "Additionally",
+        "Therefore"
+      ],
+      "correctAnswer": "However",
+      "explanation": "'However' signals a contrast or contradiction with the previous idea.",
+      "difficulty": 2,
+      "expectedTimeMs": 5336.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_sent_018",
+      "subject": "english",
+      "topic": "sentence_structure",
+      "concept": "structure.coordination",
+      "question": "What is a gerund?",
+      "options": [
+        "A verb acting as an adjective",
+        "A verb form ending in -ing used as a noun",
+        "A helping verb",
+        "A past tense verb"
+      ],
+      "correctAnswer": "A verb form ending in -ing used as a noun",
+      "explanation": "A gerund is an -ing verb form used as a noun: 'Swimming is fun.'",
+      "difficulty": 3,
+      "expectedTimeMs": 4776.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_sent_019",
+      "subject": "english",
+      "topic": "sentence_structure",
+      "concept": "structure.clauses",
+      "question": "Identify the independent clause: 'When the bell rang, students left the room.'",
+      "options": [
+        "When the bell rang",
+        "students left the room",
+        "the bell rang",
+        "left the room"
+      ],
+      "correctAnswer": "students left the room",
+      "explanation": "'Students left the room' can stand alone as a complete sentence.",
+      "difficulty": 2,
+      "expectedTimeMs": 6484.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_sent_020",
+      "subject": "english",
+      "topic": "sentence_structure",
+      "concept": "structure.clauses",
+      "question": "What is a relative clause?",
+      "options": [
+        "A clause about family",
+        "A clause introduced by who, which, or that",
+        "A main clause",
+        "A clause with no verb"
+      ],
+      "correctAnswer": "A clause introduced by who, which, or that",
+      "explanation": "Relative clauses modify nouns: 'The man who called is my uncle.'",
+      "difficulty": 3,
+      "expectedTimeMs": 5028.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_sent_021",
+      "subject": "english",
+      "topic": "sentence_structure",
+      "concept": "structure.clauses",
+      "question": "Which is a correctly punctuated introductory phrase?",
+      "options": [
+        "After the movie we went home.",
+        "After the movie, we went home.",
+        "After, the movie we went home.",
+        "After the, movie we went home."
+      ],
+      "correctAnswer": "After the movie, we went home.",
+      "explanation": "Use a comma after an introductory phrase before the main clause.",
+      "difficulty": 2,
+      "expectedTimeMs": 5756.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_sent_022",
+      "subject": "english",
+      "topic": "sentence_structure",
+      "concept": "structure.clauses",
+      "question": "What is a participial phrase?",
+      "options": [
+        "A phrase beginning with a participle",
+        "A phrase with a preposition",
+        "A phrase with a conjunction",
+        "A phrase with a pronoun"
+      ],
+      "correctAnswer": "A phrase beginning with a participle",
+      "explanation": "Example: 'Running down the street, he tripped.' 'Running down the street' is participial.",
+      "difficulty": 4,
+      "expectedTimeMs": 5112.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_sent_023",
+      "subject": "english",
+      "topic": "sentence_structure",
+      "concept": "structure.fragments",
+      "question": "What is an elliptical sentence?",
+      "options": [
+        "A sentence shaped like an ellipse",
+        "A sentence with intentionally omitted words",
+        "A very long sentence",
+        "A sentence with no punctuation"
+      ],
+      "correctAnswer": "A sentence with intentionally omitted words",
+      "explanation": "Elliptical sentences omit words understood from context: 'She likes tea; he, coffee.'",
+      "difficulty": 5,
+      "expectedTimeMs": 5168.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_sent_024",
+      "subject": "english",
+      "topic": "sentence_structure",
+      "concept": "structure.clauses",
+      "question": "What is the difference between 'restrictive' and 'nonrestrictive' clauses?",
+      "options": [
+        "Restrictive uses 'that'; nonrestrictive uses 'which' with commas",
+        "There is no difference",
+        "Restrictive is longer",
+        "Nonrestrictive is more formal"
+      ],
+      "correctAnswer": "Restrictive uses 'that'; nonrestrictive uses 'which' with commas",
+      "explanation": "Restrictive: essential info (no commas). Nonrestrictive: extra info (commas).",
+      "difficulty": 5,
+      "expectedTimeMs": 6372.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_sent_025",
+      "subject": "english",
+      "topic": "sentence_structure",
+      "concept": "structure.clauses",
+      "question": "What is an absolute phrase?",
+      "options": [
+        "A phrase that modifies the entire sentence",
+        "A phrase with an absolute value",
+        "A phrase that is always true",
+        "A phrase at the end of a sentence"
+      ],
+      "correctAnswer": "A phrase that modifies the entire sentence",
+      "explanation": "Example: 'The sun having set, we went inside.' The absolute phrase modifies the whole sentence.",
+      "difficulty": 5,
+      "expectedTimeMs": 5056.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_vocab_001",
+      "subject": "english",
+      "topic": "vocabulary",
+      "concept": "vocab.affixes",
+      "question": "What does 'benevolent' mean?",
+      "options": [
+        "Cruel",
+        "Kind and generous",
+        "Angry",
+        "Sad"
+      ],
+      "correctAnswer": "Kind and generous",
+      "explanation": "'Benevolent' means well-meaning, kind, and generous. From Latin 'bene' (well) + 'volent' (wishing).",
+      "difficulty": 2,
+      "expectedTimeMs": 5084.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_vocab_002",
+      "subject": "english",
+      "topic": "vocabulary",
+      "concept": "vocab.synonyms",
+      "question": "What is a synonym for 'happy'?",
+      "options": [
+        "Sad",
+        "Joyful",
+        "Angry",
+        "Tired"
+      ],
+      "correctAnswer": "Joyful",
+      "explanation": "'Joyful' means full of joy, which is a synonym for happy.",
+      "difficulty": 1,
+      "expectedTimeMs": 5140.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_vocab_003",
+      "subject": "english",
+      "topic": "vocabulary",
+      "concept": "vocab.synonyms",
+      "question": "What is the antonym of 'ancient'?",
+      "options": [
+        "Old",
+        "Historic",
+        "Modern",
+        "Antique"
+      ],
+      "correctAnswer": "Modern",
+      "explanation": "'Ancient' means very old; its opposite is 'modern' (new, recent).",
+      "difficulty": 1,
+      "expectedTimeMs": 5224.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_vocab_004",
+      "subject": "english",
+      "topic": "vocabulary",
+      "concept": "vocab.affixes",
+      "question": "What does the prefix 'un-' mean?",
+      "options": [
+        "Again",
+        "Not",
+        "Before",
+        "After"
+      ],
+      "correctAnswer": "Not",
+      "explanation": "The prefix 'un-' means 'not': unhappy = not happy, unlikely = not likely.",
+      "difficulty": 1,
+      "expectedTimeMs": 5196.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_vocab_005",
+      "subject": "english",
+      "topic": "vocabulary",
+      "concept": "vocab.connotation",
+      "question": "What does 'eloquent' mean?",
+      "options": [
+        "Fluent and persuasive in speech",
+        "Quiet and shy",
+        "Rude and aggressive",
+        "Slow and careful"
+      ],
+      "correctAnswer": "Fluent and persuasive in speech",
+      "explanation": "'Eloquent' describes someone who speaks in a fluent and persuasive manner.",
+      "difficulty": 3,
+      "expectedTimeMs": 5028.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_vocab_006",
+      "subject": "english",
+      "topic": "vocabulary",
+      "concept": "vocab.context",
+      "question": "'The teacher was very *stern* with the students.' What does 'stern' mean?",
+      "options": [
+        "Funny",
+        "Strict and serious",
+        "Friendly",
+        "Confused"
+      ],
+      "correctAnswer": "Strict and serious",
+      "explanation": "'Stern' means serious and unrelenting, especially in discipline.",
+      "difficulty": 2,
+      "expectedTimeMs": 6344.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_vocab_007",
+      "subject": "english",
+      "topic": "vocabulary",
+      "concept": "vocab.idioms",
+      "question": "What does 'ubiquitous' mean?",
+      "options": [
+        "Rare",
+        "Present everywhere",
+        "Invisible",
+        "Expensive"
+      ],
+      "correctAnswer": "Present everywhere",
+      "explanation": "'Ubiquitous' means appearing or found everywhere. Smartphones are ubiquitous.",
+      "difficulty": 4,
+      "expectedTimeMs": 5084.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_vocab_008",
+      "subject": "english",
+      "topic": "vocabulary",
+      "concept": "vocab.affixes",
+      "question": "What is the root word in 'unbelievable'?",
+      "options": [
+        "un",
+        "believe",
+        "able",
+        "unbelieve"
+      ],
+      "correctAnswer": "believe",
+      "explanation": "'Believe' is the root; 'un-' is a prefix and '-able' is a suffix.",
+      "difficulty": 2,
+      "expectedTimeMs": 5420.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_vocab_009",
+      "subject": "english",
+      "topic": "vocabulary",
+      "concept": "vocab.connotation",
+      "question": "What does 'ambiguous' mean?",
+      "options": [
+        "Clear and obvious",
+        "Open to multiple interpretations",
+        "Frightening",
+        "Beautiful"
+      ],
+      "correctAnswer": "Open to multiple interpretations",
+      "explanation": "'Ambiguous' means having more than one possible meaning; unclear.",
+      "difficulty": 3,
+      "expectedTimeMs": 5056.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_vocab_010",
+      "subject": "english",
+      "topic": "vocabulary",
+      "concept": "vocab.context",
+      "question": "Choose the word that means 'a strong dislike':",
+      "options": [
+        "Apathy",
+        "Aversion",
+        "Affection",
+        "Admiration"
+      ],
+      "correctAnswer": "Aversion",
+      "explanation": "'Aversion' means a strong feeling of dislike or reluctance.",
+      "difficulty": 3,
+      "expectedTimeMs": 5588.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_vocab_011",
+      "subject": "english",
+      "topic": "vocabulary",
+      "concept": "vocab.affixes",
+      "question": "What does the suffix '-ology' mean?",
+      "options": [
+        "Fear of",
+        "Study of",
+        "Full of",
+        "Without"
+      ],
+      "correctAnswer": "Study of",
+      "explanation": "'-ology' means the study of: biology, psychology, geology.",
+      "difficulty": 2,
+      "expectedTimeMs": 5280.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_vocab_012",
+      "subject": "english",
+      "topic": "vocabulary",
+      "concept": "vocab.idioms",
+      "question": "What does 'ephemeral' mean?",
+      "options": [
+        "Lasting forever",
+        "Very short-lived",
+        "Extremely large",
+        "Deeply meaningful"
+      ],
+      "correctAnswer": "Very short-lived",
+      "explanation": "'Ephemeral' means lasting for a very short time, like a butterfly's life.",
+      "difficulty": 4,
+      "expectedTimeMs": 5056.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_vocab_013",
+      "subject": "english",
+      "topic": "vocabulary",
+      "concept": "vocab.connotation",
+      "question": "What is the meaning of 'pragmatic'?",
+      "options": [
+        "Idealistic",
+        "Practical and realistic",
+        "Dramatic",
+        "Romantic"
+      ],
+      "correctAnswer": "Practical and realistic",
+      "explanation": "'Pragmatic' means dealing with things sensibly and realistically.",
+      "difficulty": 3,
+      "expectedTimeMs": 5280.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_vocab_014",
+      "subject": "english",
+      "topic": "vocabulary",
+      "concept": "vocab.context",
+      "question": "What does 'meticulous' mean?",
+      "options": [
+        "Careless",
+        "Showing great attention to detail",
+        "Extremely fast",
+        "Very angry"
+      ],
+      "correctAnswer": "Showing great attention to detail",
+      "explanation": "'Meticulous' means very careful and precise about details.",
+      "difficulty": 3,
+      "expectedTimeMs": 5084.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_vocab_015",
+      "subject": "english",
+      "topic": "vocabulary",
+      "concept": "vocab.synonyms",
+      "question": "A word that sounds the same as another but has different meaning is called a:",
+      "options": [
+        "Synonym",
+        "Antonym",
+        "Homophone",
+        "Palindrome"
+      ],
+      "correctAnswer": "Homophone",
+      "explanation": "Homophones sound alike but differ in meaning: 'their/there/they're'.",
+      "difficulty": 2,
+      "expectedTimeMs": 6456.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_vocab_016",
+      "subject": "english",
+      "topic": "vocabulary",
+      "concept": "vocab.idioms",
+      "question": "What does 'cacophony' mean?",
+      "options": [
+        "Beautiful music",
+        "A harsh mixture of sounds",
+        "Complete silence",
+        "A musical instrument"
+      ],
+      "correctAnswer": "A harsh mixture of sounds",
+      "explanation": "'Cacophony' means a harsh, discordant mixture of sounds. From Greek 'kakos' (bad) + 'phone' (sound).",
+      "difficulty": 4,
+      "expectedTimeMs": 5056.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_vocab_017",
+      "subject": "english",
+      "topic": "vocabulary",
+      "concept": "vocab.connotation",
+      "question": "What is the meaning of 'resilient'?",
+      "options": [
+        "Fragile",
+        "Able to recover quickly from difficulties",
+        "Transparent",
+        "Rebellious"
+      ],
+      "correctAnswer": "Able to recover quickly from difficulties",
+      "explanation": "'Resilient' means able to withstand or recover quickly from tough conditions.",
+      "difficulty": 3,
+      "expectedTimeMs": 5280.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_vocab_018",
+      "subject": "english",
+      "topic": "vocabulary",
+      "concept": "vocab.affixes",
+      "question": "What does the Latin root 'dict' mean?",
+      "options": [
+        "Write",
+        "Say or speak",
+        "Lead",
+        "See"
+      ],
+      "correctAnswer": "Say or speak",
+      "explanation": "'Dict' means to say: dictionary, dictate, predict, verdict.",
+      "difficulty": 3,
+      "expectedTimeMs": 5336.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_vocab_019",
+      "subject": "english",
+      "topic": "vocabulary",
+      "concept": "vocab.idioms",
+      "question": "What does 'sycophant' mean?",
+      "options": [
+        "A type of tree",
+        "A person who flatters to gain advantage",
+        "A musical instrument",
+        "A type of illness"
+      ],
+      "correctAnswer": "A person who flatters to gain advantage",
+      "explanation": "A sycophant uses excessive flattery to win favor from influential people.",
+      "difficulty": 5,
+      "expectedTimeMs": 5056.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_vocab_020",
+      "subject": "english",
+      "topic": "vocabulary",
+      "concept": "vocab.connotation",
+      "question": "What does 'juxtapose' mean?",
+      "options": [
+        "To separate",
+        "To place side by side for comparison",
+        "To destroy",
+        "To build"
+      ],
+      "correctAnswer": "To place side by side for comparison",
+      "explanation": "'Juxtapose' means to place things close together for contrasting effect.",
+      "difficulty": 4,
+      "expectedTimeMs": 5056.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_vocab_021",
+      "subject": "english",
+      "topic": "vocabulary",
+      "concept": "vocab.synonyms",
+      "question": "What is a synonym for 'difficult'?",
+      "options": [
+        "Easy",
+        "Simple",
+        "Arduous",
+        "Pleasant"
+      ],
+      "correctAnswer": "Arduous",
+      "explanation": "'Arduous' means involving a lot of effort and difficulty.",
+      "difficulty": 2,
+      "expectedTimeMs": 5252.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_vocab_022",
+      "subject": "english",
+      "topic": "vocabulary",
+      "concept": "vocab.context",
+      "question": "What does 'lethargic' mean?",
+      "options": [
+        "Energetic",
+        "Sluggish and lacking energy",
+        "Intelligent",
+        "Musical"
+      ],
+      "correctAnswer": "Sluggish and lacking energy",
+      "explanation": "'Lethargic' means lacking energy, sluggish, drowsy.",
+      "difficulty": 3,
+      "expectedTimeMs": 5056.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_vocab_023",
+      "subject": "english",
+      "topic": "vocabulary",
+      "concept": "vocab.idioms",
+      "question": "What does 'gregarious' mean?",
+      "options": [
+        "Shy and withdrawn",
+        "Fond of company; sociable",
+        "Angry and hostile",
+        "Extremely intelligent"
+      ],
+      "correctAnswer": "Fond of company; sociable",
+      "explanation": "'Gregarious' describes someone who enjoys being with other people.",
+      "difficulty": 5,
+      "expectedTimeMs": 5084.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_vocab_024",
+      "subject": "english",
+      "topic": "vocabulary",
+      "concept": "vocab.affixes",
+      "question": "The word 'telephone' contains Greek roots meaning:",
+      "options": [
+        "Far + sound",
+        "Near + light",
+        "Small + write",
+        "Big + move"
+      ],
+      "correctAnswer": "Far + sound",
+      "explanation": "'Tele' = far, 'phone' = sound/voice. Telephone = far sound.",
+      "difficulty": 2,
+      "expectedTimeMs": 5700.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_vocab_025",
+      "subject": "english",
+      "topic": "vocabulary",
+      "concept": "vocab.connotation",
+      "question": "What does 'pernicious' mean?",
+      "options": [
+        "Helpful",
+        "Having a harmful effect, especially gradually",
+        "Very loud",
+        "Extremely beautiful"
+      ],
+      "correctAnswer": "Having a harmful effect, especially gradually",
+      "explanation": "'Pernicious' means having a harmful effect, especially in a gradual or subtle way.",
+      "difficulty": 5,
+      "expectedTimeMs": 5084.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_writ_001",
+      "subject": "english",
+      "topic": "writing",
+      "concept": "writing.order",
+      "question": "What is a thesis statement?",
+      "options": [
+        "The last sentence of an essay",
+        "A sentence stating the main argument of an essay",
+        "A question at the beginning",
+        "A summary of sources"
+      ],
+      "correctAnswer": "A sentence stating the main argument of an essay",
+      "explanation": "A thesis statement presents the central claim that the essay will support.",
+      "difficulty": 1,
+      "expectedTimeMs": 5056.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_writ_002",
+      "subject": "english",
+      "topic": "writing",
+      "concept": "writing.topic_sentence",
+      "question": "Where is the thesis statement usually found?",
+      "options": [
+        "In the conclusion",
+        "At the end of the introduction",
+        "In the body paragraphs",
+        "In the title"
+      ],
+      "correctAnswer": "At the end of the introduction",
+      "explanation": "The thesis typically appears at the end of the introductory paragraph.",
+      "difficulty": 1,
+      "expectedTimeMs": 5532.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_writ_003",
+      "subject": "english",
+      "topic": "writing",
+      "concept": "writing.transitions",
+      "question": "What are the three main parts of an essay?",
+      "options": [
+        "Title, body, references",
+        "Introduction, body, conclusion",
+        "Hook, evidence, summary",
+        "Thesis, arguments, bibliography"
+      ],
+      "correctAnswer": "Introduction, body, conclusion",
+      "explanation": "A standard essay has an introduction, body paragraphs, and a conclusion.",
+      "difficulty": 1,
+      "expectedTimeMs": 5476.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_writ_004",
+      "subject": "english",
+      "topic": "writing",
+      "concept": "writing.order",
+      "question": "What is a 'hook' in writing?",
+      "options": [
+        "A punctuation mark",
+        "An opening sentence that grabs the reader's attention",
+        "A type of citation",
+        "The last sentence"
+      ],
+      "correctAnswer": "An opening sentence that grabs the reader's attention",
+      "explanation": "A hook engages the reader from the very first line — it can be a quote, question, or surprising fact.",
+      "difficulty": 1,
+      "expectedTimeMs": 5084.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_writ_005",
+      "subject": "english",
+      "topic": "writing",
+      "concept": "writing.topic_sentence",
+      "question": "What is a topic sentence in a body paragraph?",
+      "options": [
+        "The last sentence",
+        "A sentence introducing the paragraph's main point",
+        "A quote from a source",
+        "A rhetorical question"
+      ],
+      "correctAnswer": "A sentence introducing the paragraph's main point",
+      "explanation": "Each body paragraph should start with a topic sentence that states its key idea.",
+      "difficulty": 2,
+      "expectedTimeMs": 5560.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_writ_006",
+      "subject": "english",
+      "topic": "writing",
+      "concept": "writing.transitions",
+      "question": "What does 'show, don't tell' mean in creative writing?",
+      "options": [
+        "Use pictures instead of words",
+        "Use descriptive details rather than stating facts directly",
+        "Write shorter sentences",
+        "Avoid adjectives"
+      ],
+      "correctAnswer": "Use descriptive details rather than stating facts directly",
+      "explanation": "Instead of 'She was sad,' show it: 'Tears rolled down her cheeks as she stared at the empty chair.'",
+      "difficulty": 2,
+      "expectedTimeMs": 5812.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_writ_007",
+      "subject": "english",
+      "topic": "writing",
+      "concept": "writing.order",
+      "question": "What is a simile?",
+      "options": [
+        "A comparison using 'like' or 'as'",
+        "An exaggeration",
+        "A word that sounds like its meaning",
+        "A repeated consonant sound"
+      ],
+      "correctAnswer": "A comparison using 'like' or 'as'",
+      "explanation": "'Her smile was like sunshine' is a simile — it uses 'like' to compare.",
+      "difficulty": 2,
+      "expectedTimeMs": 4776.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_writ_008",
+      "subject": "english",
+      "topic": "writing",
+      "concept": "writing.topic_sentence",
+      "question": "What is a metaphor?",
+      "options": [
+        "A comparison using 'like'",
+        "A direct comparison without 'like' or 'as'",
+        "An overstatement",
+        "A sound word"
+      ],
+      "correctAnswer": "A direct comparison without 'like' or 'as'",
+      "explanation": "'Life is a journey' directly equates two things without using 'like' or 'as'.",
+      "difficulty": 2,
+      "expectedTimeMs": 4832.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_writ_009",
+      "subject": "english",
+      "topic": "writing",
+      "concept": "writing.transitions",
+      "question": "What is alliteration?",
+      "options": [
+        "Repetition of vowel sounds",
+        "Repetition of consonant sounds at the start of words",
+        "Repetition of a phrase",
+        "A type of rhyme"
+      ],
+      "correctAnswer": "Repetition of consonant sounds at the start of words",
+      "explanation": "'Peter Piper picked a peck of pickled peppers' — the 'p' sound repeats.",
+      "difficulty": 2,
+      "expectedTimeMs": 4888.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_writ_010",
+      "subject": "english",
+      "topic": "writing",
+      "concept": "writing.order",
+      "question": "What is the purpose of a conclusion paragraph?",
+      "options": [
+        "Introduce new arguments",
+        "Summarize key points and restate the thesis",
+        "Provide detailed evidence",
+        "Ask the reader a question"
+      ],
+      "correctAnswer": "Summarize key points and restate the thesis",
+      "explanation": "The conclusion wraps up the essay by restating the thesis and summarizing arguments.",
+      "difficulty": 2,
+      "expectedTimeMs": 5588.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_writ_011",
+      "subject": "english",
+      "topic": "writing",
+      "concept": "writing.topic_sentence",
+      "question": "What is personification?",
+      "options": [
+        "Giving human qualities to non-human things",
+        "Speaking directly to someone",
+        "Using exaggeration for effect",
+        "Comparing two unlike things"
+      ],
+      "correctAnswer": "Giving human qualities to non-human things",
+      "explanation": "'The wind whispered through the trees' gives the wind a human ability.",
+      "difficulty": 2,
+      "expectedTimeMs": 4972.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_writ_012",
+      "subject": "english",
+      "topic": "writing",
+      "concept": "writing.transitions",
+      "question": "What is an anecdote in essay writing?",
+      "options": [
+        "A statistic",
+        "A short personal story used to illustrate a point",
+        "A direct quote",
+        "A definition"
+      ],
+      "correctAnswer": "A short personal story used to illustrate a point",
+      "explanation": "Anecdotes are brief narratives that make abstract points more concrete and relatable.",
+      "difficulty": 3,
+      "expectedTimeMs": 5336.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_writ_013",
+      "subject": "english",
+      "topic": "writing",
+      "concept": "writing.order",
+      "question": "What are the three rhetorical appeals?",
+      "options": [
+        "Ethos, Pathos, Logos",
+        "Intro, Body, Conclusion",
+        "Simile, Metaphor, Hyperbole",
+        "Subject, Verb, Object"
+      ],
+      "correctAnswer": "Ethos, Pathos, Logos",
+      "explanation": "Ethos = credibility, Pathos = emotion, Logos = logic/reasoning.",
+      "difficulty": 3,
+      "expectedTimeMs": 5364.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_writ_014",
+      "subject": "english",
+      "topic": "writing",
+      "concept": "writing.topic_sentence",
+      "question": "What does 'Logos' appeal to?",
+      "options": [
+        "Emotions",
+        "Ethics",
+        "Logic and reason",
+        "Authority"
+      ],
+      "correctAnswer": "Logic and reason",
+      "explanation": "Logos uses facts, statistics, and logical reasoning to persuade.",
+      "difficulty": 3,
+      "expectedTimeMs": 5084.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_writ_015",
+      "subject": "english",
+      "topic": "writing",
+      "concept": "writing.transitions",
+      "question": "What is a counterargument in persuasive writing?",
+      "options": [
+        "Your main argument",
+        "An opposing viewpoint that you address",
+        "A supporting detail",
+        "Your conclusion"
+      ],
+      "correctAnswer": "An opposing viewpoint that you address",
+      "explanation": "Acknowledging and refuting counterarguments strengthens your position.",
+      "difficulty": 3,
+      "expectedTimeMs": 5644.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_writ_016",
+      "subject": "english",
+      "topic": "writing",
+      "concept": "writing.order",
+      "question": "What is hyperbole?",
+      "options": [
+        "An understatement",
+        "An extreme exaggeration for effect",
+        "A comparison using 'like'",
+        "A repeated word pattern"
+      ],
+      "correctAnswer": "An extreme exaggeration for effect",
+      "explanation": "'I've told you a million times' is hyperbole — intentional extreme exaggeration.",
+      "difficulty": 2,
+      "expectedTimeMs": 4804.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_writ_017",
+      "subject": "english",
+      "topic": "writing",
+      "concept": "writing.tone",
+      "question": "What is the difference between 'voice' and 'tone' in writing?",
+      "options": [
+        "They are the same thing",
+        "Voice is the author's style; tone is the attitude toward the subject",
+        "Voice is loud; tone is quiet",
+        "Tone is the style; voice is the attitude"
+      ],
+      "correctAnswer": "Voice is the author's style; tone is the attitude toward the subject",
+      "explanation": "Voice is the writer's unique personality. Tone reflects feeling about the topic.",
+      "difficulty": 4,
+      "expectedTimeMs": 6008.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_writ_018",
+      "subject": "english",
+      "topic": "writing",
+      "concept": "writing.concision",
+      "question": "What is an unreliable narrator?",
+      "options": [
+        "A narrator who tells the truth",
+        "A narrator whose credibility is compromised",
+        "A third-person narrator",
+        "An omniscient narrator"
+      ],
+      "correctAnswer": "A narrator whose credibility is compromised",
+      "explanation": "An unreliable narrator's account may be biased, deceptive, or mistaken.",
+      "difficulty": 4,
+      "expectedTimeMs": 5168.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_writ_019",
+      "subject": "english",
+      "topic": "writing",
+      "concept": "writing.topic_sentence",
+      "question": "What is irony?",
+      "options": [
+        "Saying exactly what you mean",
+        "A situation where reality differs from expectations",
+        "A type of metaphor",
+        "A grammatical error"
+      ],
+      "correctAnswer": "A situation where reality differs from expectations",
+      "explanation": "Irony involves a contrast between what is expected and what actually occurs.",
+      "difficulty": 3,
+      "expectedTimeMs": 4692.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_writ_020",
+      "subject": "english",
+      "topic": "writing",
+      "concept": "writing.concision",
+      "question": "What is a literary foil?",
+      "options": [
+        "A type of sword",
+        "A character who contrasts with another to highlight traits",
+        "A plot twist",
+        "A type of foreshadowing"
+      ],
+      "correctAnswer": "A character who contrasts with another to highlight traits",
+      "explanation": "A foil character highlights another character's qualities through contrast.",
+      "difficulty": 4,
+      "expectedTimeMs": 4972.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_writ_021",
+      "subject": "english",
+      "topic": "writing",
+      "concept": "writing.transitions",
+      "question": "Which point of view uses 'I' and 'we'?",
+      "options": [
+        "First person",
+        "Second person",
+        "Third person limited",
+        "Third person omniscient"
+      ],
+      "correctAnswer": "First person",
+      "explanation": "First person uses 'I/we': the narrator is a character in the story.",
+      "difficulty": 1,
+      "expectedTimeMs": 5364.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_writ_022",
+      "subject": "english",
+      "topic": "writing",
+      "concept": "writing.order",
+      "question": "What is foreshadowing?",
+      "options": [
+        "A flashback",
+        "Hints about future events in a story",
+        "The climax of a story",
+        "The resolution"
+      ],
+      "correctAnswer": "Hints about future events in a story",
+      "explanation": "Foreshadowing gives clues about what will happen later in the narrative.",
+      "difficulty": 3,
+      "expectedTimeMs": 4916.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_writ_023",
+      "subject": "english",
+      "topic": "writing",
+      "concept": "writing.tone",
+      "question": "What is a bildungsroman?",
+      "options": [
+        "A horror novel",
+        "A coming-of-age story",
+        "A mystery novel",
+        "A historical novel"
+      ],
+      "correctAnswer": "A coming-of-age story",
+      "explanation": "A bildungsroman follows the protagonist's growth from youth to adulthood.",
+      "difficulty": 5,
+      "expectedTimeMs": 4972.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_writ_024",
+      "subject": "english",
+      "topic": "writing",
+      "concept": "writing.concision",
+      "question": "What is the difference between denotation and connotation?",
+      "options": [
+        "They mean the same",
+        "Denotation is dictionary meaning; connotation is emotional association",
+        "Denotation is emotional; connotation is literal",
+        "Both are types of definitions"
+      ],
+      "correctAnswer": "Denotation is dictionary meaning; connotation is emotional association",
+      "explanation": "'Home' denotes a dwelling but connotes warmth, safety, and comfort.",
+      "difficulty": 4,
+      "expectedTimeMs": 5924.0,
+      "misconceptionTags": []
+    },
+    {
+      "id": "eng_writ_025",
+      "subject": "english",
+      "topic": "writing",
+      "concept": "writing.tone",
+      "question": "What is a chiasmus?",
+      "options": [
+        "A type of rhyme",
+        "A reversal of grammatical structure in successive phrases",
+        "A figure of speech using 'like'",
+        "A type of alliteration"
+      ],
+      "correctAnswer": "A reversal of grammatical structure in successive phrases",
+      "explanation": "Example: 'Ask not what your country can do for you; ask what you can do for your country.'",
+      "difficulty": 5,
+      "expectedTimeMs": 4832.0,
+      "misconceptionTags": []
+    }
+  ]
+}

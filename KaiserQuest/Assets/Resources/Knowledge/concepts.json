@@ -1,0 +1,1531 @@
+{
+  "version": 1,
+  "realms": [
+    {
+      "id": "algebra",
+      "name": "Algebra",
+      "section": "Mathematics",
+      "sigil": "📐",
+      "accent": "#4fd1c5",
+      "tagline": "The realm where the unknown becomes knowable.",
+      "domains": [
+        {
+          "id": "variables",
+          "name": "Variables",
+          "realm": "algebra",
+          "concepts": [
+            {
+              "id": "variables.meaning",
+              "name": "A letter can stand for a number",
+              "domain": "variables",
+              "realm": "algebra",
+              "prereqs": [],
+              "keywords": [
+                "variable",
+                "unknown",
+                "stands for",
+                "represents"
+              ],
+              "level": 1
+            },
+            {
+              "id": "variables.constants",
+              "name": "Constants and coefficients",
+              "domain": "variables",
+              "realm": "algebra",
+              "prereqs": [
+                "variables.meaning"
+              ],
+              "keywords": [
+                "constant",
+                "coefficient",
+                "fixed value"
+              ],
+              "level": 1
+            },
+            {
+              "id": "variables.expressions",
+              "name": "Reading and writing expressions",
+              "domain": "variables",
+              "realm": "algebra",
+              "prereqs": [
+                "variables.meaning"
+              ],
+              "keywords": [
+                "expression",
+                "write an expression",
+                "translate"
+              ],
+              "level": 2
+            },
+            {
+              "id": "variables.substitution",
+              "name": "Substituting values in",
+              "domain": "variables",
+              "realm": "algebra",
+              "prereqs": [
+                "variables.constants"
+              ],
+              "keywords": [
+                "substitute",
+                "evaluate when",
+                "plug in",
+                "replace"
+              ],
+              "level": 2
+            },
+            {
+              "id": "variables.evaluate",
+              "name": "Evaluating with order of operations",
+              "domain": "variables",
+              "realm": "algebra",
+              "prereqs": [
+                "variables.substitution"
+              ],
+              "keywords": [
+                "evaluate",
+                "simplify the value",
+                "order of operations"
+              ],
+              "level": 3
+            }
+          ]
+        },
+        {
+          "id": "expressions",
+          "name": "Expressions",
+          "realm": "algebra",
+          "concepts": [
+            {
+              "id": "expressions.like_terms",
+              "name": "Collecting like terms",
+              "domain": "expressions",
+              "realm": "algebra",
+              "prereqs": [
+                "variables.expressions"
+              ],
+              "keywords": [
+                "like terms",
+                "collect",
+                "combine terms",
+                "simplify"
+              ],
+              "level": 2
+            },
+            {
+              "id": "expressions.distribute",
+              "name": "The distributive property",
+              "domain": "expressions",
+              "realm": "algebra",
+              "prereqs": [
+                "expressions.like_terms"
+              ],
+              "keywords": [
+                "distribute",
+                "expand the bracket",
+                "multiply out"
+              ],
+              "level": 3
+            },
+            {
+              "id": "expressions.factor_common",
+              "name": "Taking out a common factor",
+              "domain": "expressions",
+              "realm": "algebra",
+              "prereqs": [
+                "expressions.distribute"
+              ],
+              "keywords": [
+                "common factor",
+                "factorise",
+                "factor out"
+              ],
+              "level": 3
+            },
+            {
+              "id": "expressions.negatives",
+              "name": "Signs and negative terms",
+              "domain": "expressions",
+              "realm": "algebra",
+              "prereqs": [
+                "expressions.like_terms"
+              ],
+              "keywords": [
+                "negative",
+                "minus",
+                "sign",
+                "subtract the term"
+              ],
+              "level": 3
+            }
+          ]
+        },
+        {
+          "id": "linear_equations",
+          "name": "Linear Equations",
+          "realm": "algebra",
+          "concepts": [
+            {
+              "id": "linear.one_step",
+              "name": "Solving in one step",
+              "domain": "linear_equations",
+              "realm": "algebra",
+              "prereqs": [
+                "variables.expressions"
+              ],
+              "keywords": [
+                "one step",
+                "inverse operation",
+                "undo the"
+              ],
+              "level": 2
+            },
+            {
+              "id": "linear.two_step",
+              "name": "Solving in two steps",
+              "domain": "linear_equations",
+              "realm": "algebra",
+              "prereqs": [
+                "linear.one_step"
+              ],
+              "keywords": [
+                "two step",
+                "solve the equation",
+                "isolate"
+              ],
+              "level": 3
+            },
+            {
+              "id": "linear.both_sides",
+              "name": "Variables on both sides",
+              "domain": "linear_equations",
+              "realm": "algebra",
+              "prereqs": [
+                "linear.two_step"
+              ],
+              "keywords": [
+                "both sides",
+                "move the term across"
+              ],
+              "level": 3
+            },
+            {
+              "id": "linear.parentheses",
+              "name": "Equations with brackets",
+              "domain": "linear_equations",
+              "realm": "algebra",
+              "prereqs": [
+                "linear.two_step",
+                "expressions.distribute"
+              ],
+              "keywords": [
+                "bracket",
+                "parentheses in an equation"
+              ],
+              "level": 4
+            },
+            {
+              "id": "linear.proportion",
+              "name": "Proportion and cross-multiplying",
+              "domain": "linear_equations",
+              "realm": "algebra",
+              "prereqs": [
+                "linear.one_step"
+              ],
+              "keywords": [
+                "proportion",
+                "cross multiply",
+                "ratio equation"
+              ],
+              "level": 4
+            }
+          ]
+        },
+        {
+          "id": "quadratics",
+          "name": "Quadratics",
+          "realm": "algebra",
+          "concepts": [
+            {
+              "id": "quadratics.standard_form",
+              "name": "Standard form and the squared term",
+              "domain": "quadratics",
+              "realm": "algebra",
+              "prereqs": [
+                "expressions.distribute"
+              ],
+              "keywords": [
+                "standard form",
+                "x squared",
+                "quadratic equation"
+              ],
+              "level": 3
+            },
+            {
+              "id": "quadratics.factor",
+              "name": "Factorising a quadratic",
+              "domain": "quadratics",
+              "realm": "algebra",
+              "prereqs": [
+                "quadratics.standard_form",
+                "expressions.factor_common"
+              ],
+              "keywords": [
+                "factorise the quadratic",
+                "two numbers that multiply"
+              ],
+              "level": 4
+            },
+            {
+              "id": "quadratics.zero_product",
+              "name": "The zero product rule",
+              "domain": "quadratics",
+              "realm": "algebra",
+              "prereqs": [
+                "quadratics.factor"
+              ],
+              "keywords": [
+                "zero product",
+                "set each factor to zero",
+                "roots"
+              ],
+              "level": 4
+            },
+            {
+              "id": "quadratics.formula",
+              "name": "The quadratic formula",
+              "domain": "quadratics",
+              "realm": "algebra",
+              "prereqs": [
+                "quadratics.standard_form"
+              ],
+              "keywords": [
+                "quadratic formula",
+                "minus b",
+                "square root of b squared"
+              ],
+              "level": 5
+            },
+            {
+              "id": "quadratics.discriminant",
+              "name": "The discriminant and root count",
+              "domain": "quadratics",
+              "realm": "algebra",
+              "prereqs": [
+                "quadratics.formula"
+              ],
+              "keywords": [
+                "discriminant",
+                "how many roots",
+                "no real solution"
+              ],
+              "level": 5
+            }
+          ]
+        },
+        {
+          "id": "functions",
+          "name": "Functions",
+          "realm": "algebra",
+          "concepts": [
+            {
+              "id": "functions.definition",
+              "name": "A function as a rule",
+              "domain": "functions",
+              "realm": "algebra",
+              "prereqs": [
+                "variables.evaluate"
+              ],
+              "keywords": [
+                "function",
+                "a rule that assigns",
+                "input output"
+              ],
+              "level": 3
+            },
+            {
+              "id": "functions.notation",
+              "name": "f(x) notation",
+              "domain": "functions",
+              "realm": "algebra",
+              "prereqs": [
+                "functions.definition"
+              ],
+              "keywords": [
+                "f of x",
+                "function notation",
+                "f(x)"
+              ],
+              "level": 3
+            },
+            {
+              "id": "functions.domain_range",
+              "name": "Domain and range",
+              "domain": "functions",
+              "realm": "algebra",
+              "prereqs": [
+                "functions.notation"
+              ],
+              "keywords": [
+                "domain",
+                "range",
+                "allowed inputs"
+              ],
+              "level": 4
+            },
+            {
+              "id": "functions.composition",
+              "name": "Composing functions",
+              "domain": "functions",
+              "realm": "algebra",
+              "prereqs": [
+                "functions.notation"
+              ],
+              "keywords": [
+                "composite",
+                "f of g",
+                "compose"
+              ],
+              "level": 5
+            },
+            {
+              "id": "functions.inverse",
+              "name": "Inverse functions",
+              "domain": "functions",
+              "realm": "algebra",
+              "prereqs": [
+                "functions.composition",
+                "linear.both_sides"
+              ],
+              "keywords": [
+                "inverse",
+                "undo the function"
+              ],
+              "level": 5
+            }
+          ]
+        },
+        {
+          "id": "graphs",
+          "name": "Graphs",
+          "realm": "algebra",
+          "concepts": [
+            {
+              "id": "graphs.plane",
+              "name": "The coordinate plane",
+              "domain": "graphs",
+              "realm": "algebra",
+              "prereqs": [
+                "variables.constants"
+              ],
+              "keywords": [
+                "coordinate",
+                "ordered pair",
+                "quadrant",
+                "axes"
+              ],
+              "level": 2
+            },
+            {
+              "id": "graphs.slope",
+              "name": "Slope as rate of change",
+              "domain": "graphs",
+              "realm": "algebra",
+              "prereqs": [
+                "graphs.plane"
+              ],
+              "keywords": [
+                "slope",
+                "rise over run",
+                "gradient",
+                "steepness"
+              ],
+              "level": 3
+            },
+            {
+              "id": "graphs.intercepts",
+              "name": "Intercepts",
+              "domain": "graphs",
+              "realm": "algebra",
+              "prereqs": [
+                "graphs.plane"
+              ],
+              "keywords": [
+                "intercept",
+                "crosses the axis",
+                "y-intercept"
+              ],
+              "level": 3
+            },
+            {
+              "id": "graphs.line_equations",
+              "name": "y = mx + c from a graph",
+              "domain": "graphs",
+              "realm": "algebra",
+              "prereqs": [
+                "graphs.slope",
+                "graphs.intercepts"
+              ],
+              "keywords": [
+                "equation of the line",
+                "mx + c",
+                "slope intercept"
+              ],
+              "level": 4
+            },
+            {
+              "id": "graphs.reading",
+              "name": "Interpreting a graph in context",
+              "domain": "graphs",
+              "realm": "algebra",
+              "prereqs": [
+                "graphs.line_equations"
+              ],
+              "keywords": [
+                "interpret the graph",
+                "what does the graph show",
+                "graph shows"
+              ],
+              "level": 4
+            }
+          ]
+        },
+        {
+          "id": "polynomials",
+          "name": "Polynomials",
+          "realm": "algebra",
+          "concepts": [
+            {
+              "id": "polynomials.degree",
+              "name": "Degree and leading term",
+              "domain": "polynomials",
+              "realm": "algebra",
+              "prereqs": [
+                "expressions.like_terms"
+              ],
+              "keywords": [
+                "degree",
+                "leading term",
+                "highest power"
+              ],
+              "level": 3
+            },
+            {
+              "id": "polynomials.multiply",
+              "name": "Multiplying polynomials",
+              "domain": "polynomials",
+              "realm": "algebra",
+              "prereqs": [
+                "expressions.distribute",
+                "polynomials.degree"
+              ],
+              "keywords": [
+                "multiply the polynomials",
+                "foil",
+                "expand the product"
+              ],
+              "level": 4
+            },
+            {
+              "id": "polynomials.divide",
+              "name": "Dividing polynomials",
+              "domain": "polynomials",
+              "realm": "algebra",
+              "prereqs": [
+                "polynomials.multiply"
+              ],
+              "keywords": [
+                "divide the polynomial",
+                "long division",
+                "quotient"
+              ],
+              "level": 5
+            },
+            {
+              "id": "polynomials.remainder",
+              "name": "The remainder theorem",
+              "domain": "polynomials",
+              "realm": "algebra",
+              "prereqs": [
+                "polynomials.divide"
+              ],
+              "keywords": [
+                "remainder",
+                "factor theorem"
+              ],
+              "level": 5
+            }
+          ]
+        },
+        {
+          "id": "word_problems",
+          "name": "Word Problems",
+          "realm": "algebra",
+          "concepts": [
+            {
+              "id": "word.translate",
+              "name": "Turning words into equations",
+              "domain": "word_problems",
+              "realm": "algebra",
+              "prereqs": [
+                "variables.expressions",
+                "linear.one_step"
+              ],
+              "keywords": [
+                "write an equation for",
+                "word problem",
+                "let x be"
+              ],
+              "level": 3
+            },
+            {
+              "id": "word.rates",
+              "name": "Rates and speed problems",
+              "domain": "word_problems",
+              "realm": "algebra",
+              "prereqs": [
+                "word.translate"
+              ],
+              "keywords": [
+                "speed",
+                "per hour",
+                "rate of",
+                "distance"
+              ],
+              "level": 4
+            },
+            {
+              "id": "word.consecutive",
+              "name": "Consecutive numbers",
+              "domain": "word_problems",
+              "realm": "algebra",
+              "prereqs": [
+                "word.translate"
+              ],
+              "keywords": [
+                "consecutive",
+                "next integer",
+                "sum of three numbers"
+              ],
+              "level": 4
+            },
+            {
+              "id": "word.mixture",
+              "name": "Mixture and money problems",
+              "domain": "word_problems",
+              "realm": "algebra",
+              "prereqs": [
+                "word.translate"
+              ],
+              "keywords": [
+                "mixture",
+                "litres of",
+                "prices per kilogram",
+                "coins"
+              ],
+              "level": 5
+            }
+          ]
+        }
+      ],
+      "concept_count": 37
+    },
+    {
+      "id": "english",
+      "name": "English",
+      "section": "Languages",
+      "sigil": "🗣️",
+      "accent": "#f6ad55",
+      "tagline": "The realm where meaning is forged and then tested.",
+      "domains": [
+        {
+          "id": "grammar",
+          "name": "Grammar",
+          "realm": "english",
+          "concepts": [
+            {
+              "id": "grammar.parts_of_speech",
+              "name": "Parts of speech",
+              "domain": "grammar",
+              "realm": "english",
+              "prereqs": [],
+              "keywords": [
+                "part of speech",
+                "noun",
+                "adverb",
+                "adjective",
+                "verb"
+              ],
+              "level": 1
+            },
+            {
+              "id": "grammar.agreement",
+              "name": "Subject-verb agreement",
+              "domain": "grammar",
+              "realm": "english",
+              "prereqs": [
+                "grammar.parts_of_speech"
+              ],
+              "keywords": [
+                "subject and verb agree",
+                "agreement",
+                "singular subject"
+              ],
+              "level": 2
+            },
+            {
+              "id": "grammar.tense",
+              "name": "Tense and aspect",
+              "domain": "grammar",
+              "realm": "english",
+              "prereqs": [
+                "grammar.parts_of_speech"
+              ],
+              "keywords": [
+                "tense",
+                "past participle",
+                "has been",
+                "perfect"
+              ],
+              "level": 3
+            },
+            {
+              "id": "grammar.pronouns",
+              "name": "Pronoun case and reference",
+              "domain": "grammar",
+              "realm": "english",
+              "prereqs": [
+                "grammar.parts_of_speech"
+              ],
+              "keywords": [
+                "pronoun",
+                "who whom",
+                "its it's",
+                "reference"
+              ],
+              "level": 3
+            },
+            {
+              "id": "grammar.punctuation",
+              "name": "Punctuation that changes meaning",
+              "domain": "grammar",
+              "realm": "english",
+              "prereqs": [
+                "grammar.parts_of_speech"
+              ],
+              "keywords": [
+                "comma",
+                "semicolon",
+                "apostrophe",
+                "punctuation"
+              ],
+              "level": 3
+            }
+          ]
+        },
+        {
+          "id": "sentence_structure",
+          "name": "Sentence Structure",
+          "realm": "english",
+          "concepts": [
+            {
+              "id": "structure.clauses",
+              "name": "Clauses and phrases",
+              "domain": "sentence_structure",
+              "realm": "english",
+              "prereqs": [
+                "grammar.parts_of_speech"
+              ],
+              "keywords": [
+                "clause",
+                "phrase",
+                "independent",
+                "dependent"
+              ],
+              "level": 2
+            },
+            {
+              "id": "structure.fragments",
+              "name": "Fragments and run-ons",
+              "domain": "sentence_structure",
+              "realm": "english",
+              "prereqs": [
+                "structure.clauses"
+              ],
+              "keywords": [
+                "fragment",
+                "run-on",
+                "comma splice",
+                "sentence"
+              ],
+              "level": 3
+            },
+            {
+              "id": "structure.coordination",
+              "name": "Coordination and subordination",
+              "domain": "sentence_structure",
+              "realm": "english",
+              "prereqs": [
+                "structure.clauses"
+              ],
+              "keywords": [
+                "conjunction",
+                "because",
+                "although",
+                "compound sentence"
+              ],
+              "level": 3
+            },
+            {
+              "id": "structure.parallelism",
+              "name": "Parallel structure",
+              "domain": "sentence_structure",
+              "realm": "english",
+              "prereqs": [
+                "structure.coordination"
+              ],
+              "keywords": [
+                "parallel",
+                "not parallel",
+                "consistent form"
+              ],
+              "level": 4
+            }
+          ]
+        },
+        {
+          "id": "vocabulary",
+          "name": "Vocabulary",
+          "realm": "english",
+          "concepts": [
+            {
+              "id": "vocab.context",
+              "name": "Meaning from context",
+              "domain": "vocabulary",
+              "realm": "english",
+              "prereqs": [],
+              "keywords": [
+                "context",
+                "meaning of the word",
+                "as used in"
+              ],
+              "level": 2
+            },
+            {
+              "id": "vocab.synonyms",
+              "name": "Synonyms and antonyms",
+              "domain": "vocabulary",
+              "realm": "english",
+              "prereqs": [
+                "vocab.context"
+              ],
+              "keywords": [
+                "synonym",
+                "antonym",
+                "closest in meaning",
+                "opposite"
+              ],
+              "level": 2
+            },
+            {
+              "id": "vocab.affixes",
+              "name": "Prefixes and suffixes",
+              "domain": "vocabulary",
+              "realm": "english",
+              "prereqs": [
+                "vocab.context"
+              ],
+              "keywords": [
+                "prefix",
+                "suffix",
+                "root",
+                "pre-",
+                "un-"
+              ],
+              "level": 2
+            },
+            {
+              "id": "vocab.connotation",
+              "name": "Connotation and tone",
+              "domain": "vocabulary",
+              "realm": "english",
+              "prereqs": [
+                "vocab.synonyms"
+              ],
+              "keywords": [
+                "connotation",
+                "positive",
+                "negative",
+                "tone of the word"
+              ],
+              "level": 4
+            },
+            {
+              "id": "vocab.idioms",
+              "name": "Idioms and fixed phrases",
+              "domain": "vocabulary",
+              "realm": "english",
+              "prereqs": [
+                "vocab.context"
+              ],
+              "keywords": [
+                "idiom",
+                "figure of speech",
+                "fixed expression"
+              ],
+              "level": 4
+            }
+          ]
+        },
+        {
+          "id": "word_forms",
+          "name": "Word Forms",
+          "realm": "english",
+          "concepts": [
+            {
+              "id": "forms.change",
+              "name": "Changing word class",
+              "domain": "word_forms",
+              "realm": "english",
+              "prereqs": [
+                "vocab.affixes",
+                "grammar.parts_of_speech"
+              ],
+              "keywords": [
+                "word form",
+                "noun form of",
+                "adjective form",
+                "form of the word"
+              ],
+              "level": 3
+            },
+            {
+              "id": "forms.comparatives",
+              "name": "Comparatives and superlatives",
+              "domain": "word_forms",
+              "realm": "english",
+              "prereqs": [
+                "grammar.parts_of_speech"
+              ],
+              "keywords": [
+                "comparative",
+                "superlative",
+                "more than",
+                "most"
+              ],
+              "level": 2
+            },
+            {
+              "id": "forms.irregular",
+              "name": "Irregular forms",
+              "domain": "word_forms",
+              "realm": "english",
+              "prereqs": [
+                "forms.change"
+              ],
+              "keywords": [
+                "irregular",
+                "plural of",
+                "went",
+                "children"
+              ],
+              "level": 3
+            },
+            {
+              "id": "forms.derivation",
+              "name": "Building a word family",
+              "domain": "word_forms",
+              "realm": "english",
+              "prereqs": [
+                "forms.change"
+              ],
+              "keywords": [
+                "word family",
+                "derive",
+                "related word"
+              ],
+              "level": 4
+            }
+          ]
+        },
+        {
+          "id": "writing",
+          "name": "Writing",
+          "realm": "english",
+          "concepts": [
+            {
+              "id": "writing.topic_sentence",
+              "name": "Topic sentences",
+              "domain": "writing",
+              "realm": "english",
+              "prereqs": [
+                "structure.clauses"
+              ],
+              "keywords": [
+                "topic sentence",
+                "main point of the paragraph",
+                "best opening"
+              ],
+              "level": 3
+            },
+            {
+              "id": "writing.order",
+              "name": "Ordering ideas",
+              "domain": "writing",
+              "realm": "english",
+              "prereqs": [
+                "writing.topic_sentence"
+              ],
+              "keywords": [
+                "best order",
+                "first then finally",
+                "arrange the sentences"
+              ],
+              "level": 3
+            },
+            {
+              "id": "writing.transitions",
+              "name": "Transitions between ideas",
+              "domain": "writing",
+              "realm": "english",
+              "prereqs": [
+                "writing.order"
+              ],
+              "keywords": [
+                "transition",
+                "however",
+                "therefore",
+                "moreover"
+              ],
+              "level": 3
+            },
+            {
+              "id": "writing.concision",
+              "name": "Clarity and concision",
+              "domain": "writing",
+              "realm": "english",
+              "prereqs": [
+                "writing.transitions"
+              ],
+              "keywords": [
+                "most concise",
+                "clearer",
+                "redundant",
+                "wordy"
+              ],
+              "level": 4
+            },
+            {
+              "id": "writing.tone",
+              "name": "Register and tone",
+              "domain": "writing",
+              "realm": "english",
+              "prereqs": [
+                "vocab.connotation"
+              ],
+              "keywords": [
+                "formal",
+                "tone",
+                "audience",
+                "register"
+              ],
+              "level": 4
+            }
+          ]
+        },
+        {
+          "id": "inference",
+          "name": "Reading & Inference",
+          "realm": "english",
+          "concepts": [
+            {
+              "id": "infer.main_idea",
+              "name": "Main idea",
+              "domain": "inference",
+              "realm": "english",
+              "prereqs": [
+                "vocab.context"
+              ],
+              "keywords": [
+                "main idea",
+                "mainly about",
+                "best title"
+              ],
+              "level": 3
+            },
+            {
+              "id": "infer.evidence",
+              "name": "Supporting with evidence",
+              "domain": "inference",
+              "realm": "english",
+              "prereqs": [
+                "infer.main_idea"
+              ],
+              "keywords": [
+                "evidence",
+                "supports the claim",
+                "according to the passage"
+              ],
+              "level": 3
+            },
+            {
+              "id": "infer.implied",
+              "name": "Reading what is implied",
+              "domain": "inference",
+              "realm": "english",
+              "prereqs": [
+                "infer.evidence"
+              ],
+              "keywords": [
+                "suggests",
+                "implies",
+                "can be inferred"
+              ],
+              "level": 4
+            },
+            {
+              "id": "infer.purpose",
+              "name": "Author purpose and attitude",
+              "domain": "inference",
+              "realm": "english",
+              "prereqs": [
+                "infer.implied",
+                "vocab.connotation"
+              ],
+              "keywords": [
+                "author's purpose",
+                "attitude",
+                "why does the author"
+              ],
+              "level": 5
+            }
+          ]
+        }
+      ],
+      "concept_count": 27
+    },
+    {
+      "id": "music",
+      "name": "Music Theory",
+      "section": "Music",
+      "sigil": "🎵",
+      "accent": "#b794f4",
+      "tagline": "The realm where sound obeys laws you can learn to hear.",
+      "domains": [
+        {
+          "id": "notes",
+          "name": "Notes & Pitch",
+          "realm": "music",
+          "concepts": [
+            {
+              "id": "notes.staff",
+              "name": "Notes on the staff",
+              "domain": "notes",
+              "realm": "music",
+              "prereqs": [],
+              "keywords": [
+                "staff",
+                "treble clef",
+                "bass clef",
+                "which note"
+              ],
+              "level": 1
+            },
+            {
+              "id": "notes.accidentals",
+              "name": "Sharps, flats and naturals",
+              "domain": "notes",
+              "realm": "music",
+              "prereqs": [
+                "notes.staff"
+              ],
+              "keywords": [
+                "sharp",
+                "flat",
+                "natural",
+                "accidental"
+              ],
+              "level": 2
+            },
+            {
+              "id": "notes.semitones",
+              "name": "Semitones and whole tones",
+              "domain": "notes",
+              "realm": "music",
+              "prereqs": [
+                "notes.accidentals"
+              ],
+              "keywords": [
+                "semitone",
+                "whole tone",
+                "half step",
+                "distance between"
+              ],
+              "level": 2
+            },
+            {
+              "id": "notes.intervals",
+              "name": "Interval names",
+              "domain": "notes",
+              "realm": "music",
+              "prereqs": [
+                "notes.semitones"
+              ],
+              "keywords": [
+                "interval",
+                "major third",
+                "perfect fifth",
+                "octave"
+              ],
+              "level": 3
+            }
+          ]
+        },
+        {
+          "id": "scales",
+          "name": "Scales & Keys",
+          "realm": "music",
+          "concepts": [
+            {
+              "id": "scales.major",
+              "name": "The major scale pattern",
+              "domain": "scales",
+              "realm": "music",
+              "prereqs": [
+                "notes.semitones"
+              ],
+              "keywords": [
+                "major scale",
+                "tone tone semitone",
+                "pattern"
+              ],
+              "level": 2
+            },
+            {
+              "id": "scales.minor",
+              "name": "Minor scales",
+              "domain": "scales",
+              "realm": "music",
+              "prereqs": [
+                "scales.major"
+              ],
+              "keywords": [
+                "minor scale",
+                "natural minor",
+                "harmonic minor"
+              ],
+              "level": 3
+            },
+            {
+              "id": "scales.key_signature",
+              "name": "Key signatures",
+              "domain": "scales",
+              "realm": "music",
+              "prereqs": [
+                "scales.major"
+              ],
+              "keywords": [
+                "key signature",
+                "how many sharps",
+                "key of"
+              ],
+              "level": 3
+            },
+            {
+              "id": "scales.degrees",
+              "name": "Scale degrees and tonic",
+              "domain": "scales",
+              "realm": "music",
+              "prereqs": [
+                "scales.major"
+              ],
+              "keywords": [
+                "tonic",
+                "dominant",
+                "scale degree",
+                "leading tone"
+              ],
+              "level": 4
+            }
+          ]
+        },
+        {
+          "id": "chords",
+          "name": "Chords & Harmony",
+          "realm": "music",
+          "concepts": [
+            {
+              "id": "chords.triads",
+              "name": "Building a triad",
+              "domain": "chords",
+              "realm": "music",
+              "prereqs": [
+                "notes.intervals"
+              ],
+              "keywords": [
+                "triad",
+                "root third fifth",
+                "build a chord"
+              ],
+              "level": 3
+            },
+            {
+              "id": "chords.quality",
+              "name": "Major, minor, diminished",
+              "domain": "chords",
+              "realm": "music",
+              "prereqs": [
+                "chords.triads"
+              ],
+              "keywords": [
+                "major chord",
+                "minor chord",
+                "diminished",
+                "chord quality"
+              ],
+              "level": 3
+            },
+            {
+              "id": "chords.inversions",
+              "name": "Inversions and voicing",
+              "domain": "chords",
+              "realm": "music",
+              "prereqs": [
+                "chords.quality"
+              ],
+              "keywords": [
+                "inversion",
+                "first inversion",
+                "bass note of the chord"
+              ],
+              "level": 4
+            },
+            {
+              "id": "chords.progression",
+              "name": "Chord progressions and cadences",
+              "domain": "chords",
+              "realm": "music",
+              "prereqs": [
+                "chords.quality",
+                "scales.degrees"
+              ],
+              "keywords": [
+                "progression",
+                "cadence",
+                "V to I",
+                "chord follows"
+              ],
+              "level": 5
+            }
+          ]
+        },
+        {
+          "id": "rhythm",
+          "name": "Rhythm",
+          "realm": "music",
+          "concepts": [
+            {
+              "id": "rhythm.note_values",
+              "name": "Note values",
+              "domain": "rhythm",
+              "realm": "music",
+              "prereqs": [],
+              "keywords": [
+                "note value",
+                "quarter note",
+                "how many beats",
+                "half note"
+              ],
+              "level": 1
+            },
+            {
+              "id": "rhythm.dotted",
+              "name": "Dotted and tied notes",
+              "domain": "rhythm",
+              "realm": "music",
+              "prereqs": [
+                "rhythm.note_values"
+              ],
+              "keywords": [
+                "dotted note",
+                "tie",
+                "duration of"
+              ],
+              "level": 3
+            },
+            {
+              "id": "rhythm.rests",
+              "name": "Rests and silence",
+              "domain": "rhythm",
+              "realm": "music",
+              "prereqs": [
+                "rhythm.note_values"
+              ],
+              "keywords": [
+                "rest",
+                "silence",
+                "how many beats of rest"
+              ],
+              "level": 2
+            },
+            {
+              "id": "rhythm.syncopation",
+              "name": "Syncopation and off-beats",
+              "domain": "rhythm",
+              "realm": "music",
+              "prereqs": [
+                "rhythm.dotted"
+              ],
+              "keywords": [
+                "syncopation",
+                "off-beat",
+                "accented"
+              ],
+              "level": 4
+            }
+          ]
+        },
+        {
+          "id": "time_signatures",
+          "name": "Time Signatures",
+          "realm": "music",
+          "concepts": [
+            {
+              "id": "time.beats_per_measure",
+              "name": "What the numbers mean",
+              "domain": "time_signatures",
+              "realm": "music",
+              "prereqs": [
+                "rhythm.note_values"
+              ],
+              "keywords": [
+                "time signature",
+                "beats per measure",
+                "top number",
+                "bottom number"
+              ],
+              "level": 2
+            },
+            {
+              "id": "time.simple_compound",
+              "name": "Simple and compound meter",
+              "domain": "time_signatures",
+              "realm": "music",
+              "prereqs": [
+                "time.beats_per_measure"
+              ],
+              "keywords": [
+                "simple meter",
+                "compound meter",
+                "6/8",
+                "3/4"
+              ],
+              "level": 3
+            },
+            {
+              "id": "time.accent_pattern",
+              "name": "Accents and grouping",
+              "domain": "time_signatures",
+              "realm": "music",
+              "prereqs": [
+                "time.simple_compound"
+              ],
+              "keywords": [
+                "accent pattern",
+                "strong beat",
+                "grouping"
+              ],
+              "level": 4
+            },
+            {
+              "id": "time.anacrusis",
+              "name": "Pickup bars",
+              "domain": "time_signatures",
+              "realm": "music",
+              "prereqs": [
+                "time.accent_pattern"
+              ],
+              "keywords": [
+                "pickup",
+                "anacrusis",
+                "incomplete measure"
+              ],
+              "level": 4
+            }
+          ]
+        },
+        {
+          "id": "composition",
+          "name": "Composition",
+          "realm": "music",
+          "concepts": [
+            {
+              "id": "comp.melody",
+              "name": "Melodic shape and contour",
+              "domain": "composition",
+              "realm": "music",
+              "prereqs": [
+                "scales.major"
+              ],
+              "keywords": [
+                "melody",
+                "contour",
+                "melodic line"
+              ],
+              "level": 3
+            },
+            {
+              "id": "comp.harmony",
+              "name": "Harmonising a melody",
+              "domain": "composition",
+              "realm": "music",
+              "prereqs": [
+                "chords.progression"
+              ],
+              "keywords": [
+                "harmonise",
+                "harmony fits",
+                "accompaniment"
+              ],
+              "level": 5
+            },
+            {
+              "id": "comp.form",
+              "name": "Form and structure",
+              "domain": "composition",
+              "realm": "music",
+              "prereqs": [
+                "comp.melody"
+              ],
+              "keywords": [
+                "form",
+                "structure",
+                "binary",
+                "ternary",
+                "ABA"
+              ],
+              "level": 4
+            },
+            {
+              "id": "comp.texture",
+              "name": "Texture",
+              "domain": "composition",
+              "realm": "music",
+              "prereqs": [
+                "comp.form"
+              ],
+              "keywords": [
+                "texture",
+                "monophonic",
+                "homophonic",
+                "polyphonic"
+              ],
+              "level": 4
+            }
+          ]
+        }
+      ],
+      "concept_count": 24
+    }
+  ]
+}

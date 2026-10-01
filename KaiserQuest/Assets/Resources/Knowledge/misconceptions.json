@@ -1,0 +1,286 @@
+{
+  "misconceptions": [
+    {
+      "id": "alg.coefficient_not_divided",
+      "name": "Stopping before dividing by the coefficient",
+      "concept": "linear.two_step",
+      "pattern": "Solves 2x = 10 as x = 10 — once the constant is gone the learner stops, never dividing by the number attached to x.",
+      "remedy": "An equation is a balanced scale. 2x = 10 says two copies of x weigh 10, so one copy weighs 5. You are not finished until x stands alone with no number attached.",
+      "drills": [
+        "linear.one_step",
+        "variables.constants"
+      ],
+      "severity": 4
+    },
+    {
+      "id": "alg.inverse_operation_wrong",
+      "name": "Applying the same operation instead of the inverse",
+      "concept": "linear.one_step",
+      "pattern": "Adds when the equation shows subtraction, or multiplies when it shows division — undoing with the same operation rather than its inverse.",
+      "remedy": "To undo a step you apply its opposite on both sides: subtraction undoes addition, division undoes multiplication. Whatever you do to one side, do to the other.",
+      "drills": [
+        "linear.one_step",
+        "variables.meaning"
+      ],
+      "severity": 3
+    },
+    {
+      "id": "alg.sign_error_moving_terms",
+      "name": "Sign is not flipped when a term moves sides",
+      "concept": "linear.both_sides",
+      "pattern": "Moves a term across the equals sign while keeping its sign, so +3x becomes +3x on the other side instead of -3x.",
+      "remedy": "Moving a term across the equals sign means subtracting it from both sides, so its sign flips. +3x leaves the left side as -3x on the right side.",
+      "drills": [
+        "expressions.negatives",
+        "linear.both_sides"
+      ],
+      "severity": 4
+    },
+    {
+      "id": "alg.distribution_partial",
+      "name": "Only the first term is distributed",
+      "concept": "expressions.distribute",
+      "pattern": "Expands 3(x + 4) as 3x + 4, multiplying the first term of the bracket and leaving the second untouched.",
+      "remedy": "The number outside a bracket multiplies every term inside it. 3(x + 4) = 3·x + 3·4 = 3x + 12.",
+      "drills": [
+        "expressions.distribute",
+        "expressions.like_terms"
+      ],
+      "severity": 4
+    },
+    {
+      "id": "alg.like_terms_over_combined",
+      "name": "Unlike terms are combined",
+      "concept": "expressions.like_terms",
+      "pattern": "Adds 3x + 4 into 7x, treating a term in x and a constant as if they were the same kind of thing.",
+      "remedy": "Only terms with exactly the same letter part can be collected. 3x and 4 are different kinds: 3x counts x's, 4 counts ones. 3x + 4 is already as simple as it gets.",
+      "drills": [
+        "expressions.like_terms",
+        "variables.constants"
+      ],
+      "severity": 4
+    },
+    {
+      "id": "alg.zero_product_ignored",
+      "name": "Factors are not each set to zero",
+      "concept": "quadratics.zero_product",
+      "pattern": "Finds one factor and stops, or solves (x-2)(x+5)=0 by expanding it back out instead of using the zero product rule.",
+      "remedy": "If a product is zero, at least one factor must be zero. So (x-2)(x+5)=0 gives x-2=0 or x+5=0. There are almost always two answers.",
+      "drills": [
+        "quadratics.factor",
+        "quadratics.zero_product"
+      ],
+      "severity": 5
+    },
+    {
+      "id": "alg.quadratic_formula_sign",
+      "name": "Signs dropped in the quadratic formula",
+      "concept": "quadratics.formula",
+      "pattern": "Uses b instead of -b, or forgets the ± so only one root is produced.",
+      "remedy": "Split the formula into its three moving parts: -b, ±, and the square root of b²-4ac. Write b and c with their signs before substituting, and always compute both branches of the ±.",
+      "drills": [
+        "quadratics.formula",
+        "expressions.negatives"
+      ],
+      "severity": 4
+    },
+    {
+      "id": "alg.slope_inverted",
+      "name": "Slope is inverted",
+      "concept": "graphs.slope",
+      "pattern": "Computes slope as run/rise — dividing the horizontal change by the vertical change.",
+      "remedy": "Slope is how much y changes each time x increases by one: rise over run, vertical change first, divided by horizontal change.",
+      "drills": [
+        "graphs.slope",
+        "graphs.plane"
+      ],
+      "severity": 3
+    },
+    {
+      "id": "alg.function_substitution",
+      "name": "The function output is confused with the input value",
+      "concept": "functions.notation",
+      "pattern": "Reads f(3) as f multiplied by 3, or returns the input value instead of the rule's result.",
+      "remedy": "f(3) means 'run the rule f on the input 3'. f is the name of a machine, not a number, so f(3) is the output the machine returns.",
+      "drills": [
+        "variables.substitution",
+        "functions.notation"
+      ],
+      "severity": 4
+    },
+    {
+      "id": "alg.word_variable_confusion",
+      "name": "The equation is built backwards from the words",
+      "concept": "word.translate",
+      "pattern": "Reads 'five less than a number' as 5 - x, following the word order instead of the meaning.",
+      "remedy": "Translate meaning, not word order. 'Five less than a number' starts from the number and removes five, so it is x - 5. Name the unknown first, then walk through the sentence.",
+      "drills": [
+        "variables.expressions",
+        "word.translate"
+      ],
+      "severity": 4
+    },
+    {
+      "id": "eng.agreement_intervening_phrase",
+      "name": "The verb agrees with the nearest noun",
+      "concept": "grammar.agreement",
+      "pattern": "Matches the verb to a noun in a phrase between the subject and the verb rather than to the actual subject.",
+      "remedy": "Cross out everything between the subject and the verb. 'The box of tools' — remove 'of tools' and the subject 'box' is clearly singular, so it is 'the box is'.",
+      "drills": [
+        "grammar.agreement",
+        "structure.clauses"
+      ],
+      "severity": 3
+    },
+    {
+      "id": "eng.run_on_misread",
+      "name": "Two sentences joined by a comma only",
+      "concept": "structure.fragments",
+      "pattern": "Treats a comma splice as correct, or calls a complete sentence a fragment because it is short.",
+      "remedy": "A comma cannot hold two complete sentences together. Join them with a full stop, a semicolon, or a comma plus a conjunction such as 'and' or 'because'.",
+      "drills": [
+        "structure.clauses",
+        "structure.fragments"
+      ],
+      "severity": 3
+    },
+    {
+      "id": "eng.context_vs_dictionary",
+      "name": "The dictionary meaning overrides the context",
+      "concept": "vocab.context",
+      "pattern": "Picks the most common dictionary sense of a word instead of the sense the surrounding sentence demands.",
+      "remedy": "Read the sentence twice: once for the word, once for the clues around it. The surrounding words shrink a word's meaning down to the one sense in play.",
+      "drills": [
+        "vocab.context",
+        "infer.evidence"
+      ],
+      "severity": 3
+    },
+    {
+      "id": "eng.connotation_ignored",
+      "name": "Connotation is treated as neutral",
+      "concept": "vocab.connotation",
+      "pattern": "Chooses between near-synonyms on literal meaning alone, ignoring that one carries a positive or negative charge.",
+      "remedy": "Near-synonyms are not interchangeable: 'thrifty' and 'stingy' describe the same habit with opposite feelings. Ask what the writer wants you to feel.",
+      "drills": [
+        "vocab.synonyms",
+        "vocab.connotation"
+      ],
+      "severity": 4
+    },
+    {
+      "id": "eng.word_form_class",
+      "name": "The wrong word class is chosen for the slot",
+      "concept": "forms.change",
+      "pattern": "Fills a noun slot with the verb form, or an adjective slot with the noun form — right family, wrong member.",
+      "remedy": "Identify the slot first. An article or possessive ('the', 'his') needs a noun; 'very' needs an adjective; a verb follows its subject. Then pick the family member that fits the slot.",
+      "drills": [
+        "grammar.parts_of_speech",
+        "forms.change"
+      ],
+      "severity": 3
+    },
+    {
+      "id": "eng.transition_logic",
+      "name": "Transitions are chosen by topic, not by logic",
+      "concept": "writing.transitions",
+      "pattern": "Inserts 'however' where the second sentence agrees with the first, or 'therefore' where there is no cause.",
+      "remedy": "Name the relationship between the two sentences before choosing: same direction (moreover, similarly), opposite (however, nevertheless), or cause and effect (therefore, as a result).",
+      "drills": [
+        "writing.transitions",
+        "writing.order"
+      ],
+      "severity": 3
+    },
+    {
+      "id": "eng.inference_left_unsupported",
+      "name": "The inference is not tied to the text",
+      "concept": "infer.implied",
+      "pattern": "Selects an answer that is true in general but not supported by the passage, or confuses what is stated with what is implied.",
+      "remedy": "Point at the sentence that lets you conclude it. If you cannot put your finger on the line that forces the conclusion, it is your own knowledge talking, not the passage.",
+      "drills": [
+        "infer.evidence",
+        "infer.implied"
+      ],
+      "severity": 4
+    },
+    {
+      "id": "mus.note_value_confusion",
+      "name": "Note values are read in the wrong direction",
+      "concept": "rhythm.note_values",
+      "pattern": "Treats a half note as shorter than a quarter note, or counts a whole note as one beat.",
+      "remedy": "Bigger number of beats means the note looks simpler: whole = 4, half = 2, quarter = 1. The more flags a note carries, the shorter it is.",
+      "drills": [
+        "rhythm.note_values",
+        "time.beats_per_measure"
+      ],
+      "severity": 3
+    },
+    {
+      "id": "mus.interval_counting_endpoints",
+      "name": "Interval counting includes the starting note wrongly",
+      "concept": "notes.intervals",
+      "pattern": "Counts the semitone distance and reports it as the interval name, or forgets that intervals are counted inclusively.",
+      "remedy": "Interval names count both endpoints: C up to E is a 3rd (C, D, E) even though it is four semitones. Count letters for the name, semitones for the size.",
+      "drills": [
+        "notes.semitones",
+        "notes.intervals"
+      ],
+      "severity": 4
+    },
+    {
+      "id": "mus.major_scale_pattern",
+      "name": "The major scale pattern is misremembered",
+      "concept": "scales.major",
+      "pattern": "Uses tone-tone-tone-semitone, or places the semitones at the wrong degree, producing a mode rather than a major scale.",
+      "remedy": "Anchor it as tone, tone, semitone, tone, tone, tone, semitone — the semitones fall between 3-4 and 7-8, exactly where the two natural half steps live.",
+      "drills": [
+        "notes.semitones",
+        "scales.major"
+      ],
+      "severity": 4
+    },
+    {
+      "id": "mus.chord_quality_by_root",
+      "name": "Chord quality is decided by the root alone",
+      "concept": "chords.quality",
+      "pattern": "Calls every chord on C major, ignoring that the third determines major or minor quality.",
+      "remedy": "Quality lives in the third. A major third (4 semitones) makes it major, a minor third (3 semitones) makes it minor, whatever the root note is.",
+      "drills": [
+        "notes.intervals",
+        "chords.quality"
+      ],
+      "severity": 4
+    },
+    {
+      "id": "mus.time_signature_numbers",
+      "name": "The two numbers of a time signature are swapped",
+      "concept": "time.beats_per_measure",
+      "pattern": "Reads 6/8 as six eighth-notes per beat, or 3/4 as three quarter-notes per bar but counts beats wrongly.",
+      "remedy": "The top number counts beats in the bar, the bottom number names the note that gets the beat. In 3/4 there are three quarter-note beats; in 6/8 there are two dotted-quarter beats.",
+      "drills": [
+        "rhythm.note_values",
+        "time.beats_per_measure"
+      ],
+      "severity": 4
+    },
+    {
+      "id": "gen.rushing_unread_question",
+      "name": "Answering faster than the question can be read",
+      "concept": "*",
+      "pattern": "Repeatedly answers well below the concept's typical reading time and is wrong on those attempts — a speed error rather than a knowledge error.",
+      "remedy": "The engine sees this pattern across concepts, not just one. Slow down past the point where you have read every option; speed returns once the idea is solid.",
+      "drills": [],
+      "severity": 2
+    },
+    {
+      "id": "gen.guessing_under_uncertainty",
+      "name": "Guessing instead of reasoning",
+      "concept": "*",
+      "pattern": "Accuracy sits near chance while response times stay very low and answers vary randomly between attempts on the same concept.",
+      "remedy": "Chance-level accuracy means the concept is not yet learned, not that you need harder questions. Revisit the domain's earlier concepts before pushing on.",
+      "drills": [],
+      "severity": 3
+    }
+  ]
+}
