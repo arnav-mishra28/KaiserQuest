@@ -53,6 +53,7 @@ public class GameBootstrap : MonoBehaviour
         EnsureManager<GameManager>("GameManager");
         EnsureManager<KnowledgeEngine>("KnowledgeEngine");
         EnsureManager<StoryModeManager>("StoryModeManager");
+        EnsureManager<StoryUI>("StoryUI");
         EnsureManager<SceneLoader>("SceneLoader");
         EnsureManager<QuestionBank>("QuestionBank");
         EnsureManager<AIClient>("AIClient");
@@ -61,6 +62,10 @@ public class GameBootstrap : MonoBehaviour
         EnsureManager<PixelSpriteGenerator>("PixelSpriteGenerator");
         EnsureManager<SoundManager>("SoundManager");
         EnsureManager<WorldManager>("WorldManager");
+
+        // The populator stands the story up inside the generated world (keepers,
+        // save shards, the Archivist). Scene-scoped: the world is re-populated per scene.
+        EnsureSceneManager<KaiserWorldPopulator>("KaiserWorldPopulator");
 
         // DialogSystem, BattleManager, HUD need Canvas — create in-scene
         EnsureSceneManager<DialogSystem>("DialogSystem");
@@ -72,6 +77,10 @@ public class GameBootstrap : MonoBehaviour
 
     private void Start()
     {
+        // A scene may contain nothing at all (the menu scenes ship bare), so the
+        // bootstrap builds its own camera and tilemaps before anything needs them.
+        EnsureWorldInfrastructure();
+
         // Auto-discover tilemaps from Grid in scene
         AutoDiscoverTilemaps();
 
@@ -106,6 +115,10 @@ public class GameBootstrap : MonoBehaviour
         if (generateWorldOnStart && worldGenerator != null)
         {
             worldGenerator.GenerateWorld();
+
+            // Publish what was built so the story populator can stand keepers and
+            // save shards along the road the generator drew.
+            ProceduralWorldGeneratorHub.Cities = worldGenerator.generatedCities;
         }
 
         // Spawn player
@@ -116,13 +129,58 @@ public class GameBootstrap : MonoBehaviour
             SoundManager.Instance.PlayMusic("overworld");
 
         // Continue the story where it was left, if it was left anywhere.
+        // ContinueStory also opens the first story screen: creation for a new
+        // player, the title for a returning one.
         ContinueStory();
 
-        // Set game state
+        // Set game state (the story overlay, if open, holds the game paused)
         if (GameManager.Instance != null)
             GameManager.Instance.SetGameState(GameState.Overworld);
 
         Debug.Log("[GameBootstrap] Game ready!");
+    }
+
+    /// <summary>
+    /// Make sure a camera and a Grid with the five tilemaps exist, creating them
+    /// when the scene does not have them. This is what lets the same bootstrap run
+    /// in the Overworld scene, the menu scenes, or an empty scene.
+    /// </summary>
+    private void EnsureWorldInfrastructure()
+    {
+        if (Camera.main == null)
+        {
+            GameObject camObj = new GameObject("Main Camera");
+            camObj.tag = "MainCamera";
+            Camera cam = camObj.AddComponent<Camera>();
+            cam.clearFlags = CameraClearFlags.SolidColor;
+            cam.backgroundColor = new Color(0.08f, 0.09f, 0.13f, 1f);
+            cam.orthographic = true;
+            cam.orthographicSize = 8f;
+            camObj.AddComponent<CameraFollow>();
+            Debug.Log("[GameBootstrap] No camera in scene — created one.");
+        }
+
+        UnityEngine.Grid grid = FindObjectOfType<UnityEngine.Grid>();
+        if (grid == null)
+        {
+            GameObject gridObj = new GameObject("Grid");
+            gridObj.AddComponent<UnityEngine.Grid>();
+            AddTilemapChild(gridObj.transform, "GroundTilemap", 0);
+            AddTilemapChild(gridObj.transform, "PathTilemap", 1);
+            AddTilemapChild(gridObj.transform, "DecorationTilemap", 2);
+            AddTilemapChild(gridObj.transform, "WaterTilemap", 3);
+            AddTilemapChild(gridObj.transform, "CollisionTilemap", 4);
+            Debug.Log("[GameBootstrap] No Grid in scene — created tilemaps.");
+        }
+    }
+
+    private static void AddTilemapChild(Transform parent, string name, int sortingOrder)
+    {
+        GameObject obj = new GameObject(name);
+        obj.transform.SetParent(parent, false);
+        obj.AddComponent<Tilemap>();
+        TilemapRenderer renderer = obj.AddComponent<TilemapRenderer>();
+        renderer.sortingOrder = sortingOrder;
     }
 
     private void AutoDiscoverTilemaps()
@@ -266,6 +324,7 @@ public class GameBootstrap : MonoBehaviour
         if (!story.HasSave(story.saveSlotId))
         {
             Debug.Log("[GameBootstrap] No story save yet — character creation is due.");
+            if (StoryUI.Instance != null) StoryUI.Instance.Boot();
             return;
         }
 
@@ -281,6 +340,10 @@ public class GameBootstrap : MonoBehaviour
 
         if (GameManager.Instance != null)
             GameManager.Instance.playerData.playerName = save.playerName;
+
+        // A returning player gets the title screen: continue, new character, or
+        // delete — the world is already standing behind it.
+        if (StoryUI.Instance != null) StoryUI.Instance.Boot();
     }
 
     private void EnsureManager<T>(string name) where T : MonoBehaviour

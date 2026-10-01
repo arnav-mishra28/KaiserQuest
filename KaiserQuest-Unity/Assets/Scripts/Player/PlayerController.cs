@@ -42,6 +42,11 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        // Story screens (title, creation, campaign map, trials, the summit) are
+        // modal: while one is open the world waits. Walking into a trial and
+        // answering it would otherwise be simultaneous.
+        if (KaiserQuest.Story.StoryUI.BlocksWorldInput) return;
+
         if (!canMove) return;
 
         if (isMoving)

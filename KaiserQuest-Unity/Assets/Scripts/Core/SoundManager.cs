@@ -154,6 +154,19 @@ public class SoundManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Play a named SFX from anywhere, null-safe.
+    ///
+    /// The story screens call this constantly (confirm, correct, wrong, victory)
+    /// and must not care whether the manager exists yet or whether the clip was
+    /// generated — a missing sound is never allowed to break a trial.
+    /// </summary>
+    public static void PlaySfx(string sfxName)
+    {
+        if (Instance == null) return;
+        Instance.PlaySFX(sfxName);
+    }
+
     public void PlaySFX(AudioClip clip)
     {
         if (clip != null)
