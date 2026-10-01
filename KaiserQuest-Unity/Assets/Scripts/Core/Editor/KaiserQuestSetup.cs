@@ -3,6 +3,8 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEditor.SceneManagement;
+using System.Collections.Generic;
+using System.Linq;
 
 /// <summary>
 /// KaiserQuestSetup — Editor tool to set up the project on first open.
@@ -10,6 +12,52 @@ using UnityEditor.SceneManagement;
 /// </summary>
 public class KaiserQuestSetup : EditorWindow
 {
+    [MenuItem("KaiserQuest/Sync Build Settings")]
+    public static void SyncBuildScenesMenu()
+    {
+        Debug.Log(SyncBuildScenes() >= 0
+            ? "[KaiserQuest] Build Settings updated: every scene in Assets/Scenes is registered (MainMenu loads first)."
+            : "[KaiserQuest] Build Settings already match Assets/Scenes.");
+    }
+
+    /// <summary>
+    /// Registers every scene under Assets/Scenes in Build Settings, MainMenu
+    /// first (index 0 is the scene a built game starts from). SceneLoader loads
+    /// scenes by name, which throws at play time for any scene that is missing
+    /// from the build list — including stale entries left behind by deleted
+    /// template scenes, which this also removes. Runs automatically on load so
+    /// a fresh import needs zero manual wiring.
+    /// Returns -1 when nothing changed, otherwise the number of scenes registered.
+    /// </summary>
+    public static int SyncBuildScenes()
+    {
+        var guids = AssetDatabase.FindAssets("t:Scene", new[] { "Assets/Scenes" });
+        var paths = guids.Select(AssetDatabase.GUIDToAssetPath).ToList();
+        var ordered = new List<string>();
+        // Preferred scenes first, in campaign order; everything else follows.
+        foreach (var preferred in new[] { "MainMenu", "Overworld", "SubjectSelect" })
+        {
+            var match = paths.FirstOrDefault(p => p.EndsWith("/" + preferred + ".unity"));
+            if (match != null) ordered.Add(match);
+        }
+        ordered.AddRange(paths.Where(p => !ordered.Contains(p)));
+
+        var current = EditorBuildSettings.scenes.Select(s => s.path).ToList();
+        bool unchanged = current.Count == ordered.Count &&
+                         !current.Zip(ordered, (a, b) => a == b).Any(same => !same);
+        if (unchanged) return -1;
+
+        EditorBuildSettings.scenes = ordered.Select(p => new EditorBuildSettingsScene(p, true)).ToArray();
+        return ordered.Count;
+    }
+
+    // Deferred to a delayCall so the asset database is fully imported before
+    // we query it (this runs on every domain reload, including project open).
+    [InitializeOnLoadMethod]
+    private static void SyncBuildScenesOnLoad()
+    {
+        EditorApplication.delayCall += () => SyncBuildScenes();
+    }
     [MenuItem("KaiserQuest/Setup Project")]
     public static void ShowWindow()
     {
@@ -238,8 +286,7 @@ public class KaiserQuestSetup : EditorWindow
         }
 
         GUILayout.Space(20);
-        GUILayout.Label("After creating scenes, add them to Build Settings:", EditorStyles.label);
-        GUILayout.Label("File > Build Settings > Add Open Scenes", EditorStyles.miniLabel);
+        GUILayout.Label("Build Settings are kept in sync automatically (KaiserQuest > Sync Build Settings).", EditorStyles.label);
 
         GUILayout.Space(10);
         if (GUILayout.Button("Open Build Settings", GUILayout.Height(25)))
