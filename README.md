@@ -126,8 +126,9 @@ answers are caught by mutation tests; failures go to `_quarantine.json` instead 
 
 ```
 KaiserQuest/
+├── KaiserQuest/                        # ◀ THE LIVE UNITY 6 PROJECT — open this one
+│   └── Assets/Scripts/                 # (same layout as below)
 ├── KaiserQuest-Unity/                  # Unity 2022.3.20f1
-│   ├── Assets/Scripts/
 │   │   ├── Knowledge/                  # The engine port (offline authority for play)
 │   │   │   ├── ConceptGraph.cs         # 88 concepts, prereq closure, frontier
 │   │   │   ├── KnowledgeTracer.cs      # BKT, mastery, confidence, forgetting
@@ -135,7 +136,7 @@ KaiserQuest/
 │   │   │   ├── KnowledgeProfile.cs     # domains, confidence buckets, next-up
 │   │   │   ├── KnowledgeEngine.cs      # loading, adaptive select, grading
 │   │   │   ├── AttemptLog.cs, KnowledgeData.cs
-│   │   ├── Story/                      # The campaign
+│   │   ├── Story/                      # The campaign + its presentation
 │   │   │   ├── TrialModes.cs           # 13 trial modes
 │   │   │   ├── MilestoneCatalog.cs     # the 20-milestone arc, per-realm flavour
 │   │   │   ├── TrialRunner.cs          # the mechanics, as selection/grading policy
@@ -144,7 +145,10 @@ KaiserQuest/
 │   │   │   ├── StoryModeManager.cs     # orchestrator
 │   │   │   ├── CharacterCreation.cs    # name, appearance presets, starting realm
 │   │   │   ├── SaveSystem.cs           # versioned, atomic JSON saves
-│   │   │   └── StoryProgress.cs        # the save format
+│   │   │   ├── StoryProgress.cs        # the save format
+│   │   │   ├── StoryUI.cs              # title · creation · map · trial · summit · recap (IMGUI)
+│   │   │   ├── StoryWorld.cs           # keepers, save shards, Archivist, world populator
+│   │   │   └── Boot.cs                 # RuntimeInitializeOnLoadMethod entry point
 │   │   ├── Core/                       # GameManager, GameBootstrap, sprite/audio/tiles
 │   │   ├── AI/ Battle/ Camera/ Gym/ Multiplayer/ NPC/ Player/ Quests/ UI/ World/
 │   │   │                               # v0.2 systems still present; see Status below
@@ -180,7 +184,72 @@ KaiserQuest/
 
 ## Running it
 
-### Backend
+### 1 · Unity (the game — this is the whole game, fully offline)
+
+1. Install **Unity 6000.3.13f1** (Unity 6 — any Unity Hub can add that exact version).
+2. Open the **`KaiserQuest/`** folder (the one directly inside the repo — *not*
+   `KaiserQuest-Unity/`) as a project and wait for the compile to finish.
+3. In the menu bar run **KaiserQuest → Generate All Assets**. This builds every
+   procedurally-generated sprite, tile and font the world uses. Then run
+   **KaiserQuest → Generate Audio** for the 8-bit music and sound effects. (If the
+   menu is missing, the scripts are still compiling — give the Editor a moment.)
+   Build Settings maintain themselves: on project open the game registers every scene in
+   `Assets/Scenes` (MainMenu first) and prunes stale entries, so nothing needs adding by
+   hand. `KaiserQuest → Sync Build Settings` re-runs it.
+4. Press **Play**. Any scene works — press Play on whatever is open.
+
+That is all. The game is self-booting: whichever scene is open, `Boot` creates the
+bootstrap, the bootstrap creates every manager, the Knowledge Engine loads the verified
+question banks from `Assets/Resources/`, the world generates itself, and the first story
+screen opens — character creation for a new player, the title for a returning one.
+
+#### What a session looks like
+
+- **Create your explorer** — name, one of six looks, and which realm to enter first:
+  Algebra (the Numeric Marches), English (the Plain of Tongues) or Music (the Resonant
+  Valleys). No class, no level, no difficulty: the only thing that grows is what you
+  understand.
+- **The campaign map** is the road: 20 milestones, each with a place, a keeper and a
+  different trial mechanic. The map always shows which milestone is open and — when one
+  is locked — *why*, in words, never a bare padlock.
+- **Close the map** to walk the overworld (WASD/arrows). Each milestone place has a
+  **keeper NPC** who opens that milestone's trial and a **save shard** where you rest.
+- **Trials** are multiple choice with the mechanic's framing: chains rebound on a wrong
+  answer, duels are timed, boss trials aim at your weakest chapters. Answers feed the
+  Knowledge Engine immediately, so the very next question adapts.
+- **Clear a milestone and your save point moves there.** Pass milestone 20 and **Silver
+  Mountain** opens: the Archivist's 25-question exam, three attempts per window, then a
+  24-hour cooldown and a personalised Mastery Recap at your save point.
+
+#### Controls
+
+| Input | Action |
+|-------|--------|
+| WASD / arrow keys | Walk |
+| Z / Enter / Space | Interact (talk to a keeper, rest at a shard, approach the Archivist) |
+| Esc | Close the current story screen / pause |
+| Mouse | Everything in the story screens is clickable |
+
+#### Where saves live
+
+Versioned JSON, written atomically, under `Application.persistentDataPath/saves/`
+(on Windows: `%USERPROFILE%\AppData\LocalLow\<company>\KaiserQuest\saves\`). The
+knowledge trace travels with the save, so the 24-hour cooldown survives a restart.
+
+#### Troubleshooting
+
+| Symptom | Fix |
+|---------|-----|
+| "THE KNOWLEDGE IS MISSING" screen at startup | **KaiserQuest → Generate All Assets** was not run. Run it, then use the *Try again* button or press Play again. |
+| `bank_*.json` / `concepts.json` missing from `Assets/Resources/` | Run the export: `cd backend && PYTHONIOENCODING=utf-8 python -m engine.content.pipeline` (see below). |
+| Console shows `Music clip not found` / silent game | Run **KaiserQuest → Generate Audio**. Missing audio never blocks play. |
+| World looks empty (no keepers) | The world populator waits for the story layer to be ready; make sure the Resources JSONs exist (first row above). |
+| Milestone says it is locked | Read the reason on the map — it is the mastery gate telling you which concept has faded. Replay that milestone's trial to rebuild it. |
+
+### 2 · Backend (optional — for content generation and analytics)
+
+The game plays entirely offline. The Python side is the authority for *content*
+(generation, validation, difficulty estimation) and fleet analytics, not for play:
 
 ```bash
 cd backend
@@ -188,7 +257,7 @@ pip install -r requirements.txt
 python main.py                      # http://localhost:8000  ·  /docs
 ```
 
-### Tests
+### 3 · Tests
 
 ```bash
 cd backend
@@ -196,32 +265,38 @@ PYTHONIOENCODING=utf-8 python -m unittest discover -s tests
 ```
 
 `PYTHONIOENCODING=utf-8` matters on Windows: the console's default codepage chokes on the
-box-drawing characters in the profile renderer.
+box-drawing characters in the profile renderer. 193 tests pass — they are the executable
+specification of the engine.
 
-### Regenerate content (and the Unity export)
+### 4 · Regenerate content (and the Unity export)
 
 ```bash
 cd backend
 PYTHONIOENCODING=utf-8 python -m engine.content.pipeline
 ```
 
-This writes `data/banks/`, then exports into `KaiserQuest-Unity/Assets/Resources/`
-(`Knowledge/concepts.json`, `Knowledge/misconceptions.json`, `Questions/bank_<realm>.json`).
+This writes `data/banks/`, then exports into **every** Unity project in the repo —
+`KaiserQuest/Assets/Resources/` and `KaiserQuest-Unity/Assets/Resources/` —
+(`Knowledge/concepts.json`, `Knowledge/misconceptions.json`, `Questions/bank_<realm>.json`),
+so both copies stay in sync with what the server serves. Pass `--unity-dir <path>` to target a
+single folder instead. The run is deterministic: the same `--seed` produces byte-identical banks.
 The pipeline reports `coverage_gaps` honestly: currently **956 verified questions, 0
 quarantined, 88/88 concepts covered**, with 24 concepts still below the 6-question target.
 Concepts the bank cannot examine are excluded from mastery gates rather than held against
 the player.
 
-### Unity
+### 5 · Compile-checking C# without the Editor (maintainers)
 
-1. Open `KaiserQuest-Unity/` in **Unity 2022.3.20f1**.
-2. **KaiserQuest → Generate All Assets**, then **KaiserQuest → Generate Audio**.
-3. Open `Assets/Scenes/Overworld.unity` and press Play.
-4. WASD/arrows to move, Z/Enter/Space to interact, Esc to pause.
+```bash
+bash Tools/compile-check.sh
+```
 
-`GameBootstrap` starts `KnowledgeEngine` → `StoryModeManager` in that order and resumes the
-last story save, so a player returns to the place they rested — which is exactly what makes
-the Silver Mountain rule mean anything.
+Typechecks every script in `Assets/Scripts` with Unity 2022.3.20f1's own Roslyn and
+engine assemblies. `UnityEngine.UI` and TextMeshPro are only stubbed (see
+`Tools/CompileCheck/`) because those package DLLs materialise on first Editor import;
+the stubs live outside `Assets/` and are never shipped. The whole tree — story layer,
+knowledge layer, world, legacy v0.2 scripts — compiles with zero errors and zero
+warnings.
 
 ---
 
@@ -231,15 +306,30 @@ the Silver Mountain rule mean anything.
 |------|-------|
 | Backend engine, campaign, progression, Silver Mountain, pipeline | **Done** — 193 tests passing |
 | Verified question banks | **956 items**, 88/88 concepts covered |
-| Unity knowledge layer (`Knowledge/*.cs`) | **Compiles clean** against Unity 2022.3 assemblies |
-| Unity story layer (`Story/*.cs`) | **Compiles clean** against Unity 2022.3 assemblies |
-| Scripted trial / Silver Mountain **UI screens** | Not built — the layer is headless by design and awaits presentation |
-| World integration (keepers in the overworld, save-point objects) | Pending |
-| Legacy v0.2 scripts (`BattleManager`, `GymSystem`, `AIClient`, `PvPManager`, `UI/`, `World/`) | Superseded; still in the tree. `GameManager`'s level gate has been replaced with the mastery gate |
+| Story UI (title, character creation, campaign map, trials, Silver Mountain, Mastery Recap) | **Done** — drawn with IMGUI so it works with zero scene wiring |
+| World integration (milestone keepers, save shards, the Archivist on the summit) | **Done** — spawned along the generated road at runtime |
+| Self-booting entry (`Boot` + `GameBootstrap`) | **Done** — Play works from any scene, no hand-wiring |
+| Full C# tree compiles (story, knowledge, world, legacy v0.2 scripts) | **Verified** — Roslyn, 0 errors / 0 warnings |
+| Legacy v0.2 battle/gym/UI scripts | Still in the tree and now compile-verified; superseded by the story layer, which no longer routes through them |
 
-Compilation was verified with Unity's own Roslyn compiler and 2022.3 assemblies rather than
-inside the Editor; the four legacy UI scripts resolve `UnityEngine.UI`/TextMeshPro package
-assemblies, which only exist after an Editor import.
+### How the pieces run at play time
+
+```
+Boot (RuntimeInitializeOnLoadMethod)
+ └─ GameBootstrap
+     ├─ GameManager · KnowledgeEngine · StoryModeManager · StoryUI
+     ├─ SceneLoader · QuestionBank · AIClient · PvPManager · SideQuestManager
+     ├─ PixelSpriteGenerator · SoundManager · WorldManager
+     ├─ camera + tilemaps (created if the scene lacks them)
+     ├─ ProceduralWorldGenerator ─▶ ProceduralWorldGeneratorHub.Cities
+     ├─ KaiserWorldPopulator ─▶ keeper NPCs + save shards + the Archivist
+     └─ ContinueStory ─▶ StoryUI.Boot ─▶ title or character creation
+```
+
+The story screens are modal: while one is open the world stops accepting input, and
+answering a trial question and walking away can never happen in the same frame.
+Compilation and backend tests are the verification; inside the Editor, the smoke test is
+the three screens themselves: create → play milestone 1 → open the map.
 
 ---
 
