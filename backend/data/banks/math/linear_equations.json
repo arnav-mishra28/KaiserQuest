@@ -521,22 +521,22 @@
       "subject": "math",
       "topic": "linear_equations",
       "concept": "linear.both_sides",
-      "question": "Solve for x:  9x + 10 = 6x + 31",
+      "question": "Solve for x:  5x + 10 = 3x + 16",
       "options": [
-        "1.4",
-        "21",
-        "7",
-        "8"
+        "0.75",
+        "3",
+        "6",
+        "4"
       ],
-      "correct_answer": "7",
-      "explanation": "Subtract 6x from both sides: 3x + 10 = 31. Subtract 10: 3x = 21. Divide: x = 7. Moving a term across the equals sign flips its sign.",
+      "correct_answer": "3",
+      "explanation": "Subtract 3x from both sides: 2x + 10 = 16. Subtract 10: 2x = 6. Divide: x = 3. Moving a term across the equals sign flips its sign.",
       "difficulty": 3,
       "misconceptions": {
-        "1.4": "alg.sign_error_moving_terms"
+        "0.75": "alg.sign_error_moving_terms"
       },
       "verify": {
         "kind": "linear_solution",
-        "equation": "9*x + 10 = 6*x + 31"
+        "equation": "5*x + 10 = 3*x + 16"
       },
       "source": "procedural",
       "review_status": "auto_validated",
@@ -548,22 +548,74 @@
       "subject": "math",
       "topic": "linear_equations",
       "concept": "linear.both_sides",
-      "question": "Solve for x:  5x + 9 = 1x + 25",
+      "question": "Solve for x:  7x + 5 = 6x + 7",
       "options": [
-        "5",
-        "2.67",
-        "4",
-        "16"
+        "3",
+        "0.15",
+        "2"
       ],
-      "correct_answer": "4",
-      "explanation": "Subtract 1x from both sides: 4x + 9 = 25. Subtract 9: 4x = 16. Divide: x = 4. Moving a term across the equals sign flips its sign.",
+      "correct_answer": "2",
+      "explanation": "Subtract 6x from both sides: 1x + 5 = 7. Subtract 5: 1x = 2. Divide: x = 2. Moving a term across the equals sign flips its sign.",
       "difficulty": 3,
       "misconceptions": {
-        "2.67": "alg.sign_error_moving_terms"
+        "0.15": "alg.sign_error_moving_terms"
       },
       "verify": {
         "kind": "linear_solution",
-        "equation": "5*x + 9 = 1*x + 25"
+        "equation": "7*x + 5 = 6*x + 7"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4662.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_linear_both_sides_003",
+      "subject": "math",
+      "topic": "linear_equations",
+      "concept": "linear.both_sides",
+      "question": "Solve for x:  5x + 2 = 4x + 7",
+      "options": [
+        "0.56",
+        "5",
+        "6"
+      ],
+      "correct_answer": "5",
+      "explanation": "Subtract 4x from both sides: 1x + 2 = 7. Subtract 2: 1x = 5. Divide: x = 5. Moving a term across the equals sign flips its sign.",
+      "difficulty": 3,
+      "misconceptions": {
+        "0.56": "alg.sign_error_moving_terms"
+      },
+      "verify": {
+        "kind": "linear_solution",
+        "equation": "5*x + 2 = 4*x + 7"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4662.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_linear_both_sides_004",
+      "subject": "math",
+      "topic": "linear_equations",
+      "concept": "linear.both_sides",
+      "question": "Solve for x:  6x + 7 = 1x + 22",
+      "options": [
+        "15",
+        "4",
+        "2.14",
+        "3"
+      ],
+      "correct_answer": "3",
+      "explanation": "Subtract 1x from both sides: 5x + 7 = 22. Subtract 7: 5x = 15. Divide: x = 3. Moving a term across the equals sign flips its sign.",
+      "difficulty": 3,
+      "misconceptions": {
+        "2.14": "alg.sign_error_moving_terms"
+      },
+      "verify": {
+        "kind": "linear_solution",
+        "equation": "6*x + 7 = 1*x + 22"
       },
       "source": "procedural",
       "review_status": "auto_validated",
@@ -571,84 +623,30 @@
       "estimated_difficulty": 3
     },
     {
-      "id": "gen_linear_both_sides_003",
-      "subject": "math",
-      "topic": "linear_equations",
-      "concept": "linear.both_sides",
-      "question": "Solve for x:  5x + 11 = 2x + 38",
-      "options": [
-        "9",
-        "3.86",
-        "10",
-        "27"
-      ],
-      "correct_answer": "9",
-      "explanation": "Subtract 2x from both sides: 3x + 11 = 38. Subtract 11: 3x = 27. Divide: x = 9. Moving a term across the equals sign flips its sign.",
-      "difficulty": 3,
-      "misconceptions": {
-        "3.86": "alg.sign_error_moving_terms"
-      },
-      "verify": {
-        "kind": "linear_solution",
-        "equation": "5*x + 11 = 2*x + 38"
-      },
-      "source": "procedural",
-      "review_status": "auto_validated",
-      "expected_time_ms": 5168.0,
-      "estimated_difficulty": 3
-    },
-    {
-      "id": "gen_linear_both_sides_004",
-      "subject": "math",
-      "topic": "linear_equations",
-      "concept": "linear.both_sides",
-      "question": "Solve for x:  5x + 10 = 2x + 16",
-      "options": [
-        "3",
-        "2",
-        "0.86",
-        "6"
-      ],
-      "correct_answer": "2",
-      "explanation": "Subtract 2x from both sides: 3x + 10 = 16. Subtract 10: 3x = 6. Divide: x = 2. Moving a term across the equals sign flips its sign.",
-      "difficulty": 3,
-      "misconceptions": {
-        "0.86": "alg.sign_error_moving_terms"
-      },
-      "verify": {
-        "kind": "linear_solution",
-        "equation": "5*x + 10 = 2*x + 16"
-      },
-      "source": "procedural",
-      "review_status": "auto_validated",
-      "expected_time_ms": 5168.0,
-      "estimated_difficulty": 3
-    },
-    {
       "id": "gen_linear_both_sides_005",
       "subject": "math",
       "topic": "linear_equations",
       "concept": "linear.both_sides",
-      "question": "Solve for x:  8x + 4 = 3x + 9",
+      "question": "Solve for x:  4x + 6 = 1x + 33",
       "options": [
-        "0.45",
-        "1",
-        "5",
-        "2"
+        "10",
+        "9",
+        "5.4",
+        "27"
       ],
-      "correct_answer": "1",
-      "explanation": "Subtract 3x from both sides: 5x + 4 = 9. Subtract 4: 5x = 5. Divide: x = 1. Moving a term across the equals sign flips its sign.",
+      "correct_answer": "9",
+      "explanation": "Subtract 1x from both sides: 3x + 6 = 33. Subtract 6: 3x = 27. Divide: x = 9. Moving a term across the equals sign flips its sign.",
       "difficulty": 3,
       "misconceptions": {
-        "0.45": "alg.sign_error_moving_terms"
+        "5.4": "alg.sign_error_moving_terms"
       },
       "verify": {
         "kind": "linear_solution",
-        "equation": "8*x + 4 = 3*x + 9"
+        "equation": "4*x + 6 = 1*x + 33"
       },
       "source": "procedural",
       "review_status": "auto_validated",
-      "expected_time_ms": 5112.0,
+      "expected_time_ms": 5140.0,
       "estimated_difficulty": 3
     },
     {
@@ -656,76 +654,22 @@
       "subject": "math",
       "topic": "linear_equations",
       "concept": "linear.both_sides",
-      "question": "Solve for x:  8x + 12 = 3x + 47",
+      "question": "Solve for x:  6x + 4 = 2x + 8",
       "options": [
-        "35",
-        "3.18",
-        "8",
-        "7"
-      ],
-      "correct_answer": "7",
-      "explanation": "Subtract 3x from both sides: 5x + 12 = 47. Subtract 12: 5x = 35. Divide: x = 7. Moving a term across the equals sign flips its sign.",
-      "difficulty": 3,
-      "misconceptions": {
-        "3.18": "alg.sign_error_moving_terms"
-      },
-      "verify": {
-        "kind": "linear_solution",
-        "equation": "8*x + 12 = 3*x + 47"
-      },
-      "source": "procedural",
-      "review_status": "auto_validated",
-      "expected_time_ms": 5168.0,
-      "estimated_difficulty": 3
-    },
-    {
-      "id": "gen_linear_both_sides_007",
-      "subject": "math",
-      "topic": "linear_equations",
-      "concept": "linear.both_sides",
-      "question": "Solve for x:  6x + 10 = 3x + 28",
-      "options": [
-        "6",
-        "18",
-        "7",
-        "2"
-      ],
-      "correct_answer": "6",
-      "explanation": "Subtract 3x from both sides: 3x + 10 = 28. Subtract 10: 3x = 18. Divide: x = 6. Moving a term across the equals sign flips its sign.",
-      "difficulty": 3,
-      "misconceptions": {
-        "2": "alg.sign_error_moving_terms"
-      },
-      "verify": {
-        "kind": "linear_solution",
-        "equation": "6*x + 10 = 3*x + 28"
-      },
-      "source": "procedural",
-      "review_status": "auto_validated",
-      "expected_time_ms": 5168.0,
-      "estimated_difficulty": 3
-    },
-    {
-      "id": "gen_linear_both_sides_008",
-      "subject": "math",
-      "topic": "linear_equations",
-      "concept": "linear.both_sides",
-      "question": "Solve for x:  4x + 3 = 1x + 6",
-      "options": [
+        "0.5",
         "1",
-        "0.6",
-        "3",
+        "4",
         "2"
       ],
       "correct_answer": "1",
-      "explanation": "Subtract 1x from both sides: 3x + 3 = 6. Subtract 3: 3x = 3. Divide: x = 1. Moving a term across the equals sign flips its sign.",
+      "explanation": "Subtract 2x from both sides: 4x + 4 = 8. Subtract 4: 4x = 4. Divide: x = 1. Moving a term across the equals sign flips its sign.",
       "difficulty": 3,
       "misconceptions": {
-        "0.6": "alg.sign_error_moving_terms"
+        "0.5": "alg.sign_error_moving_terms"
       },
       "verify": {
         "kind": "linear_solution",
-        "equation": "4*x + 3 = 1*x + 6"
+        "equation": "6*x + 4 = 2*x + 8"
       },
       "source": "procedural",
       "review_status": "auto_validated",
@@ -733,53 +677,106 @@
       "estimated_difficulty": 3
     },
     {
+      "id": "gen_linear_both_sides_007",
+      "subject": "math",
+      "topic": "linear_equations",
+      "concept": "linear.both_sides",
+      "question": "Solve for x:  5x + 4 = 1x + 28",
+      "options": [
+        "6",
+        "7",
+        "4",
+        "24"
+      ],
+      "correct_answer": "6",
+      "explanation": "Subtract 1x from both sides: 4x + 4 = 28. Subtract 4: 4x = 24. Divide: x = 6. Moving a term across the equals sign flips its sign.",
+      "difficulty": 3,
+      "misconceptions": {
+        "4": "alg.sign_error_moving_terms"
+      },
+      "verify": {
+        "kind": "linear_solution",
+        "equation": "5*x + 4 = 1*x + 28"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5140.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_linear_both_sides_008",
+      "subject": "math",
+      "topic": "linear_equations",
+      "concept": "linear.both_sides",
+      "question": "Solve for x:  11x + 12 = 6x + 27",
+      "options": [
+        "4",
+        "15",
+        "0.88",
+        "3"
+      ],
+      "correct_answer": "3",
+      "explanation": "Subtract 6x from both sides: 5x + 12 = 27. Subtract 12: 5x = 15. Divide: x = 3. Moving a term across the equals sign flips its sign.",
+      "difficulty": 3,
+      "misconceptions": {
+        "0.88": "alg.sign_error_moving_terms"
+      },
+      "verify": {
+        "kind": "linear_solution",
+        "equation": "11*x + 12 = 6*x + 27"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5196.0,
+      "estimated_difficulty": 3
+    },
+    {
       "id": "gen_linear_both_sides_009",
       "subject": "math",
       "topic": "linear_equations",
       "concept": "linear.both_sides",
-      "question": "Solve for x:  8x + 10 = 3x + 15",
+      "question": "Solve for x:  6x + 7 = 5x + 11",
       "options": [
-        "2",
-        "5",
-        "1",
-        "0.45"
+        "0.36",
+        "4",
+        "5"
       ],
-      "correct_answer": "1",
-      "explanation": "Subtract 3x from both sides: 5x + 10 = 15. Subtract 10: 5x = 5. Divide: x = 1. Moving a term across the equals sign flips its sign.",
+      "correct_answer": "4",
+      "explanation": "Subtract 5x from both sides: 1x + 7 = 11. Subtract 7: 1x = 4. Divide: x = 4. Moving a term across the equals sign flips its sign.",
       "difficulty": 3,
       "misconceptions": {
-        "0.45": "alg.sign_error_moving_terms"
+        "0.36": "alg.sign_error_moving_terms"
       },
       "verify": {
         "kind": "linear_solution",
-        "equation": "8*x + 10 = 3*x + 15"
+        "equation": "6*x + 7 = 5*x + 11"
       },
       "source": "procedural",
       "review_status": "auto_validated",
-      "expected_time_ms": 5168.0,
-      "estimated_difficulty": 3
+      "expected_time_ms": 4690.0,
+      "estimated_difficulty": 2
     },
     {
       "id": "gen_linear_both_sides_010",
       "subject": "math",
       "topic": "linear_equations",
       "concept": "linear.both_sides",
-      "question": "Solve for x:  5x + 11 = 2x + 35",
+      "question": "Solve for x:  10x + 6 = 6x + 18",
       "options": [
-        "3.43",
-        "8",
-        "24",
-        "9"
+        "0.75",
+        "12",
+        "3",
+        "4"
       ],
-      "correct_answer": "8",
-      "explanation": "Subtract 2x from both sides: 3x + 11 = 35. Subtract 11: 3x = 24. Divide: x = 8. Moving a term across the equals sign flips its sign.",
+      "correct_answer": "3",
+      "explanation": "Subtract 6x from both sides: 4x + 6 = 18. Subtract 6: 4x = 12. Divide: x = 3. Moving a term across the equals sign flips its sign.",
       "difficulty": 3,
       "misconceptions": {
-        "3.43": "alg.sign_error_moving_terms"
+        "0.75": "alg.sign_error_moving_terms"
       },
       "verify": {
         "kind": "linear_solution",
-        "equation": "5*x + 11 = 2*x + 35"
+        "equation": "10*x + 6 = 6*x + 18"
       },
       "source": "procedural",
       "review_status": "auto_validated",
@@ -791,53 +788,52 @@
       "subject": "math",
       "topic": "linear_equations",
       "concept": "linear.both_sides",
-      "question": "Solve for x:  10x + 1 = 6x + 13",
+      "question": "Solve for x:  7x + 4 = 6x + 6",
       "options": [
-        "4",
-        "0.75",
-        "12",
-        "3"
+        "2",
+        "3",
+        "0.15"
       ],
-      "correct_answer": "3",
-      "explanation": "Subtract 6x from both sides: 4x + 1 = 13. Subtract 1: 4x = 12. Divide: x = 3. Moving a term across the equals sign flips its sign.",
+      "correct_answer": "2",
+      "explanation": "Subtract 6x from both sides: 1x + 4 = 6. Subtract 4: 1x = 2. Divide: x = 2. Moving a term across the equals sign flips its sign.",
       "difficulty": 3,
       "misconceptions": {
-        "0.75": "alg.sign_error_moving_terms"
+        "0.15": "alg.sign_error_moving_terms"
       },
       "verify": {
         "kind": "linear_solution",
-        "equation": "10*x + 1 = 6*x + 13"
+        "equation": "7*x + 4 = 6*x + 6"
       },
       "source": "procedural",
       "review_status": "auto_validated",
-      "expected_time_ms": 5168.0,
-      "estimated_difficulty": 3
+      "expected_time_ms": 4662.0,
+      "estimated_difficulty": 2
     },
     {
       "id": "gen_linear_both_sides_012",
       "subject": "math",
       "topic": "linear_equations",
       "concept": "linear.both_sides",
-      "question": "Solve for x:  8x + 4 = 6x + 8",
+      "question": "Solve for x:  5x + 7 = 3x + 15",
       "options": [
-        "3",
+        "1",
         "4",
-        "2",
-        "0.29"
+        "8",
+        "5"
       ],
-      "correct_answer": "2",
-      "explanation": "Subtract 6x from both sides: 2x + 4 = 8. Subtract 4: 2x = 4. Divide: x = 2. Moving a term across the equals sign flips its sign.",
+      "correct_answer": "4",
+      "explanation": "Subtract 3x from both sides: 2x + 7 = 15. Subtract 7: 2x = 8. Divide: x = 4. Moving a term across the equals sign flips its sign.",
       "difficulty": 3,
       "misconceptions": {
-        "0.29": "alg.sign_error_moving_terms"
+        "1": "alg.sign_error_moving_terms"
       },
       "verify": {
         "kind": "linear_solution",
-        "equation": "8*x + 4 = 6*x + 8"
+        "equation": "5*x + 7 = 3*x + 15"
       },
       "source": "procedural",
       "review_status": "auto_validated",
-      "expected_time_ms": 5112.0,
+      "expected_time_ms": 5140.0,
       "estimated_difficulty": 3
     },
     {
@@ -845,21 +841,21 @@
       "subject": "math",
       "topic": "linear_equations",
       "concept": "linear.both_sides",
-      "question": "Solve for x:  7x + 2 = 6x + 8",
+      "question": "Solve for x:  4x + 6 = 3x + 7",
       "options": [
-        "0.46",
-        "7",
-        "6"
+        "2",
+        "1",
+        "0.14"
       ],
-      "correct_answer": "6",
-      "explanation": "Subtract 6x from both sides: 1x + 2 = 8. Subtract 2: 1x = 6. Divide: x = 6. Moving a term across the equals sign flips its sign.",
+      "correct_answer": "1",
+      "explanation": "Subtract 3x from both sides: 1x + 6 = 7. Subtract 6: 1x = 1. Divide: x = 1. Moving a term across the equals sign flips its sign.",
       "difficulty": 3,
       "misconceptions": {
-        "0.46": "alg.sign_error_moving_terms"
+        "0.14": "alg.sign_error_moving_terms"
       },
       "verify": {
         "kind": "linear_solution",
-        "equation": "7*x + 2 = 6*x + 8"
+        "equation": "4*x + 6 = 3*x + 7"
       },
       "source": "procedural",
       "review_status": "auto_validated",
@@ -871,52 +867,53 @@
       "subject": "math",
       "topic": "linear_equations",
       "concept": "linear.both_sides",
-      "question": "Solve for x:  4x + 4 = 3x + 5",
+      "question": "Solve for x:  9x + 4 = 5x + 12",
       "options": [
-        "0.14",
+        "8",
         "2",
-        "1"
+        "3",
+        "0.57"
       ],
-      "correct_answer": "1",
-      "explanation": "Subtract 3x from both sides: 1x + 4 = 5. Subtract 4: 1x = 1. Divide: x = 1. Moving a term across the equals sign flips its sign.",
+      "correct_answer": "2",
+      "explanation": "Subtract 5x from both sides: 4x + 4 = 12. Subtract 4: 4x = 8. Divide: x = 2. Moving a term across the equals sign flips its sign.",
       "difficulty": 3,
       "misconceptions": {
-        "0.14": "alg.sign_error_moving_terms"
+        "0.57": "alg.sign_error_moving_terms"
       },
       "verify": {
         "kind": "linear_solution",
-        "equation": "4*x + 4 = 3*x + 5"
+        "equation": "9*x + 4 = 5*x + 12"
       },
       "source": "procedural",
       "review_status": "auto_validated",
-      "expected_time_ms": 4662.0,
-      "estimated_difficulty": 2
+      "expected_time_ms": 5140.0,
+      "estimated_difficulty": 3
     },
     {
       "id": "gen_linear_both_sides_015",
       "subject": "math",
       "topic": "linear_equations",
       "concept": "linear.both_sides",
-      "question": "Solve for x:  10x + 10 = 5x + 40",
+      "question": "Solve for x:  9x + 4 = 6x + 7",
       "options": [
-        "30",
+        "1",
         "2",
-        "6",
-        "7"
+        "3",
+        "0.2"
       ],
-      "correct_answer": "6",
-      "explanation": "Subtract 5x from both sides: 5x + 10 = 40. Subtract 10: 5x = 30. Divide: x = 6. Moving a term across the equals sign flips its sign.",
+      "correct_answer": "1",
+      "explanation": "Subtract 6x from both sides: 3x + 4 = 7. Subtract 4: 3x = 3. Divide: x = 1. Moving a term across the equals sign flips its sign.",
       "difficulty": 3,
       "misconceptions": {
-        "2": "alg.sign_error_moving_terms"
+        "0.2": "alg.sign_error_moving_terms"
       },
       "verify": {
         "kind": "linear_solution",
-        "equation": "10*x + 10 = 5*x + 40"
+        "equation": "9*x + 4 = 6*x + 7"
       },
       "source": "procedural",
       "review_status": "auto_validated",
-      "expected_time_ms": 5196.0,
+      "expected_time_ms": 5112.0,
       "estimated_difficulty": 3
     },
     {
@@ -924,120 +921,12 @@
       "subject": "math",
       "topic": "linear_equations",
       "concept": "linear.one_step",
-      "question": "Solve for x:  x - 3 = 2",
-      "options": [
-        "5",
-        "-5",
-        "-1",
-        "2"
-      ],
-      "correct_answer": "5",
-      "explanation": "Add 3 to both sides to undo the subtraction: x = 2 + 3 = 5.",
-      "difficulty": 2,
-      "misconceptions": {
-        "-1": "alg.inverse_operation_wrong"
-      },
-      "verify": {
-        "kind": "linear_solution",
-        "equation": "x - 3 = 2"
-      },
-      "source": "procedural",
-      "review_status": "auto_validated",
-      "expected_time_ms": 4944.0,
-      "estimated_difficulty": 2
-    },
-    {
-      "id": "gen_linear_one_step_002",
-      "subject": "math",
-      "topic": "linear_equations",
-      "concept": "linear.one_step",
-      "question": "Solve for x:  x + 13 = 23",
-      "options": [
-        "10",
-        "36",
-        "13",
-        "23"
-      ],
-      "correct_answer": "10",
-      "explanation": "Subtract 13 from both sides to undo the addition: x = 23 - 13 = 10.",
-      "difficulty": 2,
-      "misconceptions": {
-        "36": "alg.inverse_operation_wrong"
-      },
-      "verify": {
-        "kind": "linear_solution",
-        "equation": "x + 13 = 23"
-      },
-      "source": "procedural",
-      "review_status": "auto_validated",
-      "expected_time_ms": 5000.0,
-      "estimated_difficulty": 2
-    },
-    {
-      "id": "gen_linear_one_step_003",
-      "subject": "math",
-      "topic": "linear_equations",
-      "concept": "linear.one_step",
-      "question": "Solve for x:  x + 11 = 13",
-      "options": [
-        "11",
-        "2",
-        "13",
-        "24"
-      ],
-      "correct_answer": "2",
-      "explanation": "Subtract 11 from both sides to undo the addition: x = 13 - 11 = 2.",
-      "difficulty": 2,
-      "misconceptions": {
-        "24": "alg.inverse_operation_wrong"
-      },
-      "verify": {
-        "kind": "linear_solution",
-        "equation": "x + 11 = 13"
-      },
-      "source": "procedural",
-      "review_status": "auto_validated",
-      "expected_time_ms": 5000.0,
-      "estimated_difficulty": 2
-    },
-    {
-      "id": "gen_linear_one_step_004",
-      "subject": "math",
-      "topic": "linear_equations",
-      "concept": "linear.one_step",
-      "question": "Solve for x:  5x = 25",
-      "options": [
-        "25",
-        "5",
-        "30",
-        "20"
-      ],
-      "correct_answer": "5",
-      "explanation": "5x means 5 copies of x. Dividing both sides by 5 gives x = 25/5 = 5.",
-      "difficulty": 2,
-      "misconceptions": {
-        "25": "alg.coefficient_not_divided"
-      },
-      "verify": {
-        "kind": "linear_solution",
-        "equation": "5*x = 25"
-      },
-      "source": "procedural",
-      "review_status": "auto_validated",
-      "expected_time_ms": 4888.0,
-      "estimated_difficulty": 2
-    },
-    {
-      "id": "gen_linear_one_step_005",
-      "subject": "math",
-      "topic": "linear_equations",
-      "concept": "linear.one_step",
       "question": "Solve for x:  x + 3 = 12",
       "options": [
-        "9",
-        "15",
+        "12",
         "3",
-        "12"
+        "9",
+        "15"
       ],
       "correct_answer": "9",
       "explanation": "Subtract 3 from both sides to undo the addition: x = 12 - 3 = 9.",
@@ -1055,30 +944,138 @@
       "estimated_difficulty": 2
     },
     {
+      "id": "gen_linear_one_step_002",
+      "subject": "math",
+      "topic": "linear_equations",
+      "concept": "linear.one_step",
+      "question": "Solve for x:  x + 8 = 10",
+      "options": [
+        "2",
+        "8",
+        "18",
+        "10"
+      ],
+      "correct_answer": "2",
+      "explanation": "Subtract 8 from both sides to undo the addition: x = 10 - 8 = 2.",
+      "difficulty": 2,
+      "misconceptions": {
+        "18": "alg.inverse_operation_wrong"
+      },
+      "verify": {
+        "kind": "linear_solution",
+        "equation": "x + 8 = 10"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4972.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_linear_one_step_003",
+      "subject": "math",
+      "topic": "linear_equations",
+      "concept": "linear.one_step",
+      "question": "Solve for x:  x - 3 = 7",
+      "options": [
+        "-10",
+        "10",
+        "7",
+        "4"
+      ],
+      "correct_answer": "10",
+      "explanation": "Add 3 to both sides to undo the subtraction: x = 7 + 3 = 10.",
+      "difficulty": 2,
+      "misconceptions": {
+        "4": "alg.inverse_operation_wrong"
+      },
+      "verify": {
+        "kind": "linear_solution",
+        "equation": "x - 3 = 7"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4944.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_linear_one_step_004",
+      "subject": "math",
+      "topic": "linear_equations",
+      "concept": "linear.one_step",
+      "question": "Solve for x:  4x = 24",
+      "options": [
+        "6",
+        "28",
+        "24",
+        "20"
+      ],
+      "correct_answer": "6",
+      "explanation": "4x means 4 copies of x. Dividing both sides by 4 gives x = 24/4 = 6.",
+      "difficulty": 2,
+      "misconceptions": {
+        "24": "alg.coefficient_not_divided"
+      },
+      "verify": {
+        "kind": "linear_solution",
+        "equation": "4*x = 24"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4888.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_linear_one_step_005",
+      "subject": "math",
+      "topic": "linear_equations",
+      "concept": "linear.one_step",
+      "question": "Solve for x:  x + 6 = 13",
+      "options": [
+        "19",
+        "13",
+        "6",
+        "7"
+      ],
+      "correct_answer": "7",
+      "explanation": "Subtract 6 from both sides to undo the addition: x = 13 - 6 = 7.",
+      "difficulty": 2,
+      "misconceptions": {
+        "19": "alg.inverse_operation_wrong"
+      },
+      "verify": {
+        "kind": "linear_solution",
+        "equation": "x + 6 = 13"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4972.0,
+      "estimated_difficulty": 2
+    },
+    {
       "id": "gen_linear_one_step_006",
       "subject": "math",
       "topic": "linear_equations",
       "concept": "linear.one_step",
-      "question": "Solve for x:  x - 11 = -9",
+      "question": "Solve for x:  4x = 44",
       "options": [
-        "-9",
-        "-20",
-        "-2",
-        "2"
+        "48",
+        "40",
+        "11",
+        "44"
       ],
-      "correct_answer": "2",
-      "explanation": "Add 11 to both sides to undo the subtraction: x = -9 + 11 = 2.",
+      "correct_answer": "11",
+      "explanation": "4x means 4 copies of x. Dividing both sides by 4 gives x = 44/4 = 11.",
       "difficulty": 2,
       "misconceptions": {
-        "-20": "alg.inverse_operation_wrong"
+        "44": "alg.coefficient_not_divided"
       },
       "verify": {
         "kind": "linear_solution",
-        "equation": "x - 11 = -9"
+        "equation": "4*x = 44"
       },
       "source": "procedural",
       "review_status": "auto_validated",
-      "expected_time_ms": 5000.0,
+      "expected_time_ms": 4888.0,
       "estimated_difficulty": 2
     },
     {
@@ -1086,12 +1083,228 @@
       "subject": "math",
       "topic": "linear_equations",
       "concept": "linear.one_step",
+      "question": "Solve for x:  x + 5 = 15",
+      "options": [
+        "15",
+        "5",
+        "20",
+        "10"
+      ],
+      "correct_answer": "10",
+      "explanation": "Subtract 5 from both sides to undo the addition: x = 15 - 5 = 10.",
+      "difficulty": 2,
+      "misconceptions": {
+        "20": "alg.inverse_operation_wrong"
+      },
+      "verify": {
+        "kind": "linear_solution",
+        "equation": "x + 5 = 15"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4972.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_linear_one_step_008",
+      "subject": "math",
+      "topic": "linear_equations",
+      "concept": "linear.one_step",
+      "question": "Solve for x:  x - 2 = 9",
+      "options": [
+        "11",
+        "-11",
+        "7",
+        "9"
+      ],
+      "correct_answer": "11",
+      "explanation": "Add 2 to both sides to undo the subtraction: x = 9 + 2 = 11.",
+      "difficulty": 2,
+      "misconceptions": {
+        "7": "alg.inverse_operation_wrong"
+      },
+      "verify": {
+        "kind": "linear_solution",
+        "equation": "x - 2 = 9"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4944.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_linear_one_step_009",
+      "subject": "math",
+      "topic": "linear_equations",
+      "concept": "linear.one_step",
+      "question": "Solve for x:  x - 5 = 3",
+      "options": [
+        "8",
+        "3",
+        "-8",
+        "-2"
+      ],
+      "correct_answer": "8",
+      "explanation": "Add 5 to both sides to undo the subtraction: x = 3 + 5 = 8.",
+      "difficulty": 2,
+      "misconceptions": {
+        "-2": "alg.inverse_operation_wrong"
+      },
+      "verify": {
+        "kind": "linear_solution",
+        "equation": "x - 5 = 3"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4944.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_linear_one_step_010",
+      "subject": "math",
+      "topic": "linear_equations",
+      "concept": "linear.one_step",
+      "question": "Solve for x:  2x = 18",
+      "options": [
+        "9",
+        "16",
+        "18",
+        "20"
+      ],
+      "correct_answer": "9",
+      "explanation": "2x means 2 copies of x. Dividing both sides by 2 gives x = 18/2 = 9.",
+      "difficulty": 2,
+      "misconceptions": {
+        "18": "alg.coefficient_not_divided"
+      },
+      "verify": {
+        "kind": "linear_solution",
+        "equation": "2*x = 18"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4888.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_linear_one_step_011",
+      "subject": "math",
+      "topic": "linear_equations",
+      "concept": "linear.one_step",
+      "question": "Solve for x:  8x = 48",
+      "options": [
+        "48",
+        "40",
+        "6",
+        "56"
+      ],
+      "correct_answer": "6",
+      "explanation": "8x means 8 copies of x. Dividing both sides by 8 gives x = 48/8 = 6.",
+      "difficulty": 2,
+      "misconceptions": {
+        "48": "alg.coefficient_not_divided"
+      },
+      "verify": {
+        "kind": "linear_solution",
+        "equation": "8*x = 48"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4888.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_linear_one_step_012",
+      "subject": "math",
+      "topic": "linear_equations",
+      "concept": "linear.one_step",
+      "question": "Solve for x:  7x = 70",
+      "options": [
+        "70",
+        "77",
+        "63",
+        "10"
+      ],
+      "correct_answer": "10",
+      "explanation": "7x means 7 copies of x. Dividing both sides by 7 gives x = 70/7 = 10.",
+      "difficulty": 2,
+      "misconceptions": {
+        "70": "alg.coefficient_not_divided"
+      },
+      "verify": {
+        "kind": "linear_solution",
+        "equation": "7*x = 70"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4888.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_linear_one_step_013",
+      "subject": "math",
+      "topic": "linear_equations",
+      "concept": "linear.one_step",
+      "question": "Solve for x:  x + 8 = 11",
+      "options": [
+        "11",
+        "19",
+        "8",
+        "3"
+      ],
+      "correct_answer": "3",
+      "explanation": "Subtract 8 from both sides to undo the addition: x = 11 - 8 = 3.",
+      "difficulty": 2,
+      "misconceptions": {
+        "19": "alg.inverse_operation_wrong"
+      },
+      "verify": {
+        "kind": "linear_solution",
+        "equation": "x + 8 = 11"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4972.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_linear_one_step_014",
+      "subject": "math",
+      "topic": "linear_equations",
+      "concept": "linear.one_step",
+      "question": "Solve for x:  x - 11 = -1",
+      "options": [
+        "-1",
+        "10",
+        "-10",
+        "-12"
+      ],
+      "correct_answer": "10",
+      "explanation": "Add 11 to both sides to undo the subtraction: x = -1 + 11 = 10.",
+      "difficulty": 2,
+      "misconceptions": {
+        "-12": "alg.inverse_operation_wrong"
+      },
+      "verify": {
+        "kind": "linear_solution",
+        "equation": "x - 11 = -1"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5000.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_linear_one_step_015",
+      "subject": "math",
+      "topic": "linear_equations",
+      "concept": "linear.one_step",
       "question": "Solve for x:  8x = 24",
       "options": [
-        "24",
-        "16",
+        "32",
         "3",
-        "32"
+        "24",
+        "16"
       ],
       "correct_answer": "3",
       "explanation": "8x means 8 copies of x. Dividing both sides by 8 gives x = 24/8 = 3.",
@@ -1109,245 +1322,30 @@
       "estimated_difficulty": 2
     },
     {
-      "id": "gen_linear_one_step_008",
-      "subject": "math",
-      "topic": "linear_equations",
-      "concept": "linear.one_step",
-      "question": "Solve for x:  2x = 12",
-      "options": [
-        "6",
-        "12",
-        "14",
-        "10"
-      ],
-      "correct_answer": "6",
-      "explanation": "2x means 2 copies of x. Dividing both sides by 2 gives x = 12/2 = 6.",
-      "difficulty": 2,
-      "misconceptions": {
-        "12": "alg.coefficient_not_divided"
-      },
-      "verify": {
-        "kind": "linear_solution",
-        "equation": "2*x = 12"
-      },
-      "source": "procedural",
-      "review_status": "auto_validated",
-      "expected_time_ms": 4888.0,
-      "estimated_difficulty": 2
-    },
-    {
-      "id": "gen_linear_one_step_009",
-      "subject": "math",
-      "topic": "linear_equations",
-      "concept": "linear.one_step",
-      "question": "Solve for x:  x + 7 = 16",
-      "options": [
-        "16",
-        "23",
-        "9",
-        "7"
-      ],
-      "correct_answer": "9",
-      "explanation": "Subtract 7 from both sides to undo the addition: x = 16 - 7 = 9.",
-      "difficulty": 2,
-      "misconceptions": {
-        "23": "alg.inverse_operation_wrong"
-      },
-      "verify": {
-        "kind": "linear_solution",
-        "equation": "x + 7 = 16"
-      },
-      "source": "procedural",
-      "review_status": "auto_validated",
-      "expected_time_ms": 4972.0,
-      "estimated_difficulty": 2
-    },
-    {
-      "id": "gen_linear_one_step_010",
-      "subject": "math",
-      "topic": "linear_equations",
-      "concept": "linear.one_step",
-      "question": "Solve for x:  6x = 60",
-      "options": [
-        "54",
-        "10",
-        "60",
-        "66"
-      ],
-      "correct_answer": "10",
-      "explanation": "6x means 6 copies of x. Dividing both sides by 6 gives x = 60/6 = 10.",
-      "difficulty": 2,
-      "misconceptions": {
-        "60": "alg.coefficient_not_divided"
-      },
-      "verify": {
-        "kind": "linear_solution",
-        "equation": "6*x = 60"
-      },
-      "source": "procedural",
-      "review_status": "auto_validated",
-      "expected_time_ms": 4888.0,
-      "estimated_difficulty": 2
-    },
-    {
-      "id": "gen_linear_one_step_011",
-      "subject": "math",
-      "topic": "linear_equations",
-      "concept": "linear.one_step",
-      "question": "Solve for x:  5x = 30",
-      "options": [
-        "30",
-        "35",
-        "25",
-        "6"
-      ],
-      "correct_answer": "6",
-      "explanation": "5x means 5 copies of x. Dividing both sides by 5 gives x = 30/5 = 6.",
-      "difficulty": 2,
-      "misconceptions": {
-        "30": "alg.coefficient_not_divided"
-      },
-      "verify": {
-        "kind": "linear_solution",
-        "equation": "5*x = 30"
-      },
-      "source": "procedural",
-      "review_status": "auto_validated",
-      "expected_time_ms": 4888.0,
-      "estimated_difficulty": 2
-    },
-    {
-      "id": "gen_linear_one_step_012",
-      "subject": "math",
-      "topic": "linear_equations",
-      "concept": "linear.one_step",
-      "question": "Solve for x:  x - 2 = 4",
-      "options": [
-        "6",
-        "4",
-        "2",
-        "-6"
-      ],
-      "correct_answer": "6",
-      "explanation": "Add 2 to both sides to undo the subtraction: x = 4 + 2 = 6.",
-      "difficulty": 2,
-      "misconceptions": {
-        "2": "alg.inverse_operation_wrong"
-      },
-      "verify": {
-        "kind": "linear_solution",
-        "equation": "x - 2 = 4"
-      },
-      "source": "procedural",
-      "review_status": "auto_validated",
-      "expected_time_ms": 4944.0,
-      "estimated_difficulty": 2
-    },
-    {
-      "id": "gen_linear_one_step_013",
-      "subject": "math",
-      "topic": "linear_equations",
-      "concept": "linear.one_step",
-      "question": "Solve for x:  5x = 45",
-      "options": [
-        "9",
-        "45",
-        "40",
-        "50"
-      ],
-      "correct_answer": "9",
-      "explanation": "5x means 5 copies of x. Dividing both sides by 5 gives x = 45/5 = 9.",
-      "difficulty": 2,
-      "misconceptions": {
-        "45": "alg.coefficient_not_divided"
-      },
-      "verify": {
-        "kind": "linear_solution",
-        "equation": "5*x = 45"
-      },
-      "source": "procedural",
-      "review_status": "auto_validated",
-      "expected_time_ms": 4888.0,
-      "estimated_difficulty": 2
-    },
-    {
-      "id": "gen_linear_one_step_014",
-      "subject": "math",
-      "topic": "linear_equations",
-      "concept": "linear.one_step",
-      "question": "Solve for x:  x + 2 = 9",
-      "options": [
-        "2",
-        "7",
-        "9",
-        "11"
-      ],
-      "correct_answer": "7",
-      "explanation": "Subtract 2 from both sides to undo the addition: x = 9 - 2 = 7.",
-      "difficulty": 2,
-      "misconceptions": {
-        "11": "alg.inverse_operation_wrong"
-      },
-      "verify": {
-        "kind": "linear_solution",
-        "equation": "x + 2 = 9"
-      },
-      "source": "procedural",
-      "review_status": "auto_validated",
-      "expected_time_ms": 4944.0,
-      "estimated_difficulty": 2
-    },
-    {
-      "id": "gen_linear_one_step_015",
-      "subject": "math",
-      "topic": "linear_equations",
-      "concept": "linear.one_step",
-      "question": "Solve for x:  9x = 18",
-      "options": [
-        "2",
-        "9",
-        "27",
-        "18"
-      ],
-      "correct_answer": "2",
-      "explanation": "9x means 9 copies of x. Dividing both sides by 9 gives x = 18/9 = 2.",
-      "difficulty": 2,
-      "misconceptions": {
-        "18": "alg.coefficient_not_divided"
-      },
-      "verify": {
-        "kind": "linear_solution",
-        "equation": "9*x = 18"
-      },
-      "source": "procedural",
-      "review_status": "auto_validated",
-      "expected_time_ms": 4888.0,
-      "estimated_difficulty": 2
-    },
-    {
       "id": "gen_linear_parentheses_001",
       "subject": "math",
       "topic": "linear_equations",
       "concept": "linear.parentheses",
-      "question": "Solve for x:  3(x + 8) = 42",
+      "question": "Solve for x:  4(x + 8) = 52",
       "options": [
-        "22",
-        "6",
-        "34"
+        "11",
+        "5",
+        "21",
+        "44"
       ],
-      "correct_answer": "6",
-      "explanation": "Divide both sides by 3: x + 8 = 14/3. Then subtract 8 to get x = 6. Alternatively expand first: 3x + 24 = 42.",
+      "correct_answer": "5",
+      "explanation": "Divide both sides by 4: x + 8 = 13/4. Then subtract 8 to get x = 5. Alternatively expand first: 4x + 32 = 52.",
       "difficulty": 4,
       "misconceptions": {
-        "34": "alg.distribution_partial"
+        "11": "alg.distribution_partial"
       },
       "verify": {
         "kind": "linear_solution",
-        "equation": "3(x + 8) = 42"
+        "equation": "4(x + 8) = 52"
       },
       "source": "procedural",
       "review_status": "auto_validated",
-      "expected_time_ms": 4606.0,
+      "expected_time_ms": 5056.0,
       "estimated_difficulty": 3
     },
     {
@@ -1355,21 +1353,21 @@
       "subject": "math",
       "topic": "linear_equations",
       "concept": "linear.parentheses",
-      "question": "Solve for x:  2(x + 3) = 20",
+      "question": "Solve for x:  4(x + 7) = 40",
       "options": [
+        "33",
         "17",
-        "13",
-        "7"
+        "3"
       ],
-      "correct_answer": "7",
-      "explanation": "Divide both sides by 2: x + 3 = 10/2. Then subtract 3 to get x = 7. Alternatively expand first: 2x + 6 = 20.",
+      "correct_answer": "3",
+      "explanation": "Divide both sides by 4: x + 7 = 10/4. Then subtract 7 to get x = 3. Alternatively expand first: 4x + 28 = 40.",
       "difficulty": 4,
       "misconceptions": {
-        "17": "alg.distribution_partial"
+        "33": "alg.distribution_partial"
       },
       "verify": {
         "kind": "linear_solution",
-        "equation": "2(x + 3) = 20"
+        "equation": "4(x + 7) = 40"
       },
       "source": "procedural",
       "review_status": "auto_validated",
@@ -1381,21 +1379,21 @@
       "subject": "math",
       "topic": "linear_equations",
       "concept": "linear.parentheses",
-      "question": "Solve for x:  6(x + 3) = 24",
+      "question": "Solve for x:  4(x + 2) = 16",
       "options": [
-        "7",
-        "21",
-        "1"
+        "2",
+        "6",
+        "14"
       ],
-      "correct_answer": "1",
-      "explanation": "Divide both sides by 6: x + 3 = 4/6. Then subtract 3 to get x = 1. Alternatively expand first: 6x + 18 = 24.",
+      "correct_answer": "2",
+      "explanation": "Divide both sides by 4: x + 2 = 4/4. Then subtract 2 to get x = 2. Alternatively expand first: 4x + 8 = 16.",
       "difficulty": 4,
       "misconceptions": {
-        "21": "alg.distribution_partial"
+        "14": "alg.distribution_partial"
       },
       "verify": {
         "kind": "linear_solution",
-        "equation": "6(x + 3) = 24"
+        "equation": "4(x + 2) = 16"
       },
       "source": "procedural",
       "review_status": "auto_validated",
@@ -1407,25 +1405,26 @@
       "subject": "math",
       "topic": "linear_equations",
       "concept": "linear.parentheses",
-      "question": "Solve for x:  4(x + 2) = 28",
+      "question": "Solve for x:  4(x + 8) = 56",
       "options": [
-        "9",
-        "26",
-        "5"
+        "12",
+        "48",
+        "6",
+        "22"
       ],
-      "correct_answer": "5",
-      "explanation": "Divide both sides by 4: x + 2 = 7/4. Then subtract 2 to get x = 5. Alternatively expand first: 4x + 8 = 28.",
+      "correct_answer": "6",
+      "explanation": "Divide both sides by 4: x + 8 = 14/4. Then subtract 8 to get x = 6. Alternatively expand first: 4x + 32 = 56.",
       "difficulty": 4,
       "misconceptions": {
-        "26": "alg.distribution_partial"
+        "12": "alg.distribution_partial"
       },
       "verify": {
         "kind": "linear_solution",
-        "equation": "4(x + 2) = 28"
+        "equation": "4(x + 8) = 56"
       },
       "source": "procedural",
       "review_status": "auto_validated",
-      "expected_time_ms": 4606.0,
+      "expected_time_ms": 5056.0,
       "estimated_difficulty": 3
     },
     {
@@ -1433,26 +1432,25 @@
       "subject": "math",
       "topic": "linear_equations",
       "concept": "linear.parentheses",
-      "question": "Solve for x:  3(x + 9) = 33",
+      "question": "Solve for x:  6(x + 4) = 72",
       "options": [
-        "2",
-        "24",
-        "20",
+        "16",
+        "68",
         "8"
       ],
-      "correct_answer": "2",
-      "explanation": "Divide both sides by 3: x + 9 = 11/3. Then subtract 9 to get x = 2. Alternatively expand first: 3x + 27 = 33.",
+      "correct_answer": "8",
+      "explanation": "Divide both sides by 6: x + 4 = 12/6. Then subtract 4 to get x = 8. Alternatively expand first: 6x + 24 = 72.",
       "difficulty": 4,
       "misconceptions": {
-        "8": "alg.distribution_partial"
+        "68": "alg.distribution_partial"
       },
       "verify": {
         "kind": "linear_solution",
-        "equation": "3(x + 9) = 33"
+        "equation": "6(x + 4) = 72"
       },
       "source": "procedural",
       "review_status": "auto_validated",
-      "expected_time_ms": 5056.0,
+      "expected_time_ms": 4606.0,
       "estimated_difficulty": 3
     },
     {
@@ -1460,26 +1458,24 @@
       "subject": "math",
       "topic": "linear_equations",
       "concept": "linear.parentheses",
-      "question": "Solve for x:  4(x + 8) = 64",
+      "question": "Solve for x:  2(x + 7) = 28",
       "options": [
-        "56",
-        "14",
-        "8",
-        "24"
+        "21",
+        "7"
       ],
-      "correct_answer": "8",
-      "explanation": "Divide both sides by 4: x + 8 = 16/4. Then subtract 8 to get x = 8. Alternatively expand first: 4x + 32 = 64.",
+      "correct_answer": "7",
+      "explanation": "Divide both sides by 2: x + 7 = 14/2. Then subtract 7 to get x = 7. Alternatively expand first: 2x + 14 = 28.",
       "difficulty": 4,
       "misconceptions": {
-        "14": "alg.distribution_partial"
+        "21": "alg.distribution_partial"
       },
       "verify": {
         "kind": "linear_solution",
-        "equation": "4(x + 8) = 64"
+        "equation": "2(x + 7) = 28"
       },
       "source": "procedural",
       "review_status": "auto_validated",
-      "expected_time_ms": 5056.0,
+      "expected_time_ms": 4156.0,
       "estimated_difficulty": 3
     },
     {
@@ -1487,21 +1483,21 @@
       "subject": "math",
       "topic": "linear_equations",
       "concept": "linear.parentheses",
-      "question": "Solve for x:  6(x + 9) = 96",
+      "question": "Solve for x:  5(x + 7) = 70",
       "options": [
+        "63",
         "7",
-        "87",
-        "25"
+        "21"
       ],
       "correct_answer": "7",
-      "explanation": "Divide both sides by 6: x + 9 = 16/6. Then subtract 9 to get x = 7. Alternatively expand first: 6x + 54 = 96.",
+      "explanation": "Divide both sides by 5: x + 7 = 14/5. Then subtract 7 to get x = 7. Alternatively expand first: 5x + 35 = 70.",
       "difficulty": 4,
       "misconceptions": {
-        "87": "alg.distribution_partial"
+        "63": "alg.distribution_partial"
       },
       "verify": {
         "kind": "linear_solution",
-        "equation": "6(x + 9) = 96"
+        "equation": "5(x + 7) = 70"
       },
       "source": "procedural",
       "review_status": "auto_validated",
@@ -1513,21 +1509,21 @@
       "subject": "math",
       "topic": "linear_equations",
       "concept": "linear.parentheses",
-      "question": "Solve for x:  3(x + 4) = 36",
+      "question": "Solve for x:  2(x + 9) = 28",
       "options": [
-        "16",
-        "32",
-        "8"
+        "23",
+        "19",
+        "5"
       ],
-      "correct_answer": "8",
-      "explanation": "Divide both sides by 3: x + 4 = 12/3. Then subtract 4 to get x = 8. Alternatively expand first: 3x + 12 = 36.",
+      "correct_answer": "5",
+      "explanation": "Divide both sides by 2: x + 9 = 14/2. Then subtract 9 to get x = 5. Alternatively expand first: 2x + 18 = 28.",
       "difficulty": 4,
       "misconceptions": {
-        "32": "alg.distribution_partial"
+        "19": "alg.distribution_partial"
       },
       "verify": {
         "kind": "linear_solution",
-        "equation": "3(x + 4) = 36"
+        "equation": "2(x + 9) = 28"
       },
       "source": "procedural",
       "review_status": "auto_validated",
@@ -1539,21 +1535,21 @@
       "subject": "math",
       "topic": "linear_equations",
       "concept": "linear.parentheses",
-      "question": "Solve for x:  3(x + 7) = 24",
+      "question": "Solve for x:  4(x + 2) = 24",
       "options": [
-        "1",
-        "15",
-        "17"
+        "4",
+        "8",
+        "22"
       ],
-      "correct_answer": "1",
-      "explanation": "Divide both sides by 3: x + 7 = 8/3. Then subtract 7 to get x = 1. Alternatively expand first: 3x + 21 = 24.",
+      "correct_answer": "4",
+      "explanation": "Divide both sides by 4: x + 2 = 6/4. Then subtract 2 to get x = 4. Alternatively expand first: 4x + 8 = 24.",
       "difficulty": 4,
       "misconceptions": {
-        "17": "alg.distribution_partial"
+        "22": "alg.distribution_partial"
       },
       "verify": {
         "kind": "linear_solution",
-        "equation": "3(x + 7) = 24"
+        "equation": "4(x + 2) = 24"
       },
       "source": "procedural",
       "review_status": "auto_validated",
@@ -1565,48 +1561,22 @@
       "subject": "math",
       "topic": "linear_equations",
       "concept": "linear.parentheses",
-      "question": "Solve for x:  3(x + 2) = 15",
+      "question": "Solve for x:  2(x + 4) = 14",
       "options": [
+        "5",
         "3",
-        "7",
-        "13"
+        "11",
+        "10"
       ],
       "correct_answer": "3",
-      "explanation": "Divide both sides by 3: x + 2 = 5/3. Then subtract 2 to get x = 3. Alternatively expand first: 3x + 6 = 15.",
-      "difficulty": 4,
-      "misconceptions": {
-        "13": "alg.distribution_partial"
-      },
-      "verify": {
-        "kind": "linear_solution",
-        "equation": "3(x + 2) = 15"
-      },
-      "source": "procedural",
-      "review_status": "auto_validated",
-      "expected_time_ms": 4606.0,
-      "estimated_difficulty": 3
-    },
-    {
-      "id": "gen_linear_parentheses_011",
-      "subject": "math",
-      "topic": "linear_equations",
-      "concept": "linear.parentheses",
-      "question": "Solve for x:  3(x + 3) = 18",
-      "options": [
-        "15",
-        "9",
-        "3",
-        "5"
-      ],
-      "correct_answer": "3",
-      "explanation": "Divide both sides by 3: x + 3 = 6/3. Then subtract 3 to get x = 3. Alternatively expand first: 3x + 9 = 18.",
+      "explanation": "Divide both sides by 2: x + 4 = 7/2. Then subtract 4 to get x = 3. Alternatively expand first: 2x + 8 = 14.",
       "difficulty": 4,
       "misconceptions": {
         "5": "alg.distribution_partial"
       },
       "verify": {
         "kind": "linear_solution",
-        "equation": "3(x + 3) = 18"
+        "equation": "2(x + 4) = 14"
       },
       "source": "procedural",
       "review_status": "auto_validated",
@@ -1614,52 +1584,25 @@
       "estimated_difficulty": 4
     },
     {
-      "id": "gen_linear_parentheses_012",
+      "id": "gen_linear_parentheses_011",
       "subject": "math",
       "topic": "linear_equations",
       "concept": "linear.parentheses",
-      "question": "Solve for x:  5(x + 5) = 30",
+      "question": "Solve for x:  4(x + 3) = 28",
       "options": [
-        "11",
-        "5",
-        "1",
-        "25"
+        "10",
+        "25",
+        "4"
       ],
-      "correct_answer": "1",
-      "explanation": "Divide both sides by 5: x + 5 = 6/5. Then subtract 5 to get x = 1. Alternatively expand first: 5x + 25 = 30.",
+      "correct_answer": "4",
+      "explanation": "Divide both sides by 4: x + 3 = 7/4. Then subtract 3 to get x = 4. Alternatively expand first: 4x + 12 = 28.",
       "difficulty": 4,
       "misconceptions": {
-        "5": "alg.distribution_partial"
+        "25": "alg.distribution_partial"
       },
       "verify": {
         "kind": "linear_solution",
-        "equation": "5(x + 5) = 30"
-      },
-      "source": "procedural",
-      "review_status": "auto_validated",
-      "expected_time_ms": 5056.0,
-      "estimated_difficulty": 3
-    },
-    {
-      "id": "gen_linear_parentheses_013",
-      "subject": "math",
-      "topic": "linear_equations",
-      "concept": "linear.parentheses",
-      "question": "Solve for x:  2(x + 9) = 22",
-      "options": [
-        "20",
-        "2",
-        "13"
-      ],
-      "correct_answer": "2",
-      "explanation": "Divide both sides by 2: x + 9 = 11/2. Then subtract 9 to get x = 2. Alternatively expand first: 2x + 18 = 22.",
-      "difficulty": 4,
-      "misconceptions": {
-        "13": "alg.distribution_partial"
-      },
-      "verify": {
-        "kind": "linear_solution",
-        "equation": "2(x + 9) = 22"
+        "equation": "4(x + 3) = 28"
       },
       "source": "procedural",
       "review_status": "auto_validated",
@@ -1667,25 +1610,79 @@
       "estimated_difficulty": 3
     },
     {
+      "id": "gen_linear_parentheses_012",
+      "subject": "math",
+      "topic": "linear_equations",
+      "concept": "linear.parentheses",
+      "question": "Solve for x:  2(x + 8) = 22",
+      "options": [
+        "7",
+        "3",
+        "19",
+        "14"
+      ],
+      "correct_answer": "3",
+      "explanation": "Divide both sides by 2: x + 8 = 11/2. Then subtract 8 to get x = 3. Alternatively expand first: 2x + 16 = 22.",
+      "difficulty": 4,
+      "misconceptions": {
+        "7": "alg.distribution_partial"
+      },
+      "verify": {
+        "kind": "linear_solution",
+        "equation": "2(x + 8) = 22"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5056.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_linear_parentheses_013",
+      "subject": "math",
+      "topic": "linear_equations",
+      "concept": "linear.parentheses",
+      "question": "Solve for x:  2(x + 6) = 14",
+      "options": [
+        "4",
+        "8",
+        "1",
+        "13"
+      ],
+      "correct_answer": "1",
+      "explanation": "Divide both sides by 2: x + 6 = 7/2. Then subtract 6 to get x = 1. Alternatively expand first: 2x + 12 = 14.",
+      "difficulty": 4,
+      "misconceptions": {
+        "4": "alg.distribution_partial"
+      },
+      "verify": {
+        "kind": "linear_solution",
+        "equation": "2(x + 6) = 14"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5056.0,
+      "estimated_difficulty": 4
+    },
+    {
       "id": "gen_linear_parentheses_014",
       "subject": "math",
       "topic": "linear_equations",
       "concept": "linear.parentheses",
-      "question": "Solve for x:  4(x + 7) = 44",
+      "question": "Solve for x:  2(x + 7) = 24",
       "options": [
-        "4",
-        "37",
-        "18"
+        "17",
+        "19",
+        "5"
       ],
-      "correct_answer": "4",
-      "explanation": "Divide both sides by 4: x + 7 = 11/4. Then subtract 7 to get x = 4. Alternatively expand first: 4x + 28 = 44.",
+      "correct_answer": "5",
+      "explanation": "Divide both sides by 2: x + 7 = 12/2. Then subtract 7 to get x = 5. Alternatively expand first: 2x + 14 = 24.",
       "difficulty": 4,
       "misconceptions": {
-        "37": "alg.distribution_partial"
+        "17": "alg.distribution_partial"
       },
       "verify": {
         "kind": "linear_solution",
-        "equation": "4(x + 7) = 44"
+        "equation": "2(x + 7) = 24"
       },
       "source": "procedural",
       "review_status": "auto_validated",
@@ -1697,21 +1694,21 @@
       "subject": "math",
       "topic": "linear_equations",
       "concept": "linear.parentheses",
-      "question": "Solve for x:  5(x + 7) = 65",
+      "question": "Solve for x:  5(x + 3) = 45",
       "options": [
-        "20",
-        "58",
-        "6"
+        "42",
+        "6",
+        "12"
       ],
       "correct_answer": "6",
-      "explanation": "Divide both sides by 5: x + 7 = 13/5. Then subtract 7 to get x = 6. Alternatively expand first: 5x + 35 = 65.",
+      "explanation": "Divide both sides by 5: x + 3 = 9/5. Then subtract 3 to get x = 6. Alternatively expand first: 5x + 15 = 45.",
       "difficulty": 4,
       "misconceptions": {
-        "58": "alg.distribution_partial"
+        "42": "alg.distribution_partial"
       },
       "verify": {
         "kind": "linear_solution",
-        "equation": "5(x + 7) = 65"
+        "equation": "5(x + 3) = 45"
       },
       "source": "procedural",
       "review_status": "auto_validated",
@@ -1723,20 +1720,20 @@
       "subject": "math",
       "topic": "linear_equations",
       "concept": "linear.proportion",
-      "question": "Solve for x:  3/5 = x/20",
+      "question": "Solve for x:  5/5 = x/40",
       "options": [
-        "3",
-        "4",
-        "12",
-        "60"
+        "40",
+        "5",
+        "8",
+        "200"
       ],
-      "correct_answer": "12",
-      "explanation": "Cross-multiply: 3 x 20 = 5 x x, so 5x = 60 and x = 60/5 = 12.",
+      "correct_answer": "40",
+      "explanation": "Cross-multiply: 5 x 40 = 5 x x, so 5x = 200 and x = 200/5 = 40.",
       "difficulty": 4,
       "misconceptions": {},
       "verify": {
         "kind": "linear_solution",
-        "equation": "(3)/(5) = x/(20)"
+        "equation": "(5)/(5) = x/(40)"
       },
       "source": "procedural",
       "review_status": "auto_validated",
@@ -1748,20 +1745,20 @@
       "subject": "math",
       "topic": "linear_equations",
       "concept": "linear.proportion",
-      "question": "Solve for x:  5/6 = x/36",
+      "question": "Solve for x:  6/9 = x/18",
       "options": [
-        "180",
-        "30",
-        "6",
-        "5"
+        "12",
+        "2",
+        "108",
+        "6"
       ],
-      "correct_answer": "30",
-      "explanation": "Cross-multiply: 5 x 36 = 6 x x, so 6x = 180 and x = 180/6 = 30.",
+      "correct_answer": "12",
+      "explanation": "Cross-multiply: 6 x 18 = 9 x x, so 9x = 108 and x = 108/9 = 12.",
       "difficulty": 4,
       "misconceptions": {},
       "verify": {
         "kind": "linear_solution",
-        "equation": "(5)/(6) = x/(36)"
+        "equation": "(6)/(9) = x/(18)"
       },
       "source": "procedural",
       "review_status": "auto_validated",
@@ -1773,20 +1770,20 @@
       "subject": "math",
       "topic": "linear_equations",
       "concept": "linear.proportion",
-      "question": "Solve for x:  7/7 = x/35",
+      "question": "Solve for x:  9/6 = x/48",
       "options": [
-        "7",
-        "5",
-        "245",
-        "35"
+        "72",
+        "432",
+        "9",
+        "8"
       ],
-      "correct_answer": "35",
-      "explanation": "Cross-multiply: 7 x 35 = 7 x x, so 7x = 245 and x = 245/7 = 35.",
+      "correct_answer": "72",
+      "explanation": "Cross-multiply: 9 x 48 = 6 x x, so 6x = 432 and x = 432/6 = 72.",
       "difficulty": 4,
       "misconceptions": {},
       "verify": {
         "kind": "linear_solution",
-        "equation": "(7)/(7) = x/(35)"
+        "equation": "(9)/(6) = x/(48)"
       },
       "source": "procedural",
       "review_status": "auto_validated",
@@ -1798,24 +1795,23 @@
       "subject": "math",
       "topic": "linear_equations",
       "concept": "linear.proportion",
-      "question": "Solve for x:  2/7 = x/21",
+      "question": "Solve for x:  9/4 = x/36",
       "options": [
-        "3",
-        "6",
-        "2",
-        "42"
+        "9",
+        "81",
+        "324"
       ],
-      "correct_answer": "6",
-      "explanation": "Cross-multiply: 2 x 21 = 7 x x, so 7x = 42 and x = 42/7 = 6.",
+      "correct_answer": "81",
+      "explanation": "Cross-multiply: 9 x 36 = 4 x x, so 4x = 324 and x = 324/4 = 81.",
       "difficulty": 4,
       "misconceptions": {},
       "verify": {
         "kind": "linear_solution",
-        "equation": "(2)/(7) = x/(21)"
+        "equation": "(9)/(4) = x/(36)"
       },
       "source": "procedural",
       "review_status": "auto_validated",
-      "expected_time_ms": 4972.0,
+      "expected_time_ms": 4522.0,
       "estimated_difficulty": 3
     },
     {
@@ -1823,12 +1819,261 @@
       "subject": "math",
       "topic": "linear_equations",
       "concept": "linear.proportion",
-      "question": "Solve for x:  5/2 = x/12",
+      "question": "Solve for x:  6/8 = x/56",
+      "options": [
+        "42",
+        "336",
+        "6",
+        "7"
+      ],
+      "correct_answer": "42",
+      "explanation": "Cross-multiply: 6 x 56 = 8 x x, so 8x = 336 and x = 336/8 = 42.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": {
+        "kind": "linear_solution",
+        "equation": "(6)/(8) = x/(56)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4972.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_linear_proportion_006",
+      "subject": "math",
+      "topic": "linear_equations",
+      "concept": "linear.proportion",
+      "question": "Solve for x:  9/2 = x/12",
+      "options": [
+        "54",
+        "108",
+        "9",
+        "6"
+      ],
+      "correct_answer": "54",
+      "explanation": "Cross-multiply: 9 x 12 = 2 x x, so 2x = 108 and x = 108/2 = 54.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": {
+        "kind": "linear_solution",
+        "equation": "(9)/(2) = x/(12)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4972.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_linear_proportion_007",
+      "subject": "math",
+      "topic": "linear_equations",
+      "concept": "linear.proportion",
+      "question": "Solve for x:  2/9 = x/18",
+      "options": [
+        "4",
+        "36",
+        "2"
+      ],
+      "correct_answer": "4",
+      "explanation": "Cross-multiply: 2 x 18 = 9 x x, so 9x = 36 and x = 36/9 = 4.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": {
+        "kind": "linear_solution",
+        "equation": "(2)/(9) = x/(18)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4522.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_linear_proportion_008",
+      "subject": "math",
+      "topic": "linear_equations",
+      "concept": "linear.proportion",
+      "question": "Solve for x:  9/7 = x/56",
+      "options": [
+        "9",
+        "72",
+        "8",
+        "504"
+      ],
+      "correct_answer": "72",
+      "explanation": "Cross-multiply: 9 x 56 = 7 x x, so 7x = 504 and x = 504/7 = 72.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": {
+        "kind": "linear_solution",
+        "equation": "(9)/(7) = x/(56)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4972.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_linear_proportion_009",
+      "subject": "math",
+      "topic": "linear_equations",
+      "concept": "linear.proportion",
+      "question": "Solve for x:  7/5 = x/30",
+      "options": [
+        "42",
+        "210",
+        "7",
+        "6"
+      ],
+      "correct_answer": "42",
+      "explanation": "Cross-multiply: 7 x 30 = 5 x x, so 5x = 210 and x = 210/5 = 42.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": {
+        "kind": "linear_solution",
+        "equation": "(7)/(5) = x/(30)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4972.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_linear_proportion_010",
+      "subject": "math",
+      "topic": "linear_equations",
+      "concept": "linear.proportion",
+      "question": "Solve for x:  3/2 = x/10",
       "options": [
         "5",
-        "6",
         "30",
-        "60"
+        "3",
+        "15"
+      ],
+      "correct_answer": "15",
+      "explanation": "Cross-multiply: 3 x 10 = 2 x x, so 2x = 30 and x = 30/2 = 15.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": {
+        "kind": "linear_solution",
+        "equation": "(3)/(2) = x/(10)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4972.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_linear_proportion_011",
+      "subject": "math",
+      "topic": "linear_equations",
+      "concept": "linear.proportion",
+      "question": "Solve for x:  5/2 = x/16",
+      "options": [
+        "40",
+        "80",
+        "5",
+        "8"
+      ],
+      "correct_answer": "40",
+      "explanation": "Cross-multiply: 5 x 16 = 2 x x, so 2x = 80 and x = 80/2 = 40.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": {
+        "kind": "linear_solution",
+        "equation": "(5)/(2) = x/(16)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4972.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_linear_proportion_012",
+      "subject": "math",
+      "topic": "linear_equations",
+      "concept": "linear.proportion",
+      "question": "Solve for x:  8/7 = x/49",
+      "options": [
+        "392",
+        "7",
+        "8",
+        "56"
+      ],
+      "correct_answer": "56",
+      "explanation": "Cross-multiply: 8 x 49 = 7 x x, so 7x = 392 and x = 392/7 = 56.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": {
+        "kind": "linear_solution",
+        "equation": "(8)/(7) = x/(49)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4972.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_linear_proportion_013",
+      "subject": "math",
+      "topic": "linear_equations",
+      "concept": "linear.proportion",
+      "question": "Solve for x:  5/6 = x/12",
+      "options": [
+        "2",
+        "5",
+        "60",
+        "10"
+      ],
+      "correct_answer": "10",
+      "explanation": "Cross-multiply: 5 x 12 = 6 x x, so 6x = 60 and x = 60/6 = 10.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": {
+        "kind": "linear_solution",
+        "equation": "(5)/(6) = x/(12)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4972.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_linear_proportion_014",
+      "subject": "math",
+      "topic": "linear_equations",
+      "concept": "linear.proportion",
+      "question": "Solve for x:  9/7 = x/49",
+      "options": [
+        "9",
+        "441",
+        "63",
+        "7"
+      ],
+      "correct_answer": "63",
+      "explanation": "Cross-multiply: 9 x 49 = 7 x x, so 7x = 441 and x = 441/7 = 63.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": {
+        "kind": "linear_solution",
+        "equation": "(9)/(7) = x/(49)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 4972.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_linear_proportion_015",
+      "subject": "math",
+      "topic": "linear_equations",
+      "concept": "linear.proportion",
+      "question": "Solve for x:  5/2 = x/12",
+      "options": [
+        "6",
+        "5",
+        "60",
+        "30"
       ],
       "correct_answer": "30",
       "explanation": "Cross-multiply: 5 x 12 = 2 x x, so 2x = 60 and x = 60/2 = 30.",
@@ -1844,280 +2089,31 @@
       "estimated_difficulty": 3
     },
     {
-      "id": "gen_linear_proportion_006",
-      "subject": "math",
-      "topic": "linear_equations",
-      "concept": "linear.proportion",
-      "question": "Solve for x:  7/9 = x/27",
-      "options": [
-        "189",
-        "3",
-        "21",
-        "7"
-      ],
-      "correct_answer": "21",
-      "explanation": "Cross-multiply: 7 x 27 = 9 x x, so 9x = 189 and x = 189/9 = 21.",
-      "difficulty": 4,
-      "misconceptions": {},
-      "verify": {
-        "kind": "linear_solution",
-        "equation": "(7)/(9) = x/(27)"
-      },
-      "source": "procedural",
-      "review_status": "auto_validated",
-      "expected_time_ms": 4972.0,
-      "estimated_difficulty": 3
-    },
-    {
-      "id": "gen_linear_proportion_007",
-      "subject": "math",
-      "topic": "linear_equations",
-      "concept": "linear.proportion",
-      "question": "Solve for x:  2/4 = x/36",
-      "options": [
-        "9",
-        "18",
-        "72",
-        "2"
-      ],
-      "correct_answer": "18",
-      "explanation": "Cross-multiply: 2 x 36 = 4 x x, so 4x = 72 and x = 72/4 = 18.",
-      "difficulty": 4,
-      "misconceptions": {},
-      "verify": {
-        "kind": "linear_solution",
-        "equation": "(2)/(4) = x/(36)"
-      },
-      "source": "procedural",
-      "review_status": "auto_validated",
-      "expected_time_ms": 4972.0,
-      "estimated_difficulty": 3
-    },
-    {
-      "id": "gen_linear_proportion_008",
-      "subject": "math",
-      "topic": "linear_equations",
-      "concept": "linear.proportion",
-      "question": "Solve for x:  6/2 = x/18",
-      "options": [
-        "108",
-        "54",
-        "6",
-        "9"
-      ],
-      "correct_answer": "54",
-      "explanation": "Cross-multiply: 6 x 18 = 2 x x, so 2x = 108 and x = 108/2 = 54.",
-      "difficulty": 4,
-      "misconceptions": {},
-      "verify": {
-        "kind": "linear_solution",
-        "equation": "(6)/(2) = x/(18)"
-      },
-      "source": "procedural",
-      "review_status": "auto_validated",
-      "expected_time_ms": 4972.0,
-      "estimated_difficulty": 3
-    },
-    {
-      "id": "gen_linear_proportion_009",
-      "subject": "math",
-      "topic": "linear_equations",
-      "concept": "linear.proportion",
-      "question": "Solve for x:  3/6 = x/12",
-      "options": [
-        "2",
-        "6",
-        "3",
-        "36"
-      ],
-      "correct_answer": "6",
-      "explanation": "Cross-multiply: 3 x 12 = 6 x x, so 6x = 36 and x = 36/6 = 6.",
-      "difficulty": 4,
-      "misconceptions": {},
-      "verify": {
-        "kind": "linear_solution",
-        "equation": "(3)/(6) = x/(12)"
-      },
-      "source": "procedural",
-      "review_status": "auto_validated",
-      "expected_time_ms": 4972.0,
-      "estimated_difficulty": 3
-    },
-    {
-      "id": "gen_linear_proportion_010",
-      "subject": "math",
-      "topic": "linear_equations",
-      "concept": "linear.proportion",
-      "question": "Solve for x:  7/4 = x/28",
-      "options": [
-        "7",
-        "196",
-        "49"
-      ],
-      "correct_answer": "49",
-      "explanation": "Cross-multiply: 7 x 28 = 4 x x, so 4x = 196 and x = 196/4 = 49.",
-      "difficulty": 4,
-      "misconceptions": {},
-      "verify": {
-        "kind": "linear_solution",
-        "equation": "(7)/(4) = x/(28)"
-      },
-      "source": "procedural",
-      "review_status": "auto_validated",
-      "expected_time_ms": 4522.0,
-      "estimated_difficulty": 3
-    },
-    {
-      "id": "gen_linear_proportion_011",
-      "subject": "math",
-      "topic": "linear_equations",
-      "concept": "linear.proportion",
-      "question": "Solve for x:  8/7 = x/35",
-      "options": [
-        "8",
-        "40",
-        "280",
-        "5"
-      ],
-      "correct_answer": "40",
-      "explanation": "Cross-multiply: 8 x 35 = 7 x x, so 7x = 280 and x = 280/7 = 40.",
-      "difficulty": 4,
-      "misconceptions": {},
-      "verify": {
-        "kind": "linear_solution",
-        "equation": "(8)/(7) = x/(35)"
-      },
-      "source": "procedural",
-      "review_status": "auto_validated",
-      "expected_time_ms": 4972.0,
-      "estimated_difficulty": 3
-    },
-    {
-      "id": "gen_linear_proportion_012",
-      "subject": "math",
-      "topic": "linear_equations",
-      "concept": "linear.proportion",
-      "question": "Solve for x:  9/6 = x/42",
-      "options": [
-        "378",
-        "7",
-        "9",
-        "63"
-      ],
-      "correct_answer": "63",
-      "explanation": "Cross-multiply: 9 x 42 = 6 x x, so 6x = 378 and x = 378/6 = 63.",
-      "difficulty": 4,
-      "misconceptions": {},
-      "verify": {
-        "kind": "linear_solution",
-        "equation": "(9)/(6) = x/(42)"
-      },
-      "source": "procedural",
-      "review_status": "auto_validated",
-      "expected_time_ms": 4972.0,
-      "estimated_difficulty": 3
-    },
-    {
-      "id": "gen_linear_proportion_013",
-      "subject": "math",
-      "topic": "linear_equations",
-      "concept": "linear.proportion",
-      "question": "Solve for x:  9/8 = x/56",
-      "options": [
-        "7",
-        "63",
-        "504",
-        "9"
-      ],
-      "correct_answer": "63",
-      "explanation": "Cross-multiply: 9 x 56 = 8 x x, so 8x = 504 and x = 504/8 = 63.",
-      "difficulty": 4,
-      "misconceptions": {},
-      "verify": {
-        "kind": "linear_solution",
-        "equation": "(9)/(8) = x/(56)"
-      },
-      "source": "procedural",
-      "review_status": "auto_validated",
-      "expected_time_ms": 4972.0,
-      "estimated_difficulty": 3
-    },
-    {
-      "id": "gen_linear_proportion_014",
-      "subject": "math",
-      "topic": "linear_equations",
-      "concept": "linear.proportion",
-      "question": "Solve for x:  5/9 = x/18",
-      "options": [
-        "90",
-        "2",
-        "10",
-        "5"
-      ],
-      "correct_answer": "10",
-      "explanation": "Cross-multiply: 5 x 18 = 9 x x, so 9x = 90 and x = 90/9 = 10.",
-      "difficulty": 4,
-      "misconceptions": {},
-      "verify": {
-        "kind": "linear_solution",
-        "equation": "(5)/(9) = x/(18)"
-      },
-      "source": "procedural",
-      "review_status": "auto_validated",
-      "expected_time_ms": 4972.0,
-      "estimated_difficulty": 3
-    },
-    {
-      "id": "gen_linear_proportion_015",
-      "subject": "math",
-      "topic": "linear_equations",
-      "concept": "linear.proportion",
-      "question": "Solve for x:  4/7 = x/21",
-      "options": [
-        "84",
-        "3",
-        "4",
-        "12"
-      ],
-      "correct_answer": "12",
-      "explanation": "Cross-multiply: 4 x 21 = 7 x x, so 7x = 84 and x = 84/7 = 12.",
-      "difficulty": 4,
-      "misconceptions": {},
-      "verify": {
-        "kind": "linear_solution",
-        "equation": "(4)/(7) = x/(21)"
-      },
-      "source": "procedural",
-      "review_status": "auto_validated",
-      "expected_time_ms": 4972.0,
-      "estimated_difficulty": 3
-    },
-    {
       "id": "gen_linear_two_step_001",
       "subject": "math",
       "topic": "linear_equations",
       "concept": "linear.two_step",
-      "question": "Solve for x:  3x + 5 = 8",
+      "question": "Solve for x:  2x + 7 = 25",
       "options": [
-        "8",
-        "13",
-        "3",
-        "1"
+        "32",
+        "9",
+        "18",
+        "16"
       ],
-      "correct_answer": "1",
-      "explanation": "Undo the +5 first: 3x = 8 - 5 = 3. Then undo the multiply: x = 3/3 = 1. Stopping at 3 leaves the 3 still attached to x.",
+      "correct_answer": "9",
+      "explanation": "Undo the +7 first: 2x = 25 - 7 = 18. Then undo the multiply: x = 18/2 = 9. Stopping at 18 leaves the 2 still attached to x.",
       "difficulty": 3,
       "misconceptions": {
-        "3": "alg.coefficient_not_divided",
-        "13": "alg.inverse_operation_wrong"
+        "18": "alg.coefficient_not_divided",
+        "32": "alg.inverse_operation_wrong"
       },
       "verify": {
         "kind": "linear_solution",
-        "equation": "3*x + 5 = 8"
+        "equation": "2*x + 7 = 25"
       },
       "source": "procedural",
       "review_status": "auto_validated",
-      "expected_time_ms": 4972.0,
+      "expected_time_ms": 5000.0,
       "estimated_difficulty": 3
     },
     {
@@ -2125,27 +2121,27 @@
       "subject": "math",
       "topic": "linear_equations",
       "concept": "linear.two_step",
-      "question": "Solve for x:  5x + 11 = 56",
+      "question": "Solve for x:  4x + 8 = 16",
       "options": [
-        "45",
-        "9",
-        "67",
-        "56"
+        "2",
+        "6",
+        "24",
+        "8"
       ],
-      "correct_answer": "9",
-      "explanation": "Undo the +11 first: 5x = 56 - 11 = 45. Then undo the multiply: x = 45/5 = 9. Stopping at 45 leaves the 5 still attached to x.",
+      "correct_answer": "2",
+      "explanation": "Undo the +8 first: 4x = 16 - 8 = 8. Then undo the multiply: x = 8/4 = 2. Stopping at 8 leaves the 4 still attached to x.",
       "difficulty": 3,
       "misconceptions": {
-        "45": "alg.coefficient_not_divided",
-        "67": "alg.inverse_operation_wrong"
+        "8": "alg.coefficient_not_divided",
+        "24": "alg.inverse_operation_wrong"
       },
       "verify": {
         "kind": "linear_solution",
-        "equation": "5*x + 11 = 56"
+        "equation": "4*x + 8 = 16"
       },
       "source": "procedural",
       "review_status": "auto_validated",
-      "expected_time_ms": 5028.0,
+      "expected_time_ms": 5000.0,
       "estimated_difficulty": 3
     },
     {
@@ -2153,27 +2149,27 @@
       "subject": "math",
       "topic": "linear_equations",
       "concept": "linear.two_step",
-      "question": "Solve for x:  3x + 12 = 30",
+      "question": "Solve for x:  4x + 2 = 10",
       "options": [
-        "18",
-        "14",
-        "42",
-        "6"
+        "2",
+        "12",
+        "8",
+        "3"
       ],
-      "correct_answer": "6",
-      "explanation": "Undo the +12 first: 3x = 30 - 12 = 18. Then undo the multiply: x = 18/3 = 6. Stopping at 18 leaves the 3 still attached to x.",
+      "correct_answer": "2",
+      "explanation": "Undo the +2 first: 4x = 10 - 2 = 8. Then undo the multiply: x = 8/4 = 2. Stopping at 8 leaves the 4 still attached to x.",
       "difficulty": 3,
       "misconceptions": {
-        "18": "alg.coefficient_not_divided",
-        "42": "alg.inverse_operation_wrong"
+        "8": "alg.coefficient_not_divided",
+        "12": "alg.inverse_operation_wrong"
       },
       "verify": {
         "kind": "linear_solution",
-        "equation": "3*x + 12 = 30"
+        "equation": "4*x + 2 = 10"
       },
       "source": "procedural",
       "review_status": "auto_validated",
-      "expected_time_ms": 5028.0,
+      "expected_time_ms": 5000.0,
       "estimated_difficulty": 3
     },
     {
@@ -2181,23 +2177,23 @@
       "subject": "math",
       "topic": "linear_equations",
       "concept": "linear.two_step",
-      "question": "Solve for x:  2x + 8 = 18",
+      "question": "Solve for x:  4x + 7 = 11",
       "options": [
-        "10",
-        "5",
-        "13",
-        "26"
+        "4",
+        "1",
+        "11",
+        "18"
       ],
-      "correct_answer": "5",
-      "explanation": "Undo the +8 first: 2x = 18 - 8 = 10. Then undo the multiply: x = 10/2 = 5. Stopping at 10 leaves the 2 still attached to x.",
+      "correct_answer": "1",
+      "explanation": "Undo the +7 first: 4x = 11 - 7 = 4. Then undo the multiply: x = 4/4 = 1. Stopping at 4 leaves the 4 still attached to x.",
       "difficulty": 3,
       "misconceptions": {
-        "10": "alg.coefficient_not_divided",
-        "26": "alg.inverse_operation_wrong"
+        "4": "alg.coefficient_not_divided",
+        "18": "alg.inverse_operation_wrong"
       },
       "verify": {
         "kind": "linear_solution",
-        "equation": "2*x + 8 = 18"
+        "equation": "4*x + 7 = 11"
       },
       "source": "procedural",
       "review_status": "auto_validated",
@@ -2209,23 +2205,23 @@
       "subject": "math",
       "topic": "linear_equations",
       "concept": "linear.two_step",
-      "question": "Solve for x:  5x + 8 = 23",
+      "question": "Solve for x:  6x + 5 = 29",
       "options": [
-        "15",
-        "23",
-        "31",
-        "3"
+        "29",
+        "34",
+        "4",
+        "24"
       ],
-      "correct_answer": "3",
-      "explanation": "Undo the +8 first: 5x = 23 - 8 = 15. Then undo the multiply: x = 15/5 = 3. Stopping at 15 leaves the 5 still attached to x.",
+      "correct_answer": "4",
+      "explanation": "Undo the +5 first: 6x = 29 - 5 = 24. Then undo the multiply: x = 24/6 = 4. Stopping at 24 leaves the 6 still attached to x.",
       "difficulty": 3,
       "misconceptions": {
-        "15": "alg.coefficient_not_divided",
-        "31": "alg.inverse_operation_wrong"
+        "24": "alg.coefficient_not_divided",
+        "34": "alg.inverse_operation_wrong"
       },
       "verify": {
         "kind": "linear_solution",
-        "equation": "5*x + 8 = 23"
+        "equation": "6*x + 5 = 29"
       },
       "source": "procedural",
       "review_status": "auto_validated",
@@ -2237,23 +2233,23 @@
       "subject": "math",
       "topic": "linear_equations",
       "concept": "linear.two_step",
-      "question": "Solve for x:  3x + 5 = 17",
+      "question": "Solve for x:  2x + 8 = 10",
       "options": [
-        "4",
-        "12",
-        "17",
-        "22"
+        "1",
+        "2",
+        "9",
+        "18"
       ],
-      "correct_answer": "4",
-      "explanation": "Undo the +5 first: 3x = 17 - 5 = 12. Then undo the multiply: x = 12/3 = 4. Stopping at 12 leaves the 3 still attached to x.",
+      "correct_answer": "1",
+      "explanation": "Undo the +8 first: 2x = 10 - 8 = 2. Then undo the multiply: x = 2/2 = 1. Stopping at 2 leaves the 2 still attached to x.",
       "difficulty": 3,
       "misconceptions": {
-        "12": "alg.coefficient_not_divided",
-        "22": "alg.inverse_operation_wrong"
+        "2": "alg.coefficient_not_divided",
+        "18": "alg.inverse_operation_wrong"
       },
       "verify": {
         "kind": "linear_solution",
-        "equation": "3*x + 5 = 17"
+        "equation": "2*x + 8 = 10"
       },
       "source": "procedural",
       "review_status": "auto_validated",
@@ -2265,23 +2261,23 @@
       "subject": "math",
       "topic": "linear_equations",
       "concept": "linear.two_step",
-      "question": "Solve for x:  7x + 12 = 33",
+      "question": "Solve for x:  3x + 11 = 38",
       "options": [
-        "21",
-        "3",
-        "45",
-        "33"
+        "38",
+        "9",
+        "49",
+        "27"
       ],
-      "correct_answer": "3",
-      "explanation": "Undo the +12 first: 7x = 33 - 12 = 21. Then undo the multiply: x = 21/7 = 3. Stopping at 21 leaves the 7 still attached to x.",
+      "correct_answer": "9",
+      "explanation": "Undo the +11 first: 3x = 38 - 11 = 27. Then undo the multiply: x = 27/3 = 9. Stopping at 27 leaves the 3 still attached to x.",
       "difficulty": 3,
       "misconceptions": {
-        "21": "alg.coefficient_not_divided",
-        "45": "alg.inverse_operation_wrong"
+        "27": "alg.coefficient_not_divided",
+        "49": "alg.inverse_operation_wrong"
       },
       "verify": {
         "kind": "linear_solution",
-        "equation": "7*x + 12 = 33"
+        "equation": "3*x + 11 = 38"
       },
       "source": "procedural",
       "review_status": "auto_validated",
@@ -2293,27 +2289,27 @@
       "subject": "math",
       "topic": "linear_equations",
       "concept": "linear.two_step",
-      "question": "Solve for x:  3x + 6 = 30",
+      "question": "Solve for x:  5x + 2 = 7",
       "options": [
-        "8",
-        "24",
-        "36",
-        "12"
+        "9",
+        "1",
+        "5",
+        "7"
       ],
-      "correct_answer": "8",
-      "explanation": "Undo the +6 first: 3x = 30 - 6 = 24. Then undo the multiply: x = 24/3 = 8. Stopping at 24 leaves the 3 still attached to x.",
+      "correct_answer": "1",
+      "explanation": "Undo the +2 first: 5x = 7 - 2 = 5. Then undo the multiply: x = 5/5 = 1. Stopping at 5 leaves the 5 still attached to x.",
       "difficulty": 3,
       "misconceptions": {
-        "24": "alg.coefficient_not_divided",
-        "36": "alg.inverse_operation_wrong"
+        "5": "alg.coefficient_not_divided",
+        "9": "alg.inverse_operation_wrong"
       },
       "verify": {
         "kind": "linear_solution",
-        "equation": "3*x + 6 = 30"
+        "equation": "5*x + 2 = 7"
       },
       "source": "procedural",
       "review_status": "auto_validated",
-      "expected_time_ms": 5000.0,
+      "expected_time_ms": 4972.0,
       "estimated_difficulty": 3
     },
     {
@@ -2321,27 +2317,27 @@
       "subject": "math",
       "topic": "linear_equations",
       "concept": "linear.two_step",
-      "question": "Solve for x:  5x + 7 = 47",
+      "question": "Solve for x:  7x + 10 = 59",
       "options": [
-        "40",
-        "54",
-        "8",
-        "47"
+        "7",
+        "69",
+        "59",
+        "49"
       ],
-      "correct_answer": "8",
-      "explanation": "Undo the +7 first: 5x = 47 - 7 = 40. Then undo the multiply: x = 40/5 = 8. Stopping at 40 leaves the 5 still attached to x.",
+      "correct_answer": "7",
+      "explanation": "Undo the +10 first: 7x = 59 - 10 = 49. Then undo the multiply: x = 49/7 = 7. Stopping at 49 leaves the 7 still attached to x.",
       "difficulty": 3,
       "misconceptions": {
-        "40": "alg.coefficient_not_divided",
-        "54": "alg.inverse_operation_wrong"
+        "49": "alg.coefficient_not_divided",
+        "69": "alg.inverse_operation_wrong"
       },
       "verify": {
         "kind": "linear_solution",
-        "equation": "5*x + 7 = 47"
+        "equation": "7*x + 10 = 59"
       },
       "source": "procedural",
       "review_status": "auto_validated",
-      "expected_time_ms": 5000.0,
+      "expected_time_ms": 5028.0,
       "estimated_difficulty": 3
     },
     {
@@ -2349,23 +2345,23 @@
       "subject": "math",
       "topic": "linear_equations",
       "concept": "linear.two_step",
-      "question": "Solve for x:  5x + 5 = 20",
+      "question": "Solve for x:  2x + 9 = 19",
       "options": [
-        "3",
-        "15",
-        "25",
-        "5"
+        "14",
+        "28",
+        "5",
+        "10"
       ],
-      "correct_answer": "3",
-      "explanation": "Undo the +5 first: 5x = 20 - 5 = 15. Then undo the multiply: x = 15/5 = 3. Stopping at 15 leaves the 5 still attached to x.",
+      "correct_answer": "5",
+      "explanation": "Undo the +9 first: 2x = 19 - 9 = 10. Then undo the multiply: x = 10/2 = 5. Stopping at 10 leaves the 2 still attached to x.",
       "difficulty": 3,
       "misconceptions": {
-        "15": "alg.coefficient_not_divided",
-        "25": "alg.inverse_operation_wrong"
+        "10": "alg.coefficient_not_divided",
+        "28": "alg.inverse_operation_wrong"
       },
       "verify": {
         "kind": "linear_solution",
-        "equation": "5*x + 5 = 20"
+        "equation": "2*x + 9 = 19"
       },
       "source": "procedural",
       "review_status": "auto_validated",
@@ -2377,27 +2373,27 @@
       "subject": "math",
       "topic": "linear_equations",
       "concept": "linear.two_step",
-      "question": "Solve for x:  6x + 9 = 45",
+      "question": "Solve for x:  6x + 11 = 65",
       "options": [
-        "36",
         "54",
-        "6",
-        "9"
+        "76",
+        "9",
+        "65"
       ],
-      "correct_answer": "6",
-      "explanation": "Undo the +9 first: 6x = 45 - 9 = 36. Then undo the multiply: x = 36/6 = 6. Stopping at 36 leaves the 6 still attached to x.",
+      "correct_answer": "9",
+      "explanation": "Undo the +11 first: 6x = 65 - 11 = 54. Then undo the multiply: x = 54/6 = 9. Stopping at 54 leaves the 6 still attached to x.",
       "difficulty": 3,
       "misconceptions": {
-        "36": "alg.coefficient_not_divided",
-        "54": "alg.inverse_operation_wrong"
+        "54": "alg.coefficient_not_divided",
+        "76": "alg.inverse_operation_wrong"
       },
       "verify": {
         "kind": "linear_solution",
-        "equation": "6*x + 9 = 45"
+        "equation": "6*x + 11 = 65"
       },
       "source": "procedural",
       "review_status": "auto_validated",
-      "expected_time_ms": 5000.0,
+      "expected_time_ms": 5028.0,
       "estimated_difficulty": 3
     },
     {
@@ -2405,23 +2401,23 @@
       "subject": "math",
       "topic": "linear_equations",
       "concept": "linear.two_step",
-      "question": "Solve for x:  5x + 8 = 18",
+      "question": "Solve for x:  3x + 5 = 32",
       "options": [
-        "26",
-        "2",
-        "18",
-        "10"
+        "27",
+        "37",
+        "32",
+        "9"
       ],
-      "correct_answer": "2",
-      "explanation": "Undo the +8 first: 5x = 18 - 8 = 10. Then undo the multiply: x = 10/5 = 2. Stopping at 10 leaves the 5 still attached to x.",
+      "correct_answer": "9",
+      "explanation": "Undo the +5 first: 3x = 32 - 5 = 27. Then undo the multiply: x = 27/3 = 9. Stopping at 27 leaves the 3 still attached to x.",
       "difficulty": 3,
       "misconceptions": {
-        "10": "alg.coefficient_not_divided",
-        "26": "alg.inverse_operation_wrong"
+        "27": "alg.coefficient_not_divided",
+        "37": "alg.inverse_operation_wrong"
       },
       "verify": {
         "kind": "linear_solution",
-        "equation": "5*x + 8 = 18"
+        "equation": "3*x + 5 = 32"
       },
       "source": "procedural",
       "review_status": "auto_validated",
@@ -2433,23 +2429,23 @@
       "subject": "math",
       "topic": "linear_equations",
       "concept": "linear.two_step",
-      "question": "Solve for x:  6x + 3 = 51",
+      "question": "Solve for x:  3x + 8 = 14",
       "options": [
-        "8",
-        "48",
-        "9",
-        "54"
+        "2",
+        "6",
+        "22",
+        "14"
       ],
-      "correct_answer": "8",
-      "explanation": "Undo the +3 first: 6x = 51 - 3 = 48. Then undo the multiply: x = 48/6 = 8. Stopping at 48 leaves the 6 still attached to x.",
+      "correct_answer": "2",
+      "explanation": "Undo the +8 first: 3x = 14 - 8 = 6. Then undo the multiply: x = 6/3 = 2. Stopping at 6 leaves the 3 still attached to x.",
       "difficulty": 3,
       "misconceptions": {
-        "48": "alg.coefficient_not_divided",
-        "54": "alg.inverse_operation_wrong"
+        "6": "alg.coefficient_not_divided",
+        "22": "alg.inverse_operation_wrong"
       },
       "verify": {
         "kind": "linear_solution",
-        "equation": "6*x + 3 = 51"
+        "equation": "3*x + 8 = 14"
       },
       "source": "procedural",
       "review_status": "auto_validated",
@@ -2461,23 +2457,23 @@
       "subject": "math",
       "topic": "linear_equations",
       "concept": "linear.two_step",
-      "question": "Solve for x:  6x + 5 = 35",
+      "question": "Solve for x:  7x + 9 = 72",
       "options": [
-        "5",
-        "30",
-        "40",
-        "35"
+        "72",
+        "9",
+        "63",
+        "81"
       ],
-      "correct_answer": "5",
-      "explanation": "Undo the +5 first: 6x = 35 - 5 = 30. Then undo the multiply: x = 30/6 = 5. Stopping at 30 leaves the 6 still attached to x.",
+      "correct_answer": "9",
+      "explanation": "Undo the +9 first: 7x = 72 - 9 = 63. Then undo the multiply: x = 63/7 = 9. Stopping at 63 leaves the 7 still attached to x.",
       "difficulty": 3,
       "misconceptions": {
-        "30": "alg.coefficient_not_divided",
-        "40": "alg.inverse_operation_wrong"
+        "63": "alg.coefficient_not_divided",
+        "81": "alg.inverse_operation_wrong"
       },
       "verify": {
         "kind": "linear_solution",
-        "equation": "6*x + 5 = 35"
+        "equation": "7*x + 9 = 72"
       },
       "source": "procedural",
       "review_status": "auto_validated",
@@ -2489,23 +2485,23 @@
       "subject": "math",
       "topic": "linear_equations",
       "concept": "linear.two_step",
-      "question": "Solve for x:  3x + 7 = 31",
+      "question": "Solve for x:  5x + 8 = 48",
       "options": [
-        "31",
+        "48",
+        "40",
         "8",
-        "38",
-        "24"
+        "56"
       ],
       "correct_answer": "8",
-      "explanation": "Undo the +7 first: 3x = 31 - 7 = 24. Then undo the multiply: x = 24/3 = 8. Stopping at 24 leaves the 3 still attached to x.",
+      "explanation": "Undo the +8 first: 5x = 48 - 8 = 40. Then undo the multiply: x = 40/5 = 8. Stopping at 40 leaves the 5 still attached to x.",
       "difficulty": 3,
       "misconceptions": {
-        "24": "alg.coefficient_not_divided",
-        "38": "alg.inverse_operation_wrong"
+        "40": "alg.coefficient_not_divided",
+        "56": "alg.inverse_operation_wrong"
       },
       "verify": {
         "kind": "linear_solution",
-        "equation": "3*x + 7 = 31"
+        "equation": "5*x + 8 = 48"
       },
       "source": "procedural",
       "review_status": "auto_validated",

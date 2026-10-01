@@ -20,12 +20,34 @@
       "subject": "math",
       "topic": "composition",
       "concept": "comp.form",
+      "question": "In ternary form, what happens after the B section?",
+      "options": [
+        "The A section returns",
+        "The piece ends",
+        "A new C section begins",
+        "The B section repeats"
+      ],
+      "correct_answer": "The A section returns",
+      "explanation": "Ternary is A B A, so the opening section comes back.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": null,
+      "source": "template",
+      "review_status": "authored",
+      "expected_time_ms": 5700.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_comp_form_002",
+      "subject": "math",
+      "topic": "composition",
+      "concept": "comp.form",
       "question": "A piece whose structure is A B A is in ___ form.",
       "options": [
-        "ternary",
         "binary",
         "rondo",
-        "strophic"
+        "strophic",
+        "ternary"
       ],
       "correct_answer": "ternary",
       "explanation": "Two different sections with a return is ternary form.",
@@ -38,47 +60,25 @@
       "estimated_difficulty": 4
     },
     {
-      "id": "gen_comp_form_002",
-      "subject": "math",
-      "topic": "composition",
-      "concept": "comp.form",
-      "question": "A form built on a recurring refrain that alternates with episodes is a ___.",
-      "options": [
-        "theme and variations",
-        "rondo",
-        "fugue",
-        "binary form"
-      ],
-      "correct_answer": "rondo",
-      "explanation": "The returning refrain and contrasting episodes make a rondo.",
-      "difficulty": 4,
-      "misconceptions": {},
-      "verify": null,
-      "source": "template",
-      "review_status": "authored",
-      "expected_time_ms": 6400.0,
-      "estimated_difficulty": 4
-    },
-    {
       "id": "gen_comp_form_003",
       "subject": "math",
       "topic": "composition",
       "concept": "comp.form",
-      "question": "Which form is built from two contrasting sections?",
+      "question": "A melody is stated and then altered repeatedly. This form is called ___.",
       "options": [
-        "Binary",
-        "Rondo",
-        "Sonata",
-        "Ternary"
+        "ternary form",
+        "binary form",
+        "theme and variations",
+        "rondo"
       ],
-      "correct_answer": "Binary",
-      "explanation": "'Binary' means two parts; ternary has three.",
+      "correct_answer": "theme and variations",
+      "explanation": "Restatement with changes is what 'theme and variations' means.",
       "difficulty": 4,
       "misconceptions": {},
       "verify": null,
       "source": "template",
       "review_status": "authored",
-      "expected_time_ms": 5700.0,
+      "expected_time_ms": 6316.0,
       "estimated_difficulty": 4
     },
     {
@@ -88,10 +88,10 @@
       "concept": "comp.form",
       "question": "A piece with the structure A A B B is in ___ form.",
       "options": [
-        "sonata",
-        "ternary",
         "rondo",
-        "binary"
+        "binary",
+        "ternary",
+        "sonata"
       ],
       "correct_answer": "binary",
       "explanation": "Two sections, each repeated, is binary form.",
@@ -108,37 +108,15 @@
       "subject": "math",
       "topic": "composition",
       "concept": "comp.form",
-      "question": "A melody is stated and then altered repeatedly. This form is called ___.",
+      "question": "Which form is built from two contrasting sections?",
       "options": [
-        "binary form",
-        "ternary form",
-        "theme and variations",
-        "rondo"
+        "Ternary",
+        "Sonata",
+        "Binary",
+        "Rondo"
       ],
-      "correct_answer": "theme and variations",
-      "explanation": "Restatement with changes is what 'theme and variations' means.",
-      "difficulty": 4,
-      "misconceptions": {},
-      "verify": null,
-      "source": "template",
-      "review_status": "authored",
-      "expected_time_ms": 6316.0,
-      "estimated_difficulty": 4
-    },
-    {
-      "id": "gen_comp_form_006",
-      "subject": "math",
-      "topic": "composition",
-      "concept": "comp.form",
-      "question": "In ternary form, what happens after the B section?",
-      "options": [
-        "A new C section begins",
-        "The piece ends",
-        "The A section returns",
-        "The B section repeats"
-      ],
-      "correct_answer": "The A section returns",
-      "explanation": "Ternary is A B A, so the opening section comes back.",
+      "correct_answer": "Binary",
+      "explanation": "'Binary' means two parts; ternary has three.",
       "difficulty": 4,
       "misconceptions": {},
       "verify": null,
@@ -148,25 +126,47 @@
       "estimated_difficulty": 4
     },
     {
+      "id": "gen_comp_form_006",
+      "subject": "math",
+      "topic": "composition",
+      "concept": "comp.form",
+      "question": "A form built on a recurring refrain that alternates with episodes is a ___.",
+      "options": [
+        "rondo",
+        "binary form",
+        "theme and variations",
+        "fugue"
+      ],
+      "correct_answer": "rondo",
+      "explanation": "The returning refrain and contrasting episodes make a rondo.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": null,
+      "source": "template",
+      "review_status": "authored",
+      "expected_time_ms": 6400.0,
+      "estimated_difficulty": 4
+    },
+    {
       "id": "gen_comp_harmony_001",
       "subject": "math",
       "topic": "composition",
       "concept": "comp.harmony",
-      "question": "In C major, which chord is the dominant?",
+      "question": "In C major, which chord contains the notes C, E and G?",
       "options": [
-        "A minor",
-        "F major",
+        "C major",
+        "E minor",
         "G major",
         "D minor"
       ],
-      "correct_answer": "G major",
-      "explanation": "The dominant is built on the fifth degree of the scale, which in C major is G.",
+      "correct_answer": "C major",
+      "explanation": "Those three notes are the root, third and fifth of the C major triad.",
       "difficulty": 5,
       "misconceptions": {},
       "verify": null,
       "source": "template",
       "review_status": "authored",
-      "expected_time_ms": 5420.0,
+      "expected_time_ms": 5812.0,
       "estimated_difficulty": 4
     },
     {
@@ -177,8 +177,8 @@
       "question": "In C major, which chord most strongly leads back to the tonic?",
       "options": [
         "E minor (iii)",
-        "A minor (vi)",
         "F major (IV)",
+        "A minor (vi)",
         "G major (V)"
       ],
       "correct_answer": "G major (V)",
@@ -196,21 +196,21 @@
       "subject": "math",
       "topic": "composition",
       "concept": "comp.harmony",
-      "question": "A progression in C major moves I - IV - V - I. Which chord does it end on?",
+      "question": "In C major, which chord is the dominant?",
       "options": [
-        "F major",
         "A minor",
-        "C major",
-        "G major"
+        "D minor",
+        "G major",
+        "F major"
       ],
-      "correct_answer": "C major",
-      "explanation": "I is the tonic, which in C major is the C major chord.",
+      "correct_answer": "G major",
+      "explanation": "The dominant is built on the fifth degree of the scale, which in C major is G.",
       "difficulty": 5,
       "misconceptions": {},
       "verify": null,
       "source": "template",
       "review_status": "authored",
-      "expected_time_ms": 6372.0,
+      "expected_time_ms": 5420.0,
       "estimated_difficulty": 4
     },
     {
@@ -218,11 +218,33 @@
       "subject": "math",
       "topic": "composition",
       "concept": "comp.harmony",
+      "question": "In C major, which chord is built on the sixth degree?",
+      "options": [
+        "F major",
+        "A minor",
+        "B diminished",
+        "G major"
+      ],
+      "correct_answer": "A minor",
+      "explanation": "Counting a sixth above C gives A, and the triad on A in C major is minor.",
+      "difficulty": 5,
+      "misconceptions": {},
+      "verify": null,
+      "source": "template",
+      "review_status": "authored",
+      "expected_time_ms": 5784.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_comp_harmony_005",
+      "subject": "math",
+      "topic": "composition",
+      "concept": "comp.harmony",
       "question": "Which cadence ends on the dominant instead of the tonic?",
       "options": [
         "The half cadence",
-        "The perfect cadence",
         "The plagal cadence",
+        "The perfect cadence",
         "The interrupted cadence"
       ],
       "correct_answer": "The half cadence",
@@ -236,47 +258,25 @@
       "estimated_difficulty": 4
     },
     {
-      "id": "gen_comp_harmony_005",
-      "subject": "math",
-      "topic": "composition",
-      "concept": "comp.harmony",
-      "question": "In C major, which chord contains the notes C, E and G?",
-      "options": [
-        "G major",
-        "D minor",
-        "C major",
-        "E minor"
-      ],
-      "correct_answer": "C major",
-      "explanation": "Those three notes are the root, third and fifth of the C major triad.",
-      "difficulty": 5,
-      "misconceptions": {},
-      "verify": null,
-      "source": "template",
-      "review_status": "authored",
-      "expected_time_ms": 5812.0,
-      "estimated_difficulty": 4
-    },
-    {
       "id": "gen_comp_harmony_006",
       "subject": "math",
       "topic": "composition",
       "concept": "comp.harmony",
-      "question": "In C major, which chord is built on the sixth degree?",
+      "question": "A progression in C major moves I - IV - V - I. Which chord does it end on?",
       "options": [
-        "F major",
         "G major",
-        "B diminished",
-        "A minor"
+        "A minor",
+        "F major",
+        "C major"
       ],
-      "correct_answer": "A minor",
-      "explanation": "Counting a sixth above C gives A, and the triad on A in C major is minor.",
+      "correct_answer": "C major",
+      "explanation": "I is the tonic, which in C major is the C major chord.",
       "difficulty": 5,
       "misconceptions": {},
       "verify": null,
       "source": "template",
       "review_status": "authored",
-      "expected_time_ms": 5784.0,
+      "expected_time_ms": 6372.0,
       "estimated_difficulty": 4
     },
     {
@@ -284,34 +284,12 @@
       "subject": "math",
       "topic": "composition",
       "concept": "comp.melody",
-      "question": "A melody that leaps between notes far apart is described as ___.",
-      "options": [
-        "disjunct",
-        "diatonic",
-        "conjunct",
-        "homophonic"
-      ],
-      "correct_answer": "disjunct",
-      "explanation": "Leaping movement is disjunct; stepwise movement is conjunct.",
-      "difficulty": 3,
-      "misconceptions": {},
-      "verify": null,
-      "source": "template",
-      "review_status": "authored",
-      "expected_time_ms": 6092.0,
-      "estimated_difficulty": 3
-    },
-    {
-      "id": "gen_comp_melody_002",
-      "subject": "math",
-      "topic": "composition",
-      "concept": "comp.melody",
       "question": "The notes C, D, E, F move in which direction?",
       "options": [
-        "Unrelated",
-        "Ascending",
+        "Static",
         "Descending",
-        "Static"
+        "Ascending",
+        "Unrelated"
       ],
       "correct_answer": "Ascending",
       "explanation": "Each note is higher than the one before, so the movement ascends.",
@@ -324,38 +302,16 @@
       "estimated_difficulty": 3
     },
     {
-      "id": "gen_comp_melody_003",
-      "subject": "math",
-      "topic": "composition",
-      "concept": "comp.melody",
-      "question": "A melody that moves mostly by steps is described as ___.",
-      "options": [
-        "chromatic",
-        "disjunct",
-        "conjunct",
-        "syncopated"
-      ],
-      "correct_answer": "conjunct",
-      "explanation": "Stepwise movement is conjunct; movement by leaps is disjunct.",
-      "difficulty": 3,
-      "misconceptions": {},
-      "verify": null,
-      "source": "template",
-      "review_status": "authored",
-      "expected_time_ms": 5868.0,
-      "estimated_difficulty": 3
-    },
-    {
-      "id": "gen_comp_melody_004",
+      "id": "gen_comp_melody_002",
       "subject": "math",
       "topic": "composition",
       "concept": "comp.melody",
       "question": "The shape of a melody over time is called its ___.",
       "options": [
         "form",
+        "cadence",
         "texture",
-        "contour",
-        "cadence"
+        "contour"
       ],
       "correct_answer": "contour",
       "explanation": "Contour is the rising and falling shape; texture and form describe other things.",
@@ -368,38 +324,16 @@
       "estimated_difficulty": 3
     },
     {
-      "id": "gen_comp_melody_005",
-      "subject": "math",
-      "topic": "composition",
-      "concept": "comp.melody",
-      "question": "Which interval is a step?",
-      "options": [
-        "A perfect fifth",
-        "An octave",
-        "A major third",
-        "A major second"
-      ],
-      "correct_answer": "A major second",
-      "explanation": "A second moves to the very next letter name, which is one step.",
-      "difficulty": 3,
-      "misconceptions": {},
-      "verify": null,
-      "source": "template",
-      "review_status": "authored",
-      "expected_time_ms": 5000.0,
-      "estimated_difficulty": 3
-    },
-    {
-      "id": "gen_comp_melody_006",
+      "id": "gen_comp_melody_003",
       "subject": "math",
       "topic": "composition",
       "concept": "comp.melody",
       "question": "A melody built mostly on a single repeated note is said to be ___.",
       "options": [
-        "sequential",
-        "melismatic",
         "static",
-        "modulating"
+        "sequential",
+        "modulating",
+        "melismatic"
       ],
       "correct_answer": "static",
       "explanation": "Very little pitch movement leaves the melody static.",
@@ -412,25 +346,91 @@
       "estimated_difficulty": 3
     },
     {
+      "id": "gen_comp_melody_004",
+      "subject": "math",
+      "topic": "composition",
+      "concept": "comp.melody",
+      "question": "A melody that moves mostly by steps is described as ___.",
+      "options": [
+        "syncopated",
+        "conjunct",
+        "chromatic",
+        "disjunct"
+      ],
+      "correct_answer": "conjunct",
+      "explanation": "Stepwise movement is conjunct; movement by leaps is disjunct.",
+      "difficulty": 3,
+      "misconceptions": {},
+      "verify": null,
+      "source": "template",
+      "review_status": "authored",
+      "expected_time_ms": 5868.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_comp_melody_005",
+      "subject": "math",
+      "topic": "composition",
+      "concept": "comp.melody",
+      "question": "A melody that leaps between notes far apart is described as ___.",
+      "options": [
+        "diatonic",
+        "homophonic",
+        "disjunct",
+        "conjunct"
+      ],
+      "correct_answer": "disjunct",
+      "explanation": "Leaping movement is disjunct; stepwise movement is conjunct.",
+      "difficulty": 3,
+      "misconceptions": {},
+      "verify": null,
+      "source": "template",
+      "review_status": "authored",
+      "expected_time_ms": 6092.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_comp_melody_006",
+      "subject": "math",
+      "topic": "composition",
+      "concept": "comp.melody",
+      "question": "Which interval is a step?",
+      "options": [
+        "A major second",
+        "A major third",
+        "A perfect fifth",
+        "An octave"
+      ],
+      "correct_answer": "A major second",
+      "explanation": "A second moves to the very next letter name, which is one step.",
+      "difficulty": 3,
+      "misconceptions": {},
+      "verify": null,
+      "source": "template",
+      "review_status": "authored",
+      "expected_time_ms": 5000.0,
+      "estimated_difficulty": 3
+    },
+    {
       "id": "gen_comp_texture_001",
       "subject": "math",
       "topic": "composition",
       "concept": "comp.texture",
-      "question": "A singer with a guitar playing chords underneath is which texture?",
+      "question": "A round such as 'Frère Jacques' is an example of ___ texture.",
       "options": [
-        "Monophonic",
-        "Homophonic",
-        "Contrapuntal",
-        "Polyphonic"
+        "monophonic",
+        "homophonic",
+        "unison",
+        "polyphonic"
       ],
-      "correct_answer": "Homophonic",
-      "explanation": "Melody plus chordal accompaniment is homophonic.",
+      "correct_answer": "polyphonic",
+      "explanation": "The same melody sung in overlapping entries is polyphonic.",
       "difficulty": 4,
       "misconceptions": {},
       "verify": null,
       "source": "template",
       "review_status": "authored",
-      "expected_time_ms": 6148.0,
+      "expected_time_ms": 6008.0,
       "estimated_difficulty": 4
     },
     {
@@ -438,56 +438,12 @@
       "subject": "math",
       "topic": "composition",
       "concept": "comp.texture",
-      "question": "Two or more independent melodies sounding at once is ___ texture.",
-      "options": [
-        "monophonic",
-        "homophonic",
-        "polyphonic",
-        "strophic"
-      ],
-      "correct_answer": "polyphonic",
-      "explanation": "Several independent lines together make a polyphonic texture.",
-      "difficulty": 4,
-      "misconceptions": {},
-      "verify": null,
-      "source": "template",
-      "review_status": "authored",
-      "expected_time_ms": 6120.0,
-      "estimated_difficulty": 4
-    },
-    {
-      "id": "gen_comp_texture_003",
-      "subject": "math",
-      "topic": "composition",
-      "concept": "comp.texture",
-      "question": "A solo flute playing alone creates which texture?",
-      "options": [
-        "Monophonic",
-        "Homophonic",
-        "Chordal",
-        "Polyphonic"
-      ],
-      "correct_answer": "Monophonic",
-      "explanation": "A single unaccompanied instrument is monophonic.",
-      "difficulty": 4,
-      "misconceptions": {},
-      "verify": null,
-      "source": "template",
-      "review_status": "authored",
-      "expected_time_ms": 5672.0,
-      "estimated_difficulty": 4
-    },
-    {
-      "id": "gen_comp_texture_004",
-      "subject": "math",
-      "topic": "composition",
-      "concept": "comp.texture",
       "question": "A melody supported by chords is ___ in texture.",
       "options": [
         "imitative",
+        "monophonic",
         "polyphonic",
-        "homophonic",
-        "monophonic"
+        "homophonic"
       ],
       "correct_answer": "homophonic",
       "explanation": "One melody with chordal accompaniment is homophonic.",
@@ -500,16 +456,16 @@
       "estimated_difficulty": 4
     },
     {
-      "id": "gen_comp_texture_005",
+      "id": "gen_comp_texture_003",
       "subject": "math",
       "topic": "composition",
       "concept": "comp.texture",
       "question": "A single unaccompanied melodic line is ___ in texture.",
       "options": [
         "heterophonic",
-        "polyphonic",
+        "homophonic",
         "monophonic",
-        "homophonic"
+        "polyphonic"
       ],
       "correct_answer": "monophonic",
       "explanation": "One line alone is monophonic.",
@@ -522,25 +478,69 @@
       "estimated_difficulty": 4
     },
     {
-      "id": "gen_comp_texture_006",
+      "id": "gen_comp_texture_004",
       "subject": "math",
       "topic": "composition",
       "concept": "comp.texture",
-      "question": "A round such as 'Frère Jacques' is an example of ___ texture.",
+      "question": "Two or more independent melodies sounding at once is ___ texture.",
       "options": [
-        "monophonic",
-        "polyphonic",
         "homophonic",
-        "unison"
+        "strophic",
+        "polyphonic",
+        "monophonic"
       ],
       "correct_answer": "polyphonic",
-      "explanation": "The same melody sung in overlapping entries is polyphonic.",
+      "explanation": "Several independent lines together make a polyphonic texture.",
       "difficulty": 4,
       "misconceptions": {},
       "verify": null,
       "source": "template",
       "review_status": "authored",
-      "expected_time_ms": 6008.0,
+      "expected_time_ms": 6120.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_comp_texture_005",
+      "subject": "math",
+      "topic": "composition",
+      "concept": "comp.texture",
+      "question": "A solo flute playing alone creates which texture?",
+      "options": [
+        "Chordal",
+        "Polyphonic",
+        "Monophonic",
+        "Homophonic"
+      ],
+      "correct_answer": "Monophonic",
+      "explanation": "A single unaccompanied instrument is monophonic.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": null,
+      "source": "template",
+      "review_status": "authored",
+      "expected_time_ms": 5672.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_comp_texture_006",
+      "subject": "math",
+      "topic": "composition",
+      "concept": "comp.texture",
+      "question": "A singer with a guitar playing chords underneath is which texture?",
+      "options": [
+        "Contrapuntal",
+        "Monophonic",
+        "Polyphonic",
+        "Homophonic"
+      ],
+      "correct_answer": "Homophonic",
+      "explanation": "Melody plus chordal accompaniment is homophonic.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": null,
+      "source": "template",
+      "review_status": "authored",
+      "expected_time_ms": 6148.0,
       "estimated_difficulty": 4
     }
   ]

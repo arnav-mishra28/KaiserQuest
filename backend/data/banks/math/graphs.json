@@ -521,15 +521,15 @@
       "subject": "math",
       "topic": "graphs",
       "concept": "graphs.intercepts",
-      "question": "For the line y = 3x + 2, what is the y-intercept?",
+      "question": "For the line y = 2x + 5, what is the y-intercept?",
       "options": [
-        "2",
         "0",
-        "3",
-        "-2"
+        "2",
+        "5",
+        "-5"
       ],
-      "correct_answer": "2",
-      "explanation": "In y = mx + c the y-intercept is c, the value of y when x = 0: y = 3(0) + 2 = 2. The slope 3 is a different thing.",
+      "correct_answer": "5",
+      "explanation": "In y = mx + c the y-intercept is c, the value of y when x = 0: y = 2(0) + 5 = 5. The slope 2 is a different thing.",
       "difficulty": 3,
       "misconceptions": {},
       "verify": null,
@@ -543,15 +543,15 @@
       "subject": "math",
       "topic": "graphs",
       "concept": "graphs.intercepts",
-      "question": "For the line y = 4x + 5, what is the y-intercept?",
+      "question": "For the line y = 7x + 5, what is the y-intercept?",
       "options": [
+        "7",
         "0",
-        "-5",
-        "4",
-        "5"
+        "5",
+        "-5"
       ],
       "correct_answer": "5",
-      "explanation": "In y = mx + c the y-intercept is c, the value of y when x = 0: y = 4(0) + 5 = 5. The slope 4 is a different thing.",
+      "explanation": "In y = mx + c the y-intercept is c, the value of y when x = 0: y = 7(0) + 5 = 5. The slope 7 is a different thing.",
       "difficulty": 3,
       "misconceptions": {},
       "verify": null,
@@ -565,15 +565,15 @@
       "subject": "math",
       "topic": "graphs",
       "concept": "graphs.intercepts",
-      "question": "For the line y = 6x - 9, what is the y-intercept?",
+      "question": "For the line y = 4x + 6, what is the y-intercept?",
       "options": [
         "6",
-        "-9",
-        "9",
+        "4",
+        "-6",
         "0"
       ],
-      "correct_answer": "-9",
-      "explanation": "In y = mx + c the y-intercept is c, the value of y when x = 0: y = 6(0) - 9 = -9. The slope 6 is a different thing.",
+      "correct_answer": "6",
+      "explanation": "In y = mx + c the y-intercept is c, the value of y when x = 0: y = 4(0) + 6 = 6. The slope 4 is a different thing.",
       "difficulty": 3,
       "misconceptions": {},
       "verify": null,
@@ -587,15 +587,15 @@
       "subject": "math",
       "topic": "graphs",
       "concept": "graphs.intercepts",
-      "question": "For the line y = 9x + 2, what is the y-intercept?",
+      "question": "For the line y = 3x + 7, what is the y-intercept?",
       "options": [
-        "2",
-        "9",
-        "-2",
-        "0"
+        "0",
+        "7",
+        "-7",
+        "3"
       ],
-      "correct_answer": "2",
-      "explanation": "In y = mx + c the y-intercept is c, the value of y when x = 0: y = 9(0) + 2 = 2. The slope 9 is a different thing.",
+      "correct_answer": "7",
+      "explanation": "In y = mx + c the y-intercept is c, the value of y when x = 0: y = 3(0) + 7 = 7. The slope 3 is a different thing.",
       "difficulty": 3,
       "misconceptions": {},
       "verify": null,
@@ -609,15 +609,15 @@
       "subject": "math",
       "topic": "graphs",
       "concept": "graphs.intercepts",
-      "question": "For the line y = 4x + 1, what is the y-intercept?",
+      "question": "For the line y = 3x + 4, what is the y-intercept?",
       "options": [
-        "-1",
-        "1",
         "4",
-        "0"
+        "3",
+        "0",
+        "-4"
       ],
-      "correct_answer": "1",
-      "explanation": "In y = mx + c the y-intercept is c, the value of y when x = 0: y = 4(0) + 1 = 1. The slope 4 is a different thing.",
+      "correct_answer": "4",
+      "explanation": "In y = mx + c the y-intercept is c, the value of y when x = 0: y = 3(0) + 4 = 4. The slope 3 is a different thing.",
       "difficulty": 3,
       "misconceptions": {},
       "verify": null,
@@ -631,15 +631,15 @@
       "subject": "math",
       "topic": "graphs",
       "concept": "graphs.intercepts",
-      "question": "For the line y = 5x + 9, what is the y-intercept?",
+      "question": "For the line y = 9x - 8, what is the y-intercept?",
       "options": [
-        "-9",
         "0",
-        "5",
-        "9"
+        "-8",
+        "9",
+        "8"
       ],
-      "correct_answer": "9",
-      "explanation": "In y = mx + c the y-intercept is c, the value of y when x = 0: y = 5(0) + 9 = 9. The slope 5 is a different thing.",
+      "correct_answer": "-8",
+      "explanation": "In y = mx + c the y-intercept is c, the value of y when x = 0: y = 9(0) - 8 = -8. The slope 9 is a different thing.",
       "difficulty": 3,
       "misconceptions": {},
       "verify": null,
@@ -653,15 +653,15 @@
       "subject": "math",
       "topic": "graphs",
       "concept": "graphs.intercepts",
-      "question": "For the line y = 7x - 2, what is the y-intercept?",
+      "question": "For the line y = 4x - 8, what is the y-intercept?",
       "options": [
-        "7",
-        "2",
         "0",
-        "-2"
+        "-8",
+        "8",
+        "4"
       ],
-      "correct_answer": "-2",
-      "explanation": "In y = mx + c the y-intercept is c, the value of y when x = 0: y = 7(0) - 2 = -2. The slope 7 is a different thing.",
+      "correct_answer": "-8",
+      "explanation": "In y = mx + c the y-intercept is c, the value of y when x = 0: y = 4(0) - 8 = -8. The slope 4 is a different thing.",
       "difficulty": 3,
       "misconceptions": {},
       "verify": null,
@@ -675,37 +675,36 @@
       "subject": "math",
       "topic": "graphs",
       "concept": "graphs.intercepts",
-      "question": "For the line y = 2x - 6, what is the y-intercept?",
+      "question": "For the line y = 7x - 7, what is the y-intercept?",
       "options": [
-        "-6",
-        "2",
-        "6",
-        "0"
+        "7",
+        "0",
+        "-7"
       ],
-      "correct_answer": "-6",
-      "explanation": "In y = mx + c the y-intercept is c, the value of y when x = 0: y = 2(0) - 6 = -6. The slope 2 is a different thing.",
+      "correct_answer": "-7",
+      "explanation": "In y = mx + c the y-intercept is c, the value of y when x = 0: y = 7(0) - 7 = -7. The slope 7 is a different thing.",
       "difficulty": 3,
       "misconceptions": {},
       "verify": null,
       "source": "procedural",
       "review_status": "auto_validated",
-      "expected_time_ms": 5672.0,
-      "estimated_difficulty": 3
+      "expected_time_ms": 5222.0,
+      "estimated_difficulty": 2
     },
     {
       "id": "gen_graphs_intercepts_009",
       "subject": "math",
       "topic": "graphs",
       "concept": "graphs.intercepts",
-      "question": "For the line y = 9x - 5, what is the y-intercept?",
+      "question": "For the line y = 4x + 1, what is the y-intercept?",
       "options": [
-        "-5",
-        "5",
-        "9",
-        "0"
+        "-1",
+        "0",
+        "1",
+        "4"
       ],
-      "correct_answer": "-5",
-      "explanation": "In y = mx + c the y-intercept is c, the value of y when x = 0: y = 9(0) - 5 = -5. The slope 9 is a different thing.",
+      "correct_answer": "1",
+      "explanation": "In y = mx + c the y-intercept is c, the value of y when x = 0: y = 4(0) + 1 = 1. The slope 4 is a different thing.",
       "difficulty": 3,
       "misconceptions": {},
       "verify": null,
@@ -719,35 +718,37 @@
       "subject": "math",
       "topic": "graphs",
       "concept": "graphs.intercepts",
-      "question": "For the line y = 8x + 0, what is the y-intercept?",
+      "question": "For the line y = 8x - 5, what is the y-intercept?",
       "options": [
+        "5",
+        "8",
         "0",
-        "8"
+        "-5"
       ],
-      "correct_answer": "0",
-      "explanation": "In y = mx + c the y-intercept is c, the value of y when x = 0: y = 8(0) + 0 = 0. The slope 8 is a different thing.",
+      "correct_answer": "-5",
+      "explanation": "In y = mx + c the y-intercept is c, the value of y when x = 0: y = 8(0) - 5 = -5. The slope 8 is a different thing.",
       "difficulty": 3,
       "misconceptions": {},
       "verify": null,
       "source": "procedural",
       "review_status": "auto_validated",
-      "expected_time_ms": 4772.0,
-      "estimated_difficulty": 2
+      "expected_time_ms": 5672.0,
+      "estimated_difficulty": 3
     },
     {
       "id": "gen_graphs_intercepts_011",
       "subject": "math",
       "topic": "graphs",
       "concept": "graphs.intercepts",
-      "question": "For the line y = 6x + 7, what is the y-intercept?",
+      "question": "For the line y = 3x - 4, what is the y-intercept?",
       "options": [
-        "-7",
-        "6",
-        "7",
-        "0"
+        "0",
+        "3",
+        "4",
+        "-4"
       ],
-      "correct_answer": "7",
-      "explanation": "In y = mx + c the y-intercept is c, the value of y when x = 0: y = 6(0) + 7 = 7. The slope 6 is a different thing.",
+      "correct_answer": "-4",
+      "explanation": "In y = mx + c the y-intercept is c, the value of y when x = 0: y = 3(0) - 4 = -4. The slope 3 is a different thing.",
       "difficulty": 3,
       "misconceptions": {},
       "verify": null,
@@ -761,37 +762,36 @@
       "subject": "math",
       "topic": "graphs",
       "concept": "graphs.intercepts",
-      "question": "For the line y = 6x + 9, what is the y-intercept?",
+      "question": "For the line y = 5x - 5, what is the y-intercept?",
       "options": [
-        "-9",
         "0",
-        "9",
-        "6"
+        "5",
+        "-5"
       ],
-      "correct_answer": "9",
-      "explanation": "In y = mx + c the y-intercept is c, the value of y when x = 0: y = 6(0) + 9 = 9. The slope 6 is a different thing.",
+      "correct_answer": "-5",
+      "explanation": "In y = mx + c the y-intercept is c, the value of y when x = 0: y = 5(0) - 5 = -5. The slope 5 is a different thing.",
       "difficulty": 3,
       "misconceptions": {},
       "verify": null,
       "source": "procedural",
       "review_status": "auto_validated",
-      "expected_time_ms": 5672.0,
-      "estimated_difficulty": 3
+      "expected_time_ms": 5222.0,
+      "estimated_difficulty": 2
     },
     {
       "id": "gen_graphs_intercepts_013",
       "subject": "math",
       "topic": "graphs",
       "concept": "graphs.intercepts",
-      "question": "For the line y = 7x + 8, what is the y-intercept?",
+      "question": "For the line y = 9x + 5, what is the y-intercept?",
       "options": [
-        "8",
+        "-5",
+        "5",
         "0",
-        "-8",
-        "7"
+        "9"
       ],
-      "correct_answer": "8",
-      "explanation": "In y = mx + c the y-intercept is c, the value of y when x = 0: y = 7(0) + 8 = 8. The slope 7 is a different thing.",
+      "correct_answer": "5",
+      "explanation": "In y = mx + c the y-intercept is c, the value of y when x = 0: y = 9(0) + 5 = 5. The slope 9 is a different thing.",
       "difficulty": 3,
       "misconceptions": {},
       "verify": null,
@@ -805,15 +805,15 @@
       "subject": "math",
       "topic": "graphs",
       "concept": "graphs.intercepts",
-      "question": "For the line y = 7x - 6, what is the y-intercept?",
+      "question": "For the line y = 2x - 7, what is the y-intercept?",
       "options": [
-        "-6",
+        "-7",
         "7",
         "0",
-        "6"
+        "2"
       ],
-      "correct_answer": "-6",
-      "explanation": "In y = mx + c the y-intercept is c, the value of y when x = 0: y = 7(0) - 6 = -6. The slope 7 is a different thing.",
+      "correct_answer": "-7",
+      "explanation": "In y = mx + c the y-intercept is c, the value of y when x = 0: y = 2(0) - 7 = -7. The slope 2 is a different thing.",
       "difficulty": 3,
       "misconceptions": {},
       "verify": null,
@@ -827,15 +827,15 @@
       "subject": "math",
       "topic": "graphs",
       "concept": "graphs.intercepts",
-      "question": "For the line y = 5x - 6, what is the y-intercept?",
+      "question": "For the line y = 9x + 3, what is the y-intercept?",
       "options": [
-        "6",
-        "5",
         "0",
-        "-6"
+        "-3",
+        "9",
+        "3"
       ],
-      "correct_answer": "-6",
-      "explanation": "In y = mx + c the y-intercept is c, the value of y when x = 0: y = 5(0) - 6 = -6. The slope 5 is a different thing.",
+      "correct_answer": "3",
+      "explanation": "In y = mx + c the y-intercept is c, the value of y when x = 0: y = 9(0) + 3 = 3. The slope 9 is a different thing.",
       "difficulty": 3,
       "misconceptions": {},
       "verify": null,
@@ -849,15 +849,15 @@
       "subject": "math",
       "topic": "graphs",
       "concept": "graphs.line_equations",
-      "question": "A straight line has slope 7 and y-intercept 1. What is the equation of the line?",
+      "question": "A straight line has slope 7 and y-intercept 4. What is the equation of the line?",
       "options": [
-        "y = 7 + 1x",
-        "y = 7x - 1",
-        "y = 1x + 7",
-        "y = 7x + 1"
+        "y = 7 + 4x",
+        "y = 7x - 4",
+        "y = 7x + 4",
+        "y = 4x + 7"
       ],
-      "correct_answer": "y = 7x + 1",
-      "explanation": "Slope-intercept form is y = mx + c. The slope 7 multiplies x and the intercept 1 is added: y = 7x + 1.",
+      "correct_answer": "y = 7x + 4",
+      "explanation": "Slope-intercept form is y = mx + c. The slope 7 multiplies x and the intercept 4 is added: y = 7x + 4.",
       "difficulty": 4,
       "misconceptions": {},
       "verify": null,
@@ -871,15 +871,15 @@
       "subject": "math",
       "topic": "graphs",
       "concept": "graphs.line_equations",
-      "question": "A straight line has slope 6 and y-intercept 4. What is the equation of the line?",
+      "question": "A straight line has slope 4 and y-intercept 8. What is the equation of the line?",
       "options": [
-        "y = 6x - 4",
-        "y = 6x + 4",
-        "y = 4x + 6",
-        "y = 6 + 4x"
+        "y = 4x - 8",
+        "y = 4 + 8x",
+        "y = 8x + 4",
+        "y = 4x + 8"
       ],
-      "correct_answer": "y = 6x + 4",
-      "explanation": "Slope-intercept form is y = mx + c. The slope 6 multiplies x and the intercept 4 is added: y = 6x + 4.",
+      "correct_answer": "y = 4x + 8",
+      "explanation": "Slope-intercept form is y = mx + c. The slope 4 multiplies x and the intercept 8 is added: y = 4x + 8.",
       "difficulty": 4,
       "misconceptions": {},
       "verify": null,
@@ -893,15 +893,15 @@
       "subject": "math",
       "topic": "graphs",
       "concept": "graphs.line_equations",
-      "question": "A straight line has slope 8 and y-intercept 6. What is the equation of the line?",
+      "question": "A straight line has slope 8 and y-intercept 3. What is the equation of the line?",
       "options": [
-        "y = 6x + 8",
-        "y = 8x - 6",
-        "y = 8x + 6",
-        "y = 8 + 6x"
+        "y = 8 + 3x",
+        "y = 8x - 3",
+        "y = 8x + 3",
+        "y = 3x + 8"
       ],
-      "correct_answer": "y = 8x + 6",
-      "explanation": "Slope-intercept form is y = mx + c. The slope 8 multiplies x and the intercept 6 is added: y = 8x + 6.",
+      "correct_answer": "y = 8x + 3",
+      "explanation": "Slope-intercept form is y = mx + c. The slope 8 multiplies x and the intercept 3 is added: y = 8x + 3.",
       "difficulty": 4,
       "misconceptions": {},
       "verify": null,
@@ -915,15 +915,15 @@
       "subject": "math",
       "topic": "graphs",
       "concept": "graphs.line_equations",
-      "question": "A straight line has slope 8 and y-intercept 2. What is the equation of the line?",
+      "question": "A straight line has slope 9 and y-intercept 4. What is the equation of the line?",
       "options": [
-        "y = 8 + 2x",
-        "y = 2x + 8",
-        "y = 8x + 2",
-        "y = 8x - 2"
+        "y = 9 + 4x",
+        "y = 9x + 4",
+        "y = 4x + 9",
+        "y = 9x - 4"
       ],
-      "correct_answer": "y = 8x + 2",
-      "explanation": "Slope-intercept form is y = mx + c. The slope 8 multiplies x and the intercept 2 is added: y = 8x + 2.",
+      "correct_answer": "y = 9x + 4",
+      "explanation": "Slope-intercept form is y = mx + c. The slope 9 multiplies x and the intercept 4 is added: y = 9x + 4.",
       "difficulty": 4,
       "misconceptions": {},
       "verify": null,
@@ -937,15 +937,15 @@
       "subject": "math",
       "topic": "graphs",
       "concept": "graphs.line_equations",
-      "question": "A straight line has slope 5 and y-intercept 8. What is the equation of the line?",
+      "question": "A straight line has slope 5 and y-intercept 7. What is the equation of the line?",
       "options": [
-        "y = 5x + 8",
-        "y = 8x + 5",
-        "y = 5 + 8x",
-        "y = 5x - 8"
+        "y = 5 + 7x",
+        "y = 7x + 5",
+        "y = 5x + 7",
+        "y = 5x - 7"
       ],
-      "correct_answer": "y = 5x + 8",
-      "explanation": "Slope-intercept form is y = mx + c. The slope 5 multiplies x and the intercept 8 is added: y = 5x + 8.",
+      "correct_answer": "y = 5x + 7",
+      "explanation": "Slope-intercept form is y = mx + c. The slope 5 multiplies x and the intercept 7 is added: y = 5x + 7.",
       "difficulty": 4,
       "misconceptions": {},
       "verify": null,
@@ -959,15 +959,15 @@
       "subject": "math",
       "topic": "graphs",
       "concept": "graphs.line_equations",
-      "question": "A straight line has slope 4 and y-intercept 1. What is the equation of the line?",
+      "question": "A straight line has slope 5 and y-intercept 6. What is the equation of the line?",
       "options": [
-        "y = 4 + 1x",
-        "y = 4x - 1",
-        "y = 4x + 1",
-        "y = 1x + 4"
+        "y = 5 + 6x",
+        "y = 6x + 5",
+        "y = 5x + 6",
+        "y = 5x - 6"
       ],
-      "correct_answer": "y = 4x + 1",
-      "explanation": "Slope-intercept form is y = mx + c. The slope 4 multiplies x and the intercept 1 is added: y = 4x + 1.",
+      "correct_answer": "y = 5x + 6",
+      "explanation": "Slope-intercept form is y = mx + c. The slope 5 multiplies x and the intercept 6 is added: y = 5x + 6.",
       "difficulty": 4,
       "misconceptions": {},
       "verify": null,
@@ -981,15 +981,15 @@
       "subject": "math",
       "topic": "graphs",
       "concept": "graphs.line_equations",
-      "question": "A straight line has slope 6 and y-intercept 7. What is the equation of the line?",
+      "question": "A straight line has slope 2 and y-intercept 3. What is the equation of the line?",
       "options": [
-        "y = 7x + 6",
-        "y = 6 + 7x",
-        "y = 6x - 7",
-        "y = 6x + 7"
+        "y = 2x - 3",
+        "y = 2x + 3",
+        "y = 3x + 2",
+        "y = 2 + 3x"
       ],
-      "correct_answer": "y = 6x + 7",
-      "explanation": "Slope-intercept form is y = mx + c. The slope 6 multiplies x and the intercept 7 is added: y = 6x + 7.",
+      "correct_answer": "y = 2x + 3",
+      "explanation": "Slope-intercept form is y = mx + c. The slope 2 multiplies x and the intercept 3 is added: y = 2x + 3.",
       "difficulty": 4,
       "misconceptions": {},
       "verify": null,
@@ -1003,36 +1003,37 @@
       "subject": "math",
       "topic": "graphs",
       "concept": "graphs.line_equations",
-      "question": "A straight line has slope 4 and y-intercept 4. What is the equation of the line?",
+      "question": "A straight line has slope 3 and y-intercept 6. What is the equation of the line?",
       "options": [
-        "y = 4x - 4",
-        "y = 4 + 4x",
-        "y = 4x + 4"
+        "y = 6x + 3",
+        "y = 3x + 6",
+        "y = 3x - 6",
+        "y = 3 + 6x"
       ],
-      "correct_answer": "y = 4x + 4",
-      "explanation": "Slope-intercept form is y = mx + c. The slope 4 multiplies x and the intercept 4 is added: y = 4x + 4.",
+      "correct_answer": "y = 3x + 6",
+      "explanation": "Slope-intercept form is y = mx + c. The slope 3 multiplies x and the intercept 6 is added: y = 3x + 6.",
       "difficulty": 4,
       "misconceptions": {},
       "verify": null,
       "source": "procedural",
       "review_status": "auto_validated",
-      "expected_time_ms": 6090.0,
-      "estimated_difficulty": 3
+      "expected_time_ms": 6540.0,
+      "estimated_difficulty": 4
     },
     {
       "id": "gen_graphs_line_equations_009",
       "subject": "math",
       "topic": "graphs",
       "concept": "graphs.line_equations",
-      "question": "A straight line has slope 8 and y-intercept 7. What is the equation of the line?",
+      "question": "A straight line has slope 3 and y-intercept 9. What is the equation of the line?",
       "options": [
-        "y = 7x + 8",
-        "y = 8x + 7",
-        "y = 8 + 7x",
-        "y = 8x - 7"
+        "y = 3x - 9",
+        "y = 3x + 9",
+        "y = 3 + 9x",
+        "y = 9x + 3"
       ],
-      "correct_answer": "y = 8x + 7",
-      "explanation": "Slope-intercept form is y = mx + c. The slope 8 multiplies x and the intercept 7 is added: y = 8x + 7.",
+      "correct_answer": "y = 3x + 9",
+      "explanation": "Slope-intercept form is y = mx + c. The slope 3 multiplies x and the intercept 9 is added: y = 3x + 9.",
       "difficulty": 4,
       "misconceptions": {},
       "verify": null,
@@ -1046,15 +1047,15 @@
       "subject": "math",
       "topic": "graphs",
       "concept": "graphs.line_equations",
-      "question": "A straight line has slope 8 and y-intercept 4. What is the equation of the line?",
+      "question": "A straight line has slope 4 and y-intercept 9. What is the equation of the line?",
       "options": [
-        "y = 8 + 4x",
-        "y = 4x + 8",
-        "y = 8x + 4",
-        "y = 8x - 4"
+        "y = 4x - 9",
+        "y = 4x + 9",
+        "y = 4 + 9x",
+        "y = 9x + 4"
       ],
-      "correct_answer": "y = 8x + 4",
-      "explanation": "Slope-intercept form is y = mx + c. The slope 8 multiplies x and the intercept 4 is added: y = 8x + 4.",
+      "correct_answer": "y = 4x + 9",
+      "explanation": "Slope-intercept form is y = mx + c. The slope 4 multiplies x and the intercept 9 is added: y = 4x + 9.",
       "difficulty": 4,
       "misconceptions": {},
       "verify": null,
@@ -1068,15 +1069,15 @@
       "subject": "math",
       "topic": "graphs",
       "concept": "graphs.line_equations",
-      "question": "A straight line has slope 9 and y-intercept 2. What is the equation of the line?",
+      "question": "A straight line has slope 4 and y-intercept 7. What is the equation of the line?",
       "options": [
-        "y = 9 + 2x",
-        "y = 9x + 2",
-        "y = 9x - 2",
-        "y = 2x + 9"
+        "y = 4x - 7",
+        "y = 4x + 7",
+        "y = 7x + 4",
+        "y = 4 + 7x"
       ],
-      "correct_answer": "y = 9x + 2",
-      "explanation": "Slope-intercept form is y = mx + c. The slope 9 multiplies x and the intercept 2 is added: y = 9x + 2.",
+      "correct_answer": "y = 4x + 7",
+      "explanation": "Slope-intercept form is y = mx + c. The slope 4 multiplies x and the intercept 7 is added: y = 4x + 7.",
       "difficulty": 4,
       "misconceptions": {},
       "verify": null,
@@ -1090,37 +1091,36 @@
       "subject": "math",
       "topic": "graphs",
       "concept": "graphs.line_equations",
-      "question": "A straight line has slope 3 and y-intercept 8. What is the equation of the line?",
+      "question": "A straight line has slope 9 and y-intercept 9. What is the equation of the line?",
       "options": [
-        "y = 3x - 8",
-        "y = 8x + 3",
-        "y = 3x + 8",
-        "y = 3 + 8x"
+        "y = 9 + 9x",
+        "y = 9x - 9",
+        "y = 9x + 9"
       ],
-      "correct_answer": "y = 3x + 8",
-      "explanation": "Slope-intercept form is y = mx + c. The slope 3 multiplies x and the intercept 8 is added: y = 3x + 8.",
+      "correct_answer": "y = 9x + 9",
+      "explanation": "Slope-intercept form is y = mx + c. The slope 9 multiplies x and the intercept 9 is added: y = 9x + 9.",
       "difficulty": 4,
       "misconceptions": {},
       "verify": null,
       "source": "procedural",
       "review_status": "auto_validated",
-      "expected_time_ms": 6540.0,
-      "estimated_difficulty": 4
+      "expected_time_ms": 6090.0,
+      "estimated_difficulty": 3
     },
     {
       "id": "gen_graphs_line_equations_013",
       "subject": "math",
       "topic": "graphs",
       "concept": "graphs.line_equations",
-      "question": "A straight line has slope 3 and y-intercept 6. What is the equation of the line?",
+      "question": "A straight line has slope 9 and y-intercept 6. What is the equation of the line?",
       "options": [
-        "y = 3 + 6x",
-        "y = 3x + 6",
-        "y = 3x - 6",
-        "y = 6x + 3"
+        "y = 9x - 6",
+        "y = 6x + 9",
+        "y = 9x + 6",
+        "y = 9 + 6x"
       ],
-      "correct_answer": "y = 3x + 6",
-      "explanation": "Slope-intercept form is y = mx + c. The slope 3 multiplies x and the intercept 6 is added: y = 3x + 6.",
+      "correct_answer": "y = 9x + 6",
+      "explanation": "Slope-intercept form is y = mx + c. The slope 9 multiplies x and the intercept 6 is added: y = 9x + 6.",
       "difficulty": 4,
       "misconceptions": {},
       "verify": null,
@@ -1134,37 +1134,36 @@
       "subject": "math",
       "topic": "graphs",
       "concept": "graphs.line_equations",
-      "question": "A straight line has slope 5 and y-intercept 2. What is the equation of the line?",
+      "question": "A straight line has slope 6 and y-intercept 6. What is the equation of the line?",
       "options": [
-        "y = 5 + 2x",
-        "y = 5x - 2",
-        "y = 5x + 2",
-        "y = 2x + 5"
+        "y = 6x + 6",
+        "y = 6x - 6",
+        "y = 6 + 6x"
       ],
-      "correct_answer": "y = 5x + 2",
-      "explanation": "Slope-intercept form is y = mx + c. The slope 5 multiplies x and the intercept 2 is added: y = 5x + 2.",
+      "correct_answer": "y = 6x + 6",
+      "explanation": "Slope-intercept form is y = mx + c. The slope 6 multiplies x and the intercept 6 is added: y = 6x + 6.",
       "difficulty": 4,
       "misconceptions": {},
       "verify": null,
       "source": "procedural",
       "review_status": "auto_validated",
-      "expected_time_ms": 6540.0,
-      "estimated_difficulty": 4
+      "expected_time_ms": 6090.0,
+      "estimated_difficulty": 3
     },
     {
       "id": "gen_graphs_line_equations_015",
       "subject": "math",
       "topic": "graphs",
       "concept": "graphs.line_equations",
-      "question": "A straight line has slope 7 and y-intercept 8. What is the equation of the line?",
+      "question": "A straight line has slope 3 and y-intercept 5. What is the equation of the line?",
       "options": [
-        "y = 8x + 7",
-        "y = 7 + 8x",
-        "y = 7x - 8",
-        "y = 7x + 8"
+        "y = 3 + 5x",
+        "y = 3x - 5",
+        "y = 5x + 3",
+        "y = 3x + 5"
       ],
-      "correct_answer": "y = 7x + 8",
-      "explanation": "Slope-intercept form is y = mx + c. The slope 7 multiplies x and the intercept 8 is added: y = 7x + 8.",
+      "correct_answer": "y = 3x + 5",
+      "explanation": "Slope-intercept form is y = mx + c. The slope 3 multiplies x and the intercept 5 is added: y = 3x + 5.",
       "difficulty": 4,
       "misconceptions": {},
       "verify": null,
@@ -1178,21 +1177,102 @@
       "subject": "math",
       "topic": "graphs",
       "concept": "graphs.slope",
-      "question": "A line passes through the points (0, 4) and (2, 8). What is its slope?",
+      "question": "A line passes through the points (0, 2) and (3, 14). What is its slope?",
       "options": [
-        "0.5",
+        "4",
+        "12",
+        "3",
+        "0.25"
+      ],
+      "correct_answer": "4",
+      "explanation": "Slope is rise over run: the vertical change (14 - 2 = 12) divided by the horizontal change (3 - 0 = 3). So slope = 12/3 = 4. Dividing run by rise (0.25) inverts it.",
+      "difficulty": 3,
+      "misconceptions": {
+        "0.25": "alg.slope_inverted"
+      },
+      "verify": {
+        "kind": "numeric",
+        "expression": "(14 - 2)/(3)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6288.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_graphs_slope_002",
+      "subject": "math",
+      "topic": "graphs",
+      "concept": "graphs.slope",
+      "question": "A line passes through the points (0, 0) and (2, 8). What is its slope?",
+      "options": [
+        "4",
         "2",
-        "4"
+        "0.25",
+        "8"
+      ],
+      "correct_answer": "4",
+      "explanation": "Slope is rise over run: the vertical change (8 - 0 = 8) divided by the horizontal change (2 - 0 = 2). So slope = 8/2 = 4. Dividing run by rise (0.25) inverts it.",
+      "difficulty": 3,
+      "misconceptions": {
+        "0.25": "alg.slope_inverted"
+      },
+      "verify": {
+        "kind": "numeric",
+        "expression": "(8 - 0)/(2)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6260.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_graphs_slope_003",
+      "subject": "math",
+      "topic": "graphs",
+      "concept": "graphs.slope",
+      "question": "A line passes through the points (0, 1) and (5, 16). What is its slope?",
+      "options": [
+        "3",
+        "5",
+        "15",
+        "0.33"
+      ],
+      "correct_answer": "3",
+      "explanation": "Slope is rise over run: the vertical change (16 - 1 = 15) divided by the horizontal change (5 - 0 = 5). So slope = 15/5 = 3. Dividing run by rise (0.33) inverts it.",
+      "difficulty": 3,
+      "misconceptions": {
+        "0.33": "alg.slope_inverted"
+      },
+      "verify": {
+        "kind": "numeric",
+        "expression": "(16 - 1)/(5)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6288.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_graphs_slope_004",
+      "subject": "math",
+      "topic": "graphs",
+      "concept": "graphs.slope",
+      "question": "A line passes through the points (0, 3) and (2, 7). What is its slope?",
+      "options": [
+        "4",
+        "2",
+        "0.5"
       ],
       "correct_answer": "2",
-      "explanation": "Slope is rise over run: the vertical change (8 - 4 = 4) divided by the horizontal change (2 - 0 = 2). So slope = 4/2 = 2. Dividing run by rise (0.5) inverts it.",
+      "explanation": "Slope is rise over run: the vertical change (7 - 3 = 4) divided by the horizontal change (2 - 0 = 2). So slope = 4/2 = 2. Dividing run by rise (0.5) inverts it.",
       "difficulty": 3,
       "misconceptions": {
         "0.5": "alg.slope_inverted"
       },
       "verify": {
         "kind": "numeric",
-        "expression": "(8 - 4)/(2)"
+        "expression": "(7 - 3)/(2)"
       },
       "source": "procedural",
       "review_status": "auto_validated",
@@ -1200,16 +1280,259 @@
       "estimated_difficulty": 2
     },
     {
-      "id": "gen_graphs_slope_002",
+      "id": "gen_graphs_slope_005",
+      "subject": "math",
+      "topic": "graphs",
+      "concept": "graphs.slope",
+      "question": "A line passes through the points (0, 6) and (6, 30). What is its slope?",
+      "options": [
+        "24",
+        "0.25",
+        "6",
+        "4"
+      ],
+      "correct_answer": "4",
+      "explanation": "Slope is rise over run: the vertical change (30 - 6 = 24) divided by the horizontal change (6 - 0 = 6). So slope = 24/6 = 4. Dividing run by rise (0.25) inverts it.",
+      "difficulty": 3,
+      "misconceptions": {
+        "0.25": "alg.slope_inverted"
+      },
+      "verify": {
+        "kind": "numeric",
+        "expression": "(30 - 6)/(6)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6288.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_graphs_slope_006",
+      "subject": "math",
+      "topic": "graphs",
+      "concept": "graphs.slope",
+      "question": "A line passes through the points (0, 0) and (6, 24). What is its slope?",
+      "options": [
+        "0.25",
+        "24",
+        "6",
+        "4"
+      ],
+      "correct_answer": "4",
+      "explanation": "Slope is rise over run: the vertical change (24 - 0 = 24) divided by the horizontal change (6 - 0 = 6). So slope = 24/6 = 4. Dividing run by rise (0.25) inverts it.",
+      "difficulty": 3,
+      "misconceptions": {
+        "0.25": "alg.slope_inverted"
+      },
+      "verify": {
+        "kind": "numeric",
+        "expression": "(24 - 0)/(6)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6288.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_graphs_slope_007",
+      "subject": "math",
+      "topic": "graphs",
+      "concept": "graphs.slope",
+      "question": "A line passes through the points (0, 1) and (4, 9). What is its slope?",
+      "options": [
+        "4",
+        "8",
+        "2",
+        "0.5"
+      ],
+      "correct_answer": "2",
+      "explanation": "Slope is rise over run: the vertical change (9 - 1 = 8) divided by the horizontal change (4 - 0 = 4). So slope = 8/4 = 2. Dividing run by rise (0.5) inverts it.",
+      "difficulty": 3,
+      "misconceptions": {
+        "0.5": "alg.slope_inverted"
+      },
+      "verify": {
+        "kind": "numeric",
+        "expression": "(9 - 1)/(4)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6260.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_graphs_slope_008",
+      "subject": "math",
+      "topic": "graphs",
+      "concept": "graphs.slope",
+      "question": "A line passes through the points (0, 2) and (6, 26). What is its slope?",
+      "options": [
+        "24",
+        "6",
+        "0.25",
+        "4"
+      ],
+      "correct_answer": "4",
+      "explanation": "Slope is rise over run: the vertical change (26 - 2 = 24) divided by the horizontal change (6 - 0 = 6). So slope = 24/6 = 4. Dividing run by rise (0.25) inverts it.",
+      "difficulty": 3,
+      "misconceptions": {
+        "0.25": "alg.slope_inverted"
+      },
+      "verify": {
+        "kind": "numeric",
+        "expression": "(26 - 2)/(6)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6288.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_graphs_slope_009",
+      "subject": "math",
+      "topic": "graphs",
+      "concept": "graphs.slope",
+      "question": "A line passes through the points (0, 3) and (3, 9). What is its slope?",
+      "options": [
+        "3",
+        "6",
+        "2",
+        "0.5"
+      ],
+      "correct_answer": "2",
+      "explanation": "Slope is rise over run: the vertical change (9 - 3 = 6) divided by the horizontal change (3 - 0 = 3). So slope = 6/3 = 2. Dividing run by rise (0.5) inverts it.",
+      "difficulty": 3,
+      "misconceptions": {
+        "0.5": "alg.slope_inverted"
+      },
+      "verify": {
+        "kind": "numeric",
+        "expression": "(9 - 3)/(3)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6260.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_graphs_slope_010",
+      "subject": "math",
+      "topic": "graphs",
+      "concept": "graphs.slope",
+      "question": "A line passes through the points (0, 2) and (6, 14). What is its slope?",
+      "options": [
+        "12",
+        "2",
+        "6",
+        "0.5"
+      ],
+      "correct_answer": "2",
+      "explanation": "Slope is rise over run: the vertical change (14 - 2 = 12) divided by the horizontal change (6 - 0 = 6). So slope = 12/6 = 2. Dividing run by rise (0.5) inverts it.",
+      "difficulty": 3,
+      "misconceptions": {
+        "0.5": "alg.slope_inverted"
+      },
+      "verify": {
+        "kind": "numeric",
+        "expression": "(14 - 2)/(6)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6288.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_graphs_slope_011",
+      "subject": "math",
+      "topic": "graphs",
+      "concept": "graphs.slope",
+      "question": "A line passes through the points (0, 2) and (6, 32). What is its slope?",
+      "options": [
+        "30",
+        "6",
+        "0.2",
+        "5"
+      ],
+      "correct_answer": "5",
+      "explanation": "Slope is rise over run: the vertical change (32 - 2 = 30) divided by the horizontal change (6 - 0 = 6). So slope = 30/6 = 5. Dividing run by rise (0.2) inverts it.",
+      "difficulty": 3,
+      "misconceptions": {
+        "0.2": "alg.slope_inverted"
+      },
+      "verify": {
+        "kind": "numeric",
+        "expression": "(32 - 2)/(6)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6288.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_graphs_slope_012",
+      "subject": "math",
+      "topic": "graphs",
+      "concept": "graphs.slope",
+      "question": "A line passes through the points (0, 4) and (5, 24). What is its slope?",
+      "options": [
+        "0.25",
+        "20",
+        "5",
+        "4"
+      ],
+      "correct_answer": "4",
+      "explanation": "Slope is rise over run: the vertical change (24 - 4 = 20) divided by the horizontal change (5 - 0 = 5). So slope = 20/5 = 4. Dividing run by rise (0.25) inverts it.",
+      "difficulty": 3,
+      "misconceptions": {
+        "0.25": "alg.slope_inverted"
+      },
+      "verify": {
+        "kind": "numeric",
+        "expression": "(24 - 4)/(5)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6288.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_graphs_slope_013",
+      "subject": "math",
+      "topic": "graphs",
+      "concept": "graphs.slope",
+      "question": "A line passes through the points (0, 5) and (3, 11). What is its slope?",
+      "options": [
+        "3",
+        "0.5",
+        "2",
+        "6"
+      ],
+      "correct_answer": "2",
+      "explanation": "Slope is rise over run: the vertical change (11 - 5 = 6) divided by the horizontal change (3 - 0 = 3). So slope = 6/3 = 2. Dividing run by rise (0.5) inverts it.",
+      "difficulty": 3,
+      "misconceptions": {
+        "0.5": "alg.slope_inverted"
+      },
+      "verify": {
+        "kind": "numeric",
+        "expression": "(11 - 5)/(3)"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6288.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_graphs_slope_014",
       "subject": "math",
       "topic": "graphs",
       "concept": "graphs.slope",
       "question": "A line passes through the points (0, 2) and (4, 14). What is its slope?",
       "options": [
+        "12",
         "0.33",
         "3",
-        "4",
-        "12"
+        "4"
       ],
       "correct_answer": "3",
       "explanation": "Slope is rise over run: the vertical change (14 - 2 = 12) divided by the horizontal change (4 - 0 = 4). So slope = 12/4 = 3. Dividing run by rise (0.33) inverts it.",
@@ -1227,350 +1550,26 @@
       "estimated_difficulty": 3
     },
     {
-      "id": "gen_graphs_slope_003",
-      "subject": "math",
-      "topic": "graphs",
-      "concept": "graphs.slope",
-      "question": "A line passes through the points (0, 4) and (6, 34). What is its slope?",
-      "options": [
-        "5",
-        "0.2",
-        "30",
-        "6"
-      ],
-      "correct_answer": "5",
-      "explanation": "Slope is rise over run: the vertical change (34 - 4 = 30) divided by the horizontal change (6 - 0 = 6). So slope = 30/6 = 5. Dividing run by rise (0.2) inverts it.",
-      "difficulty": 3,
-      "misconceptions": {
-        "0.2": "alg.slope_inverted"
-      },
-      "verify": {
-        "kind": "numeric",
-        "expression": "(34 - 4)/(6)"
-      },
-      "source": "procedural",
-      "review_status": "auto_validated",
-      "expected_time_ms": 6288.0,
-      "estimated_difficulty": 3
-    },
-    {
-      "id": "gen_graphs_slope_004",
-      "subject": "math",
-      "topic": "graphs",
-      "concept": "graphs.slope",
-      "question": "A line passes through the points (0, 4) and (3, 19). What is its slope?",
-      "options": [
-        "5",
-        "15",
-        "3",
-        "0.2"
-      ],
-      "correct_answer": "5",
-      "explanation": "Slope is rise over run: the vertical change (19 - 4 = 15) divided by the horizontal change (3 - 0 = 3). So slope = 15/3 = 5. Dividing run by rise (0.2) inverts it.",
-      "difficulty": 3,
-      "misconceptions": {
-        "0.2": "alg.slope_inverted"
-      },
-      "verify": {
-        "kind": "numeric",
-        "expression": "(19 - 4)/(3)"
-      },
-      "source": "procedural",
-      "review_status": "auto_validated",
-      "expected_time_ms": 6288.0,
-      "estimated_difficulty": 3
-    },
-    {
-      "id": "gen_graphs_slope_005",
-      "subject": "math",
-      "topic": "graphs",
-      "concept": "graphs.slope",
-      "question": "A line passes through the points (0, 2) and (5, 12). What is its slope?",
-      "options": [
-        "2",
-        "0.5",
-        "5",
-        "10"
-      ],
-      "correct_answer": "2",
-      "explanation": "Slope is rise over run: the vertical change (12 - 2 = 10) divided by the horizontal change (5 - 0 = 5). So slope = 10/5 = 2. Dividing run by rise (0.5) inverts it.",
-      "difficulty": 3,
-      "misconceptions": {
-        "0.5": "alg.slope_inverted"
-      },
-      "verify": {
-        "kind": "numeric",
-        "expression": "(12 - 2)/(5)"
-      },
-      "source": "procedural",
-      "review_status": "auto_validated",
-      "expected_time_ms": 6288.0,
-      "estimated_difficulty": 3
-    },
-    {
-      "id": "gen_graphs_slope_006",
-      "subject": "math",
-      "topic": "graphs",
-      "concept": "graphs.slope",
-      "question": "A line passes through the points (0, 3) and (6, 21). What is its slope?",
-      "options": [
-        "18",
-        "0.33",
-        "6",
-        "3"
-      ],
-      "correct_answer": "3",
-      "explanation": "Slope is rise over run: the vertical change (21 - 3 = 18) divided by the horizontal change (6 - 0 = 6). So slope = 18/6 = 3. Dividing run by rise (0.33) inverts it.",
-      "difficulty": 3,
-      "misconceptions": {
-        "0.33": "alg.slope_inverted"
-      },
-      "verify": {
-        "kind": "numeric",
-        "expression": "(21 - 3)/(6)"
-      },
-      "source": "procedural",
-      "review_status": "auto_validated",
-      "expected_time_ms": 6288.0,
-      "estimated_difficulty": 3
-    },
-    {
-      "id": "gen_graphs_slope_007",
-      "subject": "math",
-      "topic": "graphs",
-      "concept": "graphs.slope",
-      "question": "A line passes through the points (0, 4) and (6, 22). What is its slope?",
-      "options": [
-        "3",
-        "0.33",
-        "6",
-        "18"
-      ],
-      "correct_answer": "3",
-      "explanation": "Slope is rise over run: the vertical change (22 - 4 = 18) divided by the horizontal change (6 - 0 = 6). So slope = 18/6 = 3. Dividing run by rise (0.33) inverts it.",
-      "difficulty": 3,
-      "misconceptions": {
-        "0.33": "alg.slope_inverted"
-      },
-      "verify": {
-        "kind": "numeric",
-        "expression": "(22 - 4)/(6)"
-      },
-      "source": "procedural",
-      "review_status": "auto_validated",
-      "expected_time_ms": 6288.0,
-      "estimated_difficulty": 3
-    },
-    {
-      "id": "gen_graphs_slope_008",
-      "subject": "math",
-      "topic": "graphs",
-      "concept": "graphs.slope",
-      "question": "A line passes through the points (0, 3) and (6, 27). What is its slope?",
-      "options": [
-        "4",
-        "6",
-        "0.25",
-        "24"
-      ],
-      "correct_answer": "4",
-      "explanation": "Slope is rise over run: the vertical change (27 - 3 = 24) divided by the horizontal change (6 - 0 = 6). So slope = 24/6 = 4. Dividing run by rise (0.25) inverts it.",
-      "difficulty": 3,
-      "misconceptions": {
-        "0.25": "alg.slope_inverted"
-      },
-      "verify": {
-        "kind": "numeric",
-        "expression": "(27 - 3)/(6)"
-      },
-      "source": "procedural",
-      "review_status": "auto_validated",
-      "expected_time_ms": 6288.0,
-      "estimated_difficulty": 3
-    },
-    {
-      "id": "gen_graphs_slope_009",
-      "subject": "math",
-      "topic": "graphs",
-      "concept": "graphs.slope",
-      "question": "A line passes through the points (0, 0) and (3, 6). What is its slope?",
-      "options": [
-        "3",
-        "6",
-        "2",
-        "0.5"
-      ],
-      "correct_answer": "2",
-      "explanation": "Slope is rise over run: the vertical change (6 - 0 = 6) divided by the horizontal change (3 - 0 = 3). So slope = 6/3 = 2. Dividing run by rise (0.5) inverts it.",
-      "difficulty": 3,
-      "misconceptions": {
-        "0.5": "alg.slope_inverted"
-      },
-      "verify": {
-        "kind": "numeric",
-        "expression": "(6 - 0)/(3)"
-      },
-      "source": "procedural",
-      "review_status": "auto_validated",
-      "expected_time_ms": 6260.0,
-      "estimated_difficulty": 3
-    },
-    {
-      "id": "gen_graphs_slope_010",
-      "subject": "math",
-      "topic": "graphs",
-      "concept": "graphs.slope",
-      "question": "A line passes through the points (0, 3) and (2, 9). What is its slope?",
-      "options": [
-        "2",
-        "6",
-        "0.33",
-        "3"
-      ],
-      "correct_answer": "3",
-      "explanation": "Slope is rise over run: the vertical change (9 - 3 = 6) divided by the horizontal change (2 - 0 = 2). So slope = 6/2 = 3. Dividing run by rise (0.33) inverts it.",
-      "difficulty": 3,
-      "misconceptions": {
-        "0.33": "alg.slope_inverted"
-      },
-      "verify": {
-        "kind": "numeric",
-        "expression": "(9 - 3)/(2)"
-      },
-      "source": "procedural",
-      "review_status": "auto_validated",
-      "expected_time_ms": 6260.0,
-      "estimated_difficulty": 3
-    },
-    {
-      "id": "gen_graphs_slope_011",
-      "subject": "math",
-      "topic": "graphs",
-      "concept": "graphs.slope",
-      "question": "A line passes through the points (0, 4) and (6, 28). What is its slope?",
-      "options": [
-        "24",
-        "6",
-        "4",
-        "0.25"
-      ],
-      "correct_answer": "4",
-      "explanation": "Slope is rise over run: the vertical change (28 - 4 = 24) divided by the horizontal change (6 - 0 = 6). So slope = 24/6 = 4. Dividing run by rise (0.25) inverts it.",
-      "difficulty": 3,
-      "misconceptions": {
-        "0.25": "alg.slope_inverted"
-      },
-      "verify": {
-        "kind": "numeric",
-        "expression": "(28 - 4)/(6)"
-      },
-      "source": "procedural",
-      "review_status": "auto_validated",
-      "expected_time_ms": 6288.0,
-      "estimated_difficulty": 3
-    },
-    {
-      "id": "gen_graphs_slope_012",
-      "subject": "math",
-      "topic": "graphs",
-      "concept": "graphs.slope",
-      "question": "A line passes through the points (0, 2) and (3, 8). What is its slope?",
-      "options": [
-        "2",
-        "3",
-        "6",
-        "0.5"
-      ],
-      "correct_answer": "2",
-      "explanation": "Slope is rise over run: the vertical change (8 - 2 = 6) divided by the horizontal change (3 - 0 = 3). So slope = 6/3 = 2. Dividing run by rise (0.5) inverts it.",
-      "difficulty": 3,
-      "misconceptions": {
-        "0.5": "alg.slope_inverted"
-      },
-      "verify": {
-        "kind": "numeric",
-        "expression": "(8 - 2)/(3)"
-      },
-      "source": "procedural",
-      "review_status": "auto_validated",
-      "expected_time_ms": 6260.0,
-      "estimated_difficulty": 3
-    },
-    {
-      "id": "gen_graphs_slope_013",
-      "subject": "math",
-      "topic": "graphs",
-      "concept": "graphs.slope",
-      "question": "A line passes through the points (0, 4) and (4, 16). What is its slope?",
-      "options": [
-        "0.33",
-        "12",
-        "4",
-        "3"
-      ],
-      "correct_answer": "3",
-      "explanation": "Slope is rise over run: the vertical change (16 - 4 = 12) divided by the horizontal change (4 - 0 = 4). So slope = 12/4 = 3. Dividing run by rise (0.33) inverts it.",
-      "difficulty": 3,
-      "misconceptions": {
-        "0.33": "alg.slope_inverted"
-      },
-      "verify": {
-        "kind": "numeric",
-        "expression": "(16 - 4)/(4)"
-      },
-      "source": "procedural",
-      "review_status": "auto_validated",
-      "expected_time_ms": 6288.0,
-      "estimated_difficulty": 3
-    },
-    {
-      "id": "gen_graphs_slope_014",
-      "subject": "math",
-      "topic": "graphs",
-      "concept": "graphs.slope",
-      "question": "A line passes through the points (0, 5) and (3, 17). What is its slope?",
-      "options": [
-        "4",
-        "0.25",
-        "12",
-        "3"
-      ],
-      "correct_answer": "4",
-      "explanation": "Slope is rise over run: the vertical change (17 - 5 = 12) divided by the horizontal change (3 - 0 = 3). So slope = 12/3 = 4. Dividing run by rise (0.25) inverts it.",
-      "difficulty": 3,
-      "misconceptions": {
-        "0.25": "alg.slope_inverted"
-      },
-      "verify": {
-        "kind": "numeric",
-        "expression": "(17 - 5)/(3)"
-      },
-      "source": "procedural",
-      "review_status": "auto_validated",
-      "expected_time_ms": 6288.0,
-      "estimated_difficulty": 3
-    },
-    {
       "id": "gen_graphs_slope_015",
       "subject": "math",
       "topic": "graphs",
       "concept": "graphs.slope",
-      "question": "A line passes through the points (0, 2) and (2, 12). What is its slope?",
+      "question": "A line passes through the points (0, 5) and (6, 23). What is its slope?",
       "options": [
-        "10",
-        "2",
-        "5",
-        "0.2"
+        "3",
+        "6",
+        "0.33",
+        "18"
       ],
-      "correct_answer": "5",
-      "explanation": "Slope is rise over run: the vertical change (12 - 2 = 10) divided by the horizontal change (2 - 0 = 2). So slope = 10/2 = 5. Dividing run by rise (0.2) inverts it.",
+      "correct_answer": "3",
+      "explanation": "Slope is rise over run: the vertical change (23 - 5 = 18) divided by the horizontal change (6 - 0 = 6). So slope = 18/6 = 3. Dividing run by rise (0.33) inverts it.",
       "difficulty": 3,
       "misconceptions": {
-        "0.2": "alg.slope_inverted"
+        "0.33": "alg.slope_inverted"
       },
       "verify": {
         "kind": "numeric",
-        "expression": "(12 - 2)/(2)"
+        "expression": "(23 - 5)/(6)"
       },
       "source": "procedural",
       "review_status": "auto_validated",

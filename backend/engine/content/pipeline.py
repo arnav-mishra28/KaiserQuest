@@ -25,6 +25,7 @@ from __future__ import annotations
 
 import json
 import logging
+import zlib
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from pathlib import Path
@@ -43,9 +44,22 @@ BACKEND_ROOT = Path(__file__).resolve().parent.parent.parent
 SOURCE_DIR = BACKEND_ROOT / "data" / "questions"
 BANK_DIR = BACKEND_ROOT / "data" / "banks"
 
-#: The Unity project's Resources folder, so the game can ship the same verified
+#: The Unity projects' Resources folders, so the game can ship the same verified
 #: content the server serves, and be playable with no backend at all.
-DEFAULT_UNITY_DIR = BACKEND_ROOT.parent / "KaiserQuest-Unity" / "Assets" / "Resources"
+#:
+#: The repo currently carries two Unity projects: `KaiserQuest/` is the live
+#: Unity 6 project people open and play, and `KaiserQuest-Unity/` is the
+#: 2022.3 development copy. Both must receive the verified banks, or the copy
+#: someone actually plays quietly drifts out of sync with what the server
+#: serves. Projects whose folders do not exist on disk are skipped, so this
+#: degrades gracefully on a machine with only one of them checked out.
+DEFAULT_UNITY_DIRS = [
+    BACKEND_ROOT.parent / "KaiserQuest" / "Assets" / "Resources",
+    BACKEND_ROOT.parent / "KaiserQuest-Unity" / "Assets" / "Resources",
+]
+
+# Kept as a single Path for callers that want one canonical export target.
+DEFAULT_UNITY_DIR = DEFAULT_UNITY_DIRS[1]
 
 #: How many generated questions to aim for per generatable concept.
 DEFAULT_PER_CONCEPT = 15
@@ -206,11 +220,23 @@ class ContentPipeline:
         # game's Resources folder as a side effect.
         if unity_dir is None:
             custom = source_dir is not None or bank_dir is not None
-            unity_dir = None if custom else DEFAULT_UNITY_DIR
-        self.unity_dir = unity_dir
-        if self.unity_dir is not None and not self.unity_dir.parent.exists():
-            logger.warning("Unity export directory %s does not exist; skipping export", self.unity_dir)
-            self.unity_dir = None
+            unity_dirs = [] if custom else list(DEFAULT_UNITY_DIRS)
+        else:
+            unity_dirs = [unity_dir]
+        # An explicit --unity-dir still gets the existence check: a typo in the
+        # flag should fail loudly rather than silently write nowhere.
+        if unity_dir is not None and not unity_dir.parent.exists():
+            logger.warning("Unity export directory %s does not exist; skipping export", unity_dir)
+            unity_dirs = []
+        # Every export target must be a real Resources folder. A path that is
+        # merely adjacent to one (e.g. `KaiserQuest/Assets` on a machine where
+        # only the other project is checked out) is skipped with a note, not an
+        # error — the other target still gets its export.
+        self.unity_dirs: List[Path] = [
+            d for d in unity_dirs if d.parent.exists() or _log_skipped_export(d)
+        ]
+        # Back-compat: first live target, for reporting.
+        self.unity_dir: Optional[Path] = self.unity_dirs[0] if self.unity_dirs else None
         self.validator = QuestionValidator(self.graph)
         self.estimator = DifficultyEstimator(concept_level_lookup=self._concept_level)
         self.generator = ContentGenerator(self.graph)
@@ -272,7 +298,7 @@ class ContentPipeline:
                 self.generator.generate(
                     concept_id,
                     per_concept,
-                    seed=None if seed is None else seed + hash(concept_id) % 9973,
+                    seed=None if seed is None else seed + _stable_hash(concept_id) % 9973,
                 )
             )
         for question in produced:
@@ -360,8 +386,8 @@ class ContentPipeline:
             report.topics_written = self.write_banks(accepted)
             self.write_quarantine(quarantined)
             self.write_manifest(report)
-            if self.unity_dir:
-                report.unity_export = self.export_unity(accepted, self.unity_dir)
+            for export_dir in self.unity_dirs:
+                report.unity_export.extend(self.export_unity(accepted, export_dir))
 
         if verbose:
             print(report.summary())
@@ -605,6 +631,18 @@ class ContentPipeline:
         }
 
 
+def _stable_hash(text: str) -> int:
+    # Python's hash() is salted per process for str, so seeding the generator
+    # with it would produce different questions on every run and every machine.
+    # The pipeline's --seed flag is only meaningful if this is stable.
+    return zlib.crc32(text.encode("utf-8"))
+
+
+def _log_skipped_export(d: Path) -> bool:
+    logger.info("Skipping Unity export into %s (no such project on disk)", d)
+    return False
+
+
 def main(argv: Optional[Sequence[str]] = None) -> int:
     import argparse
 
@@ -617,7 +655,7 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
         "--unity-dir",
         type=Path,
         default=None,
-        help="Resources folder to export client-ready JSON into (default: the Unity project)",
+        help="Resources folder to export client-ready JSON into (default: every Unity project in the repo)",
     )
     args = parser.parse_args(argv)
 

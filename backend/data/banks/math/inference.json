@@ -20,21 +20,21 @@
       "subject": "math",
       "topic": "inference",
       "concept": "infer.evidence",
-      "question": "Claim: the storm was severe. Which detail best supports it?",
+      "question": "Claim: the puppy was tired. Which detail best supports it?",
       "options": [
-        "People stayed indoors.",
-        "It rained for two hours.",
-        "Three trees in the avenue were uprooted and a roof tile lay in the street.",
-        "The forecast warned of wind."
+        "It has soft ears.",
+        "It likes the garden.",
+        "It is three months old.",
+        "It fell asleep in the middle of its own dinner bowl."
       ],
-      "correct_answer": "Three trees in the avenue were uprooted and a roof tile lay in the street.",
-      "explanation": "Uprooted trees are direct evidence of severity; a forecast is only a prediction.",
+      "correct_answer": "It fell asleep in the middle of its own dinner bowl.",
+      "explanation": "Falling asleep mid-meal is a direct sign of exhaustion.",
       "difficulty": 3,
       "misconceptions": {},
       "verify": null,
       "source": "template",
       "review_status": "authored",
-      "expected_time_ms": 5952.0,
+      "expected_time_ms": 5924.0,
       "estimated_difficulty": 3
     },
     {
@@ -44,10 +44,10 @@
       "concept": "infer.evidence",
       "question": "Claim: the house had been empty for a long time. Which detail best supports it?",
       "options": [
+        "The house is on a quiet road.",
         "The house was built of stone.",
         "The house has a red front door.",
-        "Dust lay thick on every windowsill and the gate hinges had rusted through.",
-        "The house is on a quiet road."
+        "Dust lay thick on every windowsill and the gate hinges had rusted through."
       ],
       "correct_answer": "Dust lay thick on every windowsill and the gate hinges had rusted through.",
       "explanation": "Thick dust and rusted hinges take a long time to appear, which is exactly what the claim needs.",
@@ -64,21 +64,21 @@
       "subject": "math",
       "topic": "inference",
       "concept": "infer.evidence",
-      "question": "Claim: the road was steep. Which detail best supports it?",
+      "question": "Claim: the storm was severe. Which detail best supports it?",
       "options": [
-        "The road had no markings.",
-        "Cyclists dismounted and pushed their bikes for the last kilometre.",
-        "The road ran beside a field.",
-        "The road was narrow."
+        "People stayed indoors.",
+        "The forecast warned of wind.",
+        "It rained for two hours.",
+        "Three trees in the avenue were uprooted and a roof tile lay in the street."
       ],
-      "correct_answer": "Cyclists dismounted and pushed their bikes for the last kilometre.",
-      "explanation": "Pushing a bike uphill is a direct consequence of steepness.",
+      "correct_answer": "Three trees in the avenue were uprooted and a roof tile lay in the street.",
+      "explanation": "Uprooted trees are direct evidence of severity; a forecast is only a prediction.",
       "difficulty": 3,
       "misconceptions": {},
       "verify": null,
       "source": "template",
       "review_status": "authored",
-      "expected_time_ms": 5896.0,
+      "expected_time_ms": 5952.0,
       "estimated_difficulty": 3
     },
     {
@@ -86,34 +86,12 @@
       "subject": "math",
       "topic": "inference",
       "concept": "infer.evidence",
-      "question": "Claim: the shop is popular. Which detail best supports it?",
-      "options": [
-        "The shop sells bread.",
-        "The shop is painted green.",
-        "By noon on a Tuesday the queue stretched past two neighbouring doorways.",
-        "The shop opens at eight."
-      ],
-      "correct_answer": "By noon on a Tuesday the queue stretched past two neighbouring doorways.",
-      "explanation": "A long queue on an ordinary weekday is evidence of demand.",
-      "difficulty": 3,
-      "misconceptions": {},
-      "verify": null,
-      "source": "template",
-      "review_status": "authored",
-      "expected_time_ms": 5924.0,
-      "estimated_difficulty": 3
-    },
-    {
-      "id": "gen_infer_evidence_005",
-      "subject": "math",
-      "topic": "inference",
-      "concept": "infer.evidence",
       "question": "Claim: the team practised hard. Which detail best supports it?",
       "options": [
-        "They won most of their matches.",
-        "They had a new coach.",
         "They were on the pitch before sunrise every morning for six weeks.",
-        "They played in blue shirts."
+        "They played in blue shirts.",
+        "They won most of their matches.",
+        "They had a new coach."
       ],
       "correct_answer": "They were on the pitch before sunrise every morning for six weeks.",
       "explanation": "Winning shows results, not practice. Sunrise sessions over six weeks shows the practice itself.",
@@ -126,19 +104,41 @@
       "estimated_difficulty": 3
     },
     {
+      "id": "gen_infer_evidence_005",
+      "subject": "math",
+      "topic": "inference",
+      "concept": "infer.evidence",
+      "question": "Claim: the road was steep. Which detail best supports it?",
+      "options": [
+        "Cyclists dismounted and pushed their bikes for the last kilometre.",
+        "The road ran beside a field.",
+        "The road was narrow.",
+        "The road had no markings."
+      ],
+      "correct_answer": "Cyclists dismounted and pushed their bikes for the last kilometre.",
+      "explanation": "Pushing a bike uphill is a direct consequence of steepness.",
+      "difficulty": 3,
+      "misconceptions": {},
+      "verify": null,
+      "source": "template",
+      "review_status": "authored",
+      "expected_time_ms": 5896.0,
+      "estimated_difficulty": 3
+    },
+    {
       "id": "gen_infer_evidence_006",
       "subject": "math",
       "topic": "inference",
       "concept": "infer.evidence",
-      "question": "Claim: the puppy was tired. Which detail best supports it?",
+      "question": "Claim: the shop is popular. Which detail best supports it?",
       "options": [
-        "It is three months old.",
-        "It fell asleep in the middle of its own dinner bowl.",
-        "It has soft ears.",
-        "It likes the garden."
+        "The shop is painted green.",
+        "The shop opens at eight.",
+        "By noon on a Tuesday the queue stretched past two neighbouring doorways.",
+        "The shop sells bread."
       ],
-      "correct_answer": "It fell asleep in the middle of its own dinner bowl.",
-      "explanation": "Falling asleep mid-meal is a direct sign of exhaustion.",
+      "correct_answer": "By noon on a Tuesday the queue stretched past two neighbouring doorways.",
+      "explanation": "A long queue on an ordinary weekday is evidence of demand.",
       "difficulty": 3,
       "misconceptions": {},
       "verify": null,
@@ -152,78 +152,12 @@
       "subject": "math",
       "topic": "inference",
       "concept": "infer.implied",
-      "question": "She read the letter twice, then folded it without a word. What is implied?",
-      "options": [
-        "She had written the letter.",
-        "The letter troubled her.",
-        "She could not read it.",
-        "She wanted to keep it."
-      ],
-      "correct_answer": "The letter troubled her.",
-      "explanation": "Reading twice and staying silent suggests the news was upsetting.",
-      "difficulty": 4,
-      "misconceptions": {},
-      "verify": null,
-      "source": "template",
-      "review_status": "authored",
-      "expected_time_ms": 6372.0,
-      "estimated_difficulty": 4
-    },
-    {
-      "id": "gen_infer_implied_002",
-      "subject": "math",
-      "topic": "inference",
-      "concept": "infer.implied",
-      "question": "The dog's bowl was full and the leash still hung on its hook. What is implied?",
-      "options": [
-        "The dog was asleep.",
-        "The dog had not been walked.",
-        "The dog was hungry.",
-        "The leash was broken."
-      ],
-      "correct_answer": "The dog had not been walked.",
-      "explanation": "A full bowl and an unused leash imply the dog has not been taken out.",
-      "difficulty": 4,
-      "misconceptions": {},
-      "verify": null,
-      "source": "template",
-      "review_status": "authored",
-      "expected_time_ms": 6484.0,
-      "estimated_difficulty": 4
-    },
-    {
-      "id": "gen_infer_implied_003",
-      "subject": "math",
-      "topic": "inference",
-      "concept": "infer.implied",
-      "question": "Maya's phone showed nine missed calls from the same number. What is implied?",
-      "options": [
-        "She had called nine people.",
-        "Someone had been trying urgently to reach her.",
-        "The number was a stranger's.",
-        "She had lost her phone."
-      ],
-      "correct_answer": "Someone had been trying urgently to reach her.",
-      "explanation": "Repeated calls from one number indicate urgency.",
-      "difficulty": 4,
-      "misconceptions": {},
-      "verify": null,
-      "source": "template",
-      "review_status": "authored",
-      "expected_time_ms": 6428.0,
-      "estimated_difficulty": 4
-    },
-    {
-      "id": "gen_infer_implied_004",
-      "subject": "math",
-      "topic": "inference",
-      "concept": "infer.implied",
       "question": "The lights were off and the door was locked. What is implied?",
       "options": [
-        "Someone had forgotten the key.",
-        "The building was empty of furniture.",
+        "The building was for sale.",
         "No one was inside.",
-        "The building was for sale."
+        "Someone had forgotten the key.",
+        "The building was empty of furniture."
       ],
       "correct_answer": "No one was inside.",
       "explanation": "Dark and locked together point to nobody being there; the other answers add details the text does not give.",
@@ -236,16 +170,38 @@
       "estimated_difficulty": 4
     },
     {
-      "id": "gen_infer_implied_005",
+      "id": "gen_infer_implied_002",
+      "subject": "math",
+      "topic": "inference",
+      "concept": "infer.implied",
+      "question": "Maya's phone showed nine missed calls from the same number. What is implied?",
+      "options": [
+        "Someone had been trying urgently to reach her.",
+        "She had called nine people.",
+        "She had lost her phone.",
+        "The number was a stranger's."
+      ],
+      "correct_answer": "Someone had been trying urgently to reach her.",
+      "explanation": "Repeated calls from one number indicate urgency.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": null,
+      "source": "template",
+      "review_status": "authored",
+      "expected_time_ms": 6428.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_infer_implied_003",
       "subject": "math",
       "topic": "inference",
       "concept": "infer.implied",
       "question": "The kitchen smelled of bread and there were floury handprints on the table. What is implied?",
       "options": [
         "The bread was bought.",
-        "Someone had been cleaning.",
         "The kitchen was new.",
-        "Someone had been baking."
+        "Someone had been baking.",
+        "Someone had been cleaning."
       ],
       "correct_answer": "Someone had been baking.",
       "explanation": "Bread smell plus flour is the trace of baking.",
@@ -258,6 +214,50 @@
       "estimated_difficulty": 4
     },
     {
+      "id": "gen_infer_implied_004",
+      "subject": "math",
+      "topic": "inference",
+      "concept": "infer.implied",
+      "question": "She read the letter twice, then folded it without a word. What is implied?",
+      "options": [
+        "She could not read it.",
+        "She wanted to keep it.",
+        "The letter troubled her.",
+        "She had written the letter."
+      ],
+      "correct_answer": "The letter troubled her.",
+      "explanation": "Reading twice and staying silent suggests the news was upsetting.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": null,
+      "source": "template",
+      "review_status": "authored",
+      "expected_time_ms": 6372.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_infer_implied_005",
+      "subject": "math",
+      "topic": "inference",
+      "concept": "infer.implied",
+      "question": "The dog's bowl was full and the leash still hung on its hook. What is implied?",
+      "options": [
+        "The dog had not been walked.",
+        "The dog was asleep.",
+        "The leash was broken.",
+        "The dog was hungry."
+      ],
+      "correct_answer": "The dog had not been walked.",
+      "explanation": "A full bowl and an unused leash imply the dog has not been taken out.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": null,
+      "source": "template",
+      "review_status": "authored",
+      "expected_time_ms": 6484.0,
+      "estimated_difficulty": 4
+    },
+    {
       "id": "gen_infer_implied_006",
       "subject": "math",
       "topic": "inference",
@@ -266,8 +266,8 @@
       "options": [
         "It was already raining.",
         "He was going to bed.",
-        "He had lost his keys.",
-        "He was about to go outside."
+        "He was about to go outside.",
+        "He had lost his keys."
       ],
       "correct_answer": "He was about to go outside.",
       "explanation": "The text shows preparation to leave. It does not state the weather outside.",
@@ -287,9 +287,9 @@
       "question": "Bees do not only make honey. As they move from flower to flower they carry pollen that lets many plants produce fruit. What is this mainly about?",
       "options": [
         "Where flowers grow",
-        "How honey is made",
         "The wider work bees do for plants",
-        "Why bees sting"
+        "Why bees sting",
+        "How honey is made"
       ],
       "correct_answer": "The wider work bees do for plants",
       "explanation": "The passage moves past honey to the pollen work, which is the point of 'not only'.",
@@ -309,9 +309,9 @@
       "question": "The library closes at six, but the lights often stay on until eight. Every evening the same three volunteers can be seen at the back tables. What is this mainly about?",
       "options": [
         "The volunteers dislike the library",
+        "The library closes at eight",
         "Volunteers keep the library open beyond its hours",
-        "The library is too small",
-        "The library closes at eight"
+        "The library is too small"
       ],
       "correct_answer": "Volunteers keep the library open beyond its hours",
       "explanation": "The closure time is six, so the detail that matters is who stays late and why.",
@@ -328,12 +328,34 @@
       "subject": "math",
       "topic": "inference",
       "concept": "infer.main_idea",
+      "question": "Ravi checked the sky, then packed an umbrella, a coat and a torch before setting out. The road ahead climbed into the mountains. What is this mainly about?",
+      "options": [
+        "Ravi buying equipment",
+        "the weather in the mountains",
+        "Ravi preparing for a difficult journey",
+        "Ravi enjoying a walk"
+      ],
+      "correct_answer": "Ravi preparing for a difficult journey",
+      "explanation": "Every detail is preparation for the climb ahead, not the trip itself.",
+      "difficulty": 3,
+      "misconceptions": {},
+      "verify": null,
+      "source": "template",
+      "review_status": "authored",
+      "expected_time_ms": 8640.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_infer_main_idea_004",
+      "subject": "math",
+      "topic": "inference",
+      "concept": "infer.main_idea",
       "question": "The river runs low in summer. Farmers along its banks take turns drawing water so that every field gets some. What is this mainly about?",
       "options": [
-        "Farmers sharing scarce water",
         "The size of the fields",
-        "Why rivers run low",
-        "Which crops need most water"
+        "Which crops need most water",
+        "Farmers sharing scarce water",
+        "Why rivers run low"
       ],
       "correct_answer": "Farmers sharing scarce water",
       "explanation": "The taking of turns is the central idea, and it exists because the water is scarce.",
@@ -346,38 +368,16 @@
       "estimated_difficulty": 3
     },
     {
-      "id": "gen_infer_main_idea_004",
-      "subject": "math",
-      "topic": "inference",
-      "concept": "infer.main_idea",
-      "question": "Learning a language takes many short sessions, not one long one. Ten minutes a day beats three hours on a Sunday. What is this mainly about?",
-      "options": [
-        "Languages are difficult",
-        "Short regular practice works better than rare long practice",
-        "Ten minutes is enough to learn a language",
-        "Sunday is a good day to study"
-      ],
-      "correct_answer": "Short regular practice works better than rare long practice",
-      "explanation": "Both sentences compare frequent short practice with infrequent long practice.",
-      "difficulty": 3,
-      "misconceptions": {},
-      "verify": null,
-      "source": "template",
-      "review_status": "authored",
-      "expected_time_ms": 8220.0,
-      "estimated_difficulty": 3
-    },
-    {
       "id": "gen_infer_main_idea_005",
       "subject": "math",
       "topic": "inference",
       "concept": "infer.main_idea",
       "question": "The old bridge was closed for repairs, so the market traders took the longer road. Fewer customers came that week. What is this mainly about?",
       "options": [
-        "How markets are organised",
-        "How a closed bridge reduced trade at the market",
+        "Why bridges need repairs",
         "The best road to the market",
-        "Why bridges need repairs"
+        "How markets are organised",
+        "How a closed bridge reduced trade at the market"
       ],
       "correct_answer": "How a closed bridge reduced trade at the market",
       "explanation": "The passage links a cause (the closed bridge) to an effect (fewer customers).",
@@ -394,21 +394,21 @@
       "subject": "math",
       "topic": "inference",
       "concept": "infer.main_idea",
-      "question": "Ravi checked the sky, then packed an umbrella, a coat and a torch before setting out. The road ahead climbed into the mountains. What is this mainly about?",
+      "question": "Learning a language takes many short sessions, not one long one. Ten minutes a day beats three hours on a Sunday. What is this mainly about?",
       "options": [
-        "the weather in the mountains",
-        "Ravi buying equipment",
-        "Ravi preparing for a difficult journey",
-        "Ravi enjoying a walk"
+        "Sunday is a good day to study",
+        "Short regular practice works better than rare long practice",
+        "Ten minutes is enough to learn a language",
+        "Languages are difficult"
       ],
-      "correct_answer": "Ravi preparing for a difficult journey",
-      "explanation": "Every detail is preparation for the climb ahead, not the trip itself.",
+      "correct_answer": "Short regular practice works better than rare long practice",
+      "explanation": "Both sentences compare frequent short practice with infrequent long practice.",
       "difficulty": 3,
       "misconceptions": {},
       "verify": null,
       "source": "template",
       "review_status": "authored",
-      "expected_time_ms": 8640.0,
+      "expected_time_ms": 8220.0,
       "estimated_difficulty": 3
     },
     {
@@ -416,34 +416,12 @@
       "subject": "math",
       "topic": "inference",
       "concept": "infer.purpose",
-      "question": "Why might an author begin an article with a question?",
-      "options": [
-        "To summarise the article.",
-        "To introduce a quotation.",
-        "To admit they do not know the answer.",
-        "To make the reader think about the problem."
-      ],
-      "correct_answer": "To make the reader think about the problem.",
-      "explanation": "An opening question draws the reader into the problem the article will address.",
-      "difficulty": 5,
-      "misconceptions": {},
-      "verify": null,
-      "source": "template",
-      "review_status": "authored",
-      "expected_time_ms": 5784.0,
-      "estimated_difficulty": 4
-    },
-    {
-      "id": "gen_infer_purpose_002",
-      "subject": "math",
-      "topic": "inference",
-      "concept": "infer.purpose",
       "question": "Why does an author mention their own childhood in an argument about schooling?",
       "options": [
-        "To give a personal reason for their position.",
+        "To show they were a good student.",
         "To change the subject.",
         "To prove the argument is correct.",
-        "To show they were a good student."
+        "To give a personal reason for their position."
       ],
       "correct_answer": "To give a personal reason for their position.",
       "explanation": "A personal anecdote supplies motive. An anecdote alone cannot prove a claim.",
@@ -456,16 +434,38 @@
       "estimated_difficulty": 4
     },
     {
+      "id": "gen_infer_purpose_002",
+      "subject": "math",
+      "topic": "inference",
+      "concept": "infer.purpose",
+      "question": "An author lists the dangers of a hiking trail in careful detail. Why?",
+      "options": [
+        "To discourage anyone from going.",
+        "To warn readers to prepare properly.",
+        "To describe the view.",
+        "To show off their knowledge."
+      ],
+      "correct_answer": "To warn readers to prepare properly.",
+      "explanation": "A detailed list of hazards serves preparation rather than prohibition.",
+      "difficulty": 5,
+      "misconceptions": {},
+      "verify": null,
+      "source": "template",
+      "review_status": "authored",
+      "expected_time_ms": 6232.0,
+      "estimated_difficulty": 4
+    },
+    {
       "id": "gen_infer_purpose_003",
       "subject": "math",
       "topic": "inference",
       "concept": "infer.purpose",
       "question": "A writer describes a house as 'tidy, quiet and cold'. What is the attitude?",
       "options": [
-        "Amused",
+        "Admiring",
         "Disapproving",
-        "Frightened",
-        "Admiring"
+        "Amused",
+        "Frightened"
       ],
       "correct_answer": "Disapproving",
       "explanation": "'Cold' turns the tidiness negative, which shows disapproval rather than admiration.",
@@ -482,21 +482,21 @@
       "subject": "math",
       "topic": "inference",
       "concept": "infer.purpose",
-      "question": "Why does an advertisement repeat the price three times?",
+      "question": "Why might an author begin an article with a question?",
       "options": [
-        "To fill the space.",
-        "To show the price may change.",
-        "To make the low price the main point.",
-        "To hide the other details."
+        "To admit they do not know the answer.",
+        "To summarise the article.",
+        "To make the reader think about the problem.",
+        "To introduce a quotation."
       ],
-      "correct_answer": "To make the low price the main point.",
-      "explanation": "Repetition signals importance, and in an advertisement the repeated thing is the selling point.",
+      "correct_answer": "To make the reader think about the problem.",
+      "explanation": "An opening question draws the reader into the problem the article will address.",
       "difficulty": 5,
       "misconceptions": {},
       "verify": null,
       "source": "template",
       "review_status": "authored",
-      "expected_time_ms": 5840.0,
+      "expected_time_ms": 5784.0,
       "estimated_difficulty": 4
     },
     {
@@ -507,9 +507,9 @@
       "question": "An article describes a factory worker's day in careful detail. What is the likely purpose?",
       "options": [
         "To describe the machinery only.",
-        "To help readers understand the working conditions.",
         "To advertise the factory.",
-        "To explain how to get a factory job."
+        "To explain how to get a factory job.",
+        "To help readers understand the working conditions."
       ],
       "correct_answer": "To help readers understand the working conditions.",
       "explanation": "Careful detail about a person's day is used to convey what the conditions are like.",
@@ -526,21 +526,21 @@
       "subject": "math",
       "topic": "inference",
       "concept": "infer.purpose",
-      "question": "An author lists the dangers of a hiking trail in careful detail. Why?",
+      "question": "Why does an advertisement repeat the price three times?",
       "options": [
-        "To show off their knowledge.",
-        "To warn readers to prepare properly.",
-        "To discourage anyone from going.",
-        "To describe the view."
+        "To hide the other details.",
+        "To make the low price the main point.",
+        "To show the price may change.",
+        "To fill the space."
       ],
-      "correct_answer": "To warn readers to prepare properly.",
-      "explanation": "A detailed list of hazards serves preparation rather than prohibition.",
+      "correct_answer": "To make the low price the main point.",
+      "explanation": "Repetition signals importance, and in an advertisement the repeated thing is the selling point.",
       "difficulty": 5,
       "misconceptions": {},
       "verify": null,
       "source": "template",
       "review_status": "authored",
-      "expected_time_ms": 6232.0,
+      "expected_time_ms": 5840.0,
       "estimated_difficulty": 4
     }
   ]

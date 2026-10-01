@@ -20,12 +20,34 @@
       "subject": "math",
       "topic": "word_forms",
       "concept": "forms.change",
+      "question": "Choose the correct form: 'Her ___ of the plan was obvious.' (approve)",
+      "options": [
+        "approved",
+        "approval",
+        "approving",
+        "approve"
+      ],
+      "correct_answer": "approval",
+      "explanation": "The slot after 'her' needs a noun, so the verb 'approve' becomes the noun 'approval'.",
+      "difficulty": 3,
+      "misconceptions": {},
+      "verify": null,
+      "source": "template",
+      "review_status": "authored",
+      "expected_time_ms": 6232.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_forms_change_002",
+      "subject": "math",
+      "topic": "word_forms",
+      "concept": "forms.change",
       "question": "Which word is the adjective form of 'danger'?",
       "options": [
-        "dangerousness",
         "dangerous",
         "dangerously",
-        "endanger"
+        "endanger",
+        "dangerousness"
       ],
       "correct_answer": "dangerous",
       "explanation": "'Dangerous' describes a noun; 'dangerously' is the adverb.",
@@ -38,16 +60,16 @@
       "estimated_difficulty": 3
     },
     {
-      "id": "gen_forms_change_002",
+      "id": "gen_forms_change_003",
       "subject": "math",
       "topic": "word_forms",
       "concept": "forms.change",
       "question": "Which word is the adjective form of 'success'?",
       "options": [
         "successful",
+        "successfully",
         "succession",
-        "succeed",
-        "successfully"
+        "succeed"
       ],
       "correct_answer": "successful",
       "explanation": "'Successful' is the adjective; 'successfully' is the adverb.",
@@ -60,36 +82,80 @@
       "estimated_difficulty": 3
     },
     {
-      "id": "gen_forms_change_003",
+      "id": "gen_forms_change_004",
       "subject": "math",
       "topic": "word_forms",
       "concept": "forms.change",
-      "question": "Which word is the adverb form of 'happy'?",
+      "question": "Choose the correct form: 'The scientist made an important ___.' (discover)",
       "options": [
-        "happiest",
-        "happily",
-        "happier",
-        "happiness"
+        "discovering",
+        "discoverable",
+        "discover",
+        "discovery"
       ],
-      "correct_answer": "happily",
-      "explanation": "The adverb ends in -ly: 'happily'. 'Happiness' is the noun and 'happier' the comparative.",
+      "correct_answer": "discovery",
+      "explanation": "'An important ___' needs a noun, and the noun from 'discover' is 'discovery'.",
       "difficulty": 3,
       "misconceptions": {},
       "verify": null,
       "source": "template",
       "review_status": "authored",
-      "expected_time_ms": 5448.0,
+      "expected_time_ms": 6372.0,
       "estimated_difficulty": 3
     },
     {
-      "id": "gen_forms_change_004",
+      "id": "gen_forms_change_005",
+      "subject": "math",
+      "topic": "word_forms",
+      "concept": "forms.change",
+      "question": "Choose the correct form: 'The children played ___.' (noisy)",
+      "options": [
+        "noisy",
+        "noisiness",
+        "noise",
+        "noisily"
+      ],
+      "correct_answer": "noisily",
+      "explanation": "The verb 'played' is modified by an adverb: 'noisily'.",
+      "difficulty": 3,
+      "misconceptions": {},
+      "verify": null,
+      "source": "template",
+      "review_status": "authored",
+      "expected_time_ms": 5952.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_forms_change_006",
+      "subject": "math",
+      "topic": "word_forms",
+      "concept": "forms.change",
+      "question": "Which word is the noun form of 'decide'?",
+      "options": [
+        "decisive",
+        "deciding",
+        "decision",
+        "decided"
+      ],
+      "correct_answer": "decision",
+      "explanation": "'Decision' is the noun; 'decisive' is the adjective and 'deciding' is a verb form.",
+      "difficulty": 3,
+      "misconceptions": {},
+      "verify": null,
+      "source": "template",
+      "review_status": "authored",
+      "expected_time_ms": 5420.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_forms_change_007",
       "subject": "math",
       "topic": "word_forms",
       "concept": "forms.change",
       "question": "Which word is the noun form of 'arrive'?",
       "options": [
-        "arrived",
         "arrive",
+        "arrived",
         "arriving",
         "arrival"
       ],
@@ -104,91 +170,25 @@
       "estimated_difficulty": 3
     },
     {
-      "id": "gen_forms_change_005",
-      "subject": "math",
-      "topic": "word_forms",
-      "concept": "forms.change",
-      "question": "Choose the correct form: 'The scientist made an important ___.' (discover)",
-      "options": [
-        "discover",
-        "discoverable",
-        "discovering",
-        "discovery"
-      ],
-      "correct_answer": "discovery",
-      "explanation": "'An important ___' needs a noun, and the noun from 'discover' is 'discovery'.",
-      "difficulty": 3,
-      "misconceptions": {},
-      "verify": null,
-      "source": "template",
-      "review_status": "authored",
-      "expected_time_ms": 6372.0,
-      "estimated_difficulty": 3
-    },
-    {
-      "id": "gen_forms_change_006",
-      "subject": "math",
-      "topic": "word_forms",
-      "concept": "forms.change",
-      "question": "Choose the correct form: 'Her ___ of the plan was obvious.' (approve)",
-      "options": [
-        "approving",
-        "approve",
-        "approval",
-        "approved"
-      ],
-      "correct_answer": "approval",
-      "explanation": "The slot after 'her' needs a noun, so the verb 'approve' becomes the noun 'approval'.",
-      "difficulty": 3,
-      "misconceptions": {},
-      "verify": null,
-      "source": "template",
-      "review_status": "authored",
-      "expected_time_ms": 6232.0,
-      "estimated_difficulty": 2
-    },
-    {
-      "id": "gen_forms_change_007",
-      "subject": "math",
-      "topic": "word_forms",
-      "concept": "forms.change",
-      "question": "Choose the correct form: 'The children played ___.' (noisy)",
-      "options": [
-        "noise",
-        "noisy",
-        "noisily",
-        "noisiness"
-      ],
-      "correct_answer": "noisily",
-      "explanation": "The verb 'played' is modified by an adverb: 'noisily'.",
-      "difficulty": 3,
-      "misconceptions": {},
-      "verify": null,
-      "source": "template",
-      "review_status": "authored",
-      "expected_time_ms": 5952.0,
-      "estimated_difficulty": 3
-    },
-    {
       "id": "gen_forms_change_008",
       "subject": "math",
       "topic": "word_forms",
       "concept": "forms.change",
-      "question": "Which word is the noun form of 'decide'?",
+      "question": "Which word is the adverb form of 'happy'?",
       "options": [
-        "decision",
-        "deciding",
-        "decisive",
-        "decided"
+        "happier",
+        "happiness",
+        "happily",
+        "happiest"
       ],
-      "correct_answer": "decision",
-      "explanation": "'Decision' is the noun; 'decisive' is the adjective and 'deciding' is a verb form.",
+      "correct_answer": "happily",
+      "explanation": "The adverb ends in -ly: 'happily'. 'Happiness' is the noun and 'happier' the comparative.",
       "difficulty": 3,
       "misconceptions": {},
       "verify": null,
       "source": "template",
       "review_status": "authored",
-      "expected_time_ms": 5420.0,
+      "expected_time_ms": 5448.0,
       "estimated_difficulty": 3
     },
     {
@@ -196,78 +196,12 @@
       "subject": "math",
       "topic": "word_forms",
       "concept": "forms.comparatives",
-      "question": "Which is the correct superlative of 'far' when talking about distance?",
-      "options": [
-        "most far",
-        "furthest",
-        "further",
-        "farther"
-      ],
-      "correct_answer": "furthest",
-      "explanation": "The superlative of 'far' is 'furthest' (or 'farthest'). 'Further' is the comparative.",
-      "difficulty": 2,
-      "misconceptions": {},
-      "verify": null,
-      "source": "template",
-      "review_status": "authored",
-      "expected_time_ms": 6260.0,
-      "estimated_difficulty": 2
-    },
-    {
-      "id": "gen_forms_comparatives_002",
-      "subject": "math",
-      "topic": "word_forms",
-      "concept": "forms.comparatives",
-      "question": "Which is the correct superlative of 'bad'?",
-      "options": [
-        "most bad",
-        "worse",
-        "baddest",
-        "worst"
-      ],
-      "correct_answer": "worst",
-      "explanation": "'Bad' is irregular: bad → worse → worst.",
-      "difficulty": 2,
-      "misconceptions": {},
-      "verify": null,
-      "source": "template",
-      "review_status": "authored",
-      "expected_time_ms": 5476.0,
-      "estimated_difficulty": 2
-    },
-    {
-      "id": "gen_forms_comparatives_003",
-      "subject": "math",
-      "topic": "word_forms",
-      "concept": "forms.comparatives",
-      "question": "Which is the correct comparative of 'careful'?",
-      "options": [
-        "most careful",
-        "carefulest",
-        "carefuller",
-        "more careful"
-      ],
-      "correct_answer": "more careful",
-      "explanation": "Longer adjectives take 'more' rather than -er.",
-      "difficulty": 2,
-      "misconceptions": {},
-      "verify": null,
-      "source": "template",
-      "review_status": "authored",
-      "expected_time_ms": 5588.0,
-      "estimated_difficulty": 2
-    },
-    {
-      "id": "gen_forms_comparatives_004",
-      "subject": "math",
-      "topic": "word_forms",
-      "concept": "forms.comparatives",
       "question": "Complete: 'She is the ___ student in the class.' (tall)",
       "options": [
-        "most tall",
         "taller",
-        "tallest",
-        "tall"
+        "most tall",
+        "tall",
+        "tallest"
       ],
       "correct_answer": "tallest",
       "explanation": "'The ___ student in the class' is a superlative: tallest.",
@@ -280,82 +214,16 @@
       "estimated_difficulty": 2
     },
     {
-      "id": "gen_forms_comparatives_005",
-      "subject": "math",
-      "topic": "word_forms",
-      "concept": "forms.comparatives",
-      "question": "Which is correct?",
-      "options": [
-        "the easiest",
-        "most easiest",
-        "the most easy",
-        "the easyest"
-      ],
-      "correct_answer": "the easiest",
-      "explanation": "'Easy' is short and ends in -y, so it takes -iest: the easiest.",
-      "difficulty": 2,
-      "misconceptions": {},
-      "verify": null,
-      "source": "template",
-      "review_status": "authored",
-      "expected_time_ms": 4776.0,
-      "estimated_difficulty": 2
-    },
-    {
-      "id": "gen_forms_comparatives_006",
-      "subject": "math",
-      "topic": "word_forms",
-      "concept": "forms.comparatives",
-      "question": "Which is the correct comparative of 'good'?",
-      "options": [
-        "better",
-        "best",
-        "gooder",
-        "more good"
-      ],
-      "correct_answer": "better",
-      "explanation": "'Good' is irregular: good → better → best.",
-      "difficulty": 2,
-      "misconceptions": {},
-      "verify": null,
-      "source": "template",
-      "review_status": "authored",
-      "expected_time_ms": 5504.0,
-      "estimated_difficulty": 2
-    },
-    {
-      "id": "gen_forms_comparatives_007",
-      "subject": "math",
-      "topic": "word_forms",
-      "concept": "forms.comparatives",
-      "question": "Complete: 'This box is ___ than that one.' (heavy)",
-      "options": [
-        "heavy",
-        "heaviest",
-        "heavier",
-        "more heavy"
-      ],
-      "correct_answer": "heavier",
-      "explanation": "Short adjectives ending in -y take -ier: heavy → heavier.",
-      "difficulty": 2,
-      "misconceptions": {},
-      "verify": null,
-      "source": "template",
-      "review_status": "authored",
-      "expected_time_ms": 5700.0,
-      "estimated_difficulty": 2
-    },
-    {
-      "id": "gen_forms_comparatives_008",
+      "id": "gen_forms_comparatives_002",
       "subject": "math",
       "topic": "word_forms",
       "concept": "forms.comparatives",
       "question": "Complete: 'My phone is ___ than yours.' (new)",
       "options": [
-        "new",
+        "newest",
         "newer",
-        "more new",
-        "newest"
+        "new",
+        "more new"
       ],
       "correct_answer": "newer",
       "explanation": "Short adjectives take -er: new → newer.",
@@ -368,25 +236,157 @@
       "estimated_difficulty": 2
     },
     {
+      "id": "gen_forms_comparatives_003",
+      "subject": "math",
+      "topic": "word_forms",
+      "concept": "forms.comparatives",
+      "question": "Which is the correct comparative of 'good'?",
+      "options": [
+        "gooder",
+        "best",
+        "more good",
+        "better"
+      ],
+      "correct_answer": "better",
+      "explanation": "'Good' is irregular: good → better → best.",
+      "difficulty": 2,
+      "misconceptions": {},
+      "verify": null,
+      "source": "template",
+      "review_status": "authored",
+      "expected_time_ms": 5504.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_forms_comparatives_004",
+      "subject": "math",
+      "topic": "word_forms",
+      "concept": "forms.comparatives",
+      "question": "Which is the correct superlative of 'bad'?",
+      "options": [
+        "baddest",
+        "worst",
+        "most bad",
+        "worse"
+      ],
+      "correct_answer": "worst",
+      "explanation": "'Bad' is irregular: bad → worse → worst.",
+      "difficulty": 2,
+      "misconceptions": {},
+      "verify": null,
+      "source": "template",
+      "review_status": "authored",
+      "expected_time_ms": 5476.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_forms_comparatives_005",
+      "subject": "math",
+      "topic": "word_forms",
+      "concept": "forms.comparatives",
+      "question": "Complete: 'This box is ___ than that one.' (heavy)",
+      "options": [
+        "heavier",
+        "more heavy",
+        "heavy",
+        "heaviest"
+      ],
+      "correct_answer": "heavier",
+      "explanation": "Short adjectives ending in -y take -ier: heavy → heavier.",
+      "difficulty": 2,
+      "misconceptions": {},
+      "verify": null,
+      "source": "template",
+      "review_status": "authored",
+      "expected_time_ms": 5700.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_forms_comparatives_006",
+      "subject": "math",
+      "topic": "word_forms",
+      "concept": "forms.comparatives",
+      "question": "Which is the correct superlative of 'far' when talking about distance?",
+      "options": [
+        "further",
+        "furthest",
+        "farther",
+        "most far"
+      ],
+      "correct_answer": "furthest",
+      "explanation": "The superlative of 'far' is 'furthest' (or 'farthest'). 'Further' is the comparative.",
+      "difficulty": 2,
+      "misconceptions": {},
+      "verify": null,
+      "source": "template",
+      "review_status": "authored",
+      "expected_time_ms": 6260.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_forms_comparatives_007",
+      "subject": "math",
+      "topic": "word_forms",
+      "concept": "forms.comparatives",
+      "question": "Which is the correct comparative of 'careful'?",
+      "options": [
+        "more careful",
+        "carefulest",
+        "most careful",
+        "carefuller"
+      ],
+      "correct_answer": "more careful",
+      "explanation": "Longer adjectives take 'more' rather than -er.",
+      "difficulty": 2,
+      "misconceptions": {},
+      "verify": null,
+      "source": "template",
+      "review_status": "authored",
+      "expected_time_ms": 5588.0,
+      "estimated_difficulty": 2
+    },
+    {
+      "id": "gen_forms_comparatives_008",
+      "subject": "math",
+      "topic": "word_forms",
+      "concept": "forms.comparatives",
+      "question": "Which is correct?",
+      "options": [
+        "the most easy",
+        "the easyest",
+        "most easiest",
+        "the easiest"
+      ],
+      "correct_answer": "the easiest",
+      "explanation": "'Easy' is short and ends in -y, so it takes -iest: the easiest.",
+      "difficulty": 2,
+      "misconceptions": {},
+      "verify": null,
+      "source": "template",
+      "review_status": "authored",
+      "expected_time_ms": 4776.0,
+      "estimated_difficulty": 2
+    },
+    {
       "id": "gen_forms_derivation_001",
       "subject": "math",
       "topic": "word_forms",
       "concept": "forms.derivation",
-      "question": "Which word is the person noun formed from 'science'?",
+      "question": "Which word belongs to the same family as 'music'?",
       "options": [
-        "scientific",
-        "scientifically",
-        "science",
-        "scientist"
+        "muscle",
+        "museum",
+        "mystic",
+        "musician"
       ],
-      "correct_answer": "scientist",
-      "explanation": "The suffix -ist forms the person noun: scientist.",
+      "correct_answer": "musician",
+      "explanation": "'Musician' is built from 'music' with the suffix -ian.",
       "difficulty": 4,
       "misconceptions": {},
       "verify": null,
       "source": "template",
       "review_status": "authored",
-      "expected_time_ms": 5756.0,
+      "expected_time_ms": 5672.0,
       "estimated_difficulty": 4
     },
     {
@@ -398,8 +398,8 @@
       "options": [
         "gentlest",
         "gentler",
-        "gentleness",
-        "gently"
+        "gently",
+        "gentleness"
       ],
       "correct_answer": "gently",
       "explanation": "Adjectives ending in -le form adverbs by replacing -e with -y: gentle → gently.",
@@ -418,10 +418,10 @@
       "concept": "forms.derivation",
       "question": "Which word is the person noun formed from 'create'?",
       "options": [
-        "creator",
         "creative",
-        "creation",
-        "creativity"
+        "creator",
+        "creativity",
+        "creation"
       ],
       "correct_answer": "creator",
       "explanation": "The suffix -or forms the person noun: creator.",
@@ -438,34 +438,12 @@
       "subject": "math",
       "topic": "word_forms",
       "concept": "forms.derivation",
-      "question": "Which word is the adjective formed from 'nature'?",
-      "options": [
-        "naturally",
-        "natured",
-        "naturism",
-        "natural"
-      ],
-      "correct_answer": "natural",
-      "explanation": "'Natural' is the adjective; 'naturally' is the adverb.",
-      "difficulty": 4,
-      "misconceptions": {},
-      "verify": null,
-      "source": "template",
-      "review_status": "authored",
-      "expected_time_ms": 5672.0,
-      "estimated_difficulty": 4
-    },
-    {
-      "id": "gen_forms_derivation_005",
-      "subject": "math",
-      "topic": "word_forms",
-      "concept": "forms.derivation",
       "question": "Which word is the noun formed from 'produce'?",
       "options": [
-        "productive",
         "production",
-        "producer",
-        "productively"
+        "productive",
+        "productively",
+        "producer"
       ],
       "correct_answer": "production",
       "explanation": "'Production' is the process noun; 'producer' is the person noun.",
@@ -478,6 +456,28 @@
       "estimated_difficulty": 4
     },
     {
+      "id": "gen_forms_derivation_005",
+      "subject": "math",
+      "topic": "word_forms",
+      "concept": "forms.derivation",
+      "question": "Which word is the person noun formed from 'science'?",
+      "options": [
+        "scientist",
+        "scientifically",
+        "scientific",
+        "science"
+      ],
+      "correct_answer": "scientist",
+      "explanation": "The suffix -ist forms the person noun: scientist.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": null,
+      "source": "template",
+      "review_status": "authored",
+      "expected_time_ms": 5756.0,
+      "estimated_difficulty": 4
+    },
+    {
       "id": "gen_forms_derivation_006",
       "subject": "math",
       "topic": "word_forms",
@@ -485,9 +485,9 @@
       "question": "Which word means 'able to be read'?",
       "options": [
         "reading",
-        "readable",
         "readably",
-        "reader"
+        "reader",
+        "readable"
       ],
       "correct_answer": "readable",
       "explanation": "The suffix -able means 'able to be': readable.",
@@ -504,12 +504,34 @@
       "subject": "math",
       "topic": "word_forms",
       "concept": "forms.derivation",
+      "question": "Which word is the adjective formed from 'nature'?",
+      "options": [
+        "natured",
+        "naturism",
+        "naturally",
+        "natural"
+      ],
+      "correct_answer": "natural",
+      "explanation": "'Natural' is the adjective; 'naturally' is the adverb.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": null,
+      "source": "template",
+      "review_status": "authored",
+      "expected_time_ms": 5672.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_forms_derivation_008",
+      "subject": "math",
+      "topic": "word_forms",
+      "concept": "forms.derivation",
       "question": "Which word belongs to the same family as 'nation'?",
       "options": [
-        "natural",
-        "notion",
+        "native",
         "national",
-        "native"
+        "notion",
+        "natural"
       ],
       "correct_answer": "national",
       "explanation": "'National' shares the root 'nation'. 'Native' and 'notion' look similar but are different words.",
@@ -522,73 +544,7 @@
       "estimated_difficulty": 4
     },
     {
-      "id": "gen_forms_derivation_008",
-      "subject": "math",
-      "topic": "word_forms",
-      "concept": "forms.derivation",
-      "question": "Which word belongs to the same family as 'music'?",
-      "options": [
-        "mystic",
-        "musician",
-        "museum",
-        "muscle"
-      ],
-      "correct_answer": "musician",
-      "explanation": "'Musician' is built from 'music' with the suffix -ian.",
-      "difficulty": 4,
-      "misconceptions": {},
-      "verify": null,
-      "source": "template",
-      "review_status": "authored",
-      "expected_time_ms": 5672.0,
-      "estimated_difficulty": 4
-    },
-    {
       "id": "gen_forms_irregular_001",
-      "subject": "math",
-      "topic": "word_forms",
-      "concept": "forms.irregular",
-      "question": "What is the plural of 'woman'?",
-      "options": [
-        "womens",
-        "womenses",
-        "womans",
-        "women"
-      ],
-      "correct_answer": "women",
-      "explanation": "'Woman' becomes 'women'.",
-      "difficulty": 3,
-      "misconceptions": {},
-      "verify": null,
-      "source": "template",
-      "review_status": "authored",
-      "expected_time_ms": 5140.0,
-      "estimated_difficulty": 3
-    },
-    {
-      "id": "gen_forms_irregular_002",
-      "subject": "math",
-      "topic": "word_forms",
-      "concept": "forms.irregular",
-      "question": "What is the past participle of 'write'?",
-      "options": [
-        "wrote",
-        "written",
-        "writing",
-        "writed"
-      ],
-      "correct_answer": "written",
-      "explanation": "'Write' is irregular: write → wrote → written.",
-      "difficulty": 3,
-      "misconceptions": {},
-      "verify": null,
-      "source": "template",
-      "review_status": "authored",
-      "expected_time_ms": 5392.0,
-      "estimated_difficulty": 3
-    },
-    {
-      "id": "gen_forms_irregular_003",
       "subject": "math",
       "topic": "word_forms",
       "concept": "forms.irregular",
@@ -610,16 +566,60 @@
       "estimated_difficulty": 3
     },
     {
+      "id": "gen_forms_irregular_002",
+      "subject": "math",
+      "topic": "word_forms",
+      "concept": "forms.irregular",
+      "question": "What is the plural of 'child'?",
+      "options": [
+        "children",
+        "childrens",
+        "childes",
+        "childs"
+      ],
+      "correct_answer": "children",
+      "explanation": "'Child' has the irregular plural 'children'.",
+      "difficulty": 3,
+      "misconceptions": {},
+      "verify": null,
+      "source": "template",
+      "review_status": "authored",
+      "expected_time_ms": 5140.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_forms_irregular_003",
+      "subject": "math",
+      "topic": "word_forms",
+      "concept": "forms.irregular",
+      "question": "What is the plural of 'tooth'?",
+      "options": [
+        "toothes",
+        "teeths",
+        "tooths",
+        "teeth"
+      ],
+      "correct_answer": "teeth",
+      "explanation": "'Tooth' becomes 'teeth', changing the vowel.",
+      "difficulty": 3,
+      "misconceptions": {},
+      "verify": null,
+      "source": "template",
+      "review_status": "authored",
+      "expected_time_ms": 5140.0,
+      "estimated_difficulty": 3
+    },
+    {
       "id": "gen_forms_irregular_004",
       "subject": "math",
       "topic": "word_forms",
       "concept": "forms.irregular",
       "question": "What is the comparative of 'far' when it means 'additional'?",
       "options": [
-        "furthest",
-        "farther",
         "more far",
-        "further"
+        "further",
+        "farther",
+        "furthest"
       ],
       "correct_answer": "further",
       "explanation": "'Further' is used for additional amounts, 'farther' for physical distance.",
@@ -636,15 +636,15 @@
       "subject": "math",
       "topic": "word_forms",
       "concept": "forms.irregular",
-      "question": "What is the plural of 'mouse'?",
+      "question": "What is the plural of 'woman'?",
       "options": [
-        "mouse",
-        "mices",
-        "mice",
-        "mouses"
+        "womans",
+        "womenses",
+        "womens",
+        "women"
       ],
-      "correct_answer": "mice",
-      "explanation": "'Mouse' becomes 'mice'.",
+      "correct_answer": "women",
+      "explanation": "'Woman' becomes 'women'.",
       "difficulty": 3,
       "misconceptions": {},
       "verify": null,
@@ -658,15 +658,15 @@
       "subject": "math",
       "topic": "word_forms",
       "concept": "forms.irregular",
-      "question": "What is the plural of 'child'?",
+      "question": "What is the plural of 'mouse'?",
       "options": [
-        "children",
-        "childs",
-        "childrens",
-        "childes"
+        "mouses",
+        "mices",
+        "mice",
+        "mouse"
       ],
-      "correct_answer": "children",
-      "explanation": "'Child' has the irregular plural 'children'.",
+      "correct_answer": "mice",
+      "explanation": "'Mouse' becomes 'mice'.",
       "difficulty": 3,
       "misconceptions": {},
       "verify": null,
@@ -680,21 +680,21 @@
       "subject": "math",
       "topic": "word_forms",
       "concept": "forms.irregular",
-      "question": "What is the plural of 'tooth'?",
+      "question": "What is the past participle of 'write'?",
       "options": [
-        "teeths",
-        "tooths",
-        "teeth",
-        "toothes"
+        "writed",
+        "written",
+        "wrote",
+        "writing"
       ],
-      "correct_answer": "teeth",
-      "explanation": "'Tooth' becomes 'teeth', changing the vowel.",
+      "correct_answer": "written",
+      "explanation": "'Write' is irregular: write → wrote → written.",
       "difficulty": 3,
       "misconceptions": {},
       "verify": null,
       "source": "template",
       "review_status": "authored",
-      "expected_time_ms": 5140.0,
+      "expected_time_ms": 5392.0,
       "estimated_difficulty": 3
     },
     {
@@ -704,10 +704,10 @@
       "concept": "forms.irregular",
       "question": "What is the past tense of 'take'?",
       "options": [
+        "taked",
         "taken",
         "taking",
-        "took",
-        "taked"
+        "took"
       ],
       "correct_answer": "took",
       "explanation": "'Take' is irregular: take → took → taken.",

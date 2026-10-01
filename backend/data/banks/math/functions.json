@@ -521,20 +521,20 @@
       "subject": "math",
       "topic": "functions",
       "concept": "functions.composition",
-      "question": "If f(x) = 4x + 7 and g(x) = 2x + 5, what is f(g(6))?",
+      "question": "If f(x) = 5x + 8 and g(x) = 5x + 9, what is f(g(2))?",
       "options": [
-        "55",
-        "67",
-        "68",
-        "75"
+        "58",
+        "99",
+        "95",
+        "103"
       ],
-      "correct_answer": "75",
-      "explanation": "Work from the inside out. g(6) = 2(6) + 5 = 17. Then f(17) = 4(17) + 7 = 75. Order matters: f(g(x)) is not g(f(x)).",
+      "correct_answer": "103",
+      "explanation": "Work from the inside out. g(2) = 5(2) + 9 = 19. Then f(19) = 5(19) + 8 = 103. Order matters: f(g(x)) is not g(f(x)).",
       "difficulty": 5,
       "misconceptions": {},
       "verify": {
         "kind": "numeric",
-        "expression": "4*(2*6 + 5) + 7"
+        "expression": "5*(5*2 + 9) + 8"
       },
       "source": "procedural",
       "review_status": "auto_validated",
@@ -546,20 +546,20 @@
       "subject": "math",
       "topic": "functions",
       "concept": "functions.composition",
-      "question": "If f(x) = 3x + 9 and g(x) = 4x + 1, what is f(g(6))?",
+      "question": "If f(x) = 4x + 3 and g(x) = 3x + 7, what is f(g(3))?",
       "options": [
-        "81",
-        "75",
-        "109",
-        "84"
+        "64",
+        "67",
+        "39",
+        "52"
       ],
-      "correct_answer": "84",
-      "explanation": "Work from the inside out. g(6) = 4(6) + 1 = 25. Then f(25) = 3(25) + 9 = 84. Order matters: f(g(x)) is not g(f(x)).",
+      "correct_answer": "67",
+      "explanation": "Work from the inside out. g(3) = 3(3) + 7 = 16. Then f(16) = 4(16) + 3 = 67. Order matters: f(g(x)) is not g(f(x)).",
       "difficulty": 5,
       "misconceptions": {},
       "verify": {
         "kind": "numeric",
-        "expression": "3*(4*6 + 1) + 9"
+        "expression": "4*(3*3 + 7) + 3"
       },
       "source": "procedural",
       "review_status": "auto_validated",
@@ -571,20 +571,20 @@
       "subject": "math",
       "topic": "functions",
       "concept": "functions.composition",
-      "question": "If f(x) = 3x + 6 and g(x) = 2x + 7, what is f(g(3))?",
+      "question": "If f(x) = 2x + 3 and g(x) = 2x + 2, what is f(g(2))?",
       "options": [
-        "39",
-        "37",
-        "45",
-        "24"
+        "12",
+        "11",
+        "16",
+        "15"
       ],
-      "correct_answer": "45",
-      "explanation": "Work from the inside out. g(3) = 2(3) + 7 = 13. Then f(13) = 3(13) + 6 = 45. Order matters: f(g(x)) is not g(f(x)).",
+      "correct_answer": "15",
+      "explanation": "Work from the inside out. g(2) = 2(2) + 2 = 6. Then f(6) = 2(6) + 3 = 15. Order matters: f(g(x)) is not g(f(x)).",
       "difficulty": 5,
       "misconceptions": {},
       "verify": {
         "kind": "numeric",
-        "expression": "3*(2*3 + 7) + 6"
+        "expression": "2*(2*2 + 2) + 3"
       },
       "source": "procedural",
       "review_status": "auto_validated",
@@ -596,24 +596,23 @@
       "subject": "math",
       "topic": "functions",
       "concept": "functions.composition",
-      "question": "If f(x) = 2x + 7 and g(x) = 3x + 9, what is f(g(4))?",
+      "question": "If f(x) = 5x + 1 and g(x) = 4x + 1, what is f(g(5))?",
       "options": [
-        "54",
-        "49",
-        "42",
-        "31"
+        "106",
+        "105",
+        "101"
       ],
-      "correct_answer": "49",
-      "explanation": "Work from the inside out. g(4) = 3(4) + 9 = 21. Then f(21) = 2(21) + 7 = 49. Order matters: f(g(x)) is not g(f(x)).",
+      "correct_answer": "106",
+      "explanation": "Work from the inside out. g(5) = 4(5) + 1 = 21. Then f(21) = 5(21) + 1 = 106. Order matters: f(g(x)) is not g(f(x)).",
       "difficulty": 5,
       "misconceptions": {},
       "verify": {
         "kind": "numeric",
-        "expression": "2*(3*4 + 9) + 7"
+        "expression": "5*(4*5 + 1) + 1"
       },
       "source": "procedural",
       "review_status": "auto_validated",
-      "expected_time_ms": 5756.0,
+      "expected_time_ms": 5306.0,
       "estimated_difficulty": 4
     },
     {
@@ -621,20 +620,20 @@
       "subject": "math",
       "topic": "functions",
       "concept": "functions.composition",
-      "question": "If f(x) = 4x + 7 and g(x) = 5x + 9, what is f(g(3))?",
+      "question": "If f(x) = 3x + 1 and g(x) = 4x + 7, what is f(g(4))?",
       "options": [
-        "103",
-        "96",
-        "104",
-        "67"
+        "70",
+        "59",
+        "49",
+        "69"
       ],
-      "correct_answer": "103",
-      "explanation": "Work from the inside out. g(3) = 5(3) + 9 = 24. Then f(24) = 4(24) + 7 = 103. Order matters: f(g(x)) is not g(f(x)).",
+      "correct_answer": "70",
+      "explanation": "Work from the inside out. g(4) = 4(4) + 7 = 23. Then f(23) = 3(23) + 1 = 70. Order matters: f(g(x)) is not g(f(x)).",
       "difficulty": 5,
       "misconceptions": {},
       "verify": {
         "kind": "numeric",
-        "expression": "4*(5*3 + 9) + 7"
+        "expression": "3*(4*4 + 7) + 1"
       },
       "source": "procedural",
       "review_status": "auto_validated",
@@ -646,24 +645,23 @@
       "subject": "math",
       "topic": "functions",
       "concept": "functions.composition",
-      "question": "If f(x) = 4x + 3 and g(x) = 3x + 9, what is f(g(3))?",
+      "question": "If f(x) = 3x + 3 and g(x) = 4x + 6, what is f(g(5))?",
       "options": [
-        "54",
-        "39",
-        "72",
-        "75"
+        "78",
+        "63",
+        "81"
       ],
-      "correct_answer": "75",
-      "explanation": "Work from the inside out. g(3) = 3(3) + 9 = 18. Then f(18) = 4(18) + 3 = 75. Order matters: f(g(x)) is not g(f(x)).",
+      "correct_answer": "81",
+      "explanation": "Work from the inside out. g(5) = 4(5) + 6 = 26. Then f(26) = 3(26) + 3 = 81. Order matters: f(g(x)) is not g(f(x)).",
       "difficulty": 5,
       "misconceptions": {},
       "verify": {
         "kind": "numeric",
-        "expression": "4*(3*3 + 9) + 3"
+        "expression": "3*(4*5 + 6) + 3"
       },
       "source": "procedural",
       "review_status": "auto_validated",
-      "expected_time_ms": 5756.0,
+      "expected_time_ms": 5306.0,
       "estimated_difficulty": 4
     },
     {
@@ -671,20 +669,20 @@
       "subject": "math",
       "topic": "functions",
       "concept": "functions.composition",
-      "question": "If f(x) = 4x + 3 and g(x) = 3x + 4, what is f(g(4))?",
+      "question": "If f(x) = 4x + 1 and g(x) = 5x + 6, what is f(g(3))?",
       "options": [
-        "67",
-        "64",
-        "61",
-        "51"
+        "84",
+        "85",
+        "71",
+        "61"
       ],
-      "correct_answer": "67",
-      "explanation": "Work from the inside out. g(4) = 3(4) + 4 = 16. Then f(16) = 4(16) + 3 = 67. Order matters: f(g(x)) is not g(f(x)).",
+      "correct_answer": "85",
+      "explanation": "Work from the inside out. g(3) = 5(3) + 6 = 21. Then f(21) = 4(21) + 1 = 85. Order matters: f(g(x)) is not g(f(x)).",
       "difficulty": 5,
       "misconceptions": {},
       "verify": {
         "kind": "numeric",
-        "expression": "4*(3*4 + 4) + 3"
+        "expression": "4*(5*3 + 6) + 1"
       },
       "source": "procedural",
       "review_status": "auto_validated",
@@ -696,23 +694,24 @@
       "subject": "math",
       "topic": "functions",
       "concept": "functions.composition",
-      "question": "If f(x) = 2x + 6 and g(x) = 2x + 6, what is f(g(4))?",
+      "question": "If f(x) = 4x + 4 and g(x) = 4x + 6, what is f(g(4))?",
       "options": [
-        "22",
-        "28",
-        "34"
+        "68",
+        "92",
+        "88",
+        "86"
       ],
-      "correct_answer": "34",
-      "explanation": "Work from the inside out. g(4) = 2(4) + 6 = 14. Then f(14) = 2(14) + 6 = 34. Order matters: f(g(x)) is not g(f(x)).",
+      "correct_answer": "92",
+      "explanation": "Work from the inside out. g(4) = 4(4) + 6 = 22. Then f(22) = 4(22) + 4 = 92. Order matters: f(g(x)) is not g(f(x)).",
       "difficulty": 5,
       "misconceptions": {},
       "verify": {
         "kind": "numeric",
-        "expression": "2*(2*4 + 6) + 6"
+        "expression": "4*(4*4 + 6) + 4"
       },
       "source": "procedural",
       "review_status": "auto_validated",
-      "expected_time_ms": 5306.0,
+      "expected_time_ms": 5756.0,
       "estimated_difficulty": 4
     },
     {
@@ -720,19 +719,19 @@
       "subject": "math",
       "topic": "functions",
       "concept": "functions.composition",
-      "question": "If f(x) = 2x + 2 and g(x) = 3x + 1, what is f(g(2))?",
+      "question": "If f(x) = 3x + 2 and g(x) = 5x + 4, what is f(g(6))?",
       "options": [
-        "14",
-        "19",
-        "16"
+        "102",
+        "104",
+        "92"
       ],
-      "correct_answer": "16",
-      "explanation": "Work from the inside out. g(2) = 3(2) + 1 = 7. Then f(7) = 2(7) + 2 = 16. Order matters: f(g(x)) is not g(f(x)).",
+      "correct_answer": "104",
+      "explanation": "Work from the inside out. g(6) = 5(6) + 4 = 34. Then f(34) = 3(34) + 2 = 104. Order matters: f(g(x)) is not g(f(x)).",
       "difficulty": 5,
       "misconceptions": {},
       "verify": {
         "kind": "numeric",
-        "expression": "2*(3*2 + 1) + 2"
+        "expression": "3*(5*6 + 4) + 2"
       },
       "source": "procedural",
       "review_status": "auto_validated",
@@ -744,20 +743,20 @@
       "subject": "math",
       "topic": "functions",
       "concept": "functions.composition",
-      "question": "If f(x) = 3x + 2 and g(x) = 4x + 8, what is f(g(3))?",
+      "question": "If f(x) = 2x + 4 and g(x) = 2x + 6, what is f(g(4))?",
       "options": [
-        "60",
-        "62",
-        "52",
-        "38"
+        "32",
+        "20",
+        "28",
+        "30"
       ],
-      "correct_answer": "62",
-      "explanation": "Work from the inside out. g(3) = 4(3) + 8 = 20. Then f(20) = 3(20) + 2 = 62. Order matters: f(g(x)) is not g(f(x)).",
+      "correct_answer": "32",
+      "explanation": "Work from the inside out. g(4) = 2(4) + 6 = 14. Then f(14) = 2(14) + 4 = 32. Order matters: f(g(x)) is not g(f(x)).",
       "difficulty": 5,
       "misconceptions": {},
       "verify": {
         "kind": "numeric",
-        "expression": "3*(4*3 + 8) + 2"
+        "expression": "2*(2*4 + 6) + 4"
       },
       "source": "procedural",
       "review_status": "auto_validated",
@@ -769,20 +768,20 @@
       "subject": "math",
       "topic": "functions",
       "concept": "functions.composition",
-      "question": "If f(x) = 2x + 3 and g(x) = 2x + 9, what is f(g(5))?",
+      "question": "If f(x) = 2x + 6 and g(x) = 4x + 1, what is f(g(6))?",
       "options": [
-        "23",
-        "38",
-        "35",
-        "41"
+        "50",
+        "54",
+        "73",
+        "56"
       ],
-      "correct_answer": "41",
-      "explanation": "Work from the inside out. g(5) = 2(5) + 9 = 19. Then f(19) = 2(19) + 3 = 41. Order matters: f(g(x)) is not g(f(x)).",
+      "correct_answer": "56",
+      "explanation": "Work from the inside out. g(6) = 4(6) + 1 = 25. Then f(25) = 2(25) + 6 = 56. Order matters: f(g(x)) is not g(f(x)).",
       "difficulty": 5,
       "misconceptions": {},
       "verify": {
         "kind": "numeric",
-        "expression": "2*(2*5 + 9) + 3"
+        "expression": "2*(4*6 + 1) + 6"
       },
       "source": "procedural",
       "review_status": "auto_validated",
@@ -794,20 +793,20 @@
       "subject": "math",
       "topic": "functions",
       "concept": "functions.composition",
-      "question": "If f(x) = 3x + 9 and g(x) = 3x + 2, what is f(g(5))?",
+      "question": "If f(x) = 3x + 8 and g(x) = 3x + 6, what is f(g(6))?",
       "options": [
-        "51",
-        "74",
-        "54",
-        "60"
+        "72",
+        "80",
+        "84",
+        "62"
       ],
-      "correct_answer": "60",
-      "explanation": "Work from the inside out. g(5) = 3(5) + 2 = 17. Then f(17) = 3(17) + 9 = 60. Order matters: f(g(x)) is not g(f(x)).",
+      "correct_answer": "80",
+      "explanation": "Work from the inside out. g(6) = 3(6) + 6 = 24. Then f(24) = 3(24) + 8 = 80. Order matters: f(g(x)) is not g(f(x)).",
       "difficulty": 5,
       "misconceptions": {},
       "verify": {
         "kind": "numeric",
-        "expression": "3*(3*5 + 2) + 9"
+        "expression": "3*(3*6 + 6) + 8"
       },
       "source": "procedural",
       "review_status": "auto_validated",
@@ -819,20 +818,20 @@
       "subject": "math",
       "topic": "functions",
       "concept": "functions.composition",
-      "question": "If f(x) = 2x + 1 and g(x) = 2x + 3, what is f(g(5))?",
+      "question": "If f(x) = 3x + 1 and g(x) = 5x + 3, what is f(g(4))?",
       "options": [
-        "21",
-        "25",
-        "26",
-        "27"
+        "68",
+        "70",
+        "69",
+        "61"
       ],
-      "correct_answer": "27",
-      "explanation": "Work from the inside out. g(5) = 2(5) + 3 = 13. Then f(13) = 2(13) + 1 = 27. Order matters: f(g(x)) is not g(f(x)).",
+      "correct_answer": "70",
+      "explanation": "Work from the inside out. g(4) = 5(4) + 3 = 23. Then f(23) = 3(23) + 1 = 70. Order matters: f(g(x)) is not g(f(x)).",
       "difficulty": 5,
       "misconceptions": {},
       "verify": {
         "kind": "numeric",
-        "expression": "2*(2*5 + 3) + 1"
+        "expression": "3*(5*4 + 3) + 1"
       },
       "source": "procedural",
       "review_status": "auto_validated",
@@ -844,20 +843,20 @@
       "subject": "math",
       "topic": "functions",
       "concept": "functions.composition",
-      "question": "If f(x) = 2x + 9 and g(x) = 4x + 6, what is f(g(2))?",
+      "question": "If f(x) = 4x + 1 and g(x) = 4x + 8, what is f(g(4))?",
       "options": [
-        "28",
-        "58",
-        "25",
-        "37"
+        "97",
+        "76",
+        "65",
+        "96"
       ],
-      "correct_answer": "37",
-      "explanation": "Work from the inside out. g(2) = 4(2) + 6 = 14. Then f(14) = 2(14) + 9 = 37. Order matters: f(g(x)) is not g(f(x)).",
+      "correct_answer": "97",
+      "explanation": "Work from the inside out. g(4) = 4(4) + 8 = 24. Then f(24) = 4(24) + 1 = 97. Order matters: f(g(x)) is not g(f(x)).",
       "difficulty": 5,
       "misconceptions": {},
       "verify": {
         "kind": "numeric",
-        "expression": "2*(4*2 + 6) + 9"
+        "expression": "4*(4*4 + 8) + 1"
       },
       "source": "procedural",
       "review_status": "auto_validated",
@@ -869,20 +868,20 @@
       "subject": "math",
       "topic": "functions",
       "concept": "functions.composition",
-      "question": "If f(x) = 5x + 2 and g(x) = 3x + 9, what is f(g(4))?",
+      "question": "If f(x) = 5x + 5 and g(x) = 5x + 9, what is f(g(2))?",
       "options": [
-        "62",
-        "105",
-        "107",
-        "75"
+        "100",
+        "55",
+        "95",
+        "84"
       ],
-      "correct_answer": "107",
-      "explanation": "Work from the inside out. g(4) = 3(4) + 9 = 21. Then f(21) = 5(21) + 2 = 107. Order matters: f(g(x)) is not g(f(x)).",
+      "correct_answer": "100",
+      "explanation": "Work from the inside out. g(2) = 5(2) + 9 = 19. Then f(19) = 5(19) + 5 = 100. Order matters: f(g(x)) is not g(f(x)).",
       "difficulty": 5,
       "misconceptions": {},
       "verify": {
         "kind": "numeric",
-        "expression": "5*(3*4 + 9) + 2"
+        "expression": "5*(5*2 + 9) + 5"
       },
       "source": "procedural",
       "review_status": "auto_validated",
@@ -894,22 +893,22 @@
       "subject": "math",
       "topic": "functions",
       "concept": "functions.domain_range",
-      "question": "For the function f(x) = 1/(x - 8), which value must be excluded from the domain?",
+      "question": "What is the range of f(x) = x² + 8?",
       "options": [
-        "0",
-        "8",
-        "No value is excluded",
-        "-8"
+        "f(x) ≥ 8",
+        "All real numbers",
+        "f(x) > 0",
+        "f(x) ≤ 8"
       ],
-      "correct_answer": "8",
-      "explanation": "The domain is every input the rule can actually use. Dividing by zero is not allowed, and x - 8 is zero when x = 8, so 8 must be excluded.",
+      "correct_answer": "f(x) ≥ 8",
+      "explanation": "The range is the set of outputs. Since x² ≥ 0, the output is always at least 8; it is never negative and never smaller than 8.",
       "difficulty": 4,
       "misconceptions": {},
       "verify": null,
       "source": "procedural",
       "review_status": "auto_validated",
-      "expected_time_ms": 6540.0,
-      "estimated_difficulty": 4
+      "expected_time_ms": 5280.0,
+      "estimated_difficulty": 3
     },
     {
       "id": "gen_functions_domain_range_002",
@@ -918,10 +917,10 @@
       "concept": "functions.domain_range",
       "question": "For the function f(x) = x² + 5, what is the smallest value f(x) can take?",
       "options": [
-        "6",
         "5",
+        "0",
         "Any real number",
-        "0"
+        "6"
       ],
       "correct_answer": "5",
       "explanation": "x² is never negative, so its smallest value is 0, reached when x = 0. That makes the smallest value of f(x) equal to 5.",
@@ -938,15 +937,15 @@
       "subject": "math",
       "topic": "functions",
       "concept": "functions.domain_range",
-      "question": "What is the range of f(x) = x² + 4?",
+      "question": "What is the range of f(x) = x² + 3?",
       "options": [
-        "f(x) ≥ 4",
-        "f(x) ≤ 4",
+        "f(x) ≤ 3",
+        "f(x) > 0",
         "All real numbers",
-        "f(x) > 0"
+        "f(x) ≥ 3"
       ],
-      "correct_answer": "f(x) ≥ 4",
-      "explanation": "The range is the set of outputs. Since x² ≥ 0, the output is always at least 4; it is never negative and never smaller than 4.",
+      "correct_answer": "f(x) ≥ 3",
+      "explanation": "The range is the set of outputs. Since x² ≥ 0, the output is always at least 3; it is never negative and never smaller than 3.",
       "difficulty": 4,
       "misconceptions": {},
       "verify": null,
@@ -960,43 +959,43 @@
       "subject": "math",
       "topic": "functions",
       "concept": "functions.domain_range",
-      "question": "For the function f(x) = x² + 9, what is the smallest value f(x) can take?",
+      "question": "For the function f(x) = 1/(x - 8), which value must be excluded from the domain?",
       "options": [
-        "9",
-        "Any real number",
-        "10",
+        "-8",
+        "8",
+        "No value is excluded",
         "0"
       ],
-      "correct_answer": "9",
-      "explanation": "x² is never negative, so its smallest value is 0, reached when x = 0. That makes the smallest value of f(x) equal to 9.",
+      "correct_answer": "8",
+      "explanation": "The domain is every input the rule can actually use. Dividing by zero is not allowed, and x - 8 is zero when x = 8, so 8 must be excluded.",
       "difficulty": 4,
       "misconceptions": {},
       "verify": null,
       "source": "procedural",
       "review_status": "auto_validated",
-      "expected_time_ms": 6344.0,
-      "estimated_difficulty": 3
+      "expected_time_ms": 6540.0,
+      "estimated_difficulty": 4
     },
     {
       "id": "gen_functions_domain_range_005",
       "subject": "math",
       "topic": "functions",
       "concept": "functions.domain_range",
-      "question": "For the function f(x) = x² + 6, what is the smallest value f(x) can take?",
+      "question": "What is the range of f(x) = x² + 4?",
       "options": [
-        "6",
-        "0",
-        "Any real number",
-        "7"
+        "f(x) ≥ 4",
+        "All real numbers",
+        "f(x) ≤ 4",
+        "f(x) > 0"
       ],
-      "correct_answer": "6",
-      "explanation": "x² is never negative, so its smallest value is 0, reached when x = 0. That makes the smallest value of f(x) equal to 6.",
+      "correct_answer": "f(x) ≥ 4",
+      "explanation": "The range is the set of outputs. Since x² ≥ 0, the output is always at least 4; it is never negative and never smaller than 4.",
       "difficulty": 4,
       "misconceptions": {},
       "verify": null,
       "source": "procedural",
       "review_status": "auto_validated",
-      "expected_time_ms": 6344.0,
+      "expected_time_ms": 5280.0,
       "estimated_difficulty": 3
     },
     {
@@ -1004,15 +1003,15 @@
       "subject": "math",
       "topic": "functions",
       "concept": "functions.domain_range",
-      "question": "What is the range of f(x) = x² + 9?",
+      "question": "What is the range of f(x) = x² + 2?",
       "options": [
-        "f(x) ≥ 9",
-        "f(x) ≤ 9",
+        "All real numbers",
+        "f(x) ≤ 2",
         "f(x) > 0",
-        "All real numbers"
+        "f(x) ≥ 2"
       ],
-      "correct_answer": "f(x) ≥ 9",
-      "explanation": "The range is the set of outputs. Since x² ≥ 0, the output is always at least 9; it is never negative and never smaller than 9.",
+      "correct_answer": "f(x) ≥ 2",
+      "explanation": "The range is the set of outputs. Since x² ≥ 0, the output is always at least 2; it is never negative and never smaller than 2.",
       "difficulty": 4,
       "misconceptions": {},
       "verify": null,
@@ -1023,6 +1022,138 @@
     },
     {
       "id": "gen_functions_domain_range_007",
+      "subject": "math",
+      "topic": "functions",
+      "concept": "functions.domain_range",
+      "question": "For the function f(x) = 1/(x - 5), which value must be excluded from the domain?",
+      "options": [
+        "0",
+        "5",
+        "No value is excluded",
+        "-5"
+      ],
+      "correct_answer": "5",
+      "explanation": "The domain is every input the rule can actually use. Dividing by zero is not allowed, and x - 5 is zero when x = 5, so 5 must be excluded.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": null,
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6540.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_functions_domain_range_008",
+      "subject": "math",
+      "topic": "functions",
+      "concept": "functions.domain_range",
+      "question": "What is the range of f(x) = x² + 1?",
+      "options": [
+        "f(x) ≥ 1",
+        "f(x) ≤ 1",
+        "f(x) > 0",
+        "All real numbers"
+      ],
+      "correct_answer": "f(x) ≥ 1",
+      "explanation": "The range is the set of outputs. Since x² ≥ 0, the output is always at least 1; it is never negative and never smaller than 1.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": null,
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5280.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_functions_domain_range_009",
+      "subject": "math",
+      "topic": "functions",
+      "concept": "functions.domain_range",
+      "question": "For the function f(x) = 1/(x - 3), which value must be excluded from the domain?",
+      "options": [
+        "0",
+        "3",
+        "-3",
+        "No value is excluded"
+      ],
+      "correct_answer": "3",
+      "explanation": "The domain is every input the rule can actually use. Dividing by zero is not allowed, and x - 3 is zero when x = 3, so 3 must be excluded.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": null,
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6540.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_functions_domain_range_010",
+      "subject": "math",
+      "topic": "functions",
+      "concept": "functions.domain_range",
+      "question": "For the function f(x) = 1/(x - 2), which value must be excluded from the domain?",
+      "options": [
+        "-2",
+        "No value is excluded",
+        "2",
+        "0"
+      ],
+      "correct_answer": "2",
+      "explanation": "The domain is every input the rule can actually use. Dividing by zero is not allowed, and x - 2 is zero when x = 2, so 2 must be excluded.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": null,
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6540.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_functions_domain_range_011",
+      "subject": "math",
+      "topic": "functions",
+      "concept": "functions.domain_range",
+      "question": "For the function f(x) = 1/(x - 4), which value must be excluded from the domain?",
+      "options": [
+        "No value is excluded",
+        "-4",
+        "0",
+        "4"
+      ],
+      "correct_answer": "4",
+      "explanation": "The domain is every input the rule can actually use. Dividing by zero is not allowed, and x - 4 is zero when x = 4, so 4 must be excluded.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": null,
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6540.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_functions_domain_range_012",
+      "subject": "math",
+      "topic": "functions",
+      "concept": "functions.domain_range",
+      "question": "For the function f(x) = x² + 2, what is the smallest value f(x) can take?",
+      "options": [
+        "0",
+        "Any real number",
+        "2",
+        "3"
+      ],
+      "correct_answer": "2",
+      "explanation": "x² is never negative, so its smallest value is 0, reached when x = 0. That makes the smallest value of f(x) equal to 2.",
+      "difficulty": 4,
+      "misconceptions": {},
+      "verify": null,
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 6344.0,
+      "estimated_difficulty": 3
+    },
+    {
+      "id": "gen_functions_domain_range_013",
       "subject": "math",
       "topic": "functions",
       "concept": "functions.domain_range",
@@ -1044,125 +1175,15 @@
       "estimated_difficulty": 4
     },
     {
-      "id": "gen_functions_domain_range_008",
-      "subject": "math",
-      "topic": "functions",
-      "concept": "functions.domain_range",
-      "question": "For the function f(x) = 1/(x - 4), which value must be excluded from the domain?",
-      "options": [
-        "-4",
-        "4",
-        "0",
-        "No value is excluded"
-      ],
-      "correct_answer": "4",
-      "explanation": "The domain is every input the rule can actually use. Dividing by zero is not allowed, and x - 4 is zero when x = 4, so 4 must be excluded.",
-      "difficulty": 4,
-      "misconceptions": {},
-      "verify": null,
-      "source": "procedural",
-      "review_status": "auto_validated",
-      "expected_time_ms": 6540.0,
-      "estimated_difficulty": 4
-    },
-    {
-      "id": "gen_functions_domain_range_009",
-      "subject": "math",
-      "topic": "functions",
-      "concept": "functions.domain_range",
-      "question": "For the function f(x) = x² + 8, what is the smallest value f(x) can take?",
-      "options": [
-        "8",
-        "Any real number",
-        "0",
-        "9"
-      ],
-      "correct_answer": "8",
-      "explanation": "x² is never negative, so its smallest value is 0, reached when x = 0. That makes the smallest value of f(x) equal to 8.",
-      "difficulty": 4,
-      "misconceptions": {},
-      "verify": null,
-      "source": "procedural",
-      "review_status": "auto_validated",
-      "expected_time_ms": 6344.0,
-      "estimated_difficulty": 3
-    },
-    {
-      "id": "gen_functions_domain_range_010",
-      "subject": "math",
-      "topic": "functions",
-      "concept": "functions.domain_range",
-      "question": "For the function f(x) = 1/(x - 2), which value must be excluded from the domain?",
-      "options": [
-        "-2",
-        "2",
-        "0",
-        "No value is excluded"
-      ],
-      "correct_answer": "2",
-      "explanation": "The domain is every input the rule can actually use. Dividing by zero is not allowed, and x - 2 is zero when x = 2, so 2 must be excluded.",
-      "difficulty": 4,
-      "misconceptions": {},
-      "verify": null,
-      "source": "procedural",
-      "review_status": "auto_validated",
-      "expected_time_ms": 6540.0,
-      "estimated_difficulty": 4
-    },
-    {
-      "id": "gen_functions_domain_range_011",
-      "subject": "math",
-      "topic": "functions",
-      "concept": "functions.domain_range",
-      "question": "For the function f(x) = 1/(x - 3), which value must be excluded from the domain?",
-      "options": [
-        "No value is excluded",
-        "3",
-        "0",
-        "-3"
-      ],
-      "correct_answer": "3",
-      "explanation": "The domain is every input the rule can actually use. Dividing by zero is not allowed, and x - 3 is zero when x = 3, so 3 must be excluded.",
-      "difficulty": 4,
-      "misconceptions": {},
-      "verify": null,
-      "source": "procedural",
-      "review_status": "auto_validated",
-      "expected_time_ms": 6540.0,
-      "estimated_difficulty": 4
-    },
-    {
-      "id": "gen_functions_domain_range_012",
-      "subject": "math",
-      "topic": "functions",
-      "concept": "functions.domain_range",
-      "question": "What is the range of f(x) = x² + 8?",
-      "options": [
-        "All real numbers",
-        "f(x) ≥ 8",
-        "f(x) ≤ 8",
-        "f(x) > 0"
-      ],
-      "correct_answer": "f(x) ≥ 8",
-      "explanation": "The range is the set of outputs. Since x² ≥ 0, the output is always at least 8; it is never negative and never smaller than 8.",
-      "difficulty": 4,
-      "misconceptions": {},
-      "verify": null,
-      "source": "procedural",
-      "review_status": "auto_validated",
-      "expected_time_ms": 5280.0,
-      "estimated_difficulty": 3
-    },
-    {
-      "id": "gen_functions_domain_range_013",
+      "id": "gen_functions_domain_range_014",
       "subject": "math",
       "topic": "functions",
       "concept": "functions.domain_range",
       "question": "For the function f(x) = x² + 1, what is the smallest value f(x) can take?",
       "options": [
         "2",
-        "Any real number",
         "1",
+        "Any real number",
         "0"
       ],
       "correct_answer": "1",
@@ -1176,19 +1197,19 @@
       "estimated_difficulty": 3
     },
     {
-      "id": "gen_functions_domain_range_014",
+      "id": "gen_functions_domain_range_015",
       "subject": "math",
       "topic": "functions",
       "concept": "functions.domain_range",
-      "question": "For the function f(x) = x² + 7, what is the smallest value f(x) can take?",
+      "question": "For the function f(x) = x² + 3, what is the smallest value f(x) can take?",
       "options": [
-        "8",
-        "Any real number",
+        "3",
+        "4",
         "0",
-        "7"
+        "Any real number"
       ],
-      "correct_answer": "7",
-      "explanation": "x² is never negative, so its smallest value is 0, reached when x = 0. That makes the smallest value of f(x) equal to 7.",
+      "correct_answer": "3",
+      "explanation": "x² is never negative, so its smallest value is 0, reached when x = 0. That makes the smallest value of f(x) equal to 3.",
       "difficulty": 4,
       "misconceptions": {},
       "verify": null,
@@ -1198,38 +1219,16 @@
       "estimated_difficulty": 3
     },
     {
-      "id": "gen_functions_domain_range_015",
-      "subject": "math",
-      "topic": "functions",
-      "concept": "functions.domain_range",
-      "question": "What is the range of f(x) = x² + 3?",
-      "options": [
-        "f(x) ≥ 3",
-        "f(x) > 0",
-        "f(x) ≤ 3",
-        "All real numbers"
-      ],
-      "correct_answer": "f(x) ≥ 3",
-      "explanation": "The range is the set of outputs. Since x² ≥ 0, the output is always at least 3; it is never negative and never smaller than 3.",
-      "difficulty": 4,
-      "misconceptions": {},
-      "verify": null,
-      "source": "procedural",
-      "review_status": "auto_validated",
-      "expected_time_ms": 5280.0,
-      "estimated_difficulty": 3
-    },
-    {
       "id": "gen_functions_inverse_001",
       "subject": "math",
       "topic": "functions",
       "concept": "functions.inverse",
       "question": "If f(x) = 4x + 3, what is the inverse function f⁻¹(x)?",
       "options": [
-        "1/(4x + 3)",
-        "4x - 3",
         "(x + 3)/4",
-        "(x - 3)/4"
+        "1/(4x + 3)",
+        "(x - 3)/4",
+        "4x - 3"
       ],
       "correct_answer": "(x - 3)/4",
       "explanation": "To invert, undo the operations in reverse order. Start from y = 4x + 3, swap and solve: x = (y - 3)/4, so f⁻¹(x) = (x - 3)/4. Check it: f(f⁻¹(x)) = x. The reciprocal 1/(4x + 3) is not the inverse.",
@@ -1249,112 +1248,12 @@
       "subject": "math",
       "topic": "functions",
       "concept": "functions.inverse",
-      "question": "If f(x) = 4x + 6, what is the inverse function f⁻¹(x)?",
-      "options": [
-        "(x - 6)/4",
-        "4x - 6",
-        "(x + 6)/4",
-        "1/(4x + 6)"
-      ],
-      "correct_answer": "(x - 6)/4",
-      "explanation": "To invert, undo the operations in reverse order. Start from y = 4x + 6, swap and solve: x = (y - 6)/4, so f⁻¹(x) = (x - 6)/4. Check it: f(f⁻¹(x)) = x. The reciprocal 1/(4x + 6) is not the inverse.",
-      "difficulty": 5,
-      "misconceptions": {},
-      "verify": {
-        "kind": "inverse_function",
-        "forward": "4*t + 6"
-      },
-      "source": "procedural",
-      "review_status": "auto_validated",
-      "expected_time_ms": 5812.0,
-      "estimated_difficulty": 4
-    },
-    {
-      "id": "gen_functions_inverse_003",
-      "subject": "math",
-      "topic": "functions",
-      "concept": "functions.inverse",
-      "question": "If f(x) = 5x + 2, what is the inverse function f⁻¹(x)?",
-      "options": [
-        "(x + 2)/5",
-        "(x - 2)/5",
-        "5x - 2",
-        "1/(5x + 2)"
-      ],
-      "correct_answer": "(x - 2)/5",
-      "explanation": "To invert, undo the operations in reverse order. Start from y = 5x + 2, swap and solve: x = (y - 2)/5, so f⁻¹(x) = (x - 2)/5. Check it: f(f⁻¹(x)) = x. The reciprocal 1/(5x + 2) is not the inverse.",
-      "difficulty": 5,
-      "misconceptions": {},
-      "verify": {
-        "kind": "inverse_function",
-        "forward": "5*t + 2"
-      },
-      "source": "procedural",
-      "review_status": "auto_validated",
-      "expected_time_ms": 5812.0,
-      "estimated_difficulty": 4
-    },
-    {
-      "id": "gen_functions_inverse_004",
-      "subject": "math",
-      "topic": "functions",
-      "concept": "functions.inverse",
-      "question": "If f(x) = 3x + 4, what is the inverse function f⁻¹(x)?",
-      "options": [
-        "3x - 4",
-        "1/(3x + 4)",
-        "(x + 4)/3",
-        "(x - 4)/3"
-      ],
-      "correct_answer": "(x - 4)/3",
-      "explanation": "To invert, undo the operations in reverse order. Start from y = 3x + 4, swap and solve: x = (y - 4)/3, so f⁻¹(x) = (x - 4)/3. Check it: f(f⁻¹(x)) = x. The reciprocal 1/(3x + 4) is not the inverse.",
-      "difficulty": 5,
-      "misconceptions": {},
-      "verify": {
-        "kind": "inverse_function",
-        "forward": "3*t + 4"
-      },
-      "source": "procedural",
-      "review_status": "auto_validated",
-      "expected_time_ms": 5812.0,
-      "estimated_difficulty": 4
-    },
-    {
-      "id": "gen_functions_inverse_005",
-      "subject": "math",
-      "topic": "functions",
-      "concept": "functions.inverse",
-      "question": "If f(x) = 5x + 8, what is the inverse function f⁻¹(x)?",
-      "options": [
-        "5x - 8",
-        "(x - 8)/5",
-        "(x + 8)/5",
-        "1/(5x + 8)"
-      ],
-      "correct_answer": "(x - 8)/5",
-      "explanation": "To invert, undo the operations in reverse order. Start from y = 5x + 8, swap and solve: x = (y - 8)/5, so f⁻¹(x) = (x - 8)/5. Check it: f(f⁻¹(x)) = x. The reciprocal 1/(5x + 8) is not the inverse.",
-      "difficulty": 5,
-      "misconceptions": {},
-      "verify": {
-        "kind": "inverse_function",
-        "forward": "5*t + 8"
-      },
-      "source": "procedural",
-      "review_status": "auto_validated",
-      "expected_time_ms": 5812.0,
-      "estimated_difficulty": 4
-    },
-    {
-      "id": "gen_functions_inverse_006",
-      "subject": "math",
-      "topic": "functions",
-      "concept": "functions.inverse",
       "question": "If f(x) = 6x + 7, what is the inverse function f⁻¹(x)?",
       "options": [
-        "(x + 7)/6",
-        "1/(6x + 7)",
         "(x - 7)/6",
-        "6x - 7"
+        "6x - 7",
+        "1/(6x + 7)",
+        "(x + 7)/6"
       ],
       "correct_answer": "(x - 7)/6",
       "explanation": "To invert, undo the operations in reverse order. Start from y = 6x + 7, swap and solve: x = (y - 7)/6, so f⁻¹(x) = (x - 7)/6. Check it: f(f⁻¹(x)) = x. The reciprocal 1/(6x + 7) is not the inverse.",
@@ -1370,24 +1269,124 @@
       "estimated_difficulty": 4
     },
     {
-      "id": "gen_functions_inverse_007",
+      "id": "gen_functions_inverse_003",
       "subject": "math",
       "topic": "functions",
       "concept": "functions.inverse",
-      "question": "If f(x) = 4x + 5, what is the inverse function f⁻¹(x)?",
+      "question": "If f(x) = 5x + 3, what is the inverse function f⁻¹(x)?",
       "options": [
-        "1/(4x + 5)",
-        "(x - 5)/4",
-        "4x - 5",
-        "(x + 5)/4"
+        "5x - 3",
+        "(x + 3)/5",
+        "1/(5x + 3)",
+        "(x - 3)/5"
       ],
-      "correct_answer": "(x - 5)/4",
-      "explanation": "To invert, undo the operations in reverse order. Start from y = 4x + 5, swap and solve: x = (y - 5)/4, so f⁻¹(x) = (x - 5)/4. Check it: f(f⁻¹(x)) = x. The reciprocal 1/(4x + 5) is not the inverse.",
+      "correct_answer": "(x - 3)/5",
+      "explanation": "To invert, undo the operations in reverse order. Start from y = 5x + 3, swap and solve: x = (y - 3)/5, so f⁻¹(x) = (x - 3)/5. Check it: f(f⁻¹(x)) = x. The reciprocal 1/(5x + 3) is not the inverse.",
       "difficulty": 5,
       "misconceptions": {},
       "verify": {
         "kind": "inverse_function",
-        "forward": "4*t + 5"
+        "forward": "5*t + 3"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5812.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_functions_inverse_004",
+      "subject": "math",
+      "topic": "functions",
+      "concept": "functions.inverse",
+      "question": "If f(x) = 2x + 9, what is the inverse function f⁻¹(x)?",
+      "options": [
+        "(x - 9)/2",
+        "(x + 9)/2",
+        "1/(2x + 9)",
+        "2x - 9"
+      ],
+      "correct_answer": "(x - 9)/2",
+      "explanation": "To invert, undo the operations in reverse order. Start from y = 2x + 9, swap and solve: x = (y - 9)/2, so f⁻¹(x) = (x - 9)/2. Check it: f(f⁻¹(x)) = x. The reciprocal 1/(2x + 9) is not the inverse.",
+      "difficulty": 5,
+      "misconceptions": {},
+      "verify": {
+        "kind": "inverse_function",
+        "forward": "2*t + 9"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5812.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_functions_inverse_005",
+      "subject": "math",
+      "topic": "functions",
+      "concept": "functions.inverse",
+      "question": "If f(x) = 2x + 1, what is the inverse function f⁻¹(x)?",
+      "options": [
+        "1/(2x + 1)",
+        "2x - 1",
+        "(x - 1)/2",
+        "(x + 1)/2"
+      ],
+      "correct_answer": "(x - 1)/2",
+      "explanation": "To invert, undo the operations in reverse order. Start from y = 2x + 1, swap and solve: x = (y - 1)/2, so f⁻¹(x) = (x - 1)/2. Check it: f(f⁻¹(x)) = x. The reciprocal 1/(2x + 1) is not the inverse.",
+      "difficulty": 5,
+      "misconceptions": {},
+      "verify": {
+        "kind": "inverse_function",
+        "forward": "2*t + 1"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5812.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_functions_inverse_006",
+      "subject": "math",
+      "topic": "functions",
+      "concept": "functions.inverse",
+      "question": "If f(x) = 4x + 8, what is the inverse function f⁻¹(x)?",
+      "options": [
+        "4x - 8",
+        "1/(4x + 8)",
+        "(x + 8)/4",
+        "(x - 8)/4"
+      ],
+      "correct_answer": "(x - 8)/4",
+      "explanation": "To invert, undo the operations in reverse order. Start from y = 4x + 8, swap and solve: x = (y - 8)/4, so f⁻¹(x) = (x - 8)/4. Check it: f(f⁻¹(x)) = x. The reciprocal 1/(4x + 8) is not the inverse.",
+      "difficulty": 5,
+      "misconceptions": {},
+      "verify": {
+        "kind": "inverse_function",
+        "forward": "4*t + 8"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5812.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_functions_inverse_007",
+      "subject": "math",
+      "topic": "functions",
+      "concept": "functions.inverse",
+      "question": "If f(x) = 5x + 6, what is the inverse function f⁻¹(x)?",
+      "options": [
+        "5x - 6",
+        "1/(5x + 6)",
+        "(x - 6)/5",
+        "(x + 6)/5"
+      ],
+      "correct_answer": "(x - 6)/5",
+      "explanation": "To invert, undo the operations in reverse order. Start from y = 5x + 6, swap and solve: x = (y - 6)/5, so f⁻¹(x) = (x - 6)/5. Check it: f(f⁻¹(x)) = x. The reciprocal 1/(5x + 6) is not the inverse.",
+      "difficulty": 5,
+      "misconceptions": {},
+      "verify": {
+        "kind": "inverse_function",
+        "forward": "5*t + 6"
       },
       "source": "procedural",
       "review_status": "auto_validated",
@@ -1399,20 +1398,20 @@
       "subject": "math",
       "topic": "functions",
       "concept": "functions.inverse",
-      "question": "If f(x) = 3x + 1, what is the inverse function f⁻¹(x)?",
+      "question": "If f(x) = 6x + 3, what is the inverse function f⁻¹(x)?",
       "options": [
-        "1/(3x + 1)",
-        "(x - 1)/3",
-        "3x - 1",
-        "(x + 1)/3"
+        "(x - 3)/6",
+        "6x - 3",
+        "1/(6x + 3)",
+        "(x + 3)/6"
       ],
-      "correct_answer": "(x - 1)/3",
-      "explanation": "To invert, undo the operations in reverse order. Start from y = 3x + 1, swap and solve: x = (y - 1)/3, so f⁻¹(x) = (x - 1)/3. Check it: f(f⁻¹(x)) = x. The reciprocal 1/(3x + 1) is not the inverse.",
+      "correct_answer": "(x - 3)/6",
+      "explanation": "To invert, undo the operations in reverse order. Start from y = 6x + 3, swap and solve: x = (y - 3)/6, so f⁻¹(x) = (x - 3)/6. Check it: f(f⁻¹(x)) = x. The reciprocal 1/(6x + 3) is not the inverse.",
       "difficulty": 5,
       "misconceptions": {},
       "verify": {
         "kind": "inverse_function",
-        "forward": "3*t + 1"
+        "forward": "6*t + 3"
       },
       "source": "procedural",
       "review_status": "auto_validated",
@@ -1426,10 +1425,10 @@
       "concept": "functions.inverse",
       "question": "If f(x) = 6x + 8, what is the inverse function f⁻¹(x)?",
       "options": [
-        "6x - 8",
-        "(x - 8)/6",
         "1/(6x + 8)",
-        "(x + 8)/6"
+        "(x - 8)/6",
+        "(x + 8)/6",
+        "6x - 8"
       ],
       "correct_answer": "(x - 8)/6",
       "explanation": "To invert, undo the operations in reverse order. Start from y = 6x + 8, swap and solve: x = (y - 8)/6, so f⁻¹(x) = (x - 8)/6. Check it: f(f⁻¹(x)) = x. The reciprocal 1/(6x + 8) is not the inverse.",
@@ -1449,20 +1448,20 @@
       "subject": "math",
       "topic": "functions",
       "concept": "functions.inverse",
-      "question": "If f(x) = 2x + 3, what is the inverse function f⁻¹(x)?",
+      "question": "If f(x) = 5x + 7, what is the inverse function f⁻¹(x)?",
       "options": [
-        "1/(2x + 3)",
-        "2x - 3",
-        "(x - 3)/2",
-        "(x + 3)/2"
+        "5x - 7",
+        "(x - 7)/5",
+        "(x + 7)/5",
+        "1/(5x + 7)"
       ],
-      "correct_answer": "(x - 3)/2",
-      "explanation": "To invert, undo the operations in reverse order. Start from y = 2x + 3, swap and solve: x = (y - 3)/2, so f⁻¹(x) = (x - 3)/2. Check it: f(f⁻¹(x)) = x. The reciprocal 1/(2x + 3) is not the inverse.",
+      "correct_answer": "(x - 7)/5",
+      "explanation": "To invert, undo the operations in reverse order. Start from y = 5x + 7, swap and solve: x = (y - 7)/5, so f⁻¹(x) = (x - 7)/5. Check it: f(f⁻¹(x)) = x. The reciprocal 1/(5x + 7) is not the inverse.",
       "difficulty": 5,
       "misconceptions": {},
       "verify": {
         "kind": "inverse_function",
-        "forward": "2*t + 3"
+        "forward": "5*t + 7"
       },
       "source": "procedural",
       "review_status": "auto_validated",
@@ -1474,12 +1473,112 @@
       "subject": "math",
       "topic": "functions",
       "concept": "functions.inverse",
+      "question": "If f(x) = 6x + 9, what is the inverse function f⁻¹(x)?",
+      "options": [
+        "6x - 9",
+        "(x - 9)/6",
+        "(x + 9)/6",
+        "1/(6x + 9)"
+      ],
+      "correct_answer": "(x - 9)/6",
+      "explanation": "To invert, undo the operations in reverse order. Start from y = 6x + 9, swap and solve: x = (y - 9)/6, so f⁻¹(x) = (x - 9)/6. Check it: f(f⁻¹(x)) = x. The reciprocal 1/(6x + 9) is not the inverse.",
+      "difficulty": 5,
+      "misconceptions": {},
+      "verify": {
+        "kind": "inverse_function",
+        "forward": "6*t + 9"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5812.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_functions_inverse_012",
+      "subject": "math",
+      "topic": "functions",
+      "concept": "functions.inverse",
+      "question": "If f(x) = 4x + 1, what is the inverse function f⁻¹(x)?",
+      "options": [
+        "1/(4x + 1)",
+        "(x + 1)/4",
+        "(x - 1)/4",
+        "4x - 1"
+      ],
+      "correct_answer": "(x - 1)/4",
+      "explanation": "To invert, undo the operations in reverse order. Start from y = 4x + 1, swap and solve: x = (y - 1)/4, so f⁻¹(x) = (x - 1)/4. Check it: f(f⁻¹(x)) = x. The reciprocal 1/(4x + 1) is not the inverse.",
+      "difficulty": 5,
+      "misconceptions": {},
+      "verify": {
+        "kind": "inverse_function",
+        "forward": "4*t + 1"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5812.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_functions_inverse_013",
+      "subject": "math",
+      "topic": "functions",
+      "concept": "functions.inverse",
+      "question": "If f(x) = 5x + 1, what is the inverse function f⁻¹(x)?",
+      "options": [
+        "5x - 1",
+        "(x - 1)/5",
+        "(x + 1)/5",
+        "1/(5x + 1)"
+      ],
+      "correct_answer": "(x - 1)/5",
+      "explanation": "To invert, undo the operations in reverse order. Start from y = 5x + 1, swap and solve: x = (y - 1)/5, so f⁻¹(x) = (x - 1)/5. Check it: f(f⁻¹(x)) = x. The reciprocal 1/(5x + 1) is not the inverse.",
+      "difficulty": 5,
+      "misconceptions": {},
+      "verify": {
+        "kind": "inverse_function",
+        "forward": "5*t + 1"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5812.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_functions_inverse_014",
+      "subject": "math",
+      "topic": "functions",
+      "concept": "functions.inverse",
+      "question": "If f(x) = 4x + 6, what is the inverse function f⁻¹(x)?",
+      "options": [
+        "4x - 6",
+        "1/(4x + 6)",
+        "(x + 6)/4",
+        "(x - 6)/4"
+      ],
+      "correct_answer": "(x - 6)/4",
+      "explanation": "To invert, undo the operations in reverse order. Start from y = 4x + 6, swap and solve: x = (y - 6)/4, so f⁻¹(x) = (x - 6)/4. Check it: f(f⁻¹(x)) = x. The reciprocal 1/(4x + 6) is not the inverse.",
+      "difficulty": 5,
+      "misconceptions": {},
+      "verify": {
+        "kind": "inverse_function",
+        "forward": "4*t + 6"
+      },
+      "source": "procedural",
+      "review_status": "auto_validated",
+      "expected_time_ms": 5812.0,
+      "estimated_difficulty": 4
+    },
+    {
+      "id": "gen_functions_inverse_015",
+      "subject": "math",
+      "topic": "functions",
+      "concept": "functions.inverse",
       "question": "If f(x) = 5x + 9, what is the inverse function f⁻¹(x)?",
       "options": [
-        "(x - 9)/5",
-        "1/(5x + 9)",
+        "(x + 9)/5",
         "5x - 9",
-        "(x + 9)/5"
+        "(x - 9)/5",
+        "1/(5x + 9)"
       ],
       "correct_answer": "(x - 9)/5",
       "explanation": "To invert, undo the operations in reverse order. Start from y = 5x + 9, swap and solve: x = (y - 9)/5, so f⁻¹(x) = (x - 9)/5. Check it: f(f⁻¹(x)) = x. The reciprocal 1/(5x + 9) is not the inverse.",
@@ -1495,126 +1594,26 @@
       "estimated_difficulty": 4
     },
     {
-      "id": "gen_functions_inverse_012",
-      "subject": "math",
-      "topic": "functions",
-      "concept": "functions.inverse",
-      "question": "If f(x) = 6x + 6, what is the inverse function f⁻¹(x)?",
-      "options": [
-        "1/(6x + 6)",
-        "(x + 6)/6",
-        "(x - 6)/6",
-        "6x - 6"
-      ],
-      "correct_answer": "(x - 6)/6",
-      "explanation": "To invert, undo the operations in reverse order. Start from y = 6x + 6, swap and solve: x = (y - 6)/6, so f⁻¹(x) = (x - 6)/6. Check it: f(f⁻¹(x)) = x. The reciprocal 1/(6x + 6) is not the inverse.",
-      "difficulty": 5,
-      "misconceptions": {},
-      "verify": {
-        "kind": "inverse_function",
-        "forward": "6*t + 6"
-      },
-      "source": "procedural",
-      "review_status": "auto_validated",
-      "expected_time_ms": 5812.0,
-      "estimated_difficulty": 4
-    },
-    {
-      "id": "gen_functions_inverse_013",
-      "subject": "math",
-      "topic": "functions",
-      "concept": "functions.inverse",
-      "question": "If f(x) = 5x + 3, what is the inverse function f⁻¹(x)?",
-      "options": [
-        "(x - 3)/5",
-        "(x + 3)/5",
-        "5x - 3",
-        "1/(5x + 3)"
-      ],
-      "correct_answer": "(x - 3)/5",
-      "explanation": "To invert, undo the operations in reverse order. Start from y = 5x + 3, swap and solve: x = (y - 3)/5, so f⁻¹(x) = (x - 3)/5. Check it: f(f⁻¹(x)) = x. The reciprocal 1/(5x + 3) is not the inverse.",
-      "difficulty": 5,
-      "misconceptions": {},
-      "verify": {
-        "kind": "inverse_function",
-        "forward": "5*t + 3"
-      },
-      "source": "procedural",
-      "review_status": "auto_validated",
-      "expected_time_ms": 5812.0,
-      "estimated_difficulty": 4
-    },
-    {
-      "id": "gen_functions_inverse_014",
-      "subject": "math",
-      "topic": "functions",
-      "concept": "functions.inverse",
-      "question": "If f(x) = 2x + 6, what is the inverse function f⁻¹(x)?",
-      "options": [
-        "2x - 6",
-        "1/(2x + 6)",
-        "(x - 6)/2",
-        "(x + 6)/2"
-      ],
-      "correct_answer": "(x - 6)/2",
-      "explanation": "To invert, undo the operations in reverse order. Start from y = 2x + 6, swap and solve: x = (y - 6)/2, so f⁻¹(x) = (x - 6)/2. Check it: f(f⁻¹(x)) = x. The reciprocal 1/(2x + 6) is not the inverse.",
-      "difficulty": 5,
-      "misconceptions": {},
-      "verify": {
-        "kind": "inverse_function",
-        "forward": "2*t + 6"
-      },
-      "source": "procedural",
-      "review_status": "auto_validated",
-      "expected_time_ms": 5812.0,
-      "estimated_difficulty": 4
-    },
-    {
-      "id": "gen_functions_inverse_015",
-      "subject": "math",
-      "topic": "functions",
-      "concept": "functions.inverse",
-      "question": "If f(x) = 3x + 8, what is the inverse function f⁻¹(x)?",
-      "options": [
-        "1/(3x + 8)",
-        "(x + 8)/3",
-        "(x - 8)/3",
-        "3x - 8"
-      ],
-      "correct_answer": "(x - 8)/3",
-      "explanation": "To invert, undo the operations in reverse order. Start from y = 3x + 8, swap and solve: x = (y - 8)/3, so f⁻¹(x) = (x - 8)/3. Check it: f(f⁻¹(x)) = x. The reciprocal 1/(3x + 8) is not the inverse.",
-      "difficulty": 5,
-      "misconceptions": {},
-      "verify": {
-        "kind": "inverse_function",
-        "forward": "3*t + 8"
-      },
-      "source": "procedural",
-      "review_status": "auto_validated",
-      "expected_time_ms": 5812.0,
-      "estimated_difficulty": 4
-    },
-    {
       "id": "gen_functions_notation_001",
       "subject": "math",
       "topic": "functions",
       "concept": "functions.notation",
-      "question": "If f(x) = 5x + 8, what is f(3)?",
+      "question": "If f(x) = 5x + 9, what is f(2)?",
       "options": [
-        "23",
-        "120",
         "16",
-        "3"
+        "90",
+        "19",
+        "2"
       ],
-      "correct_answer": "23",
-      "explanation": "In function notation f(3) means 'apply the rule to the input 3'. So f(3) = 5(3) + 8 = 23. The input is not the output.",
+      "correct_answer": "19",
+      "explanation": "In function notation f(2) means 'apply the rule to the input 2'. So f(2) = 5(2) + 9 = 19. The input is not the output.",
       "difficulty": 3,
       "misconceptions": {
-        "3": "alg.function_substitution"
+        "2": "alg.function_substitution"
       },
       "verify": {
         "kind": "numeric",
-        "expression": "5*(3) + 8"
+        "expression": "5*(2) + 9"
       },
       "source": "procedural",
       "review_status": "auto_validated",
@@ -1626,22 +1625,22 @@
       "subject": "math",
       "topic": "functions",
       "concept": "functions.notation",
-      "question": "If f(x) = 4x + 6, what is f(6)?",
+      "question": "If f(x) = 5x + 9, what is f(3)?",
       "options": [
-        "30",
-        "144",
-        "6",
-        "16"
+        "135",
+        "17",
+        "3",
+        "24"
       ],
-      "correct_answer": "30",
-      "explanation": "In function notation f(6) means 'apply the rule to the input 6'. So f(6) = 4(6) + 6 = 30. The input is not the output.",
+      "correct_answer": "24",
+      "explanation": "In function notation f(3) means 'apply the rule to the input 3'. So f(3) = 5(3) + 9 = 24. The input is not the output.",
       "difficulty": 3,
       "misconceptions": {
-        "6": "alg.function_substitution"
+        "3": "alg.function_substitution"
       },
       "verify": {
         "kind": "numeric",
-        "expression": "4*(6) + 6"
+        "expression": "5*(3) + 9"
       },
       "source": "procedural",
       "review_status": "auto_validated",
@@ -1653,22 +1652,22 @@
       "subject": "math",
       "topic": "functions",
       "concept": "functions.notation",
-      "question": "If f(x) = 4x + 7, what is f(2)?",
+      "question": "If f(x) = 6x + 6, what is f(6)?",
       "options": [
-        "13",
-        "15",
-        "2",
-        "56"
+        "216",
+        "42",
+        "18",
+        "6"
       ],
-      "correct_answer": "15",
-      "explanation": "In function notation f(2) means 'apply the rule to the input 2'. So f(2) = 4(2) + 7 = 15. The input is not the output.",
+      "correct_answer": "42",
+      "explanation": "In function notation f(6) means 'apply the rule to the input 6'. So f(6) = 6(6) + 6 = 42. The input is not the output.",
       "difficulty": 3,
       "misconceptions": {
-        "2": "alg.function_substitution"
+        "6": "alg.function_substitution"
       },
       "verify": {
         "kind": "numeric",
-        "expression": "4*(2) + 7"
+        "expression": "6*(6) + 6"
       },
       "source": "procedural",
       "review_status": "auto_validated",
@@ -1680,22 +1679,22 @@
       "subject": "math",
       "topic": "functions",
       "concept": "functions.notation",
-      "question": "If f(x) = 3x + 1, what is f(3)?",
+      "question": "If f(x) = 4x + 6, what is f(2)?",
       "options": [
-        "9",
-        "10",
-        "7",
-        "3"
+        "12",
+        "14",
+        "48",
+        "2"
       ],
-      "correct_answer": "10",
-      "explanation": "In function notation f(3) means 'apply the rule to the input 3'. So f(3) = 3(3) + 1 = 10. The input is not the output.",
+      "correct_answer": "14",
+      "explanation": "In function notation f(2) means 'apply the rule to the input 2'. So f(2) = 4(2) + 6 = 14. The input is not the output.",
       "difficulty": 3,
       "misconceptions": {
-        "3": "alg.function_substitution"
+        "2": "alg.function_substitution"
       },
       "verify": {
         "kind": "numeric",
-        "expression": "3*(3) + 1"
+        "expression": "4*(2) + 6"
       },
       "source": "procedural",
       "review_status": "auto_validated",
@@ -1707,22 +1706,22 @@
       "subject": "math",
       "topic": "functions",
       "concept": "functions.notation",
-      "question": "If f(x) = 5x + 1, what is f(5)?",
+      "question": "If f(x) = 4x + 7, what is f(6)?",
       "options": [
-        "5",
-        "26",
-        "11",
-        "25"
+        "168",
+        "6",
+        "31",
+        "17"
       ],
-      "correct_answer": "26",
-      "explanation": "In function notation f(5) means 'apply the rule to the input 5'. So f(5) = 5(5) + 1 = 26. The input is not the output.",
+      "correct_answer": "31",
+      "explanation": "In function notation f(6) means 'apply the rule to the input 6'. So f(6) = 4(6) + 7 = 31. The input is not the output.",
       "difficulty": 3,
       "misconceptions": {
-        "5": "alg.function_substitution"
+        "6": "alg.function_substitution"
       },
       "verify": {
         "kind": "numeric",
-        "expression": "5*(5) + 1"
+        "expression": "4*(6) + 7"
       },
       "source": "procedural",
       "review_status": "auto_validated",
@@ -1734,22 +1733,22 @@
       "subject": "math",
       "topic": "functions",
       "concept": "functions.notation",
-      "question": "If f(x) = 6x + 9, what is f(7)?",
+      "question": "If f(x) = 6x + 7, what is f(5)?",
       "options": [
-        "51",
-        "378",
-        "22",
-        "7"
+        "5",
+        "37",
+        "210",
+        "18"
       ],
-      "correct_answer": "51",
-      "explanation": "In function notation f(7) means 'apply the rule to the input 7'. So f(7) = 6(7) + 9 = 51. The input is not the output.",
+      "correct_answer": "37",
+      "explanation": "In function notation f(5) means 'apply the rule to the input 5'. So f(5) = 6(5) + 7 = 37. The input is not the output.",
       "difficulty": 3,
       "misconceptions": {
-        "7": "alg.function_substitution"
+        "5": "alg.function_substitution"
       },
       "verify": {
         "kind": "numeric",
-        "expression": "6*(7) + 9"
+        "expression": "6*(5) + 7"
       },
       "source": "procedural",
       "review_status": "auto_validated",
@@ -1761,22 +1760,22 @@
       "subject": "math",
       "topic": "functions",
       "concept": "functions.notation",
-      "question": "If f(x) = 2x + 4, what is f(4)?",
+      "question": "If f(x) = 2x + 1, what is f(4)?",
       "options": [
-        "12",
+        "9",
+        "8",
         "4",
-        "10",
-        "32"
+        "7"
       ],
-      "correct_answer": "12",
-      "explanation": "In function notation f(4) means 'apply the rule to the input 4'. So f(4) = 2(4) + 4 = 12. The input is not the output.",
+      "correct_answer": "9",
+      "explanation": "In function notation f(4) means 'apply the rule to the input 4'. So f(4) = 2(4) + 1 = 9. The input is not the output.",
       "difficulty": 3,
       "misconceptions": {
         "4": "alg.function_substitution"
       },
       "verify": {
         "kind": "numeric",
-        "expression": "2*(4) + 4"
+        "expression": "2*(4) + 1"
       },
       "source": "procedural",
       "review_status": "auto_validated",
@@ -1788,22 +1787,22 @@
       "subject": "math",
       "topic": "functions",
       "concept": "functions.notation",
-      "question": "If f(x) = 5x + 5, what is f(4)?",
+      "question": "If f(x) = 3x + 3, what is f(7)?",
       "options": [
-        "25",
-        "14",
-        "4",
-        "100"
+        "13",
+        "7",
+        "24",
+        "63"
       ],
-      "correct_answer": "25",
-      "explanation": "In function notation f(4) means 'apply the rule to the input 4'. So f(4) = 5(4) + 5 = 25. The input is not the output.",
+      "correct_answer": "24",
+      "explanation": "In function notation f(7) means 'apply the rule to the input 7'. So f(7) = 3(7) + 3 = 24. The input is not the output.",
       "difficulty": 3,
       "misconceptions": {
-        "4": "alg.function_substitution"
+        "7": "alg.function_substitution"
       },
       "verify": {
         "kind": "numeric",
-        "expression": "5*(4) + 5"
+        "expression": "3*(7) + 3"
       },
       "source": "procedural",
       "review_status": "auto_validated",
@@ -1815,22 +1814,22 @@
       "subject": "math",
       "topic": "functions",
       "concept": "functions.notation",
-      "question": "If f(x) = 6x + 6, what is f(4)?",
+      "question": "If f(x) = 2x + 2, what is f(6)?",
       "options": [
-        "30",
-        "16",
-        "4",
-        "144"
+        "6",
+        "14",
+        "10",
+        "24"
       ],
-      "correct_answer": "30",
-      "explanation": "In function notation f(4) means 'apply the rule to the input 4'. So f(4) = 6(4) + 6 = 30. The input is not the output.",
+      "correct_answer": "14",
+      "explanation": "In function notation f(6) means 'apply the rule to the input 6'. So f(6) = 2(6) + 2 = 14. The input is not the output.",
       "difficulty": 3,
       "misconceptions": {
-        "4": "alg.function_substitution"
+        "6": "alg.function_substitution"
       },
       "verify": {
         "kind": "numeric",
-        "expression": "6*(4) + 6"
+        "expression": "2*(6) + 2"
       },
       "source": "procedural",
       "review_status": "auto_validated",
@@ -1842,22 +1841,22 @@
       "subject": "math",
       "topic": "functions",
       "concept": "functions.notation",
-      "question": "If f(x) = 6x + 4, what is f(2)?",
+      "question": "If f(x) = 3x + 7, what is f(5)?",
       "options": [
-        "12",
-        "16",
-        "2",
-        "48"
+        "22",
+        "105",
+        "15",
+        "5"
       ],
-      "correct_answer": "16",
-      "explanation": "In function notation f(2) means 'apply the rule to the input 2'. So f(2) = 6(2) + 4 = 16. The input is not the output.",
+      "correct_answer": "22",
+      "explanation": "In function notation f(5) means 'apply the rule to the input 5'. So f(5) = 3(5) + 7 = 22. The input is not the output.",
       "difficulty": 3,
       "misconceptions": {
-        "2": "alg.function_substitution"
+        "5": "alg.function_substitution"
       },
       "verify": {
         "kind": "numeric",
-        "expression": "6*(2) + 4"
+        "expression": "3*(5) + 7"
       },
       "source": "procedural",
       "review_status": "auto_validated",
@@ -1869,22 +1868,22 @@
       "subject": "math",
       "topic": "functions",
       "concept": "functions.notation",
-      "question": "If f(x) = 6x + 1, what is f(7)?",
+      "question": "If f(x) = 2x + 6, what is f(3)?",
       "options": [
-        "42",
-        "14",
-        "43",
-        "7"
+        "12",
+        "11",
+        "3",
+        "36"
       ],
-      "correct_answer": "43",
-      "explanation": "In function notation f(7) means 'apply the rule to the input 7'. So f(7) = 6(7) + 1 = 43. The input is not the output.",
+      "correct_answer": "12",
+      "explanation": "In function notation f(3) means 'apply the rule to the input 3'. So f(3) = 2(3) + 6 = 12. The input is not the output.",
       "difficulty": 3,
       "misconceptions": {
-        "7": "alg.function_substitution"
+        "3": "alg.function_substitution"
       },
       "verify": {
         "kind": "numeric",
-        "expression": "6*(7) + 1"
+        "expression": "2*(3) + 6"
       },
       "source": "procedural",
       "review_status": "auto_validated",
@@ -1896,22 +1895,22 @@
       "subject": "math",
       "topic": "functions",
       "concept": "functions.notation",
-      "question": "If f(x) = 3x + 7, what is f(6)?",
+      "question": "If f(x) = 2x + 7, what is f(3)?",
       "options": [
-        "25",
-        "6",
-        "16",
-        "126"
+        "13",
+        "42",
+        "12",
+        "3"
       ],
-      "correct_answer": "25",
-      "explanation": "In function notation f(6) means 'apply the rule to the input 6'. So f(6) = 3(6) + 7 = 25. The input is not the output.",
+      "correct_answer": "13",
+      "explanation": "In function notation f(3) means 'apply the rule to the input 3'. So f(3) = 2(3) + 7 = 13. The input is not the output.",
       "difficulty": 3,
       "misconceptions": {
-        "6": "alg.function_substitution"
+        "3": "alg.function_substitution"
       },
       "verify": {
         "kind": "numeric",
-        "expression": "3*(6) + 7"
+        "expression": "2*(3) + 7"
       },
       "source": "procedural",
       "review_status": "auto_validated",
@@ -1923,22 +1922,22 @@
       "subject": "math",
       "topic": "functions",
       "concept": "functions.notation",
-      "question": "If f(x) = 4x + 4, what is f(6)?",
+      "question": "If f(x) = 6x + 4, what is f(5)?",
       "options": [
-        "14",
-        "96",
-        "6",
-        "28"
+        "120",
+        "34",
+        "15",
+        "5"
       ],
-      "correct_answer": "28",
-      "explanation": "In function notation f(6) means 'apply the rule to the input 6'. So f(6) = 4(6) + 4 = 28. The input is not the output.",
+      "correct_answer": "34",
+      "explanation": "In function notation f(5) means 'apply the rule to the input 5'. So f(5) = 6(5) + 4 = 34. The input is not the output.",
       "difficulty": 3,
       "misconceptions": {
-        "6": "alg.function_substitution"
+        "5": "alg.function_substitution"
       },
       "verify": {
         "kind": "numeric",
-        "expression": "4*(6) + 4"
+        "expression": "6*(5) + 4"
       },
       "source": "procedural",
       "review_status": "auto_validated",
@@ -1950,22 +1949,22 @@
       "subject": "math",
       "topic": "functions",
       "concept": "functions.notation",
-      "question": "If f(x) = 3x + 3, what is f(5)?",
+      "question": "If f(x) = 5x + 1, what is f(3)?",
       "options": [
-        "45",
-        "18",
-        "5",
-        "11"
+        "9",
+        "3",
+        "15",
+        "16"
       ],
-      "correct_answer": "18",
-      "explanation": "In function notation f(5) means 'apply the rule to the input 5'. So f(5) = 3(5) + 3 = 18. The input is not the output.",
+      "correct_answer": "16",
+      "explanation": "In function notation f(3) means 'apply the rule to the input 3'. So f(3) = 5(3) + 1 = 16. The input is not the output.",
       "difficulty": 3,
       "misconceptions": {
-        "5": "alg.function_substitution"
+        "3": "alg.function_substitution"
       },
       "verify": {
         "kind": "numeric",
-        "expression": "3*(5) + 3"
+        "expression": "5*(3) + 1"
       },
       "source": "procedural",
       "review_status": "auto_validated",
@@ -1977,22 +1976,22 @@
       "subject": "math",
       "topic": "functions",
       "concept": "functions.notation",
-      "question": "If f(x) = 2x + 4, what is f(5)?",
+      "question": "If f(x) = 3x + 7, what is f(3)?",
       "options": [
-        "14",
-        "40",
-        "11",
-        "5"
+        "16",
+        "3",
+        "63",
+        "13"
       ],
-      "correct_answer": "14",
-      "explanation": "In function notation f(5) means 'apply the rule to the input 5'. So f(5) = 2(5) + 4 = 14. The input is not the output.",
+      "correct_answer": "16",
+      "explanation": "In function notation f(3) means 'apply the rule to the input 3'. So f(3) = 3(3) + 7 = 16. The input is not the output.",
       "difficulty": 3,
       "misconceptions": {
-        "5": "alg.function_substitution"
+        "3": "alg.function_substitution"
       },
       "verify": {
         "kind": "numeric",
-        "expression": "2*(5) + 4"
+        "expression": "3*(3) + 7"
       },
       "source": "procedural",
       "review_status": "auto_validated",
