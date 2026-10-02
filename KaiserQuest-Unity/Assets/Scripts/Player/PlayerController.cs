@@ -34,6 +34,17 @@ public class PlayerController : MonoBehaviour
     {
         targetPosition = transform.position;
 
+        // An unassigned LayerMask is zero, and a Physics2D query with mask zero
+        // hits nothing at all. Left as-is, an unconfigured player would walk
+        // through keepers and could never open a conversation with one — the game
+        // would look broken in exactly the way that matters. Falling back to the
+        // default raycast layers (everything except Ignore Raycast) makes the
+        // component work out of the box, while a scene that sets the masks keeps
+        // them.
+        if (collisionLayer.value == 0) collisionLayer = Physics2D.DefaultRaycastLayers;
+        if (npcLayer.value == 0) npcLayer = Physics2D.DefaultRaycastLayers;
+        if (interactableLayer.value == 0) interactableLayer = Physics2D.DefaultRaycastLayers;
+
         if (animator == null)
             animator = GetComponent<Animator>();
         if (spriteRenderer == null)

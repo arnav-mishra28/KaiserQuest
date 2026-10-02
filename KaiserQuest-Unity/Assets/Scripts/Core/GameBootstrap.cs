@@ -84,6 +84,11 @@ public class GameBootstrap : MonoBehaviour
         // Auto-discover tilemaps from Grid in scene
         AutoDiscoverTilemaps();
 
+        // Water and trees are painted into the collision tilemap; without a
+        // collider on it, that work is decorative and the player wades through
+        // lakes. Solid it up before anything reads it.
+        MakeCollisionTilemapSolid();
+
         // Generate pixel art tiles
         SetupTiles();
 
@@ -181,6 +186,27 @@ public class GameBootstrap : MonoBehaviour
         obj.AddComponent<Tilemap>();
         TilemapRenderer renderer = obj.AddComponent<TilemapRenderer>();
         renderer.sortingOrder = sortingOrder;
+
+        // The collision tilemap carries the colliders; its tiles exist to be solid,
+        // not to be seen. Drawing them would paint over the water and trees that are
+        // the visible reason the player is being stopped.
+        if (name == "CollisionTilemap")
+        {
+            renderer.enabled = false;
+            obj.AddComponent<TilemapCollider2D>();
+        }
+    }
+
+    /// <summary>Make sure whatever collision tilemap the scene has will actually stop the player.</summary>
+    private void MakeCollisionTilemapSolid()
+    {
+        if (collisionTilemap == null) return;
+
+        if (collisionTilemap.GetComponent<TilemapCollider2D>() == null)
+            collisionTilemap.gameObject.AddComponent<TilemapCollider2D>();
+
+        TilemapRenderer renderer = collisionTilemap.GetComponent<TilemapRenderer>();
+        if (renderer != null) renderer.enabled = false;
     }
 
     private void AutoDiscoverTilemaps()
@@ -210,29 +236,23 @@ public class GameBootstrap : MonoBehaviour
     private void GenerateRuntimeTiles()
     {
         if (PixelSpriteGenerator.Instance == null) return;
-        if (worldGenerator == null) return;
 
-        // Create runtime tiles from generated sprites
-        if (worldGenerator.grassTile == null)
-            worldGenerator.grassTile = CreateTileFromSprite(PixelSpriteGenerator.Instance.GenerateGrassTile());
-        if (worldGenerator.pathTile == null)
-            worldGenerator.pathTile = CreateTileFromSprite(PixelSpriteGenerator.Instance.GeneratePathTile());
-        if (worldGenerator.waterTile == null)
-            worldGenerator.waterTile = CreateTileFromSprite(PixelSpriteGenerator.Instance.GenerateWaterTile());
-        if (worldGenerator.treeTile == null)
-            worldGenerator.treeTile = CreateTileFromSprite(PixelSpriteGenerator.Instance.GenerateTreeTile());
-        if (worldGenerator.wallTile == null)
-            worldGenerator.wallTile = CreateTileFromSprite(PixelSpriteGenerator.Instance.GenerateWallTile());
+        // The palette lives in RuntimeTileset so the collision tile can carry a real
+        // collider (ColliderType.Grid) instead of the None the inline version used —
+        // which made the wall tile invisible *and* inert, so water and trees never
+        // actually stopped anyone.
+        RuntimeTileset.Build();
+        RuntimeTileset.ApplyTo(worldGenerator);
+
+        // Publish the tilemaps: the story decorator paves plazas into them, and it
+        // has no business hunting the scene graph for them by name.
+        ProceduralWorldGeneratorHub.Ground = groundTilemap;
+        ProceduralWorldGeneratorHub.Path = pathTilemap;
+        ProceduralWorldGeneratorHub.Decoration = decorationTilemap;
+        ProceduralWorldGeneratorHub.Water = waterTilemap;
+        ProceduralWorldGeneratorHub.Collision = collisionTilemap;
 
         Debug.Log("[GameBootstrap] Runtime tiles generated.");
-    }
-
-    private UnityEngine.Tilemaps.Tile CreateTileFromSprite(Sprite sprite)
-    {
-        var tile = ScriptableObject.CreateInstance<UnityEngine.Tilemaps.Tile>();
-        tile.sprite = sprite;
-        tile.colliderType = UnityEngine.Tilemaps.Tile.ColliderType.None;
-        return tile;
     }
 
     private void SetupTiles()
@@ -254,9 +274,15 @@ public class GameBootstrap : MonoBehaviour
             playerObj.tag = "Player";
             playerObj.layer = LayerMask.NameToLayer("Default");
 
-            // Add SpriteRenderer
-            SpriteRenderer sr = playerObj.AddComponent<SpriteRenderer>();
-            sr.sortingOrder = 10;
+            // The sprite lives on a child "Body" so the walk bob can move it
+            // without fighting the controller's grid snapping, which owns the root.
+            GameObject bodyObj = new GameObject("Body");
+            bodyObj.transform.SetParent(playerObj.transform, false);
+
+            SpriteRenderer sr = bodyObj.AddComponent<SpriteRenderer>();
+            // Above keepers, shards and monuments, so the player is never hidden
+            // behind the thing they are walking up to.
+            sr.sortingOrder = 12;
 
             // Generate player sprite
             if (PixelSpriteGenerator.Instance != null)
@@ -267,6 +293,7 @@ public class GameBootstrap : MonoBehaviour
             // Add PlayerController
             PlayerController pc = playerObj.AddComponent<PlayerController>();
             pc.spriteRenderer = sr;
+            pc.gridSize = 1f;
 
             // Add Collider
             BoxCollider2D col = playerObj.AddComponent<BoxCollider2D>();
@@ -291,6 +318,14 @@ public class GameBootstrap : MonoBehaviour
             {
                 playerObj.transform.position = Vector3.zero;
             }
+
+            // The body: draws the created appearance, faces the walking direction,
+            // and bobs on the spot while moving.
+            PlayerSpriteAnimator animator = playerObj.AddComponent<PlayerSpriteAnimator>();
+            animator.body = bodyObj.transform;
+
+            // The status plate: who you are, where the campaign has you, and the controls.
+            playerObj.AddComponent<OverworldHUD>();
 
             // Setup camera to follow player
             Camera mainCam = Camera.main;
