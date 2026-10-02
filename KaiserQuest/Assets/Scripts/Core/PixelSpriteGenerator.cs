@@ -488,6 +488,87 @@ public class PixelSpriteGenerator : MonoBehaviour
         return Sprite.Create(tex, new Rect(0, 0, 16, 16), new Vector2(0.5f, 0.5f), pixelsPerUnit);
     }
 
+    /// <summary>
+    /// Generate a milestone monument (24x32 pixels).
+    ///
+    /// Each kind is a different silhouette on purpose: at a glance across a field,
+    /// the shape of the thing on the horizon is what tells the player which chapter
+    /// of the campaign they are walking towards.
+    /// </summary>
+    public Sprite GenerateLandmarkSprite(LandmarkKind kind, Color accent)
+    {
+        Texture2D tex = new Texture2D(24, 32, TextureFormat.RGBA32, false);
+        tex.filterMode = filterMode;
+        FillTexture(tex, Color.clear);
+
+        Color stone = new Color(0.62f, 0.62f, 0.68f);
+        Color stoneDark = new Color(0.44f, 0.44f, 0.5f);
+        Color outline = new Color(0.13f, 0.13f, 0.17f);
+        Color glow = Color.Lerp(accent, Color.white, 0.45f);
+
+        switch (kind)
+        {
+            case LandmarkKind.Beacon:
+                OutlineRect(tex, 9, 2, 6, 20, stone, outline);
+                OutlineRect(tex, 7, 22, 10, 7, accent, outline);
+                DrawRect(tex, 10, 24, 4, 3, glow);
+                DrawRect(tex, 4, 0, 16, 2, stoneDark);
+                break;
+
+            case LandmarkKind.Arch:
+                OutlineRect(tex, 3, 2, 5, 20, stone, outline);
+                OutlineRect(tex, 16, 2, 5, 20, stone, outline);
+                OutlineRect(tex, 3, 22, 18, 6, accent, outline);
+                DrawRect(tex, 6, 25, 12, 1, glow);
+                break;
+
+            case LandmarkKind.Shrine:
+                OutlineRect(tex, 3, 0, 18, 4, stoneDark, outline);
+                OutlineRect(tex, 7, 4, 10, 14, stone, outline);
+                DrawRect(tex, 10, 8, 4, 6, accent);
+                for (int i = 0; i < 7; i++) DrawRect(tex, 6 + i, 18 + i, 12 - i * 2, 1, i >= 6 ? glow : accent);
+                break;
+
+            case LandmarkKind.Grove:
+                TrunkAndCanopy(tex, 11, 1, accent, outline);
+                TrunkAndCanopy(tex, 3, 0, Color.Lerp(accent, stone, 0.3f), outline);
+                TrunkAndCanopy(tex, 18, 0, Color.Lerp(accent, stoneDark, 0.3f), outline);
+                DrawRect(tex, 2, 0, 20, 2, stoneDark);
+                break;
+
+            default: // Tower
+                OutlineRect(tex, 5, 2, 14, 22, stone, outline);
+                OutlineRect(tex, 3, 24, 18, 5, accent, outline);
+                DrawRect(tex, 6, 29, 3, 3, accent);
+                DrawRect(tex, 11, 29, 3, 3, accent);
+                DrawRect(tex, 16, 29, 3, 3, accent);
+                DrawRect(tex, 10, 8, 4, 6, glow);
+                break;
+        }
+
+        tex.Apply();
+        return Sprite.Create(tex, new Rect(0, 0, 24, 32), new Vector2(0.5f, 0f), pixelsPerUnit);
+    }
+
+    /// <summary>Generate a small boulder (12x10) for scattering along the road.</summary>
+    public Sprite GenerateRockSprite()
+    {
+        Texture2D tex = new Texture2D(12, 10, TextureFormat.RGBA32, false);
+        tex.filterMode = filterMode;
+        FillTexture(tex, Color.clear);
+
+        Color body = new Color(0.55f, 0.55f, 0.6f);
+        Color light = new Color(0.68f, 0.68f, 0.73f);
+        Color outline = new Color(0.16f, 0.16f, 0.2f);
+
+        OutlineRect(tex, 1, 0, 10, 7, body, outline);
+        DrawRect(tex, 3, 5, 4, 2, light);
+        DrawRect(tex, 6, 2, 2, 2, light);
+
+        tex.Apply();
+        return Sprite.Create(tex, new Rect(0, 0, 12, 10), new Vector2(0.5f, 0f), pixelsPerUnit);
+    }
+
     // ============================================================
     // UTILITY
     // ============================================================
@@ -498,6 +579,25 @@ public class PixelSpriteGenerator : MonoBehaviour
         for (int i = 0; i < pixels.Length; i++)
             pixels[i] = color;
         tex.SetPixels(pixels);
+    }
+
+    private static void OutlineRect(Texture2D tex, int x, int y, int width, int height, Color fill, Color outline)
+    {
+        for (int px = x; px < x + width; px++)
+        {
+            for (int py = y; py < y + height; py++)
+            {
+                if (px < 0 || py < 0 || px >= tex.width || py >= tex.height) continue;
+                bool edge = px == x || py == y || px == x + width - 1 || py == y + height - 1;
+                tex.SetPixel(px, py, edge ? outline : fill);
+            }
+        }
+    }
+
+    private void TrunkAndCanopy(Texture2D tex, int x, int y, Color canopy, Color outline)
+    {
+        OutlineRect(tex, x + 1, y, 2, 6, new Color(0.36f, 0.26f, 0.16f), outline);
+        OutlineRect(tex, x, y + 5, 4, 5, canopy, outline);
     }
 
     private void DrawRect(Texture2D tex, int x, int y, int width, int height, Color color)

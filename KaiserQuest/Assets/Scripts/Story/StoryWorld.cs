@@ -227,6 +227,10 @@ public class KaiserWorldPopulator : MonoBehaviour
             SpawnArchivist(_root.transform, cities[cities.Count - 1].position + new Vector2(0f, 3f));
         }
 
+        // Landmarks, plazas and scenery: the campaign made visible on the ground,
+        // so the player can see which way the story goes before walking it.
+        OverworldDecor.Decorate(_root.transform, realm, milestones, cities);
+
         // A resumed story wakes where it was left — at the save point, by its keeper.
         if (player != null && story.Save != null && story.Save.savePoint != null)
         {
@@ -234,7 +238,11 @@ public class KaiserWorldPopulator : MonoBehaviour
             if (index < cities.Count)
             {
                 Vector2 home = cities[index].position;
-                player.position = new Vector3(home.x, home.y - 2f, 0f);
+                Vector2 bed = home + new Vector2(0f, -2f);
+                // The player is placed, not walked, so the ground under them must be
+                // clear before they arrive — a wake-up inside a lake is a softlock.
+                OverworldDecor.ClearGround(bed, 1);
+                player.position = new Vector3(bed.x, bed.y, 0f);
                 Debug.Log("[KaiserWorld] " + story.Save.playerName + " wakes at "
                           + story.Save.savePoint.place + ".");
             }
@@ -246,6 +254,9 @@ public class KaiserWorldPopulator : MonoBehaviour
 
     private static void SpawnKeeper(Transform parent, Milestone milestone, string realm, Vector2 position)
     {
+        // A keeper the player cannot reach is a milestone they cannot enter.
+        OverworldDecor.ClearGround(position, 1);
+
         GameObject keeperObj = new GameObject("Keeper_M" + milestone.Index.ToString("00") + "_" + milestone.Keeper);
         keeperObj.transform.SetParent(parent, false);
         keeperObj.transform.position = new Vector3(position.x, position.y, 0f);
@@ -270,6 +281,8 @@ public class KaiserWorldPopulator : MonoBehaviour
 
     private static void SpawnSaveShard(Transform parent, Milestone milestone, string realm, Vector2 position)
     {
+        OverworldDecor.ClearGround(position, 1);
+
         GameObject shardObj = new GameObject("SavePoint_M" + milestone.Index.ToString("00"));
         shardObj.transform.SetParent(parent, false);
         shardObj.transform.position = new Vector3(position.x, position.y, 0f);
@@ -289,6 +302,8 @@ public class KaiserWorldPopulator : MonoBehaviour
 
     private static void SpawnArchivist(Transform parent, Vector2 position)
     {
+        OverworldDecor.ClearGround(position, 1);
+
         GameObject archivistObj = new GameObject("Archivist");
         archivistObj.transform.SetParent(parent, false);
         archivistObj.transform.position = new Vector3(position.x, position.y, 0f);
@@ -360,7 +375,11 @@ public class KaiserWorldPopulator : MonoBehaviour
             float distance = Vector2.Distance(nearby[i].transform.position, playerObj.transform.position);
             if (distance < best) { best = distance; nearest = candidate; }
         }
-        if (nearest == null) return;
+        if (nearest == null)
+        {
+            ShowPlaceName(playerObj);
+            return;
+        }
 
         string label;
         if (nearest is MilestoneKeeper) label = "Z \u2014 speak with " + ((MilestoneKeeper)nearest).keeperName;
@@ -369,6 +388,31 @@ public class KaiserWorldPopulator : MonoBehaviour
         else return;
 
         GUI.Box(new Rect((Screen.width - 320f) / 2f, Screen.height - 64f, 320f, 30f), label);
+    }
+
+    /// <summary>
+    /// With nothing to interact with, name the place. Walking past a monument and
+    /// being told "Belhaven — Milestone 4" is what turns scenery into a map.
+    /// </summary>
+    private static void ShowPlaceName(GameObject playerObj)
+    {
+        Collider2D[] nearby = Physics2D.OverlapCircleAll(playerObj.transform.position, 4.5f);
+        Landmark closest = null;
+        float best = float.MaxValue;
+
+        for (int i = 0; i < nearby.Length; i++)
+        {
+            Landmark landmark = nearby[i].GetComponent<Landmark>();
+            if (landmark == null) continue;
+
+            float distance = Vector2.Distance(nearby[i].transform.position, playerObj.transform.position);
+            if (distance < best) { best = distance; closest = landmark; }
+        }
+
+        if (closest == null) return;
+
+        GUI.Box(new Rect((Screen.width - 360f) / 2f, Screen.height - 92f, 360f, 26f),
+                closest.placeName + "  ·  Milestone " + closest.milestoneIndex);
     }
 }
 
@@ -382,4 +426,13 @@ public class KaiserWorldPopulator : MonoBehaviour
 public static class ProceduralWorldGeneratorHub
 {
     public static List<GeneratedCity> Cities { get; set; }
+
+    //: The tilemaps the world was generated into. The bootstrap owns them, the
+    //: decorator needs them to pave plazas, so they are published here rather
+    //: than searched for by name (which breaks the moment a scene renames one).
+    public static UnityEngine.Tilemaps.Tilemap Ground { get; set; }
+    public static UnityEngine.Tilemaps.Tilemap Path { get; set; }
+    public static UnityEngine.Tilemaps.Tilemap Decoration { get; set; }
+    public static UnityEngine.Tilemaps.Tilemap Water { get; set; }
+    public static UnityEngine.Tilemaps.Tilemap Collision { get; set; }
 }
