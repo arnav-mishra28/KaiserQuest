@@ -505,6 +505,33 @@ class ContentPipeline:
                 json.dump(payload, handle, indent=2, ensure_ascii=False)
             written.append(f"Questions/{name}")
 
+        # The bank files are named by *subject* ('math'), while the campaign is
+        # played by *realm* ('algebra'). Those are different words for related
+        # things, and a client cannot derive one from the other — the game shipped
+        # once loading `bank_algebra.json`, finding nothing, and refusing every
+        # trial for want of questions. So the mapping is derived here from the
+        # content itself and published beside it, declared once instead of
+        # guessed at by every client that wants to read a bank.
+        realm_subjects: Dict[str, set] = {}
+        for question in questions:
+            concept_id = str(question.get("concept") or "")
+            subject = str(question.get("subject") or "")
+            if not concept_id or not subject or not self.graph.has_concept(concept_id):
+                continue
+            realm = self.graph.concept(concept_id).realm
+            if realm:
+                realm_subjects.setdefault(realm, set()).add(subject)
+
+        banks_map = {
+            "realms": [
+                {"realm": realm, "subjects": sorted(subjects)}
+                for realm, subjects in sorted(realm_subjects.items())
+            ]
+        }
+        with open(knowledge_dir / "banks.json", "w", encoding="utf-8") as handle:
+            json.dump(banks_map, handle, indent=2, ensure_ascii=False)
+        written.append("Knowledge/banks.json")
+
         logger.info("Exported %d questions for the Unity client into %s", len(questions), target_dir)
         return written
 

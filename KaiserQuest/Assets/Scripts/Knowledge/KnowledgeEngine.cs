@@ -51,8 +51,16 @@ namespace KaiserQuest.Knowledge
         public string conceptGraphPath = "Knowledge/concepts";
         public string misconceptionPath = "Knowledge/misconceptions";
 
-        [Header("Bank paths per realm id")]
+        [Header("Bank paths")]
         public string bankPathPrefix = "Questions/bank_";
+
+        /// <summary>
+        /// Which bank file holds each realm's questions, exported by the content
+        /// pipeline. Banks are named by subject ('math') and realms are named by
+        /// campaign ('algebra'), so this is the only place that knows the two are
+        /// the same material.
+        /// </summary>
+        public string bankMapPath = "Knowledge/banks";
 
         public ConceptGraph Graph { get; private set; }
         public MisconceptionDetector Detector { get; private set; }
@@ -96,6 +104,16 @@ namespace KaiserQuest.Knowledge
 
             Debug.Log("[KnowledgeEngine] Loaded " + Graph.ConceptCount + " concepts, "
                       + _bankSize + " questions, " + Detector.Count + " misconceptions.");
+
+            // No questions means no trial can start anywhere in the campaign: the
+            // player can create a character and walk the world, and then every
+            // keeper turns them away. Say so once, loudly, at the point it happens.
+            if (_bankSize == 0)
+            {
+                Debug.LogError("[KnowledgeEngine] No questions loaded at all — every trial will "
+                               + "refuse to start. Run the content pipeline so Resources/"
+                               + bankPathPrefix + "*.json and Resources/" + bankMapPath + ".json exist.");
+            }
         }
 
         private void LoadBanks()
@@ -105,40 +123,63 @@ namespace KaiserQuest.Knowledge
             _bankSize = 0;
             if (Graph == null) return;
 
+            BankMap map = LoadJson<BankMap>(bankMapPath);
+            HashSet<string> loaded = new HashSet<string>();
+
             for (int r = 0; r < Graph.Realms.Count; r++)
             {
                 RealmData realm = Graph.Realms[r];
                 if (realm == null) continue;
 
-                BankFile bank = LoadJson<BankFile>(bankPathPrefix + realm.id);
-                if (bank == null || bank.questions == null)
+                List<string> subjects = map != null ? map.SubjectsFor(realm.id) : null;
+                // Without a published mapping, a realm named like its bank still
+                // works — that is how this read before the mapping existed.
+                if (subjects == null || subjects.Count == 0) subjects = new List<string> { realm.id };
+
+                for (int s = 0; s < subjects.Count; s++)
                 {
-                    Debug.LogWarning("[KnowledgeEngine] No question bank found for realm '" + realm.id
-                                     + "'. Run the content pipeline to export one.");
-                    continue;
-                }
+                    string subject = subjects[s];
+                    // Two realms may share a bank; read each file once.
+                    if (!loaded.Add(subject)) continue;
 
-                for (int q = 0; q < bank.questions.Count; q++)
-                {
-                    BankQuestion question = bank.questions[q];
-                    if (question == null) continue;
-                    _bankSize++;
-
-                    if (!string.IsNullOrEmpty(question.id)) _byId[question.id] = question;
-
-                    string concept = question.concept;
-                    if (string.IsNullOrEmpty(concept))
-                        concept = Graph.TagText(question.question, question.topic);
-                    if (string.IsNullOrEmpty(concept)) continue;
-
-                    List<BankQuestion> list;
-                    if (!_byConcept.TryGetValue(concept, out list))
+                    BankFile bank = LoadJson<BankFile>(bankPathPrefix + subject);
+                    if (bank == null || bank.questions == null)
                     {
-                        list = new List<BankQuestion>();
-                        _byConcept[concept] = list;
+                        // An error, not a warning: an empty bank is not a missing
+                        // nicety, it is a campaign nobody can play.
+                        Debug.LogError("[KnowledgeEngine] No question bank at Resources/"
+                                       + bankPathPrefix + subject + " for realm '" + realm.id
+                                       + "'. Run the content pipeline to export it.");
+                        continue;
                     }
-                    list.Add(question);
+
+                    IndexBank(bank);
                 }
+            }
+        }
+
+        private void IndexBank(BankFile bank)
+        {
+            for (int q = 0; q < bank.questions.Count; q++)
+            {
+                BankQuestion question = bank.questions[q];
+                if (question == null) continue;
+                _bankSize++;
+
+                if (!string.IsNullOrEmpty(question.id)) _byId[question.id] = question;
+
+                string concept = question.concept;
+                if (string.IsNullOrEmpty(concept))
+                    concept = Graph.TagText(question.question, question.topic);
+                if (string.IsNullOrEmpty(concept)) continue;
+
+                List<BankQuestion> list;
+                if (!_byConcept.TryGetValue(concept, out list))
+                {
+                    list = new List<BankQuestion>();
+                    _byConcept[concept] = list;
+                }
+                list.Add(question);
             }
         }
 

@@ -139,6 +139,41 @@ namespace KaiserQuest.Knowledge
         public List<BankQuestion> questions = new List<BankQuestion>();
     }
 
+    /// <summary>Which bank file(s) hold one realm's questions.</summary>
+    [Serializable]
+    public class RealmBankEntry
+    {
+        public string realm;
+        public List<string> subjects = new List<string>();
+    }
+
+    /// <summary>
+    /// The realm-to-bank mapping, exported by the content pipeline as
+    /// `Knowledge/banks.json`.
+    ///
+    /// Banks are named by subject ('math') and campaigns are played by realm
+    /// ('algebra'), and the client cannot work out one from the other. The game
+    /// shipped once looking for `bank_algebra.json`, finding nothing, and refusing
+    /// every trial for want of questions; this file is what stops that recurring —
+    /// the mapping is content, so the content declares it.
+    /// </summary>
+    [Serializable]
+    public class BankMap
+    {
+        public List<RealmBankEntry> realms = new List<RealmBankEntry>();
+
+        public List<string> SubjectsFor(string realmId)
+        {
+            if (string.IsNullOrEmpty(realmId)) return null;
+
+            for (int i = 0; i < realms.Count; i++)
+            {
+                if (realms[i] != null && realms[i].realm == realmId) return realms[i].subjects;
+            }
+            return null;
+        }
+    }
+
     /// <summary>Persisted knowledge state for one concept.</summary>
     [Serializable]
     public class ConceptKnowledgeData

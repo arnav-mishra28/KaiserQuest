@@ -1,0 +1,24 @@
+{
+  "realms": [
+    {
+      "realm": "algebra",
+      "subjects": [
+        "math"
+      ]
+    },
+    {
+      "realm": "english",
+      "subjects": [
+        "english",
+        "math"
+      ]
+    },
+    {
+      "realm": "music",
+      "subjects": [
+        "math",
+        "music"
+      ]
+    }
+  ]
+}

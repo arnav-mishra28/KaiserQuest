@@ -124,6 +124,23 @@ namespace KaiserQuest.Story
                     + "have nothing to ask.");
                 return;
             }
+
+            // Ready only means the graph and a save are in hand. A graph with no
+            // questions behind it is a campaign that lets the player create a
+            // character and then refuses every keeper — better said on the first
+            // screen than discovered at the first trial.
+            KnowledgeEngine engine = KnowledgeEngine.Instance;
+            if (engine != null && engine.BankSize == 0)
+            {
+                Debug.LogWarning("[StoryUI] The question banks are empty — no trial can start.");
+                ShowContentMissing(
+                    "The concept graph loaded, but no questions came with it, so no milestone could be "
+                    + "examined and every keeper would turn you away. The verified banks are missing from "
+                    + "Assets/Resources/Questions/ (or the realm-to-bank mapping is missing from "
+                    + "Assets/Resources/Knowledge/). Run the content pipeline, then press Try again.");
+                return;
+            }
+
             if (Story.HasSave(Story.saveSlotId))
             {
                 ShowTitle();
