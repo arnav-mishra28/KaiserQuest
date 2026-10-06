@@ -274,7 +274,7 @@
       "review_status": "human_authored",
       "concept": "writing.tone",
       "expected_time_ms": 4832.0,
-      "estimated_difficulty": 3
+      "estimated_difficulty": 4
     },
     {
       "id": "eng_writ_002",

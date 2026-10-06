@@ -2102,7 +2102,7 @@
       "source": "procedural",
       "review_status": "auto_validated",
       "expected_time_ms": 5000.0,
-      "estimated_difficulty": 3
+      "estimated_difficulty": 4
     },
     {
       "id": "gen_quadratics_zero_product_002",

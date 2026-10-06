@@ -518,7 +518,7 @@
       "source": "procedural",
       "review_status": "auto_validated",
       "expected_time_ms": 4776.0,
-      "estimated_difficulty": 2
+      "estimated_difficulty": 3
     },
     {
       "id": "gen_expressions_factor_common_005",

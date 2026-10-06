@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-01T08:00:01+00:00",
-  "curated_in": 375,
-  "curated_accepted": 375,
+  "generated_at": "2026-10-06T04:50:56+00:00",
+  "curated_in": 380,
+  "curated_accepted": 380,
   "generated": 581,
   "generated_accepted": 581,
   "quarantined": 0,
@@ -80,7 +80,7 @@
     "variables.constants": 18,
     "variables.evaluate": 29,
     "variables.expressions": 18,
-    "variables.meaning": 3,
+    "variables.meaning": 8,
     "variables.substitution": 17,
     "vocab.affixes": 6,
     "vocab.connotation": 6,
@@ -159,14 +159,6 @@
       "name": "Coordination and subordination",
       "realm": "english",
       "domain": "sentence_structure",
-      "questions": 3,
-      "generatable": false
-    },
-    {
-      "concept": "variables.meaning",
-      "name": "A letter can stand for a number",
-      "realm": "algebra",
-      "domain": "variables",
       "questions": 3,
       "generatable": false
     },
@@ -292,42 +284,42 @@
     }
   ],
   "estimator": {
-    "samples": 375,
+    "samples": 380,
     "backend": "Ridge",
-    "mae": 0.7407,
+    "mae": 0.7359,
     "coefficients": {
-      "length_chars": 0.003,
-      "option_count": 0.3309,
-      "operator_count": -0.124,
-      "max_number_log": -0.0615,
-      "has_fraction": -0.0669,
-      "has_variable": 0.3136,
-      "has_negative": 0.0223,
+      "length_chars": 0.0024,
+      "option_count": 0.3316,
+      "operator_count": -0.1242,
+      "max_number_log": -0.0645,
+      "has_fraction": -0.0598,
+      "has_variable": 0.314,
+      "has_negative": 0.0263,
       "is_word_problem": 0.0,
-      "reasoning_cue": -0.4042,
-      "concept_level": 0.7655
+      "reasoning_cue": -0.4017,
+      "concept_level": 0.7693
     }
   },
   "difficulty_distribution": {
     "curated_human_labels": {
-      "1": 83,
-      "2": 110,
+      "1": 87,
+      "2": 111,
       "3": 100,
       "4": 51,
       "5": 31
     },
     "curated_estimated": {
-      "1": 34,
+      "1": 39,
       "2": 118,
-      "3": 173,
-      "4": 50,
+      "3": 168,
+      "4": 55,
       "5": 0
     },
     "generated_estimated": {
       "1": 15,
-      "2": 105,
-      "3": 279,
-      "4": 168,
+      "2": 104,
+      "3": 282,
+      "4": 166,
       "5": 14
     }
   },
@@ -347,20 +339,20 @@
     {
       "question": "What is the difference between 'restrictive' and 'nonrestrictive' clauses?",
       "human_difficulty": 5,
-      "estimated_difficulty": 2.13,
-      "delta": -2.87
+      "estimated_difficulty": 2.1,
+      "delta": -2.9
     },
     {
       "question": "'Neither the teacher nor the students ___ ready.' Fill in the blank.",
       "human_difficulty": 4,
-      "estimated_difficulty": 1.34,
-      "delta": -2.66
+      "estimated_difficulty": 1.32,
+      "delta": -2.68
     },
     {
       "question": "If f(x) = x³ - 1, what is f(2)?",
       "human_difficulty": 5,
-      "estimated_difficulty": 2.59,
-      "delta": -2.41
+      "estimated_difficulty": 2.6,
+      "delta": -2.4
     },
     {
       "question": "What is the I-IV-V-I chord progression in C major?",
@@ -371,44 +363,44 @@
     {
       "question": "What is an elliptical sentence?",
       "human_difficulty": 5,
-      "estimated_difficulty": 2.76,
-      "delta": -2.24
+      "estimated_difficulty": 2.77,
+      "delta": -2.23
     },
     {
       "question": "If f(x) = sin(x), what is the period of f?",
       "human_difficulty": 5,
-      "estimated_difficulty": 2.8,
-      "delta": -2.2
+      "estimated_difficulty": 2.79,
+      "delta": -2.21
     },
     {
       "question": "Solve: (x - 1)(x + 4) = 0. What are the values of x?",
+      "human_difficulty": 5,
+      "estimated_difficulty": 2.81,
+      "delta": -2.19
+    },
+    {
+      "question": "What is the end behavior of f(x) = -x³ + 2x as x → ∞?",
       "human_difficulty": 5,
       "estimated_difficulty": 2.82,
       "delta": -2.18
     },
     {
-      "question": "What is the end behavior of f(x) = -x³ + 2x as x → ∞?",
+      "question": "What is a half-diminished 7th chord?",
       "human_difficulty": 5,
       "estimated_difficulty": 2.83,
       "delta": -2.17
     },
     {
-      "question": "What is a half-diminished 7th chord?",
-      "human_difficulty": 5,
-      "estimated_difficulty": 2.84,
-      "delta": -2.16
-    },
-    {
       "question": "In concert pitch, what note does a B♭ trumpet play to sound a C?",
       "human_difficulty": 5,
-      "estimated_difficulty": 2.86,
-      "delta": -2.14
+      "estimated_difficulty": 2.85,
+      "delta": -2.15
     },
     {
       "question": "What is mixed meter?",
       "human_difficulty": 4,
-      "estimated_difficulty": 1.96,
-      "delta": -2.04
+      "estimated_difficulty": 1.97,
+      "delta": -2.03
     },
     {
       "question": "What is a participial phrase?",

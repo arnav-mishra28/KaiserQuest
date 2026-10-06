@@ -11,8 +11,8 @@
     "variables.substitution"
   ],
   "counts": {
-    "total": 85,
-    "curated": 25,
+    "total": 90,
+    "curated": 30,
     "generated": 60
   },
   "questions": [
@@ -474,6 +474,147 @@
       "review_status": "human_authored",
       "concept": "variables.meaning",
       "expected_time_ms": 5336.0,
+      "estimated_difficulty": 1
+    },
+    {
+      "id": "math_var_101",
+      "question": "In the equation n + n = 14, the letter n stands for one number. What is that number?",
+      "options": [
+        "7",
+        "12",
+        "14",
+        "28"
+      ],
+      "correct_answer": "7",
+      "explanation": "Two copies of the same unknown make 14, so one copy is half of 14: n = 7, because 7 + 7 = 14.",
+      "difficulty": 1,
+      "concept": "variables.meaning",
+      "misconceptions": {
+        "14": "alg.variable_is_whole_total"
+      },
+      "verify": {
+        "kind": "linear_solution",
+        "equation": "2*n=14",
+        "variable": "n"
+      },
+      "subject": "math",
+      "topic": "variables",
+      "source": "curated",
+      "review_status": "human_authored",
+      "expected_time_ms": 6652.0,
+      "estimated_difficulty": 1
+    },
+    {
+      "id": "math_var_102",
+      "question": "In the expression 3x + 4, what does the x stand for?",
+      "options": [
+        "A number we do not know yet",
+        "A fixed number that never changes",
+        "The number 3",
+        "The answer to the expression"
+      ],
+      "correct_answer": "A number we do not know yet",
+      "explanation": "A letter in algebra is a placeholder for a number. In 3x + 4 the x is a number we have not been told, and the 3 is how many copies of it there are.",
+      "difficulty": 1,
+      "concept": "variables.meaning",
+      "misconceptions": {
+        "The answer to the expression": "alg.variable_is_label"
+      },
+      "verify": {
+        "kind": "one_of",
+        "acceptable": [
+          "A number we do not know yet"
+        ]
+      },
+      "subject": "math",
+      "topic": "variables",
+      "source": "curated",
+      "review_status": "human_authored",
+      "expected_time_ms": 5756.0,
+      "estimated_difficulty": 1
+    },
+    {
+      "id": "math_var_103",
+      "question": "Which sentence says what a letter in an expression actually means?",
+      "options": [
+        "It stands for a number",
+        "It stands for a word",
+        "It is always zero",
+        "It is the name of the object beside it"
+      ],
+      "correct_answer": "It stands for a number",
+      "explanation": "A letter is a number in disguise. It is not the name of anything, and it is not always zero — it is a number you have not been told yet.",
+      "difficulty": 1,
+      "concept": "variables.meaning",
+      "misconceptions": {
+        "It stands for a word": "alg.variable_is_label",
+        "It is the name of the object beside it": "alg.variable_is_label"
+      },
+      "verify": {
+        "kind": "one_of",
+        "acceptable": [
+          "It stands for a number"
+        ]
+      },
+      "subject": "math",
+      "topic": "variables",
+      "source": "curated",
+      "review_status": "human_authored",
+      "expected_time_ms": 6148.0,
+      "estimated_difficulty": 1
+    },
+    {
+      "id": "math_var_104",
+      "question": "In x + x, both letters are the same number. The total is 10. What is x?",
+      "options": [
+        "2",
+        "5",
+        "10",
+        "20"
+      ],
+      "correct_answer": "5",
+      "explanation": "Both x's are the same number, and together they make 10 — so one x is 5, because 5 + 5 = 10.",
+      "difficulty": 1,
+      "concept": "variables.meaning",
+      "misconceptions": {
+        "10": "alg.variable_is_whole_total"
+      },
+      "verify": {
+        "kind": "linear_solution",
+        "equation": "x+x=10",
+        "variable": "x"
+      },
+      "subject": "math",
+      "topic": "variables",
+      "source": "curated",
+      "review_status": "human_authored",
+      "expected_time_ms": 6288.0,
+      "estimated_difficulty": 1
+    },
+    {
+      "id": "math_var_105",
+      "question": "In a + b = 10, what must be true of a and b?",
+      "options": [
+        "They can be different numbers that add to 10",
+        "They must both be 5",
+        "They must be the same number",
+        "They have no value at all"
+      ],
+      "correct_answer": "They can be different numbers that add to 10",
+      "explanation": "Different letters can stand for different numbers. The only thing the equation fixes is their total: any two numbers that add to 10 will do.",
+      "difficulty": 2,
+      "concept": "variables.meaning",
+      "verify": {
+        "kind": "one_of",
+        "acceptable": [
+          "They can be different numbers that add to 10"
+        ]
+      },
+      "subject": "math",
+      "topic": "variables",
+      "source": "curated",
+      "review_status": "human_authored",
+      "expected_time_ms": 5532.0,
       "estimated_difficulty": 1
     },
     {

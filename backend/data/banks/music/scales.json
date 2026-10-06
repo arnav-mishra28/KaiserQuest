@@ -93,7 +93,7 @@
       "review_status": "human_authored",
       "concept": "scales.degrees",
       "expected_time_ms": 4804.0,
-      "estimated_difficulty": 3
+      "estimated_difficulty": 4
     },
     {
       "id": "mus_scale_024",

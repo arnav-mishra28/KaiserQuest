@@ -13,6 +13,30 @@
       "severity": 4
     },
     {
+      "id": "alg.variable_is_label",
+      "name": "The letter is treated as a label rather than a number",
+      "concept": "variables.meaning",
+      "pattern": "Reads a letter as a name for something in the question — a word, an object, or the answer — instead of as a number that is not yet known.",
+      "remedy": "A letter in algebra is a number you do not know yet. It is never a label for the object beside it. When you meet x, say to yourself: 'some number'.",
+      "drills": [
+        "variables.meaning",
+        "variables.substitution"
+      ],
+      "severity": 4
+    },
+    {
+      "id": "alg.variable_is_whole_total",
+      "name": "The letter is left holding the whole total",
+      "concept": "variables.meaning",
+      "pattern": "Given two copies of the same unknown and their total, answers with the total itself rather than halving it.",
+      "remedy": "Two copies of the letter make the total, so one copy is half of it: n + n = 14 means n is 7, because 7 + 7 is 14. Say the equation out loud with your answer in it to check.",
+      "drills": [
+        "variables.constants",
+        "linear.one_step"
+      ],
+      "severity": 4
+    },
+    {
       "id": "alg.inverse_operation_wrong",
       "name": "Applying the same operation instead of the inverse",
       "concept": "linear.one_step",

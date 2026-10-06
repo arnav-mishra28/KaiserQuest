@@ -847,7 +847,7 @@
       "source": "procedural",
       "review_status": "auto_validated",
       "expected_time_ms": 6792.0,
-      "estimated_difficulty": 4
+      "estimated_difficulty": 3
     },
     {
       "id": "gen_word_rates_005",
@@ -997,7 +997,7 @@
       "source": "procedural",
       "review_status": "auto_validated",
       "expected_time_ms": 6792.0,
-      "estimated_difficulty": 4
+      "estimated_difficulty": 3
     },
     {
       "id": "gen_word_rates_011",
@@ -1122,7 +1122,7 @@
       "source": "procedural",
       "review_status": "auto_validated",
       "expected_time_ms": 6792.0,
-      "estimated_difficulty": 4
+      "estimated_difficulty": 3
     },
     {
       "id": "gen_word_translate_001",

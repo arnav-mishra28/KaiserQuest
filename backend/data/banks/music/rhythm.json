@@ -453,7 +453,7 @@
       "review_status": "human_authored",
       "concept": "rhythm.syncopation",
       "expected_time_ms": 4860.0,
-      "estimated_difficulty": 3
+      "estimated_difficulty": 4
     },
     {
       "id": "mus_rhy_016",
@@ -473,7 +473,7 @@
       "review_status": "human_authored",
       "concept": "rhythm.syncopation",
       "expected_time_ms": 4804.0,
-      "estimated_difficulty": 3
+      "estimated_difficulty": 4
     },
     {
       "id": "mus_rhy_019",
@@ -493,7 +493,7 @@
       "review_status": "human_authored",
       "concept": "rhythm.syncopation",
       "expected_time_ms": 4832.0,
-      "estimated_difficulty": 3
+      "estimated_difficulty": 4
     },
     {
       "id": "mus_rhy_024",
