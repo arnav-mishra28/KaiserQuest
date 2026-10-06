@@ -147,6 +147,9 @@ namespace KaiserQuest.Story
                 if (data.realms == null) data.realms = new List<RealmProgressData>();
                 if (data.mountains == null) data.mountains = new List<SilverMountainData>();
                 if (data.recentQuestionIds == null) data.recentQuestionIds = new List<string>();
+                // A save written before the world's flags existed has none. An absent
+                // list is an empty list, not a corrupt save.
+                if (data.storyFlags == null) data.storyFlags = new List<string>();
                 return data;
             }
             catch (Exception error)

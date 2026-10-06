@@ -188,6 +188,12 @@ namespace KaiserQuest.Story
         public List<SilverMountainData> mountains = new List<SilverMountainData>();
         public List<string> recentQuestionIds = new List<string>();
 
+        //: Things that happened to the world rather than to the curriculum — a gate
+        //: that was opened, a quest that was started. Kept here rather than in a
+        //: second store, because two places to remember the same journey are two
+        //: places that can disagree about it.
+        public List<string> storyFlags = new List<string>();
+
         public RealmProgressData RealmProgress(string realmId)
         {
             for (int i = 0; i < realms.Count; i++) if (realms[i].realm == realmId) return realms[i];
