@@ -402,7 +402,7 @@ namespace KaiserQuest.Story
                 "Kaiserland \u2014 the Numeric Marches",
                 new string[]
                 {
-                    "Origin Village", "the stone bridge over the Axiom", "Equaton",
+                    "Aster Town", "the stone bridge over the Axiom", "Equaton",
                     "the Ruins of the Variable", "Functionburg", "the Ledger House",
                     "Graphton", "the Long Climb", "Polynova", "Quadralis",
                     "the Vault of Riddles", "the Craft Hall", "the House of Errors",
@@ -436,7 +436,7 @@ namespace KaiserQuest.Story
                 "Kaiserland \u2014 the Plain of Tongues",
                 new string[]
                 {
-                    "Greywater", "the Mended Message Inn", "Eloqua", "the Ruins of the Sentence",
+                    "Aster Town", "the Mended Message Inn", "Eloqua", "the Ruins of the Sentence",
                     "the Tongue-Mart", "the Scriptorium", "Inkfield", "the Long Climb",
                     "the Relay Road", "the Halfway Hall", "the Vault of Riddles",
                     "the Scriptorium Deep", "the House of Misprints", "the Court of Register",
@@ -469,7 +469,7 @@ namespace KaiserQuest.Story
                 "Kaiserland \u2014 the Resonant Valleys",
                 new string[]
                 {
-                    "Hollow Sound", "the Dissonant Village", "Fortissimo", "the Ruins of the Scale",
+                    "Aster Town", "the Dissonant Village", "Fortissimo", "the Ruins of the Scale",
                     "the Song-Market", "the Composer's Hall", "Chordwell", "the Long Climb",
                     "the Relay Road", "the Halfway Concert Hall", "the Vault of Riddles",
                     "the Craft Hall of Instruments", "the House of Wrong Notes",

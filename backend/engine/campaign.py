@@ -363,7 +363,7 @@ REALM_FLAVOR: Dict[str, RealmFlavor] = {
         realm="algebra",
         region="Kaiserland — the Numeric Marches",
         places=(
-            "Origin Village", "the stone bridge over the Axiom", "Equaton",
+            "Aster Town", "the stone bridge over the Axiom", "Equaton",
             "the Ruins of the Variable", "Functionburg", "the Ledger House",
             "Graphton", "the Long Climb", "Polynova", "Quadralis",
             "the Vault of Riddles", "the Craft Hall", "the House of Errors",
@@ -394,7 +394,7 @@ REALM_FLAVOR: Dict[str, RealmFlavor] = {
         realm="english",
         region="Kaiserland — the Plain of Tongues",
         places=(
-            "Greywater", "the Mended Message Inn", "Eloqua", "the Ruins of the Sentence",
+            "Aster Town", "the Mended Message Inn", "Eloqua", "the Ruins of the Sentence",
             "the Tongue-Mart", "the Scriptorium", "Inkfield", "the Long Climb",
             "the Relay Road", "the Halfway Hall", "the Vault of Riddles",
             "the Scriptorium Deep", "the House of Misprints", "the Court of Register",
@@ -424,7 +424,7 @@ REALM_FLAVOR: Dict[str, RealmFlavor] = {
         realm="music",
         region="Kaiserland — the Resonant Valleys",
         places=(
-            "Hollow Sound", "the Dissonant Village", "Fortissimo", "the Ruins of the Scale",
+            "Aster Town", "the Dissonant Village", "Fortissimo", "the Ruins of the Scale",
             "the Song-Market", "the Composer's Hall", "Chordwell", "the Long Climb",
             "the Relay Road", "the Halfway Concert Hall", "the Vault of Riddles",
             "the Craft Hall of Instruments", "the House of Wrong Notes",
