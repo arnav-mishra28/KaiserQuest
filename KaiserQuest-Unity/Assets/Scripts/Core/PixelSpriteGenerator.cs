@@ -569,6 +569,75 @@ public class PixelSpriteGenerator : MonoBehaviour
         return Sprite.Create(tex, new Rect(0, 0, 12, 10), new Vector2(0.5f, 0f), pixelsPerUnit);
     }
 
+    /// <summary>
+    /// A wooden signpost (12x16): a board on a post.
+    ///
+    /// Small and readable at a distance on purpose — a settlement where the player
+    /// can see there is something to read is a settlement that invites walking
+    /// around it.
+    /// </summary>
+    public Sprite GenerateSignSprite()
+    {
+        Texture2D tex = new Texture2D(12, 16, TextureFormat.RGBA32, false);
+        tex.filterMode = filterMode;
+        FillTexture(tex, Color.clear);
+
+        Color post = new Color(0.42f, 0.29f, 0.18f);
+        Color board = new Color(0.80f, 0.68f, 0.46f);
+        Color boardDark = new Color(0.62f, 0.50f, 0.32f);
+        Color ink = new Color(0.28f, 0.21f, 0.14f);
+        Color outline = new Color(0.16f, 0.13f, 0.10f);
+
+        DrawRect(tex, 5, 0, 2, 8, post);
+        OutlineRect(tex, 0, 8, 12, 8, board, outline);
+        DrawRect(tex, 1, 8, 10, 1, boardDark);
+
+        // Two lines of "writing", so the board reads as a sign and not a slab.
+        DrawRect(tex, 2, 12, 8, 1, ink);
+        DrawRect(tex, 2, 10, 5, 1, ink);
+
+        tex.Apply();
+        return Sprite.Create(tex, new Rect(0, 0, 12, 16), new Vector2(0.5f, 0f), pixelsPerUnit);
+    }
+
+    /// <summary>
+    /// A badge (16x16): the visible mark of a milestone held.
+    ///
+    /// Drawn in code like everything else, and tinted with the chapter's own accent,
+    /// so the reward the player is shown is recognisably the thing they earned rather
+    /// than a stock icon.
+    /// </summary>
+    public Sprite GenerateBadgeSprite(Color accent)
+    {
+        Texture2D tex = new Texture2D(16, 16, TextureFormat.RGBA32, false);
+        tex.filterMode = filterMode;
+        FillTexture(tex, Color.clear);
+
+        Color outline = new Color(0.14f, 0.13f, 0.18f);
+        Color face = Color.Lerp(accent, Color.white, 0.15f);
+        Color bright = Color.Lerp(accent, Color.white, 0.65f);
+        Color deep = Color.Lerp(accent, Color.black, 0.35f);
+
+        // A shield: full rows towards the middle, tapering to a point at the bottom.
+        int[] halfWidth = { 7, 7, 7, 7, 7, 7, 6, 6, 5, 4, 3, 2, 1 };
+        for (int row = 0; row < halfWidth.Length; row++)
+        {
+            int half = halfWidth[row];
+            int y = 13 - row;
+            DrawRect(tex, 8 - half, y, half * 2, 1, row % 2 == 0 ? face : deep);
+        }
+
+        OutlineRect(tex, 1, 13, 14, 2, bright, outline);
+        // A simple device in the middle: three ascending marks, a competence.
+        DrawRect(tex, 5, 8, 1, 3, outline);
+        DrawRect(tex, 7, 7, 1, 4, outline);
+        DrawRect(tex, 9, 6, 1, 5, outline);
+        DrawRect(tex, 2, 13, 12, 1, outline);
+
+        tex.Apply();
+        return Sprite.Create(tex, new Rect(0, 0, 16, 16), new Vector2(0.5f, 0.5f), pixelsPerUnit);
+    }
+
     // ============================================================
     // UTILITY
     // ============================================================
