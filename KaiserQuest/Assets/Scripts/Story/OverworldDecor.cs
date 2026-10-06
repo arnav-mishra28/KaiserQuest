@@ -44,12 +44,19 @@ public static class OverworldDecor
 {
     private const int PropsPerPlace = 8;
 
-    public static void Decorate(Transform root, string realm, List<Milestone> milestones, List<GeneratedCity> cities)
+    /// <param name="fromPlace">
+    /// The first place to dress. The starting settlement is passed as 1 because it is
+    /// handcrafted by <see cref="AsterTown" /> — a generated plaza standing inside an
+    /// authored town is the one thing that makes a handcrafted place look accidental.
+    /// </param>
+    public static void Decorate(
+        Transform root, string realm, List<Milestone> milestones, List<GeneratedCity> cities,
+        int fromPlace = 0)
     {
         if (root == null || milestones == null || cities == null) return;
 
         int places = Mathf.Min(milestones.Count, cities.Count);
-        for (int i = 0; i < places; i++)
+        for (int i = Mathf.Max(0, fromPlace); i < places; i++)
         {
             Vector2 city = cities[i].position;
             Milestone milestone = milestones[i];

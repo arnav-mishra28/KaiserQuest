@@ -227,9 +227,20 @@ public class KaiserWorldPopulator : MonoBehaviour
             SpawnArchivist(_root.transform, cities[cities.Count - 1].position + new Vector2(0f, 3f));
         }
 
+        // Aster Town: the handcrafted starting settlement, stood on the generated
+        // terrain of the first city. The generator still decides where the town is
+        // and what the ground under it is made of; what it contains is authored,
+        // because the first twenty minutes of a game are not a good place for a
+        // clearing with three rectangles in it.
+        if (cities.Count > 0)
+        {
+            AsterTown.Build(_root.transform, realm, milestones, cities[0]);
+        }
+
         // Landmarks, plazas and scenery: the campaign made visible on the ground,
-        // so the player can see which way the story goes before walking it.
-        OverworldDecor.Decorate(_root.transform, realm, milestones, cities);
+        // so the player can see which way the story goes before walking it. The
+        // starting settlement is skipped — Aster Town has already dressed it.
+        OverworldDecor.Decorate(_root.transform, realm, milestones, cities, 1);
 
         // A resumed story wakes where it was left — at the save point, by its keeper.
         if (player != null && story.Save != null && story.Save.savePoint != null)
@@ -385,6 +396,11 @@ public class KaiserWorldPopulator : MonoBehaviour
         if (nearest is MilestoneKeeper) label = "Z \u2014 speak with " + ((MilestoneKeeper)nearest).keeperName;
         else if (nearest is SavePointObject) label = "Z \u2014 rest at the save shard";
         else if (nearest is ArchivistNPC) label = "Z \u2014 approach the Archivist";
+        else if (nearest is KnowledgeGate) label = ((KnowledgeGate)nearest).IsOpen
+            ? "Z \u2014 the open gate"
+            : "Z \u2014 examine the seized mechanism";
+        else if (nearest is QuestGiver) label = "Z \u2014 speak with " + ((QuestGiver)nearest).speakerName;
+        else if (nearest is TownSign) label = "Z \u2014 read the sign";
         else return;
 
         GUI.Box(new Rect((Screen.width - 320f) / 2f, Screen.height - 64f, 320f, 30f), label);
