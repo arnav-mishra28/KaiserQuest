@@ -17,6 +17,7 @@ from pathlib import Path
 
 from engine.attempts import Attempt
 from engine.bank import QuestionBankReader
+from engine.campaign import get_campaign
 from engine.concepts import get_concept_graph
 from engine.content.pipeline import MIN_QUESTIONS_PER_CONCEPT
 from services.save_store import SaveStore
@@ -165,6 +166,85 @@ class MilestoneAssemblabilityTests(unittest.TestCase):
             self.assertGreater(session.tracer.get(concept.id).attempts, 0, concept.id)
             tried += 1
         self.assertGreater(tried, 30)
+
+
+class OpeningRouteTests(unittest.TestCase):
+    """
+    The first twenty minutes, as content.
+
+    The opening milestone is the only one every player is guaranteed to meet, and
+    the town's first quest draws its question from it. A thin opening concept does
+    not merely make the first trial harder — it means the mechanism the game opens
+    with can only ever ask the same two questions, and the first impression of the
+    whole design is a retry loop. So the opening is held to the same bar as the rest
+    of the content, on purpose, before anything else is allowed to be polished.
+    """
+
+    ALPHA_REALM = "algebra"
+    ROUTE_MILESTONES = 5
+
+    @classmethod
+    def setUpClass(cls):
+        cls.graph = get_concept_graph()
+        cls.bank = QuestionBankReader()
+
+    def _thin_concepts(self, realm, milestones):
+        thin = {}
+        campaign = get_campaign(realm, self.graph)
+        for index in range(1, min(milestones, len(campaign.milestones)) + 1):
+            for concept in campaign.milestone(index).concepts:
+                available = len(self.bank.for_concept(concept))
+                if available < MIN_QUESTIONS_PER_CONCEPT:
+                    thin[f"{realm}.m{index:02d}/{concept}"] = available
+        return thin
+
+    def test_the_opening_milestone_of_every_realm_can_be_examined(self):
+        """
+        The hard floor: a concept with fewer questions than a trial can ask cannot be
+        gated on, so the milestone that introduces it would be unpassable by
+        construction.
+        """
+        unexaminable = {}
+        for realm in ("algebra", "english", "music"):
+            campaign = get_campaign(realm, self.graph)
+            opening = campaign.milestone(1)
+            for concept in opening.concepts:
+                available = len(self.bank.for_concept(concept))
+                if available < 2:
+                    unexaminable[f"{realm}.m01/{concept}"] = available
+
+        self.assertEqual(
+            unexaminable,
+            {},
+            "the milestone every realm opens with teaches a concept the bank cannot "
+            f"examine, so its campaign cannot be started: {unexaminable}",
+        )
+
+    def test_the_alpha_route_clears_the_coverage_bar(self):
+        """
+        The vertical slice's route — the opening settlement, the first route and the
+        first few milestones of the realm Alpha 1.0 ships — must clear the preferred
+        minimum, not merely the floor. This is the guarantee that the first hour of
+        the game has enough material to adapt to, rather than repeating itself.
+        """
+        thin = self._thin_concepts(self.ALPHA_REALM, self.ROUTE_MILESTONES)
+        self.assertEqual(
+            thin,
+            {},
+            "concepts on the Alpha route have fewer than "
+            f"{MIN_QUESTIONS_PER_CONCEPT} questions, so the opening cannot adapt: {thin}",
+        )
+
+    def test_the_campaign_opens_in_aster_town(self):
+        """The town the player walks into is the place the campaign names."""
+        for realm in ("algebra", "english", "music"):
+            opening = get_campaign(realm, self.graph).milestone(1)
+            self.assertEqual(
+                opening.place,
+                "Aster Town",
+                f"realm '{realm}' does not open in Aster Town, so the settlement the "
+                "game builds is not the one the campaign talks about",
+            )
 
 
 if __name__ == "__main__":
