@@ -55,11 +55,11 @@ public class OverworldHUD : MonoBehaviour
         GUI.Label(new Rect(inner.x, inner.y + 22f, inner.width, 20f),
                   ProtectedRegion(campaign) + "  \u00b7  " + campaign.PassedCount + " / " + campaign.Total
                   + " milestones", _line);
-        GUI.Label(new Rect(inner.x, inner.y + 42f, inner.width * 2f, 40f), Objective(campaign), _hint);
+        GUI.Label(new Rect(inner.x, inner.y + 42f, inner.width * 2f, 40f), Objective(story, campaign), _hint);
     }
 
     /// <summary>What the campaign wants next, in words rather than a lock icon.</summary>
-    private static string Objective(CampaignDetail campaign)
+    private static string Objective(StoryModeManager story, CampaignDetail campaign)
     {
         if (campaign.Completed || campaign.MountainOpen)
             return "Silver Mountain is open \u2014 the Archivist is waiting at the summit.";
@@ -67,6 +67,15 @@ public class OverworldHUD : MonoBehaviour
         Milestone current = campaign.Current;
         if (current == null)
             return "The road ahead is being written.";
+
+        // The opening beats, in the order the town tells them. A player standing in
+        // Aster Town for the first time should be pointed at the thing that has
+        // stopped working, not at the keeper the road eventually leads to.
+        if (current.Index == 1)
+        {
+            if (story != null && !story.HasStoryFlag(AsterQuest.GateOpenFlag))
+                return "The eastern gate has stopped responding. Maren, in the square, knows why.";
+        }
 
         if (campaign.Entry == null || campaign.Entry.Allowed)
         {
