@@ -149,6 +149,8 @@ KaiserQuest/
 │   │   │   ├── StoryUI.cs              # title · creation · map · trial · summit · recap (IMGUI)
 │   │   │   ├── StoryWorld.cs           # keepers, save shards, Archivist, world populator
 │   │   │   ├── OverworldDecor.cs       # plazas, landmarks, scenery, ground clearing
+│   │   │   ├── AsterTown.cs            # Aster Town — the handcrafted opening settlement
+│   │   │   ├── AsterQuest.cs           # the first quest: the eastern gate and its encounter
 │   │   │   └── Boot.cs                 # RuntimeInitializeOnLoadMethod entry point
 │   │   ├── Core/                       # GameManager, GameBootstrap, sprite/audio/tiles
 │   │   ├── World/RuntimeTileset.cs     # the runtime tile palette (only walls collide)
@@ -156,7 +158,7 @@ KaiserQuest/
 │   │   ├── AI/ Battle/ Camera/ Gym/ Multiplayer/ NPC/ Quests/ UI/ World/
 │   │   │                               # v0.2 systems still present; see Status below
 │   │   └── Core/Editor/                # TilesetGenerator, AudioGenerator, setup wizard
-│   └── Assets/Tests/PlayMode/          # 19 PlayMode tests — the game's executable spec
+│   └── Assets/Tests/PlayMode/          # 31 PlayMode tests — the game's executable spec
 │   └── Assets/Resources/
 │       ├── Knowledge/                  # concepts.json, misconceptions.json, banks.json (exported)
 │       └── Questions/                  # bank_{math,english,music}.json (exported, verified)
@@ -178,11 +180,50 @@ KaiserQuest/
     │   ├── story_service.py            # orchestrator
     │   └── save_store.py               # versioned atomic saves
     ├── data/
-    │   ├── knowledge/                  # concepts.json (88), misconceptions.json (24)
+    │   ├── knowledge/                  # concepts.json (88), misconceptions.json (26)
     │   ├── banks/                      # generated + verified question banks
     │   └── questions/                  # legacy v0.2 banks
-    └── tests/                          # 193 tests — the engine's executable specification
+    └── tests/                          # 196 tests — the engine's executable specification
 ```
+
+---
+
+## Alpha 1.0 — the opening thirty minutes
+
+There is one thing to play, and it is built to be played in one sitting:
+
+**Title → Character Creation → Aster Town → first quest → first knowledge encounter →
+first trial → first sigil → back to the world.**
+
+**Aster Town** is handcrafted. The procedural generator still decides where the starting
+settlement is and what the ground under it is made of; what is *in* it is authored — a
+paved plaza, four solid buildings, a shop, signposts that say where you are, a monument
+that names the chapter, the keeper and the save shard the campaign already places there,
+and the eastern gate. `AsterTown.cs` lays it out in offsets from the generated city, and
+`OverworldDecor` skips that one place so a generated plaza never lands inside an authored
+town.
+
+**The first quest is not a quiz.** An NPC tells you the eastern gate has stopped
+responding, and it has: a solid mechanism sits across the road east with a slow pulse.
+Walk up to it and it asks *one* question — drawn every time from the verified bank through
+`KnowledgeEngine.Select`, on the concept the first milestone opens with. Answer it and the
+mechanism turns, the collider goes, the road opens, and the flag is written to the save,
+so the town remembers you. Answer it wrong and nothing opens, but the attempt is real: it
+goes through the same `KnowledgeEngine.Grade` a trial uses, the bank's own explanation is
+shown, the misconception your distractor encodes is named and given its remedy, and the
+retry asks a *different* item about the *same* idea. The story layer never holds a
+question and never knows an answer.
+
+**The first trial is the existing campaign**, unchanged: milestone 1, `guided` mode, the
+keeper who teaches before asking. **Passing it now ends in a screen rather than a line of
+small print** — a Victory screen showing the sigil you earned (drawn in the chapter's own
+colour), what the trial asked of you, where your save point moved to, and the milestone
+that just opened. That is the sentence the whole design exists to make the player believe:
+*I learned something, and that made my world stronger.*
+
+Nothing in this needed the backend. The Knowledge Engine is still the authority during
+play; the Python side generated and verified the questions and, for the opening route,
+was run once more to make sure there were enough of them.
 
 ---
 
@@ -279,10 +320,10 @@ PYTHONIOENCODING=utf-8 python -m unittest discover -s tests
 ```
 
 `PYTHONIOENCODING=utf-8` matters on Windows: the console's default codepage chokes on the
-box-drawing characters in the profile renderer. 193 tests pass — they are the executable
+box-drawing characters in the profile renderer. 196 tests pass — they are the executable
 specification of the engine.
 
-**Unity PlayMode tests.** 19 tests in `KaiserQuest/Assets/Tests/PlayMode/` boot the real
+**Unity PlayMode tests.** 31 tests in `KaiserQuest/Assets/Tests/PlayMode/` boot the real
 game loop — no mocks, a private save slot per run, deleted afterwards. They cover trial
 flow (a flawless pass moves the save point; answers carry their concept; a wrong answer
 teaches), mastery gates (twenty milestones with only the first open; skipping ahead is
@@ -293,6 +334,14 @@ realm-to-bank mapping bug: *every realm can start its first milestone*. Two boot
 tests go further and run the real `GameBootstrap` in an empty scene — the exact path a
 first Play press takes — and assert the game appears: camera, tilemaps, a generated
 world, a visible animated player standing on walkable ground, and a story screen waiting.
+The twelve in `AsterQuestTests.cs` cover the vertical slice end to end: Aster Town is
+built as a place (solid buildings, signage, a monument), the world populator stands it in
+the starting city, the gate interrogates a concept the bank can actually examine, it asks
+only questions the verified bank holds, a right answer opens the mechanism *and* reaches
+the trace, a wrong answer teaches without opening it and re-asks the idea rather than the
+sentence, an opened gate survives a reload, a new character does not inherit the last
+one's opened gate (the gate keeps itself in step with the save rather than trusting what
+it was told when it was built), and the first sigil is earned and remembered.
 
 In the Editor: **Window → General → Test Runner → PlayMode tab → Run All**.
 
@@ -324,10 +373,18 @@ This writes `data/banks/`, then exports into **every** Unity project in the repo
 subjects are not the same namespace (the English realm reads the English *and* math
 banks), and deriving that mapping from content is what fixed "no questions ever loaded".
 Pass `--unity-dir <path>` to target a single folder instead. The run is deterministic: the
-same `--seed` produces byte-identical banks. The pipeline reports `coverage_gaps` honestly:
-currently **956 verified questions, 0 quarantined, 88/88 concepts covered**, with 24
-concepts still below the 6-question target. Concepts the bank cannot examine are excluded
-from mastery gates rather than held against the player.
+same `--seed` produces byte-identical banks (verified by re-running the pipeline into a
+scratch directory and diffing — only the manifest's timestamp changes). The pipeline
+reports `coverage_gaps` honestly: currently **961 verified questions, 0 quarantined,
+88/88 concepts covered**, with 23 concepts still below the 6-question target. Concepts
+the bank cannot examine are excluded from mastery gates rather than held against the
+player.
+
+The remaining gaps are mostly in realms Alpha 1.0 does not ship. The route Alpha *does*
+ship — every concept of the first five milestones of `algebra`, which is the opening
+settlement, the first route and the first trial — is held to the full six-question bar,
+and `tests/test_bank_coverage.py` asserts it so a later content change cannot quietly
+thin the opening back out.
 
 ### 5 · Compile-checking C# without the Editor (maintainers)
 
@@ -337,11 +394,31 @@ bash Tools/compile-check.sh
 
 Four Roslyn passes: the 2022 dev copy, the live Unity 6 runtime assembly, the live editor
 assembly with `UNITY_EDITOR` defined, and the PlayMode tests against the NUnit framework.
-Every pass references the **real Unity 6 assemblies** from
-`KaiserQuest/Library/ScriptAssemblies/` — including uGUI, TextMeshPro and the Input
-System — so the legacy v0.2 UI compiles against the actual package APIs, not guesses.
-`--stubs` falls back to generated stubs (in `Tools/CompileCheck/`, outside `Assets/`,
-never shipped) for use before a project's first import. All four passes are clean.
+Every pass references the **real Unity assemblies** — the engine DLLs from the Unity
+install, plus the package assemblies in `KaiserQuest/Library/ScriptAssemblies/` (uGUI,
+TextMeshPro, the Input System) when the project has been opened once — so the legacy v0.2
+UI compiles against the actual package APIs, not guesses. `--stubs` falls back to
+generated stubs (in `Tools/CompileCheck/`, outside `Assets/`, never shipped) for use
+before a project's first import.
+
+The harness finds its own toolchain. Unity's install layout differs per platform, so it
+probes both `<Editor>/Data` (Windows) and the macOS app bundle's
+`Unity.app/Contents/Resources/Scripting`. Unity 6 on macOS ships neither its own Roslyn
+nor a `NetStandard/ref` folder, so the harness compiles with a system Mono
+(`brew install mono`) against the Mono profile, and looks for `nunit.framework.dll` in
+the editor's own packages, then `Tools/out/nunit/`:
+
+```bash
+mkdir -p Tools/out/nunit && cd Tools/out/nunit
+curl -sSL -o n.nupkg https://api.nuget.org/v3-flatcontainer/nunit/3.5.0/nunit.3.5.0.nupkg
+unzip -o -q n.nupkg 'lib/net45/nunit.framework.dll' && mv lib/net45/nunit.framework.dll .
+```
+
+A pass that genuinely *cannot* run is reported as `skip` with the reason, never as a pass
+and never as a failure of the code: on a macOS install whose `UnityEditor.dll` the
+external compiler cannot read, the editor pass is skipped; with no NUnit assembly, the
+test pass is skipped. Everything the machine can check, it checks — and says which
+passes ran.
 
 ---
 
@@ -349,15 +426,16 @@ never shipped) for use before a project's first import. All four passes are clea
 
 | Area | State |
 |------|-------|
-| Backend engine, campaign, progression, Silver Mountain, pipeline | **Done** — 193 tests passing |
-| Verified question banks | **956 items**, 88/88 concepts covered |
-| Story UI (title, character creation, campaign map, trials, Silver Mountain, Mastery Recap) | **Done** — drawn with IMGUI so it works with zero scene wiring |
+| Backend engine, campaign, progression, Silver Mountain, pipeline | **Done** — 196 tests passing |
+| Verified question banks | **961 items**, 88/88 concepts covered, 23 concepts below the 6-question target |
+| Alpha 1.0 vertical slice (Aster Town → first quest → first encounter → first trial → first sigil → save) | **Done** — handcrafted settlement laid over the generated map, gate driven by the verified bank, victory screen with the earned sigil |
+| Story UI (title, character creation, campaign map, dialogue, trials, victory, Silver Mountain, Mastery Recap) | **Done** — drawn with IMGUI so it works with zero scene wiring |
 | World integration (milestone keepers, save shards, the Archivist on the summit) | **Done** — spawned along the generated road at runtime |
 | Overworld presentation (runtime tileset with solid walls, landmark plazas, scenery, ground clearing, place nameplates) | **Done** — milestones are places, not map pins |
 | Player presentation (appearance-driven sprite, walk bob, HUD with objective in words, control legend) | **Done** — spawned and animated by the bootstrap |
-| PlayMode test suite | **19 tests, all passing** — runs in the Editor or headlessly in batchmode; two of them boot the whole game from an empty scene |
+| PlayMode test suite | **31 tests** — 19 previously verified in the Editor; 12 added with the vertical slice and compile-verified here (see the note below on this machine) |
 | Self-booting entry (`Boot` + `GameBootstrap`) | **Done** — Play works from any scene, no hand-wiring |
-| Full C# tree compiles (story, knowledge, world, tests, legacy v0.2 scripts) | **Verified** — 4-pass Roslyn harness against real Unity 6 assemblies |
+| Full C# tree compiles (story, knowledge, world, tests, legacy v0.2 scripts) | **Verified** — the Roslyn harness typechecks the dev copy, the live runtime assembly and the PlayMode suite; editor-tooling and test execution depend on the Unity install (see the harness section) |
 | Legacy v0.2 battle/gym/UI scripts | Still in the tree and now compile-verified; superseded by the story layer, which no longer routes through them |
 
 ### How the pieces run at play time
@@ -370,7 +448,9 @@ Boot (RuntimeInitializeOnLoadMethod)
      ├─ PixelSpriteGenerator · SoundManager · WorldManager
      ├─ camera + tilemaps (created if the scene lacks them; runtime tileset applied)
      ├─ ProceduralWorldGenerator ─▶ ProceduralWorldGeneratorHub.Cities
-     ├─ KaiserWorldPopulator ─▶ plazas + keeper NPCs + save shards + the Archivist
+     ├─ KaiserWorldPopulator ─▶ keeper NPCs + save shards + the Archivist
+     │      └─ AsterTown.Build ─▶ the handcrafted opening settlement (plaza, houses,
+     │                            signage, monument, quest giver, the eastern gate)
      ├─ Player ─▶ body sprite from the chosen appearance, walk-bob animator, HUD
      └─ ContinueStory ─▶ StoryUI.Boot ─▶ title or character creation
 ```
@@ -378,7 +458,28 @@ Boot (RuntimeInitializeOnLoadMethod)
 The story screens are modal: while one is open the world stops accepting input, and
 answering a trial question and walking away can never happen in the same frame. The
 PlayMode suite, the compile harness and the backend tests are the verification; inside
-the Editor, the smoke test is the game itself: create → walk to milestone 1 → pass it.
+the Editor, the smoke test is the game itself: create → walk to Aster Town → talk to
+Maren → open the eastern gate → find the keeper → pass milestone 1 → see the sigil.
+
+### What has actually been run
+
+Being precise about verification, because a test suite that was never executed is not
+evidence:
+
+* **Run and green:** the backend suite (`196 passed`), and the C# compile harness — the
+dev copy, the live runtime assembly and the PlayMode suite all compile clean.
+* **Written but not executed here:** the PlayMode tests. This machine's Unity install
+*cannot be launched headlessly* — the editor binary is killed by the OS before it writes
+a log (`Killed: 9`), there is no licence, and the install carries no usable
+`UnityEditor.dll` for an external compiler. So the 31 PlayMode tests (19 pre-existing, 12
+new) are compile-verified only. **Run them in the Editor to execute them** — `Window →
+General → Test Runner → PlayMode → Run All`, or the batchmode command above.
+* **Not verifiable here:** the editor-tooling pass (see the harness section) — reported as
+`skip` with its reason rather than counted as clean.
+* **Verified by construction:** the content pipeline is deterministic — re-running it into
+a scratch directory reproduced the committed banks byte-for-byte apart from the
+manifest's timestamp, so the content change in this slice is exactly the diff shown in
+git.
 
 ---
 
