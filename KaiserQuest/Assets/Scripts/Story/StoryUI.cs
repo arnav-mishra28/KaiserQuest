@@ -18,6 +18,9 @@ namespace KaiserQuest.Story
         CharacterCreation,
         CampaignMap,
         Trial,
+        Victory,
+        Dialogue,
+        Encounter,
         MountainGate,
         Exam,
         Recap,
@@ -81,6 +84,20 @@ namespace KaiserQuest.Story
         private int _examHints;
 
         private ExamResult _examResult;
+
+        // --- victory state ---
+        private TrialSettlement _victory;
+        private Texture2D _badgeTexture;
+
+        // --- dialogue state ---
+        private string _dialogueSpeaker = "";
+        private List<string> _dialogueLines;
+        private int _dialogueIndex;
+
+        // --- world encounter state ---
+        private KnowledgeEncounter _encounter;
+        private KnowledgeGate _encounterGate;
+        private float _encounterShownAt;
 
         private StoryModeManager Story { get { return StoryModeManager.Instance; } }
         private GameManager Game { get { return GameManager.Instance; } }
@@ -249,6 +266,82 @@ namespace KaiserQuest.Story
             _screen = StoryScreen.Recap;
         }
 
+        /// <summary>
+        /// Somebody says something. Used by the town's people and its signposts.
+        ///
+        /// Dialogue is a screen of its own rather than a line printed over the map
+        /// because the first quest is explained in it, and an explanation the player
+        /// can read at their own pace is the difference between a quest and a rumour.
+        /// </summary>
+        public void ShowDialogue(string speaker, List<string> lines)
+        {
+            CloseAndResume();
+            _screen = StoryScreen.Dialogue;
+            _dialogueSpeaker = speaker;
+            _dialogueLines = lines != null ? lines : new List<string>();
+            _dialogueIndex = 0;
+            SoundManager.PlaySfx("dialog_beep");
+        }
+
+        /// <summary>
+        /// Face a world mechanism that wants a relationship solved.
+        ///
+        /// The question is drawn from the verified bank through the Knowledge Engine
+        /// every time this opens; the story layer neither holds a question nor knows
+        /// an answer. When the bank genuinely has nothing to ask, the player is told
+        /// that the fault is the town's and not theirs, because a mechanism that has
+        /// silently stopped working is the worst possible first impression.
+        /// </summary>
+        public void ShowEncounter(KnowledgeGate gate)
+        {
+            StoryModeManager story = Story;
+            if (!StoryReady() || story == null || gate == null) return;
+
+            KnowledgeEngine engine = KnowledgeEngine.Instance;
+            Milestone milestone = gate.MilestoneFor(story);
+            string concept = AsterQuest.OpeningConcept(engine, milestone);
+
+            KnowledgeEncounter encounter = new KnowledgeEncounter();
+            bool begun = !string.IsNullOrEmpty(concept)
+                && encounter.Begin(engine, concept, story.ActiveRealmId, story.Save.recentQuestionIds);
+
+            if (!begun)
+            {
+                ShowDialogue("The eastern gate", new List<string>
+                {
+                    "You put your hand on the mechanism and it gives nothing back \u2014 not "
+                    + "refusal, but nothing at all.",
+                    "A keeper passing behind you looks at it a while. \u201cThat one is waiting "
+                    + "for a question, and there isn\u2019t one in it any more. That is our fault, "
+                    + "not yours. Walk on; the Archivists will restock it.\u201d"
+                });
+                return;
+            }
+
+            CloseAndResume();
+            _screen = StoryScreen.Encounter;
+            _encounter = encounter;
+            _encounterGate = gate;
+            _encounterShownAt = Time.unscaledTime;
+            SoundManager.PlaySfx("menu_confirm");
+        }
+
+        /// <summary>
+        /// The moment the reward lands.
+        ///
+        /// A milestone that quietly updates a counter has not been *earned*; the
+        /// player has to see the sigil, be told what changed, and be told where the
+        /// road goes next. This is the screen the whole mastery-gate design exists to
+        /// make worth reaching.
+        /// </summary>
+        public void ShowVictory(TrialSettlement settled)
+        {
+            CloseAndResume();
+            _screen = StoryScreen.Victory;
+            _victory = settled;
+            _badgeTexture = null;
+        }
+
         public void Close()
         {
             CloseAndResume();
@@ -311,6 +404,9 @@ namespace KaiserQuest.Story
                     case StoryScreen.CharacterCreation: DrawCreation(); break;
                     case StoryScreen.CampaignMap: DrawCampaign(); break;
                     case StoryScreen.Trial: DrawTrial(); break;
+                    case StoryScreen.Victory: DrawVictory(); break;
+                    case StoryScreen.Dialogue: DrawDialogue(); break;
+                    case StoryScreen.Encounter: DrawEncounter(); break;
                     case StoryScreen.MountainGate: DrawMountainGate(); break;
                     case StoryScreen.Exam: DrawExam(); break;
                     case StoryScreen.Recap: DrawRecap(); break;
@@ -378,13 +474,29 @@ namespace KaiserQuest.Story
 
         private void OnEscape()
         {
+            StoryModeManager story = Story;
+
             switch (_screen)
             {
                 case StoryScreen.Trial:
                     if (_trial != null) _trial.Abandon();
-                    StoryModeManager story = Story;
                     if (story != null && story.Save != null) story.SaveNow();
                     ShowCampaign();
+                    break;
+                case StoryScreen.Dialogue:
+                    AdvanceDialogue();
+                    break;
+                case StoryScreen.Victory:
+                    Close();
+                    break;
+                case StoryScreen.Encounter:
+                    // Walking away is allowed and costs nothing: the mechanism is not
+                    // going anywhere, and answers already given were already learned
+                    // from. What it must not do is trap the player in front of it.
+                    _encounter = null;
+                    _encounterGate = null;
+                    if (story != null && story.Save != null) story.SaveNow();
+                    Close();
                     break;
                 case StoryScreen.Exam:
                     // An exam cannot be walked out of: the attempt counts.
@@ -765,10 +877,17 @@ namespace KaiserQuest.Story
                 return;
             }
 
-            // The verdict is the campaign map with the outcome on top of it: the
-            // result belongs beside the road it happened on. ShowCampaign clears
-            // the status line, so the verdict is written after it opens.
             SoundManager.PlaySfx(settled.Passed ? "victory" : "defeat");
+
+            // Passing is a moment, not a line of small print on the map: the player
+            // earned a sigil and needs to see it. Failing is information, and belongs
+            // beside the road it happened on, with the reason attached.
+            if (settled.Passed)
+            {
+                ShowVictory(settled);
+                return;
+            }
+
             ShowCampaign();
 
             MilestoneOutcome outcome = settled.Outcome;
@@ -1048,6 +1167,246 @@ namespace KaiserQuest.Story
             recap.CooldownUntil = result.Verdict.CooldownUntil;
             recap.AttemptsRemaining = result.Verdict.AttemptsRemaining;
             return recap;
+        }
+
+        // ==================================================================
+        // Dialogue
+        // ==================================================================
+        private void DrawDialogue()
+        {
+            if (_dialogueLines == null || _dialogueLines.Count == 0) { Close(); return; }
+            _dialogueIndex = Mathf.Clamp(_dialogueIndex, 0, _dialogueLines.Count - 1);
+
+            ScrollStart();
+            GUILayout.FlexibleSpace();
+            GUILayout.Label(_dialogueSpeaker, _head);
+            GUILayout.Space(4);
+            GUILayout.Label(_dialogueLines[_dialogueIndex], _box);
+            GUILayout.Space(6);
+            GUILayout.Label((_dialogueIndex + 1) + " / " + _dialogueLines.Count, _dim);
+            GUILayout.Space(6);
+            if (Button(_dialogueIndex < _dialogueLines.Count - 1 ? "Continue  \u25b8" : "Close"))
+            {
+                AdvanceDialogue();
+            }
+            GUILayout.FlexibleSpace();
+            ScrollEnd();
+        }
+
+        private void AdvanceDialogue()
+        {
+            if (_dialogueLines == null || _dialogueIndex >= _dialogueLines.Count - 1)
+            {
+                Close();
+                return;
+            }
+            _dialogueIndex++;
+            SoundManager.PlaySfx("dialog_beep");
+        }
+
+        // ==================================================================
+        // The world's first knowledge encounter
+        // ==================================================================
+        private void DrawEncounter()
+        {
+            KnowledgeEncounter encounter = _encounter;
+            if (encounter == null || encounter.Question == null) { Close(); return; }
+
+            ScrollStart();
+
+            if (encounter.Solved)
+            {
+                GUILayout.FlexibleSpace();
+                GUILayout.Label("THE EASTERN GATE", _head);
+                GUILayout.Label("the mechanism turns", _dim);
+                GUILayout.Space(8);
+                GUILayout.Label(encounter.Feedback, _box);
+                GUILayout.Space(6);
+                GUILayout.Label(
+                    "It asked about " + encounter.ConceptName + ", and you were able to tell it "
+                    + "something true. That is the whole of what this world asks of you.", _body);
+                GUILayout.Space(12);
+                if (Button("Step through  \u25b8"))
+                {
+                    _encounter = null;
+                    _encounterGate = null;
+                    Close();
+                }
+                GUILayout.FlexibleSpace();
+                ScrollEnd();
+                return;
+            }
+
+            GUILayout.Label("THE EASTERN GATE", _head);
+            GUILayout.Label(
+                "A keeper\u2019s mechanism, set into the road. It has one question and asks it "
+                + "without hurry: answer it, and the road opens.", _dim);
+            GUILayout.Space(6);
+            GUILayout.Label("It is asking about " + encounter.ConceptName + ".", _body);
+
+            if (encounter.Feedback.Length > 0)
+            {
+                GUILayout.Space(4);
+                GUILayout.Label(encounter.Feedback, _box);
+            }
+
+            GUILayout.Space(6);
+            GUILayout.Label(encounter.Question.question, _box);
+            GUILayout.Space(6);
+
+            List<string> options = encounter.Question.options;
+            for (int i = 0; i < options.Count; i++)
+            {
+                string option = options[i];
+                if (Button((char)('A' + i) + ".  " + option, 30))
+                {
+                    AnswerEncounter(option);
+                    return;
+                }
+            }
+
+            GUILayout.Space(8);
+            if (GUILayout.Button("Step back from the mechanism", _dim))
+            {
+                _encounter = null;
+                _encounterGate = null;
+                Close();
+                return;
+            }
+            ScrollEnd();
+        }
+
+        private void AnswerEncounter(string chosen)
+        {
+            KnowledgeEncounter encounter = _encounter;
+            if (encounter == null) return;
+
+            float elapsed = (Time.unscaledTime - _encounterShownAt) * 1000f;
+            GradedAnswer graded = encounter.Answer(chosen, elapsed, 0);
+            _encounterShownAt = Time.unscaledTime;
+
+            if (graded == null) return;
+            SoundManager.PlaySfx(graded.Correct ? "correct" : "wrong");
+
+            // The gate opens the moment the mechanism is satisfied. Everything the
+            // world needs to know is a flag in the save, so this cannot be lost by a
+            // player who closes the game on the next screen.
+            if (graded.Correct && _encounterGate != null) _encounterGate.Open();
+        }
+
+        // ==================================================================
+        // Victory — the sigil
+        // ==================================================================
+        private void DrawVictory()
+        {
+            TrialSettlement settled = _victory;
+            if (settled == null || settled.Milestone == null) { Close(); return; }
+
+            Milestone milestone = settled.Milestone;
+
+            ScrollStart();
+            GUILayout.Label("SIGIL EARNED", _big);
+            GUILayout.Label(milestone.Place + "  \u00b7  " + milestone.DomainName, _dim);
+            GUILayout.Space(4);
+
+            DrawBadge(milestone);
+            GUILayout.Label(milestone.BadgeName, _head);
+            GUILayout.Space(6);
+
+            GUILayout.Label(milestone.Success, _box);
+            GUILayout.Space(6);
+
+            if (settled.Outcome != null)
+            {
+                GUILayout.Label(
+                    "Trial " + milestone.Index + " \u2014 " + milestone.Name + ": you met "
+                    + Percent(settled.Outcome.ScorePercent / 100f) + " of what the trial asked for, "
+                    + "and it asked for " + Percent(settled.Outcome.RequiredPercent / 100f) + ".",
+                    _body);
+            }
+
+            if (settled.MovedSavePoint)
+            {
+                GUILayout.Space(4);
+                GUILayout.Label(
+                    "Your journey is now written down at " + milestone.Place + ". If the road ever "
+                    + "sends you back, that is where you will wake \u2014 not at the beginning.", _body);
+            }
+
+            GUILayout.Space(6);
+            Milestone next = NextMilestone(settled);
+            if (next != null)
+            {
+                GUILayout.Label("The road opens.", _head);
+                GUILayout.Label(
+                    "Milestone " + next.Index + " \u2014 " + next.Name + ". " + next.Keeper
+                    + " is waiting at " + next.Place + ".", _body);
+            }
+            else
+            {
+                GUILayout.Label(
+                    "Every chapter of this realm is yours. Silver Mountain is the last road, and "
+                    + "the Archivist has heard about you.", _body);
+            }
+
+            GUILayout.Space(12);
+            if (Button("Back to the world"))
+            {
+                _victory = null;
+                _badgeTexture = null;
+                Close();
+                return;
+            }
+            if (GUILayout.Button("Campaign map", _btn))
+            {
+                _victory = null;
+                _badgeTexture = null;
+                ShowCampaign();
+                return;
+            }
+            ScrollEnd();
+        }
+
+        private Milestone NextMilestone(TrialSettlement settled)
+        {
+            StoryModeManager story = Story;
+            if (story == null || settled == null || settled.Milestone == null) return null;
+
+            List<Milestone> milestones = story.Campaign(settled.Realm);
+            for (int i = 0; i < milestones.Count; i++)
+            {
+                if (milestones[i].Index == settled.Milestone.Index + 1) return milestones[i];
+            }
+            return null;
+        }
+
+        /// <summary>
+        /// Draw the sigil, generated in the chapter's own colour.
+        ///
+        /// Built once per victory and cached, because a texture allocated inside
+        /// OnGUI would be allocated on every repaint.
+        /// </summary>
+        private void DrawBadge(Milestone milestone)
+        {
+            if (_badgeTexture == null)
+            {
+                PixelSpriteGenerator sprites = PixelSpriteGenerator.Instance;
+                if (sprites != null)
+                {
+                    Sprite badge = sprites.GenerateBadgeSprite(
+                        OverworldDecor.AccentFor(milestone.Realm, milestone.Index));
+                    if (badge != null) _badgeTexture = badge.texture;
+                }
+            }
+            if (_badgeTexture == null) return;
+
+            GUILayout.BeginHorizontal();
+            GUILayout.FlexibleSpace();
+            Rect rect = GUILayoutUtility.GetRect(
+                GUIContent.none, GUIStyle.none, GUILayout.Width(96f), GUILayout.Height(96f));
+            GUI.DrawTexture(rect, _badgeTexture, ScaleMode.ScaleToFit, true);
+            GUILayout.FlexibleSpace();
+            GUILayout.EndHorizontal();
         }
 
         // ------------------------------------------------------------------

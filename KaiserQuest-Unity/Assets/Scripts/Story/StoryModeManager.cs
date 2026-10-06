@@ -544,6 +544,28 @@ namespace KaiserQuest.Story
         }
 
         // ------------------------------------------------------------------
+        // World flags
+        // ------------------------------------------------------------------
+        /// <summary>
+        /// The world remembers what happened in it.
+        ///
+        /// A gate that was opened once is open for good; that is the difference
+        /// between a world that reacts to the player and a cutscene that happens at
+        /// them. The flags travel in the same save as the knowledge trace, so the two
+        /// can never come back out of step.
+        /// </summary>
+        public bool HasStoryFlag(string flag)
+        {
+            return Save != null && AsterQuest.Has(Save, flag);
+        }
+
+        public void SetStoryFlag(string flag)
+        {
+            if (Save == null) return;
+            AsterQuest.Set(Save, flag);
+        }
+
+        // ------------------------------------------------------------------
         // Coverage (the honest report of what the content can and cannot test)
         // ------------------------------------------------------------------
         public class ConceptCoverage
